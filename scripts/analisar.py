@@ -162,7 +162,8 @@ def linhas(tabela, rotulo):
 por_regiao = df.groupby('regiao').apply(resumo).loc[['Norte', 'Nordeste', 'Centro-Oeste', 'Sudeste', 'Sul']]
 flavio_pct = df.flavio26.sum() / df.total26.sum() * 100
 idx = (ROOT / 'scripts' / 'templates' / 'app.html').read_text(encoding='utf-8')
-trocas = {'__DATA__': payload, '__N_MUN__': inteiro(len(df)), '__L22__': inteiro(nacional.lula_2022_2T), '__L26__': inteiro(nacional.lula_2026_1T),
+qs = np.percentile(df.var_pp, [15, 35, 50, 65, 85])
+trocas = {'__Q_PP__': ', '.join(decimal(v, 2) for v in qs[:-1]) + ' e ' + decimal(qs[-1], 2), '__Q85__': decimal(qs[-1], 2), '__DATA__': payload, '__N_MUN__': inteiro(len(df)), '__L22__': inteiro(nacional.lula_2022_2T), '__L26__': inteiro(nacional.lula_2026_1T),
           '__SALDO__': decimal(nacional.saldo / 1e6, 2, True) + ' mi', '__P22__': decimal(nacional.pct_2022_2T), '__P26__': decimal(nacional.pct_2026_1T),
           '__VARPP__': decimal(nacional.var_pp, 1, True), '__FLAVIO__': decimal(flavio_pct),
           '__TAB_REGIAO__': linhas(por_regiao, 'Região'), '__TAB_UF__': linhas(por_uf, 'UF')}

@@ -93,6 +93,7 @@
   .doc { padding: 22px 24px 8px; }
   .doc h2 { font-size: 18px; margin: 22px 0 10px; }
   .doc h2:first-child { margin-top: 0; }
+  .doc h3 { font-size: 15px; margin: 16px 0 6px; }
   .doc p, .doc li { font-size: 14.5px; margin-bottom: 8px; }
   .doc ul { padding-left: 20px; }
   .tablewrap { overflow-x: auto; border: 1px solid var(--line); border-radius: 10px; margin: 8px 0; }
@@ -151,7 +152,7 @@
     <label>Colorir por <select id="metrica">
       <option value="pp">Variação em pontos percentuais</option>
       <option value="s">Saldo de votos</option>
-      <option value="rt">Retenção (% dos votos de 2022)</option>
+      <option value="rt">Retenção (variação % dos votos)</option>
     </select></label>
     <label>UF <select id="uf"><option value="">Brasil</option></select></label>
     <label class="only-map">Visualização <select id="modo"><option value="poli">Polígonos (municípios)</option><option value="circ">Círculos</option></select></label>
@@ -196,6 +197,37 @@ __TAB_REGIAO__
         <tbody>
 __TAB_UF__
         </tbody></table></div></details>
+
+      <h2>O que cada métrica mede</h2>
+      <p>O mapa e os gráficos podem ser coloridos de três formas. Todas comparam o mesmo município nas duas eleições, e um valor negativo significa que Lula teve menos votos no 1º turno de 2026 do que no 2º turno de 2022. Em qualquer uma delas, as seis cores usam percentis (P15, P35, P50, P65 e P85) calculados entre os __N_MUN__ municípios.</p>
+
+      <h3>Variação em pontos percentuais (padrão)</h3>
+      <p>É a diferença entre a participação de Lula nos votos nominais de 2026 e a de 2022, ou seja, <b>% em 2026 &minus; % em 2022</b>. A participação é o número de votos de Lula dividido pelos votos nominais de todos os candidatos no município, o que exclui brancos e nulos. Como é uma proporção, não depende do tamanho do município nem de quantos eleitores compareceram, e por isso é a medida mais comparável entre cidades grandes e pequenas. Parte da queda é estrutural, porque em 2022 (2º turno) havia dois candidatos e em 2026 (1º turno) há vários.</p>
+
+      <h3>Saldo em votos</h3>
+      <p>É a diferença absoluta entre os votos de Lula nas duas eleições, ou seja, <b>votos em 2026 &minus; votos em 2022</b>. Mostra quantos votos o município ganhou ou perdeu. Como depende do tamanho do município, as maiores perdas ficam nas cidades grandes: São Paulo perdeu 625.572 votos, e uma cidade pequena dificilmente perde mais do que alguns milhares. O saldo também sofre com a variação do comparecimento. Serve para ver o peso de cada município no total nacional (&minus;6,47 milhões), e não para comparar o desempenho entre municípios.</p>
+
+      <h3>Retenção</h3>
+      <p>É a variação percentual dos votos do próprio Lula no município, ou seja, <b>(votos em 2026 &divide; votos em 2022 &minus; 1) &times; 100</b>. Uma retenção de &minus;17%, por exemplo, quer dizer que Lula manteve 83% dos votos que teve em 2022. Cada município é comparado com a sua própria base, então o tamanho não pesa, mas, ao contrário dos pontos percentuais, a retenção também reflete mudanças no comparecimento e nos votos brancos e nulos, porque olha só para os votos de Lula e não para a proporção.</p>
+
+      <h3>Percentis e as seis cores</h3>
+      <p>O percentil mostra a posição de um município em relação aos demais. Para a métrica escolhida, os __N_MUN__ municípios são colocados em ordem, do pior valor ao melhor. O percentil 15 (P15) é o valor abaixo do qual ficam 15% dos municípios, o P50 é a mediana (metade fica abaixo e metade acima) e o P85 é o valor acima do qual ficam os 15% melhores. Os cinco cortes P15, P35, P50, P65 e P85 dividem os municípios em seis classes:</p>
+      <ul>
+        <li><b>Queda Severa:</b> os 15% piores, do P0 ao P15.</li>
+        <li><b>Queda Forte:</b> 20% dos municípios, do P15 ao P35.</li>
+        <li><b>Abaixo da Mediana:</b> 15%, do P35 ao P50.</li>
+        <li><b>Acima da Mediana:</b> 15%, do P50 ao P65.</li>
+        <li><b>Retenção Forte:</b> 20%, do P65 ao P85.</li>
+        <li><b>Destaque Positivo:</b> os 15% melhores, do P85 ao P100.</li>
+      </ul>
+      <p>Os limites de cada classe aparecem na legenda e mudam conforme a métrica. Na variação em pontos percentuais, com os dados atuais, os cortes P15, P35, P50, P65 e P85 são __Q_PP__ pontos percentuais. Os percentis são calculados entre todos os municípios do país, então as cores têm o mesmo significado no mapa, na dispersão e em cada painel por região ou UF.</p>
+      <p>As classes são relativas, e não absolutas. Elas dizem se o município foi melhor ou pior do que os outros, e não se ele ganhou ou perdeu votos. Com os dados atuais, até o limite inferior do Destaque Positivo é negativo (__Q85__ pontos percentuais), o que significa que muitos municípios dessa classe também tiveram queda, só que menor do que a da maioria.</p>
+
+      <h3>Exemplo: São Paulo</h3>
+      <p>Em 2022 (2º turno), Lula teve 3.677.921 votos entre 6.869.405 votos nominais, ou 53,54%. Em 2026 (1º turno), teve 3.052.349 entre 6.553.181, ou 46,58%. O <b>saldo</b> é de &minus;625.572 votos. A <b>variação</b> é de 46,58 &minus; 53,54 = &minus;6,96 pontos percentuais. A <b>retenção</b> é de 3.052.349 &divide; 3.677.921 &minus; 1 = &minus;17,0%. A retenção cai mais do que os pontos percentuais porque o total de votos nominais na cidade também diminuiu, de 6,87 para 6,55 milhões.</p>
+
+      <h3>Qual usar</h3>
+      <p>Para comparar o desempenho entre municípios, use os pontos percentuais. Para ver onde estão os votos perdidos em números absolutos, use o saldo. Para ver a variação em relação à base de cada município, use a retenção. Nos dados, o saldo quase não se relaciona com as outras duas medidas (correlação próxima de zero), enquanto a variação em pontos percentuais e a retenção andam juntas (correlação de 0,57).</p>
 
       <h2>Como foi feito</h2>
       <ul>
