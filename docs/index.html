@@ -42,7 +42,8 @@
   body:not([data-view="dispersao"]):not([data-view="regioes"]) .only-scale { display: none !important; }
   .grow { flex: 1; }
   .legend { display: flex; flex-wrap: wrap; gap: 6px 14px; font-size: 12px; padding: 0 0 12px; color: #3b4656; }
-  body[data-view="dados"] .legend { display: none; }
+  body[data-view="dados"] .legend, body[data-view="regioes"] .legend { display: none; }
+  .fleg { display: flex; flex-wrap: wrap; gap: 4px 14px; font-size: 11.5px; color: #3b4656; margin-top: 8px; padding-top: 8px; border-top: 1px solid var(--line); }
   .li { display: inline-flex; align-items: center; gap: 6px; white-space: nowrap; }
   .dotc { width: 11px; height: 11px; border-radius: 50%; flex: none; }
 
@@ -157,7 +158,7 @@
 
   <section class="view" id="v-regioes">
     <div class="grid" id="grid"></div>
-    <p class="note">Os painéis ficam um abaixo do outro e cada um tem a própria escala, o que mostra melhor o padrão dentro de cada grupo. Em escala linear, as cidades grandes dominam o gráfico, então use o filtro de tamanho (medido pelos votos de Lula em 2022) ou a escala logarítmica. As cores são as mesmas do mapa.</p>
+    <p class="note">Os painéis ficam um abaixo do outro e cada um tem a própria escala e a própria legenda, o que mostra melhor o padrão dentro de cada grupo. Em escala linear, as cidades grandes dominam o gráfico, então use o filtro de tamanho (medido pelos votos de Lula em 2022) ou a escala logarítmica. As cores são as mesmas do mapa.</p>
   </section>
 
   <section class="view" id="v-dados">
@@ -268,11 +269,12 @@ function detalhe(i) {
     `<b>2022 (2ºT):</b> ${fmt(d.x)} votos (${d.px.toFixed(1)}%)${part(d.ap22, d.cp22)}<br><b>2026 (1ºT):</b> ${fmt(d.y)} votos (${d.py.toFixed(1)}%)${part(d.ap26, d.cp26)}<br>` +
     `<b>Saldo:</b> <span style="color:#d9730d;font-weight:700">${f1(d.s, 0)} votos</span> (${f1(d.rt, 1)}%) &bull; ${f1(d.pp, 2)} pp<br><span class="cz">${NOMES[CL.cls[i]]} (${FAIXAS_P[CL.cls[i]]})</span>`;
 }
-function legenda() {
+function legendaHTML() {
   const fm = {pp: v => f1(v, 2) + ' pp', s: v => f1(v, 0) + ' votos', rt: v => f1(v, 1) + '%'}[S.metrica], c = CL.cuts;
   const tx = [`≤ ${fm(c[0])}`, `${fm(c[0])} a ${fm(c[1])}`, `${fm(c[1])} a ${fm(c[2])}`, `${fm(c[2])} a ${fm(c[3])}`, `${fm(c[3])} a ${fm(c[4])}`, `> ${fm(c[4])}`];
-  $('legend').innerHTML = NOMES.map((n, k) => `<span class="li"><span class="dotc" style="background:${PAL[k]}"></span><b>${n}</b> ${tx[k]}</span>`).join('');
+  return NOMES.map((n, k) => `<span class="li"><span class="dotc" style="background:${PAL[k]}"></span><b>${n}</b> ${tx[k]}</span>`).join('');
 }
+function legenda() { $('legend').innerHTML = legendaHTML(); document.querySelectorAll('.fleg').forEach(e => e.innerHTML = legendaHTML()); }
 function contador() { const k = S.pins.size; $('pinned-count').innerText = k ? `${k} município(s) fixado(s)` : 'Nenhum município fixado'; }
 
 /* ------------------------------------------------ dispersão (usada em duas vistas) */
@@ -345,7 +347,7 @@ function montarRegioes() {
     if (!ids.length) return;
     const sx = ids.reduce((a, i) => a + DATA[i].x, 0), sy = ids.reduce((a, i) => a + DATA[i].y, 0), t22 = ids.reduce((a, i) => a + DATA[i].t22, 0), t26 = ids.reduce((a, i) => a + DATA[i].t26, 0);
     const el = document.createElement('div'); el.className = 'card facet';
-    el.innerHTML = `<h3>${g.n}</h3><div class="st"><b>${fmt(ids.length)}</b> municípios &bull; Lula <b>${fmt(sx)}</b> &rarr; <b>${fmt(sy)}</b> (${f1(sy - sx, 0)})<br>${(sx / t22 * 100).toFixed(1)}% &rarr; ${(sy / t26 * 100).toFixed(1)}% dos votos nominais (${f1(sy / t26 * 100 - sx / t22 * 100, 1)} pp)</div><canvas></canvas>`;
+    el.innerHTML = `<h3>${g.n}</h3><div class="st"><b>${fmt(ids.length)}</b> municípios &bull; Lula <b>${fmt(sx)}</b> &rarr; <b>${fmt(sy)}</b> (${f1(sy - sx, 0)})<br>${(sx / t22 * 100).toFixed(1)}% &rarr; ${(sy / t26 * 100).toFixed(1)}% dos votos nominais (${f1(sy / t26 * 100 - sx / t22 * 100, 1)} pp)</div><canvas></canvas><div class="fleg">${legendaHTML()}</div>`;
     grid.appendChild(el);
     const p = {cv: el.querySelector('canvas'), ids, geom: null}; ligar(p.cv, () => p); paineis.push(p);
   });
