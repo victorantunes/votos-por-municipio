@@ -77,4 +77,5 @@ python scripts/malha.py             # gera os polígonos do mapa (precisa da mal
 ```
 
 ## Fonte
-Tribunal Superior Eleitoral (dados abertos): https://dadosabertos.tse.jus.br. Malha municipal: IBGE.
+- Tribunal Superior Eleitoral (dados abertos): https://dadosabertos.tse.jus.br
+- IBGE, malha municipal 2022: https://geoftp.ibge.gov.br/organizacao_do_territorio/malhas_territoriais/malhas_municipais/municipio_2022/Brasil/BR/BR_Municipios_2022.zip
