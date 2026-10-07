@@ -493,7 +493,7 @@ function zerarZoom() { V1.view = null; paineis.forEach(p => p.view = null); }
 /* ------------------------------------------------ mapa (Leaflet carregado sob demanda) */
 const NOTA_POLI = 'Cada município é pintado pelo desempenho de Lula (malha municipal do IBGE, simplificada). Cores: classes por percentis nacionais (P15, P35, P50, P65, P85). As linhas mais escuras são as divisas dos estados. Escolha uma UF para dar zoom e destacar o estado, ou troque para círculos proporcionais aos votos de 2022. Clique em um município para marcar o nome, ou procure um pela barra de busca, e use Limpar marcações para remover.';
 const NOTA_CIRC = 'Cada círculo é um município, com tamanho proporcional aos votos de Lula em 2022. Cores: classes por percentis nacionais (P15, P35, P50, P65, P85). Escolha uma UF para dar zoom e destacar o estado, ou troque para os polígonos dos municípios. Clique em um município para marcar o nome, e use Limpar marcações para remover.';
-let map = null, marcadores = null, grupoCirc = null, camadaPoli = null, camadaUF = null, polis = null, mapaPronto = null, malhaPromessa = null;
+let rendCirc = null, rendPoli = null, map = null, marcadores = null, grupoCirc = null, camadaPoli = null, camadaUF = null, polis = null, mapaPronto = null, malhaPromessa = null;
 function carregar(src, css) {
   const a = new Promise((ok, erro) => { const l = document.createElement('link'); l.rel = 'stylesheet'; l.href = css; l.onload = ok; l.onerror = erro; document.head.appendChild(l); });
   const b = new Promise((ok, erro) => { const t = document.createElement('script'); t.src = src; t.onload = ok; t.onerror = erro; document.head.appendChild(t); });
@@ -507,7 +507,7 @@ function carregarMalha() {
   const baixar = u => fetch(u).then(r => { if (!r.ok) throw new Error(u); return r.json(); });
   malhaPromessa = Promise.all([baixar('dados/municipios.geojson'), baixar('dados/ufs.geojson')]).then(([gm, gu]) => {
     const idx = new Map(DATA.map((d, i) => [d.c, i])); polis = new Array(DATA.length);
-    camadaPoli = L.geoJSON(gm, {renderer: L.canvas({padding: 0.5}), style: f => estiloPoli(idx.get(f.properties.c)), onEachFeature: (f, layer) => {
+    camadaPoli = L.geoJSON(gm, {renderer: (rendPoli = L.canvas({padding: 0.5})), style: f => estiloPoli(idx.get(f.properties.c)), onEachFeature: (f, layer) => {
       const i = idx.get(f.properties.c); polis[i] = layer;
       layer.on('mouseover', () => { $('info').innerHTML = detalhe(i); layer.setStyle({color: '#111', weight: 1.6}); });
       layer.on('mouseout', () => layer.setStyle(estiloPoli(i)));
@@ -520,8 +520,8 @@ function carregarMalha() {
 function aplicarModo() {
   if (!map) return Promise.resolve();
   const poli = S.modo === 'poli'; $('mapnote').innerHTML = poli ? NOTA_POLI : NOTA_CIRC;
-  if (!poli) { [camadaPoli, camadaUF].forEach(l => l && map.hasLayer(l) && map.removeLayer(l)); map.addLayer(grupoCirc); pintarMapa(); return Promise.resolve(); }
-  return carregarMalha().then(() => { map.removeLayer(grupoCirc); map.addLayer(camadaPoli); map.addLayer(camadaUF); pintarMapa(); })
+  if (!poli) { [camadaPoli, camadaUF].forEach(l => l && map.hasLayer(l) && map.removeLayer(l)); if (rendPoli && map.hasLayer(rendPoli)) map.removeLayer(rendPoli); map.addLayer(grupoCirc); pintarMapa(); return Promise.resolve(); }
+  return carregarMalha().then(() => { map.removeLayer(grupoCirc); if (rendCirc && map.hasLayer(rendCirc)) map.removeLayer(rendCirc); map.addLayer(camadaPoli); map.addLayer(camadaUF); pintarMapa(); })
     .catch(() => { S.modo = 'circ'; $('modo').value = 'circ'; $('info').innerHTML = '<span class="cz">Não foi possível carregar os polígonos. Mostrando círculos.</span>'; return aplicarModo(); });
 }
 function iniciarMapa() {
@@ -529,7 +529,7 @@ function iniciarMapa() {
   mapaPronto = carregar('https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js', 'https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css').then(() => {
     map = L.map('map', {preferCanvas: true}).setView([-14.5, -52], 4);
     L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Light_Gray_Base/MapServer/tile/{z}/{y}/{x}', {maxZoom: 16, attribution: 'Tiles &copy; Esri'}).addTo(map);
-    const canvas = L.canvas({padding: 0.5});
+    const canvas = rendCirc = L.canvas({padding: 0.5});
     marcadores = DATA.map((d, i) => { if (d.lat === null) return null;
       const m = L.circleMarker([d.lat, d.lon], {renderer: canvas, radius: 1.6 + 0.0078 * Math.sqrt(d.x), color: '#222', weight: 0.5, fillColor: PAL[CL.cls[i]], fillOpacity: 0.85});
       m.on('mouseover', () => $('info').innerHTML = detalhe(i)); m.on('click', () => clicarMapa(i)); return m; });
