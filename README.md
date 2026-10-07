@@ -4,7 +4,7 @@ Comparação dos votos nominais de Lula para presidente em cada um dos 5.570 mun
 
 **Site:** https://victorantunes.github.io/lula-2022-2026/
 
-O site tem um mapa por município, um gráfico de dispersão (2022 no eixo X, 2026 no eixo Y, com a linha de paridade), a mesma dispersão separada por região, UF ou faixa de tamanho, e uma aba com tabelas, método e downloads.
+O site tem um mapa por município (em polígonos da malha do IBGE ou em círculos), um gráfico de dispersão (2022 no eixo X, 2026 no eixo Y, com a linha de paridade), a mesma dispersão separada por região, UF ou faixa de tamanho, e uma aba com tabelas, método e downloads.
 
 ## Resultado em uma linha
 Somando os municípios (sem o exterior), Lula passou de 60.193.094 votos nominais em 2022 (2º turno) para 53.722.151 em 2026 (1º turno), o que equivale a ir de 50,9% para 45,2% dos votos nominais.
@@ -25,7 +25,7 @@ Somando os municípios (sem o exterior), Lula passou de 60.193.094 votos nominai
 ```
 docs/                     site publicado (GitHub Pages)
   index.html              página única, gerada por scripts/analisar.py
-  dados/                  resultado_municipios.csv e resumo_uf.csv
+  dados/                  resultado_municipios.csv, resumo_uf.csv e a malha simplificada (municipios.geojson, ufs.geojson)
 dados/
   2022/                   resultado de 2022 por município (TSE)
   agg_2026/               votos de presidente em 2026, agregados por município e UF (TSE)
@@ -34,6 +34,7 @@ dados/
 scripts/
   coletar_bu_2026.py      baixa os boletins de urna e agrega os votos de presidente
   centroides.py           extrai as coordenadas da malha do IBGE
+  malha.py                simplifica a malha municipal (polígonos do mapa), preservando as fronteiras entre vizinhos
   analisar.py             calcula as métricas e gera o site
   templates/app.html      modelo da página
 ```
@@ -43,6 +44,7 @@ scripts/
 pip install pandas geopandas
 python scripts/coletar_bu_2026.py   # baixa cerca de 5 GB do TSE e grava dados/agg_2026/ (opcional, os agregados já estão no repositório)
 python scripts/analisar.py          # gera docs/index.html e docs/dados/*.csv
+python scripts/malha.py             # gera os polígonos do mapa (precisa da malha do IBGE em dados/malha_ibge/)
 ```
 
 ## Fonte

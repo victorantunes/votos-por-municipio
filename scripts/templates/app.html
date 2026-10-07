@@ -43,6 +43,8 @@
   .grow { flex: 1; }
   .legend { display: flex; flex-wrap: wrap; gap: 6px 14px; font-size: 12px; padding: 0 0 12px; color: #3b4656; }
   body[data-view="dados"] .legend, body[data-view="regioes"] .legend, body[data-view="dispersao"] .legend { display: none; }
+  body[data-view="dados"] .bar { display: none; }
+  body:not([data-view="mapa"]) .only-map { display: none !important; }
   .fleg { display: flex; flex-wrap: wrap; gap: 4px 14px; font-size: 11.5px; color: #3b4656; margin-top: 8px; padding-top: 8px; border-top: 1px solid var(--line); }
   .li { display: inline-flex; align-items: center; gap: 6px; white-space: nowrap; }
   .dotc { width: 11px; height: 11px; border-radius: 50%; flex: none; }
@@ -143,6 +145,7 @@
       <option value="rt">Retenção (% dos votos de 2022)</option>
     </select></label>
     <label>UF <select id="uf"><option value="">Brasil</option></select></label>
+    <label class="only-map">Visualização <select id="modo"><option value="poli">Polígonos (municípios)</option><option value="circ">Círculos</option></select></label>
     <label class="only-disp"><input type="search" id="busca" placeholder="Buscar município..."></label>
     <label class="only-disp"><input type="checkbox" id="cinza" checked> Outros estados em cinza</label>
     <label class="only-scale">Escala <select id="escala"><option value="log">Logarítmica</option><option value="lin">Linear</option></select></label>
@@ -155,8 +158,8 @@
   <div class="legend" id="legend"></div>
 
   <section class="view" id="v-mapa">
-    <div class="card" id="mapwrap"><div id="map"></div><div id="info"><span class="cz">Passe o mouse (ou toque) em um município. O círculo é proporcional aos votos de Lula em 2022.</span></div><div id="mapmsg">Não foi possível carregar o mapa. Ele precisa de acesso à internet para o mapa de fundo.</div></div>
-    <p class="note">Cada círculo é um município, com tamanho proporcional aos votos de Lula em 2022. Cores: classes por percentis nacionais (P15, P35, P50, P65, P85). Escolha uma UF para dar zoom e destacar o estado.</p>
+    <div class="card" id="mapwrap"><div id="map"></div><div id="info"><span class="cz">Passe o mouse (ou toque) em um município para ver os números.</span></div><div id="mapmsg">Não foi possível carregar o mapa. Ele precisa de acesso à internet para o mapa de fundo.</div></div>
+    <p class="note" id="mapnote"></p>
   </section>
 
   <section class="view" id="v-dispersao">
@@ -230,7 +233,7 @@ const TAM = [
 DATA.forEach(d => { d.f = TAM.slice(1).find(t => t.f(d)).k; d.t22 = d.x / d.px * 100; d.t26 = d.y / d.py * 100; });
 
 /* ------------------------------------------------ estado e classes */
-const S = {cinza:true, view:'mapa', metrica:'pp', uf:'', termo:'', escala:'log', sep:'g', faixa:'', pins:new Set()};
+const S = {modo:'poli', cinza:true, view:'mapa', metrica:'pp', uf:'', termo:'', escala:'log', sep:'g', faixa:'', pins:new Set()};
 function quantil(s, q) { const pos = (s.length - 1) * q / 100, lo = Math.floor(pos), hi = Math.ceil(pos); return s[lo] + (s[hi] - s[lo]) * (pos - lo); }
 function classes(chave) {
   const vals = DATA.map(d => d[chave]).filter(v => v !== null).sort((a, b) => a - b);
@@ -405,13 +408,38 @@ function vRegioes() { paineis.forEach(p => p.redraw()); }
 function zerarZoom() { V1.view = null; paineis.forEach(p => p.view = null); }
 
 /* ------------------------------------------------ mapa (Leaflet carregado sob demanda) */
-let map = null, marcadores = null, mapaPronto = null;
+const NOTA_POLI = 'Cada município é pintado pelo desempenho de Lula (malha municipal do IBGE, simplificada). Cores: classes por percentis nacionais (P15, P35, P50, P65, P85). As linhas mais escuras são as divisas dos estados. Escolha uma UF para dar zoom e destacar o estado, ou troque para círculos proporcionais aos votos de 2022.';
+const NOTA_CIRC = 'Cada círculo é um município, com tamanho proporcional aos votos de Lula em 2022. Cores: classes por percentis nacionais (P15, P35, P50, P65, P85). Escolha uma UF para dar zoom e destacar o estado, ou troque para os polígonos dos municípios.';
+let map = null, marcadores = null, grupoCirc = null, camadaPoli = null, camadaUF = null, polis = null, mapaPronto = null, malhaPromessa = null;
 function carregar(src, css) {
   const a = new Promise((ok, erro) => { const l = document.createElement('link'); l.rel = 'stylesheet'; l.href = css; l.onload = ok; l.onerror = erro; document.head.appendChild(l); });
   const b = new Promise((ok, erro) => { const t = document.createElement('script'); t.src = src; t.onload = ok; t.onerror = erro; document.head.appendChild(t); });
   return Promise.all([a, b]);
 }
 function ajustarMapa() { const w = $('mapwrap'); w.style.height = Math.max(460, Math.min(900, Math.round(window.innerHeight * 0.78))) + 'px'; if (map) map.invalidateSize(); }
+const estiloPoli = i => { const on = noUF(DATA[i]); return {fillColor: PAL[CL.cls[i]], fillOpacity: on ? 0.93 : 0.08, color: '#ffffff', weight: on ? 0.3 : 0, opacity: 0.9}; };
+function carregarMalha() {
+  if (malhaPromessa) return malhaPromessa;
+  const baixar = u => fetch(u).then(r => { if (!r.ok) throw new Error(u); return r.json(); });
+  malhaPromessa = Promise.all([baixar('dados/municipios.geojson'), baixar('dados/ufs.geojson')]).then(([gm, gu]) => {
+    const idx = new Map(DATA.map((d, i) => [d.c, i])); polis = new Array(DATA.length);
+    camadaPoli = L.geoJSON(gm, {renderer: L.canvas({padding: 0.5}), style: f => estiloPoli(idx.get(f.properties.c)), onEachFeature: (f, layer) => {
+      const i = idx.get(f.properties.c); polis[i] = layer;
+      layer.on('mouseover', () => { $('info').innerHTML = detalhe(i); layer.setStyle({color: '#111', weight: 1.6}); });
+      layer.on('mouseout', () => layer.setStyle(estiloPoli(i)));
+      layer.on('click', () => $('info').innerHTML = detalhe(i)); }});
+    map.createPane('ufPane'); map.getPane('ufPane').style.pointerEvents = 'none'; map.getPane('ufPane').style.zIndex = 450;
+    camadaUF = L.geoJSON(gu, {pane: 'ufPane', renderer: L.canvas({pane: 'ufPane'}), interactive: false, style: {color: '#2d3748', weight: 1, fill: false, opacity: 0.85}});
+  }).catch(e => { malhaPromessa = null; throw e; });
+  return malhaPromessa;
+}
+function aplicarModo() {
+  if (!map) return Promise.resolve();
+  const poli = S.modo === 'poli'; $('mapnote').innerHTML = poli ? NOTA_POLI : NOTA_CIRC;
+  if (!poli) { [camadaPoli, camadaUF].forEach(l => l && map.hasLayer(l) && map.removeLayer(l)); map.addLayer(grupoCirc); pintarMapa(); return Promise.resolve(); }
+  return carregarMalha().then(() => { map.removeLayer(grupoCirc); map.addLayer(camadaPoli); map.addLayer(camadaUF); pintarMapa(); })
+    .catch(() => { S.modo = 'circ'; $('modo').value = 'circ'; $('info').innerHTML = '<span class="cz">Não foi possível carregar os polígonos. Mostrando círculos.</span>'; return aplicarModo(); });
+}
 function iniciarMapa() {
   if (mapaPronto) return mapaPronto;
   mapaPronto = carregar('https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js', 'https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css').then(() => {
@@ -421,14 +449,15 @@ function iniciarMapa() {
     marcadores = DATA.map((d, i) => { if (d.lat === null) return null;
       const m = L.circleMarker([d.lat, d.lon], {renderer: canvas, radius: 1.6 + 0.0078 * Math.sqrt(d.x), color: '#222', weight: 0.5, fillColor: PAL[CL.cls[i]], fillOpacity: 0.85});
       m.on('mouseover', () => $('info').innerHTML = detalhe(i)); m.on('click', () => $('info').innerHTML = detalhe(i)); return m; });
-    DATA.map((d, i) => i).sort((a, b) => DATA[b].x - DATA[a].x).forEach(i => marcadores[i] && marcadores[i].addTo(map));
-    pintarMapa();
+    grupoCirc = L.layerGroup(DATA.map((d, i) => i).sort((a, b) => DATA[b].x - DATA[a].x).map(i => marcadores[i]).filter(Boolean));
+    return aplicarModo();
   }).catch(() => { $('mapmsg').style.display = 'flex'; });
   return mapaPronto;
 }
 function pintarMapa() {
-  if (!marcadores) return;
-  DATA.forEach((d, i) => { const m = marcadores[i]; if (!m) return; const on = noUF(d); m.setStyle({fillColor: PAL[CL.cls[i]], fillOpacity: on ? 0.88 : 0.07, opacity: on ? 1 : 0.15}); });
+  if (!map) return;
+  if (grupoCirc && map.hasLayer(grupoCirc)) DATA.forEach((d, i) => { const m = marcadores[i]; if (!m) return; const on = noUF(d); m.setStyle({fillColor: PAL[CL.cls[i]], fillOpacity: on ? 0.88 : 0.07, opacity: on ? 1 : 0.15}); });
+  if (camadaPoli && map.hasLayer(camadaPoli)) polis.forEach((l, i) => l && l.setStyle(estiloPoli(i)));
 }
 function zoomUF() {
   if (!map) return;
@@ -449,6 +478,7 @@ function mostrar(v) {
 document.querySelectorAll('.tab').forEach(b => b.onclick = () => mostrar(b.dataset.v));
 $('metrica').onchange = e => { S.metrica = e.target.value; CL = classes(S.metrica); legenda(); redesenhar(); };
 $('uf').onchange = e => { S.uf = e.target.value; zerarZoom(); if (S.view === 'regioes') { montarRegioes(); requestAnimationFrame(vRegioes); } else if (S.view === 'mapa') { pintarMapa(); zoomUF(); } else redesenhar(); };
+$('modo').onchange = e => { S.modo = e.target.value; aplicarModo(); };
 $('cinza').onchange = e => { S.cinza = e.target.checked; redesenhar(); };
 $('busca').oninput = e => { S.termo = e.target.value.trim().toLowerCase(); V1.view = null; redesenhar(); };
 $('escala').onchange = e => { S.escala = e.target.value; zerarZoom(); redesenhar(); };

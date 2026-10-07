@@ -132,7 +132,7 @@ def pyval(v):
 
 recs = []
 for i, r in df.iterrows():
-    recs.append({'i': i, 'n': r.nome, 'u': r.uf, 'g': r.regiao, 'x': int(r.votos22), 'px': pyval(r.pct22), 'y': int(r.votos26),
+    recs.append({'i': i, 'c': str(r.CD_IBGE), 'n': r.nome, 'u': r.uf, 'g': r.regiao, 'x': int(r.votos22), 'px': pyval(r.pct22), 'y': int(r.votos26),
                  'py': pyval(r.pct26), 's': int(r.saldo), 'pp': pyval(r.var_pp), 'rt': pyval(r.ret_pct),
                  'ap26': None if pd.isna(r.aptos26) else int(r.aptos26), 'cp26': None if pd.isna(r.comparec26) else int(r.comparec26),
                  'ap22': None if pd.isna(r.aptos22) else int(r.aptos22), 'cp22': None if pd.isna(r.comparec22) else int(r.comparec22),
