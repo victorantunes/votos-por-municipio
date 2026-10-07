@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lula em 2022 e 2026, município a município</title>
+<meta name="description" content="Votos nominais de Lula em cada município brasileiro, 2º turno de 2022 e 1º turno de 2026: mapa, dispersão e comparação por região, com dados do TSE.">
+<style>
+  :root { --bg:#f4f6f9; --card:#fff; --ink:#1a202c; --muted:#64707f; --line:#e3e8ee; --accent:#b3201f; --link:#1f5fa8; --soft:#edf2f7; }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { -webkit-text-size-adjust: 100%; }
+  body { background: var(--bg); color: var(--ink); font: 15px/1.55 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; }
+  a { color: var(--link); }
+  .wrap { max-width: 1400px; margin: 0 auto; padding: 0 16px; }
+
+  /* topo */
+  .top { padding: 20px 0 14px; display: grid; grid-template-columns: 1fr auto; gap: 14px 28px; align-items: end; }
+  h1 { font-size: 24px; line-height: 1.2; letter-spacing: -.01em; }
+  .sub { color: var(--muted); font-size: 14px; margin-top: 4px; max-width: 640px; }
+  .stats { display: grid; grid-template-columns: repeat(4, auto); gap: 6px 26px; }
+  .stat span { display: block; font-size: 11.5px; color: var(--muted); }
+  .stat b { display: block; font-size: 18px; line-height: 1.25; white-space: nowrap; }
+  .stat small { font-size: 11px; color: var(--muted); }
+
+  /* abas */
+  .tabbar { position: sticky; top: 0; z-index: 30; background: var(--bg); border-bottom: 1px solid var(--line); }
+  .tabs { display: flex; gap: 4px; overflow-x: auto; scrollbar-width: none; }
+  .tabs::-webkit-scrollbar { display: none; }
+  .tab { appearance: none; border: 0; background: none; font: inherit; font-weight: 600; color: var(--muted); padding: 11px 16px; cursor: pointer; border-bottom: 3px solid transparent; white-space: nowrap; }
+  .tab:hover { color: var(--ink); }
+  .tab[aria-selected="true"] { color: var(--accent); border-bottom-color: var(--accent); }
+
+  /* controles */
+  .bar { display: flex; flex-wrap: wrap; gap: 10px 16px; align-items: center; padding: 12px 0; font-size: 13px; color: #4a5568; }
+  .bar label { display: flex; align-items: center; gap: 6px; }
+  select, input[type=search] { font: inherit; font-size: 13px; border: 1px solid #cbd5e0; background: #fff; color: #2d3748; border-radius: 8px; padding: 6px 10px; max-width: 100%; }
+  select:disabled { opacity: .5; }
+  input[type=search] { width: 190px; }
+  .btn { font: inherit; font-size: 13px; font-weight: 600; background: #fff; border: 1px solid #cbd5e0; color: #4a5568; border-radius: 8px; padding: 6px 12px; cursor: pointer; }
+  .btn:hover { background: var(--soft); }
+  body:not([data-view="dispersao"]) .only-disp, body:not([data-view="regioes"]) .only-reg, body[data-view="mapa"] .only-pins { display: none !important; }
+  body:not([data-view="dispersao"]):not([data-view="regioes"]) .only-scale { display: none !important; }
+  .grow { flex: 1; }
+  .legend { display: flex; flex-wrap: wrap; gap: 6px 14px; font-size: 12px; padding: 0 0 12px; color: #3b4656; }
+  body[data-view="dados"] .legend { display: none; }
+  .li { display: inline-flex; align-items: center; gap: 6px; white-space: nowrap; }
+  .dotc { width: 11px; height: 11px; border-radius: 50%; flex: none; }
+
+  /* vistas */
+  .view { display: none; }
+  body[data-view="mapa"] #v-mapa, body[data-view="dispersao"] #v-dispersao, body[data-view="regioes"] #v-regioes, body[data-view="dados"] #v-dados { display: block; }
+  .card { background: var(--card); border: 1px solid var(--line); border-radius: 14px; box-shadow: 0 2px 12px rgba(20,30,50,.04); }
+
+  #mapwrap { position: relative; height: 560px; overflow: hidden; }
+  #map { position: absolute; inset: 0; }
+  #mapmsg { position: absolute; inset: 0; display: none; align-items: center; justify-content: center; text-align: center; padding: 24px; color: var(--muted); z-index: 500; background: var(--card); }
+  #info { position: absolute; z-index: 600; top: 10px; left: 56px; width: 290px; max-width: calc(100% - 70px); background: #fff; border: 1px solid #d5dbe3; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,.18); padding: 10px 14px; font-size: 12.5px; line-height: 1.5; }
+  #info h3 { font-size: 14px; margin-bottom: 2px; }
+  .cz { color: var(--muted); font-size: 11.5px; }
+  hr.s { border: 0; border-top: 1px solid var(--line); margin: 6px 0; }
+
+  .chartcard { padding: 14px 16px 10px; }
+  .chart-box { position: relative; width: 100%; height: clamp(420px, 72vh, 720px); }
+  .chart-box canvas, .facet canvas { width: 100%; height: 100%; display: block; }
+  .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 360px), 1fr)); gap: 14px; }
+  .facet { padding: 12px 14px 8px; }
+  .facet h3 { font-size: 15px; }
+  .facet .st { font-size: 11.5px; color: var(--muted); margin: 2px 0 6px; line-height: 1.45; }
+  .facet .st b { color: #2d3748; }
+  .facet canvas { aspect-ratio: 1 / 1; height: auto; }
+  .tooltip { position: fixed; display: none; background: rgba(26,32,44,.95); color: #fff; padding: 10px 14px; border-radius: 8px; font-size: 12px; line-height: 1.5; pointer-events: none; box-shadow: 0 4px 14px rgba(0,0,0,.25); z-index: 80; max-width: 300px; }
+  .note { font-size: 12px; color: var(--muted); margin: 12px 2px 0; line-height: 1.55; }
+
+  /* dados e método */
+  .doc { padding: 22px 24px 8px; }
+  .doc h2 { font-size: 18px; margin: 22px 0 10px; }
+  .doc h2:first-child { margin-top: 0; }
+  .doc p, .doc li { font-size: 14.5px; margin-bottom: 8px; }
+  .doc ul { padding-left: 20px; }
+  .tablewrap { overflow-x: auto; border: 1px solid var(--line); border-radius: 10px; margin: 8px 0; }
+  table { border-collapse: collapse; width: 100%; font-size: 13.5px; }
+  th, td { padding: 8px 12px; border-bottom: 1px solid var(--line); text-align: left; white-space: nowrap; }
+  th { font-size: 11.5px; color: var(--muted); font-weight: 600; text-transform: uppercase; letter-spacing: .02em; background: #fafbfd; }
+  td.n, th.n { text-align: right; }
+  tr:last-child td { border-bottom: 0; }
+  details summary { cursor: pointer; color: var(--link); margin: 8px 0; }
+  footer { color: var(--muted); font-size: 12.5px; padding: 18px 2px 40px; }
+
+  @media (max-width: 820px) {
+    .top { grid-template-columns: 1fr; }
+    .stats { grid-template-columns: repeat(2, 1fr); gap: 10px 16px; }
+    h1 { font-size: 21px; }
+    .bar label { flex: 1 1 46%; }
+    .bar label select { flex: 1; min-width: 0; }
+    input[type=search] { width: 100%; flex: 1 1 100%; }
+    #info { top: auto; bottom: 8px; left: 8px; width: auto; right: 8px; max-width: none; }
+    .doc { padding: 18px 16px 4px; }
+    .legend { display: grid; grid-template-columns: 1fr 1fr; gap: 6px 10px; font-size: 11.5px; }
+    .li { white-space: normal; align-items: flex-start; }
+    .li .dotc { margin-top: 3px; }
+  }
+</style>
+</head>
+<body data-view="mapa">
+<div class="wrap">
+  <header class="top">
+    <div>
+      <h1>Lula em 2022 e 2026, município a município</h1>
+      <p class="sub">Votos nominais de Lula para presidente em cada um dos __N_MUN__ municípios: 2º turno de 2022 contra 1º turno de 2026, com dados abertos do TSE.</p>
+    </div>
+    <div class="stats">
+      <div class="stat"><span>2022 (2ºT)</span><b>__L22__</b><small>votos</small></div>
+      <div class="stat"><span>2026 (1ºT)</span><b>__L26__</b><small>votos</small></div>
+      <div class="stat"><span>Saldo</span><b>__SALDO__</b><small>de votos</small></div>
+      <div class="stat"><span>Votos nominais</span><b>__P22__% → __P26__%</b><small>__VARPP__ pp</small></div>
+    </div>
+  </header>
+</div>
+
+<div class="tabbar"><div class="wrap">
+  <div class="tabs" role="tablist" aria-label="Visualizações">
+    <button class="tab" role="tab" data-v="mapa" aria-selected="true">Mapa</button>
+    <button class="tab" role="tab" data-v="dispersao" aria-selected="false">Dispersão</button>
+    <button class="tab" role="tab" data-v="regioes" aria-selected="false">Por região</button>
+    <button class="tab" role="tab" data-v="dados" aria-selected="false">Dados e método</button>
+  </div>
+</div></div>
+
+<div class="wrap">
+  <div class="bar">
+    <label>Colorir por <select id="metrica">
+      <option value="pp">Variação em pontos percentuais</option>
+      <option value="s">Saldo de votos</option>
+      <option value="rt">Retenção (% dos votos de 2022)</option>
+    </select></label>
+    <label>UF <select id="uf"><option value="">Brasil</option></select></label>
+    <label class="only-disp"><input type="search" id="busca" placeholder="Buscar município..."></label>
+    <label class="only-scale">Escala <select id="escala"><option value="log">Logarítmica</option><option value="lin">Linear</option></select></label>
+    <label class="only-reg">Separar por <select id="sep"><option value="g">Região</option><option value="u">UF</option><option value="f">Faixa de tamanho</option></select></label>
+    <label class="only-reg">Tamanho <select id="faixa"></select></label>
+    <span class="grow"></span>
+    <span class="only-pins cz" id="pinned-count"></span>
+    <button class="btn only-pins" id="limpar">Limpar marcações</button>
+  </div>
+  <div class="legend" id="legend"></div>
+
+  <section class="view" id="v-mapa">
+    <div class="card" id="mapwrap"><div id="map"></div><div id="info"><span class="cz">Passe o mouse (ou toque) em um município. O círculo é proporcional aos votos de Lula em 2022.</span></div><div id="mapmsg">Não foi possível carregar o mapa. Ele precisa de acesso à internet para o mapa de fundo.</div></div>
+    <p class="note">Cada círculo é um município, com tamanho proporcional aos votos de Lula em 2022. Cores: classes por percentis nacionais (P15, P35, P50, P65, P85). Escolha uma UF para dar zoom e destacar o estado.</p>
+  </section>
+
+  <section class="view" id="v-dispersao">
+    <div class="card chartcard"><div class="chart-box" id="box1"><canvas id="cv1"></canvas></div></div>
+    <p class="note">Eixo X: votos de Lula em 2022 (2ºT). Eixo Y: votos em 2026 (1ºT). Abaixo da diagonal (paridade, Y = X), o município perdeu votos. Passe o mouse para ver os números e clique em um ponto para manter o nome marcado. Com uma UF ou uma busca, os demais municípios ficam em cinza.</p>
+  </section>
+
+  <section class="view" id="v-regioes">
+    <div class="grid" id="grid"></div>
+    <p class="note">Cada painel tem a própria escala, o que mostra melhor o padrão dentro de cada grupo. Em escala linear, as cidades grandes dominam o gráfico, então use o filtro de tamanho (medido pelos votos de Lula em 2022) ou a escala logarítmica. As cores são as mesmas do mapa.</p>
+  </section>
+
+  <section class="view" id="v-dados">
+    <div class="card doc">
+      <h2>Por região e por UF</h2>
+      <div class="tablewrap"><table>
+        <thead><tr><th>Região</th><th class="n">Municípios</th><th class="n">Lula 2022 (2ºT)</th><th class="n">Lula 2026 (1ºT)</th><th class="n">Saldo</th><th class="n">% 2022</th><th class="n">% 2026</th><th class="n">Variação (pp)</th></tr></thead>
+        <tbody>
+__TAB_REGIAO__
+        </tbody></table></div>
+      <details><summary>Ver por UF</summary>
+        <div class="tablewrap"><table>
+        <thead><tr><th>UF</th><th class="n">Municípios</th><th class="n">Lula 2022 (2ºT)</th><th class="n">Lula 2026 (1ºT)</th><th class="n">Saldo</th><th class="n">% 2022</th><th class="n">% 2026</th><th class="n">Variação (pp)</th></tr></thead>
+        <tbody>
+__TAB_UF__
+        </tbody></table></div></details>
+
+      <h2>Como foi feito</h2>
+      <ul>
+        <li>Para cada município, somaram-se os votos nominais de Lula (número 13) para presidente, no 2º turno de 2022 e no 1º turno de 2026. O percentual é calculado sobre os votos nominais, o que exclui brancos e nulos.</li>
+        <li>Os dados de 2022 vêm dos resultados de votação por município do TSE. Os de 2026 vêm dos boletins de urna do 1º turno, divulgados em 05/10/2026, somados por município.</li>
+        <li>A cor de cada município usa os percentis P15, P35, P50, P65 e P85 da métrica escolhida entre todos os municípios: variação em pontos percentuais (padrão), saldo em votos ou retenção.</li>
+        <li>O exterior não entra, porque não é município. Boa Esperança do Norte (MT) foi criada a partir de Sorriso e só existe em 2026, então os votos dos dois foram somados em "Sorriso (com Boa Esperança do Norte)", para manter o território de 2022.</li>
+      </ul>
+
+      <h2>Cuidados na leitura</h2>
+      <ul>
+        <li>O 2º turno de 2022 teve dois candidatos e o 1º turno de 2026 teve vários. Em 2026, Lula somou __P26__% dos votos nominais e Flávio Bolsonaro, __FLAVIO__%. Parte da diferença em pontos percentuais vem da mudança no número de candidatos, e não de eleitores que deixaram de votar em Lula.</li>
+        <li>O saldo em votos depende também do comparecimento, que varia entre as duas eleições. O comparecimento de cada município aparece nos detalhes do mapa e dos gráficos.</li>
+        <li>Os dados são dos boletins de urna divulgados em 05/10/2026, e o TSE pode atualizar os arquivos depois. Para uso oficial, confira os números no site do TSE.</li>
+      </ul>
+
+      <h2>Dados e código</h2>
+      <ul>
+        <li><a href="dados/resultado_municipios.csv">resultado_municipios.csv</a>: uma linha por município, com votos, percentuais, saldo, variação, comparecimento e coordenadas.</li>
+        <li><a href="dados/resumo_uf.csv">resumo_uf.csv</a>: totais por UF.</li>
+        <li>Código e instruções para refazer a análise: <a href="https://github.com/victorantunes/lula-2022-2026">github.com/victorantunes/lula-2022-2026</a>.</li>
+      </ul>
+    </div>
+    <footer>Fonte: Tribunal Superior Eleitoral (dados abertos), resultados de 2022 e boletins de urna de 2026. Malha municipal: IBGE.</footer>
+  </section>
+</div>
+<div class="tooltip" id="tooltip"></div>
+
+<script>
+const DATA = __DATA__;
+const PAL = ['#99000d','#d92523','#fe9929','#99d8c9','#41ae76','#005a32'];
+const NOMES = ['Queda Severa','Queda Forte','Abaixo da Mediana','Acima da Mediana','Retenção Forte','Destaque Positivo'];
+const FAIXAS_P = ['Pior 15%','P15 a P35','P35 a P50','P50 a P65','P65 a P85','Melhor 15%'];
+const ORDEM_REG = ['Norte','Nordeste','Centro-Oeste','Sudeste','Sul'];
+const $ = id => document.getElementById(id);
+const fmt = n => n.toLocaleString('pt-BR');
+const f1 = (n, d = 1) => (n > 0 ? '+' : '') + n.toLocaleString('pt-BR', {minimumFractionDigits: d, maximumFractionDigits: d});
+const TAM = [
+  {k:'', n:'Todos os tamanhos'},
+  {k:'a', n:'Até 5 mil votos de Lula (2022)', f:d => d.x < 5000},
+  {k:'b', n:'De 5 mil a 20 mil', f:d => d.x >= 5000 && d.x < 20000},
+  {k:'c', n:'De 20 mil a 100 mil', f:d => d.x >= 20000 && d.x < 100000},
+  {k:'d', n:'Mais de 100 mil', f:d => d.x >= 100000}
+];
+DATA.forEach(d => { d.f = TAM.slice(1).find(t => t.f(d)).k; d.t22 = d.x / d.px * 100; d.t26 = d.y / d.py * 100; });
+
+/* ------------------------------------------------ estado e classes */
+const S = {view:'mapa', metrica:'pp', uf:'', termo:'', escala:'log', sep:'g', faixa:'', pins:new Set()};
+function quantil(s, q) { const pos = (s.length - 1) * q / 100, lo = Math.floor(pos), hi = Math.ceil(pos); return s[lo] + (s[hi] - s[lo]) * (pos - lo); }
+function classes(chave) {
+  const vals = DATA.map(d => d[chave]).filter(v => v !== null).sort((a, b) => a - b);
+  const cuts = [15, 35, 50, 65, 85].map(q => quantil(vals, q));
+  return {cuts, cls: DATA.map(d => { const v = d[chave]; if (v === null) return 2; let k = 0; while (k < 5 && v > cuts[k]) k++; return k; })};
+}
+let CL = classes(S.metrica);
+const noUF = d => !S.uf || d.u === S.uf;
+const noBusca = d => !S.termo || d.n.toLowerCase().includes(S.termo);
+
+function detalhe(i) {
+  const d = DATA[i], part = (a, c) => (a && c) ? ` &bull; comparecimento ${(c / a * 100).toFixed(1)}%` : '';
+  return `<h3>${d.n} - ${d.u}</h3><span class="cz">${d.g} &bull; ${fmt(d.sc)} seções</span><hr class="s">` +
+    `<b>2022 (2ºT):</b> ${fmt(d.x)} votos (${d.px.toFixed(1)}%)${part(d.ap22, d.cp22)}<br><b>2026 (1ºT):</b> ${fmt(d.y)} votos (${d.py.toFixed(1)}%)${part(d.ap26, d.cp26)}<br>` +
+    `<b>Saldo:</b> <span style="color:#d9730d;font-weight:700">${f1(d.s, 0)} votos</span> (${f1(d.rt, 1)}%) &bull; ${f1(d.pp, 2)} pp<br><span class="cz">${NOMES[CL.cls[i]]} (${FAIXAS_P[CL.cls[i]]})</span>`;
+}
+function legenda() {
+  const fm = {pp: v => f1(v, 2) + ' pp', s: v => f1(v, 0) + ' votos', rt: v => f1(v, 1) + '%'}[S.metrica], c = CL.cuts;
+  const tx = [`≤ ${fm(c[0])}`, `${fm(c[0])} a ${fm(c[1])}`, `${fm(c[1])} a ${fm(c[2])}`, `${fm(c[2])} a ${fm(c[3])}`, `${fm(c[3])} a ${fm(c[4])}`, `> ${fm(c[4])}`];
+  $('legend').innerHTML = NOMES.map((n, k) => `<span class="li"><span class="dotc" style="background:${PAL[k]}"></span><b>${n}</b> ${tx[k]}</span>`).join('');
+}
+function contador() { const k = S.pins.size; $('pinned-count').innerText = k ? `${k} município(s) fixado(s)` : 'Nenhum município fixado'; }
+
+/* ------------------------------------------------ dispersão (usada em duas vistas) */
+const tip = $('tooltip');
+const rot = v => v >= 1e6 ? (v / 1e6).toLocaleString('pt-BR', {maximumFractionDigits: 1}) + ' mi' : v >= 1e3 ? (v / 1e3).toLocaleString('pt-BR', {maximumFractionDigits: 1}) + ' mil' : fmt(Math.round(v));
+function nice(v) { const e = Math.pow(10, Math.floor(Math.log10(v))), m = v / e; return (m <= 1 ? 1 : m <= 2 ? 2 : m <= 2.5 ? 2.5 : m <= 5 ? 5 : 10) * e; }
+function desenhar(cv, ids, o) {
+  const ctx = cv.getContext('2d'), dpr = window.devicePixelRatio || 1, W = cv.clientWidth, H = cv.clientHeight;
+  if (!W || !H) return null;
+  cv.width = W * dpr; cv.height = H * dpr; ctx.setTransform(dpr, 0, 0, dpr, 0, 0); ctx.clearRect(0, 0, W, H);
+  const small = o.pequeno, m = small ? {t:12, r:14, b:36, l:56} : {t:18, r:26, b:50, l:72}, pw = W - m.l - m.r, ph = H - m.t - m.b;
+  const log = S.escala === 'log', mx = o.max || Math.max(...ids.map(i => Math.max(DATA[i].x, DATA[i].y))), mn = Math.min(...ids.map(i => Math.min(DATA[i].x, DATA[i].y)));
+  const MIN = Math.pow(10, Math.floor(Math.log10(Math.max(mn, 1))));
+  const MAX = log ? Math.pow(10, Math.ceil(Math.log10(mx * 1.05))) : nice(mx * 1.04);
+  const t = v => log ? (Math.log10(Math.max(v, 1)) - Math.log10(MIN)) / (Math.log10(MAX) - Math.log10(MIN)) : v / MAX;
+  const sx = v => m.l + t(v) * pw, sy = v => m.t + ph - t(v) * ph;
+  ctx.font = (small ? '10.5px' : '11px') + ' sans-serif'; ctx.fillStyle = '#718096'; ctx.strokeStyle = '#edf2f7'; ctx.lineWidth = 1; ctx.setLineDash([3, 3]);
+  const ticks = log ? [10, 100, 1000, 10000, 100000, 1000000, 10000000].filter(v => v >= MIN && v < MAX) : [0, 1, 2, 3, 4].map(k => MAX * k / 4);
+  ticks.forEach(v => {
+    ctx.beginPath(); ctx.moveTo(sx(v), m.t); ctx.lineTo(sx(v), m.t + ph); ctx.stroke(); ctx.beginPath(); ctx.moveTo(m.l, sy(v)); ctx.lineTo(m.l + pw, sy(v)); ctx.stroke();
+    ctx.textAlign = 'center'; ctx.fillText(rot(v), sx(v), m.t + ph + 15); ctx.textAlign = 'right'; ctx.fillText(rot(v), m.l - 7, sy(v) + 4);
+  });
+  ctx.setLineDash([]); ctx.strokeStyle = '#cbd5e0'; ctx.lineWidth = 1.4; ctx.beginPath(); ctx.moveTo(m.l, m.t); ctx.lineTo(m.l, m.t + ph); ctx.lineTo(m.l + pw, m.t + ph); ctx.stroke();
+  const a0 = log ? MIN : 0; ctx.setLineDash([6, 6]); ctx.strokeStyle = '#a0aec0'; ctx.lineWidth = 1.6; ctx.beginPath(); ctx.moveTo(sx(a0), sy(a0)); ctx.lineTo(sx(MAX), sy(MAX)); ctx.stroke(); ctx.setLineDash([]);
+  if (!small && W > 560) { ctx.save(); const pv = log ? Math.pow(10, Math.log10(MIN) + 0.7 * (Math.log10(MAX) - Math.log10(MIN))) : MAX * 0.7; ctx.translate(sx(pv), sy(pv)); ctx.rotate(-Math.atan2(ph, pw)); ctx.fillStyle = '#a0aec0'; ctx.textAlign = 'center'; ctx.fillText('Linha de paridade (2026 = 2022)', 0, -7); ctx.restore(); }
+  ctx.fillStyle = '#2d3748'; ctx.font = (small ? '600 11px' : '700 12.5px') + ' sans-serif'; ctx.textAlign = 'center';
+  const estreito = W < 520; ctx.fillText(estreito ? 'Lula 2022 (2º turno)' : 'Votos de Lula em 2022 (2º turno)' + (log ? ', escala log' : ''), m.l + pw / 2, H - 5);
+  ctx.save(); ctx.translate(small ? 12 : 16, m.t + ph / 2); ctx.rotate(-Math.PI / 2); ctx.fillText(estreito ? 'Lula 2026 (1º turno)' : 'Votos em 2026 (1º turno)' + (log ? ', escala log' : ''), 0, 0); ctx.restore();
+  const ativo = i => o.destaque ? o.destaque(DATA[i]) : true;
+  ids.forEach(i => { if (ativo(i) || S.pins.has(i)) return; const d = DATA[i]; ctx.beginPath(); ctx.arc(sx(d.x), sy(d.y), small ? 2.6 : 2.8, 0, 6.2832); ctx.fillStyle = '#d5dbe3'; ctx.globalAlpha = .6; ctx.fill(); ctx.globalAlpha = 1; });
+  ids.forEach(i => { if (!ativo(i) || S.pins.has(i)) return; const d = DATA[i]; ctx.beginPath(); ctx.arc(sx(d.x), sy(d.y), small ? 3.2 : 3.6, 0, 6.2832); ctx.fillStyle = PAL[CL.cls[i]]; ctx.globalAlpha = .85; ctx.fill(); ctx.globalAlpha = 1; ctx.lineWidth = .6; ctx.strokeStyle = '#fff'; ctx.stroke(); });
+  ctx.font = '700 ' + (small ? '10.5px' : '11.5px') + ' sans-serif'; ctx.textAlign = 'left';
+  ids.forEach(i => { if (!S.pins.has(i)) return; const d = DATA[i], x = sx(d.x), y = sy(d.y);
+    ctx.beginPath(); ctx.arc(x, y, 6, 0, 6.2832); ctx.fillStyle = PAL[CL.cls[i]]; ctx.fill(); ctx.lineWidth = 2.5; ctx.strokeStyle = '#000'; ctx.stroke();
+    const tx = `${d.n}-${d.u} (${f1(d.s, 0)} | ${f1(d.pp, 1)} pp)`, w = ctx.measureText(tx).width, lx = (x + 9 + w > W - 2) ? x - 9 - w : x + 9;
+    ctx.lineWidth = 3; ctx.strokeStyle = '#fff'; ctx.strokeText(tx, lx, y - 7); ctx.fillStyle = '#1a202c'; ctx.fillText(tx, lx, y - 7); });
+  return {sx, sy};
+}
+function proximo(ev, cv, ids, geom, ativo) {
+  const r = cv.getBoundingClientRect(), mx = ev.clientX - r.left, my = ev.clientY - r.top; let b = -1, bd = 120;
+  ids.forEach(i => { const d = DATA[i]; if (ativo && !ativo(d)) return; const dx = geom.sx(d.x) - mx, dy = geom.sy(d.y) - my, dd = dx * dx + dy * dy; if (dd < bd) { bd = dd; b = i; } });
+  return b;
+}
+function ligar(cv, obter) {
+  cv.addEventListener('mousemove', ev => { const v = obter(); if (!v.geom) return; const i = proximo(ev, cv, v.ids, v.geom, v.ativo); if (i < 0) { tip.style.display = 'none'; return; }
+    tip.innerHTML = detalhe(i); tip.style.left = Math.min(ev.clientX + 14, window.innerWidth - 310) + 'px'; tip.style.top = Math.max(8, ev.clientY - 20) + 'px'; tip.style.display = 'block'; });
+  cv.addEventListener('mouseleave', () => tip.style.display = 'none');
+  cv.addEventListener('click', ev => { const v = obter(); if (!v.geom) return; const i = proximo(ev, cv, v.ids, v.geom, v.ativo); if (i < 0) return; S.pins.has(i) ? S.pins.delete(i) : S.pins.add(i); contador(); redesenhar(); });
+}
+
+/* vista: dispersão geral */
+const V1 = {ids: DATA.map((d, i) => i), geom: null, ativo: d => noUF(d) && noBusca(d)};
+function vDispersao() {
+  const cv = $('cv1'); V1.geom = desenhar(cv, V1.ids, {destaque: V1.ativo, pequeno: false});
+}
+ligar($('cv1'), () => V1);
+
+/* vista: por região */
+let paineis = [];
+function grupos() {
+  if (S.sep === 'g') return ORDEM_REG.map(k => ({k, n:k}));
+  if (S.sep === 'u') return [...new Set(DATA.map(d => d.u))].sort().map(k => ({k, n:k}));
+  return TAM.slice(1).map(t => ({k:t.k, n:t.n}));
+}
+function pertence(d, g) { return (S.sep === 'g' ? d.g : S.sep === 'u' ? d.u : d.f) === g.k; }
+function montarRegioes() {
+  const grid = $('grid'); grid.innerHTML = ''; paineis = [];
+  grupos().forEach(g => {
+    const ids = DATA.map((d, i) => i).filter(i => pertence(DATA[i], g) && noUF(DATA[i]) && (S.sep === 'f' || !S.faixa || DATA[i].f === S.faixa));
+    if (!ids.length) return;
+    const sx = ids.reduce((a, i) => a + DATA[i].x, 0), sy = ids.reduce((a, i) => a + DATA[i].y, 0), t22 = ids.reduce((a, i) => a + DATA[i].t22, 0), t26 = ids.reduce((a, i) => a + DATA[i].t26, 0);
+    const el = document.createElement('div'); el.className = 'card facet';
+    el.innerHTML = `<h3>${g.n}</h3><div class="st"><b>${fmt(ids.length)}</b> municípios &bull; Lula <b>${fmt(sx)}</b> &rarr; <b>${fmt(sy)}</b> (${f1(sy - sx, 0)})<br>${(sx / t22 * 100).toFixed(1)}% &rarr; ${(sy / t26 * 100).toFixed(1)}% dos votos nominais (${f1(sy / t26 * 100 - sx / t22 * 100, 1)} pp)</div><canvas></canvas>`;
+    grid.appendChild(el);
+    const p = {cv: el.querySelector('canvas'), ids, geom: null}; ligar(p.cv, () => p); paineis.push(p);
+  });
+}
+function vRegioes() { paineis.forEach(p => { p.geom = desenhar(p.cv, p.ids, {pequeno: true}); }); }
+
+/* ------------------------------------------------ mapa (Leaflet carregado sob demanda) */
+let map = null, marcadores = null, mapaPronto = null;
+function carregar(src, css) {
+  const a = new Promise((ok, erro) => { const l = document.createElement('link'); l.rel = 'stylesheet'; l.href = css; l.onload = ok; l.onerror = erro; document.head.appendChild(l); });
+  const b = new Promise((ok, erro) => { const t = document.createElement('script'); t.src = src; t.onload = ok; t.onerror = erro; document.head.appendChild(t); });
+  return Promise.all([a, b]);
+}
+function ajustarMapa() { const w = $('mapwrap'); w.style.height = Math.max(460, Math.min(900, Math.round(window.innerHeight * 0.78))) + 'px'; if (map) map.invalidateSize(); }
+function iniciarMapa() {
+  if (mapaPronto) return mapaPronto;
+  mapaPronto = carregar('https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js', 'https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css').then(() => {
+    map = L.map('map', {preferCanvas: true}).setView([-14.5, -52], 4);
+    L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Light_Gray_Base/MapServer/tile/{z}/{y}/{x}', {maxZoom: 16, attribution: 'Tiles &copy; Esri'}).addTo(map);
+    const canvas = L.canvas({padding: 0.5});
+    marcadores = DATA.map((d, i) => { if (d.lat === null) return null;
+      const m = L.circleMarker([d.lat, d.lon], {renderer: canvas, radius: 1.6 + 0.0078 * Math.sqrt(d.x), color: '#222', weight: 0.5, fillColor: PAL[CL.cls[i]], fillOpacity: 0.85});
+      m.on('mouseover', () => $('info').innerHTML = detalhe(i)); m.on('click', () => $('info').innerHTML = detalhe(i)); return m; });
+    DATA.map((d, i) => i).sort((a, b) => DATA[b].x - DATA[a].x).forEach(i => marcadores[i] && marcadores[i].addTo(map));
+    pintarMapa();
+  }).catch(() => { $('mapmsg').style.display = 'flex'; });
+  return mapaPronto;
+}
+function pintarMapa() {
+  if (!marcadores) return;
+  DATA.forEach((d, i) => { const m = marcadores[i]; if (!m) return; const on = noUF(d); m.setStyle({fillColor: PAL[CL.cls[i]], fillOpacity: on ? 0.88 : 0.07, opacity: on ? 1 : 0.15}); });
+}
+function zoomUF() {
+  if (!map) return;
+  const pts = DATA.filter(d => d.lat !== null && noUF(d)).map(d => [d.lat, d.lon]);
+  map.fitBounds(S.uf ? L.latLngBounds(pts).pad(0.05) : [[-34, -74], [5.5, -34]]);
+}
+
+/* ------------------------------------------------ orquestração */
+function redesenhar() { if (S.view === 'dispersao') vDispersao(); else if (S.view === 'regioes') vRegioes(); else if (S.view === 'mapa') pintarMapa(); }
+function mostrar(v) {
+  S.view = v; document.body.dataset.view = v;
+  document.querySelectorAll('.tab').forEach(b => b.setAttribute('aria-selected', b.dataset.v === v));
+  if (history.replaceState) history.replaceState(null, '', '#' + v);
+  if (v === 'mapa') { ajustarMapa(); iniciarMapa().then(() => { ajustarMapa(); setTimeout(zoomUF, 60); }); }
+  else if (v === 'regioes') { montarRegioes(); requestAnimationFrame(vRegioes); }
+  else if (v === 'dispersao') requestAnimationFrame(vDispersao);
+}
+document.querySelectorAll('.tab').forEach(b => b.onclick = () => mostrar(b.dataset.v));
+$('metrica').onchange = e => { S.metrica = e.target.value; CL = classes(S.metrica); legenda(); redesenhar(); };
+$('uf').onchange = e => { S.uf = e.target.value; if (S.view === 'regioes') { montarRegioes(); requestAnimationFrame(vRegioes); } else if (S.view === 'mapa') { pintarMapa(); zoomUF(); } else redesenhar(); };
+$('busca').oninput = e => { S.termo = e.target.value.trim().toLowerCase(); redesenhar(); };
+$('escala').onchange = e => { S.escala = e.target.value; redesenhar(); };
+$('sep').onchange = e => { S.sep = e.target.value; $('faixa').disabled = S.sep === 'f'; montarRegioes(); requestAnimationFrame(vRegioes); };
+$('faixa').onchange = e => { S.faixa = e.target.value; montarRegioes(); requestAnimationFrame(vRegioes); };
+$('limpar').onclick = () => { S.pins.clear(); contador(); redesenhar(); };
+window.addEventListener('resize', () => { if (S.view === 'mapa') ajustarMapa(); else redesenhar(); });
+window.addEventListener('hashchange', () => { const v = location.hash.slice(1); if (['mapa', 'dispersao', 'regioes', 'dados'].includes(v) && v !== S.view) mostrar(v); });
+
+[...new Set(DATA.map(d => d.u))].sort().forEach(u => { const o = document.createElement('option'); o.value = u; o.text = u; $('uf').appendChild(o); });
+TAM.forEach(t => { const o = document.createElement('option'); o.value = t.k; o.text = t.n; $('faixa').appendChild(o); });
+legenda(); contador();
+const inicial = location.hash.slice(1);
+mostrar(['mapa', 'dispersao', 'regioes', 'dados'].includes(inicial) ? inicial : 'mapa');
+</script>
+</body>
+</html>

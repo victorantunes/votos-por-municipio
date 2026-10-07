@@ -1,0 +1,8 @@
+dados/bu/
+dados/csv/
+dados/*.zip
+dados/malha_ibge/
+dados/*.log
+dados/http.log
+saida/
+__pycache__/
