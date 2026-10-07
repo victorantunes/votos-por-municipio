@@ -161,6 +161,7 @@
     <div class="sb only-map"><input type="search" id="buscamapa" placeholder="Buscar município no mapa..." autocomplete="off" aria-label="Buscar município no mapa"><ul class="sug" id="sugestoes" role="listbox"></ul></div>
     <label class="only-disp"><input type="search" id="busca" placeholder="Buscar município..."></label>
     <label class="only-disp"><input type="checkbox" id="cinza" checked> Outros estados em cinza</label>
+    <label class="only-scale"><input type="checkbox" id="zroda" checked> Zoom com a rolagem</label>
     <label class="only-scale">Escala <select id="escala"><option value="log">Logarítmica</option><option value="lin">Linear</option></select></label>
     <label class="only-reg">Separar por <select id="sep"><option value="n">Nenhum (Brasil inteiro)</option><option value="g">Região</option><option value="u">UF</option><option value="f">Faixa de tamanho</option></select></label>
     <label class="only-reg">Tamanho <select id="faixa"></select></label>
@@ -177,12 +178,12 @@
 
   <section class="view" id="v-dispersao">
     <div class="card chartcard"><div class="chart-box" id="box1"><canvas id="cv1"></canvas></div><div class="fleg" id="fleg1"></div></div>
-    <p class="note">Eixo X: votos de Lula em 2022 (2ºT). Eixo Y: votos em 2026 (1ºT). Abaixo da diagonal (paridade, Y = X), o município perdeu votos. Passe o mouse para ver os números e clique em um ponto para manter o nome marcado. Com uma UF ou uma busca, o gráfico se ajusta a essa seleção e os demais municípios ficam em cinza (dá para desligar em "Outros estados em cinza"). Arraste para mover o gráfico. Para dar zoom, use os botões + e −, Ctrl + rolagem ou pinça no celular, ou troque o botão ✥ por ▭ para arrastar e selecionar uma área (Shift inverte o modo). O duplo clique, ou o botão ↻, volta ao enquadramento padrão. Para ver o país separado por região, UF ou tamanho do município, use "Separar por".</p>
+    <p class="note">Eixo X: votos de Lula em 2022 (2ºT). Eixo Y: votos em 2026 (1ºT). Abaixo da diagonal (paridade, Y = X), o município perdeu votos. Passe o mouse para ver os números e clique em um ponto para manter o nome marcado. Com uma UF ou uma busca, o gráfico se ajusta a essa seleção e os demais municípios ficam em cinza (dá para desligar em "Outros estados em cinza"). Arraste para mover o gráfico. Para dar zoom, role o mouse sobre o gráfico (desmarque "Zoom com a rolagem" para voltar a rolar a página), use os botões + e − ou a pinça no celular, ou troque o botão ✥ por ▭ para arrastar e selecionar uma área (Shift inverte o modo, e Ctrl + rolagem sempre dá zoom). O duplo clique, ou o botão ↻, volta ao enquadramento padrão. Para ver o país separado por região, UF ou tamanho do município, use "Separar por".</p>
   </section>
 
   <section class="view" id="v-regioes">
     <div class="grid" id="grid"></div>
-    <p class="note">Os painéis ficam um abaixo do outro e cada um tem a própria escala e a própria legenda, o que mostra melhor o padrão dentro de cada grupo. Em escala linear, as cidades grandes dominam o gráfico, então use o filtro de tamanho (medido pelos votos de Lula em 2022) ou a escala logarítmica. As cores são as mesmas do mapa. Cada gráfico se ajusta aos dados da seleção (UF, região ou tamanho) e aceita arrastar e dar zoom: arraste para mover, use os botões + e −, Ctrl + rolagem ou pinça no celular, ou troque o botão ✥ por ▭ para selecionar uma área com o mouse (Shift inverte o modo). O duplo clique, ou o botão ↻, volta ao enquadramento padrão.</p>
+    <p class="note">Os painéis ficam um abaixo do outro e cada um tem a própria escala e a própria legenda, o que mostra melhor o padrão dentro de cada grupo. Em escala linear, as cidades grandes dominam o gráfico, então use o filtro de tamanho (medido pelos votos de Lula em 2022) ou a escala logarítmica. As cores são as mesmas do mapa. Cada gráfico se ajusta aos dados da seleção (UF, região ou tamanho) e aceita arrastar e dar zoom: arraste para mover e use os botões + e − ou a pinça no celular. Nos painéis, a rolagem do mouse rola a página (marque "Zoom com a rolagem" para dar zoom com ela, ou use Ctrl + rolagem), e o botão ✥ pode ser trocado por ▭ para selecionar uma área com o mouse (Shift inverte o modo). O duplo clique, ou o botão ↻, volta ao enquadramento padrão.</p>
   </section>
 
   <section class="view" id="v-dados">
@@ -278,7 +279,8 @@ const norm = t => t.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase
 DATA.forEach(d => { d.k = norm(d.n); d.f = TAM.slice(1).find(t => t.f(d)).k; d.t22 = d.x / d.px * 100; d.t26 = d.y / d.py * 100; });
 
 /* ------------------------------------------------ estado e classes */
-const S = {modo:'poli', cinza:true, view:'mapa', metrica:'pp', uf:'', termo:'', escala:'log', sep:'n', faixa:'', pins:new Set()};
+let zoomManual = false;
+const S = {zoomRoda:true, modo:'poli', cinza:true, view:'mapa', metrica:'pp', uf:'', termo:'', escala:'log', sep:'n', faixa:'', pins:new Set()};
 function quantil(s, q) { const pos = (s.length - 1) * q / 100, lo = Math.floor(pos), hi = Math.ceil(pos); return s[lo] + (s[hi] - s[lo]) * (pos - lo); }
 function classes(chave) {
   const vals = DATA.map(d => d[chave]).filter(v => v !== null).sort((a, b) => a - b);
@@ -390,9 +392,10 @@ function ligar(wrap, cv, v) {
   bm.onclick = () => v.geom && zoomCentro(v, .5, .5, .7); bn.onclick = () => v.geom && zoomCentro(v, .5, .5, 1 / .7); br.onclick = () => resetar(v);
   let arrasto = null; const toques = new Map(); let pinca = null, tpan = null;
   cv.addEventListener('dblclick', () => resetar(v));
-  cv.addEventListener('wheel', ev => { if (!v.geom || !(ev.ctrlKey || ev.metaKey)) return; ev.preventDefault();
-    const r = cv.getBoundingClientRect(), g = v.geom, cl = t => Math.min(1, Math.max(0, t));
-    zoomCentro(v, cl((ev.clientX - r.left - g.m.l) / g.pw), cl(1 - (ev.clientY - r.top - g.m.t) / g.ph), Math.exp(ev.deltaY * 0.0018)); }, {passive: false});
+  cv.addEventListener('wheel', ev => {
+    if (!v.geom || !(S.zoomRoda || ev.ctrlKey || ev.metaKey)) return; ev.preventDefault();
+    const r = cv.getBoundingClientRect(), g = v.geom, cl = t => Math.min(1, Math.max(0, t)), dy = Math.max(-120, Math.min(120, ev.deltaMode === 1 ? ev.deltaY * 33 : ev.deltaY));
+    zoomCentro(v, cl((ev.clientX - r.left - g.m.l) / g.pw), cl(1 - (ev.clientY - r.top - g.m.t) / g.ph), Math.exp(dy * 0.0018)); }, {passive: false});
   cv.addEventListener('mousemove', ev => {
     if (!v.geom || arrasto) return; const i = proximo(ev, cv, v.ids, v.geom, v.ativo); if (i < 0) { tip.style.display = 'none'; return; }
     tip.innerHTML = detalhe(i); tip.style.left = Math.min(ev.clientX + 14, window.innerWidth - 310) + 'px'; tip.style.top = Math.max(8, ev.clientY - 20) + 'px'; tip.style.display = 'block'; });
@@ -577,10 +580,11 @@ document.querySelectorAll('.tab').forEach(b => b.onclick = () => mostrar(b.datas
 $('metrica').onchange = e => { S.metrica = e.target.value; CL = classes(S.metrica); legenda(); redesenhar(); };
 $('uf').onchange = e => { S.uf = e.target.value; zerarZoom(); if (S.view === 'dispersao') atualizarDispersao(); else if (S.view === 'mapa') { pintarMapa(); zoomUF(); } };
 $('modo').onchange = e => { S.modo = e.target.value; aplicarModo(); };
+$('zroda').onchange = e => { S.zoomRoda = e.target.checked; zoomManual = true; };
 $('cinza').onchange = e => { S.cinza = e.target.checked; redesenhar(); };
 $('busca').oninput = e => { S.termo = e.target.value.trim().toLowerCase(); V1.view = null; redesenhar(); };
 $('escala').onchange = e => { S.escala = e.target.value; zerarZoom(); redesenhar(); };
-$('sep').onchange = e => { S.sep = e.target.value; document.body.dataset.sep = S.sep; $('faixa').disabled = S.sep === 'f'; zerarZoom(); atualizarDispersao(); };
+$('sep').onchange = e => { S.sep = e.target.value; if (!zoomManual) { S.zoomRoda = S.sep === 'n'; $('zroda').checked = S.zoomRoda; } document.body.dataset.sep = S.sep; $('faixa').disabled = S.sep === 'f'; zerarZoom(); atualizarDispersao(); };
 $('faixa').onchange = e => { S.faixa = e.target.value; zerarZoom(); atualizarDispersao(); };
 $('limpar').onclick = () => { buscaEl.value = ''; S.pins.clear(); contador(); redesenhar(); };
 window.addEventListener('resize', () => { if (S.view === 'mapa') ajustarMapa(); else redesenhar(); });
