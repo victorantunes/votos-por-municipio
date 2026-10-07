@@ -38,8 +38,8 @@
   input[type=search] { width: 190px; }
   .btn { font: inherit; font-size: 13px; font-weight: 600; background: #fff; border: 1px solid #cbd5e0; color: #4a5568; border-radius: 8px; padding: 6px 12px; cursor: pointer; }
   .btn:hover { background: var(--soft); }
-  body:not([data-view="dispersao"]) .only-disp, body:not([data-view="regioes"]) .only-reg { display: none !important; }
-  body:not([data-view="dispersao"]):not([data-view="regioes"]) .only-scale { display: none !important; }
+  body:not([data-view="dispersao"]) .only-disp, body:not([data-sep="n"]) .only-disp, body:not([data-view="dispersao"]) .only-reg { display: none !important; }
+  body:not([data-view="dispersao"]) .only-scale { display: none !important; }
   .grow { flex: 1; }
   .legend { display: flex; flex-wrap: wrap; gap: 6px 14px; font-size: 12px; padding: 0 0 12px; color: #3b4656; }
   body[data-view="dados"] .legend, body[data-view="regioes"] .legend, body[data-view="dispersao"] .legend { display: none; }
@@ -51,7 +51,9 @@
 
   /* vistas */
   .view { display: none; }
-  body[data-view="mapa"] #v-mapa, body[data-view="dispersao"] #v-dispersao, body[data-view="regioes"] #v-regioes, body[data-view="dados"] #v-dados { display: block; }
+  body[data-view="mapa"] #v-mapa, body[data-view="dispersao"] #v-dispersao, body[data-view="dados"] #v-dados { display: block; }
+  body[data-view="dispersao"]:not([data-sep="n"]) #v-regioes { display: block; }
+  body[data-view="dispersao"]:not([data-sep="n"]) #v-dispersao { display: none; }
   .card { background: var(--card); border: 1px solid var(--line); border-radius: 14px; box-shadow: 0 2px 12px rgba(20,30,50,.04); }
 
   #mapwrap { position: relative; height: 560px; overflow: hidden; }
@@ -84,6 +86,7 @@
   .zbtns { position: absolute; top: 6px; right: 8px; display: flex; gap: 4px; z-index: 5; }
   .zbtns button { width: 30px; height: 30px; font: 600 16px/1 sans-serif; color: #4a5568; background: rgba(255,255,255,.92); border: 1px solid #cbd5e0; border-radius: 8px; cursor: pointer; padding: 0; }
   .zbtns button:hover { background: var(--soft); }
+  .zbtns button.md { font-size: 15px; }
   .zbtns button.rst.on { color: #fff; background: var(--link); border-color: var(--link); }
   .zsel { position: absolute; display: none; border: 1.5px dashed var(--link); background: rgba(31,95,168,.12); pointer-events: none; z-index: 4; }
   .tooltip { position: fixed; display: none; background: rgba(26,32,44,.95); color: #fff; padding: 10px 14px; border-radius: 8px; font-size: 12px; line-height: 1.5; pointer-events: none; box-shadow: 0 4px 14px rgba(0,0,0,.25); z-index: 80; max-width: 300px; }
@@ -122,7 +125,7 @@
   }
 </style>
 </head>
-<body data-view="mapa">
+<body data-view="mapa" data-sep="n">
 <div class="wrap">
   <header class="top">
     <div>
@@ -142,7 +145,6 @@
   <div class="tabs" role="tablist" aria-label="Visualizações">
     <button class="tab" role="tab" data-v="mapa" aria-selected="true">Mapa</button>
     <button class="tab" role="tab" data-v="dispersao" aria-selected="false">Dispersão</button>
-    <button class="tab" role="tab" data-v="regioes" aria-selected="false">Por região</button>
     <button class="tab" role="tab" data-v="dados" aria-selected="false">Dados e método</button>
   </div>
 </div></div>
@@ -160,7 +162,7 @@
     <label class="only-disp"><input type="search" id="busca" placeholder="Buscar município..."></label>
     <label class="only-disp"><input type="checkbox" id="cinza" checked> Outros estados em cinza</label>
     <label class="only-scale">Escala <select id="escala"><option value="log">Logarítmica</option><option value="lin">Linear</option></select></label>
-    <label class="only-reg">Separar por <select id="sep"><option value="g">Região</option><option value="u">UF</option><option value="f">Faixa de tamanho</option></select></label>
+    <label class="only-reg">Separar por <select id="sep"><option value="n">Nenhum (Brasil inteiro)</option><option value="g">Região</option><option value="u">UF</option><option value="f">Faixa de tamanho</option></select></label>
     <label class="only-reg">Tamanho <select id="faixa"></select></label>
     <span class="grow"></span>
     <span class="only-pins cz" id="pinned-count"></span>
@@ -175,12 +177,12 @@
 
   <section class="view" id="v-dispersao">
     <div class="card chartcard"><div class="chart-box" id="box1"><canvas id="cv1"></canvas></div><div class="fleg" id="fleg1"></div></div>
-    <p class="note">Eixo X: votos de Lula em 2022 (2ºT). Eixo Y: votos em 2026 (1ºT). Abaixo da diagonal (paridade, Y = X), o município perdeu votos. Passe o mouse para ver os números e clique em um ponto para manter o nome marcado. Com uma UF ou uma busca, o gráfico se ajusta a essa seleção e os demais municípios ficam em cinza (dá para desligar em "Outros estados em cinza"). Zoom: arraste para selecionar uma área, use os botões + e −, Ctrl + rolagem ou pinça no celular. Shift + arrastar move o gráfico, e o duplo clique (ou o botão ↻) volta ao enquadramento padrão.</p>
+    <p class="note">Eixo X: votos de Lula em 2022 (2ºT). Eixo Y: votos em 2026 (1ºT). Abaixo da diagonal (paridade, Y = X), o município perdeu votos. Passe o mouse para ver os números e clique em um ponto para manter o nome marcado. Com uma UF ou uma busca, o gráfico se ajusta a essa seleção e os demais municípios ficam em cinza (dá para desligar em "Outros estados em cinza"). Arraste para mover o gráfico. Para dar zoom, use os botões + e −, Ctrl + rolagem ou pinça no celular, ou troque o botão ✥ por ▭ para arrastar e selecionar uma área (Shift inverte o modo). O duplo clique, ou o botão ↻, volta ao enquadramento padrão. Para ver o país separado por região, UF ou tamanho do município, use "Separar por".</p>
   </section>
 
   <section class="view" id="v-regioes">
     <div class="grid" id="grid"></div>
-    <p class="note">Os painéis ficam um abaixo do outro e cada um tem a própria escala e a própria legenda, o que mostra melhor o padrão dentro de cada grupo. Em escala linear, as cidades grandes dominam o gráfico, então use o filtro de tamanho (medido pelos votos de Lula em 2022) ou a escala logarítmica. As cores são as mesmas do mapa. Cada gráfico se ajusta aos dados da seleção (UF, região ou tamanho) e aceita zoom: arraste para selecionar uma área, use os botões + e −, Ctrl + rolagem ou pinça no celular. Shift + arrastar move o gráfico, e o duplo clique (ou o botão ↻) volta ao enquadramento padrão.</p>
+    <p class="note">Os painéis ficam um abaixo do outro e cada um tem a própria escala e a própria legenda, o que mostra melhor o padrão dentro de cada grupo. Em escala linear, as cidades grandes dominam o gráfico, então use o filtro de tamanho (medido pelos votos de Lula em 2022) ou a escala logarítmica. As cores são as mesmas do mapa. Cada gráfico se ajusta aos dados da seleção (UF, região ou tamanho) e aceita arrastar e dar zoom: arraste para mover, use os botões + e −, Ctrl + rolagem ou pinça no celular, ou troque o botão ✥ por ▭ para selecionar uma área com o mouse (Shift inverte o modo). O duplo clique, ou o botão ↻, volta ao enquadramento padrão.</p>
   </section>
 
   <section class="view" id="v-dados">
@@ -276,7 +278,7 @@ const norm = t => t.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase
 DATA.forEach(d => { d.k = norm(d.n); d.f = TAM.slice(1).find(t => t.f(d)).k; d.t22 = d.x / d.px * 100; d.t26 = d.y / d.py * 100; });
 
 /* ------------------------------------------------ estado e classes */
-const S = {modo:'poli', cinza:true, view:'mapa', metrica:'pp', uf:'', termo:'', escala:'log', sep:'g', faixa:'', pins:new Set()};
+const S = {modo:'poli', cinza:true, view:'mapa', metrica:'pp', uf:'', termo:'', escala:'log', sep:'n', faixa:'', pins:new Set()};
 function quantil(s, q) { const pos = (s.length - 1) * q / 100, lo = Math.floor(pos), hi = Math.ceil(pos); return s[lo] + (s[hi] - s[lo]) * (pos - lo); }
 function classes(chave) {
   const vals = DATA.map(d => d[chave]).filter(v => v !== null).sort((a, b) => a - b);
@@ -358,6 +360,7 @@ function desenhar(cv, ids, o) {
     const tx = `${d.n}-${d.u} (${f1(d.s, 0)} | ${f1(d.pp, 1)} pp)`, w = ctx.measureText(tx).width, lx = (x + 9 + w > W - 2) ? x - 9 - w : x + 9;
     ctx.lineWidth = 3; ctx.strokeStyle = '#fff'; ctx.strokeText(tx, lx, y - 7); ctx.fillStyle = '#1a202c'; ctx.fillText(tx, lx, y - 7); });
   if (o.dono.btnReset) o.dono.btnReset.classList.toggle('on', !!o.dono.view);
+  cv.style.touchAction = o.dono.view ? 'none' : 'pan-y';
   return {sx, sy, m, pw, ph, dom, log};
 }
 function proximo(ev, cv, ids, geom, ativo) {
@@ -380,10 +383,12 @@ const resetar = v => { v.view = null; v.redraw(); };
 function ligar(wrap, cv, v) {
   const sel = document.createElement('div'); sel.className = 'zsel'; wrap.appendChild(sel);
   const bt = document.createElement('div'); bt.className = 'zbtns';
-  bt.innerHTML = '<button type="button" title="Aproximar">+</button><button type="button" title="Afastar">&minus;</button><button type="button" title="Voltar ao enquadramento padrão" class="rst">&#8634;</button>';
-  wrap.appendChild(bt); const [bm, bn, br] = bt.children; v.btnReset = br;
+  bt.innerHTML = '<button type="button" class="md"></button><button type="button" title="Aproximar">+</button><button type="button" title="Afastar">&minus;</button><button type="button" title="Voltar ao enquadramento padrão" class="rst">&#8634;</button>';
+  wrap.appendChild(bt); const [bd, bm, bn, br] = bt.children; v.btnReset = br; v.modo = 'mover';
+  v.estilo = () => { bd.textContent = v.modo === 'mover' ? '\u2725' : '\u25AD'; bd.title = v.modo === 'mover' ? 'Arrastar move o gráfico. Clique para trocar para zoom em área.' : 'Arrastar seleciona uma área para dar zoom. Clique para trocar para mover.'; cv.style.cursor = v.modo === 'mover' ? 'grab' : 'crosshair'; };
+  bd.onclick = () => { v.modo = v.modo === 'mover' ? 'area' : 'mover'; v.estilo(); }; v.estilo();
   bm.onclick = () => v.geom && zoomCentro(v, .5, .5, .7); bn.onclick = () => v.geom && zoomCentro(v, .5, .5, 1 / .7); br.onclick = () => resetar(v);
-  let arrasto = null; const toques = new Map(); let pinca = null;
+  let arrasto = null; const toques = new Map(); let pinca = null, tpan = null;
   cv.addEventListener('dblclick', () => resetar(v));
   cv.addEventListener('wheel', ev => { if (!v.geom || !(ev.ctrlKey || ev.metaKey)) return; ev.preventDefault();
     const r = cv.getBoundingClientRect(), g = v.geom, cl = t => Math.min(1, Math.max(0, t));
@@ -394,12 +399,13 @@ function ligar(wrap, cv, v) {
   cv.addEventListener('mouseleave', () => tip.style.display = 'none');
   cv.addEventListener('pointerdown', ev => {
     if (!v.geom) return;
-    if (ev.pointerType === 'touch') { toques.set(ev.pointerId, {x: ev.clientX, y: ev.clientY}); if (toques.size === 2) { const [p, q] = [...toques.values()]; pinca = {d: Math.hypot(p.x - q.x, p.y - q.y)}; } return; }
+    if (ev.pointerType === 'touch') { toques.set(ev.pointerId, {x: ev.clientX, y: ev.clientY}); if (toques.size === 2) { const [p, q] = [...toques.values()]; pinca = {d: Math.hypot(p.x - q.x, p.y - q.y)}; tpan = null; } else if (v.view) tpan = {x: ev.clientX, y: ev.clientY}; return; }
     if (ev.button !== 0) return; cv.setPointerCapture(ev.pointerId);
-    arrasto = {x0: ev.clientX, y0: ev.clientY, x: ev.clientX, y: ev.clientY, pan: ev.shiftKey, mov: false}; tip.style.display = 'none'; });
+    arrasto = {x0: ev.clientX, y0: ev.clientY, x: ev.clientX, y: ev.clientY, pan: (v.modo === 'mover') !== ev.shiftKey, mov: false}; if (arrasto.pan) cv.style.cursor = 'grabbing'; tip.style.display = 'none'; });
   cv.addEventListener('pointermove', ev => {
     if (ev.pointerType === 'touch') {
       if (!toques.has(ev.pointerId)) return; toques.set(ev.pointerId, {x: ev.clientX, y: ev.clientY});
+      if (toques.size === 1 && tpan && v.geom) { const g = v.geom, dx = (ev.clientX - tpan.x) / g.pw, dy = (ev.clientY - tpan.y) / g.ph; tpan = {x: ev.clientX, y: ev.clientY}; aplicarZoom(v, -dx, 1 - dx, dy, 1 + dy); return; }
       if (toques.size === 2 && pinca && v.geom) { const [p, q] = [...toques.values()], d = Math.hypot(p.x - q.x, p.y - q.y), cx = (p.x + q.x) / 2, cy = (p.y + q.y) / 2, r = cv.getBoundingClientRect(), g = v.geom, cl = t => Math.min(1, Math.max(0, t));
         if (d > 0 && pinca.d > 0) zoomCentro(v, cl((cx - r.left - g.m.l) / g.pw), cl(1 - (cy - r.top - g.m.t) / g.ph), pinca.d / d); pinca = {d}; }
       return; }
@@ -407,8 +413,8 @@ function ligar(wrap, cv, v) {
     if (arrasto.pan && arrasto.mov) { const dx = (ev.clientX - arrasto.x) / g.pw, dy = (ev.clientY - arrasto.y) / g.ph; arrasto.x = ev.clientX; arrasto.y = ev.clientY; aplicarZoom(v, -dx, 1 - dx, dy, 1 + dy); }
     else if (arrasto.mov) { const w = wrap.getBoundingClientRect(); sel.style.display = 'block'; sel.style.left = Math.min(arrasto.x0, ev.clientX) - w.left + 'px'; sel.style.top = Math.min(arrasto.y0, ev.clientY) - w.top + 'px'; sel.style.width = Math.abs(ev.clientX - arrasto.x0) + 'px'; sel.style.height = Math.abs(ev.clientY - arrasto.y0) + 'px'; } });
   const fim = ev => {
-    if (ev.pointerType === 'touch') { toques.delete(ev.pointerId); if (toques.size < 2) pinca = null; return; }
-    if (!arrasto) return; const a = arrasto; arrasto = null; sel.style.display = 'none'; const g = v.geom; if (!g) return;
+    if (ev.pointerType === 'touch') { toques.delete(ev.pointerId); tpan = null; if (toques.size < 2) pinca = null; return; }
+    if (!arrasto) return; const a = arrasto; arrasto = null; sel.style.display = 'none'; v.estilo(); const g = v.geom; if (!g) return;
     if (!a.mov) { const i = proximo(ev, cv, v.ids, g, v.ativo); if (i >= 0) { S.pins.has(i) ? S.pins.delete(i) : S.pins.add(i); contador(); redesenhar(); } return; }
     if (a.pan) return;
     const r = cv.getBoundingClientRect(), x0 = Math.min(a.x0, ev.clientX), x1 = Math.max(a.x0, ev.clientX), y0 = Math.min(a.y0, ev.clientY), y1 = Math.max(a.y0, ev.clientY);
@@ -421,6 +427,7 @@ function ligar(wrap, cv, v) {
 /* vista: dispersão geral */
 const V1 = {ids: DATA.map((d, i) => i), geom: null, view: null, ativo: d => noUF(d) && noBusca(d), redraw() { vDispersao(); }};
 function vDispersao() {
+  V1.ids = DATA.map((d, i) => i).filter(i => !S.faixa || DATA[i].f === S.faixa);
   const act = V1.ids.filter(i => V1.ativo(DATA[i]));
   V1.geom = desenhar($('cv1'), V1.ids, {dono: V1, destaque: V1.ativo, fitIds: act.length ? act : V1.ids, pequeno: false});
 }
@@ -557,33 +564,34 @@ sugEl.addEventListener('mousedown', ev => { const li = ev.target.closest('li[dat
 document.addEventListener('click', ev => { if (!ev.target.closest('.sb')) sugEl.style.display = 'none'; });
 
 /* ------------------------------------------------ orquestração */
-function redesenhar() { if (S.view === 'dispersao') vDispersao(); else if (S.view === 'regioes') vRegioes(); else if (S.view === 'mapa') pintarMapa(); }
+function atualizarDispersao() { if (S.sep === 'n') vDispersao(); else { montarRegioes(); vRegioes(); } }
+function redesenhar() { if (S.view === 'dispersao') { if (S.sep === 'n') vDispersao(); else vRegioes(); } else if (S.view === 'mapa') pintarMapa(); }
 function mostrar(v) {
   S.view = v; document.body.dataset.view = v;
   document.querySelectorAll('.tab').forEach(b => b.setAttribute('aria-selected', b.dataset.v === v));
   if (history.replaceState) history.replaceState(null, '', '#' + v);
   if (v === 'mapa') { ajustarMapa(); iniciarMapa().then(() => { ajustarMapa(); setTimeout(zoomUF, 60); }); }
-  else if (v === 'regioes') { montarRegioes(); requestAnimationFrame(vRegioes); }
-  else if (v === 'dispersao') requestAnimationFrame(vDispersao);
+  else if (v === 'dispersao') atualizarDispersao();
 }
 document.querySelectorAll('.tab').forEach(b => b.onclick = () => mostrar(b.dataset.v));
 $('metrica').onchange = e => { S.metrica = e.target.value; CL = classes(S.metrica); legenda(); redesenhar(); };
-$('uf').onchange = e => { S.uf = e.target.value; zerarZoom(); if (S.view === 'regioes') { montarRegioes(); requestAnimationFrame(vRegioes); } else if (S.view === 'mapa') { pintarMapa(); zoomUF(); } else redesenhar(); };
+$('uf').onchange = e => { S.uf = e.target.value; zerarZoom(); if (S.view === 'dispersao') atualizarDispersao(); else if (S.view === 'mapa') { pintarMapa(); zoomUF(); } };
 $('modo').onchange = e => { S.modo = e.target.value; aplicarModo(); };
 $('cinza').onchange = e => { S.cinza = e.target.checked; redesenhar(); };
 $('busca').oninput = e => { S.termo = e.target.value.trim().toLowerCase(); V1.view = null; redesenhar(); };
 $('escala').onchange = e => { S.escala = e.target.value; zerarZoom(); redesenhar(); };
-$('sep').onchange = e => { S.sep = e.target.value; $('faixa').disabled = S.sep === 'f'; montarRegioes(); requestAnimationFrame(vRegioes); };
-$('faixa').onchange = e => { S.faixa = e.target.value; montarRegioes(); requestAnimationFrame(vRegioes); };
+$('sep').onchange = e => { S.sep = e.target.value; document.body.dataset.sep = S.sep; $('faixa').disabled = S.sep === 'f'; zerarZoom(); atualizarDispersao(); };
+$('faixa').onchange = e => { S.faixa = e.target.value; zerarZoom(); atualizarDispersao(); };
 $('limpar').onclick = () => { buscaEl.value = ''; S.pins.clear(); contador(); redesenhar(); };
 window.addEventListener('resize', () => { if (S.view === 'mapa') ajustarMapa(); else redesenhar(); });
-window.addEventListener('hashchange', () => { const v = location.hash.slice(1); if (['mapa', 'dispersao', 'regioes', 'dados'].includes(v) && v !== S.view) mostrar(v); });
+function rota(v) { if (v === 'regioes') { S.sep = 'g'; document.body.dataset.sep = 'g'; $('sep').value = 'g'; return 'dispersao'; } return ['mapa', 'dispersao', 'dados'].includes(v) ? v : null; }
+window.addEventListener('hashchange', () => { const h = location.hash.slice(1), v = rota(h); if (v && (v !== S.view || h === 'regioes')) mostrar(v); });
 
 [...new Set(DATA.map(d => d.u))].sort().forEach(u => { const o = document.createElement('option'); o.value = u; o.text = u; $('uf').appendChild(o); });
 TAM.forEach(t => { const o = document.createElement('option'); o.value = t.k; o.text = t.n; $('faixa').appendChild(o); });
 legenda(); contador();
 const inicial = location.hash.slice(1);
-mostrar(['mapa', 'dispersao', 'regioes', 'dados'].includes(inicial) ? inicial : 'mapa');
+mostrar(rota(inicial) || 'mapa');
 </script>
 </body>
 </html>
