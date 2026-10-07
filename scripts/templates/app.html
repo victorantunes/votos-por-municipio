@@ -42,7 +42,7 @@
   body:not([data-view="dispersao"]):not([data-view="regioes"]) .only-scale { display: none !important; }
   .grow { flex: 1; }
   .legend { display: flex; flex-wrap: wrap; gap: 6px 14px; font-size: 12px; padding: 0 0 12px; color: #3b4656; }
-  body[data-view="dados"] .legend, body[data-view="regioes"] .legend { display: none; }
+  body[data-view="dados"] .legend, body[data-view="regioes"] .legend, body[data-view="dispersao"] .legend { display: none; }
   .fleg { display: flex; flex-wrap: wrap; gap: 4px 14px; font-size: 11.5px; color: #3b4656; margin-top: 8px; padding-top: 8px; border-top: 1px solid var(--line); }
   .li { display: inline-flex; align-items: center; gap: 6px; white-space: nowrap; }
   .dotc { width: 11px; height: 11px; border-radius: 50%; flex: none; }
@@ -68,7 +68,14 @@
   .facet h3 { font-size: 15px; }
   .facet .st { font-size: 11.5px; color: var(--muted); margin: 2px 0 6px; line-height: 1.45; }
   .facet .st b { color: #2d3748; }
-  .facet canvas { aspect-ratio: 16 / 10; height: auto; }
+  .zwrap { position: relative; }
+  .facet canvas { aspect-ratio: 16 / 10; height: auto; touch-action: pan-y; cursor: crosshair; }
+  .chart-box canvas { touch-action: pan-y; cursor: crosshair; }
+  .zbtns { position: absolute; top: 6px; right: 8px; display: flex; gap: 4px; z-index: 5; }
+  .zbtns button { width: 30px; height: 30px; font: 600 16px/1 sans-serif; color: #4a5568; background: rgba(255,255,255,.92); border: 1px solid #cbd5e0; border-radius: 8px; cursor: pointer; padding: 0; }
+  .zbtns button:hover { background: var(--soft); }
+  .zbtns button.rst.on { color: #fff; background: var(--link); border-color: var(--link); }
+  .zsel { position: absolute; display: none; border: 1.5px dashed var(--link); background: rgba(31,95,168,.12); pointer-events: none; z-index: 4; }
   .tooltip { position: fixed; display: none; background: rgba(26,32,44,.95); color: #fff; padding: 10px 14px; border-radius: 8px; font-size: 12px; line-height: 1.5; pointer-events: none; box-shadow: 0 4px 14px rgba(0,0,0,.25); z-index: 80; max-width: 300px; }
   .note { font-size: 12px; color: var(--muted); margin: 12px 2px 0; line-height: 1.55; }
 
@@ -137,6 +144,7 @@
     </select></label>
     <label>UF <select id="uf"><option value="">Brasil</option></select></label>
     <label class="only-disp"><input type="search" id="busca" placeholder="Buscar município..."></label>
+    <label class="only-disp"><input type="checkbox" id="cinza" checked> Outros estados em cinza</label>
     <label class="only-scale">Escala <select id="escala"><option value="log">Logarítmica</option><option value="lin">Linear</option></select></label>
     <label class="only-reg">Separar por <select id="sep"><option value="g">Região</option><option value="u">UF</option><option value="f">Faixa de tamanho</option></select></label>
     <label class="only-reg">Tamanho <select id="faixa"></select></label>
@@ -152,13 +160,13 @@
   </section>
 
   <section class="view" id="v-dispersao">
-    <div class="card chartcard"><div class="chart-box" id="box1"><canvas id="cv1"></canvas></div></div>
-    <p class="note">Eixo X: votos de Lula em 2022 (2ºT). Eixo Y: votos em 2026 (1ºT). Abaixo da diagonal (paridade, Y = X), o município perdeu votos. Passe o mouse para ver os números e clique em um ponto para manter o nome marcado. Com uma UF ou uma busca, os demais municípios ficam em cinza.</p>
+    <div class="card chartcard"><div class="chart-box" id="box1"><canvas id="cv1"></canvas></div><div class="fleg" id="fleg1"></div></div>
+    <p class="note">Eixo X: votos de Lula em 2022 (2ºT). Eixo Y: votos em 2026 (1ºT). Abaixo da diagonal (paridade, Y = X), o município perdeu votos. Passe o mouse para ver os números e clique em um ponto para manter o nome marcado. Com uma UF ou uma busca, o gráfico se ajusta a essa seleção e os demais municípios ficam em cinza (dá para desligar em "Outros estados em cinza"). Zoom: arraste para selecionar uma área, use os botões + e −, Ctrl + rolagem ou pinça no celular. Shift + arrastar move o gráfico, e o duplo clique (ou o botão ↻) volta ao enquadramento padrão.</p>
   </section>
 
   <section class="view" id="v-regioes">
     <div class="grid" id="grid"></div>
-    <p class="note">Os painéis ficam um abaixo do outro e cada um tem a própria escala e a própria legenda, o que mostra melhor o padrão dentro de cada grupo. Em escala linear, as cidades grandes dominam o gráfico, então use o filtro de tamanho (medido pelos votos de Lula em 2022) ou a escala logarítmica. As cores são as mesmas do mapa.</p>
+    <p class="note">Os painéis ficam um abaixo do outro e cada um tem a própria escala e a própria legenda, o que mostra melhor o padrão dentro de cada grupo. Em escala linear, as cidades grandes dominam o gráfico, então use o filtro de tamanho (medido pelos votos de Lula em 2022) ou a escala logarítmica. As cores são as mesmas do mapa. Cada gráfico se ajusta aos dados da seleção (UF, região ou tamanho) e aceita zoom: arraste para selecionar uma área, use os botões + e −, Ctrl + rolagem ou pinça no celular. Shift + arrastar move o gráfico, e o duplo clique (ou o botão ↻) volta ao enquadramento padrão.</p>
   </section>
 
   <section class="view" id="v-dados">
@@ -222,7 +230,7 @@ const TAM = [
 DATA.forEach(d => { d.f = TAM.slice(1).find(t => t.f(d)).k; d.t22 = d.x / d.px * 100; d.t26 = d.y / d.py * 100; });
 
 /* ------------------------------------------------ estado e classes */
-const S = {view:'mapa', metrica:'pp', uf:'', termo:'', escala:'log', sep:'g', faixa:'', pins:new Set()};
+const S = {cinza:true, view:'mapa', metrica:'pp', uf:'', termo:'', escala:'log', sep:'g', faixa:'', pins:new Set()};
 function quantil(s, q) { const pos = (s.length - 1) * q / 100, lo = Math.floor(pos), hi = Math.ceil(pos); return s[lo] + (s[hi] - s[lo]) * (pos - lo); }
 function classes(chave) {
   const vals = DATA.map(d => d[chave]).filter(v => v !== null).sort((a, b) => a - b);
@@ -250,59 +258,129 @@ function contador() { const k = S.pins.size; $('pinned-count').innerText = k ? `
 /* ------------------------------------------------ dispersão (usada em duas vistas) */
 const tip = $('tooltip');
 const rot = v => v >= 1e6 ? (v / 1e6).toLocaleString('pt-BR', {maximumFractionDigits: 1}) + ' mi' : v >= 1e3 ? (v / 1e3).toLocaleString('pt-BR', {maximumFractionDigits: 1}) + ' mil' : fmt(Math.round(v));
-function nice(v) { const e = Math.pow(10, Math.floor(Math.log10(v))), m = v / e; return (m <= 1 ? 1 : m <= 2 ? 2 : m <= 2.5 ? 2.5 : m <= 5 ? 5 : 10) * e; }
+const gt = (v, log) => log ? Math.log10(Math.max(v, 1e-9)) : v;
+const gi = (t, log) => log ? Math.pow(10, t) : t;
+function passo(v) { const e = Math.pow(10, Math.floor(Math.log10(v))), m = v / e; return (m <= 1 ? 1 : m <= 2 ? 2 : m <= 5 ? 5 : 10) * e; }
+function ticksDe(a, b, log) {
+  const out = [];
+  if (log) {
+    const span = Math.log10(b) - Math.log10(a), mult = span > 3 ? [1] : span > 1.5 ? [1, 3] : span > 0.7 ? [1, 2, 5] : [1, 1.5, 2, 3, 4, 5, 7];
+    for (let e = Math.floor(Math.log10(a)); e <= Math.ceil(Math.log10(b)); e++) mult.forEach(m => { const v = m * Math.pow(10, e); if (v >= a && v <= b) out.push(v); });
+  } else { const st = passo((b - a) / 5); for (let v = Math.ceil(a / st) * st; v <= b + 1e-9; v += st) out.push(v); }
+  return out;
+}
+/* enquadramento padrão: ajustado aos dados da seleção atual (UF, região, tamanho) */
+function ajuste(ids, log) {
+  let mn = Infinity, mx = 0;
+  ids.forEach(i => { const d = DATA[i]; mn = Math.min(mn, d.x, d.y); mx = Math.max(mx, d.x, d.y); });
+  if (!isFinite(mn)) { mn = 10; mx = 1000; }
+  if (log) { mn = Math.max(mn, 1); return {x0: mn / 1.35, x1: mx * 1.35, y0: mn / 1.35, y1: mx * 1.35}; }
+  const hi = mx * 1.06; return {x0: 0, x1: hi, y0: 0, y1: hi};
+}
 function desenhar(cv, ids, o) {
   const ctx = cv.getContext('2d'), dpr = window.devicePixelRatio || 1, W = cv.clientWidth, H = cv.clientHeight;
   if (!W || !H) return null;
   cv.width = W * dpr; cv.height = H * dpr; ctx.setTransform(dpr, 0, 0, dpr, 0, 0); ctx.clearRect(0, 0, W, H);
-  const small = o.pequeno, m = small ? {t:12, r:14, b:36, l:56} : {t:18, r:26, b:50, l:72}, pw = W - m.l - m.r, ph = H - m.t - m.b;
-  const log = S.escala === 'log', mx = o.max || Math.max(...ids.map(i => Math.max(DATA[i].x, DATA[i].y))), mn = Math.min(...ids.map(i => Math.min(DATA[i].x, DATA[i].y)));
-  const MIN = Math.pow(10, Math.floor(Math.log10(Math.max(mn, 1))));
-  const MAX = log ? Math.pow(10, Math.ceil(Math.log10(mx * 1.05))) : nice(mx * 1.04);
-  const t = v => log ? (Math.log10(Math.max(v, 1)) - Math.log10(MIN)) / (Math.log10(MAX) - Math.log10(MIN)) : v / MAX;
-  const sx = v => m.l + t(v) * pw, sy = v => m.t + ph - t(v) * ph;
-  ctx.font = (small ? '10.5px' : '11px') + ' sans-serif'; ctx.fillStyle = '#718096'; ctx.strokeStyle = '#edf2f7'; ctx.lineWidth = 1; ctx.setLineDash([3, 3]);
-  const ticks = log ? [10, 100, 1000, 10000, 100000, 1000000, 10000000].filter(v => v >= MIN && v < MAX) : [0, 1, 2, 3, 4].map(k => MAX * k / 4);
-  ticks.forEach(v => {
-    ctx.beginPath(); ctx.moveTo(sx(v), m.t); ctx.lineTo(sx(v), m.t + ph); ctx.stroke(); ctx.beginPath(); ctx.moveTo(m.l, sy(v)); ctx.lineTo(m.l + pw, sy(v)); ctx.stroke();
-    ctx.textAlign = 'center'; ctx.fillText(rot(v), sx(v), m.t + ph + 15); ctx.textAlign = 'right'; ctx.fillText(rot(v), m.l - 7, sy(v) + 4);
-  });
-  ctx.setLineDash([]); ctx.strokeStyle = '#cbd5e0'; ctx.lineWidth = 1.4; ctx.beginPath(); ctx.moveTo(m.l, m.t); ctx.lineTo(m.l, m.t + ph); ctx.lineTo(m.l + pw, m.t + ph); ctx.stroke();
-  const a0 = log ? MIN : 0; ctx.setLineDash([6, 6]); ctx.strokeStyle = '#a0aec0'; ctx.lineWidth = 1.6; ctx.beginPath(); ctx.moveTo(sx(a0), sy(a0)); ctx.lineTo(sx(MAX), sy(MAX)); ctx.stroke(); ctx.setLineDash([]);
-  if (!small && W > 560) { ctx.save(); const pv = log ? Math.pow(10, Math.log10(MIN) + 0.7 * (Math.log10(MAX) - Math.log10(MIN))) : MAX * 0.7; ctx.translate(sx(pv), sy(pv)); ctx.rotate(-Math.atan2(ph, pw)); ctx.fillStyle = '#a0aec0'; ctx.textAlign = 'center'; ctx.fillText('Linha de paridade (2026 = 2022)', 0, -7); ctx.restore(); }
-  ctx.fillStyle = '#2d3748'; ctx.font = (small ? '600 11px' : '700 12.5px') + ' sans-serif'; ctx.textAlign = 'center';
-  const estreito = W < 520; ctx.fillText(estreito ? 'Lula 2022 (2º turno)' : 'Votos de Lula em 2022 (2º turno)' + (log ? ', escala log' : ''), m.l + pw / 2, H - 5);
-  ctx.save(); ctx.translate(small ? 12 : 16, m.t + ph / 2); ctx.rotate(-Math.PI / 2); ctx.fillText(estreito ? 'Lula 2026 (1º turno)' : 'Votos em 2026 (1º turno)' + (log ? ', escala log' : ''), 0, 0); ctx.restore();
+  const small = o.pequeno, log = S.escala === 'log', m = small ? {t:12, r:14, b:36, l:56} : {t:18, r:26, b:50, l:72}, pw = W - m.l - m.r, ph = H - m.t - m.b;
+  const dom = o.dono.view || ajuste(o.fitIds || ids, log);
+  const gx0 = gt(dom.x0, log), gx1 = gt(dom.x1, log), gy0 = gt(dom.y0, log), gy1 = gt(dom.y1, log);
+  const sx = v => m.l + (gt(v, log) - gx0) / (gx1 - gx0) * pw, sy = v => m.t + ph - (gt(v, log) - gy0) / (gy1 - gy0) * ph;
+  ctx.font = (small ? '10.5px' : '11px') + ' sans-serif'; ctx.strokeStyle = '#edf2f7'; ctx.lineWidth = 1; ctx.setLineDash([3, 3]);
+  ctx.fillStyle = '#718096';
+  ticksDe(dom.x0, dom.x1, log).forEach(v => { ctx.beginPath(); ctx.moveTo(sx(v), m.t); ctx.lineTo(sx(v), m.t + ph); ctx.stroke(); ctx.textAlign = 'center'; ctx.fillText(rot(v), sx(v), m.t + ph + 15); });
+  ticksDe(dom.y0, dom.y1, log).forEach(v => { ctx.beginPath(); ctx.moveTo(m.l, sy(v)); ctx.lineTo(m.l + pw, sy(v)); ctx.stroke(); ctx.textAlign = 'right'; ctx.fillText(rot(v), m.l - 7, sy(v) + 4); });
+  ctx.setLineDash([]);
+  ctx.save(); ctx.beginPath(); ctx.rect(m.l, m.t, pw, ph); ctx.clip();
+  const lo = Math.max(dom.x0, dom.y0), hi = Math.min(dom.x1, dom.y1);
+  if (lo < hi) { ctx.setLineDash([6, 6]); ctx.strokeStyle = '#a0aec0'; ctx.lineWidth = 1.6; ctx.beginPath(); ctx.moveTo(sx(lo), sy(lo)); ctx.lineTo(sx(hi), sy(hi)); ctx.stroke(); ctx.setLineDash([]); }
   const ativo = i => o.destaque ? o.destaque(DATA[i]) : true;
-  ids.forEach(i => { if (ativo(i) || S.pins.has(i)) return; const d = DATA[i]; ctx.beginPath(); ctx.arc(sx(d.x), sy(d.y), small ? 2.6 : 2.8, 0, 6.2832); ctx.fillStyle = '#d5dbe3'; ctx.globalAlpha = .6; ctx.fill(); ctx.globalAlpha = 1; });
+  if (!o.destaque || S.cinza) ids.forEach(i => { if (ativo(i) || S.pins.has(i)) return; const d = DATA[i]; ctx.beginPath(); ctx.arc(sx(d.x), sy(d.y), small ? 2.6 : 2.8, 0, 6.2832); ctx.fillStyle = '#d5dbe3'; ctx.globalAlpha = .6; ctx.fill(); ctx.globalAlpha = 1; });
   ids.forEach(i => { if (!ativo(i) || S.pins.has(i)) return; const d = DATA[i]; ctx.beginPath(); ctx.arc(sx(d.x), sy(d.y), small ? 3.2 : 3.6, 0, 6.2832); ctx.fillStyle = PAL[CL.cls[i]]; ctx.globalAlpha = .85; ctx.fill(); ctx.globalAlpha = 1; ctx.lineWidth = .6; ctx.strokeStyle = '#fff'; ctx.stroke(); });
+  ctx.restore();
+  ctx.setLineDash([]); ctx.strokeStyle = '#cbd5e0'; ctx.lineWidth = 1.4; ctx.beginPath(); ctx.moveTo(m.l, m.t); ctx.lineTo(m.l, m.t + ph); ctx.lineTo(m.l + pw, m.t + ph); ctx.stroke();
+  if (!small && W > 560 && lo < hi) {
+    const t = 0.7, v = log ? Math.pow(10, Math.log10(lo) + (Math.log10(hi) - Math.log10(lo)) * t) : lo + (hi - lo) * t;
+    ctx.save(); ctx.translate(sx(v), sy(v)); ctx.rotate(-Math.atan2(sy(lo) - sy(hi), sx(hi) - sx(lo))); ctx.fillStyle = '#a0aec0'; ctx.textAlign = 'center'; ctx.fillText('Linha de paridade (2026 = 2022)', 0, -7); ctx.restore();
+  }
+  const estreito = W < 520;
+  ctx.fillStyle = '#2d3748'; ctx.font = (small ? '600 11px' : '700 12.5px') + ' sans-serif'; ctx.textAlign = 'center';
+  ctx.fillText(estreito ? 'Lula 2022 (2º turno)' : 'Votos de Lula em 2022 (2º turno)' + (log ? ', escala log' : ''), m.l + pw / 2, H - 5);
+  ctx.save(); ctx.translate(small ? 12 : 16, m.t + ph / 2); ctx.rotate(-Math.PI / 2); ctx.fillText(estreito ? 'Lula 2026 (1º turno)' : 'Votos em 2026 (1º turno)' + (log ? ', escala log' : ''), 0, 0); ctx.restore();
   ctx.font = '700 ' + (small ? '10.5px' : '11.5px') + ' sans-serif'; ctx.textAlign = 'left';
-  ids.forEach(i => { if (!S.pins.has(i)) return; const d = DATA[i], x = sx(d.x), y = sy(d.y);
+  ids.forEach(i => { if (!S.pins.has(i)) return; const d = DATA[i], x = sx(d.x), y = sy(d.y); if (x < m.l || x > m.l + pw || y < m.t || y > m.t + ph) return;
     ctx.beginPath(); ctx.arc(x, y, 6, 0, 6.2832); ctx.fillStyle = PAL[CL.cls[i]]; ctx.fill(); ctx.lineWidth = 2.5; ctx.strokeStyle = '#000'; ctx.stroke();
     const tx = `${d.n}-${d.u} (${f1(d.s, 0)} | ${f1(d.pp, 1)} pp)`, w = ctx.measureText(tx).width, lx = (x + 9 + w > W - 2) ? x - 9 - w : x + 9;
     ctx.lineWidth = 3; ctx.strokeStyle = '#fff'; ctx.strokeText(tx, lx, y - 7); ctx.fillStyle = '#1a202c'; ctx.fillText(tx, lx, y - 7); });
-  return {sx, sy};
+  if (o.dono.btnReset) o.dono.btnReset.classList.toggle('on', !!o.dono.view);
+  return {sx, sy, m, pw, ph, dom, log};
 }
 function proximo(ev, cv, ids, geom, ativo) {
-  const r = cv.getBoundingClientRect(), mx = ev.clientX - r.left, my = ev.clientY - r.top; let b = -1, bd = 120;
-  ids.forEach(i => { const d = DATA[i]; if (ativo && !ativo(d)) return; const dx = geom.sx(d.x) - mx, dy = geom.sy(d.y) - my, dd = dx * dx + dy * dy; if (dd < bd) { bd = dd; b = i; } });
+  const r = cv.getBoundingClientRect(), mx = ev.clientX - r.left, my = ev.clientY - r.top, g = geom; let b = -1, bd = 120;
+  if (mx < g.m.l || mx > g.m.l + g.pw || my < g.m.t || my > g.m.t + g.ph) return -1;
+  ids.forEach(i => { const d = DATA[i]; if (ativo && !ativo(d)) return; const dx = g.sx(d.x) - mx, dy = g.sy(d.y) - my, dd = dx * dx + dy * dy; if (dd < bd) { bd = dd; b = i; } });
   return b;
 }
-function ligar(cv, obter) {
-  cv.addEventListener('mousemove', ev => { const v = obter(); if (!v.geom) return; const i = proximo(ev, cv, v.ids, v.geom, v.ativo); if (i < 0) { tip.style.display = 'none'; return; }
+
+/* zoom: arrastar para selecionar uma área, Shift+arrastar para mover, Ctrl+rolagem, botões, pinça, duplo clique para voltar */
+const minSpan = log => log ? 0.04 : 15;
+function aplicarZoom(v, fx0, fx1, fy0, fy1) {
+  const g = v.geom, log = g.log, d = g.dom, a = gt(d.x0, log), b = gt(d.x1, log), c = gt(d.y0, log), e = gt(d.y1, log);
+  const nx0 = a + fx0 * (b - a), nx1 = a + fx1 * (b - a), ny0 = c + fy0 * (e - c), ny1 = c + fy1 * (e - c);
+  if (nx1 - nx0 < minSpan(log) || ny1 - ny0 < minSpan(log)) return;
+  v.view = {x0: gi(nx0, log), x1: gi(nx1, log), y0: gi(ny0, log), y1: gi(ny1, log)}; v.redraw();
+}
+const zoomCentro = (v, fx, fy, f) => aplicarZoom(v, fx - fx * f, fx + (1 - fx) * f, fy - fy * f, fy + (1 - fy) * f);
+const resetar = v => { v.view = null; v.redraw(); };
+function ligar(wrap, cv, v) {
+  const sel = document.createElement('div'); sel.className = 'zsel'; wrap.appendChild(sel);
+  const bt = document.createElement('div'); bt.className = 'zbtns';
+  bt.innerHTML = '<button type="button" title="Aproximar">+</button><button type="button" title="Afastar">&minus;</button><button type="button" title="Voltar ao enquadramento padrão" class="rst">&#8634;</button>';
+  wrap.appendChild(bt); const [bm, bn, br] = bt.children; v.btnReset = br;
+  bm.onclick = () => v.geom && zoomCentro(v, .5, .5, .7); bn.onclick = () => v.geom && zoomCentro(v, .5, .5, 1 / .7); br.onclick = () => resetar(v);
+  let arrasto = null; const toques = new Map(); let pinca = null;
+  cv.addEventListener('dblclick', () => resetar(v));
+  cv.addEventListener('wheel', ev => { if (!v.geom || !(ev.ctrlKey || ev.metaKey)) return; ev.preventDefault();
+    const r = cv.getBoundingClientRect(), g = v.geom, cl = t => Math.min(1, Math.max(0, t));
+    zoomCentro(v, cl((ev.clientX - r.left - g.m.l) / g.pw), cl(1 - (ev.clientY - r.top - g.m.t) / g.ph), Math.exp(ev.deltaY * 0.0018)); }, {passive: false});
+  cv.addEventListener('mousemove', ev => {
+    if (!v.geom || arrasto) return; const i = proximo(ev, cv, v.ids, v.geom, v.ativo); if (i < 0) { tip.style.display = 'none'; return; }
     tip.innerHTML = detalhe(i); tip.style.left = Math.min(ev.clientX + 14, window.innerWidth - 310) + 'px'; tip.style.top = Math.max(8, ev.clientY - 20) + 'px'; tip.style.display = 'block'; });
   cv.addEventListener('mouseleave', () => tip.style.display = 'none');
-  cv.addEventListener('click', ev => { const v = obter(); if (!v.geom) return; const i = proximo(ev, cv, v.ids, v.geom, v.ativo); if (i < 0) return; S.pins.has(i) ? S.pins.delete(i) : S.pins.add(i); contador(); redesenhar(); });
+  cv.addEventListener('pointerdown', ev => {
+    if (!v.geom) return;
+    if (ev.pointerType === 'touch') { toques.set(ev.pointerId, {x: ev.clientX, y: ev.clientY}); if (toques.size === 2) { const [p, q] = [...toques.values()]; pinca = {d: Math.hypot(p.x - q.x, p.y - q.y)}; } return; }
+    if (ev.button !== 0) return; cv.setPointerCapture(ev.pointerId);
+    arrasto = {x0: ev.clientX, y0: ev.clientY, x: ev.clientX, y: ev.clientY, pan: ev.shiftKey, mov: false}; tip.style.display = 'none'; });
+  cv.addEventListener('pointermove', ev => {
+    if (ev.pointerType === 'touch') {
+      if (!toques.has(ev.pointerId)) return; toques.set(ev.pointerId, {x: ev.clientX, y: ev.clientY});
+      if (toques.size === 2 && pinca && v.geom) { const [p, q] = [...toques.values()], d = Math.hypot(p.x - q.x, p.y - q.y), cx = (p.x + q.x) / 2, cy = (p.y + q.y) / 2, r = cv.getBoundingClientRect(), g = v.geom, cl = t => Math.min(1, Math.max(0, t));
+        if (d > 0 && pinca.d > 0) zoomCentro(v, cl((cx - r.left - g.m.l) / g.pw), cl(1 - (cy - r.top - g.m.t) / g.ph), pinca.d / d); pinca = {d}; }
+      return; }
+    if (!arrasto) return; const g = v.geom; arrasto.mov = arrasto.mov || Math.hypot(ev.clientX - arrasto.x0, ev.clientY - arrasto.y0) > 4;
+    if (arrasto.pan && arrasto.mov) { const dx = (ev.clientX - arrasto.x) / g.pw, dy = (ev.clientY - arrasto.y) / g.ph; arrasto.x = ev.clientX; arrasto.y = ev.clientY; aplicarZoom(v, -dx, 1 - dx, dy, 1 + dy); }
+    else if (arrasto.mov) { const w = wrap.getBoundingClientRect(); sel.style.display = 'block'; sel.style.left = Math.min(arrasto.x0, ev.clientX) - w.left + 'px'; sel.style.top = Math.min(arrasto.y0, ev.clientY) - w.top + 'px'; sel.style.width = Math.abs(ev.clientX - arrasto.x0) + 'px'; sel.style.height = Math.abs(ev.clientY - arrasto.y0) + 'px'; } });
+  const fim = ev => {
+    if (ev.pointerType === 'touch') { toques.delete(ev.pointerId); if (toques.size < 2) pinca = null; return; }
+    if (!arrasto) return; const a = arrasto; arrasto = null; sel.style.display = 'none'; const g = v.geom; if (!g) return;
+    if (!a.mov) { const i = proximo(ev, cv, v.ids, g, v.ativo); if (i >= 0) { S.pins.has(i) ? S.pins.delete(i) : S.pins.add(i); contador(); redesenhar(); } return; }
+    if (a.pan) return;
+    const r = cv.getBoundingClientRect(), x0 = Math.min(a.x0, ev.clientX), x1 = Math.max(a.x0, ev.clientX), y0 = Math.min(a.y0, ev.clientY), y1 = Math.max(a.y0, ev.clientY);
+    if (x1 - x0 < 10 || y1 - y0 < 10) return;
+    const cl = t => Math.min(1, Math.max(0, t));
+    aplicarZoom(v, cl((x0 - r.left - g.m.l) / g.pw), cl((x1 - r.left - g.m.l) / g.pw), cl(1 - (y1 - r.top - g.m.t) / g.ph), cl(1 - (y0 - r.top - g.m.t) / g.ph)); };
+  cv.addEventListener('pointerup', fim); cv.addEventListener('pointercancel', fim);
 }
 
 /* vista: dispersão geral */
-const V1 = {ids: DATA.map((d, i) => i), geom: null, ativo: d => noUF(d) && noBusca(d)};
+const V1 = {ids: DATA.map((d, i) => i), geom: null, view: null, ativo: d => noUF(d) && noBusca(d), redraw() { vDispersao(); }};
 function vDispersao() {
-  const cv = $('cv1'); V1.geom = desenhar(cv, V1.ids, {destaque: V1.ativo, pequeno: false});
+  const act = V1.ids.filter(i => V1.ativo(DATA[i]));
+  V1.geom = desenhar($('cv1'), V1.ids, {dono: V1, destaque: V1.ativo, fitIds: act.length ? act : V1.ids, pequeno: false});
 }
-ligar($('cv1'), () => V1);
+ligar($('box1'), $('cv1'), V1);
 
-/* vista: por região */
+/* vista: por região (ou UF, ou faixa de tamanho) */
 let paineis = [];
 function grupos() {
   if (S.sep === 'g') return ORDEM_REG.map(k => ({k, n:k}));
@@ -317,12 +395,14 @@ function montarRegioes() {
     if (!ids.length) return;
     const sx = ids.reduce((a, i) => a + DATA[i].x, 0), sy = ids.reduce((a, i) => a + DATA[i].y, 0), t22 = ids.reduce((a, i) => a + DATA[i].t22, 0), t26 = ids.reduce((a, i) => a + DATA[i].t26, 0);
     const el = document.createElement('div'); el.className = 'card facet';
-    el.innerHTML = `<h3>${g.n}</h3><div class="st"><b>${fmt(ids.length)}</b> municípios &bull; Lula <b>${fmt(sx)}</b> &rarr; <b>${fmt(sy)}</b> (${f1(sy - sx, 0)})<br>${(sx / t22 * 100).toFixed(1)}% &rarr; ${(sy / t26 * 100).toFixed(1)}% dos votos nominais (${f1(sy / t26 * 100 - sx / t22 * 100, 1)} pp)</div><canvas></canvas><div class="fleg">${legendaHTML()}</div>`;
+    el.innerHTML = `<h3>${g.n}</h3><div class="st"><b>${fmt(ids.length)}</b> municípios &bull; Lula <b>${fmt(sx)}</b> &rarr; <b>${fmt(sy)}</b> (${f1(sy - sx, 0)})<br>${(sx / t22 * 100).toFixed(1)}% &rarr; ${(sy / t26 * 100).toFixed(1)}% dos votos nominais (${f1(sy / t26 * 100 - sx / t22 * 100, 1)} pp)</div><div class="zwrap"><canvas></canvas></div><div class="fleg">${legendaHTML()}</div>`;
     grid.appendChild(el);
-    const p = {cv: el.querySelector('canvas'), ids, geom: null}; ligar(p.cv, () => p); paineis.push(p);
+    const cv = el.querySelector('canvas'), p = {cv, ids, geom: null, view: null, redraw() { p.geom = desenhar(cv, ids, {dono: p, pequeno: true}); }};
+    ligar(el.querySelector('.zwrap'), cv, p); paineis.push(p);
   });
 }
-function vRegioes() { paineis.forEach(p => { p.geom = desenhar(p.cv, p.ids, {pequeno: true}); }); }
+function vRegioes() { paineis.forEach(p => p.redraw()); }
+function zerarZoom() { V1.view = null; paineis.forEach(p => p.view = null); }
 
 /* ------------------------------------------------ mapa (Leaflet carregado sob demanda) */
 let map = null, marcadores = null, mapaPronto = null;
@@ -368,9 +448,10 @@ function mostrar(v) {
 }
 document.querySelectorAll('.tab').forEach(b => b.onclick = () => mostrar(b.dataset.v));
 $('metrica').onchange = e => { S.metrica = e.target.value; CL = classes(S.metrica); legenda(); redesenhar(); };
-$('uf').onchange = e => { S.uf = e.target.value; if (S.view === 'regioes') { montarRegioes(); requestAnimationFrame(vRegioes); } else if (S.view === 'mapa') { pintarMapa(); zoomUF(); } else redesenhar(); };
-$('busca').oninput = e => { S.termo = e.target.value.trim().toLowerCase(); redesenhar(); };
-$('escala').onchange = e => { S.escala = e.target.value; redesenhar(); };
+$('uf').onchange = e => { S.uf = e.target.value; zerarZoom(); if (S.view === 'regioes') { montarRegioes(); requestAnimationFrame(vRegioes); } else if (S.view === 'mapa') { pintarMapa(); zoomUF(); } else redesenhar(); };
+$('cinza').onchange = e => { S.cinza = e.target.checked; redesenhar(); };
+$('busca').oninput = e => { S.termo = e.target.value.trim().toLowerCase(); V1.view = null; redesenhar(); };
+$('escala').onchange = e => { S.escala = e.target.value; zerarZoom(); redesenhar(); };
 $('sep').onchange = e => { S.sep = e.target.value; $('faixa').disabled = S.sep === 'f'; montarRegioes(); requestAnimationFrame(vRegioes); };
 $('faixa').onchange = e => { S.faixa = e.target.value; montarRegioes(); requestAnimationFrame(vRegioes); };
 $('limpar').onclick = () => { S.pins.clear(); contador(); redesenhar(); };
