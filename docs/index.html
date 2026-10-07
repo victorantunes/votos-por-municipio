@@ -71,6 +71,13 @@
   .facet .st { font-size: 11.5px; color: var(--muted); margin: 2px 0 6px; line-height: 1.45; }
   .facet .st b { color: #2d3748; }
   .zwrap { position: relative; }
+  .sb { position: relative; flex: 0 1 270px; }
+  .sb input { width: 100%; }
+  .sug { position: absolute; top: calc(100% + 4px); left: 0; right: 0; min-width: 260px; background: #fff; border: 1px solid #cbd5e0; border-radius: 10px; box-shadow: 0 8px 24px rgba(0,0,0,.16); z-index: 1200; max-height: 330px; overflow: auto; display: none; list-style: none; padding: 4px; }
+  .sug li { padding: 7px 10px; border-radius: 6px; cursor: pointer; font-size: 13px; display: flex; justify-content: space-between; gap: 10px; color: #2d3748; }
+  .sug li.on, .sug li[data-i]:hover { background: var(--soft); }
+  .sug li.vazio { color: var(--muted); cursor: default; }
+  .sug small { color: var(--muted); }
   .leaflet-tooltip.pin-tip { font: 700 11px/1.3 sans-serif; color: #111; background: rgba(255,255,255,.96); border: 1px solid #111; border-radius: 6px; padding: 2px 6px; box-shadow: none; }
   .facet canvas { aspect-ratio: 16 / 10; height: auto; touch-action: pan-y; cursor: crosshair; }
   .chart-box canvas { touch-action: pan-y; cursor: crosshair; }
@@ -104,6 +111,7 @@
     .bar label { flex: 1 1 46%; }
     .bar label select { flex: 1; min-width: 0; }
     input[type=search] { width: 100%; flex: 1 1 100%; }
+    .sb { flex: 1 1 100%; }
     #info { top: auto; bottom: 8px; left: 8px; width: auto; right: 8px; max-width: none; }
     .doc { padding: 18px 16px 4px; }
     .facet canvas { aspect-ratio: 4 / 3; }
@@ -147,6 +155,7 @@
     </select></label>
     <label>UF <select id="uf"><option value="">Brasil</option></select></label>
     <label class="only-map">Visualização <select id="modo"><option value="poli">Polígonos (municípios)</option><option value="circ">Círculos</option></select></label>
+    <div class="sb only-map"><input type="search" id="buscamapa" placeholder="Buscar município no mapa..." autocomplete="off" aria-label="Buscar município no mapa"><ul class="sug" id="sugestoes" role="listbox"></ul></div>
     <label class="only-disp"><input type="search" id="busca" placeholder="Buscar município..."></label>
     <label class="only-disp"><input type="checkbox" id="cinza" checked> Outros estados em cinza</label>
     <label class="only-scale">Escala <select id="escala"><option value="log">Logarítmica</option><option value="lin">Linear</option></select></label>
@@ -261,7 +270,8 @@ const TAM = [
   {k:'c', n:'De 20 mil a 100 mil', f:d => d.x >= 20000 && d.x < 100000},
   {k:'d', n:'Mais de 100 mil', f:d => d.x >= 100000}
 ];
-DATA.forEach(d => { d.f = TAM.slice(1).find(t => t.f(d)).k; d.t22 = d.x / d.px * 100; d.t26 = d.y / d.py * 100; });
+const norm = t => t.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase();
+DATA.forEach(d => { d.k = norm(d.n); d.f = TAM.slice(1).find(t => t.f(d)).k; d.t22 = d.x / d.px * 100; d.t26 = d.y / d.py * 100; });
 
 /* ------------------------------------------------ estado e classes */
 const S = {modo:'poli', cinza:true, view:'mapa', metrica:'pp', uf:'', termo:'', escala:'log', sep:'g', faixa:'', pins:new Set()};
@@ -439,7 +449,7 @@ function vRegioes() { paineis.forEach(p => p.redraw()); }
 function zerarZoom() { V1.view = null; paineis.forEach(p => p.view = null); }
 
 /* ------------------------------------------------ mapa (Leaflet carregado sob demanda) */
-const NOTA_POLI = 'Cada município é pintado pelo desempenho de Lula (malha municipal do IBGE, simplificada). Cores: classes por percentis nacionais (P15, P35, P50, P65, P85). As linhas mais escuras são as divisas dos estados. Escolha uma UF para dar zoom e destacar o estado, ou troque para círculos proporcionais aos votos de 2022. Clique em um município para marcar o nome, e use Limpar marcações para remover.';
+const NOTA_POLI = 'Cada município é pintado pelo desempenho de Lula (malha municipal do IBGE, simplificada). Cores: classes por percentis nacionais (P15, P35, P50, P65, P85). As linhas mais escuras são as divisas dos estados. Escolha uma UF para dar zoom e destacar o estado, ou troque para círculos proporcionais aos votos de 2022. Clique em um município para marcar o nome, ou procure um pela barra de busca, e use Limpar marcações para remover.';
 const NOTA_CIRC = 'Cada círculo é um município, com tamanho proporcional aos votos de Lula em 2022. Cores: classes por percentis nacionais (P15, P35, P50, P65, P85). Escolha uma UF para dar zoom e destacar o estado, ou troque para os polígonos dos municípios. Clique em um município para marcar o nome, e use Limpar marcações para remover.';
 let map = null, marcadores = null, grupoCirc = null, camadaPoli = null, camadaUF = null, polis = null, mapaPronto = null, malhaPromessa = null;
 function carregar(src, css) {
@@ -509,6 +519,41 @@ function zoomUF() {
   map.fitBounds(S.uf ? L.latLngBounds(pts).pad(0.05) : [[-34, -74], [5.5, -34]]);
 }
 
+/* ------------------------------------------------ busca de município no mapa */
+const buscaEl = $('buscamapa'), sugEl = $('sugestoes'); let sugIds = [], sugSel = -1;
+function renderSug() {
+  if (!sugIds.length) { sugEl.innerHTML = '<li class="vazio">Nenhum município encontrado</li>'; sugEl.style.display = 'block'; return; }
+  sugEl.innerHTML = sugIds.map((i, k) => `<li role="option" data-i="${i}" class="${k === sugSel ? 'on' : ''}"><span>${DATA[i].n}</span><small>${DATA[i].u}</small></li>`).join(''); sugEl.style.display = 'block';
+}
+function sugerir() {
+  const q = norm(buscaEl.value.trim());
+  if (!q) { sugEl.style.display = 'none'; sugIds = []; return; }
+  const pref = [], cont = [], porPop = (a, b) => DATA[b].x - DATA[a].x;
+  DATA.forEach((d, i) => { if (d.k.startsWith(q)) pref.push(i); else if (d.k.includes(q)) cont.push(i); });
+  sugIds = pref.sort(porPop).concat(cont.sort(porPop)).slice(0, 8); sugSel = sugIds.length ? 0 : -1; renderSug();
+}
+function irParaMunicipio(i) {
+  iniciarMapa().then(() => {
+    if (!map) return;
+    if (S.uf && DATA[i].u !== S.uf) { S.uf = ''; $('uf').value = ''; }
+    S.pins.add(i); contador(); $('info').innerHTML = detalhe(i); pintarMapa();
+    const l = camadaPoli && map.hasLayer(camadaPoli) ? polis[i] : null;
+    if (l) map.fitBounds(l.getBounds(), {maxZoom: 10, padding: [60, 60]}); else map.setView([DATA[i].lat, DATA[i].lon], 9);
+  });
+}
+function escolher(i) { sugEl.style.display = 'none'; buscaEl.value = `${DATA[i].n} - ${DATA[i].u}`; buscaEl.blur(); irParaMunicipio(i); }
+buscaEl.addEventListener('input', sugerir);
+buscaEl.addEventListener('focus', () => { if (buscaEl.value.trim() && !/ - [A-Z]{2}$/.test(buscaEl.value)) sugerir(); });
+buscaEl.addEventListener('keydown', ev => {
+  if (ev.key === 'Escape') { sugEl.style.display = 'none'; return; }
+  if (!sugIds.length) return;
+  if (ev.key === 'ArrowDown') { sugSel = (sugSel + 1) % sugIds.length; renderSug(); ev.preventDefault(); }
+  else if (ev.key === 'ArrowUp') { sugSel = (sugSel - 1 + sugIds.length) % sugIds.length; renderSug(); ev.preventDefault(); }
+  else if (ev.key === 'Enter') { escolher(sugIds[Math.max(sugSel, 0)]); ev.preventDefault(); }
+});
+sugEl.addEventListener('mousedown', ev => { const li = ev.target.closest('li[data-i]'); if (li) { ev.preventDefault(); escolher(+li.dataset.i); } });
+document.addEventListener('click', ev => { if (!ev.target.closest('.sb')) sugEl.style.display = 'none'; });
+
 /* ------------------------------------------------ orquestração */
 function redesenhar() { if (S.view === 'dispersao') vDispersao(); else if (S.view === 'regioes') vRegioes(); else if (S.view === 'mapa') pintarMapa(); }
 function mostrar(v) {
@@ -528,7 +573,7 @@ $('busca').oninput = e => { S.termo = e.target.value.trim().toLowerCase(); V1.vi
 $('escala').onchange = e => { S.escala = e.target.value; zerarZoom(); redesenhar(); };
 $('sep').onchange = e => { S.sep = e.target.value; $('faixa').disabled = S.sep === 'f'; montarRegioes(); requestAnimationFrame(vRegioes); };
 $('faixa').onchange = e => { S.faixa = e.target.value; montarRegioes(); requestAnimationFrame(vRegioes); };
-$('limpar').onclick = () => { S.pins.clear(); contador(); redesenhar(); };
+$('limpar').onclick = () => { buscaEl.value = ''; S.pins.clear(); contador(); redesenhar(); };
 window.addEventListener('resize', () => { if (S.view === 'mapa') ajustarMapa(); else redesenhar(); });
 window.addEventListener('hashchange', () => { const v = location.hash.slice(1); if (['mapa', 'dispersao', 'regioes', 'dados'].includes(v) && v !== S.view) mostrar(v); });
 
