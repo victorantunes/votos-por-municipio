@@ -38,7 +38,7 @@
   input[type=search] { width: 190px; }
   .btn { font: inherit; font-size: 13px; font-weight: 600; background: #fff; border: 1px solid #cbd5e0; color: #4a5568; border-radius: 8px; padding: 6px 12px; cursor: pointer; }
   .btn:hover { background: var(--soft); }
-  body:not([data-view="dispersao"]) .only-disp, body:not([data-view="regioes"]) .only-reg, body[data-view="mapa"] .only-pins { display: none !important; }
+  body:not([data-view="dispersao"]) .only-disp, body:not([data-view="regioes"]) .only-reg { display: none !important; }
   body:not([data-view="dispersao"]):not([data-view="regioes"]) .only-scale { display: none !important; }
   .grow { flex: 1; }
   .legend { display: flex; flex-wrap: wrap; gap: 6px 14px; font-size: 12px; padding: 0 0 12px; color: #3b4656; }
@@ -71,6 +71,7 @@
   .facet .st { font-size: 11.5px; color: var(--muted); margin: 2px 0 6px; line-height: 1.45; }
   .facet .st b { color: #2d3748; }
   .zwrap { position: relative; }
+  .leaflet-tooltip.pin-tip { font: 700 11px/1.3 sans-serif; color: #111; background: rgba(255,255,255,.96); border: 1px solid #111; border-radius: 6px; padding: 2px 6px; box-shadow: none; }
   .facet canvas { aspect-ratio: 16 / 10; height: auto; touch-action: pan-y; cursor: crosshair; }
   .chart-box canvas { touch-action: pan-y; cursor: crosshair; }
   .zbtns { position: absolute; top: 6px; right: 8px; display: flex; gap: 4px; z-index: 5; }
@@ -158,7 +159,7 @@
   <div class="legend" id="legend"></div>
 
   <section class="view" id="v-mapa">
-    <div class="card" id="mapwrap"><div id="map"></div><div id="info"><span class="cz">Passe o mouse (ou toque) em um município para ver os números.</span></div><div id="mapmsg">Não foi possível carregar o mapa. Ele precisa de acesso à internet para o mapa de fundo.</div></div>
+    <div class="card" id="mapwrap"><div id="map"></div><div id="info"><span class="cz">Passe o mouse (ou toque) em um município para ver os números. Clique para marcar o nome.</span></div><div id="mapmsg">Não foi possível carregar o mapa. Ele precisa de acesso à internet para o mapa de fundo.</div></div>
     <p class="note" id="mapnote"></p>
   </section>
 
@@ -438,8 +439,8 @@ function vRegioes() { paineis.forEach(p => p.redraw()); }
 function zerarZoom() { V1.view = null; paineis.forEach(p => p.view = null); }
 
 /* ------------------------------------------------ mapa (Leaflet carregado sob demanda) */
-const NOTA_POLI = 'Cada município é pintado pelo desempenho de Lula (malha municipal do IBGE, simplificada). Cores: classes por percentis nacionais (P15, P35, P50, P65, P85). As linhas mais escuras são as divisas dos estados. Escolha uma UF para dar zoom e destacar o estado, ou troque para círculos proporcionais aos votos de 2022.';
-const NOTA_CIRC = 'Cada círculo é um município, com tamanho proporcional aos votos de Lula em 2022. Cores: classes por percentis nacionais (P15, P35, P50, P65, P85). Escolha uma UF para dar zoom e destacar o estado, ou troque para os polígonos dos municípios.';
+const NOTA_POLI = 'Cada município é pintado pelo desempenho de Lula (malha municipal do IBGE, simplificada). Cores: classes por percentis nacionais (P15, P35, P50, P65, P85). As linhas mais escuras são as divisas dos estados. Escolha uma UF para dar zoom e destacar o estado, ou troque para círculos proporcionais aos votos de 2022. Clique em um município para marcar o nome, e use Limpar marcações para remover.';
+const NOTA_CIRC = 'Cada círculo é um município, com tamanho proporcional aos votos de Lula em 2022. Cores: classes por percentis nacionais (P15, P35, P50, P65, P85). Escolha uma UF para dar zoom e destacar o estado, ou troque para os polígonos dos municípios. Clique em um município para marcar o nome, e use Limpar marcações para remover.';
 let map = null, marcadores = null, grupoCirc = null, camadaPoli = null, camadaUF = null, polis = null, mapaPronto = null, malhaPromessa = null;
 function carregar(src, css) {
   const a = new Promise((ok, erro) => { const l = document.createElement('link'); l.rel = 'stylesheet'; l.href = css; l.onload = ok; l.onerror = erro; document.head.appendChild(l); });
@@ -447,7 +448,8 @@ function carregar(src, css) {
   return Promise.all([a, b]);
 }
 function ajustarMapa() { const w = $('mapwrap'); w.style.height = Math.max(460, Math.min(900, Math.round(window.innerHeight * 0.78))) + 'px'; if (map) map.invalidateSize(); }
-const estiloPoli = i => { const on = noUF(DATA[i]); return {fillColor: PAL[CL.cls[i]], fillOpacity: on ? 0.93 : 0.08, color: '#ffffff', weight: on ? 0.3 : 0, opacity: 0.9}; };
+const estiloPoli = i => { const on = noUF(DATA[i]), pin = S.pins.has(i); return {fillColor: PAL[CL.cls[i]], fillOpacity: on || pin ? 0.93 : 0.08, color: pin ? '#000' : '#ffffff', weight: pin ? 2.6 : on ? 0.3 : 0, opacity: pin ? 1 : 0.9}; };
+function clicarMapa(i) { S.pins.has(i) ? S.pins.delete(i) : S.pins.add(i); contador(); $('info').innerHTML = detalhe(i); pintarMapa(); }
 function carregarMalha() {
   if (malhaPromessa) return malhaPromessa;
   const baixar = u => fetch(u).then(r => { if (!r.ok) throw new Error(u); return r.json(); });
@@ -457,7 +459,7 @@ function carregarMalha() {
       const i = idx.get(f.properties.c); polis[i] = layer;
       layer.on('mouseover', () => { $('info').innerHTML = detalhe(i); layer.setStyle({color: '#111', weight: 1.6}); });
       layer.on('mouseout', () => layer.setStyle(estiloPoli(i)));
-      layer.on('click', () => $('info').innerHTML = detalhe(i)); }});
+      layer.on('click', () => clicarMapa(i)); }});
     map.createPane('ufPane'); map.getPane('ufPane').style.pointerEvents = 'none'; map.getPane('ufPane').style.zIndex = 450;
     camadaUF = L.geoJSON(gu, {pane: 'ufPane', renderer: L.canvas({pane: 'ufPane'}), interactive: false, style: {color: '#2d3748', weight: 1, fill: false, opacity: 0.85}});
   }).catch(e => { malhaPromessa = null; throw e; });
@@ -478,16 +480,28 @@ function iniciarMapa() {
     const canvas = L.canvas({padding: 0.5});
     marcadores = DATA.map((d, i) => { if (d.lat === null) return null;
       const m = L.circleMarker([d.lat, d.lon], {renderer: canvas, radius: 1.6 + 0.0078 * Math.sqrt(d.x), color: '#222', weight: 0.5, fillColor: PAL[CL.cls[i]], fillOpacity: 0.85});
-      m.on('mouseover', () => $('info').innerHTML = detalhe(i)); m.on('click', () => $('info').innerHTML = detalhe(i)); return m; });
+      m.on('mouseover', () => $('info').innerHTML = detalhe(i)); m.on('click', () => clicarMapa(i)); return m; });
     grupoCirc = L.layerGroup(DATA.map((d, i) => i).sort((a, b) => DATA[b].x - DATA[a].x).map(i => marcadores[i]).filter(Boolean));
     return aplicarModo();
   }).catch(() => { $('mapmsg').style.display = 'flex'; });
   return mapaPronto;
 }
+let rotulos = [];
+function sincronizarPins() {
+  rotulos.forEach(l => l.unbindTooltip()); rotulos = [];
+  const poli = camadaPoli && map.hasLayer(camadaPoli);
+  S.pins.forEach(i => {
+    const l = poli ? polis[i] : marcadores && marcadores[i]; if (!l) return; const d = DATA[i];
+    l.bindTooltip(`${d.n}-${d.u} (${f1(d.s, 0)} | ${f1(d.pp, 1)} pp)`, {permanent: true, direction: 'top', className: 'pin-tip', opacity: 1}); rotulos.push(l);
+    if (poli) l.bringToFront();
+  });
+}
 function pintarMapa() {
   if (!map) return;
-  if (grupoCirc && map.hasLayer(grupoCirc)) DATA.forEach((d, i) => { const m = marcadores[i]; if (!m) return; const on = noUF(d); m.setStyle({fillColor: PAL[CL.cls[i]], fillOpacity: on ? 0.88 : 0.07, opacity: on ? 1 : 0.15}); });
+  if (grupoCirc && map.hasLayer(grupoCirc)) DATA.forEach((d, i) => { const m = marcadores[i]; if (!m) return; const on = noUF(d), pin = S.pins.has(i);
+    m.setStyle({fillColor: PAL[CL.cls[i]], fillOpacity: on || pin ? 0.88 : 0.07, opacity: on || pin ? 1 : 0.15, color: pin ? '#000' : '#222', weight: pin ? 2.6 : 0.5}); });
   if (camadaPoli && map.hasLayer(camadaPoli)) polis.forEach((l, i) => l && l.setStyle(estiloPoli(i)));
+  sincronizarPins();
 }
 function zoomUF() {
   if (!map) return;
