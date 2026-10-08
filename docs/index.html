@@ -543,7 +543,7 @@ function preparar(js) {
 function carregarEscopo(id) {
   if (cacheEsc[id]) return Promise.resolve(cacheEsc[id]);
   const url = id === 'br' ? 'dados/escopo_br.json' : 'dados/uf/' + id + '.json';
-  return fetch(url + '?v=20261008010541').then(r => { if (!r.ok) throw new Error('escopo'); return r.json(); }).then(js => {
+  return fetch(url + '?v=20261008011145').then(r => { if (!r.ok) throw new Error('escopo'); return r.json(); }).then(js => {
     cacheEsc[id] = preparar(js); ordemCache.push(id);
     while (ordemCache.length > 3) delete cacheEsc[ordemCache.shift()];  // guarda só os últimos recortes, para não acumular memória
     return cacheEsc[id];
@@ -611,7 +611,7 @@ function calcFundo() {
   } finally { [E, M, N] = salvo; }
 }
 const corFundo = mi => (CL.fundo && mi !== undefined && CL.fundo[mi] >= 0) ? (CL.few ? ACENTO : PALS[CL.m.t][CL.fundo[mi]]) : '#e9edf2';
-const estiloFundo = mi => ({fillColor: corFundo(mi), fillOpacity: 0.55, color: '#ffffff', weight: Math.min(0.6, pesoLinha() * 1.2)});
+const estiloFundo = mi => { const w = pesoLinha(); return {fillColor: corFundo(mi), fillOpacity: 0.55, color: w > 0.1 ? '#ffffff' : corFundo(mi), weight: w > 0.1 ? Math.min(0.6, w * 1.2) : 0.7, opacity: w > 0.1 ? 1 : 0.55}; };
 function calcClasses() { calcClasses0(); calcFundo(); }
 function calcClasses0() {
   const m = metAtual(), arr = new Float64Array(N), vals = [], cls = new Int8Array(N).fill(-1);
@@ -893,11 +893,15 @@ function carregar(src, css) {
   return Promise.all([a, b]);
 }
 function ajustarMapa() { const w = $('mapwrap'); w.style.height = Math.max(460, Math.min(900, Math.round(window.innerHeight * 0.78))) + 'px'; if (map) map.invalidateSize(); }
-/* as divisas brancas entre municípios somem com o zoom afastado (milhares de linhas de 1 px escondem as cores) e voltam quando o zoom se aproxima */
+/* As divisas brancas entre municípios somem com o zoom afastado (milhares de linhas de 1 px escondem as cores) e voltam quando o zoom se aproxima.
+   Sem divisa, o contorno é da própria cor do município, para o antisserrilhado não deixar frestas claras entre polígonos vizinhos. */
 const pesoLinha = () => map ? Math.max(0, Math.min(0.5, (map.getZoom() - 5) * 0.2)) : 0.3;
-const estiloPoli = i => { const on = noUF(i), pin = S.pins.has(i), sem = CL.cls[i] < 0, w = pesoLinha(); return {fillColor: cor(i), fillOpacity: sem ? (on ? 0.7 : 0.08) : on || pin ? 0.93 : 0.08, color: pin ? '#000' : '#ffffff', weight: pin ? 2.6 : on ? w : 0, opacity: pin ? 1 : 0.9}; };
+const estiloPoli = i => {
+  const on = noUF(i), pin = S.pins.has(i), sem = CL.cls[i] < 0, w = pesoLinha(), fo = sem ? (on ? 0.7 : 0.08) : on || pin ? 0.93 : 0.08, branca = w > 0.1;
+  return {fillColor: cor(i), fillOpacity: fo, color: pin ? '#000' : branca ? '#ffffff' : cor(i), weight: pin ? 2.6 : on ? (branca ? w : 0.7) : 0, opacity: pin ? 1 : branca ? 0.9 : fo};
+};
 function clicarMapa(i) { S.pins.has(i) ? S.pins.delete(i) : S.pins.add(i); contador(); $('info').innerHTML = detalhe(i); pintarMapa(); }
-const baixarJSON = u => malhas[u] || (malhas[u] = fetch(u + '?v=20261008010541').then(r => { if (!r.ok) throw new Error(u); return r.json(); }).catch(e => { delete malhas[u]; throw e; }));
+const baixarJSON = u => malhas[u] || (malhas[u] = fetch(u + '?v=20261008011145').then(r => { if (!r.ok) throw new Error(u); return r.json(); }).catch(e => { delete malhas[u]; throw e; }));
 const NOTA_GRAN = (modo, poli) => {
   const ib = E.infoB, tem = ib && ib.n > 0, fora = tem ? 'nos demais, e fora dos bairros (como a zona rural), ' : '';
   const bairros = tem ? `O IBGE só tem bairros para ${ib.n} dos ${fmt(ib.total)} municípios, que reúnem cerca de ${ib.pct}% do eleitorado` : 'O IBGE não tem a divisão em bairros para os municípios deste estado';
@@ -1364,7 +1368,7 @@ window.addEventListener('hashchange', () => { const h = lerHash(); if (h.esc !==
 
 const inicial = lerHash();
 S.view = inicial.v === 'candidatos' && inicial.esc === 'br' ? 'mapa' : inicial.v; document.body.dataset.view = S.view; S.escopo = inicial.esc;
-const carregarUFs = fetch('dados/ufs.json?v=20261008010541').then(r => r.json()).then(j => {
+const carregarUFs = fetch('dados/ufs.json?v=20261008011145').then(r => r.json()).then(j => {
   UFS = j.ufs; UFS.forEach(u => { INFO[u.id] = u; });
   $('escUF').innerHTML = '<option value="">PT em um estado...</option>' + UFS.map(u => `<option value="${u.id}">${esc(u.nome)}</option>`).join('');
 }).catch(() => {});
