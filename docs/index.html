@@ -28,7 +28,7 @@
   .pills button[aria-pressed="true"] { color: var(--accent); background: #fbeceb; border-color: var(--accent); }
   h1 { font-size: 24px; line-height: 1.2; letter-spacing: -.01em; }
   .sub { color: var(--muted); font-size: 14px; margin-top: 4px; max-width: 660px; }
-  .selinfo { font-size: 13px; margin: 0 0 12px; max-width: 900px; color: #2d3748; }
+  .selinfo { font-size: 13px; margin: 10px 2px 0; max-width: 900px; color: #2d3748; }
   body[data-view="dados"] .selinfo, body[data-view="candidatos"] .selinfo { display: none; }
   .stats { display: grid; grid-template-columns: repeat(3, minmax(0, auto)); gap: 8px 28px; }
   .stat span { display: block; font-size: 11.5px; color: var(--muted); }
@@ -56,8 +56,11 @@
   body:not([data-view="dispersao"]) .only-disp, body:not([data-sep="n"]) .only-disp, body:not([data-view="dispersao"]) .only-reg { display: none !important; }
   body:not([data-view="dispersao"]) .only-scale { display: none !important; }
   .grow { flex: 1; }
-  .legend { display: flex; flex-wrap: wrap; gap: 6px 14px; font-size: 12px; padding: 0 0 12px; color: #3b4656; }
-  body[data-view="dados"] .legend, body[data-view="regioes"] .legend, body[data-view="dispersao"] .legend, body[data-view="candidatos"] .legend { display: none; }
+  /* a legenda e o aviso ficam sobre o mapa, fora do fluxo da página, para que mudar o texto deles não mexa em nenhum outro elemento */
+  .legend { position: absolute; left: 10px; bottom: 22px; z-index: 600; display: flex; flex-direction: column; gap: 3px; font-size: 11.5px; color: #3b4656; background: rgba(255,255,255,.92); border: 1px solid #d5dbe3; border-radius: 10px; padding: 7px 10px; max-width: calc(100% - 20px); pointer-events: none; }
+  .legend:empty { display: none; }
+  .gstatus { position: absolute; top: 10px; left: 50%; transform: translateX(-50%); z-index: 700; background: #fff; border: 1px solid #d5dbe3; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,.18); padding: 5px 12px; font-size: 12.5px; color: var(--ink); pointer-events: none; }
+  .gstatus:empty { display: none; }
   body[data-view="dados"] .bar, body[data-view="candidatos"] .bar { display: none; }
   body:not([data-view="mapa"]) .only-map { display: none !important; }
   .fleg { display: flex; flex-wrap: wrap; gap: 4px 14px; font-size: 11.5px; color: #3b4656; margin-top: 8px; padding-top: 8px; border-top: 1px solid var(--line); }
@@ -80,7 +83,7 @@
   hr.s { border: 0; border-top: 1px solid var(--line); margin: 6px 0; }
   #carregando { display: none; padding: 40px 0; text-align: center; color: var(--muted); }
   body.carregando #carregando { display: block; }
-  body.carregando .wrap > .bar, body.carregando .wrap > .legend, body.carregando .wrap > .selinfo, body.carregando .wrap > .view { display: none !important; }
+  body.carregando .wrap > .bar, body.carregando .wrap > .legend, body.carregando .wrap > .view { display: none !important; }
 
   .chartcard { padding: 14px 16px 10px; }
   .chart-box { position: relative; width: 100%; height: clamp(420px, 72vh, 720px); }
@@ -160,7 +163,7 @@
     #info { top: auto; bottom: 8px; left: 8px; width: auto; right: 8px; max-width: none; max-height: 45%; }
     .doc { padding: 18px 16px 4px; }
     .facet canvas { aspect-ratio: 4 / 3; }
-    .legend { display: grid; grid-template-columns: 1fr 1fr; gap: 6px 10px; font-size: 11.5px; }
+    .legend { left: auto; right: 8px; top: 8px; bottom: auto; max-width: 62%; font-size: 11px; }
     .li { white-space: normal; align-items: flex-start; }
     .li .dotc { margin-top: 3px; }
     .scopes { display: flex; width: 100%; }
@@ -213,7 +216,7 @@
     <label>Colorir por <select id="metrica"></select></label>
     <label class="so-br">UF <select id="uf"><option value="">Brasil</option></select></label>
     <label class="only-map">Visualização <select id="modo"><option value="poli">Polígonos (municípios)</option><option value="circ">Círculos</option></select></label>
-    <label class="so-rn" title="Mostra os votos por bairro (onde o IBGE tem a divisão) e por local de votação, somando as seções eleitorais"><input type="checkbox" id="gran"> Detalhar por bairro e local de votação</label><span class="cz so-rn" id="gstatus"></span>
+    <label class="so-rn" title="Mostra os votos por bairro (onde o IBGE tem a divisão) e por local de votação, somando as seções eleitorais"><input type="checkbox" id="gran"> Detalhar por bairro e local de votação</label>
     <div class="sb only-map"><input type="search" id="buscamapa" placeholder="Buscar município no mapa..." autocomplete="off" aria-label="Buscar município no mapa"><ul class="sug" id="sugestoes" role="listbox"></ul></div>
     <label class="only-disp"><input type="search" id="busca" placeholder="Buscar município..."></label>
     <label class="only-disp so-br"><input type="checkbox" id="cinza" checked> Outros estados em cinza</label>
@@ -225,12 +228,11 @@
     <span class="cz" id="pinned-count"></span>
     <button class="btn" id="limpar">Limpar marcações</button>
   </div>
-  <div class="legend" id="legend"></div>
-  <p class="selinfo" id="selinfo"></p>
 
   <section class="view" id="v-mapa">
-    <div class="card" id="mapwrap"><div id="map"></div><div id="info"><span class="cz">Passe o mouse (ou toque) em um município para ver os números. Clique para marcar o nome.</span></div><div id="mapmsg">Não foi possível carregar o mapa. Ele precisa de acesso à internet para o mapa de fundo.</div></div>
+    <div class="card" id="mapwrap"><div id="map"></div><div class="legend" id="legend"></div><div class="gstatus" id="gstatus"></div><div id="info"><span class="cz">Passe o mouse (ou toque) em um município para ver os números. Clique para marcar o nome.</span></div><div id="mapmsg">Não foi possível carregar o mapa. Ele precisa de acesso à internet para o mapa de fundo.</div></div>
     <p class="note" id="mapnote"></p>
+    <p class="selinfo" id="selinfo"></p>
   </section>
 
   <section class="view" id="v-dispersao">
@@ -522,7 +524,7 @@ function preparar(js) {
 }
 function carregarEscopo(id) {
   if (cacheEsc[id]) return Promise.resolve(cacheEsc[id]);
-  return fetch('dados/escopo_' + id + '.json?v=20261007225605').then(r => { if (!r.ok) throw new Error('escopo'); return r.json(); }).then(js => (cacheEsc[id] = preparar(js)));
+  return fetch('dados/escopo_' + id + '.json?v=20261007225910').then(r => { if (!r.ok) throw new Error('escopo'); return r.json(); }).then(js => (cacheEsc[id] = preparar(js)));
 }
 function vv(c) {
   if (c.vv) return c;
@@ -859,7 +861,7 @@ function carregar(src, css) {
 function ajustarMapa() { const w = $('mapwrap'); w.style.height = Math.max(460, Math.min(900, Math.round(window.innerHeight * 0.78))) + 'px'; if (map) map.invalidateSize(); }
 const estiloPoli = i => { const on = noUF(i), pin = S.pins.has(i), sem = CL.cls[i] < 0; return {fillColor: cor(i), fillOpacity: sem ? (on ? 0.7 : 0.08) : on || pin ? 0.93 : 0.08, color: pin ? '#000' : '#ffffff', weight: pin ? 2.6 : on ? 0.3 : 0, opacity: pin ? 1 : 0.9}; };
 function clicarMapa(i) { S.pins.has(i) ? S.pins.delete(i) : S.pins.add(i); contador(); $('info').innerHTML = detalhe(i); pintarMapa(); }
-const baixarJSON = u => malhas[u] || (malhas[u] = fetch(u + '?v=20261007225605').then(r => { if (!r.ok) throw new Error(u); return r.json(); }).catch(e => { delete malhas[u]; throw e; }));
+const baixarJSON = u => malhas[u] || (malhas[u] = fetch(u + '?v=20261007225910').then(r => { if (!r.ok) throw new Error(u); return r.json(); }).catch(e => { delete malhas[u]; throw e; }));
 const NOTA_GRAN = (modo, poli) => 'Detalhe por bairro e local de votação: os votos de cada seção eleitoral são somados no local onde o eleitor vota, e o local é atribuído ao bairro do IBGE (Censo 2022) que o contém. O bairro é o do local de votação, e não necessariamente o de residência do eleitor. O IBGE só tem bairros para 19 dos 167 municípios, que reúnem cerca de 41% do eleitorado' +
   (modo === 'ano' ? '; nos demais, e fora dos bairros (como a zona rural), cada local de votação aparece como um ponto.' : '; nos demais, e fora dos bairros (como a zona rural), a unidade é o município, ou a parte dele fora dos bairros, porque a comparação entre anos precisa de uma divisão estável (os locais de votação mudam de um ano para outro).') +
   ' As cores mais claras ao fundo mostram o município inteiro, com as mesmas faixas. As classes de cor usam percentis só entre as unidades mostradas. A soma das seções pode diferir um pouco do total do município, por causa de votos anulados depois da eleição. Clique em uma unidade para marcar o nome, ou use a busca, e Limpar marcações para remover.' + (poli ? ' Troque para círculos, proporcionais ao número de eleitores, se preferir.' : ' Troque para polígonos para ver os limites.');
@@ -1188,8 +1190,15 @@ function notaDisp() {
   return `${eixo} Passe o mouse para ver os números e clique em um ponto para manter o nome marcado. Na escala logarítmica, municípios com zero voto não aparecem. Com uma busca${S.escopo === 'br' ? ' ou uma UF' : ''}, o gráfico se ajusta a essa seleção${S.escopo === 'br' ? ' e os demais municípios ficam em cinza (dá para desligar em "Outros estados em cinza")' : ''}. Arraste para mover o gráfico. Para dar zoom, role o mouse sobre o gráfico (desmarque "Zoom com a rolagem" para voltar a rolar a página), use os botões + e − ou a pinça no celular, ou troque o botão ✥ por ▭ para arrastar e selecionar uma área (Shift inverte o modo, e Ctrl + rolagem sempre dá zoom). O duplo clique, ou o botão ↻, volta ao enquadramento padrão. Para separar por ${S.escopo === 'br' ? 'região, UF ou ' : ''}porte do município, use "Separar por".`;
 }
 function redesenhar() { if (S.view === 'dispersao') { if (S.sep === 'n') vDispersao(); else vRegioes(); } else if (S.view === 'mapa') pintarMapa(); }
+/* o resumo da seleção fica abaixo do mapa ou do gráfico: se ele mudar de altura, nada que está acima ou ao lado se mexe */
+function posicionarResumo() {
+  const r = $('selinfo');
+  if (S.view === 'mapa') $('mapwrap').after(r);
+  else if (S.view === 'dispersao') { if (S.sep === 'n') document.querySelector('#v-dispersao .chartcard').after(r); else $('v-regioes').prepend(r); }
+}
 function mostrar(v) {
   S.view = v; document.body.dataset.view = v;
+  posicionarResumo();
   document.querySelectorAll('.tab').forEach(b => b.setAttribute('aria-selected', b.dataset.v === v));
   if (history.replaceState) history.replaceState(null, '', '#' + (S.escopo === 'rn' ? 'rn/' : '') + v);
   if (!E) return;
@@ -1235,7 +1244,7 @@ $('zroda').onchange = e => { S.zoomRoda = e.target.checked; zoomManual = true; }
 $('cinza').onchange = e => { S.cinza = e.target.checked; redesenhar(); };
 $('busca').oninput = e => { S.termo = e.target.value.trim().toLowerCase(); V1.view = null; redesenhar(); };
 $('escala').onchange = e => { S.escala = e.target.value; zerarZoom(); redesenhar(); };
-$('sep').onchange = e => { S.sep = e.target.value; if (!zoomManual) { S.zoomRoda = S.sep === 'n'; $('zroda').checked = S.zoomRoda; } document.body.dataset.sep = S.sep; $('faixa').disabled = S.sep === 'f'; zerarZoom(); atualizarDispersao(); };
+$('sep').onchange = e => { S.sep = e.target.value; posicionarResumo(); if (!zoomManual) { S.zoomRoda = S.sep === 'n'; $('zroda').checked = S.zoomRoda; } document.body.dataset.sep = S.sep; $('faixa').disabled = S.sep === 'f'; zerarZoom(); atualizarDispersao(); };
 $('faixa').onchange = e => { S.faixa = e.target.value; zerarZoom(); atualizarDispersao(); };
 $('limpar').onclick = () => { buscaEl.value = ''; S.pins.clear(); contador(); redesenhar(); };
 window.addEventListener('resize', () => { if (S.view === 'mapa') ajustarMapa(); else redesenhar(); });
