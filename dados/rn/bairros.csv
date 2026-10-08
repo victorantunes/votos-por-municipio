@@ -1,0 +1,186 @@
+b,cd_tse,nome
+0,16012,Central
+1,16012,Luiz Gonzaga Bezerra
+2,16012,Major Ari de Pinho
+3,16012,Padre José Dantas Cortez
+4,16012,Petrópolis
+5,16012,Senador Dinarte de Medeiros Mariz
+6,16012,Vereador Tarcisio Bezerra Galvão
+7,16470,Centro
+8,16470,Dom José Adelino Dantas
+9,16470,Santa Rita de Cássia
+10,16470,São José
+11,16497,Centro
+12,16497,Pacheco
+13,16497,Valdemar Campielo Maresco
+14,16594,Alto do Remédio
+15,16594,Centro
+16,16594,Novo Horizonte
+17,16594,Santo Antônio
+18,16616,Coronel Manoel Salustino
+19,16616,Doutor José Bezerra
+20,16616,JK
+21,16616,José Dantas de Araújo
+22,16616,Manoel Tomaz de Araújo
+23,16616,Paizinho Maria
+24,16616,Parque Dourado
+25,16616,Professor Gilberto da Cunha Pinheiro
+26,16616,Radir Pereira
+27,16616,Santa Maria Gorete
+28,16616,Sílvio Bezerra
+29,16616,Valfredo Galvão
+30,17795,Bela Parnamirim
+31,17795,Boa Esperança
+32,17795,Cajupiranga
+33,17795,Centro
+34,17795,Cohabinal
+35,17795,Emaús
+36,17795,Encanto Verde
+37,17795,Jardim Planalto
+38,17795,Liberdade
+39,17795,Monte Castelo
+40,17795,Nova Esperança
+41,17795,Nova Parnamirim
+42,17795,Parque das Nações
+43,17795,Parque das Árvores
+44,17795,Parque de Exposições
+45,17795,Parque do Jiqui
+46,17795,Passagem de Areia
+47,17795,Rosa dos Ventos
+48,17795,Santa Tereza
+49,17795,Santos Reis
+50,17795,Vale do Sol
+51,17795,Vida Nova
+52,16675,Alto da Bela Vista
+53,16675,Alto do Juazeiro
+54,16675,Centro
+55,16675,Dinarte Mariz
+56,16675,Prefeito Jose Marcelino de Oliveira
+57,16837,Campestre
+58,16837,Cigana
+59,16837,Dix-Sept Rosado
+60,16837,Porfírio Marques
+61,16837,Santa Catarina
+62,16080,Antônio Jota
+63,16080,Barro Vermelho
+64,16080,Centro
+65,16080,Iguaraçu
+66,16080,João Leopoldo Lopes
+67,16080,Luiz Inácio
+68,16080,São Manoel
+69,17019,Centro
+70,17019,Doutor Onézimo Maia
+71,17019,Doze de Julho
+72,17019,São Bento
+73,17094,Centro
+74,17094,Emboca
+75,17094,Floresta
+76,17094,Novo Jardim
+77,17094,Santa Cecilia
+78,17094,Santa Maria
+79,17094,Santo Amaro
+80,17094,Sao José
+81,17094,Vila do Rio
+82,17299,Antônio Aciole da Silva
+83,17299,Bernardino de Sena
+84,17299,Centro
+85,17299,Clavinote
+86,17299,Jesus Menino
+87,17590,Abolição
+88,17590,Aeroporto
+89,17590,Alagados
+90,17590,Alto da Conceição
+91,17590,Alto de São Manoel
+92,17590,Alto do Sumaré
+93,17590,Barrocas
+94,17590,Belo Horizonte
+95,17590,Boa Vista
+96,17590,Bom Jardim
+97,17590,Bom Jesus
+98,17590,Centro
+99,17590,Dix-Sept Rosado
+100,17590,Dom Jaime Câmara
+101,17590,Doze Anos
+102,17590,Ilha de Santa Luzia
+103,17590,Itapetinga
+104,17590,Lagoa do Mato
+105,17590,Nova Betânia
+106,17590,Paredões
+107,17590,Pintos
+108,17590,Planalto Treze de Maio
+109,17590,Presidente Costa e Silva
+110,17590,Redenção
+111,17590,Rincão
+112,17590,Santa Delmira
+113,17590,Santo Antônio
+114,17612,Alecrim
+115,17612,Areia Preta
+116,17612,Barro Vermelho
+117,17612,Bom Pastor
+118,17612,Candelária
+119,17612,Capim Macio
+120,17612,Cidade Alta
+121,17612,Cidade Nova
+122,17612,Cidade da Esperança
+123,17612,Dix-Sept Rosado
+124,17612,Filipe Camarão
+125,17612,Guarapés
+126,17612,Igapó
+127,17612,Lagoa Azul
+128,17612,Lagoa Nova
+129,17612,Lagoa Seca
+130,17612,Mãe Luíza
+131,17612,Neópolis
+132,17612,Nordeste
+133,17612,Nossa Senhora da Apresentação
+134,17612,Nossa Senhora de Nazaré
+135,17612,Nova Descoberta
+136,17612,Pajuçara
+137,17612,Petrópolis
+138,17612,Pitimbú
+139,17612,Planalto
+140,17612,Ponta Negra
+141,17612,Potengi
+142,17612,Praia do Meio
+143,17612,Quintas
+144,17612,Redinha
+145,17612,Ribeira
+146,17612,Rocas
+147,17612,Salinas
+148,17612,Santos Reis
+149,17612,Tirol
+150,17779,Boqueirão
+151,17779,Centro
+152,17779,Cruz do Monte
+153,17779,Dinarte Mariz
+154,17779,Ivan Bezerra
+155,17779,Maria Terceira
+156,17779,São Sebastião
+157,18139,Centro
+158,18139,Esperança
+159,18139,Novo Horizonte
+160,18139,Renascer
+161,18139,Sao Gonçalo
+162,18139,Sao João Batista
+163,18376,Amarante
+164,18376,Centro
+165,18376,Goladim
+166,18376,Guajiru
+167,18376,Jardim Lola
+168,18376,Jardins
+169,18376,Maçaranduba
+170,18376,Novo Amarante
+171,18376,Olho D'Água
+172,18376,Regomoleiro
+173,18376,Santa Terezinha
+174,18376,Santo Antônio do Potengi
+175,18457,Beira Rio
+176,18457,Centro
+177,18457,Liberdade
+178,18457,Nova Bonita
+179,18651,Ambrozina
+180,18651,Arécio Batista
+181,18651,Centro
+182,18651,Derosse Mariz
+183,18651,Helvécio Praxedes
+184,18651,Liberdade

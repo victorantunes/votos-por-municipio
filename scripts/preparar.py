@@ -235,7 +235,8 @@ def rn():
     por_cand['situacao'] = por_cand.situacao.fillna('')
     for c in ('tot', 'nmun', 'rk', 'nc', 'anulados'):
         por_cand[c] = por_cand[c].astype(int)
-    cols = ['cid', 'pessoa', 'disp', 'nome_urna', 'nome', 'numero', 'partido', 'situacao', 'tot', 'nmun', 'rk', 'nc', 'anulados', 'ue']
+    por_cand['sq'] = por_cand.SQ_CANDIDATO.fillna('') if 'SQ_CANDIDATO' in por_cand else ''
+    cols = ['cid', 'pessoa', 'disp', 'nome_urna', 'nome', 'numero', 'partido', 'situacao', 'tot', 'nmun', 'rk', 'nc', 'anulados', 'ue', 'sq']
     por_cand[cols].to_csv(D / 'rn' / 'candidaturas.csv', index=False)
     pess[['pessoa', 'nome', 'nome_urna', 'externo']].to_csv(D / 'rn' / 'pessoas.csv', index=False)
     votos.sort_values(['cid', 'cd_tse']).to_csv(D / 'rn' / 'votos.csv', index=False)

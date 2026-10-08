@@ -203,6 +203,7 @@ pess_rn['maior'] = pess_rn.pessoa.map(cand_rn.groupby('pessoa').tot.max())
 pess_rn = pess_rn.sort_values('maior', ascending=False).reset_index(drop=True)
 idx_p = {p: k + 1 for k, p in enumerate(pess_rn.pessoa)}  # 0 = PT (soma)
 cands = []
+cid_ordem = []
 por_pessoa = {0: []}
 for r in cand_rn.sort_values(['pessoa', 'd']).itertuples():
     v = votos_rn[votos_rn.cid == r.cid]
@@ -212,6 +213,7 @@ for r in cand_rn.sort_values(['pessoa', 'd']).itertuples():
     if r.anulados:
         c['an'] = int(r.anulados)
     cands.append(c)
+    cid_ordem.append(r.cid)
 # candidaturas do PT somadas, uma por disputa
 pt = cand_rn[cand_rn.partido == 'PT']
 soma = []
@@ -223,6 +225,7 @@ for d in ORD_RN:
     soma.append({'p': 0, 'd': idx_d[d], 'n': 'PT (soma)', 'num': '13', 'par': 'PT', 'sit': f"{len(cs)} candidato{'s' if len(cs) > 1 else ''}",
                  'tot': int(cs.tot.sum()), 'nm': int((v.votos > 0).sum()), 'npt': int(len(cs)), 'neleitos': int((cs.situacao == 'Eleito').sum()),
                  'agg': True, 'v': pares(v, cds_rn)})
+cid_idx = {cid: len(soma) + i for i, cid in enumerate(cid_ordem)}
 cands = soma + cands
 for k, c in enumerate(cands):
     por_pessoa.setdefault(c['p'], []).append(k)
@@ -231,6 +234,49 @@ for r in pess_rn.itertuples():
     pess.append({'n': r.nome_urna, 'nc': r.nome, 'ext': bool(r.externo), 'c': por_pessoa[idx_p[r.pessoa]]})
 esc_rn = {'id': 'rn', 'mun': registro_mun(mun_rn), 'disp': [bloco_disputa(ctx_rn, d, cds_rn) for d in ORD_RN], 'pess': pess, 'cand': cands}
 jdump(esc_rn, 'escopo_rn.json')
+
+# ---- detalhe por local de votação e bairro (carregado sob demanda quando o usuário liga "Detalhar por bairro")
+GRAN = OUT / 'dados' / 'granular'
+GRAN.mkdir(parents=True, exist_ok=True)
+for f in GRAN.glob('*.json'):
+    f.unlink()
+loc = pd.read_csv(D / 'rn' / 'locais.csv')
+ctx_loc = pd.read_csv(D / 'rn' / 'contexto_local.csv')
+vot_loc = pd.read_csv(D / 'rn' / 'votos_local.csv')
+pos_mun = {c: i for i, c in enumerate(cds_rn)}
+tam_grade = {}
+for ano, g in loc.groupby('ano'):
+    g = g.sort_values('lid')
+    tam_grade[int(ano)] = len(g)
+    grade = {'n': len(g), 'lat': [round(v, 5) for v in g.lat], 'lon': [round(v, 5) for v in g.lon], 'nome': [bonito(n) for n in g.nome],
+             'bt': [bonito(str(n)) for n in g.bairro_tse], 'mi': [pos_mun[int(c)] for c in g.cd_tse], 'b': [int(v) for v in g.bairro], 'ap': [int(v) for v in g.aptos]}
+    jdump(grade, f'granular/grade_{int(ano)}.json')
+votos_por_cid = {cid: g for cid, g in vot_loc.groupby('cid')}
+cids_pt = set(cand_rn[cand_rn.partido == 'PT'].cid)
+for did in ORD_RN:
+    ano = DISPUTAS[did][3]
+    n = tam_grade[ano]
+    cl = ctx_loc[(ctx_loc.disp == did)]
+    blocos = {}
+    for chave in ('va', 'br', 'nu', 'cp'):
+        arr = [None] * n
+        for lid, v in zip(cl.lid, cl[chave]):
+            arr[int(lid)] = int(v)
+        blocos[chave] = arr
+    candidaturas = {}
+    cid_da_disp = cand_rn[cand_rn.disp == did]
+    for cid in cid_da_disp.cid:
+        v = votos_por_cid.get(cid)
+        if v is not None and cid in cid_idx:
+            candidaturas[cid_idx[cid]] = [[int(a), int(b)] for a, b in zip(v.lid, v.votos)]
+    pts = [votos_por_cid[c] for c in cid_da_disp.cid if c in cids_pt and c in votos_por_cid]
+    if pts:
+        soma_pt = pd.concat(pts).groupby('lid').votos.sum()
+        idx_soma = next(k for k, c in enumerate(soma) if c['d'] == idx_d[did])
+        candidaturas[idx_soma] = [[int(a), int(b)] for a, b in soma_pt.items()]
+    jdump({**blocos, 'c': candidaturas}, f'granular/disp_{did}.json')
+tamanhos = {f.name: round(f.stat().st_size / 1e3) for f in sorted(GRAN.glob('*.json'))}
+print('granular (kB):', tamanhos, '| total', sum(tamanhos.values()), 'kB')
 
 # ---- tabelas para baixar (RN)
 nomes_mun = mun_rn.set_index('cd_tse').nome

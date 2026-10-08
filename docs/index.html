@@ -213,6 +213,7 @@
     <label>Colorir por <select id="metrica"></select></label>
     <label class="so-br">UF <select id="uf"><option value="">Brasil</option></select></label>
     <label class="only-map">Visualização <select id="modo"><option value="poli">Polígonos (municípios)</option><option value="circ">Círculos</option></select></label>
+    <label class="so-rn" title="Mostra os votos por bairro (onde o IBGE tem a divisão) e por local de votação, somando as seções eleitorais"><input type="checkbox" id="gran"> Detalhar por bairro e local de votação</label><span class="cz so-rn" id="gstatus"></span>
     <div class="sb only-map"><input type="search" id="buscamapa" placeholder="Buscar município no mapa..." autocomplete="off" aria-label="Buscar município no mapa"><ul class="sug" id="sugestoes" role="listbox"></ul></div>
     <label class="only-disp"><input type="search" id="busca" placeholder="Buscar município..."></label>
     <label class="only-disp so-br"><input type="checkbox" id="cinza" checked> Outros estados em cinza</label>
@@ -353,6 +354,15 @@
         </ul>
         <h3>Eleições municipais</h3>
         <p>Quem concorreu a prefeito ou vereador em 2020 ou 2024 só recebeu votos no seu próprio município. Por isso o mapa de um candidato municipal destaca um único município, e os demais ficam em cinza. Para ver o desempenho do partido no estado em 2020 ou 2024, escolha "PT (soma dos candidatos)". A aba Candidatos lista todos, com a posição de cada um entre os candidatos do município.</p>
+        <h3>Detalhe por bairro e local de votação</h3>
+        <p>Marcando "Detalhar por bairro e local de votação", o mapa mostra os votos abaixo do nível do município. O TSE publica os votos de cada seção eleitoral e, para cada local de votação, o endereço, o bairro, as coordenadas e o número de eleitores por seção. A página soma as seções de cada local e atribui o local ao bairro do IBGE (Censo 2022) que o contém.</p>
+        <ul>
+          <li>O IBGE só tem a divisão em bairros para 19 dos 167 municípios, entre eles Natal, Mossoró e Parnamirim, que reúnem cerca de 41% do eleitorado. Nos demais municípios, e fora dos bairros (como na zona rural), cada local de votação aparece como um ponto.</li>
+          <li>Para comparar anos diferentes (por exemplo, vereador de 2024 com deputado federal de 2026), a unidade é o bairro e, onde não há bairro, o município ou a parte dele fora dos bairros. Isso porque os locais de votação mudam de um ano para outro, então só o bairro é estável.</li>
+          <li>O bairro é o do local de votação e não o de residência do eleitor. Seções agregadas e urnas de contingência são somadas no local. Cerca de 3% dos locais não tinham coordenada e receberam a posição média dos locais do mesmo bairro. Locais fora de qualquer bairro do IBGE foram ligados ao bairro mais próximo, até 2 km.</li>
+          <li>A soma das seções pode diferir do total do município em até cerca de 2%, porque votos anulados depois da eleição aparecem nas seções. Candidaturas com votos anulados não têm esse detalhe.</li>
+          <li>O detalhe é carregado só quando você liga a opção, e apenas os arquivos das candidaturas A e B (algumas centenas de KB). As classes de cor usam percentis entre as unidades mostradas.</li>
+        </ul>
         <h2>Participação e votos do PT por disputa no RN</h2>
         <p>Cada linha considera os municípios em que o PT teve candidatos na disputa, que são todos os 167 em 2022 e em 2026 e só parte deles nas eleições municipais (coluna Municípios). O 2º turno de prefeito em 2024 só houve em Natal. No Senado de 2026 cada eleitor tem dois votos, então os votos válidos, brancos e nulos dessa linha contam votos e não eleitores, e os percentuais de brancos e nulos são sobre os votos dados (dois por eleitor). A abstenção é sobre os eleitores aptos, e os brancos e nulos são sobre o comparecimento. Os votos válidos incluem os votos de legenda nas eleições proporcionais. Os votos do PT são os nominais, e a porcentagem é calculada sobre os votos válidos desses municípios.</p>
         <div class="tablewrap"><table>
@@ -485,7 +495,8 @@ const TITULOS = {
 };
 
 /* ------------------------------------------------ dados do recorte atual */
-let E = null, M = [], N = 0;
+let E = null, M = [], N = 0, EM = null;  // E, M e N são o conjunto de dados atual; EM guarda o de municípios
+const G = {on: false, seq: 0, chave: '', EG: null};  // detalhe por bairro e local de votação
 const S = {tipo: 'livre', escopo: 'br', zoomRoda: true, modo: 'poli', cinza: true, view: 'mapa', metrica: 'pp', uf: '', termo: '', escala: 'log', sep: 'n', faixa: '', pessoa: 0, A: 0, B: null, pins: new Set()};
 let zoomManual = false, CL = null, METS = [];
 const cacheEsc = {};
@@ -509,7 +520,7 @@ function preparar(js) {
 }
 function carregarEscopo(id) {
   if (cacheEsc[id]) return Promise.resolve(cacheEsc[id]);
-  return fetch('dados/escopo_' + id + '.json?v=20261007214821').then(r => { if (!r.ok) throw new Error('escopo'); return r.json(); }).then(js => (cacheEsc[id] = preparar(js)));
+  return fetch('dados/escopo_' + id + '.json?v=20261007222146').then(r => { if (!r.ok) throw new Error('escopo'); return r.json(); }).then(js => (cacheEsc[id] = preparar(js)));
 }
 function vv(c) {
   if (c.vv) return c;
@@ -634,13 +645,16 @@ function atualizarTopo() {
       caixa('Abstenção', a.abst.toFixed(1) + '%', 'dos eleitores aptos') + caixa('Brancos', a.br.toFixed(1) + '%', A.d.v2 ? 'dos votos dados' : 'do comparecimento') + caixa('Nulos', a.nu.toFixed(1) + '%', A.d.v2 ? 'dos votos dados' : 'do comparecimento');
   }
   $('stats').innerHTML = h;
-  const onde = ids.length === N ? 'em todos os ' + fmt(N) + ' municípios' : 'em ' + fmt(ids.length) + ' município' + (ids.length === 1 ? '' : 's') + (S.escopo === 'rn' ? ' em que houve candidatura' : '');
+  const un = G.on ? ['unidade', 'unidades'] : ['município', 'municípios'];
+  const onde = ids.length === N ? (G.on ? 'em todas as ' : 'em todos os ') + fmt(N) + ' ' + un[1] : 'em ' + fmt(ids.length) + ' ' + un[ids.length === 1 ? 0 : 1] + (S.escopo === 'rn' ? ' em que houve candidatura' : '');
   let extra = '';
   if (B && ids.length < Math.max(A.v.length, B.v.length)) {
     const maior = B.v.length >= A.v.length ? B : A, tag = maior === B ? 'B' : 'A';
-    extra = ` ${esc(rotC(maior))} (${tag}) teve ao todo ${fmt(maior.tot)} votos em ${fmt(maior.nm)} municípios. A comparação só existe onde as duas candidaturas existem; para ver todos os municípios de ${tag} no mapa, escolha "${tag}: % dos votos válidos" em Colorir por.`;
+    extra = ` ${esc(rotC(maior))} (${tag}) teve ao todo ${fmt(maior.tot)} votos em ${fmt(maior.nm)} ${un[1]}. A comparação só existe onde as duas candidaturas existem; para ver ${G.on ? 'todas as' : 'todos os'} ${un[1]} de ${tag} no mapa, escolha "${tag}: % dos votos válidos" em Colorir por.`;
   }
-  $('selinfo').innerHTML = (B ? `Comparando <b>${esc(rotC(A))}</b> (A) com <b>${esc(rotC(B))}</b> (B), ${onde}.` : `Mostrando <b>${esc(rotC(A))}</b>, ${onde}.`) + extra;
+  if (A.semGran || (B && B.semGran)) extra += ' Esta candidatura não tem detalhe por local de votação (votos anulados depois da eleição).';
+  const gran = G.on ? ` <span class="cz">Detalhe por ${E.modoUnidades === 'ano' ? 'bairro e local de votação' : 'bairro (e município, onde o IBGE não tem bairros)'}.</span>` : '';
+  $('selinfo').innerHTML = (B ? `Comparando <b>${esc(rotC(A))}</b> (A) com <b>${esc(rotC(B))}</b> (B), ${onde}.` : `Mostrando <b>${esc(rotC(A))}</b>, ${onde}.`) + extra + gran;
 }
 
 /* ------------------------------------------------ dispersão (usada em duas vistas) */
@@ -815,7 +829,7 @@ function zerarZoom() { V1.view = null; paineis.forEach(p => { p.view = null; });
 /* ------------------------------------------------ mapa (Leaflet carregado sob demanda) */
 const NOTA_POLI = 'Cada município é pintado conforme a medida escolhida em "Colorir por". As classes usam percentis dos municípios com dados (P15, P35, P50, P65, P85), e municípios sem dados ficam em cinza. As linhas mais escuras são as divisas dos estados. Clique em um município para marcar o nome, ou procure um pela barra de busca, e use Limpar marcações para remover. Troque para círculos, proporcionais ao número de eleitores, se preferir.';
 const NOTA_CIRC = 'Cada círculo é um município, com tamanho proporcional ao número de eleitores aptos e cor conforme a medida escolhida em "Colorir por". Clique em um município para marcar o nome, e use Limpar marcações para remover. Troque para polígonos para ver os limites dos municípios.';
-let rendCirc = null, rendPoli = null, rendUF = null, map = null, marcadores = null, grupoCirc = null, camadaPoli = null, camadaUF = null, polis = null, mapaPronto = null;
+let rendCirc = null, rendPoli = null, rendUF = null, map = null, marcadores = null, grupoCirc = null, camadaPoli = null, camadaUF = null, camadaBase = null, camadaPontos = null, polis = null, pontos = null, mapaPronto = null;
 const malhas = {};
 function carregar(src, css) {
   const a = new Promise((res, rej) => { const l = document.createElement('link'); l.rel = 'stylesheet'; l.href = css; l.onload = res; l.onerror = rej; document.head.appendChild(l); });
@@ -825,38 +839,57 @@ function carregar(src, css) {
 function ajustarMapa() { const w = $('mapwrap'); w.style.height = Math.max(460, Math.min(900, Math.round(window.innerHeight * 0.78))) + 'px'; if (map) map.invalidateSize(); }
 const estiloPoli = i => { const on = noUF(i), pin = S.pins.has(i), sem = CL.cls[i] < 0; return {fillColor: cor(i), fillOpacity: sem ? (on ? 0.7 : 0.08) : on || pin ? 0.93 : 0.08, color: pin ? '#000' : '#ffffff', weight: pin ? 2.6 : on ? 0.3 : 0, opacity: pin ? 1 : 0.9}; };
 function clicarMapa(i) { S.pins.has(i) ? S.pins.delete(i) : S.pins.add(i); contador(); $('info').innerHTML = detalhe(i); pintarMapa(); }
-const baixarJSON = u => malhas[u] || (malhas[u] = fetch(u + '?v=20261007214821').then(r => { if (!r.ok) throw new Error(u); return r.json(); }).catch(e => { delete malhas[u]; throw e; }));
+const baixarJSON = u => malhas[u] || (malhas[u] = fetch(u + '?v=20261007222146').then(r => { if (!r.ok) throw new Error(u); return r.json(); }).catch(e => { delete malhas[u]; throw e; }));
+const NOTA_GRAN = (modo, poli) => 'Detalhe por bairro e local de votação: os votos de cada seção eleitoral são somados no local onde o eleitor vota, e o local é atribuído ao bairro do IBGE (Censo 2022) que o contém. O bairro é o do local de votação, e não necessariamente o de residência do eleitor. O IBGE só tem bairros para 19 dos 167 municípios, que reúnem cerca de 41% do eleitorado' +
+  (modo === 'ano' ? '; nos demais, e fora dos bairros (como a zona rural), cada local de votação aparece como um ponto.' : '; nos demais, e fora dos bairros (como a zona rural), a unidade é o município, ou a parte dele fora dos bairros, porque a comparação entre anos precisa de uma divisão estável (os locais de votação mudam de um ano para outro).') +
+  ' As classes de cor usam percentis só entre as unidades mostradas. A soma das seções pode diferir um pouco do total do município, por causa de votos anulados depois da eleição. Clique em uma unidade para marcar o nome, ou use a busca, e Limpar marcações para remover.' + (poli ? ' Troque para círculos, proporcionais ao número de eleitores, se preferir.' : ' Troque para polígonos para ver os limites.');
+const estiloPonto = i => { const pin = S.pins.has(i); return {fillColor: cor(i), fillOpacity: 0.92, color: pin ? '#000' : '#fff', weight: pin ? 2.6 : 0.9, opacity: 1}; };
+function ligarUnidade(camada, i) {
+  camada.on('mouseover', () => { $('info').innerHTML = detalhe(i); }); camada.on('click', () => clicarMapa(i));
+}
 function construirPoli() {
-  const arquivos = S.escopo === 'rn' ? ['dados/municipios_rn.geojson', 'dados/uf_rn.geojson'] : ['dados/municipios.geojson', 'dados/ufs.geojson'], escopo = S.escopo;
-  return Promise.all(arquivos.map(baixarJSON)).then(([gm, gu]) => {
-    if (escopo !== S.escopo) return;
-    const idx = new Map(M.map((m, i) => [m.c, i])); polis = new Array(N);
-    camadaPoli = L.geoJSON(gm, {renderer: rendPoli, style: f => estiloPoli(idx.get(f.properties.c)), filter: f => idx.has(f.properties.c), onEachFeature: (f, layer) => {
+  const escopo = S.escopo, gran = G.on;
+  const arquivos = escopo === 'rn' ? ['dados/municipios_rn.geojson', 'dados/uf_rn.geojson'] : ['dados/municipios.geojson', 'dados/ufs.geojson'];
+  if (gran) arquivos.push('dados/bairros_rn.geojson');
+  return Promise.all(arquivos.map(baixarJSON)).then(([gm, gu, gb]) => {
+    if (escopo !== S.escopo || gran !== G.on) return;
+    const idx = new Map(); M.forEach((m, i) => { if (m.c) idx.set(m.c, i); }); polis = new Array(N);
+    camadaBase = gran ? L.geoJSON(gm, {renderer: rendPoli, interactive: false, style: {fillColor: '#e9edf2', fillOpacity: 1, color: '#ffffff', weight: 0.6}}) : null;
+    camadaPoli = L.geoJSON({type: 'FeatureCollection', features: gran ? gm.features.concat(gb.features) : gm.features}, {renderer: rendPoli, style: f => estiloPoli(idx.get(f.properties.c)), filter: f => idx.has(f.properties.c), onEachFeature: (f, layer) => {
       const i = idx.get(f.properties.c); polis[i] = layer;
       layer.on('mouseover', () => { $('info').innerHTML = detalhe(i); layer.setStyle({color: '#111', weight: 1.6}); });
       layer.on('mouseout', () => layer.setStyle(estiloPoli(i)));
       layer.on('click', () => clicarMapa(i)); }});
-    camadaUF = L.geoJSON(gu, {pane: 'ufPane', renderer: rendUF, interactive: false, style: {color: '#2d3748', weight: S.escopo === 'rn' ? 1.6 : 1, fill: false, opacity: 0.85}});
+    camadaUF = L.geoJSON(gu, {pane: 'ufPane', renderer: rendUF, interactive: false, style: {color: '#2d3748', weight: escopo === 'rn' ? 1.6 : 1, fill: false, opacity: 0.85}});
+    camadaPontos = null; pontos = null;
+    if (gran) {  // locais de votação sem bairro no IBGE
+      pontos = new Array(N); const grupo = [];
+      M.forEach((m, i) => { if (!m.pt) return; const c = L.circleMarker([m.lat, m.lon], Object.assign({renderer: rendPoli, radius: 3 + 0.05 * Math.sqrt(m.ap)}, estiloPonto(i))); ligarUnidade(c, i); pontos[i] = c; grupo.push(c); });
+      camadaPontos = L.layerGroup(grupo);
+    }
   });
 }
 function construirCirculos() {
-  const k = S.escopo === 'rn' ? 0.02 : 0.0052;
+  const k = S.escopo === 'rn' ? (G.on ? 0.045 : 0.02) : 0.0052;
   marcadores = M.map((m, i) => { if (m.lat === null) return null;
     const c = L.circleMarker([m.lat, m.lon], {renderer: rendCirc, radius: 1.6 + k * Math.sqrt(m.ap), color: '#222', weight: 0.5, fillColor: cor(i), fillOpacity: 0.85});
-    c.on('mouseover', () => { $('info').innerHTML = detalhe(i); }); c.on('click', () => clicarMapa(i)); return c; });
+    ligarUnidade(c, i); return c; });
   grupoCirc = L.layerGroup(M.map((m, i) => i).sort((a, b) => M[b].ap - M[a].ap).map(i => marcadores[i]).filter(Boolean));
 }
 function limparCamadas() {
-  [camadaPoli, camadaUF, grupoCirc].forEach(l => { if (l && map.hasLayer(l)) map.removeLayer(l); });
+  [camadaBase, camadaPoli, camadaUF, camadaPontos, grupoCirc].forEach(l => { if (l && map.hasLayer(l)) map.removeLayer(l); });
   [rendCirc, rendPoli, rendUF].forEach(r => { if (r && map.hasLayer(r)) map.removeLayer(r); });
-  camadaPoli = camadaUF = grupoCirc = marcadores = polis = null; rotulos = [];
+  camadaBase = camadaPoli = camadaUF = camadaPontos = grupoCirc = marcadores = polis = pontos = null; rotulos = [];
 }
 function aplicarModo() {
   if (!map) return Promise.resolve();
-  const poli = S.modo === 'poli'; $('mapnote').innerHTML = poli ? NOTA_POLI : NOTA_CIRC;
+  const poli = S.modo === 'poli'; $('mapnote').innerHTML = G.on ? NOTA_GRAN(E.modoUnidades, poli) : poli ? NOTA_POLI : NOTA_CIRC;
   if (!grupoCirc) construirCirculos();
-  if (!poli) { [camadaPoli, camadaUF].forEach(l => l && map.hasLayer(l) && map.removeLayer(l)); if (rendPoli && map.hasLayer(rendPoli)) map.removeLayer(rendPoli); map.addLayer(grupoCirc); pintarMapa(); return Promise.resolve(); }
-  return (camadaPoli ? Promise.resolve() : construirPoli()).then(() => { if (S.modo !== 'poli' || !camadaPoli) return; map.removeLayer(grupoCirc); if (rendCirc && map.hasLayer(rendCirc)) map.removeLayer(rendCirc); map.addLayer(camadaPoli); map.addLayer(camadaUF); pintarMapa(); })
+  if (!poli) { [camadaBase, camadaPoli, camadaUF, camadaPontos].forEach(l => l && map.hasLayer(l) && map.removeLayer(l)); if (rendPoli && map.hasLayer(rendPoli)) map.removeLayer(rendPoli); map.addLayer(grupoCirc); pintarMapa(); return Promise.resolve(); }
+  return (camadaPoli ? Promise.resolve() : construirPoli()).then(() => {
+    if (S.modo !== 'poli' || !camadaPoli) return;
+    map.removeLayer(grupoCirc); if (rendCirc && map.hasLayer(rendCirc)) map.removeLayer(rendCirc);
+    [camadaBase, camadaPoli, camadaUF, camadaPontos].forEach(l => l && map.addLayer(l)); pintarMapa(); })
     .catch(() => { S.modo = 'circ'; $('modo').value = 'circ'; $('info').innerHTML = '<span class="cz">Não foi possível carregar os polígonos. Mostrando círculos.</span>'; return aplicarModo(); });
 }
 function iniciarMapa() {
@@ -875,7 +908,7 @@ function sincronizarPins() {
   rotulos.forEach(l => l.unbindTooltip()); rotulos = [];
   const poli = camadaPoli && map.hasLayer(camadaPoli);
   S.pins.forEach(i => {
-    const l = poli ? polis[i] : marcadores && marcadores[i]; if (!l) return;
+    const l = poli ? (polis[i] || (pontos && pontos[i])) : marcadores && marcadores[i]; if (!l) return;
     l.bindTooltip(pinTxt(i), {permanent: true, direction: 'top', className: 'pin-tip', opacity: 1}); rotulos.push(l);
     if (poli) l.bringToFront();
   });
@@ -885,12 +918,16 @@ function pintarMapa() {
   if (grupoCirc && map.hasLayer(grupoCirc)) M.forEach((m, i) => { const c = marcadores[i]; if (!c) return; const on = noUF(i), pin = S.pins.has(i);
     c.setStyle({fillColor: cor(i), fillOpacity: on || pin ? 0.88 : 0.07, opacity: on || pin ? 1 : 0.15, color: pin ? '#000' : '#222', weight: pin ? 2.6 : 0.5}); });
   if (camadaPoli && map.hasLayer(camadaPoli)) polis.forEach((l, i) => l && l.setStyle(estiloPoli(i)));
+  if (camadaPontos && map.hasLayer(camadaPontos)) pontos.forEach((c, i) => c && c.setStyle(estiloPonto(i)));
   sincronizarPins();
 }
 function indicesAlvo() {
   const A = cA(), idx = [];
-  if (S.escopo === 'rn' && A.v.length && A.v.length <= 3) A.v.forEach(([i]) => idx.push(i));
-  else for (let i = 0; i < N; i++) if (noUF(i)) idx.push(i);
+  if (S.escopo === 'rn' && A.v.length) {  // candidato de até 3 municípios: o mapa abre neles
+    const muns = new Set(A.v.map(([i]) => G.on ? M[i].mi : i));
+    if (muns.size <= 3) return A.v.map(([i]) => i);
+  }
+  for (let i = 0; i < N; i++) if (noUF(i)) idx.push(i);
   return idx;
 }
 function zoomUF() {
@@ -902,8 +939,8 @@ function zoomUF() {
 }
 function mostrarAlvoNoInfo() {
   const A = cA();
-  if (S.escopo === 'rn' && A.v.length && A.v.length <= 3) $('info').innerHTML = detalhe(A.v[0][0]);
-  else $('info').innerHTML = '<span class="cz">Passe o mouse (ou toque) em um município para ver os números. Clique para marcar o nome.</span>';
+  if (S.escopo === 'rn' && !G.on && A.v.length && A.v.length <= 3) $('info').innerHTML = detalhe(A.v[0][0]);
+  else $('info').innerHTML = '<span class="cz">Passe o mouse (ou toque) em ' + (G.on ? 'uma unidade' : 'um município') + ' para ver os números. Clique para marcar o nome.</span>';
 }
 
 /* ------------------------------------------------ campos de busca com sugestões */
@@ -995,25 +1032,107 @@ function definirTipo(t) {
   S.tipo = t;
   definirPessoa(t === 'novo' ? E.ordemP.find(pessoaPermitida) : 0);
 }
-function definirPessoa(p) { S.pessoa = p; [S.A, S.B] = padraoPessoa(p); S.metrica = metPadrao(); aplicarSelecao(true); }
+function definirPessoa(p) { S.pessoa = p; [S.A, S.B] = padraoPessoa(p); S.metAuto = true; aplicarSelecao(true); }
+/* ------------------------------------------------ detalhe por bairro e local de votação (RN) */
+const baixarG = baixarJSON;  // mesmo cache dos polígonos
+const MUNICIPAL = ['Prefeito', 'Vereador'];
+/* Monta um conjunto de dados com a mesma forma do municipal, mas cujas "unidades" são bairros do IBGE e locais de votação (mesmo ano)
+   ou bairros e municípios sem bairros (anos diferentes, porque os locais de votação mudam). Só as candidaturas A e B recebem votos. */
+function construirGranular(grades, discs, bj) {
+  const ks = [S.A].concat(S.B === null ? [] : [S.B]), cs = ks.map(k => EM.cand[k]);
+  const anos = [...new Set(cs.map(c => c.d.ano))], modo = anos.length > 1 ? 'comp' : 'ano';
+  const idxIbge = new Map(EM.mun.map((m, i) => [m.c, i])), comBairros = new Set(bj.features.map(f => f.properties.m)), bairro = new Map(bj.features.map(f => [f.properties.b, f.properties]));
+  const U = [], porBairro = new Map(), porMun = new Map(), mapa = {};
+  const nova = (o) => { U.push(Object.assign({u: 'RN', g: '', c: null, pt: false, ap: 0}, o)); return U.length - 1; };
+  anos.forEach(a => {
+    const g = grades[a], mp = new Int32Array(g.n).fill(-1);
+    for (let l = 0; l < g.n; l++) {
+      const b = g.b[l], mi = g.mi[l], mun = EM.mun[mi];
+      if (b >= 0) {
+        let u = porBairro.get(b);
+        if (u === undefined) { const p = bairro.get(b), im = idxIbge.get(p.m); u = nova({n: p.n, u: EM.mun[im].n, g: 'Bairro (IBGE)', lat: p.cy, lon: p.cx, c: 'b' + b, mi: im}); porBairro.set(b, u); }
+        mp[l] = u;
+      } else if (modo === 'comp') {  // sem bairro: o município inteiro (ou a parte dele fora dos bairros do IBGE, como a zona rural)
+        let u = porMun.get(mi);
+        if (u === undefined) {
+          const parte = comBairros.has(mun.c);
+          u = nova({n: parte ? mun.n + ' (fora dos bairros)' : mun.n, g: parte ? 'Parte do município fora dos bairros do IBGE' : 'Município (sem bairros no IBGE)', lat: mun.lat, lon: mun.lon, c: mun.c, mi}); porMun.set(mi, u);
+        }
+        mp[l] = u;
+      } else mp[l] = nova({n: g.nome[l], u: mun.n, g: 'Local de votação, bairro ' + g.bt[l], lat: g.lat[l], lon: g.lon[l], pt: true, mi});
+    }
+    mapa[a] = mp;
+  });
+  const n = U.length, g0 = grades[anos[0]], mp0 = mapa[anos[0]];
+  for (let l = 0; l < g0.n; l++) if (mp0[l] >= 0) U[mp0[l]].ap += g0.ap[l];
+  U.forEach(m => { m.k = norm(m.n + ' ' + m.u); m.f = TAM.slice(1).find(t => t.f(m.ap)).k; });
+  const disp = EM.disp.map(d => ({id: d.id, nome: d.nome, curto: d.curto, cargo: d.cargo, ano: d.ano, tipo: d.tipo, v2: d.v2, m: d.m}));
+  const carregadas = new Set(cs.map(c => c.dx));
+  carregadas.forEach(di => {
+    const d = disp[di], g = grades[d.ano], mp = mapa[d.ano], dados = discs[d.id], tem = new Uint8Array(n);
+    ['ap', 'cp', 'br', 'nu', 'va'].forEach(f => { d[f] = new Float64Array(n); });
+    for (let l = 0; l < g.n; l++) {
+      const u = mp[l]; if (u < 0 || dados.va[l] === null) continue;
+      tem[u] = 1; d.ap[u] += g.ap[l]; d.cp[u] += dados.cp[l]; d.br[u] += dados.br[l]; d.nu[u] += dados.nu[l]; d.va[u] += dados.va[l];
+    }
+    for (let u = 0; u < n; u++) if (!tem[u]) { d.ap[u] = d.cp[u] = d.br[u] = d.nu[u] = d.va[u] = NaN; }
+    d.pa = new Float64Array(n); d.pb = new Float64Array(n); d.pn = new Float64Array(n); d.pc = new Float64Array(n);
+    for (let u = 0; u < n; u++) { d.pa[u] = (d.ap[u] - d.cp[u]) / d.ap[u] * 100; d.pc[u] = d.cp[u] / d.ap[u] * 100; d.pb[u] = d.br[u] / (d.cp[u] * d.m) * 100; d.pn[u] = d.nu[u] / (d.cp[u] * d.m) * 100; }
+  });
+  const cand = EM.cand.map(c => Object.assign({}, c, {d: disp[c.dx], vv: null, v: [], semGran: true, pct: NaN}));
+  ks.forEach(k => {
+    const c = cand[k], src = EM.cand[k], d = c.d, pares = discs[d.id].c[k];
+    if (!pares) return;
+    const acc = new Float64Array(n), mp = mapa[d.ano]; pares.forEach(([l, v]) => { if (mp[l] >= 0) acc[mp[l]] += v; });
+    const estadual = !MUNICIPAL.includes(src.d.cargo), muns = estadual ? null : new Set(src.v.map(([i]) => i)), v = [];
+    let sv = 0, sva = 0;
+    for (let u = 0; u < n; u++) if (ok(d.va[u]) && (estadual || muns.has(U[u].mi))) { v.push([u, acc[u]]); sv += acc[u]; sva += d.va[u]; }
+    c.v = v; c.tot = sv; c.nm = v.filter(x => x[1] > 0).length; c.pct = sva > 0 ? sv / sva * 100 : NaN; c.semGran = false;
+  });
+  return {id: 'rn', mun: U, disp, pess: EM.pess, cand, ordemP: EM.ordemP, modoUnidades: modo};
+}
+const usarMunicipal = () => { if (E !== EM) { E = EM; M = EM.mun; N = M.length; S.pins.clear(); if (map) limparCamadas(); } };
+/* garante os dados do detalhe para as candidaturas A e B atuais; resolve true (pronto), false (falhou, voltou ao municipal) ou 'velho' (outra escolha chegou antes) */
+function garantirGranular() {
+  const ks = [S.A].concat(S.B === null ? [] : [S.B]), chave = ks.join(',');
+  if (G.EG && G.chave === chave && E === G.EG) return Promise.resolve(true);
+  const seq = ++G.seq, ds = ks.map(k => EM.cand[k].d), anos = [...new Set(ds.map(d => d.ano))], ids = [...new Set(ds.map(d => d.id))];
+  $('gstatus').textContent = 'Carregando o detalhe...';
+  return Promise.all([Promise.all(anos.map(a => baixarG('dados/granular/grade_' + a + '.json'))), Promise.all(ids.map(id => baixarG('dados/granular/disp_' + id + '.json'))), baixarG('dados/bairros_rn.geojson')])
+    .then(([gr, dd, bj]) => {
+      if (seq !== G.seq) return 'velho';
+      G.EG = construirGranular(Object.fromEntries(anos.map((a, i) => [a, gr[i]])), Object.fromEntries(ids.map((id, i) => [id, dd[i]])), bj); G.chave = chave;
+      E = G.EG; M = E.mun; N = M.length; S.pins.clear(); if (map) limparCamadas();
+      $('gstatus').textContent = ''; return true;
+    }).catch(() => {
+      if (seq !== G.seq) return 'velho';
+      G.on = false; $('gran').checked = false; $('gstatus').textContent = 'Não foi possível carregar o detalhe.'; return false;
+    });
+}
 function aplicarSelecao(zoom) {
+  if (!G.on) { usarMunicipal(); aplicarSelecaoBase(zoom); return Promise.resolve(); }
+  return garantirGranular().then(r => { if (r === 'velho') return; if (r === false) usarMunicipal(); return aplicarSelecaoBase(zoom); });
+}
+function aplicarSelecaoBase(zoom) {
+  if (S.metAuto) S.metrica = metPadrao(); else if (COMPARACAO.includes(S.metrica) && poucos()) S.metrica = 'Bpv';
   popularAB(); popularMetricas(); zerarZoom(); S.pins.clear(); contador();
   calcClasses(); legenda(); atualizarTopo();
-  if (S.view === 'mapa') { pintarMapa(); if (zoom) { zoomUF(); mostrarAlvoNoInfo(); } }
+  if (S.view === 'mapa') return (map && !grupoCirc ? aplicarModo() : Promise.resolve()).then(() => { pintarMapa(); if (zoom) { zoomUF(); mostrarAlvoNoInfo(); } });
   else if (S.view === 'dispersao') atualizarDispersao();
   else if (S.view === 'candidatos') renderCandidatos();
+  return Promise.resolve();
 }
 function mudouMedida() { calcClasses(); legenda(); atualizarTopo(); redesenhar(); }
 
 /* ------------------------------------------------ candidatos (tabela) */
 const ordCand = {c: 'tot', dir: -1};
 function renderCandidatos() {
-  if (!E || S.escopo !== 'rn') return;
+  if (!EM || S.escopo !== 'rn') return;
   const fd = $('fdisp').value, fh = $('fhist').value, fs = $('fsit').value, q = norm($('fnome').value.trim()), soma = $('fsoma').checked;
-  let rows = E.cand.filter(c => (!fd || c.d.id === fd) && (!fh || (fh === 'novo' ? !E.pess[c.p].antes : E.pess[c.p].antes)) && (!fs || c.sit === fs) && (soma || !c.agg) && (!q || norm(c.n + ' ' + E.pess[c.p].nc).includes(q)));
+  let rows = EM.cand.filter(c => (!fd || c.d.id === fd) && (!fh || (fh === 'novo' ? !EM.pess[c.p].antes : EM.pess[c.p].antes)) && (!fs || c.sit === fs) && (soma || !c.agg) && (!q || norm(c.n + ' ' + EM.pess[c.p].nc).includes(q)));
   const chave = {n: c => norm(c.n), d: c => c.dx, ue: c => c.ue || '', par: c => c.par, sit: c => c.sit, tot: c => c.tot, pct: c => ok(c.pct) ? c.pct : -1, nm: c => c.nm, rk: c => c.agg || !c.rk ? 1e9 : c.rk}[ordCand.c];
   rows = rows.slice().sort((a, b) => { const x = chave(a), y = chave(b); return (x < y ? -1 : x > y ? 1 : 0) * ordCand.dir || a.id - b.id; });
-  $('tabcand').querySelector('tbody').innerHTML = rows.map(c => `<tr data-k="${c.id}" class="${c.agg ? 'soma' : ''}"><td class="nome" title="${esc(E.pess[c.p].nc)}">${esc(c.n)}</td><td>${esc(c.d.nome)}</td><td>${esc(c.ue || (c.agg && c.d.cargo !== 'Presidente' ? (c.d.ano === 2020 ? 'Onde o PT lançou candidatos' : 'Estado todo') : 'Estado todo'))}</td><td>${esc(c.par)}</td><td>${esc(c.sit || '-')}</td>` +
+  $('tabcand').querySelector('tbody').innerHTML = rows.map(c => `<tr data-k="${c.id}" class="${c.agg ? 'soma' : ''}"><td class="nome" title="${esc(EM.pess[c.p].nc)}">${esc(c.n)}</td><td>${esc(c.d.nome)}</td><td>${esc(c.ue || (c.agg && c.d.cargo !== 'Presidente' ? (c.d.ano === 2020 ? 'Onde o PT lançou candidatos' : 'Estado todo') : 'Estado todo'))}</td><td>${esc(c.par)}</td><td>${esc(c.sit || '-')}</td>` +
     `<td class="n">${fmt(c.tot)}</td><td class="n">${ok(c.pct) ? fp(c.pct) : '-'}</td><td class="n">${fmt(c.nm)}</td><td class="n">${c.agg || !c.rk ? '-' : c.rk + 'º de ' + fmt(c.nc)}</td></tr>`).join('');
   $('fcont').textContent = `${fmt(rows.length)} candidatura${rows.length === 1 ? '' : 's'}`;
   document.querySelectorAll('#tabcand th').forEach(th => { th.classList.toggle('ord', th.dataset.c === ordCand.c); th.classList.toggle('asc', th.dataset.c === ordCand.c && ordCand.dir === 1); });
@@ -1022,10 +1141,10 @@ document.querySelectorAll('#tabcand th').forEach(th => { th.onclick = () => { or
 ['fdisp', 'fhist', 'fsit', 'fsoma'].forEach(id => { $(id).onchange = renderCandidatos; }); $('fnome').oninput = renderCandidatos;
 $('tabcand').querySelector('tbody').addEventListener('click', ev => {
   const tr = ev.target.closest('tr[data-k]'); if (!tr) return;
-  const c = E.cand[+tr.dataset.k], p = E.pess[c.p];
-  S.pessoa = c.p; S.B = null; S.A = c.id; S.metrica = 'Apv';
+  const c = EM.cand[+tr.dataset.k], p = EM.pess[c.p];
+  S.pessoa = c.p; S.B = null; S.A = c.id; S.metrica = 'Apv'; S.metAuto = true;
   if (c.d.ano === 2026) {
-    if (p.antes) { S.tipo = 'comp'; S.B = c.id; S.A = anterior(p.c, c.id); S.metrica = metPadrao(); } else S.tipo = 'novo';
+    if (p.antes) { S.tipo = 'comp'; S.B = c.id; S.A = anterior(p.c, c.id); } else S.tipo = 'novo';
   } else S.tipo = 'livre';
   mostrar('mapa'); aplicarSelecao(true);
 });
@@ -1045,13 +1164,13 @@ function mostrar(v) {
   document.querySelectorAll('.tab').forEach(b => b.setAttribute('aria-selected', b.dataset.v === v));
   if (history.replaceState) history.replaceState(null, '', '#' + (S.escopo === 'rn' ? 'rn/' : '') + v);
   if (!E) return;
-  if (v === 'mapa') { ajustarMapa(); iniciarMapa().then(() => { ajustarMapa(); if (map) { pintarMapa(); setTimeout(() => { zoomUF(); mostrarAlvoNoInfo(); }, 60); } }); }
+  if (v === 'mapa') { ajustarMapa(); iniciarMapa().then(() => { ajustarMapa(); if (map) (grupoCirc ? Promise.resolve() : aplicarModo()).then(() => { pintarMapa(); setTimeout(() => { zoomUF(); mostrarAlvoNoInfo(); }, 60); }); }); }
   else if (v === 'dispersao') atualizarDispersao();
   else if (v === 'candidatos') renderCandidatos();
 }
 
 function definirEscopo(js, id) {
-  E = js; M = js.mun; N = M.length;
+  E = js; M = js.mun; N = M.length; EM = js; G.on = false; G.chave = ''; G.EG = null; G.seq++; $('gran').checked = false; $('gstatus').textContent = ''; S.metAuto = true;
   Object.assign(S, {escopo: id, uf: '', termo: '', sep: 'n', faixa: '', pessoa: 0}); S.pins.clear();
   S.tipo = id === 'rn' ? 'comp' : 'livre'; [S.A, S.B] = padraoPessoa(0); S.metrica = 'pp';
   document.body.dataset.escopo = id; document.body.dataset.sep = 'n';
@@ -1076,10 +1195,11 @@ function mudarEscopo(id, view) {
 document.querySelectorAll('.tab').forEach(b => { b.onclick = () => mostrar(b.dataset.v); });
 document.querySelectorAll('#tipos button').forEach(b => { b.onclick = () => { if (b.dataset.t !== S.tipo) definirTipo(b.dataset.t); }; });
 document.querySelectorAll('#escopos button').forEach(b => { b.onclick = () => { if (b.dataset.e !== S.escopo) mudarEscopo(b.dataset.e, S.view === 'candidatos' && b.dataset.e === 'br' ? 'mapa' : S.view); }; });
-$('selA').onchange = e => { S.A = +e.target.value; if (S.B === S.A) S.B = null; if (COMPARACAO.includes(S.metrica) && poucos()) S.metrica = 'Bpv'; aplicarSelecao(false); if (S.view === 'mapa') { zoomUF(); mostrarAlvoNoInfo(); } };
-$('selB').onchange = e => { S.B = e.target.value === '' ? null : +e.target.value; if (S.B === S.A) S.B = null; S.metrica = metPadrao(); aplicarSelecao(false); };
+$('selA').onchange = e => { S.A = +e.target.value; if (S.B === S.A) S.B = null; aplicarSelecao(false).then(() => { if (S.view === 'mapa') { zoomUF(); mostrarAlvoNoInfo(); } }); };
+$('selB').onchange = e => { S.B = e.target.value === '' ? null : +e.target.value; if (S.B === S.A) S.B = null; S.metAuto = true; aplicarSelecao(false); };
 $('troca').onclick = () => { if (S.B === null) return; [S.A, S.B] = [S.B, S.A]; aplicarSelecao(false); };
-$('metrica').onchange = e => { S.metrica = e.target.value; mudouMedida(); };
+$('metrica').onchange = e => { S.metrica = e.target.value; S.metAuto = false; mudouMedida(); };
+$('gran').onchange = e => { G.on = e.target.checked; $('gstatus').textContent = ''; aplicarSelecao(true); };
 $('uf').onchange = e => { S.uf = e.target.value; zerarZoom(); atualizarTopo(); if (S.view === 'dispersao') atualizarDispersao(); else if (S.view === 'mapa') { pintarMapa(); zoomUF(); } };
 $('modo').onchange = e => { S.modo = e.target.value; aplicarModo(); };
 $('zroda').onchange = e => { S.zoomRoda = e.target.checked; zoomManual = true; };
