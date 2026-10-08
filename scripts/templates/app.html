@@ -28,7 +28,8 @@
   .pills button[aria-pressed="true"] { color: var(--accent); background: #fbeceb; border-color: var(--accent); }
   h1 { font-size: 24px; line-height: 1.2; letter-spacing: -.01em; }
   .sub { color: var(--muted); font-size: 14px; margin-top: 4px; max-width: 660px; }
-  .selinfo { font-size: 13px; margin-top: 8px; max-width: 700px; color: #2d3748; }
+  .selinfo { font-size: 13px; margin: 0 0 12px; max-width: 900px; color: #2d3748; }
+  body[data-view="dados"] .selinfo, body[data-view="candidatos"] .selinfo { display: none; }
   .stats { display: grid; grid-template-columns: repeat(3, minmax(0, auto)); gap: 8px 28px; }
   .stat span { display: block; font-size: 11.5px; color: var(--muted); }
   .stat b { display: block; font-size: 17px; line-height: 1.25; white-space: nowrap; }
@@ -79,7 +80,7 @@
   hr.s { border: 0; border-top: 1px solid var(--line); margin: 6px 0; }
   #carregando { display: none; padding: 40px 0; text-align: center; color: var(--muted); }
   body.carregando #carregando { display: block; }
-  body.carregando .wrap > .bar, body.carregando .wrap > .legend, body.carregando .wrap > .view { display: none !important; }
+  body.carregando .wrap > .bar, body.carregando .wrap > .legend, body.carregando .wrap > .selinfo, body.carregando .wrap > .view { display: none !important; }
 
   .chartcard { padding: 14px 16px 10px; }
   .chart-box { position: relative; width: 100%; height: clamp(420px, 72vh, 720px); }
@@ -188,7 +189,6 @@
       </div>
       <h1 id="h1">Lula em 2022 e 2026, município a município</h1>
       <p class="sub" id="sub"></p>
-      <p class="selinfo" id="selinfo"></p>
     </div>
     <div class="stats" id="stats"></div>
   </header>
@@ -226,6 +226,7 @@
     <button class="btn" id="limpar">Limpar marcações</button>
   </div>
   <div class="legend" id="legend"></div>
+  <p class="selinfo" id="selinfo"></p>
 
   <section class="view" id="v-mapa">
     <div class="card" id="mapwrap"><div id="map"></div><div id="info"><span class="cz">Passe o mouse (ou toque) em um município para ver os números. Clique para marcar o nome.</span></div><div id="mapmsg">Não foi possível carregar o mapa. Ele precisa de acesso à internet para o mapa de fundo.</div></div>
