@@ -1,4 +1,4 @@
-"""Baixa do TSE os resultados de 2020 e 2022 e extrai os arquivos usados na análise.
+"""Baixa do TSE os resultados de 2020, 2022 e 2026 e extrai os arquivos usados na análise.
 
 Fonte: TSE, dados abertos (https://cdn.tse.jus.br/estatistica/sead/odsele/).
 Entradas baixadas (dados/tse/brutos/, ignoradas pelo git):
@@ -6,7 +6,7 @@ Entradas baixadas (dados/tse/brutos/, ignoradas pelo git):
   detalhe_votacao_munzona_<ano>.zip     aptos, comparecimento, abstenções, brancos, nulos e válidos por município e zona
   consulta_cand_<ano>.zip               cadastro dos candidatos (partido, cargo, situação, CPF usado só para ligar 2020 e 2022)
 Saídas extraídas (dados/tse/csv/, ignoradas pelo git):
-  RN de 2020 e de 2022, e o arquivo BR (Presidente) de 2022.
+  RN de 2020, 2022 e 2026, e o arquivo BR (Presidente) de 2022.
 """
 import sys
 import urllib.request
@@ -28,6 +28,9 @@ PACOTES = [
     ('detalhe_votacao_munzona', 'detalhe_votacao_munzona', 2020, ['RN']),
     ('consulta_cand', 'consulta_cand', 2022, ['RN']),
     ('consulta_cand', 'consulta_cand', 2020, ['RN']),
+    ('votacao_candidato_munzona', 'votacao_candidato_munzona', 2026, ['RN']),
+    ('detalhe_votacao_munzona', 'detalhe_votacao_munzona', 2026, ['RN']),
+    ('consulta_cand', 'consulta_cand', 2026, ['RN']),
 ]
 
 

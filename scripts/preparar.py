@@ -1,13 +1,13 @@
 """Organiza os dados do TSE em tabelas simples (uma linha por disputa, candidatura ou município).
 
 Entradas
-  dados/tse/csv/*.csv        RN de 2020 e 2022 e Presidente de 2022 (scripts/coletar_tse.py)
+  dados/tse/csv/*.csv        RN de 2020, 2022 e 2026 e Presidente de 2022 (scripts/coletar_tse.py)
   dados/agg_2026/agg_*.csv   boletins de urna de 2026, Presidente, por município (scripts/coletar_bu_2026.py)
   dados/correspondencia_tse_ibge.csv
 Saídas
   dados/br/contexto.csv, dados/br/lula.csv                       Lula no Brasil (2022 1º e 2º turnos, 2026 1º turno)
   dados/rn/disputas.csv, contexto.csv                            disputas do RN e participação (aptos, abstenção, brancos, nulos)
-  dados/rn/pessoas.csv, candidaturas.csv, votos.csv              candidatos do PT no RN em 2020 e 2022 (e Lula)
+  dados/rn/pessoas.csv, candidaturas.csv, votos.csv              candidatos do PT no RN em 2020, 2022 e 2026 (e Lula)
 
 Conceitos
   disputa      eleição de um cargo em um ano e turno (por exemplo, Governador 2022 ou Vereador 2020)
@@ -44,13 +44,13 @@ def contexto(det, disp, filtro_chave='CD_MUNICIPIO'):
     (inclui votos nulos, anulados depois da eleição e anulados sub judice)."""
     g = pd.DataFrame({
         'cd_tse': inteiro(det[filtro_chave]), 'aptos': inteiro(det.QT_APTOS), 'comparec': inteiro(det.QT_COMPARECIMENTO),
-        'brancos': inteiro(det.QT_VOTOS_BRANCOS), 'validos': inteiro(det.QT_TOTAL_VOTOS_VALIDOS)})
+        'votos': inteiro(det.QT_VOTOS), 'brancos': inteiro(det.QT_VOTOS_BRANCOS), 'validos': inteiro(det.QT_TOTAL_VOTOS_VALIDOS)})
     g = g.groupby('cd_tse', as_index=False).sum()
-    g['nulos'] = g.comparec - g.brancos - g.validos
+    g['nulos'] = g.votos - g.brancos - g.validos  # votos = comparecimento, ou o dobro quando o eleitor tem dois votos (Senador 2026)
     g['abst'] = g.aptos - g.comparec  # eleitores de seções não instaladas entram como abstenção
     assert (g.nulos >= 0).all()
     g.insert(0, 'disp', disp)
-    return g[['disp', 'cd_tse', 'aptos', 'comparec', 'abst', 'brancos', 'nulos', 'validos']]
+    return g[['disp', 'cd_tse', 'aptos', 'comparec', 'votos', 'abst', 'brancos', 'nulos', 'validos']]
 
 
 def ctx_2026(uf=None):
@@ -66,6 +66,7 @@ def ctx_2026(uf=None):
                         'nulos': tipo.get('Nulo', 0), 'validos': tipo['Nominal']}).astype('int64')
     assert (out.validos + out.brancos + out.nulos == out.comparec).all(), 'boletins de urna: soma diferente do comparecimento'
     out['abst'] = out.aptos - out.comparec
+    out['votos_dados'] = out.comparec
     lula = agg[(agg.DS_TIPO_VOTAVEL == 'Nominal') & (agg.NR_VOTAVEL == 13)].groupby('CD_MUNICIPIO').QT_VOTOS.sum().rename('votos')
     out = out.join(lula).fillna({'votos': 0}).astype('int64')
     return out
@@ -96,7 +97,7 @@ def brasil():
     t26 = anexar_sorriso(ctx_2026(), cd_sorriso)
     assert len(t26) == 5570 and set(t26.index) == set(ctx[0].cd_tse), 'municípios de 2026 diferentes dos de 2022'
     c26 = t26.reset_index().rename(columns={'CD_MUNICIPIO': 'cd_tse'}).assign(disp='pres26t1')
-    ctx.append(c26[['disp', 'cd_tse', 'aptos', 'comparec', 'abst', 'brancos', 'nulos', 'validos']])
+    ctx.append(c26.assign(votos=c26.votos_dados)[['disp', 'cd_tse', 'aptos', 'comparec', 'votos', 'abst', 'brancos', 'nulos', 'validos']])
     lula.append(c26[['disp', 'cd_tse', 'votos']])
     ctx, lula = pd.concat(ctx, ignore_index=True), pd.concat(lula, ignore_index=True)
     ctx.to_csv(D / 'br' / 'contexto.csv', index=False)
@@ -111,25 +112,28 @@ def brasil():
 CARGOS = {  # (ano, DS_CARGO do TSE) -> (id da disputa, cargo, tipo)
     (2022, 'Governador'): ('gov22', 'Governador', 'maj'), (2022, 'Senador'): ('sen22', 'Senador', 'maj'),
     (2022, 'Deputado Federal'): ('df22', 'Deputado Federal', 'prop'), (2022, 'Deputado Estadual'): ('de22', 'Deputado Estadual', 'prop'),
-    (2020, 'Prefeito'): ('pref20', 'Prefeito', 'maj'), (2020, 'Vereador'): ('ver20', 'Vereador', 'prop')}
-ORDEM_DISP = ['ver20', 'pref20', 'de22', 'df22', 'sen22', 'gov22', 'pres22t1', 'pres22t2', 'pres26t1']
+    (2020, 'Prefeito'): ('pref20', 'Prefeito', 'maj'), (2020, 'Vereador'): ('ver20', 'Vereador', 'prop'),
+    (2026, 'Governador'): ('gov26', 'Governador', 'maj'), (2026, 'Senador'): ('sen26', 'Senador', 'maj'),
+    (2026, 'Deputado Federal'): ('df26', 'Deputado Federal', 'prop'), (2026, 'Deputado Estadual'): ('de26', 'Deputado Estadual', 'prop')}
+ORDEM_DISP = ['ver20', 'pref20', 'de22', 'df22', 'sen22', 'gov22', 'pres22t1', 'pres22t2', 'de26', 'df26', 'sen26', 'gov26', 'pres26t1']
 NOMES_DISP = {'ver20': 'Vereador 2020', 'pref20': 'Prefeito 2020', 'de22': 'Deputado Estadual 2022', 'df22': 'Deputado Federal 2022',
               'sen22': 'Senador 2022', 'gov22': 'Governador 2022', 'pres22t1': 'Presidente 2022 (1º turno)',
-              'pres22t2': 'Presidente 2022 (2º turno)', 'pres26t1': 'Presidente 2026 (1º turno)'}
+              'pres22t2': 'Presidente 2022 (2º turno)', 'pres26t1': 'Presidente 2026 (1º turno)', 'de26': 'Deputado Estadual 2026',
+              'df26': 'Deputado Federal 2026', 'sen26': 'Senador 2026', 'gov26': 'Governador 2026'}
 SITUACAO = {'ELEITO': 'Eleito', 'ELEITO POR QP': 'Eleito', 'ELEITO POR MÉDIA': 'Eleito', 'SUPLENTE': 'Suplente', 'NÃO ELEITO': 'Não eleito',
             '2º TURNO': '2º turno'}
 
 
 def titulo(txt):
     part = {'De', 'Da', 'Do', 'Das', 'Dos', 'E'}
-    p = str(txt).title().split(' ')
+    p = str(txt).strip().title().split(' ')
     return ' '.join(w.lower() if (i > 0 and w in part) else w for i, w in enumerate(p))
 
 
 def rn():
     cad = {}
     votos_all = {}
-    for ano in (2020, 2022):
+    for ano in (2020, 2022, 2026):
         c = ler(f'consulta_cand_{ano}_RN.csv')
         c['ano'] = ano
         cad[ano] = c
@@ -153,7 +157,7 @@ def rn():
     por_cand = por_cand.join(info[['NR_CPF_CANDIDATO', 'NM_CANDIDATO', 'NM_URNA_CANDIDATO', 'NR_CANDIDATO', 'SG_PARTIDO', 'DS_SIT_TOT_TURNO', 'NM_UE', 'SG_UE']], on='SQ_CANDIDATO')
     assert por_cand.NR_CPF_CANDIDATO.notna().all()
 
-    # --- pessoas: quem foi candidato pelo PT em 2020 ou 2022
+    # --- pessoas: quem foi candidato pelo PT em 2020, 2022 ou 2026
     cpf_pt = set(por_cand[por_cand.SG_PARTIDO == 'PT'].NR_CPF_CANDIDATO)
     por_cand = por_cand[por_cand.NR_CPF_CANDIDATO.isin(cpf_pt)].copy()
     cpfs = sorted(por_cand.NR_CPF_CANDIDATO.unique(), key=lambda c: hashlib.sha1(c.encode()).hexdigest())
@@ -180,8 +184,9 @@ def rn():
     ctx = []
     det22 = ler('detalhe_votacao_munzona_2022_RN.csv')
     det20 = ler('detalhe_votacao_munzona_2020_RN.csv')
+    det26 = ler('detalhe_votacao_munzona_2026_RN.csv')
     for (ano, cargo), (disp, _, _) in CARGOS.items():
-        det = (det22 if ano == 2022 else det20)
+        det = {2020: det20, 2022: det22, 2026: det26}[ano]
         det = det[det.DS_CARGO == cargo]
         if disp in set(por_cand.disp) and len(det):
             ctx.append(contexto(det, disp))
@@ -200,7 +205,7 @@ def rn():
         extras.append((disp, lula, int(list(por_nr.index).index('13') + 1), len(por_nr), {'1': 'Foi ao 2º turno', '2': 'Eleito'}[turno]))
     t26 = ctx_2026('RN')
     c26 = t26.reset_index().rename(columns={'CD_MUNICIPIO': 'cd_tse'}).assign(disp='pres26t1')
-    ctx.append(c26[['disp', 'cd_tse', 'aptos', 'comparec', 'abst', 'brancos', 'nulos', 'validos']])
+    ctx.append(c26.assign(votos=c26.votos_dados)[['disp', 'cd_tse', 'aptos', 'comparec', 'votos', 'abst', 'brancos', 'nulos', 'validos']])
     agg26 = pd.concat([pd.read_csv(D / 'agg_2026' / 'agg_RN.csv')])
     nom26 = agg26[agg26.DS_TIPO_VOTAVEL == 'Nominal'].groupby('NR_VOTAVEL').QT_VOTOS.sum().sort_values(ascending=False)
     extras.append(('pres26t1', t26.votos.rename_axis('cd_tse'), int(list(nom26.index).index(13) + 1), len(nom26), ''))
@@ -218,7 +223,9 @@ def rn():
     por_cand = pd.concat([por_cand, pd.DataFrame(novas_c)], ignore_index=True)
     votos = pd.concat([votos] + [v[['cid', 'cd_tse', 'votos']] for v in novos_v], ignore_index=True)
 
-    pess = por_cand.groupby('pessoa').agg(nome=('nome', 'first'), nome_urna=('nome_urna', 'first')).reset_index()
+    por_cand['ano'] = 2000 + por_cand.disp.str.extract(r'(\d\d)')[0].astype(int)
+    # o nome da pessoa é o da candidatura mais recente
+    pess = por_cand.sort_values(['ano', 'cid']).groupby('pessoa').agg(nome=('nome', 'last'), nome_urna=('nome_urna', 'last')).reset_index()
     pess['externo'] = pess.pessoa == pid_lula
     por_cand = por_cand.rename(columns={'NR_CANDIDATO': 'numero', 'SG_PARTIDO': 'partido'})
     por_cand['situacao'] = por_cand.situacao.fillna('')

@@ -42,7 +42,11 @@ DISPUTAS = {
     'gov22': ('Governador 2022', 'Governador 2022', 'Governador', 2022, 'maj'),
     'pres22t1': ('Presidente 2022 (1º turno)', 'Presidente 2022 1ºT', 'Presidente', 2022, 'maj'),
     'pres22t2': ('Presidente 2022 (2º turno)', 'Presidente 2022 2ºT', 'Presidente', 2022, 'maj'),
-    'pres26t1': ('Presidente 2026 (1º turno)', 'Presidente 2026 1ºT', 'Presidente', 2026, 'maj')}
+    'pres26t1': ('Presidente 2026 (1º turno)', 'Presidente 2026 1ºT', 'Presidente', 2026, 'maj'),
+    'de26': ('Deputado Estadual 2026', 'Dep. Estadual 2026', 'Deputado Estadual', 2026, 'prop'),
+    'df26': ('Deputado Federal 2026', 'Dep. Federal 2026', 'Deputado Federal', 2026, 'prop'),
+    'sen26': ('Senador 2026', 'Senador 2026', 'Senador', 2026, 'maj'),
+    'gov26': ('Governador 2026', 'Governador 2026', 'Governador', 2026, 'maj')}
 
 
 def bonito(nome):
@@ -102,9 +106,12 @@ def serie(df, cds, col):
 def bloco_disputa(ctx, did, cds):
     nome, curto, cargo, ano, tipo = DISPUTAS[did]
     g = ctx[ctx.disp == did]
-    return {'id': did, 'nome': nome, 'curto': curto, 'cargo': cargo, 'ano': ano, 'tipo': tipo,
-            'ap': serie(g, cds, 'aptos'), 'cp': serie(g, cds, 'comparec'), 'br': serie(g, cds, 'brancos'),
-            'nu': serie(g, cds, 'nulos'), 'va': serie(g, cds, 'validos')}
+    b = {'id': did, 'nome': nome, 'curto': curto, 'cargo': cargo, 'ano': ano, 'tipo': tipo,
+         'ap': serie(g, cds, 'aptos'), 'cp': serie(g, cds, 'comparec'), 'br': serie(g, cds, 'brancos'),
+         'nu': serie(g, cds, 'nulos'), 'va': serie(g, cds, 'validos')}
+    if g.votos.sum() > 1.5 * g.comparec.sum():
+        b['v2'] = 1  # cada eleitor tem dois votos (Senador 2026)
+    return b
 
 
 def pares(votos, cds):
@@ -118,8 +125,8 @@ def jdump(obj, nome):
 
 def resumo_part(g):
     """Participação agregada de um conjunto de linhas de contexto."""
-    return {'aptos': g.aptos.sum(), 'abst': pct(g.abst.sum(), g.aptos.sum()), 'brancos': pct(g.brancos.sum(), g.comparec.sum()),
-            'nulos': pct(g.nulos.sum(), g.comparec.sum()), 'validos': g.validos.sum(), 'comparec': g.comparec.sum()}
+    return {'aptos': g.aptos.sum(), 'abst': pct(g.abst.sum(), g.aptos.sum()), 'brancos': pct(g.brancos.sum(), g.votos.sum()),
+            'nulos': pct(g.nulos.sum(), g.votos.sum()), 'validos': g.validos.sum(), 'comparec': g.comparec.sum()}
 
 
 # ================================================================ Brasil: Lula
@@ -225,11 +232,11 @@ nomes_mun = mun_rn.set_index('cd_tse').nome
 nomes_disp = {d: DISPUTAS[d][0] for d in ORD_RN}
 ctx_out = ctx_rn.assign(municipio=ctx_rn.cd_tse.map(nomes_mun), disputa=ctx_rn.disp.map(nomes_disp))
 ctx_out['pct_abstencao'] = ctx_out.abst / ctx_out.aptos * 100
-ctx_out['pct_brancos'] = ctx_out.brancos / ctx_out.comparec * 100
-ctx_out['pct_nulos'] = ctx_out.nulos / ctx_out.comparec * 100
+ctx_out['pct_brancos'] = ctx_out.brancos / ctx_out.votos * 100
+ctx_out['pct_nulos'] = ctx_out.nulos / ctx_out.votos * 100
 ctx_out = ctx_out.merge(mun_rn[['cd_tse', 'CD_IBGE']], on='cd_tse')
-ctx_out[['disputa', 'CD_IBGE', 'cd_tse', 'municipio', 'aptos', 'comparec', 'abst', 'brancos', 'nulos', 'validos', 'pct_abstencao', 'pct_brancos', 'pct_nulos']].rename(
-    columns={'comparec': 'comparecimento', 'abst': 'abstencoes', 'validos': 'votos_validos'}).round(4).to_csv(OUT / 'dados' / 'rn_participacao.csv', index=False, encoding='utf-8')
+ctx_out[['disputa', 'CD_IBGE', 'cd_tse', 'municipio', 'aptos', 'comparec', 'votos', 'abst', 'brancos', 'nulos', 'validos', 'pct_abstencao', 'pct_brancos', 'pct_nulos']].rename(
+    columns={'comparec': 'comparecimento', 'votos': 'votos_dados', 'abst': 'abstencoes', 'validos': 'votos_validos'}).round(4).to_csv(OUT / 'dados' / 'rn_participacao.csv', index=False, encoding='utf-8')
 cand_pub = cand_rn.assign(disputa=cand_rn.disp.map(nomes_disp))[['cid', 'nome_urna', 'nome', 'numero', 'partido', 'disputa', 'ue', 'situacao', 'tot', 'nmun', 'rk', 'nc', 'anulados']].rename(
     columns={'cid': 'candidatura', 'nome_urna': 'nome_de_urna', 'nome': 'nome_completo', 'ue': 'circunscricao', 'situacao': 'situacao', 'tot': 'votos_validos', 'nmun': 'municipios_com_votos',
              'rk': 'posicao', 'nc': 'candidatos_na_disputa', 'anulados': 'votos_anulados'})
@@ -293,7 +300,7 @@ por_regiao = wide.groupby('regiao').apply(resumo_lula).loc[['Norte', 'Nordeste',
 flavio = pd.concat([pd.read_csv(f, dtype={'CD_MUNICIPIO': int}) for f in sorted((D / 'agg_2026').glob('agg_??.csv'))])
 flavio = flavio[(flavio.SG_UF != 'ZZ') & (flavio.DS_TIPO_VOTAVEL == 'Nominal')]
 flavio_pct = flavio[flavio.NR_VOTAVEL == 22].QT_VOTOS.sum() / flavio.QT_VOTOS.sum() * 100
-n_pt_cand = int((pt.disp.isin(['ver20', 'pref20', 'de22', 'df22', 'gov22', 'sen22'])).sum())
+n_pt_cand = int((~pt.disp.str.startswith('pres')).sum())
 trocas = {
     '__Q_PP__': ', '.join(decimal(v, 2) for v in qs[:-1]) + ' e ' + decimal(qs[-1], 2), '__Q85__': decimal(qs[-1], 2),
     '__N_MUN__': inteiro(len(wide)), '__L22__': inteiro(nacional.lula_2022_2T), '__L26__': inteiro(nacional.lula_2026_1T),

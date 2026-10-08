@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Votos por município: Lula no Brasil e PT no RN</title>
-<meta name="description" content="Votos de Lula em todos os municípios do Brasil (2022 e 2026) e dos candidatos do PT no Rio Grande do Norte (2020 e 2022), com abstenção, brancos e nulos: mapa, dispersão e tabelas com dados do TSE.">
+<meta name="description" content="Votos de Lula em todos os municípios do Brasil (2022 e 2026) e dos candidatos do PT no Rio Grande do Norte (2020, 2022 e 2026), com abstenção, brancos e nulos: mapa, dispersão e tabelas com dados do TSE.">
 <style>
   :root { --bg:#f4f6f9; --card:#fff; --ink:#1a202c; --muted:#64707f; --line:#e3e8ee; --accent:#b3201f; --link:#1f5fa8; --soft:#edf2f7; }
   * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -16,8 +16,9 @@
 
   /* topo */
   .top { padding: 16px 0 12px; display: grid; grid-template-columns: 1fr auto; gap: 12px 28px; align-items: end; }
-  .scopes { display: inline-flex; background: #e6ebf1; border-radius: 10px; padding: 3px; gap: 2px; margin-bottom: 10px; max-width: 100%; }
-  .scopes button { appearance: none; border: 0; background: none; font: inherit; font-size: 13px; font-weight: 600; color: var(--muted); padding: 6px 14px; border-radius: 8px; cursor: pointer; white-space: nowrap; }
+  .segs { display: flex; flex-wrap: wrap; gap: 8px 10px; margin-bottom: 10px; }
+  .scopes { display: inline-flex; flex-wrap: wrap; background: #e6ebf1; border-radius: 10px; padding: 3px; gap: 2px; max-width: 100%; }
+  .scopes button { appearance: none; border: 0; background: none; font: inherit; font-size: 13px; font-weight: 600; color: var(--muted); padding: 6px 14px; border-radius: 8px; cursor: pointer; }
   .scopes button[aria-pressed="true"] { background: #fff; color: var(--accent); box-shadow: 0 1px 3px rgba(0,0,0,.14); }
   h1 { font-size: 24px; line-height: 1.2; letter-spacing: -.01em; }
   .sub { color: var(--muted); font-size: 14px; margin-top: 4px; max-width: 660px; }
@@ -162,9 +163,16 @@
 <div class="wrap">
   <header class="top">
     <div>
-      <div class="scopes" role="group" aria-label="Recorte dos dados">
-        <button type="button" data-e="br" aria-pressed="true">Lula no Brasil</button>
-        <button type="button" data-e="rn" aria-pressed="false">PT no Rio Grande do Norte</button>
+      <div class="segs">
+        <div class="scopes" id="escopos" role="group" aria-label="Recorte dos dados">
+          <button type="button" data-e="br" aria-pressed="true">Lula no Brasil</button>
+          <button type="button" data-e="rn" aria-pressed="false">PT no Rio Grande do Norte</button>
+        </div>
+        <div class="scopes so-rn" id="tipos" role="group" aria-label="Tipo de mapa">
+          <button type="button" data-t="comp" aria-pressed="true" title="Candidatos que concorreram em 2020 ou 2022 e também em 2026">Comparar 2020 e 2022 com 2026</button>
+          <button type="button" data-t="novo" aria-pressed="false" title="Candidatos que só concorreram em 2026">Candidatos só de 2026</button>
+          <button type="button" data-t="livre" aria-pressed="false" title="Qualquer cargo e ano, de qualquer candidato">Qualquer cargo e ano</button>
+        </div>
       </div>
       <h1 id="h1">Lula em 2022 e 2026, município a município</h1>
       <p class="sub" id="sub"></p>
@@ -225,6 +233,7 @@
     <div class="card">
       <div class="filtros">
         <label>Disputa <select id="fdisp"></select></label>
+        <label>Histórico <select id="fhist"><option value="">Todos</option><option value="novo">Só concorreram em 2026</option><option value="antes">Também concorreram em 2020 ou 2022</option></select></label>
         <label>Situação <select id="fsit"><option value="">Todas</option><option value="Eleito">Eleito(a)</option><option value="Suplente">Suplente</option><option value="Não eleito">Não eleito(a)</option></select></label>
         <label><input type="search" id="fnome" placeholder="Buscar candidato(a)..."></label>
         <label><input type="checkbox" id="fsoma" checked> Incluir a soma do PT</label>
@@ -310,24 +319,30 @@
       <div class="so-rn">
         <h2>Como os dados estão organizados</h2>
         <p>Cada pessoa pode ter concorrido a cargos diferentes ao longo dos anos, então os dados separam três coisas. A <b>disputa</b> é a eleição de um cargo em um ano e turno, por exemplo Governador 2022 ou Vereador 2020. A <b>candidatura</b> é um candidato em uma disputa. A <b>pessoa</b> reúne todas as candidaturas de um mesmo candidato, ligadas pelo número do CPF no cadastro do TSE (o CPF é usado só para ligar 2020 e 2022 e não é publicado). Isso permite acompanhar, por exemplo, quem foi candidato a prefeito em 2020 e a deputado em 2022.</p>
-        <p>No topo da página, escolha o candidato e depois a <b>candidatura A</b>. Se quiser comparar, escolha a <b>candidatura B</b>: pode ser outro cargo do mesmo candidato, a soma dos candidatos do PT em uma disputa ou Lula na mesma eleição. As cores, o gráfico de dispersão e as estatísticas do topo passam a mostrar B em relação a A.</p>
+        <p>No topo da página, o <b>tipo de mapa</b> define o que cada candidato mostra:</p>
+        <ul>
+          <li><b>Comparar 2020 e 2022 com 2026:</b> para quem concorreu em 2020 ou 2022 e também em 2026. A candidatura A é a anterior (por padrão, do mesmo cargo, como deputado estadual 2022) e a B é a de 2026. O mapa mostra, município a município, quanto a votação mudou. A soma do PT e Lula também entram nesse tipo.</li>
+          <li><b>Candidatos só de 2026:</b> para quem não tinha concorrido em 2020 nem em 2022. Não há votação anterior para comparar, então o mapa mostra onde o candidato foi votado em 2026. Se quiser uma referência, escolha em "Comparar com (B)" a soma do PT em uma disputa anterior, ou a de 2026.</li>
+          <li><b>Qualquer cargo e ano:</b> escolha livremente a candidatura A e, se quiser, a B, de qualquer pessoa, da soma do PT ou de Lula.</li>
+        </ul>
+        <p>Escolha o candidato no campo de busca e depois as candidaturas A e B. As cores, o gráfico de dispersão e as estatísticas do topo passam a mostrar B em relação a A.</p>
         <h3>O que entrou</h3>
         <ul>
-          <li>As <b>587 pessoas</b> que foram candidatas pelo PT no Rio Grande do Norte em 2020 (prefeito e vereador) ou em 2022 (governador, deputado federal e deputado estadual), mais Lula, com os votos que recebeu no estado. São 590 candidaturas do PT com votos próprios nessas disputas. Quando uma dessas pessoas concorreu por outro partido no outro ano, essa candidatura também aparece, identificada pelo partido.</li>
+          <li>As <b>592 pessoas</b> que foram candidatas pelo PT no Rio Grande do Norte em 2020 (prefeito e vereador), em 2022 (governador, deputado federal e deputado estadual) ou em 2026 (governador, senador, deputado federal e deputado estadual), mais Lula, com os votos que recebeu no estado. São 607 candidaturas do PT com votos próprios nessas disputas. Quando uma dessas pessoas concorreu por outro partido no outro ano, essa candidatura também aparece, identificada pelo partido.</li>
           <li>Em cada disputa, a <b>soma do PT</b> reúne os votos nominais de todos os candidatos do partido. Nas eleições de 2020 ela só existe nos municípios em que o PT lançou candidatos.</li>
           <li>Lula aparece com o 1º e o 2º turnos de 2022 e o 1º turno de 2026, só com os votos dos 167 municípios do estado.</li>
         </ul>
         <h3>O que ficou de fora</h3>
         <ul>
           <li>Vice-prefeitos, vice-governadores e suplentes de senador, porque não têm votos próprios: os votos vão para o titular da chapa.</li>
-          <li>Senador em 2022: nos arquivos do TSE não há candidato do PT ao Senado no RN com votos.</li>
+          <li>Senador em 2022: nos arquivos do TSE não há candidato do PT ao Senado no RN com votos. Em 2026 há um.</li>
           <li>Os votos de legenda. Nas eleições proporcionais, o voto no número do partido entra nos votos válidos do município, mas não é de nenhum candidato.</li>
-          <li>Candidatos da federação do PT (PCdoB e PV) em 2022 que não sejam do PT, e as eleições de 2024 e de 2026, exceto Lula em 2026.</li>
+          <li>Candidatos da federação do PT (PCdoB e PV) em 2022 que não sejam do PT, e a eleição de 2024.</li>
         </ul>
         <h3>Eleições municipais</h3>
         <p>Quem concorreu a prefeito ou vereador em 2020 só recebeu votos no seu próprio município. Por isso o mapa de um candidato municipal destaca um único município, e os demais ficam em cinza. Para ver o desempenho do partido no estado em 2020, escolha "PT (soma dos candidatos)". A aba Candidatos lista todos, com a posição de cada um entre os candidatos do município.</p>
         <h2>Participação e votos do PT por disputa no RN</h2>
-        <p>Cada linha considera os municípios em que o PT teve candidatos na disputa, que são todos os 167 em 2022 e só parte deles em 2020 (coluna Municípios). A abstenção é sobre os eleitores aptos, e os brancos e nulos são sobre o comparecimento. Os votos válidos incluem os votos de legenda nas eleições proporcionais. Os votos do PT são os nominais, e a porcentagem é calculada sobre os votos válidos desses municípios.</p>
+        <p>Cada linha considera os municípios em que o PT teve candidatos na disputa, que são todos os 167 em 2022 e em 2026 e só parte deles em 2020 (coluna Municípios). No Senado de 2026 cada eleitor tem dois votos, então os votos válidos, brancos e nulos dessa linha contam votos e não eleitores, e os percentuais de brancos e nulos são sobre os votos dados (dois por eleitor). A abstenção é sobre os eleitores aptos, e os brancos e nulos são sobre o comparecimento. Os votos válidos incluem os votos de legenda nas eleições proporcionais. Os votos do PT são os nominais, e a porcentagem é calculada sobre os votos válidos desses municípios.</p>
         <div class="tablewrap"><table>
           <thead><tr><th>Disputa</th><th class="n">Municípios</th><th class="n">Eleitores aptos</th><th class="n">Abstenção</th><th class="n">Brancos</th><th class="n">Nulos</th><th class="n">Votos válidos</th><th class="n">Candidatos do PT</th><th class="n">Votos do PT</th><th class="n">% dos válidos</th><th class="n">Eleitos do PT</th></tr></thead>
           <tbody>
@@ -338,6 +353,10 @@
 <tr><td>Governador 2022</td><td class='n'>167</td><td class='n'>2.550.291</td><td class='n'>18,2%</td><td class='n'>4,6%</td><td class='n'>7,8%</td><td class='n'>1.828.974</td><td class='n'>1</td><td class='n'>1.066.496</td><td class='n'>58,3%</td><td class='n'>1</td></tr>
 <tr><td>Presidente 2022 (1º turno)</td><td class='n'>167</td><td class='n'>2.554.716</td><td class='n'>18,2%</td><td class='n'>1,3%</td><td class='n'>2,7%</td><td class='n'>2.007.264</td><td class='n'>1</td><td class='n'>1.264.179</td><td class='n'>63,0%</td><td class='n'>0</td></tr>
 <tr><td>Presidente 2022 (2º turno)</td><td class='n'>167</td><td class='n'>2.554.326</td><td class='n'>17,4%</td><td class='n'>1,0%</td><td class='n'>2,4%</td><td class='n'>2.038.166</td><td class='n'>1</td><td class='n'>1.326.785</td><td class='n'>65,1%</td><td class='n'>1</td></tr>
+<tr><td>Deputado Estadual 2026</td><td class='n'>167</td><td class='n'>2.656.207</td><td class='n'>18,4%</td><td class='n'>4,8%</td><td class='n'>5,8%</td><td class='n'>1.938.309</td><td class='n'>10</td><td class='n'>249.986</td><td class='n'>12,9%</td><td class='n'>4</td></tr>
+<tr><td>Deputado Federal 2026</td><td class='n'>167</td><td class='n'>2.656.207</td><td class='n'>18,4%</td><td class='n'>4,9%</td><td class='n'>4,4%</td><td class='n'>1.967.700</td><td class='n'>5</td><td class='n'>381.606</td><td class='n'>19,4%</td><td class='n'>1</td></tr>
+<tr><td>Senador 2026</td><td class='n'>167</td><td class='n'>2.656.207</td><td class='n'>18,4%</td><td class='n'>7,0%</td><td class='n'>9,8%</td><td class='n'>3.606.806</td><td class='n'>1</td><td class='n'>635.924</td><td class='n'>17,6%</td><td class='n'>1</td></tr>
+<tr><td>Governador 2026</td><td class='n'>167</td><td class='n'>2.656.207</td><td class='n'>18,4%</td><td class='n'>3,5%</td><td class='n'>4,8%</td><td class='n'>1.986.441</td><td class='n'>1</td><td class='n'>718.300</td><td class='n'>36,2%</td><td class='n'>0</td></tr>
 <tr><td>Presidente 2026 (1º turno)</td><td class='n'>167</td><td class='n'>2.659.825</td><td class='n'>18,4%</td><td class='n'>1,5%</td><td class='n'>3,0%</td><td class='n'>2.071.961</td><td class='n'>1</td><td class='n'>1.237.963</td><td class='n'>59,7%</td><td class='n'>-</td></tr>
           </tbody></table></div>
       </div>
@@ -347,7 +366,7 @@
       <ul>
         <li><b>Abstenção:</b> eleitores aptos que não compareceram, em porcentagem dos aptos. Os eleitores de seções que não puderam ser instaladas contam como abstenção.</li>
         <li><b>Brancos:</b> votos em branco, em porcentagem do comparecimento.</li>
-        <li><b>Nulos:</b> o que sobra do comparecimento depois de tirar os votos válidos e os brancos, em porcentagem do comparecimento. Inclui os nulos digitados pelo eleitor, os votos anulados depois da eleição (por exemplo, de candidaturas indeferidas) e os anulados sub judice. Nos boletins de urna de 2026 só há votos válidos, brancos e nulos.</li>
+        <li><b>Nulos:</b> o que sobra do comparecimento depois de tirar os votos válidos e os brancos, em porcentagem do comparecimento. Inclui os nulos digitados pelo eleitor, os votos anulados depois da eleição (por exemplo, de candidaturas indeferidas) e os anulados sub judice. Nos boletins de urna de 2026 só há votos válidos, brancos e nulos. No Senado de 2026 o eleitor dá dois votos, e os brancos e nulos são calculados sobre os votos dados.</li>
         <li><b>Votos válidos:</b> votos nominais, mais os votos de legenda nas eleições proporcionais (deputado e vereador). Nas eleições majoritárias (presidente, governador, senador e prefeito) não existe voto de legenda.</li>
         <li><b>% dos votos válidos:</b> votos do candidato divididos pelos votos válidos do município. Brancos e nulos ficam fora da conta.</li>
       </ul>
@@ -392,7 +411,8 @@
           <li>Comparar cargos diferentes mistura efeitos distintos. Uma eleição para deputado tem dezenas de candidatos disputando os mesmos votos e uma para governador tem poucos, então a % dos votos válidos de um deputado é sempre pequena.</li>
           <li>Em 2020 não existiam federações e as coligações só valiam nas eleições para prefeito. Em 2022 o PT formou federação com o PCdoB e o PV. A soma do PT considera apenas os candidatos registrados pelo próprio partido, e não os de aliados.</li>
           <li>Um candidato municipal só tem votos em um município, e a posição dele (por exemplo, "2º de 13") é entre os candidatos daquele município.</li>
-          <li>Os dados de 2026 (só Lula) são dos boletins de urna divulgados em 05/10/2026, e o TSE pode atualizar os arquivos depois. Para uso oficial, confira os números no site do TSE.</li>
+          <li>Os dados de 2026 são do 1º turno e foram baixados do TSE em 07/10/2026 (os de Lula, dos boletins de urna de 05/10/2026). A situação de cada candidato ("Eleito", "Suplente", "2º turno") é a do arquivo daquela data, e votos anulados sub judice não entram na votação do candidato. O TSE pode atualizar os arquivos depois. Para uso oficial, confira os números no site do TSE.</li>
+          <li>Em 2026 há um candidato do PT ao Senado e as vagas em disputa são duas. A "% dos votos válidos" de um senador é a parte dos votos dados (dois por eleitor), e por isso não é comparável com a de um governador.</li>
         </ul>
       </div>
 
@@ -444,12 +464,12 @@ const TAM = [
 ];
 const TITULOS = {
   br: {h1: 'Lula em 2022 e 2026, município a município', sub: 'Votos de Lula para presidente em cada um dos 5.570 municípios do Brasil, com abstenção, brancos e nulos: 1º e 2º turnos de 2022 e 1º turno de 2026, com dados abertos do TSE.'},
-  rn: {h1: 'PT no Rio Grande do Norte, 2020 e 2022', sub: 'Votos dos candidatos do PT no RN em cada um dos 167 municípios, em todos os cargos disputados em 2020 e 2022, com abstenção, brancos e nulos. Lula entra com os votos que recebeu no estado.'}
+  rn: {h1: 'PT no Rio Grande do Norte, 2020, 2022 e 2026', sub: 'Votos dos candidatos do PT no RN em cada um dos 167 municípios, nos cargos disputados em 2020, 2022 e 2026, com abstenção, brancos e nulos. Há dois tipos de mapa: a comparação de quem concorreu em 2020 ou 2022 com 2026 e o dos candidatos que só concorreram em 2026. Lula entra com os votos que recebeu no estado.'}
 };
 
 /* ------------------------------------------------ dados do recorte atual */
 let E = null, M = [], N = 0;
-const S = {escopo: 'br', zoomRoda: true, modo: 'poli', cinza: true, view: 'mapa', metrica: 'pp', uf: '', termo: '', escala: 'log', sep: 'n', faixa: '', pessoa: 0, A: 0, B: null, pins: new Set()};
+const S = {tipo: 'livre', escopo: 'br', zoomRoda: true, modo: 'poli', cinza: true, view: 'mapa', metrica: 'pp', uf: '', termo: '', escala: 'log', sep: 'n', faixa: '', pessoa: 0, A: 0, B: null, pins: new Set()};
 let zoomManual = false, CL = null, METS = [];
 const cacheEsc = {};
 
@@ -457,15 +477,16 @@ function preparar(js) {
   const n = js.mun.length, ref = js.disp.find(d => d.id === 'pres22t2') || js.disp[0];
   js.disp.forEach(d => {
     ['ap', 'cp', 'br', 'nu', 'va'].forEach(f => { d[f] = Float64Array.from(d[f], x => x === null ? NaN : x); });
+    d.m = d.v2 ? 2 : 1;  // votos dados por eleitor (2 no Senado de 2026)
     d.pa = new Float64Array(n); d.pb = new Float64Array(n); d.pn = new Float64Array(n); d.pc = new Float64Array(n);
-    for (let i = 0; i < n; i++) { d.pa[i] = (d.ap[i] - d.cp[i]) / d.ap[i] * 100; d.pc[i] = d.cp[i] / d.ap[i] * 100; d.pb[i] = d.br[i] / d.cp[i] * 100; d.pn[i] = d.nu[i] / d.cp[i] * 100; }
+    for (let i = 0; i < n; i++) { d.pa[i] = (d.ap[i] - d.cp[i]) / d.ap[i] * 100; d.pc[i] = d.cp[i] / d.ap[i] * 100; d.pb[i] = d.br[i] / (d.cp[i] * d.m) * 100; d.pn[i] = d.nu[i] / (d.cp[i] * d.m) * 100; }
   });
   js.mun.forEach((m, i) => { m.k = norm(m.n); m.ap = ref.ap[i]; m.f = TAM.slice(1).find(t => t.f(m.ap)).k; });
   js.cand.forEach((c, k) => {
     c.id = k; c.dx = c.d; c.d = js.disp[c.dx]; c.vv = null;
     let sv = 0, sva = 0; c.v.forEach(([i, x]) => { sv += x; sva += c.d.va[i]; }); c.pct = sva > 0 ? sv / sva * 100 : NaN;
   });
-  js.pess.forEach(p => { p.tot = Math.max(0, ...p.c.map(k => js.cand[k].tot)); p.k = norm(p.n + ' ' + p.nc); p.resumo = p.c.map(k => { const c = js.cand[k]; return c.d.curto + (c.ue ? ' (' + c.ue + ')' : ''); }).join(' · '); });
+  js.pess.forEach(p => { p.a26 = p.c.some(k => js.cand[k].d.ano === 2026); p.antes = p.c.some(k => js.cand[k].d.ano < 2026); p.tot = Math.max(0, ...p.c.map(k => js.cand[k].tot)); p.k = norm(p.n + ' ' + p.nc); p.resumo = p.c.map(k => { const c = js.cand[k]; return c.d.curto + (c.ue ? ' (' + c.ue + ')' : ''); }).join(' · '); });
   js.ordemP = js.pess.map((p, i) => i).sort((a, b) => (js.pess[b].agg ? 1 : 0) - (js.pess[a].agg ? 1 : 0) || js.pess[b].tot - js.pess[a].tot);
   return js;
 }
@@ -529,7 +550,7 @@ function nomeClasse(i) { return CL.cls[i] < 0 ? 'sem dados' : CL.few ? '' : NOME
 
 /* ------------------------------------------------ detalhes de um município */
 function partHTML(d, i, titulo) {
-  return `<span class="cz"><b>${esc(titulo)}</b>: comparecimento ${d.pc[i].toFixed(1)}% &bull; abstenção ${d.pa[i].toFixed(1)}% &bull; brancos ${d.pb[i].toFixed(1)}% &bull; nulos ${d.pn[i].toFixed(1)}%</span><br>`;
+  return `<span class="cz"><b>${esc(titulo)}</b>: comparecimento ${d.pc[i].toFixed(1)}% &bull; abstenção ${d.pa[i].toFixed(1)}% &bull; brancos ${d.pb[i].toFixed(1)}% &bull; nulos ${d.pn[i].toFixed(1)}%${d.v2 ? ' (dois votos por eleitor)' : ''}</span><br>`;
 }
 function linhaC(c, i, tag) {
   const v = c.vv[i], nome = `<b>${tag}: ${esc(nomeC(c))}, ${esc(c.d.curto)}</b>`;
@@ -575,7 +596,8 @@ function universo() {
 function somas(ids, X) {
   let v = 0, va = 0, ap = 0, cp = 0, br = 0, nu = 0;
   ids.forEach(i => { if (ok(X.vv[i])) { v += X.vv[i]; va += X.d.va[i]; } ap += X.d.ap[i]; cp += X.d.cp[i]; br += X.d.br[i]; nu += X.d.nu[i]; });
-  return {v, va, pct: va > 0 ? v / va * 100 : NaN, abst: (ap - cp) / ap * 100, br: br / cp * 100, nu: nu / cp * 100};
+  const dados = cp * X.d.m;
+  return {v, va, pct: va > 0 ? v / va * 100 : NaN, abst: (ap - cp) / ap * 100, br: br / dados * 100, nu: nu / dados * 100};
 }
 function atualizarTopo() {
   const A = cA(), B = cB(), ids = universo(), a = somas(ids, A), b = B ? somas(ids, B) : null, mesma = B && A.d === B.d;
@@ -588,7 +610,7 @@ function atualizarTopo() {
       caixa('Abstenção', par(a.abst, b.abst, x => x.toFixed(1) + '%'), mesma ? 'mesma disputa' : 'A &rarr; B') + caixa('Brancos', par(a.br, b.br, x => x.toFixed(1) + '%'), mesma ? 'mesma disputa' : 'A &rarr; B') + caixa('Nulos', par(a.nu, b.nu, x => x.toFixed(1) + '%'), mesma ? 'mesma disputa' : 'A &rarr; B');
   } else {
     h = caixa('Votos', fmt(a.v), esc(rotC(A))) + caixa('% dos votos válidos', ok(a.pct) ? fp(a.pct) : '-', 'nos municípios com candidatura') + caixa('Municípios com votos', fmt(A.v.length), 'de ' + fmt(N)) +
-      caixa('Abstenção', a.abst.toFixed(1) + '%', 'dos eleitores aptos') + caixa('Brancos', a.br.toFixed(1) + '%', 'do comparecimento') + caixa('Nulos', a.nu.toFixed(1) + '%', 'do comparecimento');
+      caixa('Abstenção', a.abst.toFixed(1) + '%', 'dos eleitores aptos') + caixa('Brancos', a.br.toFixed(1) + '%', A.d.v2 ? 'dos votos dados' : 'do comparecimento') + caixa('Nulos', a.nu.toFixed(1) + '%', A.d.v2 ? 'dos votos dados' : 'do comparecimento');
   }
   $('stats').innerHTML = h;
   const onde = ids.length === N ? 'em todos os ' + fmt(N) + ' municípios' : 'em ' + fmt(ids.length) + ' município' + (ids.length === 1 ? '' : 's') + (S.escopo === 'rn' ? ' em que houve candidatura' : '');
@@ -900,7 +922,7 @@ function irParaMunicipio(i) {
 const pessoaEl = $('pessoa');
 combo(pessoaEl, $('sug-pessoa'), q => {
   if (q === norm(E.pess[S.pessoa].n)) q = '';
-  const lista = q ? E.pess.map((p, i) => i).filter(i => E.pess[i].k.includes(q)).sort((a, b) => (E.pess[b].k.startsWith(q) ? 1 : 0) - (E.pess[a].k.startsWith(q) ? 1 : 0) || E.pess[b].tot - E.pess[a].tot) : E.ordemP;
+  const lista = q ? E.pess.map((p, i) => i).filter(i => pessoaPermitida(i) && E.pess[i].k.includes(q)).sort((a, b) => (E.pess[b].k.startsWith(q) ? 1 : 0) - (E.pess[a].k.startsWith(q) ? 1 : 0) || E.pess[b].tot - E.pess[a].tot) : E.ordemP.filter(pessoaPermitida);
   return lista.slice(0, 10).map(i => ({i, t: esc(E.pess[i].n) + (E.pess[i].nc !== E.pess[i].n && !E.pess[i].agg ? ` <small>${esc(E.pess[i].nc)}</small>` : ''), s: esc(E.pess[i].resumo)}));
 }, it => { definirPessoa(it.i); });
 pessoaEl.dataset.fixo = '1';
@@ -908,12 +930,18 @@ pessoaEl.dataset.fixo = '1';
 /* ------------------------------------------------ seleção de pessoa e candidaturas */
 function rotOpc(c) { return c.d.nome + (c.ue ? ' (' + c.ue + ')' : '') + (c.par && c.par !== 'PT' ? ' [' + c.par + ']' : ''); }
 function popularAB() {
-  const grupos = [[E.pess[S.pessoa].n, E.pess[S.pessoa].c]];
-  if (S.pessoa !== 0 && E.pess[0].agg) grupos.push([E.pess[0].n, E.pess[0].c]);
-  const li = E.pess.findIndex(p => p.n === 'Lula'); if (S.escopo === 'rn' && li > 0 && li !== S.pessoa) grupos.push(['Lula (votos no RN)', E.pess[li].c]);
-  const mk = (sel, nenhuma) => { sel.innerHTML = (nenhuma ? '<option value="">Nenhuma (só A)</option>' : '') + grupos.map(([g, cs]) => `<optgroup label="${esc(g)}">` + cs.map(k => `<option value="${k}">${esc(rotOpc(E.cand[k]))}</option>`).join('') + '</optgroup>').join(''); };
-  mk($('selA'), false); mk($('selB'), true);
+  const t = S.tipo, ano = k => E.cand[k].d.ano, foco = E.pess[S.pessoa], extras = [];
+  if (S.pessoa !== 0 && E.pess[0].agg) extras.push([E.pess[0].n, E.pess[0].c]);
+  const li = E.pess.findIndex(p => p.n === 'Lula'); if (S.escopo === 'rn' && li > 0 && li !== S.pessoa) extras.push(['Lula (votos no RN)', E.pess[li].c]);
+  const todos = [[foco.n, foco.c]].concat(extras), filtra = (gs, f) => gs.map(([g, cs]) => [g, cs.filter(f)]).filter(([g, cs]) => cs.length);
+  let gA = todos, gB = todos;
+  if (t === 'comp') { gA = filtra(todos, k => ano(k) < 2026); gB = filtra(todos, k => ano(k) === 2026); }
+  else if (t === 'novo') { gA = filtra([[foco.n, foco.c]], k => ano(k) === 2026); gB = extras; }
+  const mk = (sel, gs, nenhuma) => { sel.innerHTML = (nenhuma ? '<option value="">Nenhuma (só A)</option>' : '') + gs.map(([g, cs]) => `<optgroup label="${esc(g)}">` + cs.map(k => `<option value="${k}">${esc(rotOpc(E.cand[k]))}</option>`).join('') + '</optgroup>').join(''); };
+  mk($('selA'), gA, false); mk($('selB'), gB, t !== 'comp');
   $('selA').value = S.A; $('selB').value = S.B === null ? '' : S.B;
+  $('troca').style.display = t === 'livre' ? '' : 'none';
+  document.querySelectorAll('#tipos button').forEach(b => b.setAttribute('aria-pressed', b.dataset.t === t));
   pessoaEl.value = E.pess[S.pessoa].n;
 }
 function popularMetricas() {
@@ -922,10 +950,23 @@ function popularMetricas() {
   $('metrica').innerHTML = METS.map(g => `<optgroup label="${esc(g.g)}">` + g.m.map(m => `<option value="${m.k}">${esc(m.r)}</option>`).join('') + '</optgroup>').join('');
   $('metrica').value = S.metrica;
 }
+const anoC = k => E.cand[k].d.ano;
+/* candidatura anterior a 2026 mais comparável com a de 2026 (do mesmo cargo, se houver) */
+function anterior(cs, b) {
+  const pre = cs.filter(k => anoC(k) < 2026), mesmo = pre.filter(k => E.cand[k].d.cargo === E.cand[b].d.cargo);
+  return mesmo.length ? mesmo[mesmo.length - 1] : pre[pre.length - 1];
+}
 function padraoPessoa(p) {
   const cs = E.pess[p].c;
+  if (S.escopo === 'rn' && S.tipo === 'comp') { const b = cs.find(k => anoC(k) === 2026); if (b !== undefined && cs.some(k => anoC(k) < 2026)) return [anterior(cs, b), b]; }
+  if (S.escopo === 'rn' && S.tipo === 'novo') { const a = cs.find(k => anoC(k) === 2026); if (a !== undefined) return [a, null]; }
   if (S.escopo === 'rn' && p === 0) { const a = cs.find(k => E.cand[k].d.id === 'ver20'), b = cs.find(k => E.cand[k].d.id === 'de22'); if (a !== undefined && b !== undefined) return [a, b]; }
   return cs.length > 1 ? [cs[cs.length - 2], cs[cs.length - 1]] : [cs[0], null];
+}
+const pessoaPermitida = i => { const p = E.pess[i]; return S.tipo === 'comp' ? p.a26 && p.antes : S.tipo === 'novo' ? p.a26 && !p.antes && !p.agg : true; };
+function definirTipo(t) {
+  S.tipo = t;
+  definirPessoa(t === 'novo' ? E.ordemP.find(pessoaPermitida) : 0);
 }
 function definirPessoa(p) { S.pessoa = p; [S.A, S.B] = padraoPessoa(p); S.metrica = S.B !== null ? 'pp' : 'Apv'; aplicarSelecao(true); }
 function aplicarSelecao(zoom) {
@@ -941,8 +982,8 @@ function mudouMedida() { calcClasses(); legenda(); atualizarTopo(); redesenhar()
 const ordCand = {c: 'tot', dir: -1};
 function renderCandidatos() {
   if (!E || S.escopo !== 'rn') return;
-  const fd = $('fdisp').value, fs = $('fsit').value, q = norm($('fnome').value.trim()), soma = $('fsoma').checked;
-  let rows = E.cand.filter(c => (!fd || c.d.id === fd) && (!fs || c.sit === fs) && (soma || !c.agg) && (!q || norm(c.n + ' ' + E.pess[c.p].nc).includes(q)));
+  const fd = $('fdisp').value, fh = $('fhist').value, fs = $('fsit').value, q = norm($('fnome').value.trim()), soma = $('fsoma').checked;
+  let rows = E.cand.filter(c => (!fd || c.d.id === fd) && (!fh || (fh === 'novo' ? !E.pess[c.p].antes : E.pess[c.p].antes)) && (!fs || c.sit === fs) && (soma || !c.agg) && (!q || norm(c.n + ' ' + E.pess[c.p].nc).includes(q)));
   const chave = {n: c => norm(c.n), d: c => c.dx, ue: c => c.ue || '', par: c => c.par, sit: c => c.sit, tot: c => c.tot, pct: c => ok(c.pct) ? c.pct : -1, nm: c => c.nm, rk: c => c.agg || !c.rk ? 1e9 : c.rk}[ordCand.c];
   rows = rows.slice().sort((a, b) => { const x = chave(a), y = chave(b); return (x < y ? -1 : x > y ? 1 : 0) * ordCand.dir || a.id - b.id; });
   $('tabcand').querySelector('tbody').innerHTML = rows.map(c => `<tr data-k="${c.id}" class="${c.agg ? 'soma' : ''}"><td class="nome" title="${esc(E.pess[c.p].nc)}">${esc(c.n)}</td><td>${esc(c.d.nome)}</td><td>${esc(c.ue || (c.agg && c.d.cargo !== 'Presidente' ? (c.d.ano === 2020 ? 'Onde o PT lançou candidatos' : 'Estado todo') : 'Estado todo'))}</td><td>${esc(c.par)}</td><td>${esc(c.sit || '-')}</td>` +
@@ -951,10 +992,14 @@ function renderCandidatos() {
   document.querySelectorAll('#tabcand th').forEach(th => { th.classList.toggle('ord', th.dataset.c === ordCand.c); th.classList.toggle('asc', th.dataset.c === ordCand.c && ordCand.dir === 1); });
 }
 document.querySelectorAll('#tabcand th').forEach(th => { th.onclick = () => { ordCand.dir = ordCand.c === th.dataset.c ? -ordCand.dir : (th.dataset.c === 'n' || th.dataset.c === 'ue' ? 1 : -1); ordCand.c = th.dataset.c; renderCandidatos(); }; });
-['fdisp', 'fsit', 'fsoma'].forEach(id => { $(id).onchange = renderCandidatos; }); $('fnome').oninput = renderCandidatos;
+['fdisp', 'fhist', 'fsit', 'fsoma'].forEach(id => { $(id).onchange = renderCandidatos; }); $('fnome').oninput = renderCandidatos;
 $('tabcand').querySelector('tbody').addEventListener('click', ev => {
   const tr = ev.target.closest('tr[data-k]'); if (!tr) return;
-  const c = E.cand[+tr.dataset.k]; S.pessoa = c.p; S.A = c.id; S.B = null; S.metrica = 'Apv';
+  const c = E.cand[+tr.dataset.k], p = E.pess[c.p];
+  S.pessoa = c.p; S.B = null; S.A = c.id; S.metrica = 'Apv';
+  if (c.d.ano === 2026) {
+    if (p.antes) { S.tipo = 'comp'; S.B = c.id; S.A = anterior(p.c, c.id); S.metrica = 'pp'; } else S.tipo = 'novo';
+  } else S.tipo = 'livre';
   mostrar('mapa'); aplicarSelecao(true);
 });
 
@@ -981,9 +1026,9 @@ function mostrar(v) {
 function definirEscopo(js, id) {
   E = js; M = js.mun; N = M.length;
   Object.assign(S, {escopo: id, uf: '', termo: '', sep: 'n', faixa: '', pessoa: 0}); S.pins.clear();
-  [S.A, S.B] = padraoPessoa(0); S.metrica = 'pp';
+  S.tipo = id === 'rn' ? 'comp' : 'livre'; [S.A, S.B] = padraoPessoa(0); S.metrica = 'pp';
   document.body.dataset.escopo = id; document.body.dataset.sep = 'n';
-  document.querySelectorAll('.scopes button').forEach(b => b.setAttribute('aria-pressed', b.dataset.e === id));
+  document.querySelectorAll('#escopos button').forEach(b => b.setAttribute('aria-pressed', b.dataset.e === id));
   $('h1').textContent = TITULOS[id].h1; $('sub').textContent = TITULOS[id].sub;
   $('uf').innerHTML = '<option value="">Brasil</option>' + [...new Set(M.map(m => m.u))].sort().map(u => `<option value="${u}">${u}</option>`).join(''); $('busca').value = '';
   $('sep').innerHTML = '<option value="n">Nenhum</option>' + (id === 'br' ? '<option value="g">Região</option><option value="u">UF</option>' : '') + '<option value="f">Porte do município</option>'; $('faixa').innerHTML = TAM.map(t => `<option value="${t.k}">${t.n}</option>`).join(''); $('faixa').disabled = false;
@@ -1002,7 +1047,8 @@ function mudarEscopo(id, view) {
     .catch(() => { document.body.classList.remove('carregando'); $('carregando').style.display = 'block'; $('carregando').textContent = 'Não foi possível carregar os dados.'; });
 }
 document.querySelectorAll('.tab').forEach(b => { b.onclick = () => mostrar(b.dataset.v); });
-document.querySelectorAll('.scopes button').forEach(b => { b.onclick = () => { if (b.dataset.e !== S.escopo) mudarEscopo(b.dataset.e, S.view === 'candidatos' && b.dataset.e === 'br' ? 'mapa' : S.view); }; });
+document.querySelectorAll('#tipos button').forEach(b => { b.onclick = () => { if (b.dataset.t !== S.tipo) definirTipo(b.dataset.t); }; });
+document.querySelectorAll('#escopos button').forEach(b => { b.onclick = () => { if (b.dataset.e !== S.escopo) mudarEscopo(b.dataset.e, S.view === 'candidatos' && b.dataset.e === 'br' ? 'mapa' : S.view); }; });
 $('selA').onchange = e => { S.A = +e.target.value; if (S.B === S.A) S.B = null; aplicarSelecao(false); if (S.view === 'mapa') { zoomUF(); mostrarAlvoNoInfo(); } };
 $('selB').onchange = e => { S.B = e.target.value === '' ? null : +e.target.value; if (S.B === S.A) S.B = null; S.metrica = S.B !== null ? 'pp' : 'Apv'; aplicarSelecao(false); };
 $('troca').onclick = () => { if (S.B === null) return; [S.A, S.B] = [S.B, S.A]; aplicarSelecao(false); };
