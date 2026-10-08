@@ -86,7 +86,7 @@ def votos_nacionais(sq_relevantes):
     tot = pd.concat(tot, ignore_index=True).groupby(['disp', 'circ', 'SQ_CANDIDATO'], as_index=False).v.sum()
     tot['rk'] = tot.groupby(['disp', 'circ']).v.rank(method='min', ascending=False).astype(int)
     tot['nc'] = tot.groupby(['disp', 'circ']).v.transform('size')
-    return rel, tot[['disp', 'SQ_CANDIDATO', 'rk', 'nc']]
+    return rel, tot[['disp', 'circ', 'SQ_CANDIDATO', 'rk', 'nc']]
 
 
 def detalhes():
@@ -129,7 +129,8 @@ def main():
         nmun = r[r.v > 0].groupby(['disp', 'SQ_CANDIDATO']).cd_tse.nunique().rename('nmun')
         por = por.merge(nmun, on=['disp', 'SQ_CANDIDATO'], how='left').fillna({'nmun': 0})
         por = por.merge(cons[['SQ_CANDIDATO', 'chave', 'NM_CANDIDATO', 'NM_URNA_CANDIDATO', 'NR_CANDIDATO', 'SG_PARTIDO', 'DS_SIT_TOT_TURNO', 'NM_UE', 'cargo']], on='SQ_CANDIDATO')
-        por = por.merge(rank, on=['disp', 'SQ_CANDIDATO'], how='left')
+        rk_uf = rank[~rank.disp.str.startswith('pres') | (rank.circ == uf)]  # o Presidente tem uma posição por estado: vale a do estado
+        por = por.merge(rk_uf[['disp', 'SQ_CANDIDATO', 'rk', 'nc']], on=['disp', 'SQ_CANDIDATO'], how='left')
         por['pessoa'] = 'g' + por.chave.map(gid).astype(str)
         por['situacao'] = por.DS_SIT_TOT_TURNO.map(lambda s: SITUACAO.get(s, titulo(s)))
         por['nome_urna'] = por.NM_URNA_CANDIDATO.map(titulo)
