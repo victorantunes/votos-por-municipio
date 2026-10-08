@@ -1,0 +1,356 @@
+b,cd_tse,nome
+0,310,Centro
+1,310,Cidade Alta
+2,310,Liberdade
+3,310,Princesa Isabel
+4,310,Redondo
+5,310,Santa Felicidade
+6,310,Tucanos
+7,78,Alto Jamari
+8,78,Apoio Social
+9,78,Apoio da Br-421
+10,78,Bela Vista
+11,78,Bom Jesus
+12,78,Colonial
+13,78,Coqueiral
+14,78,Entre Rios
+15,78,Flores
+16,78,Gerson Neco
+17,78,Industrial Jamari
+18,78,Jamari
+19,78,Jardim América
+20,78,Jardim Europa
+21,78,Jardim Monte Alegre
+22,78,Jardim Paulista
+23,78,Jardim Primavera
+24,78,Jardim das Flores
+25,78,Jardim das Palmeiras
+26,78,Jardim do Vale
+27,78,Jorge Teixeira
+28,78,Marechal Rondon
+29,78,Marechal Rondon 02
+30,78,Monte Cristo
+31,78,Nova Londrina
+32,78,Nova União I
+33,78,Nova União III
+34,78,Parque das Gemas
+35,78,Pedras
+36,78,Raio de Luz
+37,78,Residencial Alvorada
+38,78,Residencial Eldorado
+39,78,Rota do Sol
+40,78,Setor 02
+41,78,Setor 03
+42,78,Setor 04
+43,78,Setor 10
+44,78,Setor Apoio Rodoviário
+45,78,Sol Nascente
+46,78,São Geraldo
+47,78,São Geraldo II
+48,78,São Luiz
+49,78,Trevo
+50,78,Vida Nova
+51,78,Área Especial 02
+52,78,Áreas Especiais 01
+53,94,Alpha Parque
+54,94,Alphaville
+55,94,Centro
+56,94,Colina Verde
+57,94,Conjunto Habitacional Nova Esperança
+58,94,Conjunto Halley
+59,94,Cristal do Arco-Íris
+60,94,Eldorado
+61,94,Embratel
+62,94,Floresta
+63,94,Habitar Brasil
+64,94,Incra
+65,94,Industrial
+66,94,Jardim Bandeirantes
+67,94,Jardim Clodoaldo
+68,94,Jardim Europa
+69,94,Jardim Itália
+70,94,Jardim São Pedro
+71,94,Jardim Vista Alegre
+72,94,Josino Brito
+73,94,Liberdade
+74,94,Morada do Bosque
+75,94,Novo Cacoal
+76,94,Novo Horizonte
+77,94,Parque Alvorada
+78,94,Parque Industrial Governador Jerônimo Santana
+79,94,Parque dos Lagos
+80,94,Princesa Isabel
+81,94,Residencial Parque Brizon
+82,94,Santo Antônio
+83,94,Saúde
+84,94,Sete de Setembro
+85,94,Sociedade Bela Vista
+86,94,Teixeirão
+87,94,Vila Verde
+88,94,Vilage do Sol
+89,272,Alvorada
+90,272,Centro
+91,272,Eldorado
+92,272,Floresta
+93,272,Jardim São Paulo
+94,272,José de Anchieta
+95,272,Liberdade
+96,272,Maranata
+97,272,Primavera
+98,230,Boa Esperança
+99,230,Centro
+100,230,Cruzeiro
+101,230,Industrial
+102,230,Jo Sato
+103,230,Jorge Teixeira
+104,230,Mato Grosso
+105,230,Minas Gerais
+106,230,Odilon Noia
+107,230,Santa Luzia
+108,230,São José
+109,256,Bela Vista
+110,256,Caixa D'água
+111,256,Centro
+112,256,Cidade Alta
+113,256,Jorge Teixeira de Oliveira
+114,256,Liberdade
+115,256,Morada do Sol
+116,256,Novo Horizonte
+117,256,Pioneiros
+118,256,São José
+119,256,Vista Alegre
+120,19,Caetano
+121,19,Centro
+122,19,Cristo Rey
+123,19,Dez de Abril
+124,19,Fátima
+125,19,Jardim das Esmeraldas
+126,19,Liberdade
+127,19,Nossa Senhora Aparecida
+128,19,Próspero
+129,19,Santa Luzia
+130,19,Santo Antônio
+131,19,Serraria
+132,19,São José
+133,19,Tamandaré
+134,19,Triângulo
+135,159,Bela Vista
+136,51,Alto Alegre
+137,51,Araçá
+138,51,Açaí
+139,51,Bosque dos Ipês
+140,51,Cafezinho
+141,51,Capelasso
+142,51,Casa Preta
+143,51,Centro
+144,51,Colina Park
+145,51,Colina Park II
+146,51,Conj. Mário Andreazza
+147,51,Coronel Jorge T. de Oliveira
+148,51,Dois de Abril
+149,51,Dom Bosco
+150,51,Duque de Caxias
+151,51,JK
+152,51,Jardim Flórida
+153,51,Jardim Presidencial
+154,51,Jardim das Seringueiras
+155,51,Jardim dos Migrantes
+156,51,Jotão
+157,51,Milão
+158,51,Nossa Senhora de Fátima
+159,51,Nova Brasília
+160,51,Novo Horizonte
+161,51,Orleans Ji-Paraná I
+162,51,Orleans Ji-Paraná II
+163,51,Park Amazonas
+164,51,Parque São Pedro
+165,51,Primavera
+166,51,Residencial Carneiro
+167,51,Riachuelo
+168,51,Rondon
+169,51,Santiago
+170,51,São Bernardo
+171,51,São Francisco
+172,51,São Pedro
+173,51,Terra Nova
+174,51,União
+175,51,União II
+176,51,Urupá
+177,51,Valparaíso
+178,396,Aliança
+179,396,Belo Vista
+180,396,Bom Futuro
+181,396,Centro
+182,396,Cruzeiro Do Sul
+183,396,Etevaldo de Aguiar Pires
+184,396,Jatuarana
+185,396,Jeronimo Santana
+186,396,José Carlos de Souza Freitas
+187,396,Judith Holder
+188,396,Nações
+189,396,Novo Horizonte
+190,396,Ouro Verde
+191,396,Pastor Milton Pereira Circunscrição
+192,396,Porto Feliz
+193,396,Primavera
+194,396,Shangrila
+195,396,Sol Nascente
+196,396,São Pedro
+197,396,União
+198,396,Vera Cruz
+199,175,Alvorada
+200,175,Bela Floresta
+201,175,Industrial
+202,175,Jardim Aeroporto
+203,175,Jardim Bandeirante
+204,175,Jardim Novo Estado
+205,175,Jardim Novo Horizonte
+206,175,Jardim Tropical
+207,175,Nova Ouro Preto
+208,175,União
+209,175,da Liberdade
+210,175,do Incra
+211,116,Alvorada
+212,116,Apediá
+213,116,B.N.H.
+214,116,Beira Rio
+215,116,C.T.G.
+216,116,Jardim Das Oliveiras
+217,116,Mutirão
+218,116,Nova Pimenta Bueno
+219,116,Pioneiros
+220,116,Seringal
+221,116,Vila Nova
+222,35,Aeroclube
+223,35,Agenor M. de Carvalho
+224,35,Aponiã
+225,35,Areal
+226,35,Areia Branca
+227,35,Arigolândia
+228,35,Baixa União
+229,35,Caiari
+230,35,Caladinho
+231,35,Cascalheira
+232,35,Castanheira
+233,35,Centro
+234,35,Cidade Nova
+235,35,Cidade do Lobo
+236,35,Cohab
+237,35,Conceição
+238,35,Costa e Silva
+239,35,Cuniã
+240,35,Eldorado
+241,35,Eletronorte
+242,35,Embratel
+243,35,Escola de Polícia
+244,35,Flodoaldo Pontes Pinto
+245,35,Floresta
+246,35,Igarapé
+247,35,Industrial
+248,35,Juscelino Kubitschek
+249,35,Lagoa
+250,35,Lagoinha
+251,35,Liberdade
+252,35,Mato Grosso
+253,35,Militar
+254,35,Mocambo
+255,35,Nacional
+256,35,Nossa Senhora das Graças
+257,35,Nova Esperança
+258,35,Nova Floresta
+259,35,Nova Porto Velho
+260,35,Novo Horizonte
+261,35,Olaria
+262,35,Panair
+263,35,Pedrinhas
+264,35,Planalto
+265,35,Quilômetro Um
+266,35,Rio Madeira
+267,35,Roque
+268,35,Santa Bárbara
+269,35,São Cristóvão
+270,35,São João Bosco
+271,35,São Sebastião
+272,35,Tancredo Neves
+273,35,Teixeirão
+274,35,Tiradentes
+275,35,Triângulo
+276,35,Três Marias
+277,35,Tucumanzal
+278,35,Tupi
+279,191,Armando Negrizoli
+280,191,Cunha e Silva
+281,191,Ernandes Gonçalves
+282,191,Lino Teixeira
+283,299,Bairro Industrial
+284,299,Beira Rio
+285,299,Boa Esperança
+286,299,Bom Jardim
+287,299,Centenário
+288,299,Centro
+289,299,Cidade Alta
+290,299,Cohab
+291,299,Jardim Tropical
+292,299,Mutirão
+293,299,Nova Morada
+294,299,Olímpico
+295,299,Planalto
+296,299,São Cristóvão
+297,353,Boa Esperança
+298,353,Bosque
+299,353,Figueira
+300,353,Floresta
+301,353,Jardim Das Oliveiras
+302,353,Olarias
+303,353,Saúde
+304,132,Alto Alegre
+305,132,Bodanese
+306,132,Cristo Rei
+307,132,Jardim América
+308,132,Jardim Eldorado
+309,132,Jardim Primavera
+310,132,Marcos Freire
+311,132,Nova Esperança
+312,132,Parque Industrial Novo Tempo
+313,132,Parque São Paulo
+314,132,Residencial Jardim das Oliveiras
+315,132,Tancredo Neves
+316,418,Centro
+317,418,Cristo Rei
+318,418,Filadélfia
+319,418,Nova Canaã
+320,418,Novo Oriente
+321,418,Planalto
+322,434,Ambrósio Setor Industrial
+323,434,Centro
+324,434,Chacareiro
+325,434,Cidade Nova
+326,434,João Clímaco
+327,434,Nossa Senhora de Fátima
+328,434,Nova Redenção
+329,434,Novo Horizonte
+330,434,Planalto
+331,434,Santa Luzia
+332,434,Setor Hortifrutigranjeiro
+333,434,São José
+334,477,Flores
+335,477,Novo Horizonte
+336,477,Palheiral
+337,477,Santa Izabel
+338,477,Satélite
+339,477,União
+340,612,Centro
+341,612,Francisco Anatalino Ferreira
+342,612,Liberdade
+343,612,Santa Rita de Cássia
+344,582,Bela Vista
+345,582,Centro
+346,582,Cidade Alta
+347,582,Cristo Rei
+348,582,Jardim das Américas
+349,582,São José
+350,566,Alto Alegre
+351,566,Centro
+352,566,Novo Horizonte
+353,566,Santíssima Trindade
+354,566,Sumaúma

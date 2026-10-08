@@ -1,0 +1,636 @@
+b,cd_tse,nome
+0,91910,Centro
+1,91910,Centro II
+2,91910,Guarujá
+3,91910,Guarujá - Expansão
+4,91910,Jardim Tropical
+5,91910,Nova Era
+6,91910,Operário
+7,91910,Primavera
+8,91910,Vila Nova
+9,89877,Boa Esperança
+10,89877,Boa Nova
+11,89877,Bom Jesus
+12,89877,Bom Pastor
+13,89877,Cidade Alta
+14,89877,Cidade Bela
+15,89877,Distrito Industrial
+16,89877,Jardim Flamboyant
+17,89877,Jardim Guaraná
+18,89877,Jardim Imperial
+19,89877,Jardim Oliveiras
+20,89877,Jardim Panorama
+21,89877,Jardim Perimetral
+22,89877,Jardim Primavera
+23,89877,Jardim Renascer
+24,89877,Jardim Tropical
+25,89877,Jardim das Araras
+26,89877,Jardim das Flores
+27,89877,Parque dos Lagos
+28,89877,Residencial Universitário
+29,89877,Residencial das Mangueiras ou Simplesmente R das Mangueiras
+30,89877,Santa Maria
+31,89877,Setor Trevo
+32,89877,São José Operário
+33,89877,Vila Nova
+34,90050,Aeroporto
+35,90050,Alvorada
+36,90050,Atlântico
+37,90050,Beira Rio
+38,90050,Boiadeiro
+39,90050,Centro
+40,90050,Cohab
+41,90050,Distrito Industrial
+42,90050,Dom Bosco
+43,90050,Novo Araguaia
+44,90050,Primavera
+45,90050,São Francisco de Assis
+46,90263,Bom Jesus
+47,90263,Jardim das Nações
+48,90263,Pioneiro
+49,90263,Primavera
+50,90239,Centro
+51,90239,Cohab
+52,90239,João de Barro
+53,90239,Nossa Senhora Aparecida
+54,90239,São Francisco
+55,90255,Bela Vista
+56,90255,Bolívia
+57,90255,Campinas
+58,90255,Centro
+59,90255,Jardim Canaã
+60,90255,Novo Horizonte
+61,90255,Planalto dos Diamantes
+62,90255,Primavera
+63,90255,São Mateus
+64,90255,Vila Nova
+65,90255,Vila Rica
+66,90255,da Ponte
+67,90336,13 de Maio
+68,90336,Centro
+69,90336,Distrito Industrial
+70,90336,Jardim Aeroporto
+71,90336,Maracanã
+72,90336,Nova Esperança
+73,90336,Santa Cruz
+74,90336,São Raimundo
+75,90336,União
+76,90468,Aeroporto
+77,90468,Arco Íris
+78,90468,Pôr do Sol
+79,90476,Betel
+80,90476,Carrapatinho
+81,90476,Cavalhada I
+82,90476,Cavalhada II
+83,90476,Cavalhada III
+84,90476,Centro
+85,90476,Cidade Alta
+86,90476,Cidade Nova
+87,90476,Cohab Nova
+88,90476,Cohab Velha
+89,90476,Dner
+90,90476,Espírito Santo
+91,90476,Garcez
+92,90476,Jardim Celeste
+93,90476,Jardim Guanabara
+94,90476,Jardim Imperial
+95,90476,Jardim Marajoara
+96,90476,Jardim Padre Paulo
+97,90476,Jardim Panorama
+98,90476,Jardim Paraíso
+99,90476,Jardim São Luiz da Ponte
+100,90476,Jardim União
+101,90476,Jardim do Trevo
+102,90476,Joaquim Murtinho
+103,90476,Junco
+104,90476,Lavapés
+105,90476,Lobo
+106,90476,Maracanãzinho
+107,90476,Massa Barro
+108,90476,Monte Verde
+109,90476,Nova Era
+110,90476,Olhos D'água
+111,90476,Residencial Aroldo Fanaia
+112,90476,Rodeio
+113,90476,Santa Cruz
+114,90476,Santa Izabel
+115,90476,Santa Rosa
+116,90476,Santo Antônio
+117,90476,Santos Dumont
+118,90476,São Jorge
+119,90476,São Lourenço
+120,90476,São Miguel
+121,90476,Vila Irene
+122,90476,Vila Mariana
+123,90476,Vila Nova
+124,90476,Vila Real
+125,90476,Vitória Régia
+126,98655,Amélio
+127,98655,Antônio Pedro
+128,98655,Castilho
+129,98655,Centro
+130,98655,Cristalina
+131,98655,União
+132,98655,Zé Viola
+133,90484,Alvorada
+134,90484,Boa Esperança
+135,90484,Centro
+136,90484,Jardim Primavera
+137,90484,Jardim das Palmeiras
+138,90484,Nossa Senhora Aparecida
+139,90484,Olenka
+140,90506,Centro
+141,90506,Jardim Campo Verde
+142,90506,Jupiara
+143,90506,São Lourenço
+144,90506,Vale do Sol
+145,90760,Boa Esperança
+146,90760,Boa Vista
+147,90760,Bom Jesus
+148,90760,Centro
+149,90760,Cristo Rey
+150,90760,Santa Terezinha
+151,90549,Centro
+152,90549,Guadalupe
+153,90549,Noga
+154,90549,Santa Rita
+155,90549,Santo Antônio
+156,90522,Campo Verde
+157,90522,Centro Cívico
+158,90522,Florestal
+159,90522,Jardim União
+160,90522,Lions Internacional
+161,90522,Rotary Internacional
+162,99015,Centro
+163,99015,Cidade Verde
+164,99015,Cristo Rei
+165,99015,Jardim Mato Grosso
+166,99015,Nossa Senhora de Fátima
+167,99015,Nova Vacaria
+168,99015,São Francisco de Assis
+169,99015,Tertúlia
+170,90670,Alto da Serra I
+171,90670,Altos do Coxipó
+172,90670,Alvorada
+173,90670,Araés
+174,90670,Areão
+175,90670,Bandeirantes
+176,90670,Barbado
+177,90670,Barra do Pari
+178,90670,Baú
+179,90670,Bela Marina
+180,90670,Bela Vista
+181,90670,Boa Esperança
+182,90670,Bosque da Saúde
+183,90670,Cachoeira das Garças
+184,90670,Campo Velho
+185,90670,Campo Verde
+186,90670,Canjica
+187,90670,Carumbé
+188,90670,Centro Norte
+189,90670,Centro Político Administrativo
+190,90670,Centro Sul
+191,90670,Chácara dos Pinheiros
+192,90670,Cidade Alta
+193,90670,Cidade Verde
+194,90670,Cohab São Gonçalo
+195,90670,Coophamil
+196,90670,Coophema
+197,90670,Coxipó
+198,90670,Despraiado
+199,90670,Dom Aquino
+200,90670,Dom Bosco
+201,90670,Dr. Fábio Leite I
+202,90670,Duque de Caxias
+203,90670,Goiabeira
+204,90670,Grande Terceiro
+205,90670,Jardim Aclimação
+206,90670,Jardim Califórnia
+207,90670,Jardim Campus Elizius
+208,90670,Jardim Comodoro
+209,90670,Jardim Cuiabá
+210,90670,Jardim Eldorado
+211,90670,Jardim Europa
+212,90670,Jardim Florianópolis
+213,90670,Jardim Fortaleza
+214,90670,Jardim Gramado
+215,90670,Jardim Imperial
+216,90670,Jardim Industriário
+217,90670,Jardim Itália
+218,90670,Jardim Leblon
+219,90670,Jardim Mariana
+220,90670,Jardim Mossoró
+221,90670,Jardim Passaredo
+222,90670,Jardim Paulista
+223,90670,Jardim Petrópolis
+224,90670,Jardim Presidente
+225,90670,Jardim Shangri-lá
+226,90670,Jardim Tropical
+227,90670,Jardim Ubirajara
+228,90670,Jardim Universitário
+229,90670,Jardim Vitória
+230,90670,Jardim das Américas
+231,90670,Jardim das Palmeiras
+232,90670,Jardim dos Ipês
+233,90670,Lagoa Azul
+234,90670,Lixeira
+235,90670,Morada da Serra
+236,90670,Morada do Ouro
+237,90670,Morada dos Nobres
+238,90670,Nossa Senhora Aparecida
+239,90670,Nova Conquista
+240,90670,Nova Esperança
+241,90670,Novo Colorado
+242,90670,Novo Horizonte
+243,90670,Novo Mato Grosso
+244,90670,Novo Terceiro
+245,90670,Osmar Cabral
+246,90670,Paiaguás
+247,90670,Paraíso
+248,90670,Parque Atalaia
+249,90670,Parque Cuiabá
+250,90670,Parque Geórgia
+251,90670,Parque Ohara
+252,90670,Pascoal Ramos
+253,90670,Pedra 90
+254,90670,Pedregal
+255,90670,Pico do Amor
+256,90670,Planalto
+257,90670,Popular
+258,90670,Porto
+259,90670,Poção
+260,90670,Praeirinho
+261,90670,Praeiro
+262,90670,Primeiro de Março
+263,90670,Quilombo
+264,90670,Recanto dos Pássaros
+265,90670,Residencial Coxipó
+266,90670,Residencial Itamaraty
+267,90670,Residencial Santa Inês
+268,90670,Residencial São Carlos
+269,90670,Ribeirão da Ponte
+270,90670,Ribeirão do Lipa
+271,90670,Santa Cruz
+272,90670,Santa Isabel
+273,90670,Santa Laura
+274,90670,Santa Marta
+275,90670,Santa Rosa
+276,90670,Sol Nascente
+277,90670,São Francisco
+278,90670,São Gonçalo Beira Rio
+279,90670,São José
+280,90670,São João Del Rey
+281,90670,São Roque
+282,90670,São Sebastião
+283,90670,Terceiro
+284,90670,Terra Nova
+285,90670,Tijucal
+286,90670,Três Barras
+287,90670,Ufmt
+288,90670,Vista Alegre
+289,90204,Aldelvidon Vieira dos Santos
+290,90204,Antônio Savoine
+291,90204,Arlindo Mateus da Costa
+292,90204,Centro
+293,90204,José Bejo
+294,90204,José Claudino
+295,99058,Centro
+296,99058,Cidade Nova
+297,99058,Cristo Rei
+298,99058,Horizonte II
+299,99058,Jardim Aeroporto
+300,99058,Jardim Araguaia
+301,99058,Jardim Guaranorte
+302,99058,Jardim Maranata
+303,99058,Jardim Novo Horizonte
+304,99058,Jardim São Lourenço
+305,99058,Jardim Vitória
+306,99058,Jardim das Palmeiras
+307,99058,Ouro Verde
+308,99058,Parque do Lago
+309,99058,Residencial 13 de Maio
+310,90832,Areião
+311,90832,Boa Vista
+312,90832,Centro
+313,90832,Garça Branca ( Cohab Nova )
+314,90832,Jardim Brasil
+315,90832,Novo Horizonte
+316,90832,Santa Cruz
+317,90832,Santa Maria Bertila
+318,90832,Serrano ( Cohab Velha )
+319,90832,São Sebastião
+320,90832,Tancredo Neves
+321,90832,Vila Guanabara
+322,90832,Zaidem ( Aeroporto )
+323,98698,Centro
+324,98698,Cidade Alta
+325,98698,Jardim Vitória
+326,98698,Recanto dos Pássaros
+327,98698,Sol Nascente
+328,98310,Cidade Alta
+329,98310,Módulo 05
+330,98310,Padre Duílio
+331,98310,Palmiteira
+332,98310,São José Operário
+333,90603,Alvorada
+334,90603,Bandeirantes
+335,90603,Centro
+336,90603,Cerrado
+337,90603,Cidade Nova
+338,90603,Industrial
+339,90603,Jaime Seiti Fujii
+340,90603,Jardim Amazônia
+341,90603,Jardim Imperial
+342,90603,Jardim Palmeiras
+343,90603,Jardim Primavera
+344,90603,Menino Deus
+345,90603,Parque das Américas
+346,90603,Parque das Araras
+347,90603,Parque das Emas
+348,90603,Parque dos Buritis
+349,90603,Pioneiro
+350,90603,Rio Verde
+351,90603,Tessele Junior
+352,90603,Veneza
+353,91170,Aeroporto
+354,91170,Centro
+355,91170,Jardim Carolina
+356,91170,Jardim Glória
+357,91170,Jardim Paraná
+358,91170,Jardim Petrópolis
+359,91170,Ponte de Ferro
+360,91170,Residencial Pôr do Sol
+361,91170,Serragem
+362,91170,São José
+363,91197,Bandeirantes
+364,91197,Centro
+365,91197,Joaquim da Silva
+366,91197,Novo Horizonte
+367,91197,Santo Antônio
+368,91197,Tapirapuã
+369,91197,da Ponte
+370,90646,Acácias
+371,90646,Alto da Colina
+372,90646,Arara Azul
+373,90646,Beija Flor
+374,90646,Bela Vista
+375,90646,Buritis
+376,90646,Centro
+377,90646,Colina II
+378,90646,Esplanda do Sol
+379,90646,Flamboyant
+380,90646,Flor do Cerrado
+381,90646,Hilda Strenger Ribeiro
+382,90646,Industrial Norte
+383,90646,Industrial Sul
+384,90646,Ipês
+385,90646,Jardim
+386,90646,Jardim II
+387,90646,Jardim Imperial
+388,90646,Jardim Primavera
+389,90646,Jardim Primavera II
+390,90646,Jardim das Orquídeas
+391,90646,José Aparecido Ribeiro
+392,90646,N. Senhora Aparecida
+393,90646,Palmeiras
+394,90646,Paraíso
+395,90646,Parque das Águas
+396,90646,Parque do Sol
+397,90646,Reserva Técnica
+398,90646,Topázio
+399,90646,Vitória
+400,90646,Ágata
+401,98736,Boa Esperança
+402,98736,Centro
+403,98736,Jardim Castanheira
+404,98736,Jardim Itamarati
+405,98736,Jardim Itamarati II
+406,98736,Jardim Novo Horizonte
+407,98736,Jardim Ouro Verde
+408,98736,Jardim Santa Rosa
+409,98736,Jardim Shangri-lá
+410,98736,Jardim Soletti
+411,98736,Jardim São João I
+412,98736,Jardim São João II
+413,98736,Jardim das Oliveiras
+414,98736,Residencial Itamarati
+415,98736,Vila Alvorada
+416,98736,Vila Lima
+417,91952,Barro Vermelho
+418,91952,Boa Vista
+419,91952,Campos Verdes
+420,91952,Central
+421,91952,Centro Comercial
+422,91952,Centro Oeste
+423,91952,Deus é Amor
+424,91952,Estilac Leal
+425,91952,Flor de Liz
+426,91952,Industrial
+427,91952,Jardim Alvorada
+428,91952,Jardim Oliveira
+429,91952,Jardim Tropical
+430,91952,Montes Claros
+431,91952,Novo Horizonte
+432,91952,Santa Mônica
+433,91952,Santana
+434,91952,Toneto
+435,91952,União
+436,91952,Xavantina Velha
+437,89834,Centro
+438,89834,Novo Horizonte
+439,89834,Panorama
+440,89834,Rui Barbosa
+441,89834,Teles Pires
+442,89834,União
+443,89834,Vila Concórdia
+444,89834,Vila Nova
+445,89834,Vista alegre
+446,89990,6 de Abril
+447,89990,Altos da Glória
+448,89990,Bela Vista
+449,89990,Cantão
+450,89990,Centro
+451,89990,DERMAT
+452,89990,EBEC
+453,89990,Flor da Serra
+454,89990,Jardim Alvorada
+455,89990,Jardim Buriti
+456,89990,Jardim Marília
+457,89990,Jardim das Palmeiras
+458,89990,Morada da Serra
+459,89990,Santa Cruz
+460,89990,São José
+461,89990,Vila Guaporé
+462,91391,Almeida Monchão Dourado
+463,91391,Bela Vista
+464,91391,Centro
+465,91391,Centro Histórico
+466,91391,Diamante Azul
+467,91391,Irantinópolis
+468,91391,Jardim Brilhante
+469,91391,Jardim Cândido
+470,91391,Jardim Novo Horizonte
+471,91391,Jardim Popular
+472,91391,Jardim Poxoréu
+473,91391,Jardim Tropical
+474,91391,Jardim das Américas
+475,91391,João Pessoa
+476,91391,Lagoa I
+477,91391,Lagoa II
+478,91391,Maria André
+479,91391,Maria Sabina
+480,91391,Parque Industrial
+481,91391,Parque Panorama
+482,91391,Parque Rodoviário
+483,91391,Pedra Branca
+484,91391,Santa Luzia
+485,91391,Santa Maria
+486,91391,Vila Cruzeiro
+487,91391,Vila Santa Terezinha
+488,91391,Xavante
+489,90441,Centro
+490,90441,Flamboyant
+491,90441,Jardim das Flores
+492,90441,Jardim dos Ipês
+493,90441,João de Barro
+494,90441,Parque Araguaia
+495,90441,Raio de Luz
+496,90328,Bandeirantes
+497,90328,Bolívia
+498,90328,Centro
+499,90328,Conjunto Habitacional Dona Jacinta
+500,90328,Vila Alta
+501,91995,Jardim Arco-Íris
+502,91995,Jardim Bela Vista
+503,91995,Jardim Casa Nova
+504,91995,Jardim Novo Horizonte
+505,91995,Jardim Olinda
+506,91995,Jardim Rio Claro
+507,89960,Centro
+508,89960,Colina Verde
+509,89960,Primavera
+510,91537,Aeroporto
+511,91537,Alto
+512,91537,Centro
+513,91537,Cohab Velha
+514,91537,Da Torre
+515,91537,Monjolo
+516,91537,Nossa Senhora Aparecida
+517,91537,Nossa Senhora da Piedade
+518,91537,Santa Isabel
+519,91537,Santo Antônio
+520,91537,São Benedito
+521,89850,Habitar Brasil
+522,89850,Jardim Boa Esperança
+523,89850,Jardim Botânico
+524,89850,Jardim Celeste
+525,89850,Jardim Imperial
+526,89850,Jardim Jacarandas
+527,89850,Jardim Maringá
+528,89850,Jardim Ouro
+529,89850,Jardim Paraíso
+530,89850,Jardim Primavera
+531,89850,Jardim Violetas
+532,89850,Jardim das Oliveiras
+533,89850,Jardim das Palmeiras
+534,89850,Parque das Araras
+535,89850,Residencial Brasília
+536,89850,Residencial Jequitibás
+537,89850,Residencial Maripa
+538,89850,Setor Comercial
+539,89850,Setor Industrial
+540,89850,Setor Residencial Norte
+541,89850,Setor Residencial Sul
+542,98930,Bela Vista
+543,98930,Benjamim Raiser
+544,98930,Boa Esperança
+545,98930,Bom Jesus
+546,98930,Fraternidade
+547,98930,Jardim Alvorada
+548,98930,Jardim Amazônia
+549,98930,Jardim Aurora
+550,98930,Jardim Bela Vista
+551,98930,Jardim Califónia
+552,98930,Jardim Europa
+553,98930,Jardim Itália
+554,98930,Jardim Primavera
+555,98930,Jardim Taiamã
+556,98930,Jardim Tropical
+557,98930,Jardim das Américas
+558,98930,Morada do Sol
+559,98930,Nova Prata
+560,98930,Parque Universitário
+561,98930,Recanto dos Pássaros
+562,98930,Residencial Alphaville
+563,98930,Residencial Vila Bela
+564,98930,Residencial Village
+565,98930,São Domingos
+566,98930,São José I
+567,98930,São José II
+568,98930,Vitória Régia
+569,91855,Centro
+570,91855,Jardim Acácia
+571,91855,Jardim Aeroporto
+572,91855,Jardim Alto da Boa Vista
+573,91855,Jardim Buritis
+574,91855,Jardim Cidade Alta
+575,91855,Jardim Dona Júlia
+576,91855,Jardim Esmeralda
+577,91855,Jardim Europa
+578,91855,Jardim Floriza
+579,91855,Jardim Goiás
+580,91855,Jardim Horizonte
+581,91855,Jardim Mituo
+582,91855,Jardim Monte Líbano
+583,91855,Jardim Morada do Sol
+584,91855,Jardim Nazaré
+585,91855,Jardim Rio Preto
+586,91855,Jardim Santa Lúcia
+587,91855,Jardim Shangri-lá
+588,91855,Jardim São Paulo
+589,91855,Jardim Tanaka
+590,91855,Jardim Tarumã
+591,91855,Jardim dos Ipês
+592,91855,Parque Figueira
+593,91855,Parque Mansões
+594,91855,Parque Tangará
+595,91855,Parque Universitário
+596,91855,Parque da Serra
+597,90689,Cristo Rei
+598,90689,Jardim Juliana
+599,90689,Joelma
+600,90689,São Cristovão
+601,90840,Centro
+602,90840,Imperatriz
+603,90840,São Luiz
+604,91677,23 de Setembro
+605,91677,Canelas
+606,91677,Capão do Pequi
+607,91677,Centro Norte
+608,91677,Centro Sul
+609,91677,Costa Verde
+610,91677,Cristo Rei
+611,91677,Glória
+612,91677,Ikaray
+613,91677,Jardim dos Estados
+614,91677,Mapim
+615,91677,Marajoara
+616,91677,Novo Mundo
+617,91677,Paiaguás
+618,91677,Parque do Lago
+619,91677,Petrópolis
+620,91677,Ponte Nova
+621,91677,Ponte Nova
+622,91677,Primavera
+623,91677,Santa Izabel
+624,91677,São Mateus
+625,91677,São Matheus
+626,91677,São Simão
+627,91677,Vitória Régia
+628,98990,Bela Vista
+629,98990,Cidade Jardim
+630,98990,Inconfidentes
+631,98990,Vila Nova
+632,90166,Centro
+633,90166,Planalto
+634,90166,Renascer

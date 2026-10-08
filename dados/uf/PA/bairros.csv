@@ -1,0 +1,363 @@
+b,cd_tse,nome
+0,4014,Algodoal
+1,4014,Aviação
+2,4014,Castanhal
+3,4014,Centro
+4,4014,Cristo Redentor
+5,4014,Francilândia
+6,4014,Mutirão
+7,4014,Santa Clara
+8,4014,Santa Rosa
+9,4014,São Domingos da Angélica
+10,4014,São José
+11,4014,São João
+12,4014,São Lourenço
+13,4014,São Sebastião
+14,4057,Capim Marinho
+15,4111,Alberto Soares
+16,4111,Aparecida
+17,4111,Bela Vista
+18,4111,Boa Esperança
+19,4111,Brasília
+20,4111,Centro
+21,4111,Colinas
+22,4111,Esplanada do Xingu
+23,4111,Ibiza
+24,4111,Jardim Altamira
+25,4111,Jardim Independente I
+26,4111,Jardim Independente II
+27,4111,Jardim Uirapuru
+28,4111,Liberdade
+29,4111,Multirão
+30,4111,Nova Altamira
+31,4111,Premem
+32,4111,Sudam I
+33,4111,Sudam II
+34,4278,Aeroporto
+35,4278,Agulha
+36,4278,Arirambá
+37,4278,Aurá
+38,4278,Barreiro
+39,4278,Batista Campos
+40,4278,Baía do Sol
+41,4278,Bengui
+42,4278,Bonfim
+43,4278,Brasília
+44,4278,Cabanagem
+45,4278,Campina
+46,4278,Campina de Icoaraci
+47,4278,Canudos
+48,4278,Carananduba
+49,4278,Caruara
+50,4278,Castanheira
+51,4278,Chapéu Virado
+52,4278,Cidade Velha
+53,4278,Condor
+54,4278,Coqueiro
+55,4278,Cremação
+56,4278,Cruzeiro
+57,4278,Curió-Utinga
+58,4278,Farol
+59,4278,Fátima
+60,4278,Guamá
+61,4278,Guanabara
+62,4278,Itaiteua
+63,4278,Jurunas
+64,4278,Mangueiras
+65,4278,Mangueirão
+66,4278,Maracacuera
+67,4278,Maracajá
+68,4278,Maracangalha
+69,4278,Marahú
+70,4278,Marambaia
+71,4278,Marco
+72,4278,Miramar
+73,4278,Montese (Terra Firme)
+74,4278,Murubira
+75,4278,Natal do Murubira
+76,4278,Nazaré
+77,4278,Paracuri
+78,4278,Paraíso
+79,4278,Parque Guajará
+80,4278,Parque Verde
+81,4278,Pedreira
+82,4278,Ponta Grossa
+83,4278,Porto Arthur
+84,4278,Praia Grande
+85,4278,Pratinha
+86,4278,Reduto
+87,4278,Sacramenta
+88,4278,Souza
+89,4278,Sucurijuquara
+90,4278,São Brás
+91,4278,São Clemente
+92,4278,São Francisco
+93,4278,São João do Outeiro
+94,4278,Tapanã
+95,4278,Telégrafo
+96,4278,Tenoné
+97,4278,Umarizal
+98,4278,Una
+99,4278,Universitário
+100,4278,Val-de-Cães
+101,4278,Vila
+102,4278,Água Boa
+103,4278,Águas Lindas
+104,4278,Águas Negras
+105,4294,Begolândia
+106,4294,Cajueiro
+107,4294,Centro
+108,4294,Duque de Caxias
+109,4294,Flores
+110,4294,Independente
+111,4294,Liberdade
+112,4294,Madre Teresa
+113,4294,Maguari
+114,4294,Neópolis
+115,4294,Novo Bairro
+116,4294,Presidente Médici
+117,4294,Santa Rosa
+118,4294,Santos Dumont
+119,4332,Aldeia
+120,4332,Alegre
+121,4332,Centro
+122,4332,Cereja
+123,4332,Morro
+124,4332,Padre Luís
+125,4332,Perpétuo Socorro
+126,4332,Riozinho
+127,4332,Samaumapara
+128,4332,Taíra
+129,4332,Vila Nova
+130,4332,Vila Sinhá
+131,4448,Bela Vista
+132,4448,Centro
+133,4448,Conquista
+134,4448,Continental
+135,4448,Felicidade
+136,4448,Japonês
+137,4448,Liberdade
+138,4448,Novo Horizonte
+139,4448,Novo Paraíso
+140,4413,Aldeia
+141,4413,Baixa Verde
+142,4413,Brasília
+143,4413,Cidade Nova
+144,4413,Jardim Primavera
+145,4413,Marambaia
+146,4413,Matinha
+147,4413,Nova Cametá
+148,4413,Novo
+149,4413,Santa Maria
+150,4413,São Benedito
+151,4413,São João Batista
+152,4413,São Pedro
+153,4537,Canudinho
+154,4537,Capelinha
+155,4537,Centro
+156,4537,Cruzeiro
+157,4537,Emerêncio
+158,4537,Giovamira
+159,4537,Jardim Petrópolis
+160,4537,Morada do Sol
+161,4537,Novo Araguaia
+162,4537,Olaria Norte
+163,4537,São Luiz I
+164,4537,São Luiz II
+165,4537,Tancredo Neves
+166,4537,Universitário
+167,4537,Vila Amizade
+168,4537,Vila Nova
+169,4537,Vila Real
+170,4537,dos Pescadores
+171,4740,Centro
+172,4740,Cidade Nova
+173,4740,Curuá Velho
+174,4740,Nossa Senhora do Carmo
+175,4740,Nova Floresta
+176,4740,Planalto
+177,4740,Ribeirinho
+178,4740,Santa Maria Goretti
+179,4740,Santa Terezinha
+180,4596,Campina
+181,4596,Centro da Cidade
+182,4596,Morumbi
+183,4596,Nossa Senhora de Aparecida
+184,4596,Porto de Cima
+185,4650,Boa Esperança
+186,4650,Centro
+187,4650,Cidade Nova
+188,4650,Jatuíra
+189,4650,Matinha
+190,4650,Perpétuo Socorro
+191,4650,Santa Clara
+192,4715,Bela Vista
+193,4715,Boa Esperança
+194,4715,Bom Jardim
+195,4715,Bom Remédio
+196,4715,Campo Belo
+197,4715,Comercial
+198,4715,Floresta
+199,4715,Incra
+200,4715,Jardim Aeroporto
+201,4715,Jardim América
+202,4715,Jardim Tapajós
+203,4715,Jardim das Araras
+204,4715,Jardim do Éden
+205,4715,Liberdade
+206,4715,Maria Magdalena
+207,4715,Nossa Senhora do Perpétuo Socorro
+208,4715,Nova Itaituba
+209,4715,Nova Miritituba
+210,4715,Paz
+211,4715,Piracanã
+212,4715,Santo Antônio
+213,4715,São Francisco
+214,4715,São José
+215,4715,São Tomé
+216,4715,União
+217,4715,Vale do Piracanã
+218,4715,Vale do Tapajós
+219,4715,Vitória Régia
+220,4715,Viva Itaituba
+221,4642,Almir Gabriel
+222,4642,Bairro Novo
+223,4642,Bela Vista
+224,4642,Boa Vista
+225,4642,Canaã
+226,4642,Centro
+227,4642,Decoville
+228,4642,Dom Aristides
+229,4642,Miritizal
+230,4642,Nova Marituba
+231,4642,Novo Horizonte
+232,4642,Oriboca
+233,4642,Pedreirinha
+234,4642,Riacho Doce
+235,4642,Santa Clara
+236,4642,Santa Lúcia
+237,4642,São Francisco
+238,4642,São José
+239,4642,São João
+240,4642,União
+241,4952,Cidade Baixa
+242,4952,Curaxi
+243,4952,Pajuçara
+244,4952,Papagaio
+245,4952,Planalto
+246,4952,Serra Ocidental
+247,4952,Serra Oriental
+248,4952,Turu
+249,4421,Parque Espigão
+250,4421,Parque Morumbi
+251,4421,Parque Uirapuru
+252,4421,Parque Vale do Sol
+253,4421,Parque Vila Nova
+254,4421,Parque Vila Tucuruí
+255,4421,Parque da Ladeira
+256,5010,Bela Vista
+257,5010,Centro
+258,5010,Cidade Nova
+259,5010,Fátima
+260,5010,Lourdes
+261,5010,Perpétuo Socorro
+262,5010,Santa Terezinha
+263,5010,São Francisco
+264,5916,Alto Bonito
+265,5916,Bela vista
+266,5916,Centro
+267,5916,Colinas
+268,5916,Novo Horizonte
+269,5916,Sol Nascente
+270,5916,São Francisco
+271,5916,Tozzeti
+272,5096,Angelim
+273,5096,Açaizal
+274,5096,Camboatã
+275,5096,Célio Miranda
+276,5096,Industrial
+277,5096,Jardim Atlântico
+278,5096,Juparanã
+279,5096,Nagibão
+280,5096,Nova Conquista
+281,5096,Presidente Juscelino
+282,5096,Promissão
+283,5096,Tião Mineiro
+284,5096,Uraim
+285,5258,Cajú
+286,5258,Centro
+287,5258,Coqueirinho
+288,5258,Marabá
+289,5258,Paes de Carvalho
+290,5355,Aeroporto Velho
+291,5355,Aldeia
+292,5355,Alvorada
+293,5355,Amparo
+294,5355,Aparecida
+295,5355,Cambuquira
+296,5355,Caranazal
+297,5355,Centro
+298,5355,Conquista
+299,5355,Diamantino
+300,5355,Elcione Barbalho
+301,5355,Esperança
+302,5355,Floresta
+303,5355,Fátima
+304,5355,Interventoria
+305,5355,Ipanema
+306,5355,Jaderlândia
+307,5355,Jardim Santarém
+308,5355,Jutaí
+309,5355,Laguinho
+310,5355,Liberdade
+311,5355,Livramento
+312,5355,Maicá
+313,5355,Mapiri
+314,5355,Maracanã
+315,5355,Maracanã I
+316,5355,Mararú
+317,5355,Matinha
+318,5355,Nova República
+319,5355,Nova Vitória
+320,5355,Novo Horizonte
+321,5355,Prainha
+322,5355,Pérola do Maicá
+323,5355,Salé
+324,5355,Santa Clara
+325,5355,Santana
+326,5355,Santarenzinho
+327,5355,Santo André
+328,5355,Santíssimo
+329,5355,São Cristóvão
+330,5355,São Francisco
+331,5355,São José Operário
+332,5355,Uruará
+333,5355,Urumanduba
+334,5355,Urumari
+335,5355,Vigia
+336,5355,Vitória Régia
+337,5355,Área Verde
+338,5576,Central
+339,5576,Macacheira
+340,5576,Matinha
+341,5576,Novo
+342,5576,Pacoval
+343,5576,São Pedro
+344,5576,Tucumanaúba
+345,5576,Umirizal
+346,4022,Aeroporto
+347,4022,Centro
+348,4022,Greenville
+349,4022,Nossa Senhora de Fátima
+350,4022,Novo
+351,4022,Piçarreira
+352,4022,Santa Maria
+353,4022,Vila Macarrão
+354,4367,Aparecida
+355,4367,Centro
+356,4367,Juvenil
+357,4367,Santa Clara
+358,4367,São Francisco
+359,5592,Campina
+360,5592,Centro
+361,5592,Maranhense

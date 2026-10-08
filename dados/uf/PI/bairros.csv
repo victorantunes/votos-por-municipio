@@ -1,0 +1,480 @@
+b,cd_tse,nome
+0,10030,Alto do Açude
+1,10030,Bulungão
+2,10030,Centro
+3,10030,Compasa
+4,10030,Morada do Sol
+5,10030,Nova Brasília
+6,10030,Poeirão
+7,10030,São Luis
+8,10030,Tinguis
+9,10073,Bacurizeiro
+10,10073,Baixão do São José
+11,10073,Baixão dos Paivas
+12,10073,Batalhão
+13,10073,Boa Fé
+14,10073,Boca de Barro
+15,10073,Carrasco
+16,10073,Centro
+17,10073,Ciana
+18,10073,Leite
+19,10073,Maravilha
+20,10073,Matadouro
+21,10073,Santa Inês
+22,10073,Santo Antônio
+23,10073,São Luiz
+24,10073,São Sebastião
+25,10073,Tranqueira
+26,10049,Bairro Fortaleza
+27,10049,Centro
+28,10049,Montanha
+29,10049,Nossa Senhora de Fátima
+30,10049,Rudiador
+31,10049,Santa Clara
+32,10049,Santa Luzia
+33,10049,Setor Industrial
+34,10049,Setor Industrial Sul
+35,10235,Boa Vista
+36,10235,Centro
+37,10235,Curujal
+38,10235,De Fátima
+39,10235,Floresta
+40,10235,Galdinal
+41,10235,Matadouro
+42,10235,Pedrinhas
+43,10235,Piquizeiro
+44,10235,Residencial São Francisco
+45,10235,Riachinho
+46,10235,Santinho
+47,10235,São Cristóvão
+48,10235,Vila França
+49,10235,Xique-Xique
+50,10375,Aeroporto
+51,10375,Centro
+52,10375,Hugo Piauilino
+53,10375,Josué Parente
+54,10375,Miramar
+55,10375,Morro do Frei
+56,10375,Penitenciária
+57,10375,Rodoviária
+58,10375,São Pedro
+59,10375,Vicente Brandão
+60,10006,Centro
+61,10006,Estação
+62,10006,Fonte das Palmeiras
+63,10006,Frecheiras
+64,10006,Massapê
+65,10006,Nova Brasileira
+66,10006,Salitre
+67,10430,Alto da Olaria
+68,10430,Califórnia
+69,10430,Cariri
+70,10430,Centro
+71,10430,Cidade Nova
+72,10430,Estação
+73,10430,Evereste
+74,10430,Flores
+75,10430,Fripisa
+76,10430,Matadouro
+77,10430,Mucuripe
+78,10430,Nossa Senhora de Fátima
+79,10430,Nossa Senhora de Lourdes
+80,10430,Parque das Estrelas
+81,10430,Paulo VI
+82,10430,Recreio
+83,10430,Santa Cruz
+84,10430,Santa Izabel
+85,10430,Santa Rita
+86,10430,São João
+87,10430,São Luís
+88,10537,Centro
+89,10537,Dos Ulisses
+90,10537,José da Cunha Frota
+91,10537,Santa Luzia
+92,10537,Santa Teresinha
+93,10537,São Francisco
+94,10537,São Pedro
+95,10570,Aeroporto I
+96,10570,Aeroporto II
+97,10570,Beira Rio
+98,10570,Buritizinho
+99,10570,Centro
+100,10570,Limoeiro
+101,10570,Morro do Pequi
+102,10570,Nova Corrente
+103,10570,Olaria
+104,10570,Primavera
+105,10570,Projetado
+106,10570,Projeto Piauí
+107,10570,Sincerino
+108,10570,Vermelhão
+109,10570,Vila Nova
+110,10693,Capitão Mundoco
+111,10693,Centro
+112,10693,Cirino
+113,10693,Do Fio
+114,10693,Eufrasino Moura
+115,10693,Fátima
+116,10693,Grota do Feijão
+117,10693,Matadouro
+118,10693,Matias
+119,10693,Piçarra
+120,10693,Sambaíba
+121,10693,Santa Clara
+122,10693,Vermelha
+123,10693,Volta
+124,10693,Várzea Alegre
+125,10774,Alto da Cruz
+126,10774,Alto da Guia
+127,10774,Bom Lugar
+128,10774,Bosque Santa Teresinha
+129,10774,Caixa D'Água
+130,10774,Cajueiro II
+131,10774,Campo Velho
+132,10774,Cancela
+133,10774,Canoas
+134,10774,Catumbi
+135,10774,Centro
+136,10774,Curador
+137,10774,Curtume
+138,10774,Hermes Pacheco
+139,10774,Ibiapaba
+140,10774,Irapuã I
+141,10774,Irapuã II
+142,10774,Juá
+143,10774,Manguinha
+144,10774,Matadouro
+145,10774,Meladão
+146,10774,Nossa Senhora da Guia
+147,10774,Paraíso
+148,10774,Pau Ferrado
+149,10774,Pedro Simplício
+150,10774,Planalto Bela Vista
+151,10774,Planalto Sambaíba
+152,10774,Princesa do Sul
+153,10774,Rede Nova
+154,10774,Riacho Fundo
+155,10774,Sambaíba Nova
+156,10774,Sambaíba Velha
+157,10774,Santa Rita
+158,10774,São Borja
+159,10774,São Cristóvão
+160,10774,Taboca
+161,10774,Tamboril
+162,10774,Tiberão
+163,10774,Viazul
+164,10774,Vila Leão
+165,10820,Baixão
+166,10820,Cal
+167,10820,Centro
+168,10820,São Vicente de Paula
+169,10820,Tatus
+170,10340,Abílio Marques
+171,10340,Betel
+172,10340,Centro
+173,11134,Alto Bonito
+174,11134,Alto do Murici
+175,11134,Atalaia
+176,11134,Beira Mar
+177,11134,Cearazinho
+178,11134,Cemitério
+179,11134,Centro
+180,11134,Coqueiro
+181,11134,Dunas
+182,11134,Santa Luzia
+183,11134,Triângulo
+184,11134,Vista do Atlântico
+185,11533,Alberto Silva
+186,11533,Almira Silva
+187,11533,Alto Santa Maria
+188,11533,Bebedouro
+189,11533,Boa Esperança
+190,11533,Campos
+191,11533,Cantagalo
+192,11533,Carpina
+193,11533,Ceará
+194,11533,Centro
+195,11533,Chafariz
+196,11533,Cristo Rei
+197,11533,De Fátima
+198,11533,Dirceu Arcoverde
+199,11533,Do Carmo
+200,11533,Dom Rufino
+201,11533,Floriópolis
+202,11533,Frei Higino
+203,11533,Igaraçu
+204,11533,Joaz Souza
+205,11533,João XXIII
+206,11533,Lagoa da Prata
+207,11533,Mendonça Clark
+208,11533,Nossa Senhora Montserrat
+209,11533,Nova Parnaíba
+210,11533,Piauí
+211,11533,Pindorama
+212,11533,Portinho
+213,11533,Primavera
+214,11533,Raul Bacelar
+215,11533,Reis Veloso
+216,11533,Rodoviária
+217,11533,Sabiazal
+218,11533,Santa Isabel
+219,11533,Santa Luzia
+220,11533,Santa Teresinha
+221,11533,Simplício Dias
+222,11533,São Benedito
+223,11533,São Francisco da Guarita
+224,11533,São José
+225,11533,São João
+226,11533,São Judas Tadeu
+227,11533,São Pedro
+228,11533,São Vicente de Paula
+229,11533,Tabuleiro
+230,11533,Vicente Correia
+231,11550,Arapiraca
+232,11550,Boa Vista
+233,11550,Centro
+234,11550,Choró
+235,11550,Cohab
+236,11550,Correnteza
+237,11550,Estação
+238,11550,Guarita
+239,11550,Industrial
+240,11550,Jardim Paulistana
+241,11550,Lagoa
+242,11550,Maninho
+243,11550,Paulista Grande
+244,11550,Santo Antônio
+245,11550,Sertanejo
+246,11550,São Francisco
+247,11550,Triângulo
+248,11592,Aerolândia
+249,11592,Altamira
+250,11592,Aroeiras
+251,11592,Bela Vista
+252,11592,Boa Sorte
+253,11592,Boa Vista
+254,11592,Bomba
+255,11592,Canto da Várzea
+256,11592,Catavento
+257,11592,Centro
+258,11592,Conduru
+259,11592,De Fátima
+260,11592,Dner
+261,11592,Ipueiras
+262,11592,Jardim Natal
+263,11592,Junco
+264,11592,Malva
+265,11592,Marco de Sousa
+266,11592,Morada do Sol
+267,11592,Paraibinha
+268,11592,Paroquial
+269,11592,Parque Industrial (Pantanal)
+270,11592,Parque de Exposição
+271,11592,Passagem das Pedras
+272,11592,Pedrinhas
+273,11592,São José
+274,11592,Trizidela
+275,11657,Aquidaban
+276,11657,Baixa da Ema
+277,11657,Centro
+278,11657,Colibri
+279,11657,Esplanada
+280,11657,Fátima
+281,11657,Guarani
+282,11657,Mutirão
+283,11657,Nova Esperança
+284,11657,Olho D’Água
+285,11657,Três Lagoas
+286,11673,Anajás
+287,11673,Barcelona
+288,11673,Caixa D'Água
+289,11673,Campo das Palmas
+290,11673,Centro
+291,11673,Conceição
+292,11673,Crioli
+293,11673,Estação
+294,11673,Flor dos Campos
+295,11673,Floresta
+296,11673,Fonte dos Matos
+297,11673,Garibaldi
+298,11673,"Germano, Conjunto Joquinha Cruz e Conjunto IAPEP Germano"
+299,11673,Jenipapeiro
+300,11673,Matadouro
+301,11673,Morro da Ana
+302,11673,Morro da Saudade
+303,11673,Paciência
+304,11673,Pedreiras
+305,11673,"Petecas e Residenciais Petecas 1, 2, 3 e 4"
+306,11673,Prado
+307,11673,Recreio e Residencial Parque Recreio
+308,11673,Residencial Abdias Monteiro
+309,11673,Russinha e Residencial Russinha IAPEP
+310,11673,Santa Maria
+311,11673,São Francisco
+312,11673,São João e Residenciais José Amâncio e Nova Alegria
+313,11673,Vila Madrid
+314,11673,Vista Alegre
+315,11673,Ytacoatiara
+316,11770,Barreiras
+317,11770,Bela Vista
+318,11770,Centro
+319,11770,Serrinha
+320,11770,Vila Nova
+321,11916,Alto Vermelho
+322,11916,Areia Branca
+323,11916,Centro
+324,11916,Clube do Vaqueiro
+325,11916,Conjunto Afonso Veim
+326,11916,Ingá
+327,11916,Olho d'Água de São Félix
+328,11916,Santa Teresinha
+329,11916,Santo Antônio
+330,11916,São Sebastião
+331,12130,Alto Vistoso
+332,12130,Anselmo
+333,12130,Bela Vista
+334,12130,Centro
+335,12130,Clementino Coelho
+336,12130,Conjunto Habitacional Soledade II
+337,12130,Soledade
+338,12130,São Raimundo
+339,12130,Veneza
+340,12157,Nova Cidade
+341,12157,São Francisco
+342,12190,Acarapé
+343,12190,Aeroporto
+344,12190,Alegre
+345,12190,Alto Alegre
+346,12190,Angelica
+347,12190,Angelim
+348,12190,Areias
+349,12190,Aroeiras
+350,12190,Beira Rio
+351,12190,Bela Vista
+352,12190,Bom Jesus
+353,12190,Bom Princípio
+354,12190,Brasilar
+355,12190,Buenos Aires
+356,12190,Cabral
+357,12190,Campestre
+358,12190,Catarina
+359,12190,Centro
+360,12190,Chapadinha
+361,12190,Cidade Nova
+362,12190,Cidade jardim
+363,12190,Colorado
+364,12190,Comprida
+365,12190,Cristo Rei
+366,12190,Distrito Industrial
+367,12190,Embrapa
+368,12190,Esplanada
+369,12190,Extrema
+370,12190,Flor do campo
+371,12190,Frei Serafim
+372,12190,Fátima
+373,12190,Gurupi
+374,12190,Horto
+375,12190,Ilhotas
+376,12190,Iningá
+377,12190,Itaperu
+378,12190,Itararé
+379,12190,Jacinta Andrade
+380,12190,Jóquei
+381,12190,Livramento
+382,12190,Lourival Parente
+383,12190,Macaúba
+384,12190,Mafrense
+385,12190,Mafuá
+386,12190,Marquês de Paranaguá
+387,12190,Matadouro
+388,12190,Matinha
+389,12190,Memorare
+390,12190,Mocambinho
+391,12190,Monte Verde
+392,12190,Monte castelo
+393,12190,Morada Nova
+394,12190,Morada do Sol
+395,12190,Morro da Esperança
+396,12190,Morros
+397,12190,N.S.das Graças
+398,12190,Noivos
+399,12190,Nova Brasília
+400,12190,Novo Horizonte
+401,12190,Novo Uruguai
+402,12190,Olarias
+403,12190,Parque Alvorada
+404,12190,Parque Brasil
+405,12190,Parque Ideal
+406,12190,Parque Jacinta
+407,12190,Parque Juliana
+408,12190,Parque Poti
+409,12190,Parque Sul
+410,12190,Parque São João
+411,12190,Parque do Piauí
+412,12190,Pedra Miúda
+413,12190,Pedra Mole
+414,12190,Pio XII
+415,12190,Pirajá
+416,12190,Piçarra
+417,12190,Piçarreira
+418,12190,Planalto
+419,12190,Por Enquanto
+420,12190,Portal da Alegria
+421,12190,Porto do Centro
+422,12190,Poti Velho
+423,12190,Primavera
+424,12190,Promorar
+425,12190,Real Copagri
+426,12190,Recanto das Palmeiras
+427,12190,Redenção
+428,12190,Redonda
+429,12190,Renascença
+430,12190,Saci
+431,12190,Samapi
+432,12190,Santa Cruz
+433,12190,Santa Isabel
+434,12190,Santa Lia
+435,12190,Santa Luzia
+436,12190,Santa Maria
+437,12190,Santa Rosa
+438,12190,Santo Antônio
+439,12190,Satélite
+440,12190,Socopó
+441,12190,São Cristóvão
+442,12190,São Joaquim
+443,12190,São João
+444,12190,São Lourenço
+445,12190,São Pedro
+446,12190,São Raimundo
+447,12190,São Sebastião
+448,12190,Tabajaras
+449,12190,Tabuleta
+450,12190,Tancredo Neves
+451,12190,Todos os Santos
+452,12190,Triunfo
+453,12190,Três Andares
+454,12190,Uruguai
+455,12190,Vale Quem Tem
+456,12190,Vale do Gavião
+457,12190,Verde Lar
+458,12190,Verdecap
+459,12190,Vermelha
+460,12190,Vila Operária
+461,12190,Vila São Francisco
+462,12190,Zoobotânico
+463,12190,Água Mineral
+464,12190,Árvores Verdes
+465,12211,Areias
+466,12211,Beira Rio
+467,12211,Buritizinho
+468,12211,Centro
+469,12211,Cruzeiro
+470,12211,Dos Cocos
+471,12211,Nossa Senhora das Graças
+472,12211,São Francisco
+473,12211,São José
+474,12211,São João
+475,12211,São Judas Tadeu
+476,12211,São Pedro
+477,12211,São Sebastião
+478,12211,Vila Nova Conquista

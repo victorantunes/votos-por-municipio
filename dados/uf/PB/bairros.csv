@@ -1,0 +1,258 @@
+b,cd_tse,nome
+0,19372,Alto da Boa Vista
+1,19372,Baralho
+2,19372,Brasília
+3,19372,Centro
+4,19372,Comercial Norte
+5,19372,Imaculada
+6,19372,Jardim Aeroporto
+7,19372,Jardim São Severino
+8,19372,Jardim São Vicente
+9,19372,Mário Andreazza
+10,19372,Rio do Meio
+11,19372,Sesi
+12,19372,São Bento
+13,19372,Tambay
+14,19658,Amazônia Park
+15,19658,Areia Dourada
+16,19658,Camalaú
+17,19658,Camboinha
+18,19658,Centro
+19,19658,Formosa
+20,19658,Intermares
+21,19658,Jacaré
+22,19658,Jardim América
+23,19658,Jardim Brasília
+24,19658,Jardim Camboinha
+25,19658,Jardim Manguinhos
+26,19658,Monte Castelo
+27,19658,Morada Nova
+28,19658,Parque Esperança
+29,19658,Parque Verde
+30,19658,Ponta de Campina
+31,19658,Ponta de Matos
+32,19658,Portal do Poço
+33,19658,Poço
+34,19658,Recanto do Poço
+35,19658,Renascer
+36,19658,Salinas Ribamar
+37,19658,Santa Catarina
+38,19810,Acácio Figueiredo
+39,19810,Alto Branco
+40,19810,Aluizio Afonso Campos
+41,19810,Araxá
+42,19810,Bela Vista
+43,19810,Bento Figueiredo
+44,19810,Bodocongó
+45,19810,Castelo Branco
+46,19810,Catirina
+47,19810,Catolé
+48,19810,Centenário
+49,19810,Centro de Campina Grande
+50,19810,Cidades
+51,19810,Conceição
+52,19810,Cruzeiro
+53,19810,Cuités
+54,19810,Dinamérica
+55,19810,Distrito Industrial
+56,19810,Estação Velha
+57,19810,Itararé
+58,19810,Jardim Continental
+59,19810,Jardim Itararé
+60,19810,Jardim Paulistano
+61,19810,Jardim Quarenta
+62,19810,Jardim Tavares
+63,19810,Jeremias
+64,19810,José Pinheiro
+65,19810,Lagoa de Dentro
+66,19810,Lauritzen
+67,19810,Liberdade
+68,19810,Louzeiro
+69,19810,Malvinas
+70,19810,Mirante
+71,19810,Monte Castelo
+72,19810,Monte Santo
+73,19810,Nações
+74,19810,Nova Brasília
+75,19810,Novo Bodocongó
+76,19810,Palmeira
+77,19810,Palmeira Imperial
+78,19810,Pedregal
+79,19810,Prata
+80,19810,Presidente Médici
+81,19810,Quarenta
+82,19810,Ramadinha
+83,19810,Ronaldo Cunha Lima
+84,19810,Sandra Cavalcante
+85,19810,Santa Cruz
+86,19810,Santa Rosa
+87,19810,Santa Terezinha
+88,19810,Santo Antônio
+89,19810,Serrotão
+90,19810,São Januário
+91,19810,São José
+92,19810,Tambor
+93,19810,Tropeiros da Borborema
+94,19810,Três Irmãs
+95,19810,Universitário
+96,19810,Velame
+97,19810,Vila Cabral
+98,20370,Bela Vista
+99,20370,Cazuzinha
+100,20370,Centro
+101,20370,Estação
+102,20370,Imbioca
+103,20370,Jardim Farias
+104,20370,Senzala
+105,20397,Alto Alegre
+106,20397,Açude das Pedras
+107,20397,Botafogo
+108,20397,Centro
+109,20397,Conjunto Costa e Silva
+110,20397,Conjunto Habitacional Dr. Aglair da Silva
+111,20397,Conjunto José Benedito da Silveira
+112,20397,Conjunto José Justino de Paiva
+113,20397,Conjunto Luis Saraiva de Araújo
+114,20397,Conjunto Residencial Antônio Mariz
+115,20397,Conjunto Residencial Luis Félix de Almeida
+116,20397,José Bandeira Júnior
+117,20397,Jucuri
+118,20397,Justino Cabral de Melo
+119,20397,Loteamento Anel Viário
+120,20397,Nova Itabaiana
+121,20516,Aeroclube
+122,20516,Altiplano Cabo Branco
+123,20516,Alto do Céu
+124,20516,Alto do Mateus
+125,20516,Anatólia
+126,20516,Bancários
+127,20516,Barra de Gramame
+128,20516,Bessa
+129,20516,Brisamar
+130,20516,Cabo Branco
+131,20516,Castelo Branco
+132,20516,Centro
+133,20516,Cidade dos Colibris
+134,20516,Costa do Sol
+135,20516,Costa e Silva
+136,20516,Cristo Redentor
+137,20516,Cruz das Armas
+138,20516,Cuiá
+139,20516,Distrito Industrial
+140,20516,Ernani Sátiro
+141,20516,Ernesto Geisel
+142,20516,Estados
+143,20516,Expedicionários
+144,20516,Funcionários
+145,20516,Gramame
+146,20516,Grotão
+147,20516,Ilha do Bispo
+148,20516,Indústrias
+149,20516,Ipês
+150,20516,Jaguaribe
+151,20516,Jardim Cidade Universitária
+152,20516,Jardim Oceania
+153,20516,Jardim São Paulo
+154,20516,Jardim Veneza
+155,20516,José Américo
+156,20516,João Agripino
+157,20516,João Paulo II
+158,20516,Manaíra
+159,20516,Mandacarú
+160,20516,Mangabeira
+161,20516,Miramar
+162,20516,Mumbaba
+163,20516,Mussuré
+164,20516,Muçumagro
+165,20516,Oitizeiro
+166,20516,Padre Zé
+167,20516,Paratibe
+168,20516,Pedro Gondim
+169,20516,Penha
+170,20516,Planalto da Boa Esperança
+171,20516,Ponta do Seixas
+172,20516,Portal do Sol
+173,20516,Roger
+174,20516,São José
+175,20516,Tambauzinho
+176,20516,Tambaú
+177,20516,Tambiá
+178,20516,Torre
+179,20516,Treze de Maio
+180,20516,Trincheiras
+181,20516,Valentina
+182,20516,Varadouro
+183,20516,Varjão
+184,20516,Água Fria
+185,21172,Alto da Tubiba
+186,21172,Ana Leite
+187,21172,Bela Vista
+188,21172,Belo Horizonte
+189,21172,Bivar Olinto
+190,21172,Brasília
+191,21172,Centro
+192,21172,Distrito Industrial
+193,21172,Jardim Magnólia
+194,21172,Jatobá
+195,21172,Liberdade
+196,21172,Maternidade
+197,21172,Monte Castelo
+198,21172,Morada do Sol
+199,21172,Morro
+200,21172,Nova Conquista
+201,21172,Novo Horizonte
+202,21172,Noé Trajano
+203,21172,Salgadinho
+204,21172,Santa Cecília
+205,21172,Santo Antônio
+206,21172,Sete Casas
+207,21172,São Sebastião
+208,21431,Centro
+209,21431,Jardim Rogério
+210,21431,Nova Vida
+211,21431,Pereiros
+212,21431,Santa Rosa
+213,21695,Antônio Bento
+214,21695,Centro
+215,21695,Frei Damião
+216,21695,Nossa Senhora de Fátima
+217,21695,São José
+218,21695,São Sebastião
+219,21750,Açude
+220,21750,Centro
+221,21750,Distrito Industrial Flávio Ribeiro Coutinho
+222,21750,Distrito de Várzea Nova
+223,21750,Heitel Santiago
+224,21750,Jardim Carolina
+225,21750,Jardim Europa
+226,21750,Jardins
+227,21750,Marcos Moura
+228,21750,Naelson Panta Júnior
+229,21750,Popular
+230,21750,Portal de Tibiri
+231,21750,Privê Aeroporto
+232,21750,Santo Amaro
+233,21750,Tibiri
+234,21750,Vale das Águas
+235,21750,Vale de Santa Rita
+236,21750,Vidal de Negreiros
+237,19860,Bento Soares da Silva
+238,19860,Francisco Chagas de Andrade
+239,19860,Maria Ivone Silveira Pereira
+240,19860,Raimunda Gabriel de Sousa
+241,22276,Alto Alegre
+242,22276,Alto da Caixa d’Água
+243,22276,Alto do Jorge
+244,22276,Alvorada
+245,22276,Carro Quebrado
+246,22276,Centro
+247,22276,Conjunto Habitacional Pedro Ferreira Filho
+248,22276,Conjunto Habitacional Sebastião Vitorino
+249,22276,Frei Damião
+250,22276,Mandacaru
+251,22276,Oriente
+252,22276,Pedregal
+253,22276,Renascer
+254,22276,Santa Rosa
+255,22276,Várzea Redonda
+256,22276,Zé Marcolino

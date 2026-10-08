@@ -239,7 +239,7 @@
     <label>Colorir por <select id="metrica"></select></label>
     <label class="so-br">UF <select id="uf"><option value="">Brasil</option></select></label>
     <label class="only-map">Visualização <select id="modo"><option value="poli">Polígonos (municípios)</option><option value="circ">Círculos</option></select></label>
-    <label class="so-rn" id="lblGran" title="Mostra os votos por bairro (onde o IBGE tem a divisão) e por local de votação, somando as seções eleitorais"><input type="checkbox" id="gran"> Detalhar por bairro e local de votação</label>
+    <label id="lblGran" title="Mostra os votos por bairro (onde o IBGE tem a divisão) e por local de votação, somando as seções eleitorais"><input type="checkbox" id="gran"> Detalhar por bairro e local de votação</label>
     <div class="sb only-map"><input type="search" id="buscamapa" placeholder="Buscar município no mapa..." autocomplete="off" aria-label="Buscar município no mapa"><ul class="sug" id="sugestoes" role="listbox"></ul></div>
     <label class="only-disp"><input type="search" id="busca" placeholder="Buscar município..."></label>
     <label class="only-disp so-br"><input type="checkbox" id="cinza" checked> Outros estados em cinza</label>
@@ -362,18 +362,18 @@
         <p>Cada pessoa pode ter concorrido a cargos diferentes ao longo dos anos, então os dados separam três coisas. A <b>disputa</b> é a eleição de um cargo em um ano e turno, por exemplo Governador 2022 ou Vereador 2020. A <b>candidatura</b> é um candidato em uma disputa. A <b>pessoa</b> reúne todas as candidaturas de um mesmo candidato, ligadas pelo título de eleitor no cadastro do TSE (o número só é usado para ligar os anos e os estados e não é publicado). Isso permite acompanhar, por exemplo, quem foi candidato a vereador em 2020 e a deputado federal em 2026.</p>
         <p>No topo da página, o <b>tipo de mapa</b> define o que cada candidato mostra:</p>
         <ul>
-          <li><b>Comparar com 2026:</b> para quem concorreu em 2020, 2022 ou 2024 e também em 2026. A candidatura A é a anterior (por padrão, do mesmo cargo, como deputado estadual 2022, ou a mais recente se não houver) e a B é a de 2026. Dá para trocar a A por qualquer outra candidatura anterior da mesma pessoa. O mapa mostra, município a município, quanto a votação mudou. A soma do PT e Lula também entram nesse tipo.</li>
+          <li><b>Comparar com 2026:</b> para quem concorreu em 2020, 2022 ou 2024 e também em 2026. A candidatura A é a anterior (por padrão, do mesmo cargo, como deputado estadual 2022, ou a mais recente se não houver) e a B é a de 2026. Dá para trocar a A por qualquer outra candidatura anterior da mesma pessoa. O mapa mostra, município a município, quanto a votação mudou. A soma do PT também entra nesse tipo.</li>
           <li><b>Analisar isoladamente:</b> mostra uma única candidatura, de qualquer candidato e ano, sem comparar com outros anos nem com outros candidatos. O mapa, a dispersão e os números do topo usam só essa candidatura. Escolha o candidato e, em Candidatura, o cargo e o ano. Funciona também para quem estreou em 2026, que não tem votação anterior.</li>
-          <li><b>Qualquer cargo e ano:</b> escolha livremente a candidatura A e, se quiser, a B, de qualquer pessoa, da soma do PT ou de Lula.</li>
+          <li><b>Qualquer cargo e ano:</b> escolha livremente a candidatura A e, se quiser, a B, de qualquer pessoa ou da soma do PT.</li>
         </ul>
         <p>Escolha o candidato no campo de busca e depois as candidaturas A e B. As cores, o gráfico de dispersão e as estatísticas do topo passam a mostrar B em relação a A.</p>
         <h3>Um estado por vez e candidatos de mais de um estado</h3>
         <p>O mapa mostra um estado por vez, escolhido ao lado de "Lula no Brasil", e as candidaturas A e B de uma comparação são sempre do mesmo estado, porque cada uma tem votos em um conjunto de municípios. Quando a mesma pessoa foi candidata em estados diferentes (por exemplo, vereadora em um estado em 2020 e deputada federal em outro em 2026), ela aparece em cada um desses estados, só com os votos que recebeu ali, e um aviso abaixo do mapa lista as candidaturas dos outros estados com um link para abri-las. A busca de candidatos também encontra pessoas de outros estados, e ao escolher uma delas o site abre o estado dela. Pessoas diferentes com o mesmo nome continuam separadas, porque a ligação não é feita pelo nome.</p>
         <h3>O que entrou</h3>
         <ul>
-          <li>As <b><span id="dNP"></span> pessoas</b> que foram candidatas pelo PT em <span class="dUF"></span> em 2020 e 2024 (prefeito e vereador), em 2022 e em 2026 (governador, senador, deputados), mais Lula, com os votos que recebeu no estado. Os cargos de deputado variam com o estado (no Distrito Federal, por exemplo, o cargo estadual é o de distrital). São <span id="dNC"></span> candidaturas do PT com votos próprios nessas disputas. Quando uma dessas pessoas concorreu por outro partido no outro ano, essa candidatura também aparece, identificada pelo partido.</li>
+          <li>As <b><span id="dNP"></span> pessoas</b> que foram candidatas pelo PT em <span class="dUF"></span> em 2020 e 2024 (prefeito e vereador), em 2022 e em 2026 (governador, senador, deputados). Os cargos de deputado variam com o estado (no Distrito Federal, por exemplo, o cargo estadual é o de distrital). São <span id="dNC"></span> candidaturas do PT com votos próprios nessas disputas. Quando uma dessas pessoas concorreu por outro partido no outro ano, essa candidatura também aparece, identificada pelo partido.</li>
           <li>Em cada disputa, a <b>soma do PT</b> reúne os votos nominais de todos os candidatos do partido. Nas eleições de 2020 e 2024 ela só existe nos municípios em que o PT lançou candidatos.</li>
-          <li>Lula aparece com o 1º e o 2º turnos de 2022 e o 1º turno de 2026, só com os votos dos <span id="dNM"></span> municípios do estado.</li>
+          <li>O recorte considera os <span id="dNM"></span> municípios do estado. Lula, que concorreu a presidente, tem o próprio recorte, "Lula no Brasil".</li>
         </ul>
         <h3>O que ficou de fora</h3>
         <ul>
@@ -389,7 +389,7 @@
         <p>Marcando "Detalhar por bairro e local de votação", o mapa mostra os votos abaixo do nível do município. O TSE publica os votos de cada seção eleitoral e, para cada local de votação, o endereço, o bairro, as coordenadas e o número de eleitores por seção. A página soma as seções de cada local e atribui o local ao bairro do IBGE (Censo 2022) que o contém.</p>
         <ul>
           <li id="dBair"></li>
-          <li>Para comparar anos diferentes (por exemplo, vereador de 2024 com deputado federal de 2026), a unidade é o bairro e, fora dos bairros, o local de votação que existe nos dois anos (mesmo nome e mesmo bairro no cadastro do TSE) ou, na falta dele, o município ou a parte dele fora dos bairros. Isso porque os locais de votação mudam de um ano para outro, então só o bairro é estável. Os locais que existem nos dois anos cobrem a maior parte do eleitorado, e o restante do município aparece como "demais locais".</li>
+          <li>Para comparar anos diferentes (por exemplo, vereador de 2024 com deputado federal de 2026), a unidade é o bairro e, onde não há bairro, o município (ou a parte dele fora dos bairros). Isso porque os locais de votação mudam de um ano para outro, então só o bairro é estável. A exceção é o Distrito Federal, que é um único município sem bairros no IBGE: ali a unidade é o local de votação que existe nos dois anos (mesmo nome e mesmo bairro no cadastro do TSE), e o restante aparece como "demais locais".</li>
           <li>O fundo do mapa mostra o município inteiro, mais claro e com as mesmas faixas de cor, para a parte que não pertence a nenhum bairro do IBGE (como a zona rural) não ficar em branco.</li>
           <li>O bairro é o do local de votação e não o de residência do eleitor. Seções agregadas e urnas de contingência são somadas no local. Alguns locais não tinham coordenada e receberam a posição média dos locais do mesmo bairro. Locais fora de qualquer bairro do IBGE foram ligados ao bairro mais próximo, até 2 km.</li>
           <li>A soma das seções pode diferir do total do município em até cerca de 2%, porque votos anulados depois da eleição aparecem nas seções. Candidaturas com votos anulados não têm esse detalhe.</li>
@@ -444,6 +444,8 @@
           <li>Os dados de 2022 vêm dos resultados de votação por município do TSE. Os de 2026 vêm dos boletins de urna do 1º turno, divulgados em 05/10/2026, somados por município.</li>
           <li>O exterior não entra, porque não é município. Boa Esperança do Norte (MT) foi criada a partir de Sorriso e só existe em 2026, então os votos dos dois foram somados em "Sorriso (com Boa Esperança do Norte)", para manter o território de 2022.</li>
         </ul>
+        <h2>Detalhe por bairro e local de votação</h2>
+        <p>Depois de escolher uma UF, o campo "Detalhar por bairro e local de votação" mostra os votos de Lula abaixo do município, somando as seções eleitorais de cada local de votação e, onde o IBGE tem a divisão, de cada bairro. O método é o mesmo da análise por estado (veja a aba "Dados e método" de qualquer estado), e só os arquivos da UF escolhida são carregados.</p>
         <h2>Cuidados na leitura</h2>
         <ul>
           <li>O 2º turno de 2022 teve dois candidatos e o 1º turno de 2026 teve vários. Em 2026, Lula somou 45,2% dos votos válidos e Flávio Bolsonaro, 47,0%. Parte da diferença em pontos percentuais vem da mudança no número de candidatos, e não de eleitores que deixaram de votar em Lula.</li>
@@ -512,7 +514,7 @@ const TAM = [
 ];
 const titulo = (id, js) => id === 'br'
   ? {h1: 'Lula em 2022 e 2026, município a município', sub: 'Votos de Lula para presidente em cada um dos 5.570 municípios do Brasil, com abstenção, brancos e nulos: 1º e 2º turnos de 2022 e 1º turno de 2026, com dados abertos do TSE.'}
-  : {h1: `Candidatos do PT: ${js.nome_uf}, de 2020 a 2026`, sub: `Votos dos candidatos do PT ${js.mun.length === 1 ? 'no único município' : 'em cada um dos ' + fmt(js.mun.length) + ' municípios'} de ${js.uf}, nos cargos disputados em 2020, 2022, 2024 e 2026, com abstenção, brancos e nulos. Há três modos: comparar quem concorreu antes com 2026, analisar uma candidatura isoladamente e comparar quaisquer candidaturas. Lula entra com os votos que recebeu no estado.`};
+  : {h1: `Candidatos do PT: ${js.nome_uf}, de 2020 a 2026`, sub: `Votos dos candidatos do PT ${js.mun.length === 1 ? 'no único município' : 'em cada um dos ' + fmt(js.mun.length) + ' municípios'} de ${js.uf}, nos cargos disputados em 2020, 2022, 2024 e 2026, com abstenção, brancos e nulos. Há três modos: comparar quem concorreu antes com 2026, analisar uma candidatura isoladamente e comparar quaisquer candidaturas.`};
 
 /* ------------------------------------------------ dados do recorte atual */
 let E = null, M = [], N = 0, EM = null;  // E, M e N são o conjunto de dados atual; EM guarda o de municípios
@@ -543,7 +545,7 @@ function preparar(js) {
 function carregarEscopo(id) {
   if (cacheEsc[id]) return Promise.resolve(cacheEsc[id]);
   const url = id === 'br' ? 'dados/escopo_br.json' : 'dados/uf/' + id + '.json';
-  return fetch(url + '?v=20261008011145').then(r => { if (!r.ok) throw new Error('escopo'); return r.json(); }).then(js => {
+  return fetch(url + '?v=20261008031657').then(r => { if (!r.ok) throw new Error('escopo'); return r.json(); }).then(js => {
     cacheEsc[id] = preparar(js); ordemCache.push(id);
     while (ordemCache.length > 3) delete cacheEsc[ordemCache.shift()];  // guarda só os últimos recortes, para não acumular memória
     return cacheEsc[id];
@@ -561,7 +563,7 @@ const cB = () => S.B === null ? null : vv(E.cand[S.B]);
 const nomeC = c => c.agg ? 'PT' : c.n;
 const votosDe = c => (c.agg ? 'Votos do ' : 'Votos de ') + rotC(c);
 const rotC = c => nomeC(c) + ', ' + c.d.curto + (c.ue ? ' (' + c.ue + ')' : '');
-const noUF = i => !S.uf || M[i].u === S.uf;
+const noUF = i => !S.uf || G.on || M[i].u === S.uf;
 const noBusca = i => !S.termo || M[i].n.toLowerCase().includes(S.termo);
 
 /* ------------------------------------------------ medidas e classes */
@@ -649,7 +651,7 @@ function detalhe(i) {
   return h;
 }
 function pinTxt(i) {
-  const m = M[i], A = cA(), B = cB(), s = `${m.n}${S.escopo === 'br' ? '-' + m.u : ''}`;
+  const m = M[i], A = cA(), B = cB(), s = `${m.n}${S.escopo === 'br' && !G.on ? '-' + m.u : ''}`;
   if (B && ok(A.vv[i]) && ok(B.vv[i])) return `${s} (${f1(B.vv[i] - A.vv[i], 0)} | ${f1(B.pv[i] - A.pv[i], 1)} pp)`;
   if (ok(A.vv[i])) return `${s} (${fmt(A.vv[i])} | ${fp(A.pv[i])})`;
   return s;
@@ -709,7 +711,7 @@ function atualizarTopo() {
   }
   if (A.semGran || (B && B.semGran)) extra += ' Esta candidatura não tem detalhe por local de votação (votos anulados depois da eleição).';
   extra += avisoFora();
-  const gran = G.on ? ` <span class="cz">Detalhe por ${E.modoUnidades === 'ano' ? 'bairro e local de votação' : 'bairro, local de votação que existe nos dois anos e município (no restante)'}.</span>` : '';
+  const gran = G.on ? ` <span class="cz">Detalhe por ${E.modoUnidades === 'ano' ? 'bairro e local de votação' : E.unico ? 'local de votação que existe nos dois anos e restante do município' : 'bairro (e município, onde o IBGE não tem bairros)'}.</span>` : '';
   $('selinfo').innerHTML = (B ? `Comparando <b>${esc(rotC(A))}</b> (A) com <b>${esc(rotC(B))}</b> (B), ${onde}.` : `Mostrando <b>${esc(rotC(A))}</b>, ${onde}.`) + extra + gran;
 }
 
@@ -901,11 +903,11 @@ const estiloPoli = i => {
   return {fillColor: cor(i), fillOpacity: fo, color: pin ? '#000' : branca ? '#ffffff' : cor(i), weight: pin ? 2.6 : on ? (branca ? w : 0.7) : 0, opacity: pin ? 1 : branca ? 0.9 : fo};
 };
 function clicarMapa(i) { S.pins.has(i) ? S.pins.delete(i) : S.pins.add(i); contador(); $('info').innerHTML = detalhe(i); pintarMapa(); }
-const baixarJSON = u => malhas[u] || (malhas[u] = fetch(u + '?v=20261008011145').then(r => { if (!r.ok) throw new Error(u); return r.json(); }).catch(e => { delete malhas[u]; throw e; }));
+const baixarJSON = u => malhas[u] || (malhas[u] = fetch(u + '?v=20261008031657').then(r => { if (!r.ok) throw new Error(u); return r.json(); }).catch(e => { delete malhas[u]; throw e; }));
 const NOTA_GRAN = (modo, poli) => {
   const ib = E.infoB, tem = ib && ib.n > 0, fora = tem ? 'nos demais, e fora dos bairros (como a zona rural), ' : '';
   const bairros = tem ? `O IBGE só tem bairros para ${ib.n} dos ${fmt(ib.total)} municípios, que reúnem cerca de ${ib.pct}% do eleitorado` : 'O IBGE não tem a divisão em bairros para os municípios deste estado';
-  const un = modo === 'ano' ? `${fora}cada local de votação aparece como um ponto.` : `${fora}a unidade é o local de votação que existe nos dois anos (mesmo nome e bairro no cadastro do TSE) ou, na falta dele, o município ou a parte dele fora dos bairros, porque a comparação entre anos precisa de uma divisão estável (os locais de votação mudam de um ano para outro).`;
+  const un = modo === 'ano' ? `${fora}cada local de votação aparece como um ponto.` : E.unico ? 'a unidade é o local de votação que existe nos dois anos (mesmo nome e bairro no cadastro do TSE) ou, na falta dele, o restante do município, porque a comparação entre anos precisa de uma divisão estável (os locais de votação mudam de um ano para outro).' : `${fora}a unidade é o município, ou a parte dele fora dos bairros, porque a comparação entre anos precisa de uma divisão estável (os locais de votação mudam de um ano para outro).`;
   return 'Detalhe por bairro e local de votação: os votos de cada seção eleitoral são somados no local onde o eleitor vota, e o local é atribuído ao bairro do IBGE (Censo 2022) que o contém. O bairro é o do local de votação, e não necessariamente o de residência do eleitor. ' + bairros + '; ' + un +
     ' As cores mais claras ao fundo mostram o município inteiro, com as mesmas faixas. As classes de cor usam percentis só entre as unidades mostradas. A soma das seções pode diferir um pouco do total do município, por causa de votos anulados depois da eleição. Clique em uma unidade para marcar o nome, ou use a busca, e Limpar marcações para remover.' + (poli ? ' Troque para círculos, proporcionais ao número de eleitores, se preferir.' : ' Troque para polígonos para ver os limites.');
 };
@@ -914,16 +916,16 @@ function ligarUnidade(camada, i) {
   camada.on('mouseover', () => { $('info').innerHTML = detalhe(i); }); camada.on('click', () => clicarMapa(i));
 }
 function construirPoli() {
-  const escopo = S.escopo, gran = G.on, uf = ehUF(), temB = gran && uf && !!(INFO[escopo] || {}).bairros;
+  const escopo = S.escopo, gran = G.on, uf = ehUF(), ufg = uf ? escopo : S.uf.toLowerCase(), temB = gran && !!(INFO[ufg] || {}).bairros;
   const arquivos = uf ? ['dados/malha/' + escopo + '.geojson'] : ['dados/municipios.geojson', 'dados/ufs.geojson'];  // a malha do estado traz os municípios e o contorno do estado
-  if (temB) arquivos.push('dados/bairros/' + escopo + '.geojson');
+  if (temB) arquivos.push('dados/bairros/' + ufg + '.geojson');
   return Promise.all(arquivos.map(baixarJSON)).then(res => {
     if (escopo !== S.escopo || gran !== G.on) return;
     const fs = uf ? res[0].features : null, gm = uf ? {type: 'FeatureCollection', features: fs.filter(f => f.properties.c)} : res[0],
-      gu = uf ? {type: 'FeatureCollection', features: fs.filter(f => f.properties.uf)} : res[1], gb = temB ? res[1] : null;
+      gu = uf ? {type: 'FeatureCollection', features: fs.filter(f => f.properties.uf)} : res[1], gb = temB ? res[uf ? 1 : 2] : null;
     const idx = new Map(); M.forEach((m, i) => { if (m.c) idx.set(m.c, i); }); polis = new Array(N);
     const idxM = new Map(EM.mun.map((m, i) => [m.c, i]));
-    camadaBase = gran ? L.geoJSON(gm, {renderer: rendPoli, interactive: false, style: f => estiloFundo(idxM.get(f.properties.c))}) : null;
+    camadaBase = gran ? L.geoJSON(gm, {renderer: rendPoli, interactive: false, filter: f => { const im = idxM.get(f.properties.c); return im !== undefined && (uf || EM.mun[im].u === S.uf); }, style: f => estiloFundo(idxM.get(f.properties.c))}) : null;
     if (camadaBase) camadaBase.eachLayer(l => { l._mi = idxM.get(l.feature.properties.c); });
     camadaPoli = L.geoJSON({type: 'FeatureCollection', features: gb ? gm.features.concat(gb.features) : gm.features}, {renderer: rendPoli, style: f => estiloPoli(idx.get(f.properties.c)), filter: f => idx.has(f.properties.c), onEachFeature: (f, layer) => {
       const i = idx.get(f.properties.c); polis[i] = layer;
@@ -940,7 +942,7 @@ function construirPoli() {
   });
 }
 function construirCirculos() {
-  const k = ehUF() ? (G.on ? 0.045 : 17 / Math.sqrt(Math.max(...M.map(m => m.ap || 0), 1))) : 0.0052;  // no estado, a maior bolinha tem cerca de 17 px
+  const k = G.on ? 0.045 : ehUF() ? 17 / Math.sqrt(Math.max(...M.map(m => m.ap || 0), 1)) : 0.0052;  // no estado, a maior bolinha tem cerca de 17 px
   marcadores = M.map((m, i) => { if (m.lat === null) return null;
     const c = L.circleMarker([m.lat, m.lon], {renderer: rendCirc, radius: 1.6 + k * Math.sqrt(m.ap), color: '#222', weight: 0.5, fillColor: cor(i), fillOpacity: 0.85});
     ligarUnidade(c, i); return c; });
@@ -1094,7 +1096,6 @@ function rotOpc(c) { return c.d.nome + (c.ue ? ' (' + c.ue + ')' : '') + (c.par 
 function popularAB() {
   const t = S.tipo, ano = k => E.cand[k].d.ano, foco = E.pess[S.pessoa], extras = [];
   if (S.pessoa !== 0 && E.pess[0].agg) extras.push([E.pess[0].n, E.pess[0].c]);
-  const li = E.pess.findIndex(p => p.n === 'Lula'); if (ehUF() && li > 0 && li !== S.pessoa) extras.push(['Lula (votos em ' + EM.uf + ')', E.pess[li].c]);
   const todos = [[foco.n, foco.c]].concat(extras), filtra = (gs, f) => gs.map(([g, cs]) => [g, cs.filter(f)]).filter(([g, cs]) => cs.length);
   let gA = todos, gB = todos;
   if (t === 'comp') { gA = filtra(todos, k => ano(k) < 2026); gB = filtra(todos, k => ano(k) === 2026); }
@@ -1143,19 +1144,23 @@ function construirGranular(grades, discs, bj) {
   const anos = [...new Set(cs.map(c => c.d.ano))], modo = anos.length > 1 ? 'comp' : 'ano';
   const idxIbge = new Map(EM.mun.map((m, i) => [m.c, i])), comBairros = new Set(bj.features.map(f => f.properties.m)), bairro = new Map(bj.features.map(f => [f.properties.b, f.properties]));
   const U = [], porBairro = new Map(), porMun = new Map(), mapa = {};
-  const nova = (o) => { U.push(Object.assign({u: EM.uf, g: '', c: null, pt: false, ap: 0}, o)); return U.length - 1; };
+  const ufSig = ehUF() ? EM.uf : S.uf, unico = ehUF() && EM.mun.length === 1;  // estado de um município só (DF): sem bairros, os locais que existem nos dois anos viram as unidades
+  const mm = (g, l) => ehUF() ? g.mi[l] : idxIbge.get(g.mc[g.mi[l]]);  // posição do município no recorte (no Brasil, pelo código do IBGE)
+  const nova = (o) => { U.push(Object.assign({u: ufSig, g: '', c: null, pt: false, ap: 0}, o)); return U.length - 1; };
   /* comparação entre anos: fora dos bairros, o local de votação que existe nos dois anos (mesmo município, nome e bairro do TSE) vira uma unidade;
      o resto do município fica junto */
   const chaveL = (g, l) => g.mi[l] + '|' + norm(g.nome[l]) + '|' + norm(g.bt[l]);
   const estaveis = new Set(), munComEstavel = new Set(), porChave = new Map();
-  if (modo === 'comp') {
+  if (modo === 'comp' && unico) {
     const conjuntos = anos.map(a => { const g = grades[a], c = new Set(); for (let l = 0; l < g.n; l++) if (g.b[l] < 0) c.add(chaveL(g, l)); return c; });
     conjuntos[0].forEach(k => { if (conjuntos.every(c => c.has(k))) { estaveis.add(k); munComEstavel.add(+k.split('|')[0]); } });
   }
   anos.forEach(a => {
     const g = grades[a], mp = new Int32Array(g.n).fill(-1);
     for (let l = 0; l < g.n; l++) {
-      const b = g.b[l], mi = g.mi[l], mun = EM.mun[mi];
+      const b = g.b[l], mi = mm(g, l);
+      if (mi === undefined) continue;
+      const mun = EM.mun[mi];
       if (b >= 0) {
         let u = porBairro.get(b);
         if (u === undefined) { const p = bairro.get(b), im = idxIbge.get(p.m); u = nova({n: p.n, u: EM.mun[im].n, g: 'Bairro (IBGE)', lat: p.cy, lon: p.cx, c: 'b' + b, mi: im}); porBairro.set(b, u); }
@@ -1204,18 +1209,19 @@ function construirGranular(grades, discs, bj) {
     for (let u = 0; u < n; u++) if (ok(d.va[u]) && (estadual || muns.has(U[u].mi))) { v.push([u, acc[u]]); sv += acc[u]; sva += d.va[u]; }
     c.v = v; c.tot = sv; c.nm = v.filter(x => x[1] > 0).length; c.pct = sva > 0 ? sv / sva * 100 : NaN; c.semGran = false;
   });
-  const comB = EM.mun.filter(m => comBairros.has(m.c)), totAp = EM.mun.reduce((t, m) => t + (m.ap || 0), 0);
-  const infoB = {n: comBairros.size, total: EM.mun.length, pct: totAp > 0 ? Math.round(comB.reduce((t, m) => t + (m.ap || 0), 0) / totAp * 100) : 0};
-  return {id: EM.id, uf: EM.uf, nome_uf: EM.nome_uf, mun: U, disp, pess: EM.pess, cand, ordemP: EM.ordemP, modoUnidades: modo, infoB};
+  const doEst = EM.mun.filter(m => ehUF() || m.u === S.uf), comB = doEst.filter(m => comBairros.has(m.c)), totAp = doEst.reduce((t, m) => t + (m.ap || 0), 0);
+  const infoB = {n: comBairros.size, total: doEst.length, pct: totAp > 0 ? Math.round(comB.reduce((t, m) => t + (m.ap || 0), 0) / totAp * 100) : 0};
+  return {id: EM.id, uf: ufSig, nome_uf: EM.nome_uf, mun: U, disp, pess: EM.pess, cand, ordemP: EM.ordemP, modoUnidades: modo, infoB, unico};
 }
 const usarMunicipal = () => { if (E !== EM) { E = EM; M = EM.mun; N = M.length; S.pins.clear(); if (map) limparCamadas(); } };
 /* garante os dados do detalhe para as candidaturas A e B atuais; resolve true (pronto), false (falhou, voltou ao municipal) ou 'velho' (outra escolha chegou antes) */
 function garantirGranular() {
-  const ks = [S.A].concat(S.B === null ? [] : [S.B]), chave = ks.join(',');
+  const ufg = ehUF() ? EM.id : S.uf.toLowerCase(), ks = [S.A].concat(S.B === null ? [] : [S.B]), chave = ks.join(',') + '|' + ufg;
+  if (!(INFO[ufg] || {}).granular) { G.on = false; $('gran').checked = false; $('gstatus').textContent = 'Esta UF ainda não tem o detalhe por local de votação.'; return Promise.resolve(false); }
   if (G.EG && G.chave === chave && E === G.EG) return Promise.resolve(true);
   const seq = ++G.seq, ds = ks.map(k => EM.cand[k].d), anos = [...new Set(ds.map(d => d.ano))], ids = [...new Set(ds.map(d => d.id))];
   $('gstatus').textContent = 'Carregando o detalhe...';
-  return Promise.all([Promise.all(anos.map(a => baixarG('dados/granular/' + EM.id + '/grade_' + a + '.json'))), Promise.all(ids.map(id => baixarG('dados/granular/' + EM.id + '/disp_' + id + '.json'))), (INFO[EM.id] || {}).bairros ? baixarG('dados/bairros/' + EM.id + '.geojson') : Promise.resolve({features: []})])
+  return Promise.all([Promise.all(anos.map(a => baixarG('dados/granular/' + ufg + '/grade_' + a + '.json'))), Promise.all(ids.map(id => baixarG('dados/granular/' + ufg + '/disp_' + id + '.json'))), (INFO[ufg] || {}).bairros ? baixarG('dados/bairros/' + ufg + '.geojson') : Promise.resolve({features: []})])
     .then(([gr, dd, bj]) => {
       if (seq !== G.seq) return 'velho';
       G.EG = construirGranular(Object.fromEntries(anos.map((a, i) => [a, gr[i]])), Object.fromEntries(ids.map((id, i) => [id, dd[i]])), bj); G.chave = chave;
@@ -1231,6 +1237,8 @@ function aplicarSelecao(zoom) {
   return garantirGranular().then(r => { if (r === 'velho') return; if (r === false) usarMunicipal(); return aplicarSelecaoBase(zoom); });
 }
 function aplicarSelecaoBase(zoom) {
+  ['g', 'u'].forEach(v => { const o = $('sep').querySelector(`option[value="${v}"]`); if (o) o.disabled = G.on; });  // no detalhe não há região nem UF para separar
+  if (G.on && (S.sep === 'g' || S.sep === 'u')) { S.sep = 'n'; $('sep').value = 'n'; document.body.dataset.sep = 'n'; posicionarResumo(); }
   if (S.metAuto) S.metrica = metPadrao(); else if (COMPARACAO.includes(S.metrica) && poucos()) S.metrica = 'Bpv';
   popularAB(); popularMetricas(); zerarZoom(); S.pins.clear(); contador();
   calcClasses(); legenda(); atualizarTopo();
@@ -1295,6 +1303,13 @@ function mostrar(v) {
   else if (v === 'candidatos') renderCandidatos();
 }
 
+/* o checkbox de detalhe: no recorte de um estado, só se ele tem o detalhe; no Brasil, só depois de escolher uma UF que o tenha */
+function atualizarGran() {
+  const br = !ehUF(), inf = INFO[br ? (S.uf || '').toLowerCase() : S.escopo] || {}, pode = !!inf.granular && (!br || !!S.uf);
+  $('gran').disabled = !pode; $('lblGran').classList.toggle('inv', !br && !inf.granular);
+  $('lblGran').title = br && !S.uf ? 'Escolha uma UF para ver os votos de Lula por bairro e local de votação' : br && !inf.granular ? 'Esta UF ainda não tem o detalhe por local de votação' : 'Mostra os votos por bairro (onde o IBGE tem a divisão) e por local de votação, somando as seções eleitorais';
+  return pode;
+}
 function definirEscopo(js, id) {
   E = js; M = js.mun; N = M.length; EM = js; G.on = false; G.chave = ''; G.EG = null; G.seq++; $('gran').checked = false; $('gstatus').textContent = ''; S.metAuto = true;
   Object.assign(S, {escopo: id, uf: '', termo: '', sep: 'n', faixa: '', pessoa: 0}); S.pins.clear();
@@ -1304,7 +1319,7 @@ function definirEscopo(js, id) {
   $('escUF').value = id === 'br' ? '' : id; $('escUF').classList.toggle('on', id !== 'br');
   const tt = titulo(id, js); $('h1').textContent = tt.h1; $('sub').textContent = tt.sub;
   document.title = id === 'br' ? 'Votos por município: Lula no Brasil e PT nos estados' : `Candidatos do PT: ${js.nome_uf}, votos por município`;
-  const inf = INFO[id] || {}; $('lblGran').classList.toggle('inv', !inf.granular); $('lblGran').inert = !inf.granular;
+  atualizarGran();
   ordCand.n = 100; if (id !== 'br') preencherDocs(js);
   $('uf').innerHTML = '<option value="">Brasil</option>' + [...new Set(M.map(m => m.u))].sort().map(u => `<option value="${u}">${u}</option>`).join(''); $('busca').value = '';
   $('sep').innerHTML = '<option value="n">Nenhum</option>' + (id === 'br' ? '<option value="g">Região</option><option value="u">UF</option>' : '') + '<option value="f">Porte do município</option>'; $('faixa').innerHTML = TAM.map(t => `<option value="${t.k}">${t.n}</option>`).join(''); $('faixa').disabled = false;
@@ -1349,7 +1364,7 @@ $('selB').onchange = e => { S.B = e.target.value === '' ? null : +e.target.value
 $('troca').onclick = () => { if (S.B === null) return; [S.A, S.B] = [S.B, S.A]; aplicarSelecao(false); };
 $('metrica').onchange = e => { S.metrica = e.target.value; S.metAuto = false; mudouMedida(); };
 $('gran').onchange = e => { G.on = e.target.checked; $('gstatus').textContent = ''; aplicarSelecao(false).then(() => { if (S.view === 'mapa') mostrarAlvoNoInfo(); }); };
-$('uf').onchange = e => { S.uf = e.target.value; zerarZoom(); atualizarTopo(); if (S.view === 'dispersao') atualizarDispersao(); else if (S.view === 'mapa') { pintarMapa(); zoomUF(); } };
+$('uf').onchange = e => { S.uf = e.target.value; if (G.on && !atualizarGran()) { G.on = false; $('gran').checked = false; } atualizarGran(); if (G.on || E !== EM) { aplicarSelecao(true); return; } zerarZoom(); atualizarTopo(); if (S.view === 'dispersao') atualizarDispersao(); else if (S.view === 'mapa') { pintarMapa(); zoomUF(); } };
 $('modo').onchange = e => { S.modo = e.target.value; aplicarModo(); };
 $('zroda').onchange = e => { S.zoomRoda = e.target.checked; zoomManual = true; };
 $('cinza').onchange = e => { S.cinza = e.target.checked; redesenhar(); };
@@ -1368,7 +1383,7 @@ window.addEventListener('hashchange', () => { const h = lerHash(); if (h.esc !==
 
 const inicial = lerHash();
 S.view = inicial.v === 'candidatos' && inicial.esc === 'br' ? 'mapa' : inicial.v; document.body.dataset.view = S.view; S.escopo = inicial.esc;
-const carregarUFs = fetch('dados/ufs.json?v=20261008011145').then(r => r.json()).then(j => {
+const carregarUFs = fetch('dados/ufs.json?v=20261008031657').then(r => r.json()).then(j => {
   UFS = j.ufs; UFS.forEach(u => { INFO[u.id] = u; });
   $('escUF').innerHTML = '<option value="">PT em um estado...</option>' + UFS.map(u => `<option value="${u.id}">${esc(u.nome)}</option>`).join('');
 }).catch(() => {});

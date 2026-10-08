@@ -1,0 +1,2241 @@
+b,cd_tse,nome
+0,88986,Bela Vista
+1,88986,Dom Timóteo
+2,88986,Jardim da Serra
+3,85073,Alberto Grande
+4,85073,Anita Garibaldi
+5,85073,Assunção
+6,85073,Atlântida
+7,85073,Balneário Caverá
+8,85073,Boa Vista
+9,85073,Canjiqueira
+10,85073,Canudos
+11,85073,Capão do Angico
+12,85073,Centenário
+13,85073,Coronel Ênio Gouveia dos Santos
+14,85073,Doutor Romário Araújo de Oliveira
+15,85073,Emílio Zuñeda
+16,85073,Favila
+17,85073,Fronteira Oeste
+18,85073,Fênix
+19,85073,Gamino
+20,85073,Getúlio Vargas
+21,85073,Grande
+22,85073,Honório Lemos
+23,85073,Ibirapuitã
+24,85073,Independência
+25,85073,Inês
+26,85073,Izabel
+27,85073,Jardim Planalto
+28,85073,Joaquim Fonseca Milano
+29,85073,José de Abreu
+30,85073,Kennedy
+31,85073,Lara
+32,85073,Liberdade
+33,85073,Macedo
+34,85073,Medianeira
+35,85073,Militar
+36,85073,Nossa Senhora da Conceição Aparecida
+37,85073,Nova Brasília
+38,85073,Novo Lar
+39,85073,Olhos d'Água de Natal
+40,85073,Oswaldo Aranha
+41,85073,Palma
+42,85073,Pedreiras
+43,85073,Piola
+44,85073,Porto dos Aguateiros
+45,85073,Prado
+46,85073,Progresso
+47,85073,Projetado
+48,85073,Promorar
+49,85073,Renascer
+50,85073,Residencial Saint Pastous
+51,85073,Restinga
+52,85073,Rui Ramos
+53,85073,Santo Antônio
+54,85073,Santos Dumont
+55,85073,Saudade
+56,85073,Sepé Tiarajú
+57,85073,São João
+58,85073,Tancredo Neves
+59,85073,Ulisses Guimarães
+60,85073,Vera Cruz
+61,85073,Vila Nova
+62,85073,da Lagoa
+63,89001,Esperança
+64,85154,Aparecida
+65,85154,Centro
+66,85154,Cidade Alta
+67,85154,Colina do Prado
+68,85154,Fátima
+69,85154,Imigrante
+70,85154,Paese Novo
+71,85154,Panorâmico
+72,85154,Planalto
+73,86320,Caramuru
+74,88862,Azaléia
+75,88862,Campo da Brazina
+76,88862,Centro
+77,88862,Emancipação
+78,88862,Imperatriz
+79,88862,da Canoa
+80,88862,da Estação
+81,88862,da Integração
+82,85197,Aimoré
+83,85197,Barra do Forqueta
+84,85197,Bela Vista
+85,85197,Centro
+86,85197,Dom Pedro II
+87,85197,Dona Rita
+88,85197,Medianeira
+89,85197,Navegantes
+90,85197,Novo Horizonte
+91,85197,Rui Barbosa
+92,85197,São Caetano
+93,85197,São José
+94,89028,Benjamin Constant
+95,89028,Brasil para Cristo
+96,89028,Centro
+97,89028,Cerrito
+98,89028,Leitzke
+99,89028,Progresso
+100,85219,Alto da Bela Vista
+101,85219,Atafona
+102,85219,Centro
+103,85219,Collovini
+104,85219,Liberal
+105,85219,Nossa Senhora Aparecida
+106,85219,Poço Três
+107,85219,Princesa Isabel
+108,85219,Santa Bárbara
+109,85219,Vila Doze
+110,85219,Vila Ferraz
+111,85219,Vila Garcia
+112,85219,Vila Pinho
+113,85219,dos Estados
+114,85235,Bela Vista
+115,85235,Centro
+116,85235,Felicidade
+117,85235,Getúlio Vargas
+118,85235,Harmonia
+119,85235,Industrial
+120,85235,Limberger
+121,85235,Mohr
+122,85235,Rutzen
+123,85235,Santa Fé
+124,85235,São Francisco
+125,85294,Esperança
+126,86223,Mirante do Lago
+127,86223,Operário
+128,86223,São Luiz
+129,85359,Operário
+130,85359,São Valentim
+131,85359,Uruguai
+132,85359,Vila Nova
+133,85375,Centro
+134,85375,Cidade Baixa
+135,85375,Mate Doce
+136,85375,Pavão
+137,85375,Picada
+138,85375,Quatorze de Julho
+139,85375,Tangará
+140,85375,Três Vendas
+141,86401,Aparecida
+142,86401,Navegantes
+143,86401,Primeiro de Maio
+144,86401,do Pingo
+145,85413,Aparecida
+146,85413,Barracão
+147,85413,Borgo
+148,85413,Botafogo
+149,85413,Caminhos da Eulália
+150,85413,Centro
+151,85413,Cidade Alta
+152,85413,Cohab
+153,85413,Conceição
+154,85413,Cruzeiro
+155,85413,Eucaliptos
+156,85413,Fenavinho
+157,85413,Fátima
+158,85413,Humaitá
+159,85413,Imigrante
+160,85413,Industrial
+161,85413,Jardim Glória
+162,85413,Juventude da Enologia
+163,85413,Licorsul
+164,85413,Maria Goretti
+165,85413,Merlot
+166,85413,Municipal
+167,85413,Nossa Senhora do Carmo
+168,85413,Ouro Verde
+169,85413,Planalto
+170,85413,Pomarosa
+171,85413,Pradel
+172,85413,Progresso
+173,85413,Salgado
+174,85413,Santa Helena
+175,85413,Santa Marta
+176,85413,Santa Rita
+177,85413,Santo Antão
+178,85413,São Bento
+179,85413,São Francisco
+180,85413,São João
+181,85413,São Roque
+182,85413,São Valentin
+183,85413,São Vendelino
+184,85413,Universitário
+185,85413,Verona
+186,85413,Vila Nova
+187,85413,Vila Nova II
+188,85413,Vinhedos
+189,85413,Vinosul
+190,85413,Zatt
+191,85456,Alto da Pedra
+192,85456,CEEE
+193,85456,COHAB
+194,85456,Centro
+195,85456,São José
+196,85456,Vila Conceição
+197,85456,Vila Expedicionário
+198,85456,Vila Fonseca
+199,85456,Vila Pinto
+200,85456,Vila Rodrigues
+201,85456,Vila Santa Catarina
+202,85456,Vila Santa Isabel
+203,85456,Vila Spinelli
+204,85456,Vila Tietbohl
+205,85456,Vila da Alegria
+206,85456,Área Industrial Norte
+207,85456,Área Industrial Sul
+208,85472,Alto da Bronze
+209,85472,Brasília
+210,85472,Centro
+211,85472,Centro Cidade Baixa
+212,85472,Fazenda Barros
+213,85472,Getúlio Vargas
+214,85472,Goiabeira
+215,85472,Imigrantes
+216,85472,Laranjeiras
+217,85472,São Francisco
+218,85472,São Jorge
+219,85472,São João
+220,85472,Águas Boas
+221,85499,Bonfim
+222,85499,Francisco Wesz Filho
+223,85499,da Gaúcha
+224,85499,do Inhame
+225,85510,Evangélico
+226,85510,Santo Antônio
+227,85510,União
+228,85537,Bela Vista
+229,85537,Centro (Sede)
+230,85537,Charrua
+231,85537,Cidade Alta
+232,85537,Cidade Baixa
+233,85537,Custódio
+234,85537,Medianeira
+235,85537,Poço 5
+236,85537,R-1
+237,85537,Regilnei
+238,85537,Roberto Cardoso
+239,85537,Santa Rita
+240,85537,São José
+241,85537,Vila Julieta
+242,85537,Vila Motta
+243,85537,Vila Nova
+244,85596,Universitário
+245,85650,São João
+246,85693,Bom Sucesso
+247,85693,Carvalho Bastos
+248,85693,Centenário
+249,85693,Centro
+250,85693,Cônego Luiz Walter Hanquet
+251,85693,Dona Tereza
+252,85693,Dr. Rosinha
+253,85693,Floresta
+254,85693,Gaúcho
+255,85693,General Antônio Netto
+256,85693,Getúlio Vargas
+257,85693,Hípico
+258,85693,Jardim
+259,85693,Jardim do Forte
+260,85693,Maria da Graça
+261,85693,Olaria
+262,85693,Oliveira
+263,85693,Ouro Verde
+264,85693,Parque Residencial do Arroio Duro
+265,85693,Santa Bárbara
+266,85693,Santa Marta
+267,85693,Siá Juliana
+268,85693,São Carlos
+269,85693,São José
+270,85693,São João
+271,85693,São Luiz
+272,85693,São Pedro
+273,85693,Vila Nova
+274,85693,Viégas
+275,85731,Floresta
+276,85774,Alto Paulista
+277,85812,Boa Vista
+278,85812,Centro
+279,85812,Costa Norte
+280,85812,Esmeralda
+281,85812,Ewaldo Prass
+282,85812,Marilene
+283,85812,Nova Germânia
+284,85812,Princesa
+285,85812,Pôr-do-Sol
+286,85812,Rincão Comprido
+287,85855,Alpes Verdes
+288,85855,Boeira (Vila Boeira)
+289,85855,Bom Jesus
+290,85855,Canelinha
+291,85855,Caracol
+292,85855,Caçador
+293,85855,Celulose
+294,85855,Centro
+295,85855,Dante (Vila Dante)
+296,85855,Distrito Industrial
+297,85855,Eugênio Ferreira
+298,85855,Hortênsias
+299,85855,Jardim Mariana
+300,85855,Jardim das Fontes
+301,85855,Laje de Pedra
+302,85855,Leodoro de Azevedo
+303,85855,Luiza Corrêa (Vila Luiza)
+304,85855,Maggi (Vila Maggi)
+305,85855,Palace Hotel
+306,85855,Pinheiro Grosso
+307,85855,Quinta da Serra
+308,85855,Rancho Jane
+309,85855,Reserva da Serra
+310,85855,SESI
+311,85855,Saiqui
+312,85855,Santa Marta
+313,85855,Santa Terezinha
+314,85855,Sequóias
+315,85855,Serrano
+316,85855,Suzana (Vila Suzana)
+317,85855,Suíça
+318,85855,São José
+319,85855,São Lucas
+320,85855,São Luiz
+321,85855,São Rafael
+322,85855,Ulisses de Abreu
+323,85871,Centro
+324,85871,Prado
+325,85871,Triângulo
+326,85871,Uruguai
+327,85871,Vila Fonseca
+328,85871,Vila Izabel
+329,85871,Vila Nova
+330,85871,dos Teixeiras
+331,85898,Brigadeira
+332,85898,Centro
+333,85898,Estância Velha
+334,85898,Fátima
+335,85898,Guajuviras
+336,85898,Harmonia
+337,85898,Igara
+338,85898,Ilha das Graças
+339,85898,Industrial
+340,85898,Marechal Rondon
+341,85898,Mathias Velho
+342,85898,Mato Grande
+343,85898,Niterói
+344,85898,Nossa Senhora das Graças
+345,85898,Olaria
+346,85898,Rio Branco
+347,85898,São José
+348,85898,São Luís
+349,89141,Santo Antônio
+350,89737,Centro
+351,89737,Cerro do Estado
+352,89737,Jardim América
+353,89737,Parque Fragata
+354,84891,Bosque de Capela
+355,84891,Centro
+356,84891,Estação
+357,84891,Imigrantes
+358,84891,Parque Primavera
+359,84891,Progresso
+360,84891,São Lucas
+361,85936,Aparecida
+362,85936,Aurora
+363,85936,Bela Vista
+364,85936,Centro
+365,85936,Imigrantes
+366,85936,Navegantes
+367,85936,Nossa Senhora de Fátima
+368,85936,Planalto
+369,85936,Ponte Seca
+370,85936,Santa Clara
+371,85936,São Paulo
+372,85936,Torino
+373,85936,Triângulo
+374,85936,Vila Nova
+375,85936,Vitória
+376,85880,Nossa Senhora de Fátima
+377,85979,Centro
+378,85979,Neves
+379,85979,Operário
+380,85979,Promorar
+381,85979,Santa Fé
+382,85979,Santa Lúcia
+383,85979,Santa Rosa
+384,85979,Silva
+385,85979,São Cristóvão
+386,85979,São Miguel
+387,85995,Ana Rech
+388,85995,Bela Vista
+389,85995,Brandalise
+390,85995,Centenário
+391,85995,Centro
+392,85995,Charqueadas
+393,85995,Cidade Nova
+394,85995,Cinquentenário
+395,85995,Cristo Redentor
+396,85995,Cruzeiro
+397,85995,Desvio Rizzo
+398,85995,Diamantino
+399,85995,Esplanada
+400,85995,Exposição
+401,85995,Floresta
+402,85995,Forqueta
+403,85995,Galópolis
+404,85995,Interlagos
+405,85995,Jardelino Ramos
+406,85995,Jardim América
+407,85995,Jardim Eldorado
+408,85995,Jardim das Hortências
+409,85995,Kayser
+410,85995,Linha 40
+411,85995,Madureira
+412,85995,Maestra
+413,85995,Marechal Floriano
+414,85995,Medianeira
+415,85995,Monte Bérico
+416,85995,Nossa Senhora da Saúde
+417,85995,Nossa Senhora das Graças
+418,85995,Nossa Senhora de Fátima
+419,85995,Nossa Senhora de Lourdes
+420,85995,Nossa Senhora do Rosário
+421,85995,Panazzolo
+422,85995,Parada Cristal
+423,85995,Pedancino
+424,85995,Petrópolis
+425,85995,Pio X
+426,85995,Pioneiro
+427,85995,Planalto
+428,85995,Por do Sol
+429,85995,Presidente Vargas
+430,85995,Rio Branco
+431,85995,Sagrada Família
+432,85995,Salgado Filho
+433,85995,Samuara
+434,85995,Santa Catarina
+435,85995,Santa Corona
+436,85995,Santa Fé
+437,85995,Santo Antônio
+438,85995,Sanvitto
+439,85995,Serrano
+440,85995,São Caetano
+441,85995,São Ciro
+442,85995,São Cristóvão
+443,85995,São Giácomo
+444,85995,São José
+445,85995,São Leopoldo
+446,85995,São Luiz
+447,85995,São Peregrino
+448,85995,São Victor COHAB
+449,85995,São Virgílio
+450,85995,Universitário
+451,85995,de Lazzer
+452,86088,Centro
+453,86088,Rio Branco
+454,86088,Santo Antônio
+455,86088,dos Arrozais
+456,86010,Floresta
+457,86037,Aparecida
+458,86037,Centro
+459,86037,Elite
+460,86037,Fátima
+461,86037,Progresso
+462,86037,Santa Lúcia
+463,86037,São José
+464,86932,Beira Rio
+465,86932,Centro
+466,86932,Colônia Penal
+467,86932,Cruz de Malta
+468,86932,Orvisa
+469,86932,Otília
+470,86932,Parque Santa Fé
+471,86932,Parque dos Coqueiros
+472,86932,Piratini
+473,86932,Santo Antônio
+474,86932,Sul América
+475,86932,São Miguel
+476,86932,Vila Rosa
+477,88846,Centro
+478,88846,Euzébio Izabelino Bermudez
+479,88846,Isolina Gomes
+480,88846,Luiz Maria Gomes
+481,88846,Quartel
+482,88846,União
+483,88846,Vila América
+484,88846,Vila Rica
+485,85464,Areal
+486,85464,Beira Rio
+487,85464,Centro
+488,85464,Crespo
+489,85464,Longaray
+490,85464,Panorama
+491,86193,Abegay I
+492,86193,Acelino Flores
+493,86193,Aliança
+494,86193,Alvorada
+495,86193,Amizade
+496,86193,Arco Íris
+497,86193,Azambuja
+498,86193,Bela Vista
+499,86193,Boa Parada
+500,86193,Brenner
+501,86193,Brum I
+502,86193,Brum II
+503,86193,Bráz Caino
+504,86193,Central
+505,86193,Centro
+506,86193,Conceição
+507,86193,Dirceu
+508,86193,Educacional
+509,86193,Emílio Droppa
+510,86193,Esperança
+511,86193,Farroupilha
+512,86193,Garibaldi
+513,86193,Gobo
+514,86193,Hilda
+515,86193,Independência
+516,86193,Jardim América
+517,86193,Jardim Primavera
+518,86193,Jung
+519,86193,Lizabel
+520,86193,Ludke
+521,86193,Machado
+522,86193,Malheiros
+523,86193,Marcelo
+524,86193,Melvin Jones
+525,86193,Militar
+526,86193,Nossa Senhora da Penha
+527,86193,Pedro Bonini I
+528,86193,Pedro Bonini II
+529,86193,Perpétuo Socorro
+530,86193,Petrópolis I
+531,86193,Petrópolis II
+532,86193,Planalto
+533,86193,Prefeito Vila Nova
+534,86193,Progresso
+535,86193,Rancho do Rio Grande I
+536,86193,Rancho do Rio Grande II
+537,86193,Rocha
+538,86193,Santa Bárbara
+539,86193,Santa Helena
+540,86193,Santa Rita
+541,86193,Santa Terezinha I
+542,86193,Santa Terezinha II
+543,86193,Santo Antão
+544,86193,Santo Antônio
+545,86193,Schettert
+546,86193,São Francisco
+547,86193,São Genaro
+548,86193,São Jorge
+549,86193,São José
+550,86193,São João
+551,86193,São Miguel
+552,86193,Tamoio
+553,86193,Toribio Veríssimo I
+554,86193,Toribio Veríssimo II
+555,86193,de Fátima
+556,86193,do Sol
+557,86193,dos Funcionários
+558,86215,Cascata
+559,86215,Centro
+560,86215,Eleonora Haenssgen
+561,86215,Glucostark
+562,86215,Passo de Estrela
+563,86215,São Gabriel
+564,86215,São Rafael
+565,86215,Vila Célia
+566,86215,Vila Italiana
+567,86215,Vila Rosa
+568,86215,Vila Zwirtes
+569,86258,Becker
+570,86258,Beira Rio
+571,86258,Centro
+572,86258,Floresta
+573,86258,Industrial
+574,86258,Portal da Serra
+575,86258,Primavera
+576,86258,Sete de Setembro
+577,86258,São João
+578,86258,São Miguel
+579,86258,São Pedro
+580,86258,União
+581,86258,Vale Verde
+582,86258,Vila Rosa
+583,86290,Ataliba Coutinho da Rocha
+584,86290,Centro
+585,86290,Dr. Moacyr Dias
+586,86290,Dr. Valmir Gomes Sanches
+587,86290,Getúlio Vargas
+588,86290,José Tude de Godoy
+589,86290,Oscar Vicente e Silva
+590,86290,Padre Bastos
+591,86290,Sagrada Face
+592,86290,Santa Maria
+593,86290,Santa Terezinha
+594,86290,São Gregório
+595,86240,Bom Retiro
+596,86240,Centro
+597,86240,Centro Novo
+598,86240,Chácara
+599,86240,Cidade Verde
+600,86240,Industrial
+601,86240,Itaí
+602,86240,Loteamento Popular
+603,86240,Medianeira
+604,86240,Parque Eldorado 1
+605,86240,Parque Eldorado 2
+606,86240,Parque Eldorado 3
+607,86240,Parque Eldorado 4
+608,86240,Parque das Acácias Norte
+609,86240,Parque das Acácias Sul
+610,86240,Picada
+611,86240,Progresso
+612,86240,Residencial Eldorado
+613,86240,Sans Souci
+614,86240,Sol Nascente
+615,86240,Vila da Paz
+616,86339,Barra do Guaporé
+617,86339,Barra do Jacaré
+618,86339,Centro
+619,86339,Jacarezinho
+620,86339,Lajeadinho
+621,86339,Lambari
+622,86339,Navegantes
+623,86339,Nossa Senhora Aparecida
+624,86339,Palmas
+625,86339,Pinheirinho
+626,86339,Planalto
+627,86339,Porto Quinze
+628,86339,Santa Clara
+629,86339,Santo Antão
+630,86339,São José
+631,86339,Vila Amazonas
+632,86339,Vila Moca
+633,86355,Aldemar Xavier dos Santos
+634,85081,Esperança
+635,86371,Aeroporto
+636,86371,Agrícola
+637,86371,Aldo Arioli
+638,86371,Amizade
+639,86371,Atlântico
+640,86371,Bela Vista
+641,86371,Boa Vista
+642,86371,Centro
+643,86371,Cerâmica
+644,86371,Copas Verdes
+645,86371,Cotrel
+646,86371,Cristal
+647,86371,Cristo Rei
+648,86371,Dal Molin
+649,86371,Demoliner
+650,86371,Esperança
+651,86371,Espírito Santo
+652,86371,Estevam Carraro
+653,86371,Frinape
+654,86371,Fátima
+655,86371,Industrial
+656,86371,Ipiranga
+657,86371,Jabuticabal
+658,86371,José Bonifácio
+659,86371,Koller
+660,86371,Liberdade
+661,86371,Linho
+662,86371,Maria Clara
+663,86371,Morada do Sol
+664,86371,Morro da Cegonha
+665,86371,Novo Atlântico
+666,86371,Paiol Grande
+667,86371,Parque Livia
+668,86371,Parque Redenção
+669,86371,Parque dos Imigrantes
+670,86371,Petit Vilage
+671,86371,Presidente Vargas
+672,86371,Progresso
+673,86371,Rio Tigre
+674,86371,Santa Catarina
+675,86371,São Caetano
+676,86371,São Cristóvão
+677,86371,São José
+678,86371,São Vicente de Paulo
+679,86371,Triângulo
+680,86371,Três Vendas
+681,86371,União
+682,86371,Vale Dourado
+683,86371,Victoria I
+684,86371,Victoria II
+685,86371,Zimmer
+686,86398,Caixa d'Água
+687,86398,Centro
+688,86398,Osmar Grafulha
+689,86398,Pilão
+690,86398,Presidente Jango
+691,86479,Brasil
+692,86479,Centro
+693,86479,Cooperativa Velha
+694,86479,Franciosi
+695,86479,Jardim
+696,86479,Maravalha
+697,86479,Martini
+698,86479,Norte América
+699,86479,Santa Júlia
+700,86479,São Jorge
+701,86479,Tarumã
+702,86479,União
+703,85286,Florestinha
+704,85286,Santana
+705,85286,Santo Antônio
+706,85286,Santuário
+707,85286,São José
+708,85286,São Pedro
+709,86495,Bela Vista
+710,86495,Campo Grande
+711,86495,Centro
+712,86495,Colinas Verdes
+713,86495,Encosta do Sol
+714,86495,Floresta
+715,86495,Industrial
+716,86495,Lago Azul
+717,86495,Lira
+718,86495,Rincão Gaúcho
+719,86495,Rincão da Saudade
+720,86495,Rincão de Ilhéus
+721,86495,Sol Nascente
+722,86495,União
+723,86495,das Quintas
+724,86495,das Rosas
+725,86495,das Águas
+726,86517,Centro
+727,86517,Industrial
+728,86517,Jardim Planalto
+729,86517,Liberdade
+730,86517,Novo Esteio
+731,86517,Olímpica
+732,86517,Parque Primavera
+733,86517,Primavera
+734,86517,Santo Inácio
+735,86517,São José
+736,86517,São Sebastião
+737,86517,Tamandaré
+738,86517,Três Marias
+739,86517,Três Portos
+740,86533,Alto do Bronze
+741,86533,Auxiliadora
+742,86533,Boa União
+743,86533,Centro
+744,86533,Chacrinha
+745,86533,Cristo Rei
+746,86533,Imigrantes
+747,86533,Indústrias
+748,86533,Moinhos
+749,86533,Oriental
+750,86533,Pinheiros
+751,86533,São José
+752,86533,dos Estados
+753,86550,Alvorada
+754,86550,América
+755,86550,Bela Vista
+756,86550,Belvedere
+757,86550,Centenário
+758,86550,Centro
+759,86550,Cinquentenário
+760,86550,Cruzeiro
+761,86550,Imigrante
+762,86550,Industrial
+763,86550,Ipanema
+764,86550,Medianeira
+765,86550,Monte Pasqual
+766,86550,Monte Verde
+767,86550,Nova Vicenza
+768,86550,Pio X
+769,86550,Planalto
+770,86550,Primeiro de Maio
+771,86550,Santa Catarina
+772,86550,Santa Rita
+773,86550,Santo Antônio
+774,86550,São Francisco
+775,86550,São José
+776,86550,São Luís
+777,86550,São Roque
+778,86550,Vicentina
+779,86550,Volta Grande
+780,86550,do Parque
+781,86614,Aparecida
+782,86614,Centro
+783,86614,Colina de Flores
+784,86614,Granja União
+785,86614,Lagoa Bela
+786,86614,Morada do Camping
+787,86614,Nova Roma
+788,86614,Nova Trento
+789,86614,Parque dos Pinheiros
+790,86614,Pérola
+791,86614,São Cristóvão
+792,86614,São José
+793,86614,São Pedro
+794,86614,União
+795,86614,Videiras
+796,86614,Villaggio
+797,86614,Vindima
+798,86673,Aparecida
+799,86673,Barril
+800,86673,Barrilense
+801,86673,Bela Vista
+802,86673,Centro
+803,86673,Distrito Industrial
+804,86673,Faguense
+805,86673,Fátima
+806,86673,Ipiranga
+807,86673,Itapagé
+808,86673,Jardim Paraíso
+809,86673,Jardim Primavera
+810,86673,Panosso
+811,86673,Santo Antônio
+812,86673,Santo Inácio
+813,86673,São Caetano
+814,86673,São Cristóvão
+815,86673,São Francisco de Paula
+816,86673,São José
+817,86690,Alfândega
+818,86690,Bela Vista
+819,86690,Borghetto
+820,86690,Brasília
+821,86690,Cairú
+822,86690,Centro
+823,86690,Champanhe
+824,86690,Chácaras
+825,86690,Ferroviário
+826,86690,Garibaldina
+827,86690,Glória
+828,86690,Guarani
+829,86690,Integração
+830,86690,Juventude
+831,86690,Peterlongo
+832,86690,Rota do Sol
+833,86690,Santa Terezinha
+834,86690,Sebben
+835,86690,Simonaggio
+836,86690,São Francisco
+837,86690,São José
+838,86690,São Miguel
+839,86690,Tamandaré
+840,86690,Três Lagoas
+841,86690,Vale Verde
+842,86690,Vale dos Pinheiros
+843,86770,Champagnat
+844,86770,Monte Carlo
+845,86770,Nossa Senhora Consoladora
+846,86770,Nossa Senhora dos Navegantes
+847,86770,Santa Catarina
+848,86770,Santo André
+849,86770,São Cristóvão
+850,86770,São José
+851,86770,São Pelegrino
+852,86770,XV de Novembro
+853,86797,Canova
+854,86797,Centro
+855,86797,Herberto Schneider
+856,86797,Hortêncio
+857,86797,Jardim Residencial Butiá
+858,86797,Leimann
+859,86797,Morada do Sol
+860,86797,Moura
+861,86797,Mucha
+862,86797,Nova
+863,86797,Pró-Morar
+864,86797,Santa Fé
+865,86797,Santa Rita
+866,86797,Santo Antônio
+867,86797,Seger
+868,86797,São José
+869,86797,Zimpel
+870,86819,Altos da Viação Férrea
+871,86819,Aspen
+872,86819,Avenida Central
+873,86819,Bavária
+874,86819,Carazal
+875,86819,Carniel
+876,86819,Centro
+877,86819,Dutra
+878,86819,Floresta
+879,86819,Ipê Amarelo
+880,86819,Jardim Bella Vista
+881,86819,Lagos do Bosque
+882,86819,Mato Queimado
+883,86819,Minuano
+884,86819,Moura
+885,86819,Parque das Orquídeas
+886,86819,Piratini
+887,86819,Planalto
+888,86819,Prinstrop
+889,86819,Pórtico
+890,86819,Sierra Park
+891,86819,Tirol
+892,86819,Vale do Bosque
+893,86819,Vila Jardim
+894,86819,Vila do Sol
+895,86819,Várzea Grande
+896,86851,Alegria
+897,86851,Altos da Alegria
+898,86851,Alvorada
+899,86851,Bom Fim
+900,86851,Centro
+901,86851,Chaves Barcellos
+902,86851,Colina
+903,86851,Columbia City
+904,86851,Coronel Nassuca
+905,86851,Ermo
+906,86851,Florida
+907,86851,Jardim Iolanda
+908,86851,Jardim dos Lagos
+909,86851,Parque 35
+910,86851,Passo Fundo
+911,86851,Pedras Brancas
+912,86851,Santa Rita
+913,86878,Canecão
+914,86878,Centro
+915,86878,Ferroviário
+916,86878,Imaculada Conceição
+917,86878,Nossa Senhora da Paz
+918,86878,Nossa Senhora da Saúde
+919,86878,Pinheirinho
+920,86878,Planalto
+921,86878,Santo André
+922,86878,Scalabrini
+923,86878,São Cristóvão
+924,86878,São José
+925,86894,Centro
+926,86894,Pampa
+927,86894,Santa Fé
+928,86894,Santa Tereza
+929,86894,Vila Esperança
+930,86991,Bela Vista
+931,86991,Santo Isidoro
+932,86991,São José
+933,86991,dos Motoristas
+934,84964,Bela Vista
+935,84964,Centro
+936,84964,Floresta
+937,84964,Gramado
+938,84964,Horizonte
+939,84964,Jardim
+940,87017,Bangu
+941,87017,Centro
+942,87017,Chácara
+943,87017,Esperança
+944,87017,Floresta
+945,87017,Hermany
+946,87017,Jardim
+947,87017,Odila
+948,87017,Planalto
+949,87017,Progresso
+950,87017,Pôr-do-Sol
+951,87017,Santa Helena
+952,87017,São Jacó
+953,87017,Unida
+954,87033,15 de Novembro
+955,87033,Bom Pastor
+956,87033,Casa de Pedra
+957,87033,Centro
+958,87033,Figueira
+959,87033,Garibaldi
+960,87033,Industrial
+961,87033,Invernada
+962,87033,Lajeadinho
+963,87033,Moinho
+964,87033,Pedreira
+965,87033,Rothmann
+966,87033,Saibreira
+967,87033,Viaduto
+968,87033,Vila Nova
+969,87050,Alvorada
+970,87050,Assis Brasil
+971,87050,Boa Vista
+972,87050,Burtet
+973,87050,Colonial
+974,87050,Elizabeth
+975,87050,Ferroviário
+976,87050,Getúlio Vargas
+977,87050,Glória
+978,87050,Hammarstron
+979,87050,Herval
+980,87050,Independência
+981,87050,Industrial
+982,87050,Jardim
+983,87050,Lambari
+984,87050,Lulu Ilgenfritz
+985,87050,Luíz Fogliatto
+986,87050,Modelo
+987,87050,Morada do Sol
+988,87050,Mundstock
+989,87050,Nossa Senhora da Penha
+990,87050,Novo Leste
+991,87050,Osvaldo Aranha
+992,87050,Pindorama
+993,87050,Progresso
+994,87050,Quinze de Novembro
+995,87050,Sol Nascente
+996,87050,Storch
+997,87050,São Geraldo
+998,87050,São José
+999,87050,São Paulo
+1000,87050,Tancredo Neves
+1001,87050,Thomé de Souza
+1002,87050,Tiarajú
+1003,87050,Universitário
+1004,87050,das Chácaras
+1005,85685,Albatroz
+1006,85685,Courhasa
+1007,85685,Harmonia
+1008,85685,Imara
+1009,85685,Imbé
+1010,85685,Ipiranga
+1011,85685,João Clemente
+1012,85685,Mariluz
+1013,85685,Mariluz C
+1014,85685,Mariluz Norte
+1015,85685,Marisul
+1016,85685,Nordeste
+1017,85685,Nova Nordeste
+1018,85685,Nova Santa Teresinha Norte
+1019,85685,Presidente
+1020,85685,Riviera
+1021,85685,Santa Catarina
+1022,85685,Santa Teresinha
+1023,85685,Santa Teresinha Norte
+1024,85685,Vinte e um de Abril
+1025,85782,Esperança
+1026,84999,Cruzeiro
+1027,87130,Cafifas
+1028,87130,Capelinha
+1029,87130,Centro
+1030,87130,Cerrinho Dois Umbús
+1031,87130,Chácara
+1032,87130,Cidade Alta
+1033,87130,Cohab
+1034,87130,Doutor Ayub
+1035,87130,Enio Sayago
+1036,87130,Estação
+1037,87130,José da Luz
+1038,87130,Ponte Sêca
+1039,87130,Pró-Morar
+1040,87130,União
+1041,87130,Vila Nova
+1042,87130,Vinte e Quatro de Maio
+1043,87130,Várzea
+1044,87173,Bom Jardim
+1045,87173,Bom Pastor
+1046,87173,Brasília
+1047,87173,Centro
+1048,87173,Cidade Nova
+1049,87173,Colina Verde
+1050,87173,Concórdia
+1051,87173,Farroupilha
+1052,87173,Feitoria Nova
+1053,87173,Harmonia
+1054,87173,Jardim Buhler
+1055,87173,Jardim Panorâmico
+1056,87173,Jardim do Alto
+1057,87173,Morada do Sol
+1058,87173,Palmares
+1059,87173,Sete de Setembro
+1060,87173,São José
+1061,87173,Vinte e Cinco de Julho
+1062,87173,Vista Alegre
+1063,87238,Consolata
+1064,87238,Mauá
+1065,87238,Nossa Senhora Aparecida
+1066,87238,Nossa Senhora de Lourdes
+1067,87238,Pró Morar
+1068,87238,Rivera
+1069,87238,Santa Rosa
+1070,87270,Alto Pedregal
+1071,87270,Boa Vista
+1072,87270,Centro
+1073,87270,Cohab
+1074,87270,Colina da Lagoa
+1075,87270,Distrito Industrial I
+1076,87270,Distrito Industrial II
+1077,87270,Ernani Dias de Moraes
+1078,87270,Floresta
+1079,87270,Gaúcha
+1080,87270,Gentil
+1081,87270,Industrial Santa Terezinha
+1082,87270,Manoel Vieira da Fonseca
+1083,87270,Medianeira
+1084,87270,Nossa Senhora Aparecida
+1085,87270,Nossa Senhora Consoladora
+1086,87270,Nunes
+1087,87270,Oliveira
+1088,87270,Operário
+1089,87270,Pajé
+1090,87270,Pedregal
+1091,87270,Rodrigues
+1092,87270,Suzana
+1093,87270,São Cristóvão
+1094,87270,São José
+1095,87270,São Sebastião
+1096,87297,Alto do Parque
+1097,87297,Americano
+1098,87297,Bom Pastor
+1099,87297,Campestre
+1100,87297,Carneiros
+1101,87297,Centenário
+1102,87297,Centro
+1103,87297,Conservas
+1104,87297,Conventos
+1105,87297,Floresta
+1106,87297,Florestal
+1107,87297,Hidráulica
+1108,87297,Igrejinha
+1109,87297,Imigrante
+1110,87297,Jardim do Cedro
+1111,87297,Moinhos
+1112,87297,Moinhos D'Água
+1113,87297,Montanha
+1114,87297,Morro Vinte e Cinco
+1115,87297,Olarias
+1116,87297,Planalto
+1117,87297,Santo André
+1118,87297,Santo Antônio
+1119,87297,São Bento
+1120,87297,São Cristóvão
+1121,87297,Universitário
+1122,87297,das Nações
+1123,87335,Central
+1124,87335,Leste
+1125,87335,Norte
+1126,87335,Oeste
+1127,86908,Centro
+1128,86908,Feldmann
+1129,86908,Quarenta e Oito Baixa
+1130,87351,Canudinho
+1131,87351,Centro
+1132,87351,Harmonia
+1133,87351,Independência
+1134,87351,Manoel Machado
+1135,86940,Centro
+1136,86940,Cidade Alta
+1137,86940,Navegantes
+1138,86940,Progresso
+1139,86940,Restinga
+1140,86940,Vila Nova
+1141,88820,Cidade D'água
+1142,87068,Centro
+1143,87068,Coréia
+1144,87068,Recreio
+1145,87068,Santa Albina
+1146,87068,São José
+1147,87068,São Miguel
+1148,87491,Aeroclube
+1149,87491,Bela Vista
+1150,87491,Centenário
+1151,87491,Centro
+1152,87491,Cinco de Maio
+1153,87491,Estação
+1154,87491,Faxinal
+1155,87491,Ferroviário
+1156,87491,Germano Henke
+1157,87491,Imigração
+1158,87491,Industrial
+1159,87491,Municipal
+1160,87491,Olaria
+1161,87491,Panorama
+1162,87491,Passo do Manduca
+1163,87491,Porto dos Pereiras
+1164,87491,Progresso
+1165,87491,Rui Barbosa
+1166,87491,Santa Rita
+1167,87491,Santo Antônio
+1168,87491,Senai
+1169,87491,São João
+1170,87491,São Paulo
+1171,87491,Tanac
+1172,87491,Timbaúva
+1173,87491,Zootecnia
+1174,87530,Centro
+1175,87530,Fátima
+1176,87530,Guaporé
+1177,87530,Jardim Cidade Alta
+1178,87530,São José
+1179,87556,Alfredo Alzíro Roos
+1180,87556,Arlindo Hermes
+1181,87556,Boa Vista
+1182,87556,Centro
+1183,87556,Cohab
+1184,87556,Expodireto
+1185,87556,Industrial
+1186,87556,Ioris
+1187,87556,Ipiranga
+1188,87556,Jardim
+1189,87556,Martini
+1190,87556,Santo Antônio
+1191,87556,Solano
+1192,87556,Stara
+1193,87556,São João
+1194,87556,Três Irmãos
+1195,87556,Vargas
+1196,87556,Viau
+1197,87556,Vila Nova
+1198,87637,Belvedere
+1199,87637,Bom Princípio
+1200,87637,Centro
+1201,87637,Itália
+1202,87637,São Cristóvão
+1203,87637,Vida Nova
+1204,84816,Bela Vista
+1205,84816,Centro
+1206,84816,Imigrantes
+1207,84816,Liberdade
+1208,84816,Primavera
+1209,84816,Progresso
+1210,84816,Vila Nova
+1211,84816,das Rosas
+1212,87670,Pousada da Neve
+1213,87696,Basalto
+1214,87696,Caravággio
+1215,87696,Centro
+1216,87696,Coroados
+1217,87696,Industrial
+1218,87696,Jardim de São Brás
+1219,87696,Rio Branco
+1220,87696,Sagrada Família
+1221,87696,Santa Cruz
+1222,87696,São Cristóvão
+1223,87696,São João Bosco
+1224,87696,São Peregrino
+1225,87696,Vila Lenzi
+1226,87718,Alpes do Vale
+1227,87718,Boa Saúde
+1228,87718,Boa Vista
+1229,87718,Canudos
+1230,87718,Centro
+1231,87718,Diehl
+1232,87718,Guarani
+1233,87718,Hamburgo Velho
+1234,87718,Ideal
+1235,87718,Industrial
+1236,87718,Liberdade
+1237,87718,Lomba Grande
+1238,87718,Mauá
+1239,87718,Operário
+1240,87718,Ouro Branco
+1241,87718,Petrópolis
+1242,87718,Primavera
+1243,87718,Pátria Nova
+1244,87718,Rincão
+1245,87718,Rio Branco
+1246,87718,Rondônia
+1247,87718,Roselândia
+1248,87718,Santo Afonso
+1249,87718,São Jorge
+1250,87718,São José
+1251,87718,Vila Nova
+1252,87718,Vila Rosa
+1253,87734,Albatroz
+1254,87734,Caiu do Céu
+1255,87734,Caravagio
+1256,87734,Centro
+1257,87734,Encosta da Serra
+1258,87734,Farroupilha
+1259,87734,Glória
+1260,87734,Laranjeiras
+1261,87734,Medianeira
+1262,87734,Panorâmico
+1263,87734,Parque Real
+1264,87734,Parque do Sol
+1265,87734,Pitangas
+1266,87734,Popular
+1267,87734,Porto Lacustre
+1268,87734,Sulbrasileiro
+1269,87734,Vila da Serra
+1270,87815,Alto Paraíso
+1271,87815,Alvorada
+1272,87815,Arco-Íris
+1273,87815,Becker
+1274,87815,Bela Vista
+1275,87815,Centro
+1276,87815,Esperança
+1277,87815,Fensterseifer
+1278,87815,Fritsch
+1279,87815,Italiana
+1280,87815,Jaciandi
+1281,87815,Jardim Paraguai
+1282,87815,Kuhn
+1283,87815,Medianeira
+1284,87815,Morro Grosse
+1285,87815,Nossa Senhora de Fátima
+1286,87815,Parque Moinho Velho
+1287,87815,Pavão
+1288,87815,Piratini
+1289,87815,Planalto
+1290,87815,Serrano
+1291,87815,São Jorge
+1292,87815,Timbará
+1293,87815,Trentini
+1294,87815,Vila Nova
+1295,87815,Zona Norte
+1296,87815,Érica
+1297,87858,José Alexandre Zachia
+1298,87890,Catarina Bresolin Mastella
+1299,87890,Centro
+1300,87890,Modelo
+1301,87890,Renascer
+1302,87890,Rio Branco
+1303,87890,Ângelo Furian
+1304,87386,Integração
+1305,87386,Limeira
+1306,87386,São José do Pinhal
+1307,87955,Antônio José Emigdio
+1308,87955,Barbosa Lessa
+1309,87955,Bela Vista
+1310,87955,Bento Gonçalves
+1311,87955,Calcáreo
+1312,87955,Centro
+1313,87955,Cerro da Fumaça
+1314,87955,Edi Amaral da Costa
+1315,87955,Erni Pereira Alves
+1316,87955,Farroupilha
+1317,87955,Getúlio Vargas
+1318,87955,Padre Reinaldo Wist
+1319,87955,Parque da Bica
+1320,87955,Passo da Vila
+1321,87955,Princesa Isabel
+1322,87955,Pura Amaral
+1323,87955,Pôr-do-Sol
+1324,87955,Silvio Citrine Pereira
+1325,87955,Sinuelo
+1326,87955,Vasco João Manetti
+1327,87955,Vila Nova
+1328,87955,das Trincheiras Republicanas
+1329,87955,dos Moraes
+1330,87971,Alvorada
+1331,87971,Bom Pastor
+1332,87971,Centro
+1333,87971,Cristal
+1334,87971,Grapia
+1335,87971,Líder
+1336,87971,Medianeira
+1337,87971,Pró-Morar
+1338,87971,São Cristóvão
+1339,87971,São Miguel
+1340,88013,Aberta dos Morros
+1341,88013,Agronomia
+1342,88013,Anchieta
+1343,88013,Arquipélago
+1344,88013,Auxiliadora
+1345,88013,Azenha
+1346,88013,Bela Vista
+1347,88013,Belém Novo
+1348,88013,Belém Velho
+1349,88013,Boa Vista
+1350,88013,Boa Vista do Sul
+1351,88013,Bom Fim
+1352,88013,Bom Jesus
+1353,88013,Camaquã
+1354,88013,Campo Novo
+1355,88013,Cascata
+1356,88013,Cavalhada
+1357,88013,Centro Histórico
+1358,88013,Chapéu do Sol
+1359,88013,Chácara das Pedras
+1360,88013,Cidade Baixa
+1361,88013,Coronel Aparício Borges
+1362,88013,Costa e Silva
+1363,88013,Cristal
+1364,88013,Cristo Redentor
+1365,88013,Espírito Santo
+1366,88013,Extrema
+1367,88013,Farrapos
+1368,88013,Farroupilha
+1369,88013,Floresta
+1370,88013,Glória
+1371,88013,Guarujá
+1372,88013,Higienópolis
+1373,88013,Humaitá
+1374,88013,Hípica
+1375,88013,Independência
+1376,88013,Ipanema
+1377,88013,Jardim Botânico
+1378,88013,Jardim Carvalho
+1379,88013,Jardim Europa
+1380,88013,Jardim Floresta
+1381,88013,Jardim Isabel
+1382,88013,Jardim Itu
+1383,88013,Jardim Leopoldina
+1384,88013,Jardim Lindóia
+1385,88013,Jardim Sabará
+1386,88013,Jardim São Pedro
+1387,88013,Jardim do Salso
+1388,88013,Lageado
+1389,88013,Lami
+1390,88013,Lomba do Pinheiro
+1391,88013,Medianeira
+1392,88013,Menino-Deus
+1393,88013,Moinhos de Vento
+1394,88013,Mont’Serrat
+1395,88013,Morro Santana
+1396,88013,Mário Quintana
+1397,88013,Navegantes
+1398,88013,Nonoai
+1399,88013,Parque Santa Fé
+1400,88013,Partenon
+1401,88013,Passo da Areia
+1402,88013,Passo das Pedras
+1403,88013,Pedra Redonda
+1404,88013,Petrópolis
+1405,88013,Pitinga
+1406,88013,Ponta Grossa
+1407,88013,Praia de Belas
+1408,88013,Restinga
+1409,88013,Rio Branco
+1410,88013,Rubem Berta
+1411,88013,Santa Cecília
+1412,88013,Santa Maria Goretti
+1413,88013,Santa Rosa de Lima
+1414,88013,Santa Tereza
+1415,88013,Santana
+1416,88013,Santo Antônio
+1417,88013,Sarandi
+1418,88013,Serraria
+1419,88013,São Caetano
+1420,88013,São Geraldo
+1421,88013,São João
+1422,88013,São Sebastião
+1423,88013,Sétimo Céu
+1424,88013,Teresópolis
+1425,88013,Tristeza
+1426,88013,Três Figueiras
+1427,88013,Vila Assunção
+1428,88013,Vila Conceição
+1429,88013,Vila Ipiranga
+1430,88013,Vila Jardim
+1431,88013,Vila João Pessoa
+1432,88013,Vila Nova
+1433,88013,Vila São José
+1434,84760,São Francisco
+1435,84875,Bela Vista
+1436,84875,Centro
+1437,84875,Colina
+1438,84875,Princesa
+1439,84875,Três Palmeiras
+1440,88153,Agostinho Petrone
+1441,88153,América
+1442,88153,Carlos Santos
+1443,88153,Frederico Ernesto Buchholz
+1444,88153,Getúlio Vargas
+1445,88153,Imperial Marinheiro Marcílio Dias
+1446,88153,Industrial Tamandaré
+1447,88153,Miguel de Castro Moreira
+1448,88153,Santa Rita de Cássia
+1449,88153,Santa Tereza
+1450,88153,São José Operário
+1451,88170,Auxiliadora
+1452,88170,Boa Vista
+1453,88170,Bom Fim
+1454,88170,Centro
+1455,88170,Fortaleza
+1456,88170,Guerino
+1457,88170,Jardim Boa Vista
+1458,88170,Ramiz Galvão
+1459,88170,São Jorge
+1460,88170,São João
+1461,88170,do Rosário
+1462,89400,Centro
+1463,89400,Governador Leonel de Moura Brizola
+1464,89400,Presidente Getúlio Dornelles Vargas
+1465,88234,Alto Rolantinho
+1466,88234,Fazenda Passos
+1467,88234,Rio Branco
+1468,88234,Rolantinho
+1469,88234,Santo Antônio
+1470,88250,Centro
+1471,88250,Ipiranga
+1472,88250,Kiri
+1473,88250,Nossa Senhora Aparecida
+1474,88250,Santa Bárbara
+1475,88250,Santa Helena
+1476,88250,São Cristóvão
+1477,88250,Vila da Boa Esperança
+1478,88315,Adroaldo Rodrigues
+1479,88315,Aliança
+1480,88315,Ana Luiza
+1481,88315,Analvina Severo Coelho
+1482,88315,Antenor Miranda Rocha
+1483,88315,Aracy Furtado
+1484,88315,Areias Brancas
+1485,88315,Artidor Ortiz
+1486,88315,Centenário
+1487,88315,Centro
+1488,88315,Cirino Dorneles Apratto
+1489,88315,Eligio Canestrini
+1490,88315,Graciano Argemi
+1491,88315,Jardim Paraíso
+1492,88315,Jorge Arigoni
+1493,88315,João Alves Osório
+1494,88315,João Nunes da Silva
+1495,88315,Lafar Azevedo
+1496,88315,Lagoa
+1497,88315,Nossa Senhora do Rosário
+1498,88315,Oliverio Ramos de Vasconcelos
+1499,88315,Planalto
+1500,88315,Presidente Vargas
+1501,88315,Primavera
+1502,88315,Progresso
+1503,88315,Rio Branco
+1504,88315,Santa Marta
+1505,88315,Santa Rita
+1506,88315,Santo Antônio
+1507,88315,Tenente Bandeira
+1508,88315,Vila Monte
+1509,88315,Vila Nova
+1510,88315,Vila Prates
+1511,88315,Vila Swift
+1512,89753,Centro
+1513,89753,Cruzeiro
+1514,89753,Harmonia
+1515,89753,Menino Deus
+1516,89753,Nossa Senhora dos Navegantes
+1517,89753,Portão
+1518,89753,Residencial Nova Jacuí
+1519,88331,Bela Vista
+1520,88331,Centro
+1521,88331,Estação
+1522,88331,Liberdade
+1523,88331,Linha do Meio
+1524,88331,Santo Inácio
+1525,88331,Vila Nova
+1526,88374,Aparecida
+1527,88374,Centro
+1528,88374,Cerutti
+1529,88374,Fátima
+1530,88374,Loeblein
+1531,88374,Morada do Sol
+1532,88374,Padroeira
+1533,88374,Tiradentes
+1534,88390,Aliança
+1535,88390,Ana Nery
+1536,88390,Arroio Grande
+1537,88390,Avenida
+1538,88390,Belvedere
+1539,88390,Bom Jesus
+1540,88390,Bonfim
+1541,88390,Castelo Branco
+1542,88390,Centro
+1543,88390,Country
+1544,88390,Do Parque
+1545,88390,Dona Carlota
+1546,88390,Esmeralda
+1547,88390,Faxinal Menino de Deus
+1548,88390,Germânia
+1549,88390,Goiás
+1550,88390,Higienópolis
+1551,88390,Independência
+1552,88390,Jardim Europa
+1553,88390,João Alves
+1554,88390,Linha Santa Cruz
+1555,88390,Margarida
+1556,88390,Monte Verde
+1557,88390,Pedreira
+1558,88390,Progresso
+1559,88390,Rauber
+1560,88390,Renascença
+1561,88390,Santa Vitória
+1562,88390,Santo Antônio
+1563,88390,Santo Inácio
+1564,88390,Santuário
+1565,88390,Schulz
+1566,88390,Senai
+1567,88390,São João
+1568,88390,Universitário
+1569,88390,Várzea
+1570,88412,Agro-Industrial
+1571,88412,Boi Morto
+1572,88412,Bonfim
+1573,88412,Camobi
+1574,88412,Campestre do Menino Deus
+1575,88412,Carolina
+1576,88412,Caturrita
+1577,88412,Centro
+1578,88412,Cerrito
+1579,88412,Chácara das Flores
+1580,88412,Divina Providência
+1581,88412,Dom Antônio Reis
+1582,88412,Duque de Caxias
+1583,88412,Itararé
+1584,88412,João Luiz Pozzobon
+1585,88412,Juscelino Kubitschek
+1586,88412,Km Três
+1587,88412,Lorenzi
+1588,88412,Menino Jesus
+1589,88412,Noal
+1590,88412,Nonoai
+1591,88412,Nossa Senhora Medianeira
+1592,88412,Nossa Senhora das Dores
+1593,88412,Nossa Senhora de Fátima
+1594,88412,Nossa Senhora de Lourdes
+1595,88412,Nossa Senhora do Perpétuo Socorro
+1596,88412,Nossa Senhora do Rosário
+1597,88412,Nova Santa Marta
+1598,88412,Passo D'Areia
+1599,88412,Patronato
+1600,88412,Pinheiro Machado
+1601,88412,Presidente João Goulart
+1602,88412,Pé de Platano
+1603,88412,Renascença
+1604,88412,Salgado Filho
+1605,88412,São José
+1606,88412,São João
+1607,88412,Tancredo Neves
+1608,88412,Tomazetti
+1609,88412,Uglione
+1610,88412,Urlândia
+1611,88455,Argiles
+1612,88455,Armour
+1613,88455,Batuva
+1614,88455,Bela Vista
+1615,88455,Brasília
+1616,88455,Carajá
+1617,88455,Carolina
+1618,88455,Centro
+1619,88455,Cerro do Depósito
+1620,88455,Cohab do Armour
+1621,88455,Divisa
+1622,88455,Fluminense
+1623,88455,Fortim
+1624,88455,Hidráulica
+1625,88455,Industrial
+1626,88455,Internacional
+1627,88455,Kennedy
+1628,88455,Km 5
+1629,88455,Morada da Colina
+1630,88455,Parque São José
+1631,88455,Parque das Águas
+1632,88455,Parque do Sol
+1633,88455,Planalto
+1634,88455,Prado
+1635,88455,Real
+1636,88455,Registro
+1637,88455,Simon Bolivar
+1638,88455,São Paulo
+1639,88455,Tabatinga
+1640,88455,Umbu
+1641,88455,Wilson
+1642,88455,dos Jardins
+1643,88471,Auxiliadora
+1644,88471,Central
+1645,88471,Centro
+1646,88471,Cruzeiro
+1647,88471,Figueira
+1648,88471,Glória
+1649,88471,Industrial
+1650,88471,Planalto
+1651,88471,Sulina
+1652,88471,São Francisco
+1653,88471,Timbaúva
+1654,88498,Aviação
+1655,88498,Bento Gonçalves
+1656,88498,Brasiliano
+1657,88498,Cardeal
+1658,88498,Centro
+1659,88498,Coab II
+1660,88498,Coxilha
+1661,88498,Donatos
+1662,88498,Getúlio Vargas
+1663,88498,Jacinto
+1664,88498,Porto Pindorama
+1665,88498,Santa Júlia
+1666,88498,São Miguel
+1667,88498,Vila Nova
+1668,88498,Vila Rodrigues
+1669,88498,Vitoriense
+1670,88510,Alto da Boa Vista
+1671,88510,Ana Martins Bonato
+1672,88510,Atalaia
+1673,88510,Belizário
+1674,88510,Carlos Humberto
+1675,88510,Castilhos
+1676,88510,Centro
+1677,88510,Céu Aberto
+1678,88510,Daer
+1679,88510,Guabiroba
+1680,88510,Irmã Dulce
+1681,88510,João Evangelista
+1682,88510,Lulu Genro
+1683,88510,Maria Alice Gomes
+1684,88510,Missões
+1685,88510,Monsenhor Assis
+1686,88510,Nei Pereira
+1687,88510,Presidente João Goulart
+1688,88510,Riachuelo
+1689,88510,Santiago Pompeu
+1690,88510,São Jorge
+1691,88510,São Vicente
+1692,88510,Vila Itú
+1693,88510,Vila Jardim dos Eucaliptos
+1694,88510,Vila Nova
+1695,88510,Vila Rica
+1696,88510,Vista Alegre
+1697,88510,Zamperetti
+1698,88552,Bom Princípio
+1699,88552,Centro
+1700,88552,Cidade Alta
+1701,88552,Imigrantes
+1702,88552,Jaú
+1703,88552,Madre Teresa
+1704,88552,Menino Deus
+1705,88552,Passo dos Ramos
+1706,88552,Pitangueiras
+1707,88552,Santa Teresinha
+1708,88552,Várzea
+1709,88595,Centro
+1710,88595,Cerro Azul
+1711,88595,Floresta
+1712,88595,Getúlio Vargas
+1713,88595,Glória
+1714,88595,Industrial
+1715,88595,Leonizio Gonzatto
+1716,88595,Petrópolis
+1717,88595,Santa Fé
+1718,88595,Santa Rita
+1719,88595,Santo Antônio
+1720,88595,São Francisco
+1721,88595,São João
+1722,88595,Tiradentes
+1723,88595,Zeca Silva
+1724,88633,Bettin
+1725,88633,Centro
+1726,88633,Dr. Florencio Aquino Guimarães
+1727,88633,Itachere
+1728,88633,Maria do Carmo
+1729,88633,Paraboi
+1730,88633,Passo
+1731,88633,Pirahy
+1732,88633,Tiro
+1733,88633,Várzea
+1734,88650,Ari Lopes
+1735,88650,Assis Brasil Martins de Bitencourt
+1736,88650,Centro
+1737,88650,Getúlio Vargas
+1738,88650,João XXIII
+1739,88650,João de Deus
+1740,88650,Padre Matheus Mandarino
+1741,88650,Santo Antônio das Olarias
+1742,88650,Vila Nova
+1743,88692,3 de Outubro
+1744,88692,Andrade
+1745,88692,Baltar
+1746,88692,Bela Vista
+1747,88692,Bomfim
+1748,88692,Centro
+1749,88692,Cidade Nova
+1750,88692,Corredor da Balança
+1751,88692,Dr. Dácio
+1752,88692,Esplanada
+1753,88692,Gabrielense
+1754,88692,Independência
+1755,88692,Jardim Europa
+1756,88692,Jardim Primavera
+1757,88692,Jardim das Hortências
+1758,88692,Leal
+1759,88692,Mariana
+1760,88692,Medeiros
+1761,88692,Menino Jesus
+1762,88692,Morro do Sabiá
+1763,88692,Novo Horizonte
+1764,88692,San Isidro
+1765,88692,Santa Isabel
+1766,88692,Santo Antônio
+1767,88692,São Bento
+1768,88692,São Clemente
+1769,88692,São Gregório
+1770,88692,São Sebastião
+1771,88692,Trilha
+1772,88692,Universitário
+1773,88692,Vargas
+1774,88692,Vieira
+1775,88692,Vila Maria
+1776,88692,Vila Trindade
+1777,88692,Vivenda
+1778,88692,Zona Sul
+1779,88692,Élbio Vieira Vargas
+1780,88714,Bandeira Branca
+1781,88714,Bela Vista
+1782,88714,Centro
+1783,88714,Cidade Alta
+1784,88714,Cidade Baixa
+1785,88714,Fátima
+1786,88714,Padre Reus
+1787,88714,Passo D'Areia
+1788,88714,Princesa Isabel
+1789,88714,Quininho
+1790,88714,São Francisco
+1791,88714,São Thomas
+1792,88757,Altos da Esperança
+1793,88757,Braço
+1794,88757,Nossa Senhora da Saúde
+1795,88757,Operário
+1796,88757,Planalto
+1797,88757,São Francisco
+1798,88757,das Canções
+1799,88773,Arroio da Manteiga
+1800,88773,Boa Vista
+1801,88773,Campestre
+1802,88773,Campina
+1803,88773,Centro
+1804,88773,Cristo Rei
+1805,88773,Duque de Caxias
+1806,88773,Fazenda São Borja
+1807,88773,Feitoria
+1808,88773,Fião
+1809,88773,Jardim América
+1810,88773,Morro do Espelho
+1811,88773,Padre Reus
+1812,88773,Pinheiro
+1813,88773,Rio Branco
+1814,88773,Rio dos Sinos
+1815,88773,Santa Teresa
+1816,88773,Santo André
+1817,88773,Santos Dumont
+1818,88773,Scharlau
+1819,88773,São José
+1820,88773,São João Batista
+1821,88773,São Miguel
+1822,88773,Vicentina
+1823,88811,Agrícola
+1824,88811,Centro
+1825,88811,Duque de Caxias
+1826,88811,Gruta
+1827,88811,Joaquim Nascimento
+1828,88811,Maria Auxiliadora
+1829,88811,Monsenhor Wolski
+1830,88811,Oeste
+1831,88811,Pedreira
+1832,88811,Presidente Vargas
+1833,88811,Raimundo Gomes Neto
+1834,88811,Residencial Centenário
+1835,88811,Vila Fernando Ferrari
+1836,88811,Vila Floresta
+1837,88811,Vila Harmonia
+1838,88811,Vila Jauri
+1839,88811,Vila Loureiro
+1840,88811,Vila Marcos
+1841,88811,Vila Mário
+1842,88811,Vila Nova
+1843,88811,Vila Paz
+1844,88811,Vila Trinta
+1845,88811,Área Industrial
+1846,88838,Bela Vista
+1847,88838,Francisco Doncatto
+1848,88838,Henrique Pante
+1849,88838,Industrial
+1850,88838,Michelon
+1851,88838,Polo
+1852,88838,Santini
+1853,88838,Santo Antônio
+1854,88838,São José
+1855,88919,Canto Verde
+1856,88919,Nova Alemanha
+1857,88919,Riveira
+1858,88919,Vila Gaúcha
+1859,88919,Vila Linhares
+1860,88919,Vila Maturino de Oliveira Bello
+1861,88919,Vila Oliveira
+1862,88919,Vila Progresso
+1863,88919,Vila Santa Luzia
+1864,88919,Vila Santo Antônio
+1865,88919,Vila Schmidt
+1866,88919,Vila Trevo
+1867,88951,Bela Vista
+1868,88951,Centro
+1869,88951,Cooperativa
+1870,88951,Cristo Rei
+1871,88951,Isolanda
+1872,88951,Kurtz
+1873,88951,Lili
+1874,88951,Lôndero
+1875,88951,Medianeira
+1876,88951,Pontes
+1877,88951,Rosa
+1878,88951,Santo Antônio
+1879,88951,Santos
+1880,88951,Silveira
+1881,88951,São Francisco
+1882,88951,Tatsch
+1883,88951,Walter
+1884,87840,São Cristóvão
+1885,88994,Amaral Ribeiro
+1886,88994,Centenário
+1887,88994,Centro
+1888,88994,Fazenda Leão
+1889,88994,Ferrabraz
+1890,88994,Floresta
+1891,88994,Horizonte
+1892,88994,Industrial
+1893,88994,Oeste
+1894,88994,Quatro Colonias
+1895,88994,Santa Fe
+1896,88994,Sete de Setembro
+1897,88994,São Jacó
+1898,88994,São Luiz
+1899,88994,Vila Irma
+1900,88994,Vila Nova
+1901,88994,Voo Livre
+1902,85529,Nossa Senhora Aparecida
+1903,85529,Renascer
+1904,89095,Aparecida
+1905,89095,Centro
+1906,89095,Gramadinho
+1907,89095,Planalto
+1908,89095,Santim
+1909,89176,Baixada
+1910,89176,Centro
+1911,89176,Copetti
+1912,89176,Floresta
+1913,89176,Industrial
+1914,89176,Maieron
+1915,89176,Medianeira
+1916,89176,Peões
+1917,89176,Pinhal
+1918,89176,Pousada do Sol
+1919,89176,Rio Branco
+1920,89176,União
+1921,89176,Vera Cruz
+1922,89192,Botucaraí
+1923,89192,Centro
+1924,89192,Expedicionário
+1925,89192,Farroupilha
+1926,89192,Fontes
+1927,89192,Ipiranga
+1928,89192,Missões
+1929,89214,Centro
+1930,89214,Nazaré
+1931,89214,São Cristóvão
+1932,89214,São Paulo
+1933,89214,Treze de Maio
+1934,89230,América
+1935,89230,Azul
+1936,89230,Centro
+1937,89230,Oito de Maio
+1938,89230,Pompéia
+1939,89230,Progresso
+1940,89230,Seminário
+1941,89230,Vila Brasília
+1942,89230,Vila Cohab
+1943,89230,Vila Elisa Trevisan
+1944,89230,Vila Promorar
+1945,89230,Vila São Judas Tadeu
+1946,89273,Centro
+1947,89273,Cruzeiro do Sul
+1948,89273,Eldorado
+1949,89273,Empresa
+1950,89273,Fogão Gaúcho
+1951,89273,Ideal
+1952,89273,Jardim do Prado
+1953,89273,Km 4
+1954,89273,Medianeira
+1955,89273,Morro da Cruz
+1956,89273,Morro do Leôncio
+1957,89273,Mundo Novo
+1958,89273,Nossa Senhora de Fátima
+1959,89273,Petrópolis
+1960,89273,Picada Francesa
+1961,89273,Recreio
+1962,89273,Ronda
+1963,89273,Sagrada Família
+1964,89273,Santa Maria
+1965,89273,Santa Rosa
+1966,89273,Santa Terezinha
+1967,89273,Tucanos
+1968,89290,Caleira
+1969,89290,Centro
+1970,89290,Colônia Vinte de Setembro
+1971,89290,Coqueiros
+1972,89290,Léo Alvim Faller
+1973,89290,Olaria
+1974,89290,Passo da Aldeia
+1975,89290,Prado
+1976,89290,Praia
+1977,89290,Santo Antônio
+1978,89290,São João
+1979,89290,União
+1980,89311,Fries
+1981,89311,Teresa Verzeri
+1982,85162,Bela Vista
+1983,85162,Centro
+1984,85162,Serraria
+1985,98213,Alesgut
+1986,98213,Boa Vista
+1987,98213,Canabarro
+1988,98213,Centro Administrativo
+1989,98213,Languiru
+1990,98213,Teutônia
+1991,89354,Aldeia da Lagoa
+1992,89354,Barra
+1993,89354,Centro
+1994,89354,Centro Lagoa
+1995,89354,Cruzeiro do Sul I
+1996,89354,Cruzeiro do Sul II
+1997,89354,Estância
+1998,89354,Indianópolis
+1999,89354,Jardim Atlântico
+2000,89354,Jardim do Éden
+2001,89354,Litoral
+2002,89354,Nova Tramandaí Plano A
+2003,89354,Nova Tramandaí Plano B
+2004,89354,Nova Tramandaí Zona Norte
+2005,89354,Nova Tramandaí Zona Sul
+2006,89354,Oásis Sul
+2007,89354,Parque Emboaba
+2008,89354,Parque Histórico
+2009,89354,Parque Humaitá
+2010,89354,Parque dos Presidentes
+2011,89354,Portal do Éden
+2012,89354,Recanto da Lagoa
+2013,89354,São Francisco I
+2014,89354,São Francisco II
+2015,89354,São José
+2016,89354,Tiarajú
+2017,89354,Tiroleza
+2018,89354,Tramandaí Beira-Mar
+2019,89354,Tramandaí Sul
+2020,89354,Zona Nova
+2021,89354,Zona Nova Sul
+2022,85367,Bela Vista
+2023,85367,Centro
+2024,85367,Iate
+2025,85367,Nossa Senhora Aparecida
+2026,85367,Pontal
+2027,85367,Santa Rita
+2028,85367,São João
+2029,89370,Centro
+2030,89370,Encosta da Serra
+2031,89370,Linha 28
+2032,89370,Linha Café Baixa
+2033,89370,Moreira
+2034,89370,Quilombo
+2035,89370,Sander
+2036,89370,Vila Nova
+2037,89370,Águas Brancas
+2038,86142,Centro
+2039,86142,Nossa Senhora Aparecida
+2040,86142,São Luiz
+2041,86142,São Pedro
+2042,89419,Centro
+2043,89419,Frei Olímpio
+2044,89419,Glória
+2045,89419,Ildo Meneghetti
+2046,89419,Operário
+2047,89419,Pindorama
+2048,89419,Santa Inês
+2049,89419,Sulserra
+2050,89419,Weber
+2051,89419,Érico Veríssimo
+2052,88021,São José
+2053,89478,Ana do Nascimento Terra
+2054,89478,Antônio Augusto de Oliveira Terra
+2055,89478,Beck
+2056,89478,Centro
+2057,89478,Chiapetta
+2058,89478,Coronel Marcial Gonçalves Terra
+2059,89478,Jardim das Paineiras
+2060,89478,Juliana
+2061,89478,Medeiros
+2062,89478,Moraes
+2063,89478,Residencial Martins
+2064,89478,Severo da Rosa
+2065,89478,São Jorge
+2066,89478,da Pedreira
+2067,89478,da Vila Elizabeth
+2068,89478,da Vila Gaúcha
+2069,89478,do Frigorífico
+2070,89478,do Gaúcho
+2071,88480,Bertoldo Trindade
+2072,88480,Democratino da Silva Ribeiro
+2073,88480,Emiliano Trindade Prestes
+2074,89516,Aeroporto
+2075,89516,Alexandre Zachia
+2076,89516,Bela Vista
+2077,89516,Cabo Luiz Quevedo
+2078,89516,Centro
+2079,89516,Cidade Alegria
+2080,89516,Cidade Nova
+2081,89516,Distrito Rodoviário
+2082,89516,Emílio Brandi
+2083,89516,Francisca Tarragô
+2084,89516,Ipiranga
+2085,89516,Jardim do Salso
+2086,89516,Jóquei Clube
+2087,89516,Mascarenhas de Moraes
+2088,89516,Nova Esperança
+2089,89516,Rio Branco
+2090,89516,Rui Ramos
+2091,89516,Salso de Baixo
+2092,89516,Santana
+2093,89516,Santo Antônio
+2094,89516,Santo Inácio
+2095,89516,São João
+2096,89516,São Miguel
+2097,89516,Tabajara Brites
+2098,89516,União das Vilas
+2099,89516,Vila Júlia
+2100,89532,Aeroporto
+2101,89532,Altos da Glória
+2102,89532,Barcellos
+2103,89532,Boeira
+2104,89532,Borges
+2105,89532,Carazinho
+2106,89532,Centro
+2107,89532,Chico Mendes
+2108,89532,Chácara das Palmeiras
+2109,89532,Cristal
+2110,89532,Cristina
+2111,89532,Diamantina
+2112,89532,Distrito Industrial I
+2113,89532,Distrito Industrial II
+2114,89532,Flora
+2115,89532,Franciosi
+2116,89532,Gasparetto
+2117,89532,Gaúcha
+2118,89532,Gertrudes
+2119,89532,Giacomet
+2120,89532,Glória
+2121,89532,Haideé
+2122,89532,Imperial
+2123,89532,Industrial
+2124,89532,Jardim América
+2125,89532,Jardim Toscano
+2126,89532,Jardim dos Pampas
+2127,89532,Kennedy
+2128,89532,Lindoca
+2129,89532,Lindóia
+2130,89532,Lomba Chata
+2131,89532,Mauá
+2132,89532,Minuano
+2133,89532,Monte Claro
+2134,89532,Municipal
+2135,89532,Nossa Senhora de Fátima
+2136,89532,Nossa Senhora de Oliveira
+2137,89532,Parque dos Rodeios
+2138,89532,Passo da Porteira
+2139,89532,Petrópolis
+2140,89532,Pinheiros
+2141,89532,Planalto
+2142,89532,Porcínio Pinto
+2143,89532,Pradense
+2144,89532,Samuel Guazzelli
+2145,89532,Santa Cruz
+2146,89532,Santa Terezinha
+2147,89532,Santana
+2148,89532,Seminário
+2149,89532,São Francisco
+2150,89532,São José
+2151,89532,São João
+2152,89532,Vista Alegre
+2153,89532,Vitória
+2154,89532,Vêneto
+2155,88080,Canto Krewer
+2156,88080,Centro
+2157,88080,Imigrante
+2158,88080,Krindges
+2159,88080,Morro Paris
+2160,88080,Recosta
+2161,88080,Vila Nova
+2162,89559,Aviação
+2163,89559,Battisti
+2164,89559,Bela Vista
+2165,89559,Brands
+2166,89559,Brígida
+2167,89559,Canto do Cedro
+2168,89559,Centro
+2169,89559,Cidade Alta
+2170,89559,Cidade Nova
+2171,89559,Coronel Brito
+2172,89559,Cruzeiro
+2173,89559,Diettrich
+2174,89559,Gressler
+2175,89559,Industrial
+2176,89559,Leopoldina
+2177,89559,Macedo
+2178,89559,Morsch
+2179,89559,Santa Tecla
+2180,89559,São Francisco Xavier
+2181,89559,Universitário
+2182,89559,União
+2183,89559,Xangrilá
+2184,89575,Araçá
+2185,89575,Arco Íris
+2186,89575,Boa Vista
+2187,89575,Bom Jesus
+2188,89575,Centro
+2189,89575,Cipriano de Oliveira
+2190,89575,Conventos
+2191,89575,Esmeralda
+2192,89575,Imigrantes
+2193,89575,Industrial
+2194,89575,Leopoldina
+2195,89575,Maria Rosália Pauli
+2196,89575,Rincão da Serra
+2197,89591,Centro
+2198,89591,Distrito Industrial Ildo Parise
+2199,89591,Femaçã
+2200,89591,Medianeira
+2201,89591,Palugana
+2202,89591,Por do Sol
+2203,89591,Renovação
+2204,89591,Sagrado Coração de Jesus
+2205,89591,Santa Lúcia
+2206,89591,Santa Rita
+2207,89591,Santo Antônio
+2208,89591,Sapopema
+2209,89591,São Francisco
+2210,89591,São Pelegrino
+2211,89591,Universal
+2212,89591,Valverde
+2213,89591,Vila Azul
+2214,89630,Augusta
+2215,89630,Branquinha
+2216,89630,Cecília
+2217,89630,Centro
+2218,89630,Cocão
+2219,89630,Elsa
+2220,89630,Estância Grande
+2221,89630,Fiuza
+2222,89630,Krahe
+2223,89630,Martinica
+2224,89630,Parque Saint’Hilaire
+2225,89630,Passo do Vigário
+2226,89630,Querência
+2227,89630,Santa Isabel
+2228,89630,Santo Onofre
+2229,89630,São Lucas
+2230,89630,São Tomé
+2231,89630,Tarumã
+2232,89630,Viamópolis
+2233,89656,Centro
+2234,89656,Figueiras
+2235,89656,Jateí
+2236,89656,Nossa Senhora dos Navegantes
+2237,89656,Uruguai
+2238,89656,Águas do Prado
+2239,85600,Sagrado Coração de Jesus

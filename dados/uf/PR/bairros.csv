@@ -1,0 +1,967 @@
+b,cd_tse,nome
+0,74179,Centro
+1,74179,Colina Verde
+2,74179,Esperança
+3,74179,Floresta
+4,74179,Industrial I
+5,74179,Industrial II
+6,74179,Nossa Senhora das Graças
+7,74179,Rondinha
+8,74179,Santa Mônica
+9,74179,São Francisco
+10,74357,Bariguí
+11,74357,Boqueirão
+12,74357,Cachoeira
+13,74357,Campina da Barra
+14,74357,Capela Velha
+15,74357,Centro
+16,74357,Chapada
+17,74357,Costeira
+18,74357,Estação
+19,74357,Fazenda Velha
+20,74357,Iguaçu
+21,74357,Passaúna
+22,74357,Porto das Laranjeiras
+23,74357,Sabiá
+24,74357,São Miguel
+25,74357,Thomaz Coelho
+26,74357,Tindiquera
+27,74357,Vila Nova
+28,79537,Conjunto Alvorada / Hélio Laghi
+29,79537,Conjunto Habitacional Cristo Rei I e Cristo Rei II
+30,79537,Conjunto Habitacional Ivo Paul Müller Sobrinho
+31,79537,Conjunto Habitacional Morada do Sol
+32,79537,Conjunto Habitacional Olinda Joanina Rizzi Sperafico
+33,79537,Conjunto Habitacional Primavera
+34,79537,Conjunto Residencial Bela Vista
+35,79537,Distrito de Bragantina
+36,79537,Distrito de Encantado do Oeste
+37,79537,Jardim América
+38,79537,Jardim Araçá
+39,79537,Jardim Carolina
+40,79537,Jardim Casagrande
+41,79537,Jardim Europa
+42,79537,Jardim Jussara
+43,79537,Jardim Mônaco
+44,79537,Jardim Panorama
+45,79537,Jardim Paraná
+46,79537,Jardim Progresso
+47,79537,Jardim Sheila / Itaipu
+48,79537,Jardim Tropical
+49,79537,Jardim Universidade
+50,79537,Mini Parque Industrial
+51,79537,Patrimônio Engenheiro Azaury
+52,79537,Patrimônio Nice
+53,79537,Patrimônio Silveirópolis
+54,79537,Patrimônio de Terra Nova do Piquiri
+55,79537,Plano Piloto
+56,74160,São Pedro
+57,74780,Centro
+58,74780,Morada do Sol
+59,74780,Santo Antônio
+60,74780,São Francisco
+61,74780,São Sebastião
+62,74780,Zibetti
+63,74837,Centro
+64,74837,Cidade Nova
+65,74837,Cohapar
+66,74837,Comunidade São Francisco de Assis
+67,74837,Diamante Azul
+68,74837,Jardim Aeroporto
+69,74837,Jardim Albuquerque
+70,74837,Jardim Alvorada
+71,74837,Jardim Araucária
+72,74837,Jardim Bandeirantes
+73,74837,Jardim Capricórnio
+74,74837,Jardim Conrado
+75,74837,Jardim Copacabana
+76,74837,Jardim Country Clube
+77,74837,Jardim Damasco
+78,74837,Jardim Flórida
+79,74837,Jardim Gutierrez
+80,74837,Jardim Horizonte
+81,74837,Jardim Ilha Bela
+82,74837,Jardim Isabel
+83,74837,Jardim John Kennedy
+84,74837,Jardim Lar Paraná
+85,74837,Jardim Maia
+86,74837,Jardim Modelo
+87,74837,Jardim Paulino
+88,74837,Jardim Paulista
+89,74837,Jardim Pio XII
+90,74837,Jardim Santa Cruz
+91,74837,Jardim Santa Nilce
+92,74837,Jardim Tropical
+93,74837,Moradia Verdes Campos
+94,74837,Parigot de Souza
+95,74837,Parque Industrial I
+96,74837,Parque Verde
+97,74837,Vila Carola
+98,74837,Vila Cândida
+99,74837,Vila Rio Grande
+100,74837,Vila Urupês
+101,74870,Centro
+102,74870,Santa Cruz
+103,74870,Santo Expedito
+104,74870,São Cristóvão
+105,74870,São José Operário
+106,74934,Alto Alegre
+107,74934,Brasmadeira
+108,74934,Brasília
+109,74934,Canadá
+110,74934,Cancelli
+111,74934,Cascavel Velho
+112,74934,Cataratas
+113,74934,Centro
+114,74934,Coqueiral
+115,74934,Country
+116,74934,Esmeralda
+117,74934,Fag
+118,74934,Floresta
+119,74934,Guarujá
+120,74934,Interlagos
+121,74934,Maria Luíza
+122,74934,Morumbi
+123,74934,Neva
+124,74934,Pacaembu
+125,74934,Parque São Paulo
+126,74934,Parque Verde
+127,74934,Periolo
+128,74934,Pioneiros Catarinenses
+129,74934,Quatorze de Novembro
+130,74934,Recanto Tropical
+131,74934,Região do Lago
+132,74934,Santa Cruz
+133,74934,Santa Felicidade
+134,74934,Santos Dumont
+135,74934,São Cristóvão
+136,74934,Universitário
+137,74934,Vista Linda
+138,75035,Centro
+139,75035,Cristo Rei
+140,75035,Frei Vito
+141,75035,Nossa Senhora Aparecida
+142,75035,São Cristóvão
+143,75035,São Genaro
+144,75035,São José
+145,75035,São Miguel
+146,75035,São Sebastião
+147,75035,Verdi
+148,75051,Zona 1
+149,75051,Zona 2
+150,75051,Zona 3
+151,75051,Zona 4
+152,75051,Zona 5 (Armazens)
+153,75051,Zona 6
+154,75051,Zona 7
+155,75051,Zona 8
+156,75078,Aeroporto
+157,75078,Alvorada
+158,75078,Bela Vista
+159,75078,Centro
+160,75078,Jardins
+161,75078,Ouro Verde
+162,75078,Sol Nascente
+163,75094,Aeroporto
+164,75094,Almoxarifado
+165,75094,Anita Pacheco
+166,75094,Araucária
+167,75094,Bela Vista
+168,75094,Bom Jesus
+169,75094,Camifra
+170,75094,Centro
+171,75094,Claret
+172,75094,Eapi
+173,75094,Estrela
+174,75094,Industrial
+175,75094,Jardim Brasília
+176,75094,Nelson Eloy Petry
+177,75094,Santa Terezinha
+178,75094,Santo Antônio
+179,75094,Sinval Martins de Araújo
+180,75094,Soledade
+181,75094,São Joaquim
+182,75094,São Luiz
+183,75094,São Sebastião
+184,75094,Vale do Sol
+185,75094,Vila Operária
+186,75094,Vista Alegre
+187,75132,Arruda
+188,75132,Atuba
+189,75132,Bacaetava
+190,75132,Boicininga
+191,75132,Butiatumirim
+192,75132,Campestre
+193,75132,Campo Pequeno
+194,75132,Canguiri
+195,75132,Capivari
+196,75132,Centro
+197,75132,Colonia Antonio Prado
+198,75132,Colônia Faria
+199,75132,Embu
+200,75132,Fatima
+201,75132,Gabirobal
+202,75132,Guaraituba
+203,75132,Guarani
+204,75132,Imbuial
+205,75132,Itajacuru
+206,75132,Maracanã
+207,75132,Mauá
+208,75132,Monza
+209,75132,Morro Grande
+210,75132,Osasco
+211,75132,Palmital
+212,75132,Paloma
+213,75132,Poço Negro
+214,75132,Ribeirão das Onças
+215,75132,Rincão
+216,75132,Rio Verde
+217,75132,Roseira
+218,75132,Roça Grande
+219,75132,Santa Gema
+220,75132,Santa Terezinha
+221,75132,Sapopema
+222,75132,Serrinha
+223,75132,São Dimas
+224,75132,São Gabriel
+225,75132,São João
+226,75132,Uvaranal
+227,75132,das Graças
+228,75132,Águas Fervidas
+229,75353,Abranches
+230,75353,Ahú
+231,75353,Alto Boqueirão
+232,75353,Alto da Glória
+233,75353,Alto da Rua XV
+234,75353,Atuba
+235,75353,Augusta
+236,75353,Bacacheri
+237,75353,Bairro Alto
+238,75353,Barreirinha
+239,75353,Batel
+240,75353,Bigorrilho
+241,75353,Boa Vista
+242,75353,Bom Retiro
+243,75353,Boqueirão
+244,75353,Botiatuvinha
+245,75353,Cabral
+246,75353,Cachoeira
+247,75353,Cajuru
+248,75353,Campina do Siqueira
+249,75353,Campo Comprido
+250,75353,Campo de Santana
+251,75353,Capão Raso
+252,75353,Capão da Imbuia
+253,75353,Cascatinha
+254,75353,Caximba
+255,75353,Centro
+256,75353,Centro Cívico
+257,75353,Cidade Industrial de Curitiba
+258,75353,Cristo Rei
+259,75353,Fanny
+260,75353,Fazendinha
+261,75353,Ganchinho
+262,75353,Guabirotuba
+263,75353,Guaíra
+264,75353,Hauer
+265,75353,Hugo Lange
+266,75353,Jardim Botânico
+267,75353,Jardim Social
+268,75353,Jardim das Américas
+269,75353,Juvevê
+270,75353,Lamenha Pequena
+271,75353,Lindóia
+272,75353,Mercês
+273,75353,Mossunguê
+274,75353,Novo Mundo
+275,75353,Orleans
+276,75353,Parolin
+277,75353,Pilarzinho
+278,75353,Pinheirinho
+279,75353,Portão
+280,75353,Prado Velho
+281,75353,Rebouças
+282,75353,Riviera
+283,75353,Santa Cândida
+284,75353,Santa Felicidade
+285,75353,Santa Quitéria
+286,75353,Santo Inácio
+287,75353,Seminário
+288,75353,São Braz
+289,75353,São Francisco
+290,75353,São João
+291,75353,São Lourenço
+292,75353,São Miguel
+293,75353,Sítio Cercado
+294,75353,Taboão
+295,75353,Tarumã
+296,75353,Tatuquara
+297,75353,Tinguí
+298,75353,Uberaba
+299,75353,Umbará
+300,75353,Vila Izabel
+301,75353,Vista Alegre
+302,75353,Xaxim
+303,75353,Água Verde
+304,75418,Alto da Colina
+305,75418,Centro
+306,75418,Centro Norte
+307,75418,Centro Sul
+308,75418,Concórdia
+309,75418,Esperança
+310,75418,Jardim Marcante
+311,75418,Jardim da Colina
+312,75418,Margarida Galvan
+313,75418,Nossa Senhora Aparecida
+314,75418,Nossa Senhora de Lurdes
+315,75418,Parque Industrial I
+316,75418,Parque Industrial II
+317,75418,Sagrada Família
+318,75418,Santa Luzia
+319,75418,São Francisco Xavier
+320,75418,São Francisco de Assis
+321,75418,São Judas Tadeu
+322,75418,Vitória
+323,75418,da Luz
+324,75418,das Torres
+325,74322,Campo do Rio
+326,74322,Centro
+327,74322,Estados
+328,74322,Eucaliptos
+329,74322,Gralha Azul
+330,74322,Iguaçu
+331,74322,Industrial I
+332,74322,Industrial II
+333,74322,Nações
+334,74322,Parque Tecnológico
+335,74322,Pioneiros
+336,74322,Santa Terezinha
+337,74322,Veneza
+338,75639,Alvorada
+339,75639,América
+340,75639,Bourbon
+341,75639,Campos do Iguaçu
+342,75639,Carimã
+343,75639,Cataratas
+344,75639,Centro
+345,75639,Centro Cívico
+346,75639,Cidade Nova
+347,75639,Cognópolis
+348,75639,Ipê
+349,75639,Itaipu A
+350,75639,Itaipu B
+351,75639,Itaipu Binacional
+352,75639,Itaipu C
+353,75639,KLP
+354,75639,Lancaster
+355,75639,Lote Grande
+356,75639,Maracanã
+357,75639,Mata Verde
+358,75639,Monjolo
+359,75639,Morumbi
+360,75639,Náutica
+361,75639,Panorama
+362,75639,Parque Nacional
+363,75639,Polo Centro
+364,75639,Polo Universitário
+365,75639,Portal
+366,75639,Portes
+367,75639,Porto Belo
+368,75639,Porto Meira
+369,75639,Remanso
+370,75639,São Roque
+371,75639,Três Bandeiras
+372,75639,Três Fronteiras
+373,75639,Três Lagoas
+374,75639,Yolanda
+375,75655,Aeroporto
+376,75655,Alvorada
+377,75655,Antônio de Paiva Cantelmo
+378,75655,Cango
+379,75655,Centro
+380,75655,Cristo Rei
+381,75655,Guanabara
+382,75655,Industrial
+383,75655,Jardim Floresta
+384,75655,Jardim Itália
+385,75655,Jardim Virgínia
+386,75655,Júpiter
+387,75655,Luther King
+388,75655,Marrecas
+389,75655,Miniguaçu
+390,75655,Nossa Senhora Aparecida
+391,75655,Nova Petrópolis
+392,75655,Novo Mundo
+393,75655,Padre Ulrico
+394,75655,Pinheirinho
+395,75655,Pinheirão
+396,75655,Presidente Kennedy
+397,75655,Sadia
+398,75655,Seminário
+399,75655,São Cristóvão
+400,75655,São Francisco
+401,75655,São Miguel
+402,75655,Vila Nova
+403,75655,Água Branca
+404,75833,Aldeia
+405,75833,Alto Cascavel
+406,75833,Alto da XV
+407,75833,Araucárias
+408,75833,Batel
+409,75833,Bonsucesso
+410,75833,Boqueirão
+411,75833,Cascavel
+412,75833,Centro
+413,75833,Cidade dos Lagos
+414,75833,Conradinho
+415,75833,Dos Estados
+416,75833,Imovel Morro Alto
+417,75833,Industrial
+418,75833,Jardim das Américas
+419,75833,Jordão
+420,75833,Morro Alto
+421,75833,Olarias
+422,75833,Primavera
+423,75833,Santa Cruz
+424,75833,Santana
+425,75833,São Cristóvão
+426,75833,Trianon
+427,75833,Vassoural
+428,75833,Vila Bela
+429,75833,Vila Carli
+430,74020,Centro
+431,74020,Fátima
+432,74020,Jardim União
+433,74020,Nápoli
+434,76074,Alto da Glória
+435,76074,Alto da Lagoa
+436,76074,Camacuã
+437,76074,Canisianas
+438,76074,Centro
+439,76074,Colina Nossa Senhora das Graças
+440,76074,Der
+441,76074,Engenheiro Gutierrez
+442,76074,Fósforo
+443,76074,Jardim Aeroporto
+444,76074,Jardim Califórnia
+445,76074,Jardim Virgínia
+446,76074,Lagoa
+447,76074,Nhapindazal
+448,76074,Rio Bonito
+449,76074,Riozinho
+450,76074,Stroparo
+451,76074,Vila Nova
+452,76074,Vila São João
+453,76597,Centro
+454,76597,Cristo Rei
+455,76597,Panorama
+456,76597,Presidente Vargas
+457,76597,São Francisco
+458,76597,Vila Industrial
+459,76597,Água Verde
+460,76678,Aeroporto
+461,76678,Alpes
+462,76678,Antares
+463,76678,Bandeirantes
+464,76678,Bela Suíça
+465,76678,Brasília
+466,76678,Cafezal
+467,76678,Califórnia
+468,76678,Centro Histórico
+469,76678,Champagnat
+470,76678,Ciclo II
+471,76678,Ciclo III
+472,76678,Cidade Industrial I
+473,76678,Cidade Industrial II
+474,76678,Cinco Conjuntos
+475,76678,Coliseu
+476,76678,Ernani
+477,76678,Esperança
+478,76678,Fraternidade
+479,76678,Guanabara
+480,76678,H.U.
+481,76678,Heimtal
+482,76678,Higienópolis
+483,76678,Ideal
+484,76678,Indústrias Leves
+485,76678,Inglaterra
+486,76678,Interlagos
+487,76678,Ipiranga
+488,76678,Jamaica
+489,76678,Leonor
+490,76678,Lindóia
+491,76678,Lon Rita
+492,76678,Olímpico
+493,76678,Ouro Verde
+494,76678,Pacaembú
+495,76678,Palhano
+496,76678,Parigot de Souza
+497,76678,Parque das Indústrias
+498,76678,Perobinha
+499,76678,Petrópolis
+500,76678,Piza
+501,76678,Presidente
+502,76678,Quebec
+503,76678,Sabará
+504,76678,Saltinho
+505,76678,Shangri-lá
+506,76678,Tucanos
+507,76678,Universidade
+508,76678,União da Vitória
+509,76678,Vila Brasil
+510,76678,Vila Casoni
+511,76678,Vila Nova
+512,76678,Vila Recreio
+513,76678,Vivendas do Arvoredo
+514,76678,Vivi Xavier
+515,76830,Alvorada
+516,76830,Ana Paula
+517,76830,Boa Vista
+518,76830,Botafogo
+519,76830,Centro
+520,76830,Espigão
+521,76830,Higienópolis
+522,76830,Líder
+523,76830,Marechal
+524,76830,Primavera
+525,76830,São Francisco
+526,76830,São Lucas
+527,76830,Universitário
+528,76830,Vila Gaúcha
+529,76910,Chác Mandacarú/ Jardim Imperador/Pilar e Ícaro
+530,76910,Cidade Monções e Subdivisões do L. 245A (Jardim Bela Vista)
+531,76910,"Condomínios Portal das Torres, Cidade Campo e Ana Rosa"
+532,76910,"Condomínios Santa Marina, Bela Vista I e II"
+533,76910,Conjunto Habitacional Cidade Alta
+534,76910,Conjunto Habitacional Itatiaia
+535,76910,Conjunto Habitacional Paulino Carlos Filho
+536,76910,Conjunto Habitacional Requião I
+537,76910,Conjunto Habitacional SANENGE
+538,76910,Conjunto Habitacional SANENGE III
+539,76910,Conjunto Habitacional Sol Nascente
+540,76910,Conjunto João de Barro I
+541,76910,Conjunto João de Barro Thais
+542,76910,Conjunto Residencial Angelo Palmas
+543,76910,Conjunto Residencial Branca de Jesus Camargo Vieira
+544,76910,Conjunto Residencial Governador Parigot de Souza
+545,76910,Conjunto Residencial Guaiapó
+546,76910,Conjunto Residencial Hermann Moraes de Barros
+547,76910,Conjunto Residencial Inocente Vila Nova Júnior
+548,76910,Conjunto Residencial João de Barro - Cidade Alta I
+549,76910,Conjunto Residencial João de Barro - Cidade Alta II
+550,76910,Conjunto Residencial João de Barro Champagnat
+551,76910,Conjunto Residencial João de Barro Cidade Canção
+552,76910,Conjunto Residencial João de Barro Itaparica
+553,76910,Conjunto Residencial João de Barro Porto Seguro I
+554,76910,Conjunto Residencial João de Barro Porto Seguro II
+555,76910,Conjunto Residencial Karina
+556,76910,Conjunto Residencial Léa Leal
+557,76910,Conjunto Residencial Ney Braga
+558,76910,Conjunto Residencial Planville
+559,76910,Conjunto Residencial Rodolpho Bernardi
+560,76910,Ebenezer
+561,76910,"J. S. Miguel 1ª e 2ª P e L 41 e 42, Ch Estilo e J. Aurora"
+562,76910,Jardim Aclimação
+563,76910,Jardim América
+564,76910,Jardim Andrade
+565,76910,Jardim Araucária
+566,76910,Jardim Atami
+567,76910,Jardim Brasil
+568,76910,Jardim Campos Elíseos
+569,76910,Jardim D' Monet
+570,76910,Jardim Diamante
+571,76910,Jardim Dias (Dias I E II)
+572,76910,Jardim Dourado
+573,76910,Jardim Espanha
+574,76910,Jardim Guairaçá
+575,76910,Jardim Higienópolis
+576,76910,Jardim Imperial I
+577,76910,Jardim Imperial II
+578,76910,Jardim Império do Sol
+579,76910,Jardim Indaiá I e Indaiá II
+580,76910,Jardim Industrial
+581,76910,Jardim Ipanema
+582,76910,"Jardim Itália I e II, São Conrado e Botânico"
+583,76910,Jardim Licce
+584,76910,Jardim Los Angeles
+585,76910,Jardim Lucianópolis
+586,76910,Jardim Mandacaru
+587,76910,Jardim Maravilha
+588,76910,Jardim Monte Carlo
+589,76910,Jardim Monte Rei
+590,76910,Jardim Monte Sião e Sinai
+591,76910,"Jardim Moreschi, Jardim Carolina e Alto da Boa Vista"
+592,76910,Jardim Munique
+593,76910,Jardim Novo Alvorada
+594,76910,Jardim Novo Horizonte I
+595,76910,Jardim Novo Horizonte II
+596,76910,Jardim Novo Oásis
+597,76910,Jardim Novo Paulista
+598,76910,Jardim Oriental
+599,76910,Jardim Oásis
+600,76910,"Jardim Paris (Paris III, IV, V E VI)"
+601,76910,"Jardim Paulista (I, II, III e IV)"
+602,76910,Jardim Pinheiros I
+603,76910,Jardim Pinheiros II
+604,76910,Jardim Santa Clara
+605,76910,Jardim Santa Helena
+606,76910,Jardim Seminário
+607,76910,Jardim São Clemente
+608,76910,Jardim São Silvestre
+609,76910,Jardim Tabaetê
+610,76910,Jardim Tarumã (PQ E RES.)
+611,76910,Jardim Três Lagoas Maurílio Correia Pinho
+612,76910,Jardim Tóquio
+613,76910,Jardim Universo
+614,76910,Jardim Veredas I e II
+615,76910,Jardim Vitória
+616,76910,Jardim das Laranjeiras
+617,76910,Jardim do Carmo e LT 40
+618,76910,Jardins Colina Verde (I e II)
+619,76910,Liberdade
+620,76910,Loteamento Sumaré
+621,76910,Moradia Atenas 1ª e 2ª Parte
+622,76910,Núcleo Habitacional Santa Felicidade-PROFILURB
+623,76910,Parque Hortência I
+624,76910,Parque Hortência II
+625,76910,Parque Itaipu
+626,76910,Parque Residencial Aeroporto
+627,76910,Parque Residencial Cidade Nova
+628,76910,Parque Residencial Patrícia
+629,76910,Parque Residencial Quebec
+630,76910,Parque Residencial Tuiuti
+631,76910,Parque das Bandeiras
+632,76910,Parque das Grevíleas
+633,76910,Parque das Palmeiras
+634,76910,Recanto Kakogawa
+635,76910,Recanto dos Magnatas
+636,76910,Residencial Pioneiro Honorato Vecchi
+637,76910,Residencial Pioneiro Odwaldo Bueno Netto
+638,76910,Vila Esperança I
+639,76910,Vila Esperança II
+640,76910,Vila Marumbi
+641,76910,Vila Santa Isabel
+642,77011,Belo Horizonte
+643,77011,Centro
+644,77011,Cidade Alta
+645,77011,Condá
+646,77011,Frimesa
+647,77011,Independência
+648,77011,Ipê
+649,77011,Itaipu
+650,77011,Jardim Irene
+651,77011,Nazaré
+652,77011,Panorâmico
+653,77011,São Cristóvão
+654,77216,Zona 1
+655,77216,Zona 2
+656,77216,Zona 3
+657,77216,Zona 4
+658,77216,Zona 5
+659,77216,Zona 6
+660,79952,Alto
+661,79952,Centro
+662,79952,Cristo Redentor
+663,79952,Industrial
+664,79952,Laticínio
+665,79952,Sagais
+666,79952,São Cristóvão
+667,79952,São Jorge
+668,77330,Aeroporto
+669,77330,Alto da Glória
+670,77330,Caldeiras
+671,77330,Cascatinha
+672,77330,Centro
+673,77330,Dissenha
+674,77330,Divino
+675,77330,Fortunato
+676,77330,Hípica
+677,77330,Klubegi
+678,77330,Lagoão
+679,77330,Santa Cruz
+680,77330,Santuário
+681,77330,Serrinha
+682,77330,São Francisco
+683,77330,São José
+684,77330,São Sebastião
+685,77330,Vale dos Lagos
+686,77399,Bela Vista
+687,77399,COHAPAR
+688,77399,Centro
+689,77399,Dallas
+690,77399,Imigrantes
+691,77399,Interlagos
+692,77399,Jardim Itália
+693,77399,Jardim Social
+694,77399,Jequitibá
+695,77399,Morada do Sol
+696,77399,Osvaldo Cruz
+697,77399,Ouro Verde
+698,77399,Pioneiro
+699,77399,Pôr-do-Sol
+700,77399,Santa Terezinha
+701,77399,União
+702,77453,29 de Julho
+703,77453,Aeroporto
+704,77453,Alto São Sebastião
+705,77453,Alvorada
+706,77453,Bockmann
+707,77453,Campo Grande
+708,77453,Centro Histórico
+709,77453,Correia Velho
+710,77453,Costeira
+711,77453,Dom Pedro II
+712,77453,Eldorado
+713,77453,Emboguaçu
+714,77453,Estradinha
+715,77453,Industrial
+716,77453,Jardim América
+717,77453,Jardim Araçá
+718,77453,Jardim Guaraituba
+719,77453,Jardim Paranaguá
+720,77453,Jardim Samambaia
+721,77453,Jardim Yamaguchi
+722,77453,João Gualberto
+723,77453,Leblon
+724,77453,Nilson Neves
+725,77453,Oceania
+726,77453,Padre Jackson
+727,77453,Palmital
+728,77453,Parque Agari
+729,77453,Parque São João
+730,77453,Ponta do Caju
+731,77453,Porto dos Padres
+732,77453,Raia
+733,77453,Rocio
+734,77453,Serraria do Rocha
+735,77453,Tuiuti
+736,77453,Vila Alboitt
+737,77453,Vila Cruzeiro
+738,77453,Vila Divinéia
+739,77453,Vila Guadalupe
+740,77453,Vila Guarani
+741,77453,Vila Horizonte
+742,77453,Vila Itiberê
+743,77453,Vila Paranaguá
+744,77453,Vila Portuária
+745,77453,Vila Rute
+746,77453,Vila São Vicente
+747,77453,Vila dos Comerciários
+748,77518,Aeroporto
+749,77518,Alto da Glória
+750,77518,Alvorada
+751,77518,Amadorí
+752,77518,Anchieta
+753,77518,Baixada
+754,77518,Bancários
+755,77518,Bela Vista
+756,77518,Bonatto
+757,77518,Bortot
+758,77518,Brasília
+759,77518,Cadorin
+760,77518,Centro
+761,77518,Cristo Rei
+762,77518,Dal Ross
+763,77518,Fraron
+764,77518,Gralha Azul
+765,77518,Industrial
+766,77518,Jardim Floresta
+767,77518,Jardim Primavera
+768,77518,Jardim das Américas
+769,77518,La Salle
+770,77518,Menino Deus
+771,77518,Morumbi
+772,77518,Novo Horizonte
+773,77518,Pagnoncelli
+774,77518,Parque do Som
+775,77518,Parzianello
+776,77518,Pinheirinho
+777,77518,Pinheiros
+778,77518,Planalto
+779,77518,Sambugaro
+780,77518,Santa Terezinha
+781,77518,Santo Antônio
+782,77518,Sudoeste
+783,77518,São Cristóvão
+784,77518,São Francisco
+785,77518,São João
+786,77518,São Luiz
+787,77518,São Roque
+788,77518,São Vicente
+789,77518,Trevo Guarani
+790,77518,Veneza
+791,77518,Vila Esperança
+792,77518,Vila Izabel
+793,75043,Alphaville Graciosa
+794,75043,Alto Tarumã
+795,75043,Atuba
+796,75043,Centro
+797,75043,Emiliano Perneta
+798,75043,Estância Pinhais
+799,75043,Jardim Amélia
+800,75043,Jardim Cláudia
+801,75043,Jardim Karla
+802,75043,Jardim das Nascentes
+803,75043,Maria Antonieta
+804,75043,Parque das Águas
+805,75043,Pineville
+806,75043,Vargem Grande
+807,75043,Weissópolis
+808,77755,Centro
+809,77755,Esperança
+810,77755,Industrial
+811,77755,Jardim Floresta
+812,77755,João Zacco Paraná
+813,77755,Loteamento Pedrinho
+814,77755,Nossa Senhora Aparecida
+815,77755,Nossa Senhora de Lourdes
+816,77755,Primavera
+817,77755,Santo Antônio
+818,77771,Boa Vista
+819,77771,Cara Cara
+820,77771,Centro
+821,77771,Chapada
+822,77771,Colônia Dona Luíza
+823,77771,Contorno
+824,77771,Estrela
+825,77771,Jardim Carvalho
+826,77771,Neves
+827,77771,Nova Rússia
+828,77771,Oficinas
+829,77771,Olarias
+830,77771,Ronda
+831,77771,Uvaranas
+832,77771,Vila Ildemira
+833,77771,Órfãs
+834,78050,Bosque
+835,78050,Centro
+836,78050,Centro Cívico
+837,78050,Cozaca
+838,78050,Industrial
+839,78050,Jardim Panorâmico
+840,78050,João Paulo II
+841,78050,Loteamento Araxá
+842,78050,Loteamento Godoy
+843,78050,Loteamento Prandes
+844,78050,Nossa Senhora Aparecida
+845,78050,Padre Josimo
+846,78050,Primavera
+847,78050,São José
+848,78379,Centro
+849,78379,Colina Verde
+850,78379,Conjunto Habitacional Vila Nova
+851,78379,Cristo Rei
+852,78379,Dona Pierina
+853,78379,Itaipú
+854,78379,Jardim Primavera
+855,78379,Jardim dos Lagos
+856,78379,Olaria
+857,78379,Parque Industrial II
+858,78379,Santa Maria
+859,78379,São Cristóvão
+860,78379,São Francisco
+861,78379,da Cooperativa
+862,78514,Alto da Colina
+863,78514,Centro
+864,78514,Doze de Outubro
+865,78514,Nossa Senhora de Fátima
+866,78514,Santo Antônio
+867,78514,São José Operário
+868,78719,Centro
+869,78719,Coasul
+870,78719,Cristo Rei
+871,78719,Industrial
+872,78719,Monte Castelo
+873,78719,Morumbi
+874,78719,Novo Horizonte
+875,78719,Primavera
+876,78719,Recanto da Serra
+877,78719,Santa Isabel
+878,78719,Santa Luzia
+879,78719,Sol Nascente
+880,78719,União
+881,78859,Academia
+882,78859,Afonso Pena
+883,78859,Aristocrata
+884,78859,Arujá
+885,78859,Aviação
+886,78859,Barro Preto
+887,78859,Bom Jesus
+888,78859,Boneca do Iguaçu
+889,78859,Borda do Campo
+890,78859,Cachoeira
+891,78859,Campina do Taquaral
+892,78859,Campo Largo da Roseira
+893,78859,Centro
+894,78859,Cidade Jardim
+895,78859,Colônia Rio Grande
+896,78859,Contenda
+897,78859,Costeira
+898,78859,Cristal
+899,78859,Cruzeiro
+900,78859,Del Rey
+901,78859,Dom Rodrigo
+902,78859,Guatupê
+903,78859,Iná
+904,78859,Ipê
+905,78859,Itália
+906,78859,Jurema
+907,78859,Miringuava
+908,78859,Ouro Fino
+909,78859,Parque da Fonte
+910,78859,Pedro Moro
+911,78859,Quissisana
+912,78859,Rio Pequeno
+913,78859,Roseira de São Sebastião
+914,78859,Santo Antônio
+915,78859,São Cristóvão
+916,78859,São Domingos
+917,78859,São Marcos
+918,78859,São Pedro
+919,78859,Zacarias
+920,78859,Àrea Institucional Aeroportuária
+921,78859,Águas Belas
+922,79278,Centro
+923,79278,Cerâmica Prata
+924,79278,Jardim Bressan
+925,79278,Jardim Concórdia
+926,79278,Jardim Coopagro
+927,79278,Jardim Europa/América
+928,79278,Jardim Gisela
+929,79278,Jardim Independência
+930,79278,Jardim La Salle
+931,79278,Jardim Pancera
+932,79278,Jardim Parizotto
+933,79278,Jardim Porto Alegre
+934,79278,Jardim Santa Maria
+935,79278,Pinheirinho
+936,79278,Sadia
+937,79278,São Francisco
+938,79278,Tocantins
+939,79278,Vila Becker
+940,79278,Vila Industrial
+941,79278,Vila Operária
+942,79278,Vila Panorama
+943,79278,Vila Pioneiro
+944,79375,Bela Vista
+945,79375,Bento Munhoz da Rocha
+946,79375,Bom Jesus
+947,79375,Centro
+948,79375,Cidade Jardim
+949,79375,Cidade Limeira
+950,79375,Cristo Rei
+951,79375,Dona Mercedes
+952,79375,Navegantes
+953,79375,Nossa Senhora da Salete
+954,79375,Nossa Senhora das Graças
+955,79375,Nossa Senhora do Rócio
+956,79375,Ouro Verde
+957,79375,Ponte Nova
+958,79375,Rio D'Areia
+959,79375,Sagrada Família
+960,79375,São Basílio Magno
+961,79375,São Bernardo
+962,79375,São Braz
+963,79375,São Gabriel
+964,79375,São Joaquim
+965,79375,São Sebastião

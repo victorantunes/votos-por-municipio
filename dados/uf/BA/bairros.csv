@@ -1,0 +1,456 @@
+b,cd_tse,nome
+0,35130,Bela Vista
+1,35130,Caixa D'água
+2,35130,Centro
+3,35130,Duda Macário
+4,35130,Jeremias
+5,35130,Nossa Senhora da Conceição
+6,35130,Nossa Senhora de Fátima
+7,35130,Nova América
+8,35130,Pau Miúdo
+9,35157,35º BI
+10,35157,Aeroporto
+11,35157,Asa Branca
+12,35157,Aviário
+13,35157,Baraúna
+14,35157,Brasília
+15,35157,CASEB
+16,35157,CIS
+17,35157,Calumbi
+18,35157,Campo Limpo
+19,35157,Campo do Gado Novo
+20,35157,Capuchinhos
+21,35157,Centro
+22,35157,Chaparral
+23,35157,Chácara São Cosme
+24,35157,Cidade Nova
+25,35157,Cis Norte
+26,35157,Conceição
+27,35157,Cruzeiro
+28,35157,Gabriela
+29,35157,Jardim Acácia
+30,35157,Jardim Cruzeiro
+31,35157,Lagoa Grande
+32,35157,Lagoa Salgada
+33,35157,Limoeiro
+34,35157,Mangabeira
+35,35157,Mantiba
+36,35157,Muchila
+37,35157,Nova Esperança
+38,35157,Novo Horizonte
+39,35157,Olhos D'Água
+40,35157,Pampalona
+41,35157,Papagaio
+42,35157,Parque Getúlio Vargas
+43,35157,Parque Ipê
+44,35157,Pedra Ferrada
+45,35157,Pedra do Descanso
+46,35157,Ponto Central
+47,35157,Queimadinha
+48,35157,Registro
+49,35157,Rua Nova
+50,35157,Santa Mônica
+51,35157,Santo Antônio dos Prazeres
+52,35157,Serraria Brasil
+53,35157,Sim
+54,35157,Sobradinho
+55,35157,Subaé
+56,35157,São João (antigo Campo do Gado Velho)
+57,35157,Tomba
+58,35157,Vale do Jacuípe
+59,35734,Banco da Vitória
+60,35734,Barra do Itaípe
+61,35734,Basílio
+62,35734,Boa Vista
+63,35734,Centro
+64,35734,Cidade Nova
+65,35734,Conquista
+66,35734,Esperança
+67,35734,Hernani Sá
+68,35734,Iguape
+69,35734,Ilhéus II
+70,35734,Jardim Atlântico
+71,35734,Jardim Savóia
+72,35734,Malhado
+73,35734,Nelson Costa
+74,35734,Nossa Senhora da Vitoria
+75,35734,Pontal
+76,35734,Salobrinho
+77,35734,São Domingos
+78,35734,São Francisco
+79,35734,São Miguel
+80,35734,São Sebastião
+81,35734,Tapera
+82,35734,Teotônio Vilela
+83,35734,Teresópolis
+84,35734,Vila Cachoeira
+85,35734,Vila Nazaré
+86,35971,Alto Maron
+87,35971,Bananeira
+88,35971,Banco Raso
+89,35971,Califórnia
+90,35971,Castália
+91,35971,Centro
+92,35971,Centro Industrial
+93,35971,Conceição
+94,35971,Ferradas
+95,35971,Fonseca
+96,35971,Goes Calmon
+97,35971,Jardim Grapiúna
+98,35971,Jardim Jaçanã
+99,35971,Jardim Primavera
+100,35971,Jardim Vitória
+101,35971,Jaçanã
+102,35971,Jorge Amado
+103,35971,João Soares
+104,35971,Lomanto Júnior
+105,35971,Mangabinha
+106,35971,Manoel Leão
+107,35971,Maria Matos
+108,35971,Maria Pinheiro
+109,35971,Monte Cristo
+110,35971,Nossa Senhora das Graças
+111,35971,Nossa Senhora de Fátima
+112,35971,Nova Califórnia
+113,35971,Nova Esperança
+114,35971,Nova Itabuna
+115,35971,Novo São Caetano
+116,35971,Novo São Lourenço
+117,35971,Parque Boa Vista
+118,35971,Parque Santa Clara
+119,35971,Parque São João
+120,35971,Parque Verde
+121,35971,Pedro Jerônimo
+122,35971,Pontalzinho
+123,35971,Roça do Povo
+124,35971,Santa Catarina
+125,35971,Santa Inês
+126,35971,Santo Antônio
+127,35971,Sarinha Alcântara
+128,35971,Sinval Palmeira
+129,35971,São Caetano
+130,35971,São Judas
+131,35971,São Lourenço
+132,35971,São Pedro
+133,35971,São Roque
+134,35971,Top Park
+135,35971,Urbis IV
+136,35971,Vale do Sol
+137,35971,Vila Anália
+138,35971,Villa Maria
+139,35971,Zildolândia
+140,35971,Zizo
+141,36692,Alagadiço
+142,36692,Alto da Aliança
+143,36692,Alto da Maravilha
+144,36692,Alto do Alencar
+145,36692,Alto do Cruzeiro
+146,36692,Antônio Conselheiro
+147,36692,Antônio Guilhermino
+148,36692,Argemiro
+149,36692,Cajueiro
+150,36692,Campus Universitário
+151,36692,Castelo Branco
+152,36692,Centenário
+153,36692,Centro
+154,36692,Coreia
+155,36692,Country Club
+156,36692,Distrito Industrial
+157,36692,Dom José Rodrigues
+158,36692,Dom Tomaz
+159,36692,Itaberaba
+160,36692,Jardim Flórida
+161,36692,Jardim Novo Encontro
+162,36692,Jardim Primavera
+163,36692,Jardim São Paulo
+164,36692,Jardim Vitória
+165,36692,Jardim dos Universitários
+166,36692,João Paulo II
+167,36692,João XXIII
+168,36692,Lomanto Júnior
+169,36692,Malhada da Areia
+170,36692,Maringá
+171,36692,Monte Castelo
+172,36692,Mussambê
+173,36692,Nossa Senhora da Penha
+174,36692,Nossa Senhora das Grotas
+175,36692,Nova Esperança
+176,36692,Padre Vicente
+177,36692,Palmares
+178,36692,Parque Residencial Juazeiro
+179,36692,Parque do Centenário
+180,36692,Pedra do Lord
+181,36692,Pedro Raimundo
+182,36692,Piranga
+183,36692,Quidé
+184,36692,Santa Maria Goretti
+185,36692,Santo Antônio
+186,36692,Sol Levante
+187,36692,São Geraldo
+188,36692,Tabuleiro
+189,36692,Tancredo Neves
+190,36692,Usina Aliança
+191,36692,Vila Santa Fé
+192,36692,Vila Tiradentes
+193,36692,Água Bela
+194,36854,Aracuí
+195,36854,Areia Branca
+196,36854,Barro Duro
+197,36854,Buraquinho
+198,36854,Caixa D'água
+199,36854,Caji
+200,36854,Capelão
+201,36854,Centro
+202,36854,Ipitanga
+203,36854,Itinga
+204,36854,Jambeiro
+205,36854,Parque São Paulo
+206,36854,Pitangueiras
+207,36854,Portão
+208,36854,Quingoma
+209,36854,Recreio Ipitanga
+210,36854,Vida Nova
+211,36854,Vila Praiana
+212,36854,Vilas do Atlântico
+213,38458,Boa Vista
+214,38458,Centro
+215,38458,Cruzeiro do Rocha
+216,38458,Dois de Julho
+217,38458,Flores
+218,38458,Folga
+219,38458,Jardim Alvorada
+220,38458,Jardim do Cedro
+221,38458,Nova Brasília
+222,38458,Orobozinho
+223,38458,Otto Alencar
+224,38458,São Francisco
+225,38458,Tapiraípe
+226,38458,Vila Nova
+227,38458,Vila Progresso
+228,38458,das Populares
+229,38490,Acupe
+230,38490,Aeroporto
+231,38490,Alto da Terezinha
+232,38490,Alto das Pombas
+233,38490,Alto do Cabrito
+234,38490,Alto do Coqueirinho
+235,38490,Amaralina
+236,38490,Areia Branca
+237,38490,Arenoso
+238,38490,Arraial do Retiro
+239,38490,Bairro da Paz
+240,38490,Baixa de Quintas
+241,38490,Barbalho
+242,38490,Barra
+243,38490,Barreiras
+244,38490,Barris
+245,38490,Beiru / Tancredo Neves
+246,38490,Boa Viagem
+247,38490,Boa Vista de Brotas
+248,38490,Boa Vista de São Caetano
+249,38490,Boca da Mata
+250,38490,Boca do Rio
+251,38490,Bom Juá
+252,38490,Bonfim
+253,38490,Brotas
+254,38490,Cabula
+255,38490,Cabula VI
+256,38490,Caixa D'água
+257,38490,Cajazeiras II
+258,38490,Cajazeiras IV
+259,38490,Cajazeiras V
+260,38490,Cajazeiras VI
+261,38490,Cajazeiras VII
+262,38490,Cajazeiras VIII
+263,38490,Cajazeiras X
+264,38490,Cajazeiras XI
+265,38490,Calabar
+266,38490,Calabetão
+267,38490,Calçada
+268,38490,Caminho das Árvores
+269,38490,Caminho de Areia
+270,38490,Campinas de Pirajá
+271,38490,Canabrava
+272,38490,Candeal
+273,38490,Canela
+274,38490,Capelinha
+275,38490,Cassange
+276,38490,Castelo Branco
+277,38490,Centro
+278,38490,Centro Administrativo da Bahia - CAB
+279,38490,Centro Histórico
+280,38490,Chame-Chame
+281,38490,Chapada do Rio Vermelho
+282,38490,Cidade Nova
+283,38490,Colinas de Periperi
+284,38490,Comércio
+285,38490,Cosme de Farias
+286,38490,Costa Azul
+287,38490,Coutos
+288,38490,Curuzu
+289,38490,Dois de Julho
+290,38490,Dom Avelar
+291,38490,Doron
+292,38490,Engenho Velho da Federação
+293,38490,Engenho Velho de Brotas
+294,38490,Engomadeira
+295,38490,Fazenda Coutos
+296,38490,Fazenda Grande I
+297,38490,Fazenda Grande II
+298,38490,Fazenda Grande III
+299,38490,Fazenda Grande IV
+300,38490,Fazenda Grande do Retiro
+301,38490,Federação
+302,38490,Garcia
+303,38490,Granjas Rurais Presidente Vargas
+304,38490,Graça
+305,38490,Horto Florestal
+306,38490,IAPI
+307,38490,Ilha Amarela
+308,38490,Ilha Bom Jesus dos Passos
+309,38490,Ilha de Maré
+310,38490,Ilha dos Frades / Ilha de Santo Antônio
+311,38490,Imbuí
+312,38490,Itacaranha
+313,38490,Itaigara
+314,38490,Itapuã
+315,38490,Itinga
+316,38490,Jaguaripe I
+317,38490,Jardim Armação
+318,38490,Jardim Cajazeiras
+319,38490,Jardim Nova Esperança
+320,38490,Jardim Santo Inácio
+321,38490,Jardim das Margaridas
+322,38490,Lapinha
+323,38490,Liberdade
+324,38490,Lobato
+325,38490,Luiz Anselmo
+326,38490,Macaúbas
+327,38490,Mangueira
+328,38490,Marechal Rondon
+329,38490,Mares
+330,38490,Massaranduba
+331,38490,Mata Escura
+332,38490,Matatu
+333,38490,Mirantes de Periperi
+334,38490,Monte Serrat
+335,38490,Moradas da Lagoa
+336,38490,Mussurunga
+337,38490,Narandiba
+338,38490,Nazaré
+339,38490,Nordeste do Amaralina
+340,38490,Nova Brasília
+341,38490,Nova Constituinte
+342,38490,Nova Esperança
+343,38490,Nova Sussuarana
+344,38490,Novo Horizonte
+345,38490,Novo Marotinho
+346,38490,Ondina
+347,38490,Palestina
+348,38490,Paripe
+349,38490,Patamares
+350,38490,Pau Miúdo
+351,38490,Pau da Lima
+352,38490,Periperi
+353,38490,Pernambués
+354,38490,Pero Vaz
+355,38490,Piatã
+356,38490,Pirajá
+357,38490,Pituaçu
+358,38490,Pituba
+359,38490,Plataforma
+360,38490,Porto Seco Pirajá
+361,38490,Praia Grande
+362,38490,Resgate
+363,38490,Retiro
+364,38490,Ribeira
+365,38490,Rio Sena
+366,38490,Rio Vermelho
+367,38490,Roma
+368,38490,STIEP
+369,38490,Saboeiro
+370,38490,Santa Cruz
+371,38490,Santa Luzia
+372,38490,Santa Mônica
+373,38490,Santo Agostinho
+374,38490,Santo Antônio
+375,38490,Saramandaia
+376,38490,Saúde
+377,38490,Sete de Abril
+378,38490,Stella Maris
+379,38490,Sussuarana
+380,38490,São Caetano
+381,38490,São Cristóvão
+382,38490,São Gonçalo
+383,38490,São João do Cabrito
+384,38490,São Marcos
+385,38490,São Rafael
+386,38490,São Tomé
+387,38490,Tororó
+388,38490,Trobogy
+389,38490,Uruguai
+390,38490,Vale das Pedrinhas
+391,38490,Vale dos Lagos
+392,38490,Valéria
+393,38490,Vila Canária
+394,38490,Vila Laura
+395,38490,Vila Ruy Barbosa / Jardim Cruzeiro
+396,38490,Vista Alegre
+397,38490,Vitória
+398,38490,Águas Claras
+399,38733,Amparo
+400,38733,Andaiá
+401,38733,Barro Vermelho
+402,38733,Cajueiro
+403,38733,Calabar
+404,38733,Campo do Governo
+405,38733,Casco
+406,38733,Centro
+407,38733,Distrito Industrial
+408,38733,Ernesto Melo
+409,38733,Irmã Dulce
+410,38733,Maria Preta
+411,38733,Nossa Senhora das Graças
+412,38733,Praia do Dendê
+413,38733,Quitandinha
+414,38733,Renato Machado
+415,38733,Salgadeira
+416,38733,Santa Madalena
+417,38733,Santa Rita
+418,38733,Santa Terezinha
+419,38733,Sobradinho
+420,38733,São Benedito
+421,38733,São Cristóvão
+422,38733,São Paulo
+423,39535,Anfrísio Góes
+424,39535,Antônio Carlos Magalhães
+425,39535,Centro
+426,39535,Everaldo Argolo
+427,39535,Independência
+428,39535,Irmã Dulce
+429,39535,Nova Esperança
+430,39535,Venina Almeida
+431,39659,Alto Maron
+432,39659,Aírton Senna
+433,39659,Bateias
+434,39659,Boa Vista
+435,39659,Brasil
+436,39659,Campinhos
+437,39659,Candeias
+438,39659,Centro
+439,39659,Cruzeiro
+440,39659,Distrito Industrial
+441,39659,Espírito Santo
+442,39659,Felícia
+443,39659,Guarani
+444,39659,Ibirapuera
+445,39659,Jatobá
+446,39659,Jurema
+447,39659,Lagoa das Flores
+448,39659,Nossa Senhora Aparecida
+449,39659,Patagônia
+450,39659,Primavera
+451,39659,Recreio
+452,39659,São Pedro
+453,39659,Universidade
+454,39659,Zabelê

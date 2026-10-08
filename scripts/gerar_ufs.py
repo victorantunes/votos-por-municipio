@@ -13,10 +13,11 @@ import pandas as pd
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from comum import ABREV, D, DISPUTAS, OUT, base, bloco_disputa, bonito, jdump, montar_mun, pares, registro_mun  # noqa: E402
 from preparar import ORDEM_DISP  # noqa: E402
-from preparar_uf import PARTIDO, UF_NOME, UFS  # noqa: E402
+from preparar_uf import FUNDIR, PARTIDO, UF_NOME, UFS  # noqa: E402
 
 sys.stdout.reconfigure(encoding='utf-8')
 PROPRIA = ('Vereador', 'Prefeito')  # cargos cuja circunscrição é o município
+BR_IDX = {'pres22t1': 0, 'pres22t2': 1, 'pres26t1': 2}  # posição de cada candidatura de Lula em escopo_br.json
 
 
 def nomes_com_turno(blocos):
@@ -39,7 +40,9 @@ def construir(sg):
     votos = pd.read_csv(pasta / 'votos.csv')
     mun = montar_mun(set(base[base.uf == sg].cd_tse))
     cds = [int(c) for c in mun.cd_tse]
-    ordem = [d for d in disp.id if d in DISPUTAS]
+    ordem_todas = [d for d in disp.id if d in DISPUTAS]
+    ordem = [d for d in ordem_todas if not d.startswith('pres')]  # Lula não entra na análise por estado (ele tem o recorte "Lula no Brasil")
+    lula = {r.disp: r.cid for r in cand[cand.disp.str.startswith('pres') & (cand.nome_urna == 'Lula')].drop_duplicates('disp').itertuples()}  # só para o detalhe por local do recorte do Brasil
     idx_d = {d: k for k, d in enumerate(ordem)}
     cand = cand[cand.disp.isin(idx_d)].copy()
     cand['d'] = cand.disp.map(idx_d)
@@ -79,7 +82,7 @@ def construir(sg):
     blocos = nomes_com_turno([bloco_disputa(ctx, d, cds) for d in ordem])
     esc = {'id': sg.lower(), 'uf': sg, 'nome_uf': UF_NOME[sg], 'mun': registro_mun(mun), 'disp': blocos, 'pess': pess, 'cand': cands}
     return {'esc': esc, 'gids': gids, 'cand_df': cand, 'ctx': ctx, 'mun': mun, 'cds': cds, 'ordem': ordem, 'idx_d': idx_d, 'cid_idx': cid_idx, 'soma': soma,
-            'do_partido': do_partido, 'votos': votos, 'cid_ordem': cid_ordem}
+            'do_partido': do_partido, 'votos': votos, 'cid_ordem': cid_ordem, 'lula': lula}
 
 
 def granular(sg, est, bairros_ok):
@@ -96,21 +99,19 @@ def granular(sg, est, bairros_ok):
     vot_loc = pd.read_csv(pasta / 'votos_local.csv')
     cds, ordem, idx_d, soma, cid_idx = est['cds'], est['ordem'], est['idx_d'], est['soma'], est['cid_idx']
     pos_mun = {c: i for i, c in enumerate(cds)}
+    codigos = [m['c'] for m in est['esc']['mun']]  # código do IBGE de cada município, para ligar a grade ao recorte do Brasil
     tam = {}
     for ano, g in loc.groupby('ano'):
         g = g.sort_values('lid')
         tam[int(ano)] = len(g)
         grade = {'n': len(g), 'lat': [round(v, 5) for v in g.lat], 'lon': [round(v, 5) for v in g.lon], 'nome': [bonito(n) for n in g.nome],
-                 'bt': [bonito(str(n)) for n in g.bairro_tse], 'mi': [pos_mun[int(c)] for c in g.cd_tse], 'b': [int(v) for v in g.bairro], 'ap': [int(v) for v in g.aptos]}
+                 'bt': [bonito(str(n)) for n in g.bairro_tse], 'mi': [pos_mun[FUNDIR.get(int(c), int(c))] for c in g.cd_tse], 'b': [int(v) for v in g.bairro], 'ap': [int(v) for v in g.aptos], 'mc': codigos}
         jdump(grade, f'granular/{sg.lower()}/grade_{int(ano)}.json')
     por_cid = {cid: g for cid, g in vot_loc.groupby('cid')}
     cids_pt = set(est['do_partido'].cid)
     cand = est['cand_df']
-    for did in ordem:
-        ano = DISPUTAS[did][3]
-        if ano not in tam:
-            continue
-        n = tam[ano]
+
+    def blocos_de(did, n):
         cl = ctx_loc[ctx_loc.disp == did]
         blocos = {}
         for chave in ('va', 'br', 'nu', 'cp'):
@@ -118,6 +119,18 @@ def granular(sg, est, bairros_ok):
             for lid, v in zip(cl.lid, cl[chave]):
                 arr[int(lid)] = int(v)
             blocos[chave] = arr
+        return blocos
+
+    for did, cid in est['lula'].items():  # Lula (recorte do Brasil): a candidatura é a de índice 0, 1 ou 2 de escopo_br.json
+        ano = DISPUTAS[did][3]
+        if ano in tam:
+            v = por_cid.get(cid)
+            jdump({**blocos_de(did, tam[ano]), 'c': {BR_IDX[did]: [[int(a), int(b)] for a, b in zip(v.lid, v.votos)]} if v is not None else {}}, f'granular/{sg.lower()}/disp_{did}.json')
+    for did in ordem:
+        ano = DISPUTAS[did][3]
+        if ano not in tam:
+            continue
+        blocos = blocos_de(did, tam[ano])
         candidaturas = {}
         da_disp = cand[cand.disp == did]
         for cid in da_disp.cid:

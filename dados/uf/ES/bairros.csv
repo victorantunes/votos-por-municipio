@@ -1,0 +1,755 @@
+b,cd_tse,nome
+0,56030,Campo de Aviação
+1,56030,Centro
+2,56030,Charqueada
+3,56030,Chácara Da Serra
+4,56030,Clério Moulin
+5,56030,Colina
+6,56030,Conceição (N.Sª Conceição)
+7,56030,Guararema
+8,56030,Nova Alegre
+9,56030,Pavuna
+10,56030,Prainha
+11,56030,São Manoel
+12,56030,São Vicente de Paulo
+13,56030,Treze De Maio (Treze)
+14,56030,Triângulo
+15,56030,"Três Vilas (Machado, Reis e Viana)"
+16,56030,Universitário
+17,56030,Vila Alta
+18,56030,Vila do Norte
+19,56030,Vila do Sul
+20,56111,Barra do Riacho
+21,56111,Barra do Sahy
+22,56111,Bela Vista
+23,56111,Centro
+24,56111,Centro Empresarial
+25,56111,Coqueiral
+26,56111,Cupido
+27,56111,Fátima
+28,56111,Guanabara
+29,56111,Guaraná
+30,56111,Guaxindiba
+31,56111,Itaparica
+32,56111,Itaputera
+33,56111,Jacupemba
+34,56111,Jardins
+35,56111,Jequitibá
+36,56111,Limão
+37,56111,Mar Azul
+38,56111,Morobá
+39,56111,Nova Colatina
+40,56111,Nova Conquista
+41,56111,Novo Jequitibá
+42,56111,Parque Tropical
+43,56111,Planalto
+44,56111,Polivalente
+45,56111,Pontal do Piraqueaçu
+46,56111,Praia Formosa
+47,56111,Praia dos Padres
+48,56111,Primavera
+49,56111,Putiri
+50,56111,Recanto Feliz
+51,56111,Santa Cruz
+52,56111,Santa Luzia
+53,56111,Santa Marta
+54,56111,Santa Rosa
+55,56111,Sauaçu
+56,56111,Sauê
+57,56111,Segato
+58,56111,São Clemente
+59,56111,São Francisco
+60,56111,São José
+61,56111,São Marcos
+62,56111,Vila Nova
+63,56111,Vila Rica
+64,56111,Vila do Riacho
+65,56111,de Carli
+66,56170,Alvorada
+67,56170,Antônio Inácio Oliveira
+68,56170,Bambé
+69,56170,Campo Novo
+70,56170,Centro
+71,56170,Colina
+72,56170,Cruzeiro
+73,56170,Irmãos Fernandes
+74,56170,Nova Barra
+75,56170,Vila Gonçalves
+76,56170,Vila Landinha
+77,56170,Vila Luciene
+78,56170,Vila Vicente
+79,56146,Vila Cedro
+80,56146,Vila Madalena
+81,56146,Vila da Amizade
+82,56235,Abelardo Ferreira Machado
+83,56235,Aeroporto
+84,56235,Agostinho Simonato
+85,56235,Alto Amarelo
+86,56235,Alto Independência
+87,56235,Alto Monte Cristo
+88,56235,Alto Novo Parque
+89,56235,Alto União
+90,56235,Amaral
+91,56235,Amarelo
+92,56235,Aquidaban
+93,56235,Arariguaba
+94,56235,Baiminas
+95,56235,Basiléia
+96,56235,Bela Vista
+97,56235,Boa Esperança
+98,56235,Boa Vista
+99,56235,Bom Pastor
+100,56235,Caiçara
+101,56235,Campo da Leopoldina
+102,56235,Central Parque
+103,56235,Centro
+104,56235,Coramara
+105,56235,Coronel Borges
+106,56235,Dr. Gilberto Machado
+107,56235,Elpídio Volpini
+108,56235,Estelita Coelho Marins
+109,56235,Ferroviários
+110,56235,Fé e Raça
+111,56235,Gilson Carone
+112,56235,Guandú
+113,56235,IBC
+114,56235,Ibitiquara
+115,56235,Ilha da Luz
+116,56235,Independência
+117,56235,Jardim América
+118,56235,Jardim Itapemirim
+119,56235,Luiz Tinoco da Fonseca (BNH de cima)
+120,56235,Marbrasa
+121,56235,Maria Ortiz
+122,56235,Monte Belo
+123,56235,Monte Cristo
+124,56235,Nossa Senhora Aparecida
+125,56235,Nossa Senhora da Glória
+126,56235,Nossa Senhora da Penha
+127,56235,Nossa Senhora de Fátima
+128,56235,Nova Brasília
+129,56235,Novo Parque
+130,56235,Otton Marins
+131,56235,Paraíso
+132,56235,Parque das Laranjeiras
+133,56235,Presidente Arthur Costa e Silva
+134,56235,Recanto
+135,56235,Rubem Braga
+136,56235,Rui Pinto Bandeira
+137,56235,Santo Antônio
+138,56235,Sta. Cecília
+139,56235,Sta. Helena
+140,56235,Sumaré
+141,56235,São Francisco de Assis
+142,56235,São Geraldo
+143,56235,São Lucas
+144,56235,São Luiz Gonzaga
+145,56235,Teixeira Leite
+146,56235,Vila Rica
+147,56235,Village da Luz
+148,56235,Waldir Furtado Amorim (BNH de Baixo)
+149,56235,Zumbi
+150,56235,Álvaro Tavares (União)
+151,56251,Alice Coutinho
+152,56251,Alto Lage
+153,56251,Alto da Boa Vista
+154,56251,Alzira Ramos
+155,56251,Antônio Ferreira Borges
+156,56251,Aparecida
+157,56251,Bandeirantes
+158,56251,Bela Aurora
+159,56251,Bela Vista
+160,56251,Boa Sorte
+161,56251,Bubú
+162,56251,Campina Grande
+163,56251,Campo Belo
+164,56251,Campo Grande
+165,56251,Campo verde
+166,56251,Cangaíba
+167,56251,Cariacica Sede
+168,56251,Castelo Branco
+169,56251,Caçaroca
+170,56251,Chácaras União
+171,56251,Cruzeiro do Sul
+172,56251,Dom Bosco
+173,56251,Expedito
+174,56251,Flexal I
+175,56251,Flexal II
+176,56251,Formate
+177,56251,Foz do Rio Bubu
+178,56251,Graúna
+179,56251,Itaciba
+180,56251,Itanguá
+181,56251,Itapemirim
+182,56251,Itaquari
+183,56251,Jardim América
+184,56251,Jardim Botânico
+185,56251,Jardim Campo Grande
+186,56251,Jardim de Alah
+187,56251,Maracanã
+188,56251,Morada de Santa Fé
+189,56251,Mucuri
+190,56251,Nova Brasília
+191,56251,Nova Campo Grande
+192,56251,Nova Canaã
+193,56251,Nova Esperança
+194,56251,Nova Rosa da Penha
+195,56251,Nova Valverde
+196,56251,Novo Brasil
+197,56251,Novo Horizonte
+198,56251,Operário
+199,56251,Oriente
+200,56251,Padre Gabriel
+201,56251,Padre Mathias
+202,56251,Parque Gramado
+203,56251,Piranema
+204,56251,Planeta
+205,56251,Porto Novo
+206,56251,Porto Santana
+207,56251,Porto de Cariacica
+208,56251,Presidente Médice
+209,56251,Prolar
+210,56251,Retiro Saudoso
+211,56251,Rio Branco
+212,56251,Rio Marinho
+213,56251,Rosa da Penha
+214,56251,Santa Barbara
+215,56251,Santa Cecilia
+216,56251,Santa Luzia
+217,56251,Santa Paula
+218,56251,Santana
+219,56251,Santo André
+220,56251,Santo Antônio
+221,56251,Serra do Anil
+222,56251,Sotelândia
+223,56251,Sotema
+224,56251,São Benedito
+225,56251,São Conrado
+226,56251,São Francisco
+227,56251,São Geraldo
+228,56251,São Geraldo II
+229,56251,São Gonçalo
+230,56251,São João Batista
+231,56251,Tabajara
+232,56251,Tiradentes
+233,56251,Tucum
+234,56251,Vale Esperança
+235,56251,Vale dos Reis
+236,56251,Valparaíso
+237,56251,Vasco da Gama
+238,56251,Vera Cruz
+239,56251,Vila Cajueiro
+240,56251,Vila Capixaba
+241,56251,Vila Independência
+242,56251,Vila Isabel
+243,56251,Vila Merlo
+244,56251,Vila Palestina
+245,56251,Vila Progresso
+246,56251,Vila Prudêncio
+247,56251,Vista Dourada
+248,56251,Vista Linda
+249,56251,Vista Mar
+250,56251,Área Não Identificada 1/2
+251,56294,Adélia Giuberti
+252,56294,Aeroporto
+253,56294,Alto Vila Nova
+254,56294,Ayrton Senna
+255,56294,Barbados
+256,56294,Bela Vista
+257,56294,Benjamin Carlos dos Santos
+258,56294,Carlos Germano Naumann
+259,56294,Castelo Branco
+260,56294,Centro
+261,56294,Cidade Jardim
+262,56294,Colatina Velha
+263,56294,Columbia
+264,56294,Esplanada
+265,56294,Fazenda Vitali
+266,56294,Fioravante Marino
+267,56294,Francisco Simonassi
+268,56294,Honório Fraga
+269,56294,Industrial Alves Marques
+270,56294,Jardim Planalto
+271,56294,Lacê
+272,56294,Luiz Iglesias
+273,56294,Maria Ismênia
+274,56294,Maria das Graças
+275,56294,Marista
+276,56294,Martinelli
+277,56294,Moacir Brotas
+278,56294,Morada do Sol
+279,56294,Mário Giurizatto
+280,56294,Nossa Senhora Aparecida
+281,56294,Nossa Senhora da Penha
+282,56294,Novo Horizonte
+283,56294,Olívio Zanotelli
+284,56294,Operário
+285,56294,Padre José de Anchieta
+286,56294,Parque Residencial Jardins
+287,56294,Perpétuo Socorro
+288,56294,Por do Sol
+289,56294,Raul Giuberti
+290,56294,Residencial Nobre
+291,56294,Sagrado Coração de Jesus
+292,56294,San Diego
+293,56294,Santa Cecília
+294,56294,Santa Helena
+295,56294,Santa Margarida
+296,56294,Santa Mônica
+297,56294,Santa Terezinha
+298,56294,Santo Antônio
+299,56294,Santos Dumont
+300,56294,São Braz
+301,56294,São Judas Tadeu
+302,56294,São Marcos
+303,56294,São Pedro
+304,56294,São Silvano
+305,56294,São Vicente
+306,56294,Vila Amélia
+307,56294,Vila Lenira
+308,56294,Vila Nova
+309,56294,Vila Real
+310,56294,Vila Verde
+311,56294,Vista da Serra
+312,56413,Benedita Monteiro
+313,56413,Centro
+314,56413,Divino Espírito Santo
+315,56413,Homero Amante
+316,56413,Nossa Senhora Aparecida
+317,56413,Parque de Exposição
+318,56413,Santa Mônica
+319,56413,Santa Rita
+320,56413,Vila Nova
+321,56472,Adalberto Simão Nader
+322,56472,Aeroporto
+323,56472,Bela Vista
+324,56472,Camurugi
+325,56472,Centro
+326,56472,Comunidade Urbana de Amarelos
+327,56472,Comunidade Urbana de Andana
+328,56472,Comunidade Urbana de Jaboticaba
+329,56472,Comunidade Urbana de Lagoa Dourada
+330,56472,Comunidade Urbana de Maxinda
+331,56472,Comunidade Urbana de Palmeiras
+332,56472,Comunidade Urbana de Reta Grande
+333,56472,Comunidade Urbana de Samambaia
+334,56472,Comunidade Urbana de Taquara do Reino
+335,56472,Concha D'Ostra
+336,56472,Condados
+337,56472,Coroado
+338,56472,Elza Nader
+339,56472,Enseada Azul
+340,56472,Fátima Cidade Jardim
+341,56472,Ipiranga
+342,56472,Itapebussu
+343,56472,Jabaraí
+344,56472,Jardim Boa Vista
+345,56472,Jardim Santa Rosa
+346,56472,Kubitschek
+347,56472,Lagoa Funda
+348,56472,Lameirão
+349,56472,Meaipe
+350,56472,Muquiçaba
+351,56472,Nossa Senhora da Conceição
+352,56472,Nova Guarapari
+353,56472,Olaria
+354,56472,Paturá
+355,56472,Perocão
+356,56472,Pontal de Santa Mônica
+357,56472,Portal
+358,56472,Praia do Morro
+359,56472,Praia do Riacho
+360,56472,Recanto da Sereia
+361,56472,Santa Margarida
+362,56472,Santa Mônica
+363,56472,Setiba
+364,56472,Sol Nascente
+365,56472,São Gabriel
+366,56472,São José
+367,56472,São Judas Tadeu
+368,56472,Una
+369,56472,Village da Praia
+370,56472,Village do Sol
+371,56472,Várzea Nova
+372,56049,Bom Pastor
+373,56049,Carolino Barrosa
+374,56049,João Butica
+375,56049,João Tomaz
+376,56049,Laurentino Antônio de Faria
+377,56049,Wilson Fernandes Pereira
+378,56596,Centro
+379,56596,Ferreira Valle
+380,56596,Guanabara
+381,56596,Niterói
+382,56596,Nossa Senhora da Penha
+383,56596,Pito
+384,56596,Quilombo
+385,56596,Vale Verde
+386,56596,Vila Nova
+387,56634,Araçá
+388,56634,Aviso
+389,56634,Boa Vista
+390,56634,Canivete
+391,56634,Centro
+392,56634,Colina
+393,56634,Interlagos
+394,56634,Jardim Laguna
+395,56634,José Rodrigues Maciel
+396,56634,Juparanã
+397,56634,Lagoa do Meio
+398,56634,Linhares V
+399,56634,Movelar
+400,56634,Nossa Senhora da Conceição
+401,56634,Nova Betânia
+402,56634,Nova Esperança
+403,56634,Novo Horizonte
+404,56634,Palmital
+405,56634,Planalto
+406,56634,Santa Cruz
+407,56634,Shell
+408,56634,São José
+409,56634,Três Barras
+410,56936,Aimorés
+411,56936,Aparecida
+412,56936,Asa Branca
+413,56936,Boa Vista
+414,56936,Cachoeira da Onça
+415,56936,Centro
+416,56936,Glória
+417,56936,Gustavo Boone
+418,56936,Jardim Passamani
+419,56936,Jardim Vitória
+420,56936,Jardim da Infância
+421,56936,Jardim das Oliveiras
+422,56936,Jovelino de Souza Valentim
+423,56936,João Colombi
+424,56936,Mirante
+425,56936,Paraíso
+426,56936,Populares
+427,56936,Progresso
+428,56936,Santa Cecília
+429,56936,Santa Helena
+430,56936,Santa Rita
+431,56936,Santa Terezinha
+432,56936,São Sebastião
+433,56936,São Vicente
+434,56936,Vila Comboni
+435,56995,Alterozas
+436,56995,André Carlone
+437,56995,Bairro Novo
+438,56995,Bairro das Laranjeiras
+439,56995,Bairro de Fátima
+440,56995,Balneário de Carapebus
+441,56995,Barcelona
+442,56995,Barro Branco
+443,56995,Belvedere
+444,56995,Bicanga
+445,56995,Boa Vista (Carapina)
+446,56995,Boa Vista (Nova Almeida)
+447,56995,Boulevard Lagoa
+448,56995,Camará
+449,56995,Campinho da Serra I
+450,56995,Campinho da Serra II
+451,56995,Cantinho do Céu
+452,56995,Carapina Grande
+453,56995,Cascata
+454,56995,Castelândia
+455,56995,Caçaroca
+456,56995,Central Carapina
+457,56995,Chapada Grande
+458,56995,Chapada Grande
+459,56995,Chácara Parreiral
+460,56995,Cidade Continental
+461,56995,Cidade Nova da Serra
+462,56995,Cidade Pomar
+463,56995,Civit I
+464,56995,Civit II
+465,56995,Colina da Serra
+466,56995,Colina de Laranjeiras
+467,56995,Conjunto Carapina I
+468,56995,Conjunto Jacaraípe
+469,56995,Continental
+470,56995,Costa Dourada
+471,56995,Costabela
+472,56995,Diamantina
+473,56995,Divinópolis
+474,56995,Eldorado
+475,56995,Enseada de Jacaraípe
+476,56995,Estância Monazítica
+477,56995,Eurico Salles
+478,56995,Feu Rosa
+479,56995,Guaraciaba
+480,56995,Hélio Ferraz
+481,56995,Jacuhy
+482,56995,Jardim Atlântico
+483,56995,Jardim Bela Vista
+484,56995,Jardim Carapina
+485,56995,Jardim Guanabara
+486,56995,Jardim Limoeiro
+487,56995,Jardim Primavera
+488,56995,Jardim Tropical
+489,56995,Jardim da Serra
+490,56995,José de Anchieta
+491,56995,José de Anchieta II
+492,56995,José de Anchieta III
+493,56995,Lagoa Jacaraípe
+494,56995,Lagoa de Carapebus
+495,56995,Laranjeiras Velha
+496,56995,Manguinhos
+497,56995,Manoel Plaza
+498,56995,Marbela
+499,56995,Maria Níobe
+500,56995,Maringá
+501,56995,Mata da Serra
+502,56995,Morada de Laranjeiras
+503,56995,Nossa Senhora da Conceição
+504,56995,Nova Almeida Centro
+505,56995,Nova Carapina I
+506,56995,Nova Carapina II
+507,56995,Nova Zelândia
+508,56995,Novo Horizonte
+509,56995,Novo Porto Canoa
+510,56995,Ourimar
+511,56995,Palmeiras
+512,56995,Parque Jacaraípe
+513,56995,Parque Residencial Laranjeiras
+514,56995,Parque Residencial Mestre Álvaro
+515,56995,Parque Residencial Nova Almeida
+516,56995,Parque Residencial Tubarão
+517,56995,Parque Santa Fé
+518,56995,Parque das Gaivotas
+519,56995,Pitanga
+520,56995,Planalto Carapina
+521,56995,Planalto Serrano
+522,56995,Planície da Serra
+523,56995,Polo Industrial Tubarão
+524,56995,Portal de Jacaraípe
+525,56995,Porto Canoa
+526,56995,Porto Dourado
+527,56995,Praia da Baleia
+528,56995,Praia de Capuba
+529,56995,Praia de Carapebus
+530,56995,Praiamar
+531,56995,Reis Magos
+532,56995,Residencial Centro da Serra
+533,56995,Residencial Jacaraípe
+534,56995,Residencial Vista do Mestre
+535,56995,Rosário de Fátima
+536,56995,Santa Luzia
+537,56995,Santa Rita de Cassia
+538,56995,Santiago
+539,56995,Santo Antônio
+540,56995,Serra Centro
+541,56995,Serra Dourada I
+542,56995,Serra Dourada II
+543,56995,Serra Dourada III
+544,56995,Serramar
+545,56995,Solar de Anchieta
+546,56995,São Diogo I
+547,56995,São Diogo II
+548,56995,São Domingos
+549,56995,São Francisco
+550,56995,São Geraldo
+551,56995,São João
+552,56995,São Judas Tadeu
+553,56995,São Lourenço
+554,56995,São Marcos
+555,56995,São Marcos II
+556,56995,São Patrício
+557,56995,São Pedro
+558,56995,Taquara I
+559,56995,Taquara II
+560,56995,Terminal Intermodal da Serra
+561,56995,Valparaíso
+562,56995,Vila Nova de Colares
+563,56995,Vista da Serra I
+564,56995,Vista da Serra II
+565,57010,Araçatiba
+566,57010,Areinha
+567,57010,Arlindo Angelo Villaschi
+568,57010,Boa Esperança
+569,57010,Bom Pastor
+570,57010,Campo Verde
+571,57010,Cannaã
+572,57010,Caxias do Sul
+573,57010,Centro
+574,57010,Jucú
+575,57010,Marcilio de Noronha
+576,57010,Morada Bethânia
+577,57010,Nova Bethânia
+578,57010,Parque Industrial
+579,57010,Primavera
+580,57010,Ribeira
+581,57010,Universal
+582,57010,Vila Bethânia
+583,57037,Alecrim
+584,57037,Alvorada
+585,57037,Araçás
+586,57037,Argolas
+587,57037,Aribiri
+588,57037,Ataíde
+589,57037,Balneário Ponta da Fruta
+590,57037,Barra do Jucu
+591,57037,Barramares
+592,57037,Boa Vista I
+593,57037,Boa Vista II
+594,57037,Brisamar
+595,57037,Cavalieri
+596,57037,Centro de Vila Velha
+597,57037,Chácara do Conde
+598,57037,Cidade da Barra
+599,57037,Cobi de Baixo
+600,57037,Cobi de Cima
+601,57037,Cobilândia
+602,57037,Cocal
+603,57037,Coqueiral de Itaparica
+604,57037,Cristóvão Colombo
+605,57037,Darly Santos
+606,57037,Divino Espírito Santo
+607,57037,Dom João Batista
+608,57037,Garoto
+609,57037,Glória
+610,57037,Guaranhuns
+611,57037,Ibes
+612,57037,Ilha da Conceição
+613,57037,Ilha das Flores
+614,57037,Ilha dos Ayres
+615,57037,Ilha dos Bentos
+616,57037,Industrial
+617,57037,Interlagos
+618,57037,Itapuã
+619,57037,Jabaeté
+620,57037,Jaburuna
+621,57037,Jardim Asteca
+622,57037,Jardim Colorado
+623,57037,Jardim Guadalajara
+624,57037,Jardim Guaranhuns
+625,57037,Jardim Marilândia
+626,57037,Jardim do Vale
+627,57037,Jockey de Itaparica
+628,57037,João Goulart
+629,57037,Morada da Barra
+630,57037,Morada do Sol
+631,57037,Morro da Lagoa
+632,57037,Normília da Cunha
+633,57037,Nossa Senhora da Penha
+634,57037,Nova América
+635,57037,Nova Itaparica
+636,57037,Nova Ponta da Fruta
+637,57037,Novo México
+638,57037,Olaria
+639,57037,Paul
+640,57037,Pedra dos Búzios
+641,57037,Planalto
+642,57037,Ponta da Fruta
+643,57037,Pontal das Garças
+644,57037,Praia da Costa
+645,57037,Praia das Gaivotas
+646,57037,Praia de Itaparica
+647,57037,Praia dos Recifes
+648,57037,Primeiro de Maio
+649,57037,Residencial Itaparica
+650,57037,Rio Marinho
+651,57037,Riviera da Barra
+652,57037,Sagrada Família
+653,57037,Santa Clara
+654,57037,Santa Inês
+655,57037,Santa Mônica
+656,57037,Santa Mônica Popular
+657,57037,Santa Paula I
+658,57037,Santa Paula II
+659,57037,Santa Rita
+660,57037,Santos Dumont
+661,57037,Soteco
+662,57037,São Conrado
+663,57037,São Torquato
+664,57037,Terra Vermelha
+665,57037,Ulisses Guimarães
+666,57037,Vale Encantado
+667,57037,Vila Batista
+668,57037,Vila Garrido
+669,57037,Vila Guaranhuns
+670,57037,Vila Nova
+671,57037,Vinte e Três de Maio
+672,57037,Vista da Penha
+673,57037,Zumbi dos Palmares
+674,57053,Aeroporto
+675,57053,Andorinhas
+676,57053,Antônio Honório
+677,57053,Ariovaldo Favalessa
+678,57053,Barro Vermelho
+679,57053,Bela Vista
+680,57053,Bento Ferreira
+681,57053,Boa Vista
+682,57053,Bonfim
+683,57053,Caratoíra
+684,57053,Centro
+685,57053,Comdusa
+686,57053,Conquista
+687,57053,Consolação
+688,57053,Cruzamento
+689,57053,Enseada do Suá
+690,57053,Estrelinha
+691,57053,Fonte Grande
+692,57053,Forte São João
+693,57053,Fradinhos
+694,57053,Goiabeiras
+695,57053,Grande Vitória
+696,57053,Gurigica
+697,57053,Horto
+698,57053,Ilha das Caieiras
+699,57053,Ilha de Santa Maria
+700,57053,Ilha do Boi
+701,57053,Ilha do Frade
+702,57053,Ilha do Príncipe
+703,57053,Inhanguetá
+704,57053,Itararé
+705,57053,Jabour
+706,57053,Jardim Camburí
+707,57053,Jardim da Penha
+708,57053,Jesus de Nazareth
+709,57053,Joana D'arc
+710,57053,Jucutuquara
+711,57053,Maria Ortiz
+712,57053,Maruípe
+713,57053,Mata da Praia
+714,57053,Monte Belo
+715,57053,Morada de Camburí
+716,57053,Mário Cypreste
+717,57053,Nazareth
+718,57053,Nova Palestina
+719,57053,Parque Industrial
+720,57053,Parque Moscoso
+721,57053,Piedade
+722,57053,Pontal de Camburí
+723,57053,Praia do Canto
+724,57053,Praia do Suá
+725,57053,Redenção
+726,57053,República
+727,57053,Resistência
+728,57053,Romão
+729,57053,Santa Cecília
+730,57053,Santa Clara
+731,57053,Santa Helena
+732,57053,Santa Luíza
+733,57053,Santa Lúcia
+734,57053,Santa Martha
+735,57053,Santa Tereza
+736,57053,Santo André
+737,57053,Santo Antônio
+738,57053,Santos Dumont
+739,57053,Santos Reis
+740,57053,Segurança do Lar
+741,57053,Solon Borges
+742,57053,São Benedito
+743,57053,São Cristóvão
+744,57053,São José
+745,57053,São Pedro
+746,57053,Tabuazeiro
+747,57053,Universitário
+748,57053,Vila Rubim
+749,57053,da Penha
+750,57053,de Lourdes
+751,57053,do Cabral
+752,57053,do Moscoso
+753,57053,do Quadro

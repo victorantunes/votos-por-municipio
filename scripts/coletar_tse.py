@@ -68,28 +68,28 @@ def baixar(pasta, prefixo, ano, url=None, dest=None):
 
 
 ANOS_SECAO = (2020, 2022, 2024, 2026)
-UFS_SECAO = ['RN', 'DF']  # estados com detalhe por local de votação (cada estado a mais exige baixar e processar os votos por seção)
+UFS_SECAO = ['AC', 'AL', 'AM', 'AP', 'BA', 'CE', 'DF', 'ES', 'GO', 'MA', 'MG', 'MS', 'MT', 'PA', 'PB', 'PE', 'PI', 'PR', 'RJ', 'RN', 'RO', 'RR', 'RS', 'SC', 'SE', 'SP', 'TO']  # estados com detalhe por local de votação
 IBGE_BAIRROS = ('https://geoftp.ibge.gov.br/organizacao_do_territorio/malhas_territoriais/malhas_de_setores_censitarios__divisoes_intramunicipais/'
                 'censo_2022/bairros/shp/BR/BR_bairros_CD2022.zip')
 
 
+def tem_secao(ano, uf):
+    return (CSV / f'votacao_secao_{ano}_{uf}.csv').exists() or (BRUTOS / f'votacao_secao_{ano}_{uf}.zip').exists()
+
+
 def granular(ufs=None):
-    """Votos por seção, locais de votação e bairros do IBGE, para os estados da lista."""
+    """Baixa os votos por seção (o scripts/secoes.py lê direto do zip), os locais de votação e os bairros do IBGE, para os estados da lista."""
     ufs = ufs or UFS_SECAO
     for ano in ANOS_SECAO:
         for uf in ufs:
-            nome = f'votacao_secao_{ano}_{uf}.csv'
-            if not (CSV / nome).exists():
+            if not tem_secao(ano, uf):
                 try:
-                    z = zipfile.ZipFile(baixar(None, 'votacao_secao', ano, url=f'{BASE}/votacao_secao/votacao_secao_{ano}_{uf}.zip', dest=BRUTOS / f'votacao_secao_{ano}_{uf}.zip'))
+                    baixar(None, 'votacao_secao', ano, url=f'{BASE}/votacao_secao/votacao_secao_{ano}_{uf}.zip', dest=BRUTOS / f'votacao_secao_{ano}_{uf}.zip')
                 except urllib.error.HTTPError as e:
                     if e.code != 404:
                         raise
                     print(f'{uf} {ano}: não há arquivo de seções (sem eleição desse tipo no estado)', flush=True)
-                    continue
-                print('extraindo', nome, flush=True)
-                z.extract(nome, CSV)
-        faltam = [uf for uf in ufs if (CSV / f'votacao_secao_{ano}_{uf}.csv').exists() and not (CSV / f'eleitorado_local_votacao_{ano}_{uf}.csv').exists()]
+        faltam = [uf for uf in ufs if tem_secao(ano, uf) and not (CSV / f'eleitorado_local_votacao_{ano}_{uf}.csv').exists()]
         if faltam:
             z = zipfile.ZipFile(baixar(None, 'eleitorado_local_votacao', ano, url=f'{BASE}/eleitorado_locais_votacao/eleitorado_local_votacao_{ano}.zip'))
             if f'eleitorado_local_votacao_{ano}_{faltam[0]}.csv' in z.namelist():  # a partir de 2026 o zip traz um arquivo por UF
@@ -99,20 +99,29 @@ def granular(ufs=None):
                 nac = f'eleitorado_local_votacao_{ano}.csv'
                 print('extraindo e filtrando', nac, flush=True)
                 z.extract(nac, CSV)
-                dados = pd.concat([c[c.SG_UF.isin(faltam)] for c in pd.read_csv(CSV / nac, sep=';', encoding='latin-1', dtype=str, chunksize=200000)])
-                for uf in faltam:
-                    dados[dados.SG_UF == uf].to_csv(CSV / f'eleitorado_local_votacao_{ano}_{uf}.csv', sep=';', index=False, encoding='latin-1')
+                saidas = {uf: CSV / f'eleitorado_local_votacao_{ano}_{uf}.csv' for uf in faltam}
+                for c in pd.read_csv(CSV / nac, sep=';', encoding='latin-1', dtype=str, chunksize=200000):
+                    for uf, g in c[c.SG_UF.isin(faltam)].groupby('SG_UF'):
+                        g.to_csv(saidas[uf], sep=';', index=False, encoding='latin-1', mode='a', header=not saidas[uf].exists())
                 (CSV / nac).unlink()
-    # Presidente de 2022 por seção: os arquivos dos estados não trazem o cargo, então filtramos o arquivo nacional (BR) em blocos
-    pres = CSV / 'votacao_secao_2022_presidente.csv'
-    if not pres.exists() or not set(ufs) <= set(pd.read_csv(pres, sep=';', dtype=str, usecols=['SG_UF']).SG_UF.unique()):
+    # Presidente de 2022 por seção: os arquivos dos estados não trazem o cargo, então filtramos o arquivo nacional (BR) em blocos, um arquivo por estado
+    saidas = {uf: CSV / f'votacao_secao_2022_presidente_{uf}.csv' for uf in ufs}
+    pend = [uf for uf in ufs if not saidas[uf].exists()]
+    if pend:
         z = zipfile.ZipFile(baixar(None, 'votacao_secao', 2022, url=f'{BASE}/votacao_secao/votacao_secao_2022_BR.zip', dest=BRUTOS / 'votacao_secao_2022_BR.zip'))
         membro = next(n for n in z.namelist() if n.endswith('_BR.csv'))
         print('filtrando', membro, flush=True)
         cols = ['SG_UF', 'NR_TURNO', 'CD_MUNICIPIO', 'NR_ZONA', 'NR_SECAO', 'DS_CARGO', 'NR_VOTAVEL', 'SQ_CANDIDATO', 'QT_VOTOS']
+        tmp = {uf: saidas[uf].with_suffix('.part') for uf in pend}
+        for t in tmp.values():
+            t.unlink(missing_ok=True)
         with z.open(membro) as f:
-            partes = [c[c.SG_UF.isin(ufs) & (c.DS_CARGO.str.upper() == 'PRESIDENTE')] for c in pd.read_csv(f, sep=';', encoding='latin-1', dtype=str, usecols=cols, chunksize=400000)]
-        pd.concat(partes).to_csv(pres, sep=';', index=False, encoding='latin-1')
+            for c in pd.read_csv(f, sep=';', encoding='latin-1', dtype=str, usecols=cols, chunksize=400000):
+                c = c[c.SG_UF.isin(pend) & (c.DS_CARGO.str.upper() == 'PRESIDENTE')]
+                for uf, g in c.groupby('SG_UF'):
+                    g.to_csv(tmp[uf], sep=';', index=False, encoding='latin-1', mode='a', header=not tmp[uf].exists())
+        for uf, t in tmp.items():
+            t.replace(saidas[uf])
     shp = ROOT / 'dados' / 'malha_ibge' / 'BR_bairros_CD2022.shp'
     if not shp.exists():
         shp.parent.mkdir(parents=True, exist_ok=True)

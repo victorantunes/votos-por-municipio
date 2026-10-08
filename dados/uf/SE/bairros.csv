@@ -1,0 +1,186 @@
+b,cd_tse,nome
+0,31054,17 de Março
+1,31054,Aeroporto
+2,31054,América
+3,31054,Areia Branca
+4,31054,Atalaia
+5,31054,Bairro Aruana
+6,31054,Bugio
+7,31054,Capucho
+8,31054,Centro
+9,31054,Cidade Nova
+10,31054,Cirurgia
+11,31054,Coroa do Meio
+12,31054,Dezoito do Forte
+13,31054,Dom Luciano
+14,31054,Farolândia
+15,31054,Gameleira
+16,31054,Getúlio Vargas
+17,31054,Grageru
+18,31054,Industrial
+19,31054,Inácio Barbosa
+20,31054,Jabotiana
+21,31054,Japãozinho
+22,31054,Jardim Centenário
+23,31054,Jardins
+24,31054,José Conrado de Araújo
+25,31054,Lamarão
+26,31054,Luzia
+27,31054,Marivan
+28,31054,Matapoã
+29,31054,Mosqueiro
+30,31054,Novo Paraíso
+31,31054,Olaria
+32,31054,Palestina
+33,31054,Pereira Lobo
+34,31054,Ponto Novo
+35,31054,Porto Dantas
+36,31054,Robalo
+37,31054,Salgado Filho
+38,31054,Santa Maria
+39,31054,Santo Antônio
+40,31054,Santos Dumont
+41,31054,Siqueira Campos
+42,31054,Soledade
+43,31054,Suíça
+44,31054,São Conrado
+45,31054,São José
+46,31054,São José dos Náufragos
+47,31054,Treze de Julho
+48,31119,Alphaville
+49,31119,Antônio Pedro
+50,31119,Atalaia Nova
+51,31119,Bairro Baixo
+52,31119,Beira Rio
+53,31119,Brisas de Atalaia
+54,31119,Caminho da Praia
+55,31119,Centro
+56,31119,Costa Paradiso
+57,31119,Espaço Tropical
+58,31119,Governador Marcelo Deda
+59,31119,Luar da Barra
+60,31119,Marivan
+61,31119,Moisés Gomes
+62,31119,Olimar
+63,31119,Paraíso da Barra
+64,31119,Prisco Viana
+65,31119,Rio das Canas
+66,31151,Boquim Velho
+67,31151,Centro
+68,31151,Horácio Fernandes Fontes
+69,31151,Industrial
+70,31151,Jacomildes Barreto
+71,31151,Miguel dos Anjos
+72,31151,Padre José Gumercindo
+73,31151,Simpliciano Fernandes Filho
+74,31151,Temístocles de Santana
+75,31410,Alagoas
+76,31410,Alecrim
+77,31410,Bomfim
+78,31410,Botequim
+79,31410,Candeal
+80,31410,Centro
+81,31410,Estancinha
+82,31410,Porto D’Areia
+83,31410,Santa Cruz
+84,31410,São Jorge
+85,31410,Valter Cardozo Costa
+86,31577,Anísio Amâncio de Oliveira
+87,31577,Bananeira
+88,31577,Centro
+89,31577,Doutor José Milton Machado
+90,31577,Mamede Paes Mendonça
+91,31577,Marcela
+92,31577,Marianga
+93,31577,Miguel Teles de Mendonça
+94,31577,Oviêdo Teixeira
+95,31577,Porto
+96,31577,Queimadas
+97,31577,Riacho Doce
+98,31577,Rotary Club
+99,31577,Serrano
+100,31577,São Cristóvão
+101,31690,Ademar de Carvalho
+102,31690,Alto da Boa Vista
+103,31690,Centro
+104,31690,Cidade Nova
+105,31690,Exposição
+106,31690,Horta
+107,31690,Jardim Campo Novo
+108,31690,Laudelino Freire
+109,31690,Libório
+110,31690,Novo Horizonte
+111,31690,Pratas
+112,31690,Silvio Romero
+113,31690,São José
+114,31895,Alto da Glória
+115,31895,Brasília
+116,31895,Centro
+117,31895,Cohab
+118,31895,Danilo Aragão
+119,31895,Divinéia
+120,31895,Nossa Senhora de Lourdes
+121,31895,Nova Brasília
+122,31895,Nova Esperança
+123,31895,Novo Horizonte
+124,31895,Sebastião Lopes da Silva
+125,31895,Silos
+126,31950,Albano Franco
+127,31950,Boa Viagem
+128,31950,Castelo
+129,31950,Centro Histórico
+130,31950,Fernando Collor
+131,31950,Guajará
+132,31950,Itacanema
+133,31950,Jardim
+134,31950,João Alves
+135,31950,Mangabeira
+136,31950,Marcos Freire I
+137,31950,Marcos Freire II
+138,31950,Marcos Freire III
+139,31950,Novo Horizonte
+140,31950,Pai André
+141,31950,Palestina de Dentro
+142,31950,Palestina de Fora
+143,31950,Parque dos Faróis
+144,31950,Piabeta
+145,31950,Porto Grande
+146,31950,Porto Grande
+147,31950,Santa Cecília
+148,31950,Santa Inês
+149,31950,Santo Inácio
+150,31950,Sobrado
+151,31950,São Brás
+152,31950,Taboca
+153,31950,Taiçoca de Dentro
+154,31950,Taiçoca de Fora
+155,32310,Comendador Travassos
+156,32336,Centro
+157,32336,Divinéia
+158,32336,Eduardo Gomes
+159,32336,Irineu Neri
+160,32336,Lourival Batista
+161,32336,Luiz Alves
+162,32336,Madre Paulina
+163,32336,Marcelo Déda
+164,32336,Romualdo Prado
+165,32336,Rosa Elze
+166,32336,Rosa Maria
+167,32336,São Gonçalo
+168,32336,Tijuquinha
+169,32336,Várzea Grande
+170,32476,Avenida
+171,32476,Bela Vista
+172,32476,Bom Jardim
+173,32476,Campos
+174,32476,Castelo Branco
+175,32476,Centenário
+176,32476,Centro
+177,32476,Cruz
+178,32476,Macaé
+179,32476,Palame
+180,32476,Pinheiro
+181,32476,Santa Rita
+182,32476,Santos Dumont
+183,32476,Sutí
+184,32476,Vicentino

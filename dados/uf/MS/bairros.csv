@@ -1,0 +1,297 @@
+b,cd_tse,nome
+0,91693,Alvorada
+1,91693,Antônio Mota Ramos
+2,91693,Cerejo
+3,91693,Esperança
+4,91693,Esplanada
+5,91693,Imperial
+6,91693,Jardim Ouro Verde
+7,91693,Jardim das Flores
+8,91693,Jardim dos Estados
+9,91693,Mutum
+10,91693,Santa Clara
+11,91693,Setor Industrial
+12,91693,das Nações
+13,91693,dos Estados
+14,90174,Centro
+15,90174,Vila Arabela Freire
+16,90174,Vila Guarany
+17,90174,Vila Nova
+18,90174,Vila Penzo
+19,90212,Alto
+20,90212,Centro
+21,90212,Cidade Nova
+22,90212,Exposição
+23,90212,Guanandi
+24,90212,Nova Aquidauana
+25,90212,Santa Terezinha
+26,90212,Serraria
+27,90212,São Francisco
+28,90212,Trindade
+29,90395,Centro
+30,90395,Vila Antonia Nantes
+31,90395,Vila Cantidiano Duarte
+32,90395,Vila José Mustafá
+33,90395,Vila Maria Gonçalves da Silva
+34,90395,Vila Militar
+35,90395,Vila Nova Era
+36,90395,Vila Nídio Boffo
+37,90417,Antônio João
+38,90417,Centro
+39,90417,Costa e Silva
+40,90417,Espírito Santo
+41,90417,Nova Bela Vista
+42,90417,Planalto
+43,90417,Primaveras
+44,90417,Serradinho
+45,90417,Água Doce
+46,90433,Alvorada
+47,90433,Atlântico
+48,90433,Formoso
+49,90433,Rincão Bonito
+50,90433,Singular
+51,90514,Aero Rancho
+52,90514,Alves Pereira
+53,90514,Amambaí
+54,90514,América
+55,90514,Autonomista
+56,90514,Bandeirantes
+57,90514,Batistão
+58,90514,Bela Vista
+59,90514,Cabreúva
+60,90514,Caiobá
+61,90514,Caiçara
+62,90514,Carandá
+63,90514,Carlota
+64,90514,Carvalho
+65,90514,Centenário
+66,90514,Centro
+67,90514,Centro-Oeste
+68,90514,Chácara Cachoeira
+69,90514,Chácara dos Poderes
+70,90514,Coophavila II
+71,90514,Coronel Antonino
+72,90514,Cruzeiro
+73,90514,Dr. Albuquerque
+74,90514,Estrela Dalva
+75,90514,Glória
+76,90514,Guanandi
+77,90514,Itanhangá
+78,90514,Jacy
+79,90514,Jardim Paulista
+80,90514,Jardim dos Estados
+81,90514,José Abrão
+82,90514,Jóckey Club
+83,90514,Lageado
+84,90514,Leblon
+85,90514,Los Angeles
+86,90514,Margarida
+87,90514,Maria Aparecida Pedrossian
+88,90514,Mata do Jacinto
+89,90514,Mata do Segredo
+90,90514,Monte Castelo
+91,90514,Monte Líbano
+92,90514,Moreninha
+93,90514,Nasser
+94,90514,Noroeste
+95,90514,Nova Campo Grande
+96,90514,Nova Lima
+97,90514,Novos Estados
+98,90514,Núcleo Industrial
+99,90514,Panamá
+100,90514,Parati
+101,90514,Pioneiros
+102,90514,Piratininga
+103,90514,Planalto
+104,90514,Popular
+105,90514,Rita Vieira
+106,90514,Santa Fé
+107,90514,Santo Amaro
+108,90514,Santo Antônio
+109,90514,Seminário
+110,90514,Sobrinho
+111,90514,São Bento
+112,90514,São Conrado
+113,90514,São Francisco
+114,90514,São Lourenço
+115,90514,Taquarussu
+116,90514,Tarumã
+117,90514,Taveirópolis
+118,90514,Tijuca
+119,90514,Tiradentes
+120,90514,Tv Morena
+121,90514,Universitário
+122,90514,União
+123,90514,Veraneio
+124,90514,Vilas Boas
+125,90638,Aeroporto
+126,90638,Arthur Marinho
+127,90638,Beira-Rio
+128,90638,Borrowsky
+129,90638,Centro
+130,90638,Centro-América
+131,90638,Cervejaria
+132,90638,Cristo Redentor
+133,90638,Dom Bosco
+134,90638,Generoso
+135,90638,Guarani
+136,90638,Guatós
+137,90638,Industrial
+138,90638,Jardim dos Estados
+139,90638,Maria Leite
+140,90638,Nossa Senhora de Fátima
+141,90638,Nova Corumbá
+142,90638,Popular Nova
+143,90638,Popular Velha
+144,90638,Previsul
+145,90638,Universitário
+146,91731,Centro
+147,91731,Cerâmica
+148,91731,Jardim Novo Eldorado
+149,91731,Jardim das Grevílias
+150,91731,Jardim das Palmeiras
+151,91731,Jardim dos Ipês
+152,91731,Primavera
+153,91731,Rui Barbosa
+154,91731,Spartaco Astolfi
+155,90859,Centro
+156,90859,Jardim dos Eucaliptos
+157,90859,Vila Jardim Aeroporto
+158,90859,Vila Nova
+159,90859,Vila Nova Esperança
+160,90859,Vila Operária
+161,90859,Vila Rosa
+162,90930,Centro
+163,90930,Guiraí
+164,90930,Itapoã
+165,90930,Piravevê
+166,90930,Triaguenã
+167,90930,Vitória
+168,90930,Água Azul
+169,91030,Almirante Tamandaré
+170,91030,Boa Esperança
+171,91030,Centro
+172,91030,Nova Ladário
+173,91030,Popular
+174,91030,Santo Antônio
+175,55026,Centro
+176,55026,Cristo Rei
+177,55026,Monte Alegre
+178,55026,Nossa Senhora Aparecida
+179,91138,Centro
+180,91138,Chácara Recreio Bandeirantes
+181,91138,Chácara de Recreio Recanto do Bosque
+182,91138,Classe A Residence
+183,91138,Condomínio Green Park Residence
+184,91138,Condomínio Zeus Closed Village
+185,91138,Conjunto Habitacional BNH 1º Plano
+186,91138,Conjunto Habitacional Boa Vista
+187,91138,Conjunto Habitacional Harry Amorim Costa
+188,91138,Conjunto Habitacional Odercio de Matos
+189,91138,Distrito Verde
+190,91138,Eco Park Residence
+191,91138,Interlagos
+192,91138,Jardim Alvorada
+193,91138,Jardim Nova Era
+194,91138,Jardim Oasis I
+195,91138,Jardim Paraíso
+196,91138,Jardim Paraíso IV
+197,91138,Jardim Progresso
+198,91138,Jardim Tarumã
+199,91138,Jardim União
+200,91138,Jardim Vale Encantado
+201,91138,Parque Beija Flor
+202,91138,Parque Industrial I
+203,91138,Parque Industrial II
+204,91138,Residencial Athenas
+205,91138,Residencial Ipê
+206,91138,Residencial Morumbi
+207,91138,Residencial Oasis II
+208,91138,Residencial Portal
+209,91138,Residencial Portinari
+210,91138,Residencial Sol Nascente
+211,91138,Royal Golf Residence
+212,91138,Royal Park Residence
+213,91138,Vila João de Barro
+214,91138,Vila Nova
+215,91235,Alvorada
+216,91235,Argemiro Ortega
+217,91235,Campo Verde
+218,91235,Capilé
+219,91235,Centro
+220,91235,Centro Educacional
+221,91235,Cristo Rei
+222,91235,Exposição
+223,91235,Francisco Alves
+224,91235,Guiomar Soares Andrade
+225,91235,Horto Florestal
+226,91235,Industrial
+227,91235,Irman Ribeiro
+228,91235,Mambaré
+229,91235,Monte Carlo
+230,91235,Morada do Sol
+231,91235,Paris
+232,91235,Pedro Pedrossian
+233,91235,Portal do Parque
+234,91235,Santa Terezinha
+235,91235,Torre
+236,91235,Tropical
+237,91235,Universitário
+238,91235,Vicente de Paulo
+239,91235,Vila Beatriz
+240,91235,Vila Operária
+241,91316,A
+242,91316,B
+243,91316,C
+244,91316,Centro
+245,91316,D
+246,91316,E
+247,91316,G
+248,91316,H
+249,91316,I
+250,91316,J
+251,91316,K
+252,91316,L
+253,91316,M
+254,91316,N
+255,91316,O
+256,98094,Amábile Maffissoni
+257,98094,Centro
+258,98094,Fênix
+259,98094,Jardim Gramado
+260,98094,Milani
+261,98094,Primavera
+262,98094,Primo Maffissoni
+263,91650,Acácias
+264,91650,Alto da Boa Vista
+265,91650,Bela Vista
+266,91650,Centro
+267,91650,Chácara Imperial
+268,91650,Colinos
+269,91650,Distrito Industrial
+270,91650,Guanabara
+271,91650,Interlagos
+272,91650,Jardim Alvorada
+273,91650,Jardim Brasília
+274,91650,Jardim Dourado
+275,91650,Jardim Ypê
+276,91650,Jupiá
+277,91650,Maristela
+278,91650,Nossa Senhora Aparecida
+279,91650,Osmar Ferreira Dutra
+280,91650,Paranapungá
+281,91650,Quinta da Lagoa
+282,91650,Santa Luzia
+283,91650,Santa Rita
+284,91650,Santa Terezinha
+285,91650,Santo André
+286,91650,Santos Dumont
+287,91650,São Carlos
+288,91650,São João
+289,91650,Vila Carioca
+290,91650,Vila Haro
+291,91650,Vila Nova
+292,91650,Vila Piloto
+293,91650,Vila Zuque
+294,91650,Vista Alegre
+295,91650,da Lapa

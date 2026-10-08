@@ -1,0 +1,661 @@
+b,cd_tse,nome
+0,26310,Alto São Miguel
+1,26310,Alto da Bela Vista
+2,26310,Caetés I
+3,26310,Caetés II
+4,26310,Caetés III
+5,26310,Centro
+6,26310,Desterro
+7,26310,Distrito Industrial
+8,26310,Fosfato
+9,26310,Jardim Caetés
+10,26310,Matinha
+11,26310,Planalto
+12,26310,Timbó
+13,23019,Borges
+14,23019,Brotas
+15,23019,Costa
+16,23019,Manoela Valadares
+17,23019,Pe. Pedro Pereira
+18,23019,Sobreira
+19,23019,São Braz
+20,23019,São Francisco
+21,23019,São Sebastião
+22,23078,Alto do Cruzeiro
+23,23078,Centro
+24,23078,Forrozão
+25,23078,Jiquiá
+26,23078,Joaquim Coutinho
+27,23078,Liberdade
+28,23175,Bela Vista
+29,23175,Centro
+30,23175,Cruzeiro
+31,23175,João Paulo II
+32,23175,Miquilina
+33,23175,Nossa Senhora da Conceição
+34,23175,Nossa Senhora de Fátima
+35,23175,Santo Amaro
+36,23175,Tancredo Neves
+37,23175,do Campo
+38,23205,Hildebrando Carneiro
+39,23205,Quinze
+40,23230,Boa Esperança
+41,23230,Boa Vista
+42,23230,Cardeal
+43,23230,Centro
+44,23230,Cidade Jardim
+45,23230,Coronel Siqueira Campos
+46,23230,Pôr do Sol
+47,23230,Santa Luzia
+48,23230,Santos Dumont
+49,23230,Sucupira
+50,23230,São Cristóvão
+51,23230,São Geraldo
+52,23230,São Miguel
+53,23230,Tamboril
+54,23256,Amaro Ferreira de Albuquerque
+55,23370,Centro
+56,23370,Cruzeiro
+57,23370,Encruzilhada de São João
+58,23370,Gameleira
+59,23370,Irmã Julia
+60,23370,Mororó
+61,23370,Nossa Senhora Aparecida
+62,23370,Queimada Dantas
+63,23370,Retiro
+64,23370,Rosário
+65,23370,Santo Amaro
+66,23370,Santo Antônio
+67,23370,São José
+68,23370,São Pedro
+69,23370,São Rafael
+70,23370,São Sebastião
+71,23515,Capitão Abelardo Calumby
+72,23515,Capitão Cordeiro Falcão
+73,23515,Nossa Senhora do Bom Conselho
+74,23515,São José
+75,23574,Bom Conselho
+76,23574,COHAB
+77,23574,Centro
+78,23574,Charneca
+79,23574,Charnequinha
+80,23574,Destilaria
+81,23574,Distrito Industrial Diper
+82,23574,Distrito Industrial Santo Estevão
+83,23574,Engenho Ilha
+84,23574,Enseada dos Corais
+85,23574,Gaibu
+86,23574,Garapu
+87,23574,Itapoama
+88,23574,Juçaral
+89,23574,Malaquias
+90,23574,Paiva
+91,23574,Pirapama
+92,23574,Ponte dos Carvalhos
+93,23574,Pontezinha
+94,23574,Rosário
+95,23574,Santo Inácio
+96,23574,Suape
+97,23574,São Francisco
+98,23574,Vila Social Contra Mocambo
+99,26298,Alberto Maia
+100,26298,Aldeia de Baixo
+101,26298,Aldeia dos Camarás
+102,26298,Alto Santo Antonio
+103,26298,Alto da Boa Vista
+104,26298,Areeiro
+105,26298,Bairro Novo do Carmelo
+106,26298,Bairro dos Estados
+107,26298,Borralho
+108,26298,Celeiro das Alegrias Futuras
+109,26298,Céu Azul
+110,26298,Estação Nova
+111,26298,Jardim Primavera
+112,26298,João Paulo II
+113,26298,Nazaré
+114,26298,Oitenta
+115,26298,Santa Mônica
+116,26298,Santa Tereza
+117,26298,Santana
+118,26298,São João e São Paulo
+119,26298,São Paulo
+120,26298,São Pedro
+121,26298,Tabatinga
+122,26298,Timbi
+123,26298,Vale das Pedreiras
+124,26298,Vera Cruz
+125,26298,Viana
+126,26298,Vila da Fábrica
+127,26298,Vila da Inabi
+128,23817,ANDORINHA
+129,23817,Agamenon Magalhães
+130,23817,Alto do Moura
+131,23817,Boa Vista
+132,23817,CIDADE JARDIM
+133,23817,Caiuca
+134,23817,Cedro
+135,23817,Centenário
+136,23817,Cidade Alta
+137,23817,DEPUTADO JOSÉ ANTÔNIO LIBERATO
+138,23817,Divinópolis
+139,23817,Indianópolis
+140,23817,JARDIM PANORAMA
+141,23817,JOSÉ CARLOS DE OLIVEIRA
+142,23817,Jardim Boa Vista
+143,23817,João Mota
+144,23817,Luiz Gonzaga
+145,23817,MANOEL BEZERRA LOPES (NEZINHO DA CIPAN)
+146,23817,MARIA AUXILIADORA
+147,23817,Maurício de Nassau
+148,23817,Morro do Bom Jesus
+149,23817,NINA LIBERATO
+150,23817,NOSSA SENHORA DAS GRAÇAS
+151,23817,Nossa Senhora das Dores
+152,23817,Nova Caruaru
+153,23817,PINHEIRÓPOLIS
+154,23817,Petrópolis
+155,23817,Presidente Kennedy
+156,23817,Rendeiras
+157,23817,Riachão
+158,23817,SERRAS DO VALE
+159,23817,SEVERINO AFONSO
+160,23817,Salgado
+161,23817,Santa Rosa
+162,23817,SÃO JOSÉ
+163,23817,SÃO JOÃO DA ESCÓCIA
+164,23817,São Francisco
+165,23817,Universitário
+166,23817,Vassoural
+167,23817,Verde
+168,23833,Baixa Verde
+169,23833,Buranhem
+170,23833,Canaã
+171,23833,Centro
+172,23833,Dezoito
+173,23833,Guabiraba
+174,23833,Jardim Diamante
+175,23833,Monte Alegre
+176,23833,Niterói
+177,23833,Nova Catende
+178,23833,Pavão
+179,23833,Pedras
+180,23876,Castelo Branco
+181,23876,Centro
+182,23876,Cruzeiro
+183,23876,Guindaste
+184,23876,Maria Doralice Mascena
+185,23876,Matadouro
+186,23876,Santa Luzia
+187,23930,Ronaldo Amaral
+188,24031,Alvorada
+189,24031,Atalaia
+190,24031,Bela Vista
+191,24031,Boa Esperança
+192,24031,Centro
+193,24031,Cidade Centro
+194,24031,Jaguaribe
+195,24031,Mangueira
+196,24031,Maracujá
+197,24031,Nova Cidade
+198,24031,Nova Descoberta
+199,24031,Nova Escada
+200,24031,Povo Deus
+201,24031,Riacho do Navio
+202,24031,Santo Antônio
+203,24031,São Francisco
+204,24031,São Sebastião
+205,24031,Viradouro
+206,24198,Aloísio Souto Pinto
+207,24198,Boa Vista
+208,24198,Dom Hélder Câmara
+209,24198,Dom Thiago Postma
+210,24198,Francisco Simão dos Santos Figueira
+211,24198,Heliópolis
+212,24198,Jose Maria Dourado
+213,24198,Magano
+214,24198,Manoel Chéu
+215,24198,Novo Heliópolis
+216,24198,Santo Antônio
+217,24198,Severiano Moraes Filho
+218,24198,São José
+219,24210,Centro
+220,24210,Cohab
+221,24210,Madre de Deus
+222,24210,Nova Glória
+223,24210,Santa Rita
+224,24252,Centro
+225,24252,Deputado Ulisses Guimarães
+226,24252,Jardim Novo Granito
+227,24350,Agamenon
+228,24350,Alto do Céu
+229,24350,Ana de Albuquerque
+230,24350,Bela Vista
+231,24350,Boa Sorte
+232,24350,Bonfim
+233,24350,Campina de Feira
+234,24350,Centro
+235,24350,Cruz de Rebouças
+236,24350,Encanto Igarassu
+237,24350,Inhamã
+238,24350,Jabacó
+239,24350,Monjope
+240,24350,Pancó
+241,24350,Posto de Monta
+242,24350,Rubina
+243,24350,Santa Luzia
+244,24350,Santa Rita
+245,24350,Santo Antonio
+246,24350,Saramandaia
+247,24350,Sítio dos Marcos
+248,24350,Tabatinga
+249,24350,Triunfo
+250,24350,Umbura
+251,24350,Vila Rural
+252,24430,Alto Da Palmeira
+253,24430,Alto da Caixa D'Água
+254,24430,Antônio Dourado Neto
+255,24430,Canoas
+256,24430,Centro
+257,24430,Centro
+258,24430,Cupe
+259,24430,Enseada De Serrambi
+260,24430,Enseadinha
+261,24430,Maracaípe
+262,24430,Merepe
+263,24430,Muro Alto
+264,24430,Nova Camela
+265,24430,Ponta De Serrambi
+266,24430,Rurópolis Centro
+267,24430,Salinas
+268,24430,Santo Antônio
+269,24430,Santo Cristo
+270,24430,São Miguel
+271,24430,Toquinho
+272,24430,Vila Do Porto
+273,24457,Vila Poço Verde
+274,26336,Cajueiro
+275,26336,Cidade Criança
+276,26336,Cidade Industrial
+277,26336,Conceição
+278,26336,Espinheiro
+279,26336,Grêmio
+280,26336,Mangabeira
+281,26336,Veloz
+282,26336,Várzea
+283,24570,Barra de Jangada
+284,24570,Bulhões
+285,24570,Cajueiro Seco
+286,24570,Candeias
+287,24570,Cavaleiro
+288,24570,Centro
+289,24570,Comportas
+290,24570,Curado
+291,24570,Dois Carneiros
+292,24570,Engenho Velho
+293,24570,Floriano
+294,24570,Guararapes
+295,24570,Jardim Jordão
+296,24570,Manassu
+297,24570,Marcos Freire
+298,24570,Muribeca
+299,24570,Muribequinha
+300,24570,Piedade
+301,24570,Prazeres
+302,24570,Santana
+303,24570,Santo Aleixo
+304,24570,Socorro
+305,24570,Sucupira
+306,24570,Vargem Fria
+307,24570,Vila Rica
+308,24570,Vista Alegre
+309,24570,Zumbi do Pacheco
+310,24597,Augusto Melo
+311,24597,Boa Vista
+312,24597,Bom Jesus
+313,24597,Branco
+314,24597,Centro
+315,24597,Petrolino Malaco de Souza (Seu Teté)
+316,24619,Asa Branca
+317,24619,Boa Vista
+318,24619,Bultrins
+319,24619,Centro
+320,24619,Frei Damião
+321,24619,Manoel Vidal
+322,24619,Monsenhor Jonas
+323,24619,Mãe Rainha
+324,24619,Neco de Léo
+325,24619,Oswaldo Lima
+326,24619,Raul Soares
+327,24619,São José
+328,24775,Centro
+329,24775,Dt Severino Pinheiro
+330,24775,José Fernades Salsa
+331,24775,João Ernesto
+332,24775,Juá
+333,24775,Otácio de Lemos
+334,24775,Pirauira
+335,24775,Ponto Certo
+336,24775,Redentor
+337,24775,Santa Luzia
+338,24775,Santa Teresinha
+339,24775,Santo Antônio
+340,24775,São Sebastião
+341,24910,Aguazinha
+342,24910,Alto da Bondade
+343,24910,Alto da Conquista
+344,24910,Alto da Nação
+345,24910,Alto do Sol Nascente
+346,24910,Amaro Branco
+347,24910,Amparo
+348,24910,Bairro Novo
+349,24910,Bonsucesso
+350,24910,Bultrins
+351,24910,Caixa D'Água
+352,24910,Carmo
+353,24910,Casa Caiada
+354,24910,Fragoso
+355,24910,Guadalupe
+356,24910,Jardim Atlântico
+357,24910,Jardim Brasil
+358,24910,Monte
+359,24910,Ouro Preto
+360,24910,Passarinho
+361,24910,Peixinhos
+362,24910,Rio Doce
+363,24910,Salgadinho
+364,24910,Santa Teresa
+365,24910,Sapucaia
+366,24910,São Benedito
+367,24910,Sítio Novo
+368,24910,Tabajara
+369,24910,Varadouro
+370,24910,Vila Popular
+371,24910,Águas Compridas
+372,25097,Alto Bela Vista
+373,25097,Alto Caturité
+374,25097,Alto Santa Inês
+375,25097,Alto da Esperança
+376,25097,Centro
+377,25097,Novo Horizonte
+378,25097,Salgado
+379,25097,São Lourenço
+380,25135,Arthur Lundgren I
+381,25135,Arthur Lundgren II
+382,25135,Centro
+383,25135,Engenho Maranguape
+384,25135,Fragoso
+385,25135,Jaguarana
+386,25135,Jaguaribe
+387,25135,Janga
+388,25135,Jardim Maranguape
+389,25135,Jardim Paulista
+390,25135,Jardim Velho
+391,25135,Maranguape I
+392,25135,Maranguape II
+393,25135,Maria Farinha
+394,25135,Mirueira
+395,25135,Nobre
+396,25135,Nossa Senhora da Conceição
+397,25135,Nossa Senhora do Ó
+398,25135,Paratibe
+399,25135,Parque do Janga
+400,25135,Pau Amarelo
+401,25135,Poty
+402,25135,Tabajara
+403,25135,Torres Galvão
+404,25178,Baixa Grande
+405,25178,Caixa D'Água
+406,25178,Centenário
+407,25178,Central
+408,25178,Centro
+409,25178,Dr. Ivo Isidoro De Assis
+410,25178,José Rocha
+411,25178,Moacir Brito De Freitas
+412,25178,Pedra Redonda
+413,25178,Pitanga
+414,25178,Prado
+415,25178,Salgado
+416,25178,Santo Antônio
+417,25178,Serrinha
+418,25178,São Sebastião
+419,25178,Vila Anápolis
+420,25178,Xucurus
+421,25216,Alto Do Cocar
+422,25216,Antônio Cassimiro
+423,25216,Areia Branca
+424,25216,Atrás da Banca
+425,25216,Boa Esperança
+426,25216,Caminho Do Sol
+427,25216,Carneiro
+428,25216,Centro
+429,25216,Cidade Universitária
+430,25216,Cohab-Massangano
+431,25216,Cohab-São Francisco
+432,25216,Cosme e Damião
+433,25216,Distrito Industrial
+434,25216,Dom Avelar
+435,25216,Dom Malan
+436,25216,Gercino Coelho
+437,25216,Jardim Amazonas
+438,25216,Jardim Maravilha
+439,25216,Jardim São Paulo
+440,25216,Jatobá
+441,25216,José e Maria
+442,25216,João de Deus
+443,25216,Km 2
+444,25216,Loteamento Recife
+445,25216,Maria Auxiliadora
+446,25216,Ouro Preto
+447,25216,Palhinhas
+448,25216,Pedra do Bode
+449,25216,Pedro Raimundo
+450,25216,Serrote do Urubu
+451,25216,São Gonçalo
+452,25216,São José
+453,25216,Topázio
+454,25216,Vila Eduardo
+455,25216,Vila Mocó
+456,25216,Zona Militar
+457,25291,Deputado Edgar Lins Cavalcante
+458,25291,Edson Lira Paula
+459,25313,Aflitos
+460,25313,Afogados
+461,25313,Alto José Bonifácio
+462,25313,Alto José do Pinho
+463,25313,Alto Santa Terezinha
+464,25313,Alto do Mandu
+465,25313,Apipucos
+466,25313,Areias
+467,25313,Arruda
+468,25313,Barro
+469,25313,Beberibe
+470,25313,Boa Viagem
+471,25313,Boa Vista
+472,25313,Bomba do Hemetério
+473,25313,Bongi
+474,25313,Brasília Teimosa
+475,25313,Brejo da Guabiraba
+476,25313,Brejo de Beberibe
+477,25313,Cabanga
+478,25313,Cajueiro
+479,25313,Campina do Barreto
+480,25313,Campo Grande
+481,25313,Casa Amarela
+482,25313,Casa Forte
+483,25313,Caxangá
+484,25313,Caçote
+485,25313,Cidade Universitária
+486,25313,Coelhos
+487,25313,Cohab
+488,25313,Coqueiral
+489,25313,Cordeiro
+490,25313,Curado
+491,25313,Córrego do Jenipapo
+492,25313,Derby
+493,25313,Dois Irmãos
+494,25313,Dois Unidos
+495,25313,Encruzilhada
+496,25313,Engenho do Meio
+497,25313,Espinheiro
+498,25313,Estância
+499,25313,Fundão
+500,25313,Graças
+501,25313,Guabiraba
+502,25313,Hipódromo
+503,25313,Ibura
+504,25313,Ilha Joana Bezerra
+505,25313,Ilha do Leite
+506,25313,Ilha do Retiro
+507,25313,Imbiribeira
+508,25313,Ipsep
+509,25313,Iputinga
+510,25313,Jaqueira
+511,25313,Jardim São Paulo
+512,25313,Jiquiá
+513,25313,Jordão
+514,25313,Linha do Tiro
+515,25313,Macaxeira
+516,25313,Madalena
+517,25313,Mangabeira
+518,25313,Mangueira
+519,25313,Monteiro
+520,25313,Morro da Conceição
+521,25313,Mustardinha
+522,25313,Nova Descoberta
+523,25313,Paissandu
+524,25313,Parnamirim
+525,25313,Passarinho
+526,25313,Pau Ferro
+527,25313,Peixinhos
+528,25313,Pina
+529,25313,Ponto de Parada
+530,25313,Porto da Madeira
+531,25313,Poço
+532,25313,Prado
+533,25313,Recife
+534,25313,Rosarinho
+535,25313,San Martin
+536,25313,Sancho
+537,25313,Santana
+538,25313,Santo Amaro
+539,25313,Santo Antônio
+540,25313,Soledade
+541,25313,São José
+542,25313,Sítio dos Pintos - São Brás
+543,25313,Tamarineira
+544,25313,Tejipió
+545,25313,Torre
+546,25313,Torreão
+547,25313,Torrões
+548,25313,Totó
+549,25313,Vasco da Gama
+550,25313,Várzea
+551,25313,Zumbí
+552,25313,Água Fria
+553,25496,Bairro Da Moda
+554,25496,Bairro Novo
+555,25496,Bela Vista
+556,25496,Centro
+557,25496,Cruz Alta
+558,25496,Dona Dom
+559,25496,Gaudêncio Gomes Feitosa
+560,25496,Malaquias Cardoso
+561,25496,Malhada do Meio
+562,25496,Manhosa
+563,25496,Nova Santa Cruz
+564,25496,Oscarzão
+565,25496,Palestina
+566,25496,Santo Agostinho
+567,25496,São Cristóvão
+568,25739,Aldeia
+569,25739,Bela Vista
+570,25739,Caiará
+571,25739,Capibaribe
+572,25739,Centro
+573,25739,Chã de Tábua
+574,25739,Ercina Lapenda
+575,25739,Muribara
+576,25739,Nova Tiuma
+577,25739,Parque Capibaribe
+578,25739,Penedo
+579,25739,Pixete
+580,25739,São João e São Paulo
+581,25739,Tiuma
+582,25739,Vila do Reinado
+583,25739,Várzea Fria
+584,25771,AABB
+585,25771,Bom Jesus
+586,25771,Cachoeira
+587,25771,José Alves Carvalho Nunes
+588,25771,José Rufino Alves
+589,25771,José Tomé de Souza
+590,25771,Nossa Senhora da Conceição
+591,25771,Nossa Senhora da Penha
+592,25771,Nossa Senhora de Fátima
+593,25771,São Cristóvão
+594,25771,São Sebastião
+595,25771,Tancredo Neves
+596,25771,Vanete Almeida
+597,25771,Vila Bela
+598,25895,Bela Vista
+599,25895,Cabaceira
+600,25895,Centro
+601,25895,Chã do Marinheiro
+602,25895,Coqueiro
+603,25895,Diogo
+604,25895,Lagoa Nova
+605,25895,Santo Antônio
+606,25895,São José
+607,25895,São Sebastião
+608,26050,Araruna
+609,26050,Barro
+610,26050,Centro
+611,26050,Cezar Augusto
+612,26050,Cohab
+613,26050,Coronel Maranhão
+614,26050,Cruzeiro
+615,26050,Independência
+616,26050,Jardim Guarani
+617,26050,Mocosinho
+618,26050,Mocós
+619,26050,Nova Vida
+620,26050,Santa Ana
+621,26050,Santa Terezinha
+622,26050,Santiago
+623,26050,Sapucaia
+624,26050,Timbaubinha
+625,26050,Três Cocos
+626,26239,Centro
+627,26239,Danilo Andrade
+628,26239,Dr. Ernildo Gonçalves
+629,26239,João Santo
+630,26239,Leocadio Ferreira de Araujo (Bairro Goiabeira)
+631,26239,Luiz Soares
+632,26239,Manoel de Souza Leal
+633,26239,Prefeito José Ozair Cavalcanti (Bairro Rua Nova)
+634,26239,Prefeito Pedro Barbosa da Silva (Bairro São José)
+635,26239,Severino José de Menezes (Bairro Gravatazinho 2)
+636,26239,Tenente Esequias Pierre de Lima (Bairro do Cruzeiro)
+637,26271,Alto José Leal
+638,26271,Bela Vista
+639,26271,Caiçara
+640,26271,Cajueiro
+641,26271,Cajá
+642,26271,Campinas
+643,26271,Centro
+644,26271,Conceição
+645,26271,Figueiras
+646,26271,Galiléia
+647,26271,Jardim Ipiranga
+648,26271,Jardim São Pedro
+649,26271,Livramento
+650,26271,Lídia Queiroz
+651,26271,Mangueira
+652,26271,Maranhão
+653,26271,Matriz
+654,26271,Natuba
+655,26271,Nossa Senhora do Amparo
+656,26271,Redenção
+657,26271,Santana
+658,26271,São Vicente De Paulo
+659,26271,Água Branca

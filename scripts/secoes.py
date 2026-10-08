@@ -1,8 +1,8 @@
 """Votos por seção eleitoral de um estado, agrupados por local de votação e por bairro do IBGE (uso: python scripts/secoes.py RN DF).
 
 Entradas
-  dados/tse/csv/votacao_secao_<ano>_<UF>.csv             votos por candidato e seção (TSE)
-  dados/tse/csv/votacao_secao_2022_presidente.csv   Presidente de 2022 por seção (arquivo nacional filtrado pelo scripts/coletar_tse.py)
+  dados/tse/brutos/votacao_secao_<ano>_<UF>.zip          votos por candidato e seção (TSE), lidos direto do zip
+  dados/tse/csv/votacao_secao_2022_presidente_<UF>.csv   Presidente de 2022 por seção (arquivo nacional filtrado pelo scripts/coletar_tse.py)
   dados/bu/bweb_1t_<UF>_*.zip                            boletins de urna de 2026 (Presidente por seção)
   dados/tse/csv/eleitorado_local_votacao_<ano>_<UF>.csv  locais de votação: bairro, coordenadas e eleitores por seção (TSE)
   dados/malha_ibge/BR_bairros_CD2022.shp               bairros do Censo 2022 (IBGE), que só existem para alguns municípios
@@ -12,7 +12,7 @@ Saídas
   dados/uf/<UF>/contexto_local.csv   válidos, brancos, nulos e comparecimento de cada disputa em cada local
   dados/uf/<UF>/votos_local.csv      votos de cada candidatura em cada local
   dados/uf/<UF>/bairros.csv          bairros do IBGE usados (identificador, município, nome)
-  docs/dados/bairros_rn.geojson polígonos simplificados dos bairros
+  docs/dados/bairros/<uf>.geojson polígonos simplificados dos bairros
 
 Como um local entra no mapa
   1. o local de votação tem latitude e longitude no arquivo do TSE (97,5% válidas); os que não têm recebem a média dos locais do mesmo bairro
@@ -46,6 +46,7 @@ BBOX = (-90.0, 90.0, -180.0, 180.0)  # lat mínima, lat máxima, lon mínima, lo
 DISP = {k: v[0] for k, v in CARGOS.items()}
 DISP.update({(2022, 'Presidente', '1'): 'pres22t1', (2022, 'Presidente', '2'): 'pres22t2', (2026, 'Presidente', '1'): 'pres26t1'})
 DOIS_VOTOS = {'sen26': 'gov26', 'sen22': 'gov22'}  # no Senado de 2026 o eleitor dá dois votos: o comparecimento vem do governador
+CENTRO = {}  # centroide de cada município (cd_tse), para os locais sem coordenada em um município sem nenhuma (definido por processar)
 DIST_MAX = 2000  # metros para atribuir um local fora de todos os bairros ao bairro mais próximo do mesmo município
 COLS = ['NR_TURNO', 'CD_MUNICIPIO', 'NR_ZONA', 'NR_SECAO', 'DS_CARGO', 'NR_VOTAVEL', 'SQ_CANDIDATO', 'QT_VOTOS']
 
@@ -70,22 +71,58 @@ def presidente_2026():
     return saida
 
 
-def votos_secao(ano):
-    s = pd.read_csv(TSE / f'votacao_secao_{ano}_{UF}.csv', sep=';', encoding='latin-1', dtype=str, usecols=COLS)
-    if ano == 2022:
-        pres = pd.read_csv(TSE / 'votacao_secao_2022_presidente.csv', sep=';', encoding='latin-1', dtype=str, usecols=COLS + ['SG_UF'])
-        s = pd.concat([s, pres[pres.SG_UF == UF][COLS]], ignore_index=True)
-    if ano == 2026:
-        s = pd.concat([s, presidente_2026()], ignore_index=True)
-    s['cargo'] = s.DS_CARGO.str.title()
-    s['disp'] = [DISP.get((ano, c, t)) for c, t in zip(s.cargo, s.NR_TURNO)]
-    s = s[s.disp.notna()].copy()
+def fonte_secao(ano):
+    """Arquivo de votos por seção do estado: o CSV extraído ou, se não houver, o zip baixado (lido direto, sem extrair)."""
+    csv = TSE / f'votacao_secao_{ano}_{UF}.csv'
+    if csv.exists():
+        return csv
+    z = D / 'tse' / 'brutos' / f'votacao_secao_{ano}_{UF}.zip'
+    return z if z.exists() else None
+
+
+def blocos_secao(ano, cols):
+    arq = fonte_secao(ano)
+    if arq.suffix == '.zip':
+        z = zipfile.ZipFile(arq)
+        with z.open(f'votacao_secao_{ano}_{UF}.csv') as f:
+            yield from pd.read_csv(f, sep=';', encoding='latin-1', dtype=str, usecols=cols, chunksize=500000)
+    else:
+        yield from pd.read_csv(arq, sep=';', encoding='latin-1', dtype=str, usecols=cols, chunksize=500000)
+
+
+CHAVE_AGG = ['disp', 'cargo', 'tipo', 'SQ_CANDIDATO', 'NR_VOTAVEL', 'CD_MUNICIPIO', 'NR_ZONA', 'NR_SECAO']
+
+
+def agregar(ch, ano, sq_rel):
+    """Soma as linhas de um bloco por seção, disputa e tipo de voto. Só as candidaturas que entram no site mantêm o SQ (os demais candidatos só
+    importam para o total de válidos do local), o que reduz muito o tamanho em estados grandes."""
+    ch = ch.assign(cargo=ch.DS_CARGO.str.title())
+    ch['disp'] = [DISP.get((ano, c, t)) for c, t in zip(ch.cargo, ch.NR_TURNO)]
+    ch = ch[ch.disp.notna()].copy()
+    if not len(ch):
+        return ch
     for c in ('CD_MUNICIPIO', 'NR_ZONA', 'NR_SECAO', 'QT_VOTOS'):
-        s[c] = pd.to_numeric(s[c]).astype('int64')
+        ch[c] = pd.to_numeric(ch[c]).astype('int64')
     # branco e nulo têm SQ -1 (números 95 e 96); o voto de legenda tem SQ -3; o resto é candidato
-    s['tipo'] = np.select([(s.SQ_CANDIDATO == '-1') & (s.NR_VOTAVEL == '95'), (s.SQ_CANDIDATO == '-1') & (s.NR_VOTAVEL == '96'), s.SQ_CANDIDATO == '-3'],
-                          ['branco', 'nulo', 'legenda'], default='candidato')
-    return s
+    ch['tipo'] = np.select([(ch.SQ_CANDIDATO == '-1') & (ch.NR_VOTAVEL == '95'), (ch.SQ_CANDIDATO == '-1') & (ch.NR_VOTAVEL == '96'), ch.SQ_CANDIDATO == '-3'],
+                           ['branco', 'nulo', 'legenda'], default='candidato')
+    ch['SQ_CANDIDATO'] = ch.SQ_CANDIDATO.where((ch.tipo == 'candidato') & ch.SQ_CANDIDATO.isin(sq_rel), '')
+    ch['NR_VOTAVEL'] = ch.NR_VOTAVEL.where((ch.tipo == 'candidato') & (ch.cargo == 'Presidente'), '')
+    return ch.groupby(CHAVE_AGG, as_index=False).QT_VOTOS.sum()
+
+
+def votos_secao(ano, sq_rel):
+    partes = []
+    for ch in blocos_secao(ano, COLS):
+        if ano in (2022, 2026):  # o Presidente vem de outra fonte (arquivo nacional em 2022, boletins de urna em 2026)
+            ch = ch[ch.DS_CARGO.str.upper() != 'PRESIDENTE']
+        partes.append(agregar(ch, ano, sq_rel))
+    if ano == 2022:
+        for ch in pd.read_csv(TSE / f'votacao_secao_2022_presidente_{UF}.csv', sep=';', encoding='latin-1', dtype=str, usecols=COLS, chunksize=500000):
+            partes.append(agregar(ch, ano, sq_rel))
+    if ano == 2026:
+        partes.append(agregar(presidente_2026(), ano, sq_rel))
+    return pd.concat(partes, ignore_index=True).groupby(CHAVE_AGG, as_index=False).QT_VOTOS.sum()
 
 
 def locais_do_ano(ano, bairros):
@@ -109,6 +146,11 @@ def locais_do_ano(ano, bairros):
             falta = g.lat.isna() & med.lat.notna()
             g.loc[falta, ['lat', 'lon']] = med.loc[falta, ['lat', 'lon']]
             g.loc[falta, 'aprox'] = 1
+    falta = g.lat.isna() & g.CD_MUNICIPIO.isin(CENTRO)  # município sem nenhuma coordenada: ponto representativo do município (para não perder os votos)
+    if falta.any():
+        g.loc[falta, 'lat'] = g.loc[falta, 'CD_MUNICIPIO'].map(lambda c: CENTRO[c][0])
+        g.loc[falta, 'lon'] = g.loc[falta, 'CD_MUNICIPIO'].map(lambda c: CENTRO[c][1])
+        g.loc[falta, 'aprox'] = 1
     g = g.dropna(subset=['lat', 'lon']).sort_values(chave).reset_index(drop=True)
     g.insert(0, 'ano', ano)
     g['lid'] = np.arange(len(g))
@@ -142,6 +184,8 @@ def processar(uf):
     ibge_para_tse = dict(zip(corr.CD_IBGE, corr.cd_tse))
     cen = pd.read_csv(D / 'centroides_ibge.csv', dtype={'CD_MUN': str})
     cen = cen[cen.CD_MUN.isin(corr[corr.SG_UF == uf].CD_IBGE)]
+    CENTRO.clear()
+    CENTRO.update({ibge_para_tse[c]: (la, lo) for c, la, lo in zip(cen.CD_MUN, cen.lat, cen.lon)})
     BBOX = (cen.lat.min() - 0.8, cen.lat.max() + 0.8, cen.lon.min() - 0.8, cen.lon.max() + 0.8)  # caixa do estado, para descartar coordenadas erradas
     # ---- bairros do IBGE no estado
     bg = gpd.read_file(D / 'malha_ibge' / 'BR_bairros_CD2022.shp')
@@ -158,11 +202,11 @@ def processar(uf):
 
     locais, contexto, votos = [], [], []
     for ano in ANOS:
-        if not (TSE / f'votacao_secao_{ano}_{UF}.csv').exists():  # estado sem esse tipo de eleição (o DF não tem eleição municipal)
+        if fonte_secao(ano) is None:  # estado sem esse tipo de eleição (o DF não tem eleição municipal)
             continue
         g, secoes = locais_do_ano(ano, bg)
         locais.append(g)
-        s = votos_secao(ano)
+        s = votos_secao(ano, set(por_sq.sq))
         chave = ['CD_MUNICIPIO', 'NR_ZONA', 'NR_SECAO']
         s = s.merge(secoes, on=chave, how='left')
         sem_local = s.NR_LOCAL_VOTACAO.isna()
