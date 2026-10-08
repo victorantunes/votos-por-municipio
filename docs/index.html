@@ -399,7 +399,7 @@
       <p>Também é possível colorir pela abstenção, pelos brancos e pelos nulos de cada disputa, e pela variação deles entre A e B (em pontos percentuais). Essas medidas dizem respeito ao eleitorado do município e não ao candidato, então aparecem em todos os municípios da disputa, mesmo onde o candidato não concorreu.</p>
       <h3>Percentis e as seis cores</h3>
       <p>O percentil mostra a posição de um município em relação aos demais. Os municípios com dados são colocados em ordem, do menor valor ao maior. O percentil 15 (P15) é o valor abaixo do qual ficam 15% dos municípios, o P50 é a mediana e o P85 é o valor acima do qual ficam os 15% maiores. Os cinco cortes dividem os municípios em seis classes, com 15%, 20%, 15%, 15%, 20% e 15% dos municípios, do menor ao maior valor. Os limites aparecem na legenda e mudam conforme a medida escolhida.</p>
-      <p>Nas comparações da mesma pessoa ou do mesmo partido ao longo do tempo, as classes vão de "Queda Severa" a "Destaque Positivo" e usam vermelho e verde. Nas demais medidas as classes vão de "Menores 15%" a "Maiores 15%" e usam uma só cor, mais escura quanto maior o valor. Municípios sem dados ficam em cinza. Quando há poucos municípios com dados, como no caso de um candidato a vereador, não há percentis e os municípios com dados aparecem em vermelho.</p>
+      <p>Nas comparações da mesma pessoa ou do mesmo partido ao longo do tempo, as classes vão de "Queda Severa" a "Destaque Positivo" e usam vermelho e verde. Nas demais medidas as classes vão de "Menores 15%" a "Maiores 15%", com uma cor para cada tipo de medida e mais escura quanto maior o valor: roxo para os votos e a % dos votos do candidato, azul para a abstenção, os brancos e os nulos, e marrom a verde-azulado para as diferenças que não são de desempenho (por exemplo, a variação da abstenção). Municípios sem dados ficam em cinza. Quando há poucos municípios com dados, como no caso de um candidato a vereador, não há percentis e os municípios com dados aparecem em vermelho.</p>
       <p>As classes são relativas: elas dizem se o município está acima ou abaixo dos outros, e não se o valor é positivo ou negativo.</p>
 
       <div class="so-br">
@@ -458,12 +458,14 @@ const ok = Number.isFinite;
 /* ------------------------------------------------ paletas e classes */
 const PALS = {
   perf: ['#99000d', '#d92523', '#fe9929', '#99d8c9', '#41ae76', '#005a32'],
-  lvl:  ['#dbe8f5', '#b3d0ea', '#84b3dc', '#5591c8', '#2f69a8', '#103f77'],
-  neu:  ['#dbe8f5', '#b3d0ea', '#84b3dc', '#5591c8', '#2f69a8', '#103f77']
+  lvl:  ['#efe9f6', '#d6c6ea', '#b79ddb', '#9570c6', '#6f45a8', '#472178'],
+  part: ['#dbe8f5', '#b3d0ea', '#84b3dc', '#5591c8', '#2f69a8', '#103f77'],
+  neu:  ['#8c510a', '#d8b365', '#f1e2b8', '#c7eae5', '#5ab4ac', '#01665e']
 };
 const NOMES = {
   perf: ['Queda Severa', 'Queda Forte', 'Abaixo da Mediana', 'Acima da Mediana', 'Retenção Forte', 'Destaque Positivo'],
   lvl:  ['Menores 15%', 'P15 a P35', 'P35 a P50', 'P50 a P65', 'P65 a P85', 'Maiores 15%'],
+  part: ['Menores 15%', 'P15 a P35', 'P35 a P50', 'P50 a P65', 'P65 a P85', 'Maiores 15%'],
   neu:  ['Menores 15%', 'P15 a P35', 'P35 a P50', 'P50 a P65', 'P65 a P85', 'Maiores 15%']
 };
 const FAIXAS_P = ['Pior 15%', 'P15 a P35', 'P35 a P50', 'P50 a P65', 'P65 a P85', 'Melhor 15%'];
@@ -507,7 +509,7 @@ function preparar(js) {
 }
 function carregarEscopo(id) {
   if (cacheEsc[id]) return Promise.resolve(cacheEsc[id]);
-  return fetch('dados/escopo_' + id + '.json?v=20261007214606').then(r => { if (!r.ok) throw new Error('escopo'); return r.json(); }).then(js => (cacheEsc[id] = preparar(js)));
+  return fetch('dados/escopo_' + id + '.json?v=20261007214821').then(r => { if (!r.ok) throw new Error('escopo'); return r.json(); }).then(js => (cacheEsc[id] = preparar(js)));
 }
 function vv(c) {
   if (c.vv) return c;
@@ -525,15 +527,16 @@ const noUF = i => !S.uf || M[i].u === S.uf;
 const noBusca = i => !S.termo || M[i].n.toLowerCase().includes(S.termo);
 
 /* ------------------------------------------------ medidas e classes */
+const nivel = m => m.t === 'lvl' || m.t === 'part';
 const MFMT = {
-  pp: (m, v) => (m.t === 'lvl' ? v.toLocaleString('pt-BR', {minimumFractionDigits: 2, maximumFractionDigits: 2}) : f1(v, 2)) + ' pp',
-  '%': (m, v) => m.t === 'lvl' ? fp(v) : f1(v, 1) + '%',
-  v: (m, v) => m.t === 'lvl' ? fmt(Math.round(v)) : f1(v, 0)
+  pp: (m, v) => (nivel(m) ? v.toLocaleString('pt-BR', {minimumFractionDigits: 2, maximumFractionDigits: 2}) : f1(v, 2)) + ' pp',
+  '%': (m, v) => nivel(m) ? fp(v) : f1(v, 1) + '%',
+  v: (m, v) => nivel(m) ? fmt(Math.round(v)) : f1(v, 0)
 };
 function listaMetricas() {
   const A = cA(), B = cB(), out = [], mesmaPessoa = B && A.p === B.p, mesmaDisp = B && A.d === B.d;
   const part = (X, tag) => [
-    {k: tag + 'pa', r: 'Abstenção', t: 'lvl', u: '%', f: i => X.d.pa[i]}, {k: tag + 'pb', r: 'Brancos', t: 'lvl', u: '%', f: i => X.d.pb[i]}, {k: tag + 'pn', r: 'Nulos', t: 'lvl', u: '%', f: i => X.d.pn[i]}];
+    {k: tag + 'pa', r: 'Abstenção', t: 'part', u: '%', f: i => X.d.pa[i]}, {k: tag + 'pb', r: 'Brancos', t: 'part', u: '%', f: i => X.d.pb[i]}, {k: tag + 'pn', r: 'Nulos', t: 'part', u: '%', f: i => X.d.pn[i]}];
   const cand = (X, tag) => [{k: tag + 'pv', r: '% dos votos válidos', t: 'lvl', u: '%', f: i => X.pv[i]}, {k: tag + 'v', r: 'Votos', t: 'lvl', u: 'v', f: i => X.vv[i]}]
     .concat(X.v.length > 1 ? [{k: tag + 'ps', r: '% do total de votos do candidato', t: 'lvl', u: '%', f: i => X.ps[i]}] : []);
   if (B) {
@@ -549,6 +552,9 @@ function listaMetricas() {
   if (B) out.push({g: 'B: ' + rotC(B), m: cand(B, 'B').concat(mesmaDisp ? [] : part(B, 'B'))});
   return out;
 }
+const poucos = () => S.B !== null && universo().length < 8;
+const metPadrao = () => S.B === null ? 'Apv' : poucos() ? 'Bpv' : 'pp';
+const COMPARACAO = ['pp', 'sd', 'rt', 'da', 'db', 'dn'];
 const metAtual = () => { for (const g of METS) for (const m of g.m) if (m.k === S.metrica) return m; return METS[0].m[0]; };
 function quantil(s, q) { const pos = (s.length - 1) * q / 100, lo = Math.floor(pos), hi = Math.ceil(pos); return s[lo] + (s[hi] - s[lo]) * (pos - lo); }
 function calcClasses() {
@@ -629,7 +635,12 @@ function atualizarTopo() {
   }
   $('stats').innerHTML = h;
   const onde = ids.length === N ? 'em todos os ' + fmt(N) + ' municípios' : 'em ' + fmt(ids.length) + ' município' + (ids.length === 1 ? '' : 's') + (S.escopo === 'rn' ? ' em que houve candidatura' : '');
-  $('selinfo').innerHTML = B ? `Comparando <b>${esc(rotC(A))}</b> (A) com <b>${esc(rotC(B))}</b> (B), ${onde}.` : `Mostrando <b>${esc(rotC(A))}</b>, ${onde}.`;
+  let extra = '';
+  if (B && ids.length < Math.max(A.v.length, B.v.length)) {
+    const maior = B.v.length >= A.v.length ? B : A, tag = maior === B ? 'B' : 'A';
+    extra = ` ${esc(rotC(maior))} (${tag}) teve ao todo ${fmt(maior.tot)} votos em ${fmt(maior.nm)} municípios. A comparação só existe onde as duas candidaturas existem; para ver todos os municípios de ${tag} no mapa, escolha "${tag}: % dos votos válidos" em Colorir por.`;
+  }
+  $('selinfo').innerHTML = (B ? `Comparando <b>${esc(rotC(A))}</b> (A) com <b>${esc(rotC(B))}</b> (B), ${onde}.` : `Mostrando <b>${esc(rotC(A))}</b>, ${onde}.`) + extra;
 }
 
 /* ------------------------------------------------ dispersão (usada em duas vistas) */
@@ -814,7 +825,7 @@ function carregar(src, css) {
 function ajustarMapa() { const w = $('mapwrap'); w.style.height = Math.max(460, Math.min(900, Math.round(window.innerHeight * 0.78))) + 'px'; if (map) map.invalidateSize(); }
 const estiloPoli = i => { const on = noUF(i), pin = S.pins.has(i), sem = CL.cls[i] < 0; return {fillColor: cor(i), fillOpacity: sem ? (on ? 0.7 : 0.08) : on || pin ? 0.93 : 0.08, color: pin ? '#000' : '#ffffff', weight: pin ? 2.6 : on ? 0.3 : 0, opacity: pin ? 1 : 0.9}; };
 function clicarMapa(i) { S.pins.has(i) ? S.pins.delete(i) : S.pins.add(i); contador(); $('info').innerHTML = detalhe(i); pintarMapa(); }
-const baixarJSON = u => malhas[u] || (malhas[u] = fetch(u + '?v=20261007214606').then(r => { if (!r.ok) throw new Error(u); return r.json(); }).catch(e => { delete malhas[u]; throw e; }));
+const baixarJSON = u => malhas[u] || (malhas[u] = fetch(u + '?v=20261007214821').then(r => { if (!r.ok) throw new Error(u); return r.json(); }).catch(e => { delete malhas[u]; throw e; }));
 function construirPoli() {
   const arquivos = S.escopo === 'rn' ? ['dados/municipios_rn.geojson', 'dados/uf_rn.geojson'] : ['dados/municipios.geojson', 'dados/ufs.geojson'], escopo = S.escopo;
   return Promise.all(arquivos.map(baixarJSON)).then(([gm, gu]) => {
@@ -962,7 +973,7 @@ function popularAB() {
 }
 function popularMetricas() {
   METS = listaMetricas();
-  if (!METS.some(g => g.m.some(m => m.k === S.metrica))) S.metrica = S.B !== null ? 'pp' : 'Apv';
+  if (!METS.some(g => g.m.some(m => m.k === S.metrica))) S.metrica = metPadrao();
   $('metrica').innerHTML = METS.map(g => `<optgroup label="${esc(g.g)}">` + g.m.map(m => `<option value="${m.k}">${esc(m.r)}</option>`).join('') + '</optgroup>').join('');
   $('metrica').value = S.metrica;
 }
@@ -984,7 +995,7 @@ function definirTipo(t) {
   S.tipo = t;
   definirPessoa(t === 'novo' ? E.ordemP.find(pessoaPermitida) : 0);
 }
-function definirPessoa(p) { S.pessoa = p; [S.A, S.B] = padraoPessoa(p); S.metrica = S.B !== null ? 'pp' : 'Apv'; aplicarSelecao(true); }
+function definirPessoa(p) { S.pessoa = p; [S.A, S.B] = padraoPessoa(p); S.metrica = metPadrao(); aplicarSelecao(true); }
 function aplicarSelecao(zoom) {
   popularAB(); popularMetricas(); zerarZoom(); S.pins.clear(); contador();
   calcClasses(); legenda(); atualizarTopo();
@@ -1014,7 +1025,7 @@ $('tabcand').querySelector('tbody').addEventListener('click', ev => {
   const c = E.cand[+tr.dataset.k], p = E.pess[c.p];
   S.pessoa = c.p; S.B = null; S.A = c.id; S.metrica = 'Apv';
   if (c.d.ano === 2026) {
-    if (p.antes) { S.tipo = 'comp'; S.B = c.id; S.A = anterior(p.c, c.id); S.metrica = 'pp'; } else S.tipo = 'novo';
+    if (p.antes) { S.tipo = 'comp'; S.B = c.id; S.A = anterior(p.c, c.id); S.metrica = metPadrao(); } else S.tipo = 'novo';
   } else S.tipo = 'livre';
   mostrar('mapa'); aplicarSelecao(true);
 });
@@ -1065,8 +1076,8 @@ function mudarEscopo(id, view) {
 document.querySelectorAll('.tab').forEach(b => { b.onclick = () => mostrar(b.dataset.v); });
 document.querySelectorAll('#tipos button').forEach(b => { b.onclick = () => { if (b.dataset.t !== S.tipo) definirTipo(b.dataset.t); }; });
 document.querySelectorAll('#escopos button').forEach(b => { b.onclick = () => { if (b.dataset.e !== S.escopo) mudarEscopo(b.dataset.e, S.view === 'candidatos' && b.dataset.e === 'br' ? 'mapa' : S.view); }; });
-$('selA').onchange = e => { S.A = +e.target.value; if (S.B === S.A) S.B = null; aplicarSelecao(false); if (S.view === 'mapa') { zoomUF(); mostrarAlvoNoInfo(); } };
-$('selB').onchange = e => { S.B = e.target.value === '' ? null : +e.target.value; if (S.B === S.A) S.B = null; S.metrica = S.B !== null ? 'pp' : 'Apv'; aplicarSelecao(false); };
+$('selA').onchange = e => { S.A = +e.target.value; if (S.B === S.A) S.B = null; if (COMPARACAO.includes(S.metrica) && poucos()) S.metrica = 'Bpv'; aplicarSelecao(false); if (S.view === 'mapa') { zoomUF(); mostrarAlvoNoInfo(); } };
+$('selB').onchange = e => { S.B = e.target.value === '' ? null : +e.target.value; if (S.B === S.A) S.B = null; S.metrica = metPadrao(); aplicarSelecao(false); };
 $('troca').onclick = () => { if (S.B === null) return; [S.A, S.B] = [S.B, S.A]; aplicarSelecao(false); };
 $('metrica').onchange = e => { S.metrica = e.target.value; mudouMedida(); };
 $('uf').onchange = e => { S.uf = e.target.value; zerarZoom(); atualizarTopo(); if (S.view === 'dispersao') atualizarDispersao(); else if (S.view === 'mapa') { pintarMapa(); zoomUF(); } };
