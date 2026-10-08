@@ -410,7 +410,7 @@
       <p>Também é possível colorir pela abstenção, pelos brancos e pelos nulos de cada disputa, e pela variação deles entre A e B (em pontos percentuais). Essas medidas dizem respeito ao eleitorado do município e não ao candidato, então aparecem em todos os municípios da disputa, mesmo onde o candidato não concorreu.</p>
       <h3>Percentis e as seis cores</h3>
       <p>O percentil mostra a posição de um município em relação aos demais. Os municípios com dados são colocados em ordem, do menor valor ao maior. O percentil 15 (P15) é o valor abaixo do qual ficam 15% dos municípios, o P50 é a mediana e o P85 é o valor acima do qual ficam os 15% maiores. Os cinco cortes dividem os municípios em seis classes, com 15%, 20%, 15%, 15%, 20% e 15% dos municípios, do menor ao maior valor. Os limites aparecem na legenda e mudam conforme a medida escolhida.</p>
-      <p>Nas comparações da mesma pessoa ou do mesmo partido ao longo do tempo, as classes vão de "Queda Severa" a "Destaque Positivo" e usam vermelho e verde. Nas demais medidas as classes vão de "Menores 15%" a "Maiores 15%", com uma cor para cada tipo de medida e mais escura quanto maior o valor: roxo para os votos e a % dos votos do candidato, azul para a abstenção, os brancos e os nulos, e marrom a verde-azulado para as diferenças que não são de desempenho (por exemplo, a variação da abstenção). Municípios sem dados ficam em cinza. Quando há poucos municípios com dados, como no caso de um candidato a vereador, não há percentis e os municípios com dados aparecem em vermelho.</p>
+      <p>Nas comparações da mesma pessoa ou do mesmo partido ao longo do tempo, as classes vão de "Queda Severa" a "Destaque Positivo" e usam vermelho e verde. Nas demais medidas as classes vão de "Menores 15%" a "Maiores 15%". Os votos e a % dos votos do candidato usam a mesma escala de vermelho a verde das comparações, em que verde quer dizer mais votos. A abstenção, os brancos e os nulos usam azul, mais escuro quanto maior o valor, e as diferenças que não são de desempenho (por exemplo, a variação da abstenção) usam marrom a verde-azulado. Municípios sem dados ficam em cinza. Quando há poucos municípios com dados, como no caso de um candidato a vereador, não há percentis e os municípios com dados aparecem em vermelho.</p>
       <p>As classes são relativas: elas dizem se o município está acima ou abaixo dos outros, e não se o valor é positivo ou negativo.</p>
 
       <div class="so-br">
@@ -469,8 +469,8 @@ const ok = Number.isFinite;
 /* ------------------------------------------------ paletas e classes */
 const PALS = {
   perf: ['#99000d', '#d92523', '#fe9929', '#99d8c9', '#41ae76', '#005a32'],
-  lvl:  ['#efe9f6', '#d6c6ea', '#b79ddb', '#9570c6', '#6f45a8', '#472178'],
-  part: ['#dbe8f5', '#b3d0ea', '#84b3dc', '#5591c8', '#2f69a8', '#103f77'],
+  lvl:  ['#99000d', '#d92523', '#fe9929', '#99d8c9', '#41ae76', '#005a32'],
+  part: ['#c6dbef', '#9ecae1', '#6baed6', '#3182bd', '#08519c', '#08306b'],
   neu:  ['#8c510a', '#d8b365', '#f1e2b8', '#c7eae5', '#5ab4ac', '#01665e']
 };
 const NOMES = {
@@ -521,7 +521,7 @@ function preparar(js) {
 }
 function carregarEscopo(id) {
   if (cacheEsc[id]) return Promise.resolve(cacheEsc[id]);
-  return fetch('dados/escopo_' + id + '.json?v=20261007224033').then(r => { if (!r.ok) throw new Error('escopo'); return r.json(); }).then(js => (cacheEsc[id] = preparar(js)));
+  return fetch('dados/escopo_' + id + '.json?v=20261007225317').then(r => { if (!r.ok) throw new Error('escopo'); return r.json(); }).then(js => (cacheEsc[id] = preparar(js)));
 }
 function vv(c) {
   if (c.vv) return c;
@@ -858,7 +858,7 @@ function carregar(src, css) {
 function ajustarMapa() { const w = $('mapwrap'); w.style.height = Math.max(460, Math.min(900, Math.round(window.innerHeight * 0.78))) + 'px'; if (map) map.invalidateSize(); }
 const estiloPoli = i => { const on = noUF(i), pin = S.pins.has(i), sem = CL.cls[i] < 0; return {fillColor: cor(i), fillOpacity: sem ? (on ? 0.7 : 0.08) : on || pin ? 0.93 : 0.08, color: pin ? '#000' : '#ffffff', weight: pin ? 2.6 : on ? 0.3 : 0, opacity: pin ? 1 : 0.9}; };
 function clicarMapa(i) { S.pins.has(i) ? S.pins.delete(i) : S.pins.add(i); contador(); $('info').innerHTML = detalhe(i); pintarMapa(); }
-const baixarJSON = u => malhas[u] || (malhas[u] = fetch(u + '?v=20261007224033').then(r => { if (!r.ok) throw new Error(u); return r.json(); }).catch(e => { delete malhas[u]; throw e; }));
+const baixarJSON = u => malhas[u] || (malhas[u] = fetch(u + '?v=20261007225317').then(r => { if (!r.ok) throw new Error(u); return r.json(); }).catch(e => { delete malhas[u]; throw e; }));
 const NOTA_GRAN = (modo, poli) => 'Detalhe por bairro e local de votação: os votos de cada seção eleitoral são somados no local onde o eleitor vota, e o local é atribuído ao bairro do IBGE (Censo 2022) que o contém. O bairro é o do local de votação, e não necessariamente o de residência do eleitor. O IBGE só tem bairros para 19 dos 167 municípios, que reúnem cerca de 41% do eleitorado' +
   (modo === 'ano' ? '; nos demais, e fora dos bairros (como a zona rural), cada local de votação aparece como um ponto.' : '; nos demais, e fora dos bairros (como a zona rural), a unidade é o município, ou a parte dele fora dos bairros, porque a comparação entre anos precisa de uma divisão estável (os locais de votação mudam de um ano para outro).') +
   ' As cores mais claras ao fundo mostram o município inteiro, com as mesmas faixas. As classes de cor usam percentis só entre as unidades mostradas. A soma das seções pode diferir um pouco do total do município, por causa de votos anulados depois da eleição. Clique em uma unidade para marcar o nome, ou use a busca, e Limpar marcações para remover.' + (poli ? ' Troque para círculos, proporcionais ao número de eleitores, se preferir.' : ' Troque para polígonos para ver os limites.');
