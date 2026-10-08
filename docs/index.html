@@ -20,6 +20,7 @@
   .scopes { display: inline-flex; background: #e6ebf1; border-radius: 10px; padding: 3px; gap: 2px; max-width: 100%; }
   .scopes button { appearance: none; border: 0; background: none; font: inherit; font-size: 13px; font-weight: 600; color: var(--muted); padding: 6px 14px; border-radius: 8px; cursor: pointer; white-space: nowrap; }
   .scopes button[aria-pressed="true"] { background: #fff; color: var(--accent); box-shadow: 0 1px 3px rgba(0,0,0,.14); }
+  label.dica { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 6px; }
   .scopes select { appearance: auto; border: 0; background: transparent; font: inherit; font-size: 13px; font-weight: 600; color: var(--muted); padding: 6px 8px; border-radius: 8px; cursor: pointer; max-width: 100%; }
   .scopes select.on { background: #fff; color: var(--accent); box-shadow: 0 1px 3px rgba(0,0,0,.14); }
   .maisrow { text-align: center; margin: 0 16px 16px; }
@@ -545,7 +546,7 @@ function preparar(js) {
 function carregarEscopo(id) {
   if (cacheEsc[id]) return Promise.resolve(cacheEsc[id]);
   const url = id === 'br' ? 'dados/escopo_br.json' : 'dados/uf/' + id + '.json';
-  return fetch(url + '?v=20261008031657').then(r => { if (!r.ok) throw new Error('escopo'); return r.json(); }).then(js => {
+  return fetch(url + '?v=20261008032628').then(r => { if (!r.ok) throw new Error('escopo'); return r.json(); }).then(js => {
     cacheEsc[id] = preparar(js); ordemCache.push(id);
     while (ordemCache.length > 3) delete cacheEsc[ordemCache.shift()];  // guarda só os últimos recortes, para não acumular memória
     return cacheEsc[id];
@@ -903,7 +904,7 @@ const estiloPoli = i => {
   return {fillColor: cor(i), fillOpacity: fo, color: pin ? '#000' : branca ? '#ffffff' : cor(i), weight: pin ? 2.6 : on ? (branca ? w : 0.7) : 0, opacity: pin ? 1 : branca ? 0.9 : fo};
 };
 function clicarMapa(i) { S.pins.has(i) ? S.pins.delete(i) : S.pins.add(i); contador(); $('info').innerHTML = detalhe(i); pintarMapa(); }
-const baixarJSON = u => malhas[u] || (malhas[u] = fetch(u + '?v=20261008031657').then(r => { if (!r.ok) throw new Error(u); return r.json(); }).catch(e => { delete malhas[u]; throw e; }));
+const baixarJSON = u => malhas[u] || (malhas[u] = fetch(u + '?v=20261008032628').then(r => { if (!r.ok) throw new Error(u); return r.json(); }).catch(e => { delete malhas[u]; throw e; }));
 const NOTA_GRAN = (modo, poli) => {
   const ib = E.infoB, tem = ib && ib.n > 0, fora = tem ? 'nos demais, e fora dos bairros (como a zona rural), ' : '';
   const bairros = tem ? `O IBGE só tem bairros para ${ib.n} dos ${fmt(ib.total)} municípios, que reúnem cerca de ${ib.pct}% do eleitorado` : 'O IBGE não tem a divisão em bairros para os municípios deste estado';
@@ -1306,8 +1307,8 @@ function mostrar(v) {
 /* o checkbox de detalhe: no recorte de um estado, só se ele tem o detalhe; no Brasil, só depois de escolher uma UF que o tenha */
 function atualizarGran() {
   const br = !ehUF(), inf = INFO[br ? (S.uf || '').toLowerCase() : S.escopo] || {}, pode = !!inf.granular && (!br || !!S.uf);
-  $('gran').disabled = !pode; $('lblGran').classList.toggle('inv', !br && !inf.granular);
-  $('lblGran').title = br && !S.uf ? 'Escolha uma UF para ver os votos de Lula por bairro e local de votação' : br && !inf.granular ? 'Esta UF ainda não tem o detalhe por local de votação' : 'Mostra os votos por bairro (onde o IBGE tem a divisão) e por local de votação, somando as seções eleitorais';
+  $('gran').disabled = br ? false : !pode; $('lblGran').classList.toggle('inv', !br && !inf.granular);  // no Brasil o campo fica ativo, e sem UF ele avisa o que fazer
+  $('lblGran').title = br && !S.uf ? 'Primeiro escolha uma UF no campo UF: o detalhe é carregado para uma UF por vez' : br && !inf.granular ? 'Esta UF ainda não tem o detalhe por local de votação' : 'Mostra os votos por bairro (onde o IBGE tem a divisão) e por local de votação, somando as seções eleitorais';
   return pode;
 }
 function definirEscopo(js, id) {
@@ -1363,7 +1364,14 @@ $('selA').onchange = e => { S.A = +e.target.value; if (S.B === S.A) S.B = null; 
 $('selB').onchange = e => { S.B = e.target.value === '' ? null : +e.target.value; if (S.B === S.A) S.B = null; S.metAuto = true; aplicarSelecao(false); };
 $('troca').onclick = () => { if (S.B === null) return; [S.A, S.B] = [S.B, S.A]; aplicarSelecao(false); };
 $('metrica').onchange = e => { S.metrica = e.target.value; S.metAuto = false; mudouMedida(); };
-$('gran').onchange = e => { G.on = e.target.checked; $('gstatus').textContent = ''; aplicarSelecao(false).then(() => { if (S.view === 'mapa') mostrarAlvoNoInfo(); }); };
+$('gran').onchange = e => {
+  if (e.target.checked && !ehUF() && !atualizarGran()) {  // Brasil sem UF (ou UF sem detalhe): explica e desmarca
+    e.target.checked = false; G.on = false;
+    $('gstatus').textContent = S.uf ? 'Esta UF ainda não tem o detalhe por local de votação.' : 'Escolha uma UF no campo UF para ver o detalhe por bairro e local de votação.';
+    const lu = $('uf').closest('label'); lu.classList.add('dica'); $('uf').focus(); setTimeout(() => { lu.classList.remove('dica'); if ($('gstatus').textContent.startsWith('Escolha') || $('gstatus').textContent.startsWith('Esta UF')) $('gstatus').textContent = ''; }, 6000);
+    return;
+  }
+  G.on = e.target.checked; $('gstatus').textContent = ''; aplicarSelecao(false).then(() => { if (S.view === 'mapa') mostrarAlvoNoInfo(); }); };
 $('uf').onchange = e => { S.uf = e.target.value; if (G.on && !atualizarGran()) { G.on = false; $('gran').checked = false; } atualizarGran(); if (G.on || E !== EM) { aplicarSelecao(true); return; } zerarZoom(); atualizarTopo(); if (S.view === 'dispersao') atualizarDispersao(); else if (S.view === 'mapa') { pintarMapa(); zoomUF(); } };
 $('modo').onchange = e => { S.modo = e.target.value; aplicarModo(); };
 $('zroda').onchange = e => { S.zoomRoda = e.target.checked; zoomManual = true; };
@@ -1383,7 +1391,7 @@ window.addEventListener('hashchange', () => { const h = lerHash(); if (h.esc !==
 
 const inicial = lerHash();
 S.view = inicial.v === 'candidatos' && inicial.esc === 'br' ? 'mapa' : inicial.v; document.body.dataset.view = S.view; S.escopo = inicial.esc;
-const carregarUFs = fetch('dados/ufs.json?v=20261008031657').then(r => r.json()).then(j => {
+const carregarUFs = fetch('dados/ufs.json?v=20261008032628').then(r => r.json()).then(j => {
   UFS = j.ufs; UFS.forEach(u => { INFO[u.id] = u; });
   $('escUF').innerHTML = '<option value="">PT em um estado...</option>' + UFS.map(u => `<option value="${u.id}">${esc(u.nome)}</option>`).join('');
 }).catch(() => {});
