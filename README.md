@@ -3,7 +3,7 @@
 Mapa, gráficos de dispersão e tabelas com os votos, a abstenção, os brancos e os nulos de cada município, com dados abertos do TSE. O site tem dois recortes:
 
 - **Lula no Brasil:** os votos de Lula para presidente em cada um dos 5.570 municípios, no 1º e no 2º turno de 2022 e no 1º turno de 2026.
-- **PT no Rio Grande do Norte:** os votos de todos os candidatos do PT no RN que concorreram em 2020 e 2024 (prefeito e vereador), em 2022 (governador, deputado federal e deputado estadual) e em 2026 (governador, senador, deputado federal e deputado estadual), mais Lula com os votos que recebeu no estado. Há dois tipos de mapa: a **comparação de quem concorreu em 2020, 2022 ou 2024 com 2026** e o mapa dos **candidatos que só concorreram em 2026**. Um terceiro modo, "qualquer cargo e ano", permite comparar livremente quaisquer candidaturas.
+- **PT no Rio Grande do Norte:** os votos de todos os candidatos do PT no RN que concorreram em 2020 e 2024 (prefeito e vereador), em 2022 (governador, deputado federal e deputado estadual) e em 2026 (governador, senador, deputado federal e deputado estadual), mais Lula com os votos que recebeu no estado. Há três modos: **comparar com 2026** (quem concorreu em 2020, 2022 ou 2024 e também em 2026), **analisar isoladamente** (uma candidatura sozinha, de qualquer candidato e ano, sem outros dados no mapa) e **qualquer cargo e ano** (comparar livremente quaisquer candidaturas).
 
 **Site:** https://victorantunes.github.io/votos-por-municipio/
 
@@ -18,7 +18,7 @@ Uma pessoa pode concorrer a cargos diferentes ao longo dos anos, então os dados
 | **Candidatura** | um candidato em uma disputa | Fátima Bezerra, Governador 2022 |
 | **Pessoa** | todas as candidaturas de um mesmo candidato, ligadas pelo título de eleitor do cadastro do TSE (o número não é publicado) | quem foi candidata a vereadora em 2020 e a deputada federal em 2026 |
 
-Em cada município e em cada disputa, os dados trazem também o **contexto**: eleitores aptos, comparecimento, abstenções, brancos, nulos e votos válidos. Na página, a candidatura **A** é a base e a **B** é a comparação (opcional): pode ser outro cargo da mesma pessoa, a soma dos candidatos do PT em uma disputa, ou Lula na mesma eleição. No tipo "Comparar com 2026", A é a candidatura anterior (do mesmo cargo, quando existe, ou a mais recente) e B é a de 2026. No tipo "Só candidatos de 2026" só existe a A, porque não há votação anterior para comparar e o mapa mostra apenas onde o candidato foi votado.
+Em cada município e em cada disputa, os dados trazem também o **contexto**: eleitores aptos, comparecimento, abstenções, brancos, nulos e votos válidos. Na página, a candidatura **A** é a base e a **B** é a comparação (opcional): pode ser outro cargo da mesma pessoa, a soma dos candidatos do PT em uma disputa, ou Lula na mesma eleição. No tipo "Comparar com 2026", A é a candidatura anterior (do mesmo cargo, quando existe, ou a mais recente) e B é a de 2026. No tipo "Analisar isoladamente" só existe a A, e o mapa mostra apenas essa candidatura, sem comparação com outros anos nem com outros candidatos.
 
 Quem concorreu a prefeito ou vereador em 2020 ou 2024 só recebeu votos no seu município, então o mapa de um candidato municipal destaca um único município. A "soma do PT" reúne os votos nominais de todos os candidatos do partido em cada disputa e mostra a força do PT nos municípios em que ele lançou candidatos.
 

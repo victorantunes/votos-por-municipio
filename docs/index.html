@@ -199,7 +199,7 @@
           <span class="cap">Tipo de mapa</span>
           <div class="pills" id="tipos" role="group" aria-label="Tipo de mapa">
             <button type="button" data-t="comp" aria-pressed="true" title="Quem concorreu em 2020, 2022 ou 2024 e também em 2026: mostra a votação anterior (A) e a de 2026 (B)">Comparar com 2026</button>
-            <button type="button" data-t="novo" aria-pressed="false" title="Quem não tinha concorrido em 2020, 2022 nem 2024: mostra onde foi votado em 2026">Só candidatos de 2026</button>
+            <button type="button" data-t="iso" aria-pressed="false" title="Mostra uma candidatura sozinha, de qualquer candidato e ano, sem compará-la com outras">Analisar isoladamente</button>
             <button type="button" data-t="livre" aria-pressed="false" title="Qualquer cargo e ano, de qualquer candidato">Qualquer cargo e ano</button>
           </div>
         </div>
@@ -277,7 +277,7 @@
         </tr></thead><tbody></tbody></table>
       </div>
     </div>
-    <p class="note">Cada linha é uma candidatura (um candidato em uma disputa). Clique em uma linha para abrir o candidato no mapa. A % dos votos válidos é calculada sobre os votos válidos do município ou dos municípios onde ele concorreu, e a posição compara o candidato com todos os outros da mesma disputa (no estado inteiro ou no município). "PT (soma)" é a soma dos candidatos do PT em cada disputa. Clique no título de uma coluna para ordenar.</p>
+    <p class="note">Cada linha é uma candidatura (um candidato em uma disputa). Clique em uma linha para abrir a candidatura, isolada, no mapa. A % dos votos válidos é calculada sobre os votos válidos do município ou dos municípios onde ele concorreu, e a posição compara o candidato com todos os outros da mesma disputa (no estado inteiro ou no município). "PT (soma)" é a soma dos candidatos do PT em cada disputa. Clique no título de uma coluna para ordenar.</p>
   </section>
 
   <section class="view" id="v-dados">
@@ -353,7 +353,7 @@
         <p>No topo da página, o <b>tipo de mapa</b> define o que cada candidato mostra:</p>
         <ul>
           <li><b>Comparar com 2026:</b> para quem concorreu em 2020, 2022 ou 2024 e também em 2026. A candidatura A é a anterior (por padrão, do mesmo cargo, como deputado estadual 2022, ou a mais recente se não houver) e a B é a de 2026. Dá para trocar a A por qualquer outra candidatura anterior da mesma pessoa. O mapa mostra, município a município, quanto a votação mudou. A soma do PT e Lula também entram nesse tipo.</li>
-          <li><b>Só candidatos de 2026:</b> para quem não tinha concorrido em 2020, 2022 nem 2024. Como não há votação anterior, o mapa mostra só onde o candidato foi votado em 2026, sem comparação com outros candidatos nem com outros anos. Para comparar, use os outros tipos de mapa.</li>
+          <li><b>Analisar isoladamente:</b> mostra uma única candidatura, de qualquer candidato e ano (por exemplo, Isolda Dantas só em 2026), sem comparar com outros anos nem com outros candidatos. O mapa, a dispersão e os números do topo usam só essa candidatura. Escolha o candidato e, em Candidatura A, o cargo e o ano. Funciona também para quem estreou em 2026, que não tem votação anterior.</li>
           <li><b>Qualquer cargo e ano:</b> escolha livremente a candidatura A e, se quiser, a B, de qualquer pessoa, da soma do PT ou de Lula.</li>
         </ul>
         <p>Escolha o candidato no campo de busca e depois as candidaturas A e B. As cores, o gráfico de dispersão e as estatísticas do topo passam a mostrar B em relação a A.</p>
@@ -510,7 +510,7 @@ const TAM = [
 ];
 const TITULOS = {
   br: {h1: 'Lula em 2022 e 2026, município a município', sub: 'Votos de Lula para presidente em cada um dos 5.570 municípios do Brasil, com abstenção, brancos e nulos: 1º e 2º turnos de 2022 e 1º turno de 2026, com dados abertos do TSE.'},
-  rn: {h1: 'PT no Rio Grande do Norte, de 2020 a 2026', sub: 'Votos dos candidatos do PT no RN em cada um dos 167 municípios, nos cargos disputados em 2020, 2022, 2024 e 2026, com abstenção, brancos e nulos. Há dois tipos de mapa: a comparação de quem concorreu antes com 2026 e o dos candidatos que só concorreram em 2026. Lula entra com os votos que recebeu no estado.'}
+  rn: {h1: 'PT no Rio Grande do Norte, de 2020 a 2026', sub: 'Votos dos candidatos do PT no RN em cada um dos 167 municípios, nos cargos disputados em 2020, 2022, 2024 e 2026, com abstenção, brancos e nulos. Há três modos: comparar quem concorreu antes com 2026, analisar uma candidatura isoladamente e comparar quaisquer candidaturas. Lula entra com os votos que recebeu no estado.'}
 };
 
 /* ------------------------------------------------ dados do recorte atual */
@@ -539,7 +539,7 @@ function preparar(js) {
 }
 function carregarEscopo(id) {
   if (cacheEsc[id]) return Promise.resolve(cacheEsc[id]);
-  return fetch('dados/escopo_' + id + '.json?v=20261007231147').then(r => { if (!r.ok) throw new Error('escopo'); return r.json(); }).then(js => (cacheEsc[id] = preparar(js)));
+  return fetch('dados/escopo_' + id + '.json?v=20261007232751').then(r => { if (!r.ok) throw new Error('escopo'); return r.json(); }).then(js => (cacheEsc[id] = preparar(js)));
 }
 function vv(c) {
   if (c.vv) return c;
@@ -878,7 +878,7 @@ function carregar(src, css) {
 function ajustarMapa() { const w = $('mapwrap'); w.style.height = Math.max(460, Math.min(900, Math.round(window.innerHeight * 0.78))) + 'px'; if (map) map.invalidateSize(); }
 const estiloPoli = i => { const on = noUF(i), pin = S.pins.has(i), sem = CL.cls[i] < 0; return {fillColor: cor(i), fillOpacity: sem ? (on ? 0.7 : 0.08) : on || pin ? 0.93 : 0.08, color: pin ? '#000' : '#ffffff', weight: pin ? 2.6 : on ? 0.3 : 0, opacity: pin ? 1 : 0.9}; };
 function clicarMapa(i) { S.pins.has(i) ? S.pins.delete(i) : S.pins.add(i); contador(); $('info').innerHTML = detalhe(i); pintarMapa(); }
-const baixarJSON = u => malhas[u] || (malhas[u] = fetch(u + '?v=20261007231147').then(r => { if (!r.ok) throw new Error(u); return r.json(); }).catch(e => { delete malhas[u]; throw e; }));
+const baixarJSON = u => malhas[u] || (malhas[u] = fetch(u + '?v=20261007232751').then(r => { if (!r.ok) throw new Error(u); return r.json(); }).catch(e => { delete malhas[u]; throw e; }));
 const NOTA_GRAN = (modo, poli) => 'Detalhe por bairro e local de votação: os votos de cada seção eleitoral são somados no local onde o eleitor vota, e o local é atribuído ao bairro do IBGE (Censo 2022) que o contém. O bairro é o do local de votação, e não necessariamente o de residência do eleitor. O IBGE só tem bairros para 19 dos 167 municípios, que reúnem cerca de 41% do eleitorado' +
   (modo === 'ano' ? '; nos demais, e fora dos bairros (como a zona rural), cada local de votação aparece como um ponto.' : '; nos demais, e fora dos bairros (como a zona rural), a unidade é o município, ou a parte dele fora dos bairros, porque a comparação entre anos precisa de uma divisão estável (os locais de votação mudam de um ano para outro).') +
   ' As cores mais claras ao fundo mostram o município inteiro, com as mesmas faixas. As classes de cor usam percentis só entre as unidades mostradas. A soma das seções pode diferir um pouco do total do município, por causa de votos anulados depois da eleição. Clique em uma unidade para marcar o nome, ou use a busca, e Limpar marcações para remover.' + (poli ? ' Troque para círculos, proporcionais ao número de eleitores, se preferir.' : ' Troque para polígonos para ver os limites.');
@@ -1047,12 +1047,12 @@ function popularAB() {
   const todos = [[foco.n, foco.c]].concat(extras), filtra = (gs, f) => gs.map(([g, cs]) => [g, cs.filter(f)]).filter(([g, cs]) => cs.length);
   let gA = todos, gB = todos;
   if (t === 'comp') { gA = filtra(todos, k => ano(k) < 2026); gB = filtra(todos, k => ano(k) === 2026); }
-  else if (t === 'novo') { gA = filtra([[foco.n, foco.c]], k => ano(k) === 2026); gB = []; S.B = null; }
+  else if (t === 'iso') { gA = [[foco.n, foco.c]]; gB = []; S.B = null; }
   const mk = (sel, gs, nenhuma) => { sel.innerHTML = (nenhuma ? '<option value="">Nenhuma (só A)</option>' : '') + gs.map(([g, cs]) => `<optgroup label="${esc(g)}">` + cs.map(k => `<option value="${k}">${esc(rotOpc(E.cand[k]))}</option>`).join('') + '</optgroup>').join(''); };
   mk($('selA'), gA, false); mk($('selB'), gB, t !== 'comp');
   $('selA').value = S.A; $('selB').value = S.B === null ? '' : S.B;
   $('troca').style.display = t === 'livre' ? '' : 'none';
-  $('lblB').style.display = t === 'novo' ? 'none' : '';
+  $('lblB').style.display = t === 'iso' ? 'none' : '';
   document.querySelectorAll('#tipos button').forEach(b => b.setAttribute('aria-pressed', b.dataset.t === t));
   pessoaEl.value = E.pess[S.pessoa].n;
 }
@@ -1071,14 +1071,14 @@ function anterior(cs, b) {
 function padraoPessoa(p) {
   const cs = E.pess[p].c;
   if (S.escopo === 'rn' && S.tipo === 'comp') { const b = cs.find(k => anoC(k) === 2026); if (b !== undefined && cs.some(k => anoC(k) < 2026)) return [anterior(cs, b), b]; }
-  if (S.escopo === 'rn' && S.tipo === 'novo') { const a = cs.find(k => anoC(k) === 2026); if (a !== undefined) return [a, null]; }
+  if (S.escopo === 'rn' && S.tipo === 'iso') { const a = p === 0 ? cs.find(k => E.cand[k].d.id === 'de26') : undefined; return [a !== undefined ? a : cs[cs.length - 1], null]; }
   if (S.escopo === 'rn' && p === 0) { const a = cs.find(k => E.cand[k].d.id === 'ver20'), b = cs.find(k => E.cand[k].d.id === 'de22'); if (a !== undefined && b !== undefined) return [a, b]; }
   return cs.length > 1 ? [cs[cs.length - 2], cs[cs.length - 1]] : [cs[0], null];
 }
-const pessoaPermitida = i => { const p = E.pess[i]; return S.tipo === 'comp' ? p.a26 && p.antes : S.tipo === 'novo' ? p.a26 && !p.antes && !p.agg : true; };
+const pessoaPermitida = i => { const p = E.pess[i]; return S.tipo === 'comp' ? p.a26 && p.antes : true; };
 function definirTipo(t) {
   S.tipo = t;
-  definirPessoa(t === 'novo' ? E.ordemP.find(pessoaPermitida) : 0);
+  definirPessoa(pessoaPermitida(S.pessoa) ? S.pessoa : 0);  // mantém o candidato escolhido quando o novo modo também o aceita
 }
 function definirPessoa(p) { S.pessoa = p; [S.A, S.B] = padraoPessoa(p); S.metAuto = true; aplicarSelecao(true); }
 /* ------------------------------------------------ detalhe por bairro e local de votação (RN) */
@@ -1190,11 +1190,8 @@ document.querySelectorAll('#tabcand th').forEach(th => { th.onclick = () => { or
 ['fdisp', 'fhist', 'fsit', 'fsoma'].forEach(id => { $(id).onchange = renderCandidatos; }); $('fnome').oninput = renderCandidatos;
 $('tabcand').querySelector('tbody').addEventListener('click', ev => {
   const tr = ev.target.closest('tr[data-k]'); if (!tr) return;
-  const c = EM.cand[+tr.dataset.k], p = EM.pess[c.p];
-  S.pessoa = c.p; S.B = null; S.A = c.id; S.metrica = 'Apv'; S.metAuto = true;
-  if (c.d.ano === 2026) {
-    if (p.antes) { S.tipo = 'comp'; S.B = c.id; S.A = anterior(p.c, c.id); } else S.tipo = 'novo';
-  } else S.tipo = 'livre';
+  const c = EM.cand[+tr.dataset.k];
+  S.pessoa = c.p; S.B = null; S.A = c.id; S.metrica = 'Apv'; S.metAuto = true; S.tipo = 'iso';
   mostrar('mapa'); aplicarSelecao(true);
 });
 
