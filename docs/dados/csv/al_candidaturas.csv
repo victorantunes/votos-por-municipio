@@ -1,0 +1,696 @@
+candidatura,nome_de_urna,nome_completo,numero,partido,disputa,circunscricao,situacao,votos_validos,municipios_com_votos,posicao,candidatos_na_disputa,votos_anulados
+c0001,Débora Marcolino,Debora Marcolino da Silva,13333,PT,Deputado Estadual 2022,Alagoas,Suplente,988,74,77,244,0
+c0002,Elida Miranda,Elida Rachel Miranda Sousa,13500,PT,Deputado Estadual 2022,Alagoas,Suplente,4712,89,49,244,0
+c0003,Professora Fatima,Fatima Ferreira Santos Cruz,13789,PT,Deputado Estadual 2022,Alagoas,Suplente,342,46,128,244,0
+c0004,Ailton Avlis,José Ailton da Silva,13456,PT,Deputado Estadual 2022,Alagoas,Suplente,1762,63,66,244,0
+c0005,Ronaldo Medeiros,José Ronaldo Medeiros,13000,PT,Deputado Estadual 2022,Alagoas,Eleito,35883,101,15,244,0
+c0006,Judson Cabral,Judson Cabral de Santana,13200,PT,Deputado Estadual 2022,Alagoas,Suplente,6810,89,48,244,0
+c0007,Professor Luizinho,Luiz Gomes da Rocha,13913,PT,Deputado Estadual 2022,Alagoas,Suplente,2345,74,63,244,0
+c0008,Dr Valmir,Valmir de Melo Gomes,13613,PT,Deputado Estadual 2022,Alagoas,Suplente,3560,75,54,244,0
+c0009,Welton Roberto,Welton Roberto,13013,PT,Deputado Estadual 2022,Alagoas,Suplente,2356,73,62,244,0
+c0010,Basile,Basile Georges Campos Christopoulos,13123,PT,Deputado Estadual 2022,Alagoas,Suplente,3750,90,51,244,0
+c0011,Michelle da Bancada do Batom,Michelle Cristine Godoy Vicente dos Santos,13111,PT,Deputado Estadual 2022,Alagoas,Suplente,233,46,150,244,0
+c0012,Silvano,Silvano Vieira dos Santos,13134,PT,Deputado Estadual 2022,Alagoas,Suplente,499,23,105,244,0
+c0013,Roberto Paulino,Roberto Paulino dos Santos,11332,PP,Deputado Estadual 2022,Alagoas,Suplente,154,11,176,244,0
+c0014,Paulo Memoria,Paulo Roberto Kuchenmeister de Memoria,70440,AVANTE,Deputado Estadual 2022,Alagoas,Suplente,487,33,107,244,0
+c0015,Marcos Barbosa,Marcos Antonio de Oliveira Barbosa,70000,AVANTE,Deputado Estadual 2022,Alagoas,Eleito,20761,95,35,244,0
+c0016,Teca Nelma,Tereza Nelma Porto Viana Soares,55444,PSD,Deputado Estadual 2022,Alagoas,Não eleito,13650,100,42,244,0
+c0017,Tony Cloves,Tony Cloves Pereira,55789,PSD,Deputado Estadual 2022,Alagoas,Não eleito,162,17,174,244,0
+c0018,Breno Albuquerque,Breno Couto de Albuquerque Melo,15777,MDB,Deputado Estadual 2022,Alagoas,Eleito,32159,94,20,244,0
+c0019,Teca Nelma,Tereza Nelma Porto Viana Soares,13444,PT,Deputado Estadual 2026,Alagoas,Eleito,44619,102,15,122,0
+c0020,Sal Bernardo,Salete Maria Bernardo dos Santos Correia,13166,PT,Deputado Estadual 2026,Alagoas,Suplente,531,50,70,122,0
+c0021,Marcos Barbosa,Marcos Antonio de Oliveira Barbosa,13333,PT,Deputado Estadual 2026,Alagoas,Eleito,29873,100,30,122,0
+c0022,Alycia da Bancada Negra,Alycia Eduarda Oliveira da Silva,13300,PT,Deputado Estadual 2026,Alagoas,Suplente,10221,101,41,122,0
+c0023,Professor Reinaldo,Reinaldo de Lima Oliveira Junior,13013,PT,Deputado Estadual 2026,Alagoas,Suplente,367,33,77,122,0
+c0024,Siloane Pereira,Siloane Pereira da Silva,13400,PT,Deputado Estadual 2026,Alagoas,Suplente,195,30,90,122,0
+c0025,Breno Albuquerque,Breno Couto de Albuquerque Melo,13777,PT,Deputado Estadual 2026,Alagoas,Suplente,20716,99,35,122,0
+c0026,Lula de Alagoas,Daniel Vieira da Silva,13111,PT,Deputado Estadual 2026,Alagoas,Suplente,727,71,62,122,0
+c0027,Tiago Leão,Tiago Corrêa Barbosa Souza,13456,PT,Deputado Estadual 2026,Alagoas,Suplente,132,41,98,122,0
+c0028,Marcondes Costa,Marcondes Ricardson Torres Costa,13123,PT,Deputado Estadual 2026,Alagoas,Suplente,671,60,65,122,0
+c0029,Professor Dilson,Dilson Batista Ferreira,13321,PT,Deputado Estadual 2026,Alagoas,Suplente,2364,64,48,122,0
+c0030,Ronaldo Medeiros,Jose Ronaldo Medeiros,13000,PT,Deputado Estadual 2026,Alagoas,Eleito,38112,100,23,122,0
+c0031,Elida Miranda,Elida Rachel Miranda Sousa,13500,PT,Deputado Estadual 2026,Alagoas,Suplente,2543,90,47,122,0
+c0032,Judson Cabral,Judson Cabral de Santana,13200,PT,Deputado Estadual 2026,Alagoas,Suplente,3664,87,45,122,0
+c0033,Monica Carvalho,Monica Carvalho de Almeida,7777,SOLIDARIEDADE,Deputado Federal 2022,Alagoas,Não eleito,555,76,87,154,0
+c0034,Tenente Coronel Danielli,Marcia Danielli Silva de Assunção,1300,PT,Deputado Federal 2022,Alagoas,Suplente,3705,92,45,154,0
+c0035,Paulão,Paulo Fernando dos Santos,1313,PT,Deputado Federal 2022,Alagoas,Eleito,65814,102,8,154,0
+c0036,Alycia Bancada Negra,Alycia Eduarda Oliveira da Silva,5020,PSOL,Deputado Federal 2022,Alagoas,Não eleito,3519,84,49,154,0
+c0037,Izael do Sinteal,Izael Ribeiro Gomes,1300,PT,Deputado Federal 2026,Alagoas,Não eleito,8937,101,28,101,0
+c0038,Mônica Carvalho - Mulheragem,Monica Carvalho de Almeida,1377,PT,Deputado Federal 2026,Alagoas,Não eleito,1995,87,49,101,0
+c0039,Dafne Orion,Dafne Orion Ceres da Silva,1333,PT,Deputado Federal 2026,Alagoas,Não eleito,4105,96,37,101,0
+c0040,Jorginho Seixas,Jorge Seixas Serapião,1344,PT,Deputado Federal 2026,Alagoas,Não eleito,2183,74,48,101,0
+c0041,Pastor Wellington do Pinheiro,Wellington Santos,1322,PT,Deputado Federal 2026,Alagoas,Não eleito,4863,91,34,101,0
+c0042,Paulão,Paulo Fernando dos Santos,1313,PT,Deputado Federal 2026,Alagoas,Não eleito,63813,102,10,101,0
+c0043,Ailton Valdevino,Ailton Valdevino,3511,DEMOCRATA,Deputado Federal 2026,Alagoas,Não eleito,223,17,84,101,0
+c0044,Coronel Danielli,Marcia Danielli Silva de Assuncao,4599,PSDB,Deputado Federal 2026,Alagoas,Suplente,687,46,64,101,0
+c0045,Wellington  Morcego,Wellington Petrônio Menezes Freire,13,PT,Prefeito 2020,Inhapi,Não eleito,3738,1,2,4,0
+c0046,Renato Torres,Renato David Torres de Oliveira,40,PSB,Prefeito 2020,Delmiro Gouveia,Não eleito,4902,1,3,5,0
+c0047,Cliuton Santos,Cliuton Santos,23,CIDADANIA,Prefeito 2020,Pão de Açúcar,Não eleito,51,1,3,4,0
+c0048,Ricardo Barbosa,Ricardo Sérgio Barbosa de Oliveira,13,PT,Prefeito 2020,Maceió,Não eleito,8905,1,7,10,0
+c0049,Zé dos Santos,José dos Santos,13,PT,Prefeito 2020,Olho D'Água do Casado,Eleito,2940,1,1,2,0
+c0050,Roberto Martins,Roberto Pereira Martins,13,PT,Prefeito 2020,Girau do Ponciano,Não eleito,823,1,3,4,0
+c0051,Madson Paulino,Madson Paulino de Oliveira Brandão,13,PT,Prefeito 2020,Canapi,Não eleito,2583,1,2,3,0
+c0052,Sérgio,Sergio Rogerio Oliveira da Silva,13,PT,Prefeito 2020,União dos Palmares,Não eleito,749,1,6,7,0
+c0053,Professor Lesso,Lesso Benedito dos Santos,13,PT,Prefeito 2020,Atalaia,Não eleito,147,1,3,4,0
+c0054,Moisés Messias,Moises Messias Lima,13,PT,Prefeito 2020,Olho D'Água das Flores,Não eleito,65,1,2,2,0
+c0055,Chico Bezerra,Carlos Alberto Bezerra da Silva,13,PT,Prefeito 2024,Olho D'Água do Casado,Eleito,3267,1,1,3,0
+c0056,Pedro Pereira,Pedro Pereira de Sá Junior,13,PT,Prefeito 2024,Pariconha,Não eleito,2401,1,2,2,0
+c0057,Cliuton Santos,Cliuton Santos,13,PT,Prefeito 2024,Pão de Açúcar,Não eleito,457,1,3,3,0
+c0058,Mário Galdino,Amaro Galdino da Silva,13,PT,Prefeito 2024,Matriz de Camaragibe,Não eleito,307,1,3,3,0
+c0059,Zé Arnaldo do Pt,José Arnaldo Lisboa Gomes,13,PT,Prefeito 2024,São José da Tapera,Não eleito,124,1,3,3,0
+c0060,Lara de Tenorinho,Lara Jayne Siqueira Barbosa Malta Brandão,13,PT,Prefeito 2024,Canapi,Não eleito,4384,1,2,3,0
+c0061,Professor Lesso,Lesso Benedito dos Santos,13,PT,Prefeito 2024,Atalaia,Não eleito,340,1,4,4,0
+c0062,Zé Carlos,José Carlos da Costa Cardoso,13,PT,Prefeito 2024,Cajueiro,Não eleito,511,1,3,3,0
+c0063,Wellington Morcego,Wellington Petronio Menezes Freire,12,PDT,Prefeito 2024,Inhapi,Não eleito,917,1,2,3,0
+c0064,Silvano do Pt,Silvano Vieira dos Santos,13,PT,Prefeito 2024,Rio Largo,Não eleito,329,1,6,6,0
+c0065,Cristovão Lopes,Cristovão Lopes Dias,13,PT,Prefeito 2024,Delmiro Gouveia,Não eleito,4932,1,2,2,0
+c0066,Lula,Luiz Inácio Lula da Silva,13,PT,Presidente 2022 (1º turno),Alagoas,2º turno,974156,102,2,11,0
+c0067,Lula,Luiz Inácio Lula da Silva,13,PT,Presidente 2022 (1º turno),Alagoas,2º turno,974156,102,1,11,0
+c0068,Lula,Luiz Inácio Lula da Silva,13,PT,Presidente 2022 (1º turno),Alagoas,2º turno,974156,102,1,11,0
+c0069,Lula,Luiz Inácio Lula da Silva,13,PT,Presidente 2022 (1º turno),Alagoas,2º turno,974156,102,1,11,0
+c0070,Lula,Luiz Inácio Lula da Silva,13,PT,Presidente 2022 (1º turno),Alagoas,2º turno,974156,102,1,11,0
+c0071,Lula,Luiz Inácio Lula da Silva,13,PT,Presidente 2022 (1º turno),Alagoas,2º turno,974156,102,1,11,0
+c0072,Lula,Luiz Inácio Lula da Silva,13,PT,Presidente 2022 (1º turno),Alagoas,2º turno,974156,102,2,11,0
+c0073,Lula,Luiz Inácio Lula da Silva,13,PT,Presidente 2022 (1º turno),Alagoas,2º turno,974156,102,2,11,0
+c0074,Lula,Luiz Inácio Lula da Silva,13,PT,Presidente 2022 (1º turno),Alagoas,2º turno,974156,102,2,11,0
+c0075,Lula,Luiz Inácio Lula da Silva,13,PT,Presidente 2022 (1º turno),Alagoas,2º turno,974156,102,1,11,0
+c0076,Lula,Luiz Inácio Lula da Silva,13,PT,Presidente 2022 (1º turno),Alagoas,2º turno,974156,102,1,11,0
+c0077,Lula,Luiz Inácio Lula da Silva,13,PT,Presidente 2022 (1º turno),Alagoas,2º turno,974156,102,2,11,0
+c0078,Lula,Luiz Inácio Lula da Silva,13,PT,Presidente 2022 (1º turno),Alagoas,2º turno,974156,102,2,11,0
+c0079,Lula,Luiz Inácio Lula da Silva,13,PT,Presidente 2022 (1º turno),Alagoas,2º turno,974156,102,1,11,0
+c0080,Lula,Luiz Inácio Lula da Silva,13,PT,Presidente 2022 (1º turno),Alagoas,2º turno,974156,102,1,11,0
+c0081,Lula,Luiz Inácio Lula da Silva,13,PT,Presidente 2022 (1º turno),Alagoas,2º turno,974156,102,1,11,0
+c0082,Lula,Luiz Inácio Lula da Silva,13,PT,Presidente 2022 (1º turno),Alagoas,2º turno,974156,102,1,11,0
+c0083,Lula,Luiz Inácio Lula da Silva,13,PT,Presidente 2022 (1º turno),Alagoas,2º turno,974156,102,2,11,0
+c0084,Lula,Luiz Inácio Lula da Silva,13,PT,Presidente 2022 (1º turno),Alagoas,2º turno,974156,102,2,11,0
+c0085,Lula,Luiz Inácio Lula da Silva,13,PT,Presidente 2022 (1º turno),Alagoas,2º turno,974156,102,1,11,0
+c0086,Lula,Luiz Inácio Lula da Silva,13,PT,Presidente 2022 (1º turno),Alagoas,2º turno,974156,102,2,11,0
+c0087,Lula,Luiz Inácio Lula da Silva,13,PT,Presidente 2022 (1º turno),Alagoas,2º turno,974156,102,2,11,0
+c0088,Lula,Luiz Inácio Lula da Silva,13,PT,Presidente 2022 (1º turno),Alagoas,2º turno,974156,102,2,11,0
+c0089,Lula,Luiz Inácio Lula da Silva,13,PT,Presidente 2022 (1º turno),Alagoas,2º turno,974156,102,2,11,0
+c0090,Lula,Luiz Inácio Lula da Silva,13,PT,Presidente 2022 (1º turno),Alagoas,2º turno,974156,102,1,11,0
+c0091,Lula,Luiz Inácio Lula da Silva,13,PT,Presidente 2022 (1º turno),Alagoas,2º turno,974156,102,2,11,0
+c0092,Lula,Luiz Inácio Lula da Silva,13,PT,Presidente 2022 (1º turno),Alagoas,2º turno,974156,102,1,11,0
+c0093,Lula,Luiz Inácio Lula da Silva,13,PT,Presidente 2022 (1º turno),Alagoas,2º turno,974156,102,1,11,0
+c0094,Lula,Luiz Inácio Lula da Silva,13,PT,Presidente 2022 (2º turno),Alagoas,2º turno,976831,102,2,2,0
+c0095,Lula,Luiz Inácio Lula da Silva,13,PT,Presidente 2022 (2º turno),Alagoas,2º turno,976831,102,1,2,0
+c0096,Lula,Luiz Inácio Lula da Silva,13,PT,Presidente 2022 (2º turno),Alagoas,2º turno,976831,102,1,2,0
+c0097,Lula,Luiz Inácio Lula da Silva,13,PT,Presidente 2022 (2º turno),Alagoas,2º turno,976831,102,2,2,0
+c0098,Lula,Luiz Inácio Lula da Silva,13,PT,Presidente 2022 (2º turno),Alagoas,2º turno,976831,102,1,2,0
+c0099,Lula,Luiz Inácio Lula da Silva,13,PT,Presidente 2022 (2º turno),Alagoas,2º turno,976831,102,1,2,0
+c0100,Lula,Luiz Inácio Lula da Silva,13,PT,Presidente 2022 (2º turno),Alagoas,2º turno,976831,102,2,2,0
+c0101,Lula,Luiz Inácio Lula da Silva,13,PT,Presidente 2022 (2º turno),Alagoas,2º turno,976831,102,2,2,0
+c0102,Lula,Luiz Inácio Lula da Silva,13,PT,Presidente 2022 (2º turno),Alagoas,2º turno,976831,102,2,2,0
+c0103,Lula,Luiz Inácio Lula da Silva,13,PT,Presidente 2022 (2º turno),Alagoas,2º turno,976831,102,1,2,0
+c0104,Lula,Luiz Inácio Lula da Silva,13,PT,Presidente 2022 (2º turno),Alagoas,2º turno,976831,102,1,2,0
+c0105,Lula,Luiz Inácio Lula da Silva,13,PT,Presidente 2022 (2º turno),Alagoas,2º turno,976831,102,2,2,0
+c0106,Lula,Luiz Inácio Lula da Silva,13,PT,Presidente 2022 (2º turno),Alagoas,2º turno,976831,102,2,2,0
+c0107,Lula,Luiz Inácio Lula da Silva,13,PT,Presidente 2022 (2º turno),Alagoas,2º turno,976831,102,1,2,0
+c0108,Lula,Luiz Inácio Lula da Silva,13,PT,Presidente 2022 (2º turno),Alagoas,2º turno,976831,102,1,2,0
+c0109,Lula,Luiz Inácio Lula da Silva,13,PT,Presidente 2022 (2º turno),Alagoas,2º turno,976831,102,1,2,0
+c0110,Lula,Luiz Inácio Lula da Silva,13,PT,Presidente 2022 (2º turno),Alagoas,2º turno,976831,102,1,2,0
+c0111,Lula,Luiz Inácio Lula da Silva,13,PT,Presidente 2022 (2º turno),Alagoas,2º turno,976831,102,2,2,0
+c0112,Lula,Luiz Inácio Lula da Silva,13,PT,Presidente 2022 (2º turno),Alagoas,2º turno,976831,102,2,2,0
+c0113,Lula,Luiz Inácio Lula da Silva,13,PT,Presidente 2022 (2º turno),Alagoas,2º turno,976831,102,1,2,0
+c0114,Lula,Luiz Inácio Lula da Silva,13,PT,Presidente 2022 (2º turno),Alagoas,2º turno,976831,102,2,2,0
+c0115,Lula,Luiz Inácio Lula da Silva,13,PT,Presidente 2022 (2º turno),Alagoas,2º turno,976831,102,2,2,0
+c0116,Lula,Luiz Inácio Lula da Silva,13,PT,Presidente 2022 (2º turno),Alagoas,2º turno,976831,102,2,2,0
+c0117,Lula,Luiz Inácio Lula da Silva,13,PT,Presidente 2022 (2º turno),Alagoas,2º turno,976831,102,2,2,0
+c0118,Lula,Luiz Inácio Lula da Silva,13,PT,Presidente 2022 (2º turno),Alagoas,2º turno,976831,102,1,2,0
+c0119,Lula,Luiz Inácio Lula da Silva,13,PT,Presidente 2022 (2º turno),Alagoas,2º turno,976831,102,2,2,0
+c0120,Lula,Luiz Inácio Lula da Silva,13,PT,Presidente 2022 (2º turno),Alagoas,2º turno,976831,102,1,2,0
+c0121,Lula,Luiz Inácio Lula da Silva,13,PT,Presidente 2022 (2º turno),Alagoas,2º turno,976831,102,1,2,0
+c0122,Damiao Tenorio,Damiao Tenorio da Silva,14333,PTB,Vereador 2020,Dois Riachos,Eleito,270,1,12,30,0
+c0123,Damiao Amaro,Damiao Amaro Silva,33000,PMN,Vereador 2020,Arapiraca,Não eleito,124,1,119,323,0
+c0124,Baderinho,Jose Nilson da Silva Santos,10111,REPUBLICANOS,Vereador 2020,Matriz de Camaragibe,Não eleito,10,1,61,85,0
+c0125,Aldo Gomes,Aldo Gomes dos Santos,13500,PT,Vereador 2020,São Miguel dos Campos,Não eleito,2,1,110,112,0
+c0126,Joao Batista,Joao Batista Alves dos Santos,13222,PT,Vereador 2020,São Miguel dos Campos,Não eleito,52,1,53,112,0
+c0127,Ze Alves,Jose Alves da Silva,13456,PT,Vereador 2020,São Miguel dos Campos,Não eleito,29,1,74,112,0
+c0128,Professora Quiteria Juliao,Maria Quiteria Juliao dos Santos,13000,PT,Vereador 2020,São Miguel dos Campos,Não eleito,146,1,32,112,0
+c0129,Tony do Sindicato,Antonio Efigenio Bezerra Neto,13115,PT,Vereador 2020,São Miguel dos Campos,Não eleito,18,1,81,112,0
+c0130,Marcos do Coité,Jose Marcos da Rocha e Silva Neto,13300,PT,Vereador 2020,São Miguel dos Campos,Não eleito,18,1,81,112,0
+c0131,Cicero do Pt,Cicero Mauro da Silva,13133,PT,Vereador 2020,São Miguel dos Campos,Não eleito,105,1,42,112,0
+c0132,Sistor,Ricardo Albino da Silva,13333,PT,Vereador 2020,São Miguel dos Campos,Não eleito,80,1,47,112,0
+c0133,Joelcio Felix,Jose Joelcio Felix da Silva,13111,PT,Vereador 2020,São Miguel dos Campos,Não eleito,0,0,112,112,0
+c0134,Biu Barbeiro,Benedito Firmino da Silva,13144,PT,Vereador 2020,São Miguel dos Campos,Não eleito,21,1,77,112,0
+c0135,Professor Pc,Paulo Cesar da Silva,13444,PT,Vereador 2020,São Miguel dos Campos,Não eleito,12,1,96,112,0
+c0136,Sandra Pereira,Sandra Pereira Santos,13110,PT,Vereador 2020,São Miguel dos Campos,Não eleito,10,1,100,112,0
+c0137,Jose Alberto,Jose Alberto de Lima Oliveira,13113,PT,Vereador 2020,São Miguel dos Campos,Não eleito,18,1,81,112,0
+c0138,Marisa do Bar,Marisa Luiz de Souza,13777,PT,Vereador 2020,São Miguel dos Campos,Não eleito,11,1,99,112,0
+c0139,Professora Roseane Amaro,Roseane Amaro de Souza,13123,PT,Vereador 2020,São Miguel dos Campos,Não eleito,106,1,41,112,0
+c0140,Genival Cardoso,Genival Cardoso de Alencar,13156,PT,Vereador 2020,São Miguel dos Campos,Não eleito,13,1,93,112,0
+c0141,Laise da Casa da Cerveja,Laise Maria Lima Sales,13112,PT,Vereador 2020,São Miguel dos Campos,Não eleito,12,1,96,112,0
+c0142,Isaias Fotografo,Isaias Felix de Menezes,15222,MDB,Vereador 2020,Arapiraca,Suplente,523,1,52,323,0
+c0143,Delmão,Adelmo Ferreira dos Santos,13555,PT,Vereador 2020,Palmeira dos Índios,Suplente,75,1,51,121,0
+c0144,Aderval Eltricista,Aderval Morais dos Santos,13134,PT,Vereador 2020,Palmeira dos Índios,Suplente,49,1,69,121,0
+c0145,Ivone,Ivone Oliveira Silva Costa,13888,PT,Vereador 2020,Palmeira dos Índios,Suplente,465,1,22,121,0
+c0146,Pastor Anilton,Anilton José Santos de Melo,13777,PT,Vereador 2020,Palmeira dos Índios,Suplente,23,1,95,121,0
+c0147,Sheila Duarte,Sheila Maria Duarte,13111,PT,Vereador 2020,Palmeira dos Índios,Eleito,954,1,9,121,0
+c0148,Cássio Júnio,Cássio Júnio Ferreira da Silva,13000,PT,Vereador 2020,Palmeira dos Índios,Suplente,358,1,27,121,0
+c0149,Antônio Silva,Antônio Inácio da Silva,13444,PT,Vereador 2020,Palmeira dos Índios,Suplente,63,1,55,121,0
+c0150,Milson Albuquerque,Claudemilson Albuquerque da Silva,13123,PT,Vereador 2020,Palmeira dos Índios,Suplente,28,1,90,121,0
+c0151,Janaína Vanderlei,Janaína Vanderlei da Silva,13222,PT,Vereador 2020,Palmeira dos Índios,Suplente,53,1,64,121,0
+c0152,Grazy,Graciane da Silva Holanda,13234,PT,Vereador 2020,Palmeira dos Índios,Suplente,17,1,106,121,0
+c0153,Jó Mototáxi,Josemilton Medeiros Souto,13666,PT,Vereador 2020,Palmeira dos Índios,Suplente,393,1,26,121,0
+c0154,Biu,Josivaldo Tavares de Souza,13333,PT,Vereador 2020,Palmeira dos Índios,Suplente,286,1,32,121,0
+c0155,Kokada,Jefferson Pontes dos Santos,13999,PT,Vereador 2020,Palmeira dos Índios,Suplente,41,1,80,121,0
+c0156,Joelma,Joelma Kellma dos Santos,13345,PT,Vereador 2020,Palmeira dos Índios,Suplente,8,1,118,121,0
+c0157,Zedequias,Zedequias Alves Ribeiro,40222,PSB,Vereador 2020,Delmiro Gouveia,Suplente,298,1,24,122,0
+c0158,Netinho,Negtton Silva Araujo,10999,REPUBLICANOS,Vereador 2020,Cajueiro,Suplente,243,1,16,64,0
+c0159,Dedé Melo,Jose Cicero Melo da Silva,10789,REPUBLICANOS,Vereador 2020,Cajueiro,Suplente,87,1,29,64,0
+c0160,Surica,Arivoleide Isabel Luz Surica,12121,PDT,Vereador 2020,Palmeira dos Índios,Suplente,54,1,63,121,0
+c0161,Luiz Carlos,Luiz Carlos dos Santos,10223,REPUBLICANOS,Vereador 2020,Santana do Ipanema,Não eleito,102,1,44,93,0
+c0162,Jaeliton Leite,Jaeliton Leite da Silva,13123,PT,Vereador 2020,Cajueiro,Não eleito,5,1,60,64,0
+c0163,Amélia,Maria Amelia Nunes dos Santos,13111,PT,Vereador 2020,Cajueiro,Não eleito,0,0,63,64,0
+c0164,Izabela Rezende,Izabela Rezende,12666,PDT,Vereador 2020,Penedo,Suplente,12,1,116,133,0
+c0165,Wendel Emiliano,Wendel Emiliano Barros,77111,SOLIDARIEDADE,Vereador 2020,Delmiro Gouveia,Eleito,874,1,12,122,0
+c0166,Ivam do Canal,Jose Ivam de Araujo Junior,77888,SOLIDARIEDADE,Vereador 2020,Delmiro Gouveia,Suplente,608,1,14,122,0
+c0167,Everton Rocha,Everton Henrique Barbosa Rocha,77777,SOLIDARIEDADE,Vereador 2020,Delmiro Gouveia,Eleito,1037,1,7,122,0
+c0168,Beto de Afonso,José Alberto Fernandes de Oliveira,11444,PP,Vereador 2020,Olho D'Água do Casado,Eleito,300,1,1,47,0
+c0169,Neno do Morro Vermelho,José Pereira da Silva,11111,PP,Vereador 2020,Olho D'Água do Casado,Eleito,298,1,2,47,0
+c0170,Rosangela,Maria Rosangela da Silva,13000,PT,Vereador 2020,Campo Alegre,Não eleito,22,1,39,54,0
+c0171,Marlene,Marlene Ferreira Gonzaga,13123,PT,Vereador 2020,Branquinha,Não eleito,43,1,27,66,0
+c0172,Lima,José de Lima Santos,13000,PT,Vereador 2020,Branquinha,Não eleito,10,1,45,66,0
+c0173,Leandro do Budão,Leandro Oliveira da Silva,13999,PT,Vereador 2020,Branquinha,Não eleito,1,1,61,66,0
+c0174,Pinho da Varge,Evangelista Silva Santos,13300,PT,Vereador 2020,Branquinha,Não eleito,22,1,32,66,0
+c0175,Rocha,Nivaldo Bezerra da Rocha,13333,PT,Vereador 2020,Branquinha,Não eleito,65,1,22,66,0
+c0176,Ana Paula,Ana Paula Ferreira da Silva,13555,PT,Vereador 2020,Branquinha,Não eleito,4,1,54,66,0
+c0177,Mônica,Mônica da Silva Gomes,13444,PT,Vereador 2020,Branquinha,Não eleito,1,1,61,66,0
+c0178,Dj Mia,Edmilson Jose da Silva,13222,PT,Vereador 2020,Branquinha,Não eleito,16,1,35,66,0
+c0179,Pedro da Farmácia,Pedro de Oliveira Ferreira,13111,PT,Vereador 2020,Branquinha,Não eleito,76,1,21,66,0
+c0180,Poia,Jose Uclessio da Silva,13777,PT,Vereador 2020,Branquinha,Não eleito,31,1,30,66,0
+c0181,Luciano Felix,Luciano Felix da Silva,13111,PT,Vereador 2020,Viçosa,Não eleito,9,1,48,59,0
+c0182,Bena Cordeiro,Benedita Cordeiro da Silva,13345,PT,Vereador 2020,Viçosa,Não eleito,21,1,43,59,0
+c0183,Paulinho Lima,Paulo Roberto Lima da Silva,13333,PT,Vereador 2020,Maceió,Suplente,362,1,174,539,0
+c0184,Val do Lenita,Josivaldo dos Santos,13250,PT,Vereador 2020,Maceió,Suplente,87,1,366,539,0
+c0185,Edvaldo,Edvaldo da Silva Prudêncio,13888,PT,Vereador 2020,Maceió,Suplente,66,1,394,539,0
+c0186,Dr. Valmir,Valmir de Melo Gomes,13613,PT,Vereador 2020,Maceió,Eleito,1691,1,57,539,0
+c0187,Abel Duarte,Abel Aurélio Duarte Filho,13331,PT,Vereador 2020,Maceió,Suplente,848,1,92,539,0
+c0188,Bárbara Nagman,Barbara Nagman Correia Rocha,13161,PT,Vereador 2020,Maceió,Suplente,100,1,344,539,0
+c0189,Eduardo Vasconcelos,Eduardo Jorge Vasconcelos de Lima,13500,PT,Vereador 2020,Maceió,Suplente,473,1,152,539,0
+c0190,Luanne Gomes,Luanne Gomes de Santana,13122,PT,Vereador 2020,Maceió,Suplente,63,1,401,539,0
+c0191,Val da Saude,Rozenval da Silva Santos,13657,PT,Vereador 2020,Maceió,Suplente,128,1,309,539,0
+c0192,Épelavidadasmulheres,Ana Maria Pereira,13213,PT,Vereador 2020,Maceió,Suplente,888,1,86,539,0
+c0193,Michelle Godoy,Michelle Cristine Godoy,13111,PT,Vereador 2020,Maceió,Suplente,38,1,467,539,0
+c0194,Coroné Volta Seca,Givaldo Alves da Silva,13131,PT,Vereador 2020,Maceió,Suplente,36,1,471,539,0
+c0195,Sargento Milton,Milton Araújo Silva,13100,PT,Vereador 2020,Maceió,Suplente,121,1,316,539,0
+c0196,Gino Cesar,Gino Cesar Menezes Paiva,13123,PT,Vereador 2020,Maceió,Suplente,524,1,139,539,0
+c0197,Sabino da Famecal,Antonio Sabino dos Santos,13222,PT,Vereador 2020,Maceió,Suplente,305,1,191,539,0
+c0198,Chico dos Discos,Francisco de Assis Camilo dos Santos,13777,PT,Vereador 2020,Maceió,Suplente,94,1,354,539,0
+c0199,Lourdes Alves,Maria de Lourdes Barboza Alves,13800,PT,Vereador 2020,Maceió,Suplente,95,1,351,539,0
+c0200,Tenório da Padaria,Jose Antonio Sales,13999,PT,Vereador 2020,Maceió,Suplente,516,1,142,539,0
+c0201,Joca do Clima Bom,Joaquim Noberto da Silva Neto,13665,PT,Vereador 2020,Maceió,Suplente,480,1,150,539,0
+c0202,Maria Lins,Maria José Castro D Almeida Lins,13033,PT,Vereador 2020,Maceió,Suplente,124,1,313,539,0
+c0203,Marcelo Tadeu,Marcelo Tadeu Lemos de Oliveira,13300,PT,Vereador 2020,Maceió,Suplente,356,1,177,539,0
+c0204,Sandra Lira,Sandra Lucia dos Santos Lira,13456,PT,Vereador 2020,Maceió,Suplente,662,1,114,539,0
+c0205,Sandro Reges,Sandro Reges de Oliveira,13113,PT,Vereador 2020,Maceió,Suplente,814,1,98,539,0
+c0206,Igbonan Rocha,Antônio Rocha dos Santos Filho,13013,PT,Vereador 2020,Maceió,Suplente,225,1,223,539,0
+c0207,Paulo Memória,Paulo Roberto Kuchenmeister de Memória,13900,PT,Vereador 2020,Maceió,Suplente,303,1,192,539,0
+c0208,Todos Mandato Coletivo,Jose Roberto Mendes do Amaral,13000,PT,Vereador 2020,Maceió,Suplente,1385,1,65,539,0
+c0209,Jane,Edijane Alves Santos Silva,13200,PT,Vereador 2020,Maceió,Suplente,189,1,257,539,0
+c0210,Theobaldo,Teobaldo Antonio da Silva,13789,PT,Vereador 2020,Maceió,Suplente,48,1,438,539,0
+c0211,Cícero Fotógrafo,José Cicero Floriano da Silva,33999,PMN,Vereador 2020,Cajueiro,Suplente,59,1,35,64,0
+c0212,Gerone Matos,Gerone de Matos Ferreira,13999,PT,Vereador 2020,Inhapi,Suplente,79,1,23,45,0
+c0213,Divan Ferreira,Divanildo dos Santos Gomes,13222,PT,Vereador 2020,Inhapi,Eleito,567,1,2,45,0
+c0214,Zé Alencar,José Alencar Delgado,13456,PT,Vereador 2020,Inhapi,Suplente,363,1,12,45,0
+c0215,Josefa Agente de Saúde,Josefa Lima Meneses da Silva,13111,PT,Vereador 2020,Inhapi,Suplente,38,1,29,45,0
+c0216,Leda do Mm Trp Al,Cícera Maria da Silva,13168,PT,Vereador 2020,Inhapi,Suplente,23,1,33,45,0
+c0217,Geraldo Coco,Geraldo Reis Guerra,13000,PT,Vereador 2020,Inhapi,Suplente,302,1,16,45,0
+c0218,Rosa do Sindicato,Rosilene Bezerra da Silva,13268,PT,Vereador 2020,Inhapi,Suplente,11,1,38,45,0
+c0219,Pequena,Maria Aparecida de Barros Costa,13444,PT,Vereador 2020,Inhapi,Suplente,38,1,29,45,0
+c0220,Cícero de Sessé,Cícero Rodrigues Lins,13234,PT,Vereador 2020,Inhapi,Eleito,388,1,10,45,0
+c0221,Bico Fino,Edilson Alcantara Bezerra,13555,PT,Vereador 2020,Inhapi,Suplente,116,1,21,45,0
+c0222,Professor Roseildo,Roseildo Francisco da Silva,13789,PT,Vereador 2020,Inhapi,Suplente,231,1,18,45,0
+c0223,Moab Damasceno,Moab Damasceno dos Santos,13123,PT,Vereador 2020,Inhapi,Eleito,467,1,7,45,0
+c0224,Dico de Orlando,Wellington Silva Meneses Freire,13333,PT,Vereador 2020,Inhapi,Eleito,517,1,5,45,0
+c0225,Maria Cicera,Maria Cicera Pereira de Almeida,13333,PT,Vereador 2020,Minador do Negrão,Suplente,20,1,22,30,0
+c0226,Seginaldo,Seginaldo Temoteo da Silva,13888,PT,Vereador 2020,Minador do Negrão,Suplente,35,1,21,30,0
+c0227,Jó do Moiseis,Josevan Moiseis da Silva,13456,PT,Vereador 2020,Minador do Negrão,Suplente,156,1,11,30,0
+c0228,Eronita Ferro,Eronita Oliveira Ferro,13111,PT,Vereador 2020,Minador do Negrão,Suplente,14,1,25,30,0
+c0229,Semar Oliveira,Josemar Pereira de Oliveira Silva,13000,PT,Vereador 2020,Minador do Negrão,Suplente,61,1,19,30,0
+c0230,Victor Barros,Joao Victor Barros Duarte Silva,13555,PT,Vereador 2020,Minador do Negrão,Suplente,105,1,15,30,0
+c0231,Gilmar Izidoro,Gilmar Izidoro da Silva,13123,PT,Vereador 2020,Minador do Negrão,Suplente,17,1,24,30,0
+c0232,Buhia,Jose Maria Honorio da Silva,13777,PT,Vereador 2020,Minador do Negrão,Eleito,179,1,9,30,0
+c0233,Zetty,Alfeu Paranhos Cesar,13222,PT,Vereador 2020,Minador do Negrão,Suplente,10,1,28,30,0
+c0234,Iara Soares,Iara Soares de Oliveira,13999,PT,Vereador 2020,Minador do Negrão,Suplente,11,1,27,30,0
+c0235,Joao Paulo Lima,Joao Paulo Alves da Silva,13789,PT,Vereador 2020,Marechal Deodoro,Suplente,393,1,26,172,0
+c0236,Paulinha Maga,Ana Paula Simons Juca de Farias,13777,PT,Vereador 2020,Marechal Deodoro,Suplente,8,1,148,172,0
+c0237,Wilker Guedes,Jose Wilker Quirino dos Santos,13444,PT,Vereador 2020,Marechal Deodoro,Suplente,198,1,39,172,0
+c0238,Luciano Vasconcelos,Jose Luciano Franca de Vasconcelos,13555,PT,Vereador 2020,Marechal Deodoro,Suplente,274,1,32,172,0
+c0239,Yuri Cortez,Yuri Cortez de Menezes,13333,PT,Vereador 2020,Marechal Deodoro,Eleito,759,1,9,172,0
+c0240,Augusto Granjeiro,Augusto Jorge Granjeiro Costa Carnauba,13888,PT,Vereador 2020,Marechal Deodoro,Eleito,1176,1,2,172,0
+c0241,Fran Silva,Franciele Lopes da Silva Omena,13013,PT,Vereador 2020,Marechal Deodoro,Suplente,59,1,70,172,0
+c0242,Quinô Souza,Maria Quino de Souza Leal,13616,PT,Vereador 2020,Marechal Deodoro,Suplente,19,1,118,172,0
+c0243,Roberto do Denisson,Roberto Paulino dos Santos,13666,PT,Vereador 2020,Marechal Deodoro,Suplente,19,1,118,172,0
+c0244,Denison Queiroz,Jose Denison Lima de Queiroz,13000,PT,Vereador 2020,Marechal Deodoro,Suplente,139,1,47,172,0
+c0245,Dr Everaldo,Jose Everaldo Souto,13456,PT,Vereador 2020,Marechal Deodoro,Suplente,682,1,16,172,0
+c0246,Andrea Pereira,Andrea Pereira dos Santos,13331,PT,Vereador 2020,Marechal Deodoro,Suplente,16,1,128,172,0
+c0247,Dra. Vanessa,Vanessa da Graça Tenorio,13111,PT,Vereador 2020,Marechal Deodoro,Suplente,89,1,61,172,0
+c0248,Jorge Protético,Jose Jorge dos Santos,13999,PT,Vereador 2020,Marechal Deodoro,Suplente,193,1,40,172,0
+c0249,Marcelo Oliveira,Marcelo Santos de Oliveira,13123,PT,Vereador 2020,Marechal Deodoro,Suplente,74,1,64,172,0
+c0250,Kleyton da Defesa Civil,Kleyton Jhon de Souza,13193,PT,Vereador 2020,Marechal Deodoro,Suplente,20,1,115,172,0
+c0251,Zé da Churrascaria,José Gomes de Barros,11444,PP,Vereador 2020,Poço das Trincheiras,Suplente,318,1,12,33,0
+c0252,Janaani de Teté,Janaani Silva Viana,11333,PP,Vereador 2020,Poço das Trincheiras,Eleito,352,1,7,33,0
+c0253,Nega de Edilton,Maria José da Silva,13777,PT,Vereador 2020,Olho D'Água do Casado,Suplente,9,1,36,47,0
+c0254,Lila de Chico,Jucileide Lima de Oliveira,13234,PT,Vereador 2020,Olho D'Água do Casado,Suplente,0,0,45,47,0
+c0255,Leonardo,Leonardo Pereira da Silva,13000,PT,Vereador 2020,Olho D'Água do Casado,Suplente,107,1,21,47,0
+c0256,Branca,Daniela Leite Gomes,13300,PT,Vereador 2020,Olho D'Água do Casado,Suplente,72,1,27,47,0
+c0257,Popô Matias,José Antônio Souza,13333,PT,Vereador 2020,Olho D'Água do Casado,Eleito,287,1,5,47,0
+c0258,Cleo Leite,Cleomarcio José Leite Santos,13444,PT,Vereador 2020,Olho D'Água do Casado,Eleito,157,1,16,47,0
+c0259,Gordo Riachão,Cícero Inácio dos Santos,13222,PT,Vereador 2020,Olho D'Água do Casado,Suplente,134,1,19,47,0
+c0260,Bidinha,Luciano de Souza Fernandes,13131,PT,Vereador 2020,Olho D'Água do Casado,Suplente,157,1,16,47,0
+c0261,Walter de Zé de Abel,José Walter de Melo,13123,PT,Vereador 2020,Olho D'Água do Casado,Suplente,102,1,23,47,0
+c0262,Jenildo do Nova Esperança,Jenildo Rodrigues Neres,13111,PT,Vereador 2020,Olho D'Água do Casado,Eleito,215,1,10,47,0
+c0263,Marcilene Amancio,Marcilene dos Santos Xavier,13555,PT,Vereador 2020,Olho D'Água do Casado,Suplente,5,1,38,47,0
+c0264,Erisvaldinho,Erisvaldo do Nascimento Pereira Filho,13456,PT,Vereador 2020,Olho D'Água do Casado,Suplente,116,1,20,47,0
+c0265,Alessandra,Alessandra da Silva Santos,13222,PT,Vereador 2020,Matriz de Camaragibe,Não eleito,7,1,70,85,0
+c0266,Josy Vasco,Josivaldo da Silva Lima,13111,PT,Vereador 2020,Matriz de Camaragibe,Não eleito,13,1,59,85,0
+c0267,Manu Vaqueira,Manuella Maria de Melo,13196,PT,Vereador 2020,Matriz de Camaragibe,Não eleito,3,1,77,85,0
+c0268,Val da Dulci,Edvaldo de Macario Lins,13123,PT,Vereador 2020,Matriz de Camaragibe,Não eleito,219,1,21,85,0
+c0269,Eneas da Honda,Cicero Jose dos Santos,13444,PT,Vereador 2020,Matriz de Camaragibe,Não eleito,5,1,75,85,0
+c0270,Marcelo Serafim,Marcelo Antonio Serafim,13877,PT,Vereador 2020,Matriz de Camaragibe,Não eleito,39,1,43,85,0
+c0271,Tonho da Bica,Antonio Manoel dos Santos,13555,PT,Vereador 2020,Matriz de Camaragibe,Não eleito,171,1,24,85,0
+c0272,Genilson Barbeiro,Genilson Manoel dos Santos,13234,PT,Vereador 2020,Matriz de Camaragibe,Não eleito,2,1,80,85,0
+c0273,Aninha,Ana Claudia dos Santos Nascimento,13888,PT,Vereador 2020,Matriz de Camaragibe,Não eleito,2,1,80,85,0
+c0274,Irmã Luzia,Luzia Silva dos Santos,13345,PT,Vereador 2020,Matriz de Camaragibe,Não eleito,10,1,61,85,0
+c0275,Mario Galdino,Amaro Galdino da Silva,13333,PT,Vereador 2020,Matriz de Camaragibe,Não eleito,261,1,18,85,0
+c0276,Pastor Douglas,Jose Faustino da Silva,13567,PT,Vereador 2020,Matriz de Camaragibe,Não eleito,34,1,47,85,0
+c0277,Pastor Hebert,Heberte Jose da Silva,13666,PT,Vereador 2020,Matriz de Camaragibe,Não eleito,3,1,77,85,0
+c0278,Barbosinha,José Barbosa da Silva,17123,PSL,Vereador 2020,Arapiraca,Suplente,603,1,49,323,0
+c0279,Budy,Jose Nilton da Silva,77123,SOLIDARIEDADE,Vereador 2020,Piranhas,Suplente,119,1,31,73,0
+c0280,Arlindo da Maciape,Arlindo Amaro da Silva,13000,PT,Vereador 2020,Porto Calvo,Não eleito,9,1,51,68,0
+c0281,Carla,Carla Jaciara da Silva Ferreira,13333,PT,Vereador 2020,Porto Calvo,Não eleito,9,1,51,68,0
+c0282,Judson Cabral,Judson Cabral de Santana,12500,PDT,Vereador 2020,Maceió,Não eleito,2419,1,47,539,0
+c0283,Washington Trindade,Washington Trindade do Nascimento,36007,PTC,Vereador 2020,Maceió,Suplente,99,1,347,539,0
+c0284,Luiz Neto,Luiz Tolentino de Novais Neto,15222,MDB,Vereador 2020,Murici,Suplente,459,1,14,36,0
+c0285,Raysa de Vera,Rayza Santos Silva,13000,PT,Vereador 2020,Canapi,Não eleito,19,1,26,38,0
+c0286,Zezinho do Celular,Jose Alexandre dos Santos,13333,PT,Vereador 2020,Canapi,Não eleito,32,1,24,38,0
+c0287,Zé Homem,Jose Ribeiro Neto,13444,PT,Vereador 2020,Canapi,Não eleito,0,0,38,38,0
+c0288,Quiteria do Tupete,Quiteria Vieira dos Santos,13111,PT,Vereador 2020,Canapi,Não eleito,2,1,36,38,0
+c0289,Fabiano,Fabiano Felix da Silva,11000,PP,Vereador 2020,Branquinha,Eleito,384,1,4,66,0
+c0290,Lucia Leite,Maria Lucia Leite da Silva,11333,PP,Vereador 2020,Branquinha,Suplente,213,1,13,66,0
+c0291,Pedro Paulo,Pedro Paulo Farias de Oliveira,13123,PT,Vereador 2020,Delmiro Gouveia,Não eleito,377,1,21,122,0
+c0292,Beto de Itaiba,Alberto Francisco de Oliveira,13000,PT,Vereador 2020,Delmiro Gouveia,Não eleito,19,1,99,122,0
+c0293,Felipe Ferreira,Felipe Ferreira da Silva,13222,PT,Vereador 2020,Delmiro Gouveia,Não eleito,75,1,58,122,0
+c0294,Lili do São Sebastião,Dorvalina Gomes da Natividade Santos,13456,PT,Vereador 2020,Delmiro Gouveia,Não eleito,56,1,71,122,0
+c0295,Bianca Araújo,Hellen Bianca Oliveira de Souza Araujo,13888,PT,Vereador 2020,Delmiro Gouveia,Não eleito,42,1,82,122,0
+c0296,Alain Siqueira,Alain Pessoa de Siqueira,13555,PT,Vereador 2020,Delmiro Gouveia,Não eleito,57,1,69,122,0
+c0297,Natiel Rodrigues,Natiel Rodrigues Gonçalves,13111,PT,Vereador 2020,Delmiro Gouveia,Não eleito,113,1,47,122,0
+c0298,Márcio Freitas,Marcio Fernando Freitas da Silva,13333,PT,Vereador 2020,Delmiro Gouveia,Não eleito,302,1,23,122,0
+c0299,Wyllyanne,Wyllyanne Steffanne Lima Farias,13999,PT,Vereador 2020,Santana do Ipanema,Não eleito,28,1,69,93,0
+c0300,Derival,Derival Cavalcante Rocha,13555,PT,Vereador 2020,Santana do Ipanema,Não eleito,30,1,67,93,0
+c0301,Adelmo da Saúde,Adelmo Cesário Neto,13333,PT,Vereador 2020,Santana do Ipanema,Não eleito,28,1,69,93,0
+c0302,José Carlos Carrero,José Carlos dos Santos,13333,PT,Vereador 2020,Belém,Não eleito,264,1,3,28,0
+c0303,Novinho,Jailson Vasconcelos de Lima,22333,PL,Vereador 2020,Branquinha,Eleito,318,1,7,66,0
+c0304,Costa,José Costa da Silva,22222,PL,Vereador 2020,Branquinha,Eleito,389,1,3,66,0
+c0305,Nivaldo do Cedro,Jose Nivaldo de Lima,22444,PL,Vereador 2020,Santana do Ipanema,Suplente,180,1,31,93,0
+c0306,Ze do Caminhão,Jose Tomas da Silva,15666,MDB,Vereador 2020,Dois Riachos,Suplente,204,1,14,30,0
+c0307,Professor Ielson,Ielson Oliveira Santana,15111,MDB,Vereador 2020,Dois Riachos,Suplente,341,1,9,30,0
+c0308,Marcos Alessandro,Marcos Alessandro Soares Melo,15111,MDB,Vereador 2020,Feira Grande,Suplente,309,1,15,37,0
+c0309,Cicero Empreiteiro,Cicero da Silva,15555,MDB,Vereador 2020,Cajueiro,Suplente,401,1,8,64,0
+c0310,Tony Markos,Antonio Marcos do Nascimento Silva,15123,MDB,Vereador 2020,Pariconha,Suplente,200,1,18,50,0
+c0311,Sabugo,Vladimir Feitosa da Silva,15333,MDB,Vereador 2020,Pariconha,Eleito,282,1,6,50,0
+c0312,Rosi do Posto,Rosiane Ferreira Gonçalves,13777,PT,Vereador 2020,Pariconha,Não eleito,7,1,44,50,0
+c0313,Binho Araujo,Clerisson da Conceição Araujo,13333,PT,Vereador 2020,Pariconha,Não eleito,126,1,21,50,0
+c0314,Deda de Alzira,Jose Manoel do Nascimento,13222,PT,Vereador 2020,Pariconha,Não eleito,152,1,19,50,0
+c0315,Leo Nascimento,Leonidia Bezerra do Nascimento,13555,PT,Vereador 2020,Pariconha,Não eleito,8,1,41,50,0
+c0316,Genivaldo de Caraibeiras,Genivaldo Alves de Sá,13111,PT,Vereador 2020,Pariconha,Não eleito,207,1,15,50,0
+c0317,Pom Sanfoneiro,Tony Andrade Feitosa,13666,PT,Vereador 2020,Pariconha,Não eleito,23,1,32,50,0
+c0318,Vania Sá,Vania Maria de Sá,13888,PT,Vereador 2020,Pariconha,Não eleito,6,1,45,50,0
+c0319,Ze Indio Jeripanco,Jose Oliveira,13444,PT,Vereador 2020,Pariconha,Não eleito,3,1,47,50,0
+c0320,França,Cícero Virgínio de França,13760,PT,Vereador 2020,Arapiraca,Não eleito,9,1,288,323,0
+c0321,Geraldo do Sindicato,Geraldo Balbino da Silva,13444,PT,Vereador 2020,Arapiraca,Não eleito,372,1,61,323,0
+c0322,Manoel Eusébio,Manoel Eusébio dos Santos Neto,13333,PT,Vereador 2020,Arapiraca,Não eleito,136,1,110,323,0
+c0323,Luciene Costa,Luciene Satírio da Costa,13456,PT,Vereador 2020,Arapiraca,Não eleito,81,1,165,323,0
+c0324,Mariley Carnaúba,Mariley Gomes Carnaúba dos Santos,13555,PT,Vereador 2020,Arapiraca,Não eleito,36,1,222,323,0
+c0325,Carlinho de Zezé,Carlos Antonio Vasconcelos de Oliveira,13233,PT,Vereador 2020,Arapiraca,Não eleito,75,1,173,323,0
+c0326,Fran Silva,Francisca Josefa da Silva,13500,PT,Vereador 2020,Arapiraca,Não eleito,48,1,203,323,0
+c0327,Foguinho do Arrocha,Nildo José Henrique dos Santos,13109,PT,Vereador 2020,Arapiraca,Não eleito,28,1,236,323,0
+c0328,Eliete Dp Pau Darco,Eliete Maria da Silva,13123,PT,Vereador 2020,Arapiraca,Não eleito,43,1,212,323,0
+c0329,Ronaldo Perninha,Carlos Ronaldo Augusto de Lima,13513,PT,Vereador 2020,Arapiraca,Não eleito,10,1,286,323,0
+c0330,Girlene do Laranjal,Maria Girlene dos Santos,13175,PT,Vereador 2020,Arapiraca,Não eleito,13,1,273,323,0
+c0331,Joãozinho Braúna,João José Marques da Silva,13000,PT,Vereador 2020,Arapiraca,Não eleito,475,1,54,323,0
+c0332,Rosalvo Caicó,José Rosalvo de Oliveira,13113,PT,Vereador 2020,Arapiraca,Não eleito,25,1,243,323,0
+c0333,Zacarias do Pt,José Zacarias de Souza,13115,PT,Vereador 2020,Arapiraca,Não eleito,23,1,249,323,0
+c0334,Luciano Barbosa da Silva,Luciano Barbosa da Silva,13222,PT,Vereador 2020,Arapiraca,Não eleito,40,1,216,323,0
+c0335,João do Flau,João Honório da Silva,50000,PSOL,Vereador 2020,Arapiraca,Não eleito,54,1,195,323,0
+c0336,Antônio Timóteo,José Antônio Timóteo de Souza,13333,PT,Vereador 2020,Colônia Leopoldina,Não eleito,186,1,20,57,0
+c0337,Jane Silva,Edjane da Silva,13123,PT,Vereador 2020,Colônia Leopoldina,Não eleito,74,1,29,57,0
+c0338,Irmão Luis Carlos,Luis Carlos da Silva do Nascimento,13111,PT,Vereador 2020,Colônia Leopoldina,Não eleito,51,1,33,57,0
+c0339,Girlan França,Girlan Luiz Silva de França,13500,PT,Vereador 2020,Colônia Leopoldina,Não eleito,23,1,39,57,0
+c0340,Prof Zé de Melo,José Francisco de Melo Neto,13222,PT,Vereador 2020,Colônia Leopoldina,Não eleito,42,1,35,57,0
+c0341,Flávia,Flávia Maria da Silva,13000,PT,Vereador 2020,Colônia Leopoldina,Não eleito,22,1,40,57,0
+c0342,Alcione A Menina da Saúde,Alcione Maria da Silva,13456,PT,Vereador 2020,Colônia Leopoldina,Não eleito,89,1,27,57,0
+c0343,Moisés Barreto,Moises Barreto do Nascimento,13444,PT,Vereador 2020,Colônia Leopoldina,Não eleito,27,1,38,57,0
+c0344,Cícero Mamãe,Cicero Ramos da Silva,12222,PDT,Vereador 2020,Colônia Leopoldina,Não eleito,87,1,28,57,0
+c0345,Rafa de Erivan,Antonio Rafael Ferreira Ramos,45666,PSDB,Vereador 2020,Poço das Trincheiras,Eleito,390,1,5,33,0
+c0346,Jerffson Wilknson,Jerffson Wilknson Rodrigues Correia,13456,PT,Vereador 2020,União dos Palmares,Não eleito,19,1,118,193,0
+c0347,Gil Alcina,Gilsineide Alcina da Silva,13135,PT,Vereador 2020,União dos Palmares,Não eleito,10,1,148,193,0
+c0348,Daniel Borges,Daniel Borges Cardoso dos Santos,13123,PT,Vereador 2020,União dos Palmares,Não eleito,52,1,76,193,0
+c0349,Leandro Diniz,Leandro Diniz,13777,PT,Vereador 2020,União dos Palmares,Não eleito,12,1,139,193,0
+c0350,Maria do Carmo,Maria da Conceição do Carmo,13444,PT,Vereador 2020,União dos Palmares,Não eleito,20,1,114,193,0
+c0351,Marta de Souza,Marta Ferreira de Souza,13888,PT,Vereador 2020,União dos Palmares,Não eleito,18,1,119,193,0
+c0352,Samuel Zumba,Samuel Francisco de Freitas,13222,PT,Vereador 2020,União dos Palmares,Não eleito,17,1,123,193,0
+c0353,Coletivo Nossa Voz,Samuel Oliveira de Macedo Monteiro,13000,PT,Vereador 2020,União dos Palmares,Não eleito,147,1,41,193,0
+c0354,Misiara Horácio,Misiara Silva dos Santos,15999,MDB,Vereador 2020,Canapi,Não eleito,12,1,29,38,0
+c0355,Cicinho,Cicero Silvestre Neto,15000,MDB,Vereador 2020,Canapi,Não eleito,227,1,19,38,0
+c0356,Mercinho,Antônio Emerson Alécio Barbosa,14222,PTB,Vereador 2020,Lagoa da Canoa,Não eleito,8,1,70,78,0
+c0357,Liz Souza,Liz Diana de Souza,14789,PTB,Vereador 2020,Lagoa da Canoa,Não eleito,5,1,74,78,0
+c0358,Elias Silva,Elias da Silva Oliveira,55777,PSD,Vereador 2020,União dos Palmares,Suplente,14,1,132,193,0
+c0359,Leleu,Everaldo Ferreira dos Santos,55222,PSD,Vereador 2020,União dos Palmares,Suplente,14,1,132,193,0
+c0360,Teca Nelma,Tereza Nelma Porto Viana Soares,45444,PSDB,Vereador 2020,Maceió,Eleito,4578,1,20,539,0
+c0361,Josina,Maria Josina dos Santos,13333,PT,Vereador 2020,Feliz Deserto,Não eleito,4,1,28,45,0
+c0362,Governo,Jose Antonio da Silva,13456,PT,Vereador 2020,Feliz Deserto,Não eleito,4,1,28,45,0
+c0363,Dilene Carvalho,Adilene da Conceição Silva,45333,PSDB,Vereador 2020,União dos Palmares,Não eleito,13,1,135,193,0
+c0364,Val da Iracema,Evaldo Ferreira da Silva,13123,PT,Vereador 2020,Atalaia,Não eleito,19,1,51,63,0
+c0365,Nena da Verdura,Maria Cicera da Conceição,13555,PT,Vereador 2020,Atalaia,Não eleito,11,1,57,63,0
+c0366,Neno Gari,José Cicero Tertuliano dos Santos,13000,PT,Vereador 2020,Atalaia,Não eleito,15,1,53,63,0
+c0367,Jonnathan Melo,Jonnathan Rossi Matos de Melo,13222,PT,Vereador 2020,Atalaia,Não eleito,22,1,50,63,0
+c0368,Zuleide Federal,Zuleide Anselmo dos Santos,13666,PT,Vereador 2020,Atalaia,Não eleito,6,1,61,63,0
+c0369,Júlio Cesar,Júlio Cesar dos Santos,13333,PT,Vereador 2020,Atalaia,Não eleito,24,1,49,63,0
+c0370,Elena Guilherme,Marilene Guilherme de Almeida,13777,PT,Vereador 2020,Atalaia,Não eleito,2,1,63,63,0
+c0371,Junior Bras,Wellington Junior Bras,13456,PT,Vereador 2020,Piranhas,Não eleito,2,1,70,73,0
+c0372,Gizelda,Gizelda Maria da Silva,13113,PT,Vereador 2020,Piranhas,Não eleito,25,1,50,73,0
+c0373,Glauco Farma,José Glauco dos Santos,14111,PTB,Vereador 2020,Anadia,Suplente,249,1,13,32,0
+c0374,Cicero Duarte,Cicero Duarte de Oliveira,13333,PT,Vereador 2020,Coqueiro Seco,Não eleito,7,1,62,77,0
+c0375,Eraldo do Cadoz,Eraldo Alves Monteiro,13123,PT,Vereador 2020,Coqueiro Seco,Não eleito,13,1,50,77,0
+c0376,Arleane Soares,Arleane Soares dos Santos,13000,PT,Vereador 2020,Coqueiro Seco,Não eleito,3,1,72,77,0
+c0377,Laleska Silvestre,Lalesca Silvestre da Silva,13123,PT,Vereador 2020,Santa Luzia do Norte,Não eleito,38,1,30,56,0
+c0378,Kessinho,Klebson Santos Gomes,13024,PT,Vereador 2020,Santa Luzia do Norte,Não eleito,7,1,45,56,0
+c0379,Cícera Bispo,Maria Cícera Bispo Silva,13113,PT,Vereador 2020,Santa Luzia do Norte,Não eleito,21,1,38,56,0
+c0380,Karine do Rui,Karine Jesus Rios,13300,PT,Vereador 2020,Santa Luzia do Norte,Não eleito,7,1,45,56,0
+c0381,João Pereira,João Pereira da Silva,13000,PT,Vereador 2020,Santa Luzia do Norte,Não eleito,11,1,43,56,0
+c0382,Hedriano Rocha,Hedriano da Rocha Lima,13333,PT,Vereador 2020,Santa Luzia do Norte,Não eleito,2,1,53,56,0
+c0383,Verônica do Mutirão,Ligia Verônica Gomes do Nascimento,13013,PT,Vereador 2020,Santa Luzia do Norte,Não eleito,1,1,56,56,0
+c0384,Junior  Back,Jose Francisco dos Santos Junior,13013,PT,Vereador 2020,Maragogi,Não eleito,9,1,59,70,0
+c0385,Thaimára,Thaimára Lima Vinhote de Ataide,13023,PT,Vereador 2020,Maragogi,Não eleito,9,1,59,70,0
+c0386,Norma,Norma Maria de Campos,13567,PT,Vereador 2020,Maragogi,Não eleito,15,1,51,70,0
+c0387,Edmilson,Edmilson José da Silva,13111,PT,Vereador 2020,Maragogi,Não eleito,39,1,38,70,0
+c0388,Samuel de Massangana,Samuel Arlindo da Silva,13123,PT,Vereador 2020,Maragogi,Não eleito,94,1,29,70,0
+c0389,Jose Wellington,José Wellington dos Santos,13458,PT,Vereador 2020,Maragogi,Não eleito,12,1,57,70,0
+c0390,Anselmo,Anselmo Alves da Silva,13122,PT,Vereador 2020,Maragogi,Não eleito,9,1,59,70,0
+c0391,Cicero,Cicero Antônio dos Santos,13017,PT,Vereador 2020,Maragogi,Não eleito,15,1,51,70,0
+c0392,Robertinho,Roberto Carlos José dos Santos Filho,13024,PT,Vereador 2020,Maragogi,Não eleito,7,1,66,70,0
+c0393,Malaquias,Antonio Marcos Ferreira,13222,PT,Vereador 2020,Maragogi,Não eleito,33,1,41,70,0
+c0394,Renildo,Renildo José Aquino da Silva,13333,PT,Vereador 2020,Maragogi,Não eleito,37,1,39,70,0
+c0395,Jó,Josuel Antônio de Lima,13000,PT,Vereador 2020,Maragogi,Não eleito,80,1,31,70,0
+c0396,Edjane,Edjane Maria da Silva,13999,PT,Vereador 2020,Maragogi,Não eleito,15,1,51,70,0
+c0397,Francisco,Francisco Pereira Campos,13444,PT,Vereador 2020,Maragogi,Não eleito,17,1,48,70,0
+c0398,Nil,Rosenilda Maria Ramos da Silva,13555,PT,Vereador 2020,Maragogi,Não eleito,14,1,55,70,0
+c0399,Nega Espelho da Lua,Maria Jose dos Santos,13333,PT,Vereador 2020,Pão de Açúcar,Não eleito,28,1,56,78,0
+c0400,Rodolfo Lima,Rodolfo dos Santos Lima,13456,PT,Vereador 2020,Pão de Açúcar,Não eleito,72,1,41,78,0
+c0401,Geraldo do Conselho,Jose Geraldo Gonçalves,40000,PSB,Vereador 2020,Água Branca,Suplente,129,1,26,65,0
+c0402,Gilvan dos Prazeres,Gilvan Emídio da Silva,13333,PT,Vereador 2020,Flexeiras,Não eleito,4,1,49,53,0
+c0403,Tiririca,José Fernando Araújo da Silva,13111,PT,Vereador 2020,Flexeiras,Não eleito,0,0,53,53,0
+c0404,Sandra Sertaneja,Sandra Santos da Silva,13222,PT,Vereador 2020,Flexeiras,Não eleito,5,1,48,53,0
+c0405,Zuza da Pedra Grande,Josefa Maria dos Santos Lins,13777,PT,Vereador 2020,Flexeiras,Não eleito,10,1,44,53,0
+c0406,Selma Sebastião Gomes,Maria Selma Lopes da Silva,13888,PT,Vereador 2020,Flexeiras,Não eleito,3,1,51,53,0
+c0407,Pablo,Pablo Fabricio da Silva Nascimento,13999,PT,Vereador 2020,Flexeiras,Não eleito,4,1,49,53,0
+c0408,Nil da Usina,Genilson Renato dos Santos da Silva,13123,PT,Vereador 2020,Flexeiras,Não eleito,10,1,44,53,0
+c0409,Selma do Rio Bonito,Maria Selma da Silva,13555,PT,Vereador 2020,Flexeiras,Não eleito,34,1,35,53,0
+c0410,Débora Marcolino,Débora Marcolino da Silva,13000,PT,Vereador 2020,Flexeiras,Não eleito,143,1,17,53,0
+c0411,Arlindo Machado,Arlindo Ferreira Machado Junior,13000,PT,Vereador 2020,Olho D'Água das Flores,Não eleito,8,1,50,50,0
+c0412,Luciano Rodrigues,Luciano dos Santos Rodrigues,13456,PT,Vereador 2020,Olho D'Água das Flores,Não eleito,13,1,46,50,0
+c0413,Luiza Bezerra,Luiza Claudia Omena Bezerra,13801,PT,Vereador 2020,Maceió,Suplente,36,1,471,539,0
+c0414,Chirleide Cristina,Chirleide Cristina Soares dos Santos,13002,PT,Vereador 2020,Maragogi,Não eleito,8,1,63,70,0
+c0415,Marcio Freitas,Marcio Fernando Freitas da Silva,11999,PP,Vereador 2024,Delmiro Gouveia,Eleito,376,1,24,61,0
+c0416,Natiel Divulgações,Natiel Rodrigues Goncalves,11456,PP,Vereador 2024,Delmiro Gouveia,Suplente,373,1,25,61,0
+c0417,Gilmara da Saude,Gilmara Gonçalves de Barros,13444,PT,Vereador 2024,Delmiro Gouveia,Suplente,23,1,57,61,0
+c0418,Wendel Emiliano,Wendel Emiliano Barros,13111,PT,Vereador 2024,Delmiro Gouveia,Suplente,573,1,20,61,0
+c0419,Danda da Pedra Velha,Eroniel Rocha da Silva,13555,PT,Vereador 2024,Delmiro Gouveia,Suplente,100,1,45,61,0
+c0420,Zedequias,Zedequias Alves Ribeiro,13888,PT,Vereador 2024,Delmiro Gouveia,Suplente,235,1,31,61,0
+c0421,Chicão Faz Tudo,Emerson Clepton Souza Freitas,13000,PT,Vereador 2024,Delmiro Gouveia,Suplente,141,1,39,61,0
+c0422,Everton Rocha,Everton Henrique Barbosa Rocha,13777,PT,Vereador 2024,Delmiro Gouveia,Suplente,823,1,13,61,0
+c0423,Professor Pedro Paulo,Pedro Paulo Farias de Oliveira,13123,PT,Vereador 2024,Delmiro Gouveia,Suplente,252,1,30,61,0
+c0424,Kelly do Leite,Cleia Alves dos Santos,13333,PT,Vereador 2024,Delmiro Gouveia,Suplente,43,1,49,61,0
+c0425,Lili do Caixão,Dorvalina Gomes da Natividade Santos,13456,PT,Vereador 2024,Delmiro Gouveia,Suplente,12,1,60,61,0
+c0426,Tony Cloves,Tony Cloves Pereira,13789,PT,Vereador 2024,Delmiro Gouveia,Suplente,103,1,44,61,0
+c0427,Renato Torres,Renato David Torres de Oliveira,13222,PT,Vereador 2024,Delmiro Gouveia,Eleito,1330,1,7,61,0
+c0428,Paula Sem Terra,Ana Paula Ferreira da Silva,13123,PT,Vereador 2024,Olho D'Água do Casado,Suplente,170,1,14,39,0
+c0429,Erisvaldinho,Erisvaldo do Nascimento Pereira Filho,13456,PT,Vereador 2024,Olho D'Água do Casado,Suplente,131,1,18,39,0
+c0430,Irmã Zélia,Maria Zélia do Nascimento,13567,PT,Vereador 2024,Olho D'Água do Casado,Suplente,134,1,17,39,0
+c0431,Leonardo Pereira,Leonardo Pereira da Silva,13000,PT,Vereador 2024,Olho D'Água do Casado,Suplente,150,1,16,39,0
+c0432,Fábio Silva,Fábio Silva Farias,13555,PT,Vereador 2024,Olho D'Água do Casado,Suplente,229,1,12,39,0
+c0433,Cléo Leite,Cleomárcio José Leite Santos,13444,PT,Vereador 2024,Olho D'Água do Casado,Eleito,328,1,6,39,0
+c0434,Marcilene Amâncio,Marcilene dos Santos Xavier,13131,PT,Vereador 2024,Olho D'Água do Casado,Suplente,13,1,36,39,0
+c0435,Neno do Morro Vermelho,José Pereira da Silva,13222,PT,Vereador 2024,Olho D'Água do Casado,Eleito,347,1,5,39,0
+c0436,Beto de Afonso,José Alberto Fernandes de Oliveira,13333,PT,Vereador 2024,Olho D'Água do Casado,Eleito,292,1,8,39,0
+c0437,Jenildo do Nova Esperança,Jenildo Rodrigues Neres,13111,PT,Vereador 2024,Olho D'Água do Casado,Eleito,262,1,10,39,0
+c0438,Luan Galvão,Luan Leyre Gonçalves Carvalho Galvão,13222,PT,Vereador 2024,Piranhas,Suplente,410,1,16,56,0
+c0439,Aline Amaral,Aline Ruth Laurindo Loula,13777,PT,Vereador 2024,Piranhas,Suplente,432,1,15,56,0
+c0440,Leninha Professora,Edilene Lira da Silva,13111,PT,Vereador 2024,Piranhas,Suplente,20,1,46,56,0
+c0441,Mayr Andrade,Osmay Andrade Silva,13444,PT,Vereador 2024,Piranhas,Suplente,32,1,44,56,0
+c0442,Rosa Maria,Rosa Maria da Silva Santos,13333,PT,Vereador 2024,Piranhas,Suplente,74,1,33,56,0
+c0443,Michele Correia,Cícera Michele Santos Correia,13555,PT,Vereador 2024,Piranhas,Suplente,141,1,25,56,0
+c0444,Elisângela Moraes,Elisângela Venuto Moraes,13888,PT,Vereador 2024,Piranhas,Suplente,82,1,32,56,0
+c0445,Zé Neto do Mst,José da Silva Santos,13130,PT,Vereador 2024,Piranhas,Eleito,441,1,14,56,0
+c0446,Irany Enfermeira,Irany Maria de Mesquita Lima,13000,PT,Vereador 2024,Piranhas,Suplente,20,1,46,56,0
+c0447,Edvirson Correia,Edvirson Nobre Correia,13999,PT,Vereador 2024,Piranhas,Suplente,17,1,49,56,0
+c0448,George Rodrigues,George Rodrigues Araújo,13456,PT,Vereador 2024,Piranhas,Suplente,10,1,54,56,0
+c0449,Budy,José Nilton da Silva,13123,PT,Vereador 2024,Piranhas,Suplente,47,1,40,56,0
+c0450,Professor Luizinho,Luiz Gomes da Rocha,13913,PT,Vereador 2024,Maceió,Suplente,640,1,118,305,0
+c0451,Pastor Wellington do Pinheiro,Wellington Santos,13222,PT,Vereador 2024,Maceió,Suplente,2759,1,45,305,0
+c0452,Alê Costa,Alessandra Marcia da Costa,13456,PT,Vereador 2024,Maceió,Suplente,973,1,86,305,0
+c0453,Marcelo Nascimento,Jose Marcelo do Nascimento,13000,PT,Vereador 2024,Maceió,Suplente,693,1,109,305,0
+c0454,Dr Valmir,Valmir de Melo Gomes,13613,PT,Vereador 2024,Maceió,Suplente,2566,1,47,305,0
+c0455,Teca Nelma,Tereza Nelma Porto Viana Soares,13444,PT,Vereador 2024,Maceió,Eleito,9969,1,8,305,0
+c0456,Alycia da Bancada Negra,Alycia Eduarda Oliveira da Silva,13200,PT,Vereador 2024,Maceió,Suplente,3025,1,42,305,0
+c0457,Paulo Sérgio,Paulo Sérgio Moreira da Silva,13555,PT,Vereador 2024,Maceió,Suplente,439,1,146,305,0
+c0458,Basile,Basile Georges Campos Christopoulos,13123,PT,Vereador 2024,Maceió,Suplente,1485,1,67,305,0
+c0459,Tenório da Padaria,José Antônio Sales,13999,PT,Vereador 2024,Maceió,Suplente,519,1,130,305,0
+c0460,Sirlene Rasteirinha,Sirlene Gomes da Silva,13777,PT,Vereador 2024,Maceió,Suplente,219,1,208,305,0
+c0461,Elida Miranda,Elida Rachel Miranda Sousa,13500,PT,Vereador 2024,Maceió,Suplente,844,1,94,305,0
+c0462,Siloane,Siloane Pereira da Silva,13400,PT,Vereador 2024,Maceió,Suplente,165,1,229,305,0
+c0463,Biu da Canafistula,Josivaldo Tavares de Souza,77999,SOLIDARIEDADE,Vereador 2024,Palmeira dos Índios,Suplente,346,1,36,125,0
+c0464,Ivone Basilio,Ivone Oliveira Silva Costa,77100,SOLIDARIEDADE,Vereador 2024,Palmeira dos Índios,Suplente,403,1,30,125,0
+c0465,Popô Matias,José Antonio Souza,15555,MDB,Vereador 2024,Olho D'Água do Casado,Eleito,362,1,3,39,0
+c0466,Tencel Danielli,Marcia Danielli Silva de Assunção,22181,PL,Vereador 2024,Maceió,Suplente,1016,1,81,305,0
+c0467,Emanuella Gomes,Emanuella Gomes da Silva,13123,PT,Vereador 2024,São Miguel dos Campos,Suplente,44,1,66,80,0
+c0468,Claudio Julião,Claudio Junior Julião dos Santos,13333,PT,Vereador 2024,São Miguel dos Campos,Suplente,413,1,28,80,0
+c0469,Lalesca Silvestre,Lalesca Silvestre da Silva,11555,PP,Vereador 2024,Santa Luzia do Norte,Suplente,7,1,42,48,0
+c0470,Alcione da Saude,Alcione Maria da Silva,12345,PDT,Vereador 2024,Colônia Leopoldina,Não eleito,33,1,32,51,0
+c0471,Zé do Caminhão,José Tomas da Silva,13456,PT,Vereador 2024,Dois Riachos,Não eleito,0,0,21,27,292
+c0472,Ielson Macena,Ielson Oliveira Santana,13000,PT,Vereador 2024,Dois Riachos,Não eleito,0,0,21,27,411
+c0473,Deysinha Bodinho,Deyse Kristiny Ferreira Silva,13111,PT,Vereador 2024,Dois Riachos,Não eleito,0,0,21,27,17
+c0474,Natane Soares,Natane Ingrid Soares de Souza,13123,PT,Vereador 2024,Dois Riachos,Não eleito,0,0,21,27,157
+c0475,Damião Tenório,Damião Tenório da Silva,13333,PT,Vereador 2024,Dois Riachos,Não eleito,0,0,21,27,198
+c0476,Jeferson Braz,José Jeferson Braz da Silva,13222,PT,Vereador 2024,Dois Riachos,Não eleito,0,0,21,27,37
+c0477,Roberta Heloisa,Roberta Heloísa da Silva,13999,PT,Vereador 2024,Dois Riachos,Não eleito,0,0,21,27,2
+c0478,Samuel de Massangana,Samuel Arlindo da Silva,44123,UNIÃO,Vereador 2024,Maragogi,Suplente,182,1,27,77,0
+c0479,Diogo da Inclusão,Diogo Rafael Costa de Alcantara Ferreira,13333,PT,Vereador 2024,Penedo,Suplente,119,1,63,111,0
+c0480,Izabela Rezende,Izabela Costa Rezende,13122,PT,Vereador 2024,Penedo,Suplente,8,1,110,111,0
+c0481,Evanilson do Esporte,Evanilson Nunes dos Santos,13222,PT,Vereador 2024,Penedo,Suplente,219,1,46,111,0
+c0482,Jorginho Seixas,Jorge Seixas Serapião,13444,PT,Vereador 2024,Penedo,Suplente,163,1,54,111,0
+c0483,Eline da Banca de Revista,Eline Ferreira da Silva,13555,PT,Vereador 2024,Penedo,Suplente,51,1,76,111,0
+c0484,Joca do Clima Bom,Joaquim Noberto da Silva Neto,15345,MDB,Vereador 2024,Maceió,Suplente,447,1,143,305,0
+c0485,Professor Dilson,Dilson Batista Ferreira,12321,PDT,Vereador 2024,Maceió,Suplente,1751,1,65,305,0
+c0486,Marcondes Costa,Marcondes Ricardson Torres Costa,12123,PDT,Vereador 2024,Maceió,Suplente,793,1,100,305,0
+c0487,Mauricio Rei do Maracujá,Mauricio Gomes Ferreira,13222,PT,Vereador 2024,Branquinha,Suplente,52,1,24,30,0
+c0488,Novinho,Jailson Vasconcelos de Lima,13111,PT,Vereador 2024,Branquinha,Eleito,590,1,2,30,0
+c0489,Alexandre do Maracujá,Alexandre da Silva,13999,PT,Vereador 2024,Branquinha,Suplente,104,1,16,30,0
+c0490,Marcelo Ferreira,Marcelo Ferreira da Silva,13555,PT,Vereador 2024,Branquinha,Suplente,293,1,13,30,0
+c0491,Dai Sem Terra,Daiana Oliveira da Silva,13123,PT,Vereador 2024,Branquinha,Suplente,118,1,15,30,0
+c0492,Givaldo do Acordeon,Givaldo Vieira de Oliveira,13444,PT,Vereador 2024,Branquinha,Suplente,59,1,22,30,0
+c0493,Lucia Leite,Maria Lucia Leite da Silva,13777,PT,Vereador 2024,Branquinha,Eleito,498,1,5,30,0
+c0494,Gracy Vaqueira,Gracyane Ferreira de Lima,13666,PT,Vereador 2024,Branquinha,Suplente,2,1,30,30,0
+c0495,Costa,Jose Costa da Silva,13000,PT,Vereador 2024,Branquinha,Eleito,449,1,6,30,0
+c0496,Fabiano Felix,Fabiano Felix da Silva,13333,PT,Vereador 2024,Branquinha,Eleito,592,1,1,30,0
+c0497,Augusto Granjeiro,Augusto Jorge Granjeiro Costa Carnaúba,15888,MDB,Vereador 2024,Marechal Deodoro,Eleito,1596,1,6,112,0
+c0498,Yuri Cortez,Yuri Cortez de Menezes,15555,MDB,Vereador 2024,Marechal Deodoro,Eleito,1608,1,4,112,0
+c0499,Isabel,Isabel Pereira da Silva,13110,PT,Vereador 2024,Lagoa da Canoa,Não eleito,13,1,52,58,0
+c0500,Ernande,Ernandes Ciriaco Silva,13123,PT,Vereador 2024,Lagoa da Canoa,Não eleito,3,1,56,58,0
+c0501,Suruagy,Jose Emanuel Farias Ribeiro,13789,PT,Vereador 2024,Lagoa da Canoa,Não eleito,99,1,34,58,0
+c0502,Liz Souza,Liz Diana de Souza,13000,PT,Vereador 2024,Lagoa da Canoa,Não eleito,2,1,58,58,0
+c0503,Mecinho,Antonio Emerson Alecio Barbosa,13131,PT,Vereador 2024,Lagoa da Canoa,Não eleito,17,1,49,58,0
+c0504,Zé Francisco,José Francisco Sobrinho,13313,PT,Vereador 2024,Lagoa da Canoa,Não eleito,13,1,52,58,0
+c0505,Dr Betinho,José Alberto de Oliveira Filho,13333,PT,Vereador 2024,Lagoa da Canoa,Não eleito,140,1,27,58,0
+c0506,Demacol,Ademar Alves de Brito,13133,PT,Vereador 2024,Santana do Ipanema,Não eleito,7,1,66,68,0
+c0507,Valdinho Cruz,Edvaldo Ribeiro da Cruz,13300,PT,Vereador 2024,Santana do Ipanema,Não eleito,19,1,53,68,0
+c0508,Felix Teles,Felix Teles de Melo,13444,PT,Vereador 2024,Santana do Ipanema,Não eleito,15,1,57,68,0
+c0509,Nivaldo do Cedro,José Nivaldo de Lima,13000,PT,Vereador 2024,Santana do Ipanema,Não eleito,292,1,27,68,0
+c0510,Professor Paulo César,Paulo Cesar Eufrasio da Silva,13333,PT,Vereador 2024,Santana do Ipanema,Não eleito,270,1,28,68,0
+c0511,Luiz Carlos,Luiz Carlos dos Santos,13013,PT,Vereador 2024,Santana do Ipanema,Não eleito,105,1,39,68,0
+c0512,Meire Souza,Mary Souza da Silva,13111,PT,Vereador 2024,Santana do Ipanema,Não eleito,39,1,45,68,0
+c0513,Prof Paulo Roberto,Paulo Roberto Chagas Santos,13999,PT,Vereador 2024,Santana do Ipanema,Não eleito,172,1,33,68,0
+c0514,Professora Mariza Almeida,Mariza Gomes de Almeida,13666,PT,Vereador 2024,Santana do Ipanema,Não eleito,95,1,41,68,0
+c0515,Rutinha,Ruth Gomes de Araujo,13123,PT,Vereador 2024,Santana do Ipanema,Não eleito,16,1,56,68,0
+c0516,Cientista Paulo Barbosa,Paulo Barbosa Sobrinho,13222,PT,Vereador 2024,Santana do Ipanema,Não eleito,20,1,52,68,0
+c0517,Josy Boutique,Joseane Soares dos Santos,13456,PT,Vereador 2024,Santana do Ipanema,Não eleito,163,1,34,68,0
+c0518,Cícera Bispo,Maria Cícera Bispo Silva,13000,PT,Vereador 2024,Santa Luzia do Norte,Não eleito,17,1,36,48,0
+c0519,Didiu,Edvaldo da Silva Prudêncio,13123,PT,Vereador 2024,Santa Luzia do Norte,Não eleito,3,1,45,48,0
+c0520,Binho Araujo,Clerisson da Conceiçao Araujo,15444,MDB,Vereador 2024,Pariconha,Suplente,84,1,24,46,0
+c0521,Genivaldo de Caraibeiras,Genivaldo Alves de Sa,15111,MDB,Vereador 2024,Pariconha,Suplente,181,1,18,46,0
+c0522,José Carlos Carreiro,José Carlos dos Santos,15888,MDB,Vereador 2024,Belém,Eleito,280,1,4,21,0
+c0523,João Paulo do João Lima,João Paulo Alves da Silva,12555,PDT,Vereador 2024,Marechal Deodoro,Eleito,842,1,15,112,0
+c0524,Jorge Protético,José Jorge dos Santos,12888,PDT,Vereador 2024,Marechal Deodoro,Suplente,384,1,30,112,0
+c0525,Val da Dulce,Edvaldo de Macario Lins,40333,PSB,Vereador 2024,Matriz de Camaragibe,Suplente,164,1,26,59,0
+c0526,Tonho da Bica,Antonio Manoel dos Santos,40555,PSB,Vereador 2024,Matriz de Camaragibe,Suplente,64,1,31,59,0
+c0527,Josival Calixto,Josival Calixto de Lira,13999,PT,Vereador 2024,Palmeira dos Índios,Suplente,45,1,75,125,0
+c0528,Sidney Targino,Sidiny Targino da Silva,13888,PT,Vereador 2024,Palmeira dos Índios,Eleito,1539,1,5,125,0
+c0529,Adriana Val Enfermeiro,Adriana da Silva Barros,13111,PT,Vereador 2024,Palmeira dos Índios,Suplente,476,1,29,125,0
+c0530,Selmo Xucuru-Kariri,Manoel Messias da Silva,13123,PT,Vereador 2024,Palmeira dos Índios,Suplente,320,1,41,125,0
+c0531,Surica,Arivoleide Isabel Luz Surica,13131,PT,Vereador 2024,Palmeira dos Índios,Suplente,22,1,99,125,0
+c0532,Lourdinha Melo,Maria de Lourdes de Melo Silva Ferreira,13222,PT,Vereador 2024,Palmeira dos Índios,Suplente,257,1,45,125,0
+c0533,Anibal Duarte,Anibal Paulo Lira Duarte,13555,PT,Vereador 2024,Palmeira dos Índios,Suplente,944,1,16,125,0
+c0534,Dani do Leite,Daniela Mayana Paiva da Silva,13000,PT,Vereador 2024,Palmeira dos Índios,Suplente,63,1,70,125,0
+c0535,Antides Bazilio,Antides Duarte Silva Bazilio Junior,13333,PT,Vereador 2024,Palmeira dos Índios,Suplente,95,1,63,125,0
+c0536,Davi Ferreira,Davi Emanoel da Silva Ferreira,13456,PT,Vereador 2024,Palmeira dos Índios,Suplente,59,1,72,125,0
+c0537,Janaina Balbino,Janaina Balbino Pereira,13444,PT,Vereador 2024,Palmeira dos Índios,Suplente,29,1,88,125,0
+c0538,Ana Cláudia,Ana Cláudia dos Santos Nascimento,11310,PP,Vereador 2024,Matriz de Camaragibe,Não eleito,25,1,41,59,0
+c0539,Pastor Douglas,José Faustino da Silva,11567,PP,Vereador 2024,Matriz de Camaragibe,Não eleito,31,1,36,59,0
+c0540,Marlene Ferreira,Marlene Ferreira Gonzaga,15222,MDB,Vereador 2024,Branquinha,Suplente,42,1,25,30,0
+c0541,Neonardo Gomes,Neonardo Gomes dos Santos,13333,PT,Vereador 2024,Anadia,Não eleito,9,1,25,25,0
+c0542,Marcela Campos,Marcela dos Santos Campos,13777,PT,Vereador 2024,Anadia,Não eleito,21,1,23,25,0
+c0543,Siloé,Siloé da Silva Davi,13123,PT,Vereador 2024,Anadia,Não eleito,43,1,18,25,0
+c0544,Glauco da Saúde,Jose Glauco dos Santos,13000,PT,Vereador 2024,Anadia,Não eleito,153,1,16,25,0
+c0545,Rosa da Chã do Brejo,Rosa Maria da Silva,13222,PT,Vereador 2024,Anadia,Não eleito,35,1,20,25,0
+c0546,Salete Porto do Assentamento,Maria Salete Porto Azevedo,13111,PT,Vereador 2024,Anadia,Não eleito,15,1,24,25,0
+c0547,Thayne Alves,Thayne Blemeson Silva,13666,PT,Vereador 2024,Anadia,Não eleito,22,1,22,25,0
+c0548,Gilberto Timóteo,Gilberto Timóteo de Souza,13333,PT,Vereador 2024,Colônia Leopoldina,Não eleito,0,0,48,51,0
+c0549,Cícero Mamãe,Cícero Ramos da Silva,13000,PT,Vereador 2024,Colônia Leopoldina,Não eleito,0,0,48,51,1
+c0550,Zé Quinca,José Givanildo Joaquim de Barros,13111,PT,Vereador 2024,Colônia Leopoldina,Não eleito,0,0,48,51,5
+c0551,Tina de Marx,Maria Aparecida Gomes da Silva,13123,PT,Vereador 2024,Colônia Leopoldina,Não eleito,8,1,44,51,0
+c0552,Vera Brito,Vera Lúcia Brito da Silva,13456,PT,Vereador 2024,Colônia Leopoldina,Não eleito,0,0,48,51,3
+c0553,Moisés,Moisés Barreto do Nascimento,13444,PT,Vereador 2024,Colônia Leopoldina,Não eleito,3,1,46,51,0
+c0554,Buhia,Jose Maria Honorio da Silva,11111,PP,Vereador 2024,Minador do Negrão,Suplente,80,1,15,25,0
+c0555,Ailton Valdevino,Ailton Valdevino,13111,PT,Vereador 2024,Murici,Suplente,29,1,28,44,0
+c0556,Professora Alda,Alda Maria de Oliveira Silva,13113,PT,Vereador 2024,Murici,Suplente,33,1,27,44,0
+c0557,Professor Almir,Almir Laurentino da Silva,13000,PT,Vereador 2024,Murici,Suplente,176,1,20,44,0
+c0558,Sandro Ramos,José Sandro Ramos do Nascimento,13666,PT,Vereador 2024,Murici,Suplente,24,1,34,44,0
+c0559,Lúcia Vieira,Lúcia Vieira de Lima,13333,PT,Vereador 2024,Murici,Suplente,473,1,15,44,0
+c0560,Luiz Neto,Luiz Tolentino de Novais Neto,13222,PT,Vereador 2024,Murici,Suplente,336,1,17,44,0
+c0561,Claudionor,Claudionor Francisco dos Santos,13555,PT,Vereador 2024,Murici,Suplente,7,1,42,44,0
+c0562,Erasmo Sá,Erasmo da Silva Sá,13115,PT,Vereador 2024,Murici,Suplente,8,1,41,44,0
+c0563,Maria Miguel,Maria José Miguel dos Santos,13456,PT,Vereador 2024,Murici,Eleito,983,1,7,44,0
+c0564,Henrique do Lojão,Marcio Henrique dos Santos,13444,PT,Vereador 2024,Murici,Suplente,416,1,16,44,0
+c0565,Jó Mototaxi,Josemilton Medeiros Souto,10000,REPUBLICANOS,Vereador 2024,Palmeira dos Índios,Suplente,301,1,43,125,0
+c0566,Andreia da Ceal,Andreia Pereira da Silva,13333,PT,Vereador 2024,Viçosa,Não eleito,103,1,25,54,0
+c0567,Bem Menininho,Alisson de Melo Leite,13000,PT,Vereador 2024,Viçosa,Não eleito,23,1,39,54,0
+c0568,Ana Bombeira,Ana Elizabeth da Penha Silva Moretti,13111,PT,Vereador 2024,Viçosa,Não eleito,16,1,43,54,0
+c0569,Reginaldo Agricultor,Reginaldo da Silva,13555,PT,Vereador 2024,Viçosa,Não eleito,32,1,35,54,0
+c0570,Janaina do Nascimento,Janaina do Nascimento Ferreira,13000,PT,Vereador 2024,Coqueiro Seco,Não eleito,9,1,50,61,0
+c0571,Cicero Duarte,Cicero Duarte de Oliveira,13333,PT,Vereador 2024,Coqueiro Seco,Não eleito,4,1,56,61,0
+c0572,Eraldo do Cadoz,Eraldo Alves Monteiro,13123,PT,Vereador 2024,Coqueiro Seco,Não eleito,3,1,57,61,0
+c0573,Carlinhos do Alto da Bica,Carlos Henrique Gomes da Silva,13110,PT,Vereador 2024,Matriz de Camaragibe,Não eleito,1,1,57,59,0
+c0574,Nego do Faé,Cicero da Silva Lima,13222,PT,Vereador 2024,Matriz de Camaragibe,Não eleito,5,1,52,59,0
+c0575,Dunga do Povo,Cicero Martiniano de Souza,13111,PT,Vereador 2024,Matriz de Camaragibe,Não eleito,28,1,37,59,0
+c0576,Baderinho da Hora,José Nilson da Silva Santos,13555,PT,Vereador 2024,Matriz de Camaragibe,Não eleito,5,1,52,59,0
+c0577,Andreza Reis,Andreza Agustinho da Silva,13123,PT,Vereador 2024,Matriz de Camaragibe,Não eleito,1,1,57,59,0
+c0578,Camile Venancio,Camile Vitoria da Silva Venancio,13333,PT,Vereador 2024,Matriz de Camaragibe,Não eleito,28,1,37,59,0
+c0579,Irmão Zé Pedro,José Pedro dos Santos,13456,PT,Vereador 2024,Matriz de Camaragibe,Não eleito,3,1,56,59,0
+c0580,Pastor Vicente,Vicente Florentino Cintra,13777,PT,Vereador 2024,Matriz de Camaragibe,Não eleito,8,1,49,59,0
+c0581,Paulo Kennedy,Paulo Kennedy Almeida de Medeiros,13400,PT,Vereador 2024,Matriz de Camaragibe,Não eleito,8,1,49,59,0
+c0582,Eduarda da Vera,Eduarda da Silva Rodrigues,13000,PT,Vereador 2024,Matriz de Camaragibe,Não eleito,0,0,59,59,0
+c0583,Gleide Galdino,Gleide da Silva,13131,PT,Vereador 2024,Matriz de Camaragibe,Não eleito,10,1,48,59,0
+c0584,Marrom,Marcos Antonio da Silva,13000,PT,Vereador 2024,Jequiá da Praia,Não eleito,136,1,16,44,0
+c0585,Rosa da Logoa Azeda,Rosa Maria Tenorio Rocha,13555,PT,Vereador 2024,Jequiá da Praia,Não eleito,1,1,44,44,0
+c0586,Nubia do Pt,Benubia de Araujo dos Santos,13111,PT,Vereador 2024,Jequiá da Praia,Não eleito,4,1,39,44,0
+c0587,Professor Roseildo,Roseildo Francisco da Silva,40123,PSB,Vereador 2024,Inhapi,Suplente,193,1,17,33,0
+c0588,Divan Ferreira,Divanildo dos Santos Gomes,40000,PSB,Vereador 2024,Inhapi,Eleito,722,1,7,33,0
+c0589,Jailson do Pipa,Jailson Alves dos Santos,13777,PT,Vereador 2024,Poço das Trincheiras,Suplente,39,1,35,50,0
+c0590,Zé da Churrascaria,Jose Gomes de Barros,13000,PT,Vereador 2024,Poço das Trincheiras,Suplente,306,1,12,50,0
+c0591,Das Neves,Maria das Neves Ferreira Gomes,13111,PT,Vereador 2024,Poço das Trincheiras,Suplente,145,1,23,50,0
+c0592,Hirtes Mariano,Hirtes Mariano Lima Alencar,13555,PT,Vereador 2024,Poço das Trincheiras,Suplente,166,1,20,50,0
+c0593,Pedro Candido,Pedro da Silva Candido,13123,PT,Vereador 2024,Poço das Trincheiras,Eleito,470,1,5,50,0
+c0594,Aline Quilombola,Aline dos Santos Ferreira,13666,PT,Vereador 2024,Poço das Trincheiras,Suplente,27,1,37,50,0
+c0595,Janaani de Teté,Janaani Silva Viana,13333,PT,Vereador 2024,Poço das Trincheiras,Suplente,290,1,13,50,0
+c0596,Rafa de Erivan,Antonio Rafael Ferreira Ramos,13456,PT,Vereador 2024,Poço das Trincheiras,Eleito,495,1,4,50,0
+c0597,Professora Sitrania,Sitrania Pereira Cardoso Leite,13333,PT,Vereador 2024,Pão de Açúcar,Não eleito,80,1,31,51,0
+c0598,Messias do Pão,Manoel Messias Correia Gonzaga,13111,PT,Vereador 2024,Pão de Açúcar,Não eleito,10,1,44,51,0
+c0599,Damião Amaro,Damião Amaro  Silva,13111,PT,Vereador 2024,Arapiraca,Não eleito,129,1,113,221,0
+c0600,João do Flau,João Honório da Silva,13113,PT,Vereador 2024,Arapiraca,Não eleito,40,1,171,221,0
+c0601,Joelma Ribeiro,Joelma Ribeiro de Oliveira,13555,PT,Vereador 2024,Arapiraca,Não eleito,145,1,109,221,0
+c0602,Bruno Euclides,Bruno Euclides dos Santos Oliveira,13300,PT,Vereador 2024,Arapiraca,Não eleito,214,1,91,221,0
+c0603,Cida do Carrasco,Maria Aparecida Alves Ferreira,13613,PT,Vereador 2024,Arapiraca,Não eleito,13,1,197,221,0
+c0604,Alysson Brito,Alysson Fabiano Brito de Oliveira,13013,PT,Vereador 2024,Arapiraca,Não eleito,5,1,215,221,0
+c0605,Isaias Fotógrafo,Isaias Felix de Menezes,13222,PT,Vereador 2024,Arapiraca,Não eleito,267,1,79,221,0
+c0606,Marília  Albuquerque,Marília Almeida de Albuquerque Melo,13777,PT,Vereador 2024,Arapiraca,Não eleito,1660,1,27,221,0
+c0607,Fran Silva,Francisca Josefa da Silva,13199,PT,Vereador 2024,Arapiraca,Não eleito,26,1,185,221,0
+c0608,Ulisses Ferreira,Ulisses Ferreira Santos,13888,PT,Vereador 2024,Arapiraca,Não eleito,44,1,165,221,0
+c0609,Foguinho do Arrocha,Nildo Jose Henrique dos Santos,13999,PT,Vereador 2024,Arapiraca,Não eleito,14,1,196,221,0
+c0610,Cinthia Barbosa,Cinthia Roberta Barbosa de Brito,13123,PT,Vereador 2024,Arapiraca,Não eleito,216,1,88,221,0
+c0611,Cicinha do Posto,Maria Cicera da Silva Bezerra,13333,PT,Vereador 2024,Arapiraca,Não eleito,29,1,184,221,0
+c0612,Geraldo do Sindicato,Geraldo Balbino da Silva,13444,PT,Vereador 2024,Arapiraca,Não eleito,385,1,62,221,0
+c0613,Claudio Sena,Franciclaudio Felex de Sena,13789,PT,Vereador 2024,Arapiraca,Não eleito,0,0,220,221,5
+c0614,Barbosinha,José Barbosa da Silva,13666,PT,Vereador 2024,Arapiraca,Não eleito,477,1,57,221,0
+c0615,Lula de Arapiraca,Daniel Vieira da Silva,13100,PT,Vereador 2024,Arapiraca,Não eleito,114,1,118,221,0
+c0616,Joãozinho Braúna,João José Marques da Silva,13000,PT,Vereador 2024,Arapiraca,Não eleito,569,1,52,221,0
+c0617,Jucelio da Massaranduba,Jucelio Pereira Felix,13456,PT,Vereador 2024,Arapiraca,Não eleito,244,1,82,221,0
+c0618,Geraldo do Tabuleiro,Jose Geraldo Gonçalves,13113,PT,Vereador 2024,Água Branca,Suplente,137,1,24,38,0
+c0619,Leandra,Leandra de Souza Gomes,13222,PT,Vereador 2024,Água Branca,Suplente,13,1,35,38,0
+c0620,Sidinei,Jose Sidinei Ribeiro Gomes,13000,PT,Vereador 2024,Água Branca,Suplente,49,1,29,38,0
+c0621,Paloma,Paloma Lorrany da Conceição Lima,13531,PT,Vereador 2024,Água Branca,Suplente,1,1,37,38,0
+c0622,Paulo Zuza,Jose Paulo dos Santos,13333,PT,Vereador 2024,Água Branca,Suplente,269,1,17,38,0
+c0623,Amosiel,Amosiel dos Santos Feitosa,13111,PT,Vereador 2024,Água Branca,Eleito,638,1,7,38,0
+c0624,Gonçalina,Gonçalina de Souza Lima Queiroz,13522,PT,Vereador 2024,Água Branca,Suplente,16,1,34,38,0
+c0625,Jonas Play,Jonas Paulo dos Santos,13888,PT,Vereador 2024,Água Branca,Não eleito,0,0,38,38,16
+c0626,Thaimara da Sol,Thaimara Lima Vinhote de Ataíde,40999,PSB,Vereador 2024,Maragogi,Suplente,13,1,70,77,0
+c0627,Marcelo de Chã da Eva,José Wellington dos Santos,40333,PSB,Vereador 2024,Maragogi,Suplente,17,1,64,77,0
+c0628,Coronel Alves,José Audi Pereira Alves,13444,PT,Vereador 2024,Atalaia,Não eleito,7,1,45,52,0
+c0629,Neno Gari,José Cicero Tertuliano dos Santos,13000,PT,Vereador 2024,Atalaia,Não eleito,7,1,45,52,0
+c0630,Ana Lucia,Ana Lucia da Silva,13113,PT,Vereador 2024,Atalaia,Não eleito,11,1,43,52,0
+c0631,Nena da Verdura,Maria Cicera da Conceição,13555,PT,Vereador 2024,Atalaia,Não eleito,6,1,48,52,0
+c0632,Washington Trindade,Washington Trindade do Nascimento,13777,PT,Vereador 2024,Atalaia,Não eleito,8,1,44,52,0
+c0633,Misso Vicente,José Edmilson Vicente dos Santos,13013,PT,Vereador 2024,Atalaia,Não eleito,44,1,31,52,0
+c0634,Márcio Santos,José Márcio dos Santos Silva,13333,PT,Vereador 2024,Atalaia,Não eleito,19,1,40,52,0
+c0635,Girlene,Girlene Leonardo Lopes,13222,PT,Vereador 2024,Atalaia,Não eleito,4,1,49,52,0
+c0636,Mucio,Mucio Murilo Cassiano Gama,13111,PT,Vereador 2024,Cajueiro,Suplente,51,1,28,41,0
+c0637,Cicero Fotografo,José Cicero Floriano da Silva,13999,PT,Vereador 2024,Cajueiro,Suplente,39,1,30,41,0
+c0638,Dede de Melo,José Cicero Melo da Silva,13222,PT,Vereador 2024,Cajueiro,Suplente,37,1,31,41,0
+c0639,Stelinha,Maria Stela Cardoso da Silva Neta,13000,PT,Vereador 2024,Cajueiro,Suplente,61,1,27,41,0
+c0640,Netinho,Negtton Silva Araújo,13123,PT,Vereador 2024,Cajueiro,Eleito,537,1,9,41,0
+c0641,Bianca,Bianca Pereira da Silva,13456,PT,Vereador 2024,Cajueiro,Suplente,12,1,39,41,0
+c0642,Cicero Empreitero,Cicero da Silva,13555,PT,Vereador 2024,Cajueiro,Suplente,458,1,13,41,0
+c0643,Dudu Neto,Eduardo Gervásio Melo,13444,PT,Vereador 2024,Cajueiro,Suplente,15,1,38,41,0
+c0644,Cleide,Maria Rosicleide Lopes,13789,PT,Vereador 2024,Cajueiro,Suplente,7,1,41,41,0
+c0645,Nivia Silva,Maria Nivia da Silva,13777,PT,Vereador 2024,Feira Grande,Não eleito,40,1,26,40,0
+c0646,Adailza Ferreira,Adailza Ferreira Lima,13313,PT,Vereador 2024,Feira Grande,Não eleito,1,1,39,40,0
+c0647,Carla Silva,Edcarla Pereira da Silva,13244,PT,Vereador 2024,Feira Grande,Não eleito,1,1,39,40,0
+c0648,Zé Nazaro,José Nazaro da Silva,13000,PT,Vereador 2024,Feira Grande,Não eleito,118,1,20,40,0
+c0649,Lucia Cabeleleira,Lucineide Maria dos Santos,13223,PT,Vereador 2024,Feira Grande,Não eleito,11,1,33,40,0
+c0650,Carlos Henrique,Carlos Henrique dos Santos,13555,PT,Vereador 2024,Feira Grande,Não eleito,341,1,17,40,0
+c0651,Padre Enaldo,Enaldo da Mota,13115,PT,Vereador 2024,Feira Grande,Não eleito,48,1,24,40,0
+c0652,Marcos Dudu e Jani Avança Fg,Marcos Alessandro Soares Melo,13333,PT,Vereador 2024,Feira Grande,Não eleito,214,1,18,40,0
+c0653,Marcelo Top Grau,Marcelo José da Silva,13123,PT,Vereador 2024,Feira Grande,Não eleito,9,1,37,40,0
+c0654,Adelmo dos Pilões,Adelmo Nogueira da Silva,13444,PT,Vereador 2024,Feira Grande,Não eleito,27,1,27,40,0
+c0655,Osvaldo,José Osvaldo dos Santos,13222,PT,Vereador 2024,Feira Grande,Não eleito,11,1,33,40,0
+c0656,Will Lanches,José Wilson dos Santos,13001,PT,Vereador 2024,Feira Grande,Não eleito,43,1,25,40,0
+c0657,Professora Fatima,Fatima Ferreira dos Santos Cruz,77777,SOLIDARIEDADE,Vereador 2024,São Brás,Não eleito,11,1,31,34,0
+c0658,Cicero de Sessé,Cicero Rodrigues Lins,12333,PDT,Vereador 2024,Inhapi,Eleito,349,1,14,33,0
+c0659,Zé Alencar,Jose Alencar Delgado,12222,PDT,Vereador 2024,Inhapi,Suplente,142,1,18,33,0
+c0660,Dico de Orlando,Wellington Silva Meneses Freire,12123,PDT,Vereador 2024,Inhapi,Suplente,263,1,15,33,0
+c0661,Regina de Dede,Regina Lima de Souza dos Reis,13111,PT,Vereador 2024,Pariconha,Suplente,9,1,40,46,0
+c0662,Bala da Caçamba,Rivando Araujo da Silva,13333,PT,Vereador 2024,Pariconha,Suplente,149,1,22,46,0
+c0663,Sabugo,Vladimir Feitosa da Silva,13000,PT,Vereador 2024,Pariconha,Eleito,331,1,9,46,0
+c0664,Claudinha,Ana Claudia da Silva Queiroz,13777,PT,Vereador 2024,Pariconha,Suplente,19,1,36,46,0
+c0665,Ivanilson Lima,Ivanilson dos Santos Lima,13555,PT,Vereador 2024,Pariconha,Suplente,17,1,37,46,0
+c0666,Celso de Campinhos,Celso Jose Lima,13444,PT,Vereador 2024,Pariconha,Suplente,264,1,11,46,0
+c0667,Tony da Serra,Antonio Marcos do Nascimento Silva,13123,PT,Vereador 2024,Pariconha,Suplente,307,1,10,46,0
+c0668,Van,Rosivan Nunes de Alencar,13999,PT,Vereador 2024,Canapi,Suplente,21,1,32,50,0
+c0669,Valdo Maçú,Valdenor Carvalho Maciel,13333,PT,Vereador 2024,Canapi,Suplente,1,1,50,50,0
+c0670,Viviane Cruz,Viviane Cruz da Silva,13666,PT,Vereador 2024,Canapi,Suplente,16,1,36,50,0
+c0671,Luciano Malta,Ângelo Luciano Malta Brandão,13222,PT,Vereador 2024,Canapi,Suplente,206,1,17,50,0
+c0672,Pedro Biano,Pedro Silva de Lima,13444,PT,Vereador 2024,Canapi,Suplente,71,1,25,50,0
+c0673,Cicinho,Cicero Silvestre Neto,13111,PT,Vereador 2024,Canapi,Suplente,176,1,19,50,0
+c0674,Camilla Paulino,Camilla Raysa da Paz Brandão Oliveira,13000,PT,Vereador 2024,Canapi,Eleito,312,1,15,50,0
+c0675,Flávio Jovencio,Flávio Ricardo Gomes,13123,PT,Vereador 2024,Canapi,Suplente,122,1,22,50,0
+c0676,Danielli Martins,Danielli Rodrigues Martins,13555,PT,Vereador 2024,Canapi,Suplente,117,1,23,50,0
+c0677,Donizete,Donizete Barreiro da Silva,13777,PT,Vereador 2024,Canapi,Suplente,35,1,28,50,0
+c0678,Mauro Dayrton,Mauro Dayrton Estevam Fernandes,13456,PT,Vereador 2024,Canapi,Suplente,184,1,18,50,0
+c0679,Misiara Horácio,Misiara Silva dos Santos,13789,PT,Vereador 2024,Canapi,Suplente,54,1,26,50,0
+c0680,Rafael Raoni,Rafael Raoni dos Santos,13346,PT,Vereador 2024,União dos Palmares,Não eleito,4,1,118,123,0
+c0681,Ednaldo Lanterneiro,Ednaldo Gomes da Silva,13315,PT,Vereador 2024,União dos Palmares,Não eleito,12,1,104,123,0
+c0682,Adilene Carvalho,Adilene da Conceição Silva,13567,PT,Vereador 2024,União dos Palmares,Não eleito,8,1,110,123,0
+c0683,Elias Silva,Elias da Silva Oliveira,13000,PT,Vereador 2024,União dos Palmares,Não eleito,6,1,115,123,0
+c0684,Damião do Newton,Damião Santos de Souza,13222,PT,Vereador 2024,União dos Palmares,Não eleito,4,1,118,123,0
+c0685,Dora do Espetinho,Maria do Carmo Demezio,13345,PT,Vereador 2024,União dos Palmares,Não eleito,10,1,106,123,0
+c0686,Edilson da Galinha,José Edilson da Silva,13215,PT,Vereador 2024,União dos Palmares,Não eleito,29,1,83,123,0
+c0687,Beba do Gelo,Geovane dos Santos Roseno,13999,PT,Vereador 2024,União dos Palmares,Não eleito,55,1,67,123,0
+c0688,Leléu,Everaldo Ferreira dos Santos,13333,PT,Vereador 2024,União dos Palmares,Não eleito,26,1,85,123,0
+c0689,Maria do Carmo,Maria da Conceição do Carmo,13444,PT,Vereador 2024,União dos Palmares,Não eleito,7,1,113,123,0
+c0690,Manu Vaqueira,Manuela Maria de Melo,40015,PSB,Vereador 2024,Matriz de Camaragibe,Suplente,5,1,52,59,0
+c0691,Mara de Pereirinha,Maraisa Quixabeira de Sa Cruz,13222,PT,Vereador 2024,Pariconha,Suplente,7,1,43,46,0
+c0692,Manoel Eusébio,Manoel Eusébio dos Santos Neto,13500,PT,Vereador 2024,Arapiraca,Não eleito,11,1,202,221,0
+c0693,Josefa de Macedo,Josefa de Macedo Costa,13111,PT,Vereador 2024,Lagoa da Canoa,Não eleito,3,1,56,58,0
+c0694,Ivam do Canal,Jose Ivam de Araujo Junior,13999,PT,Vereador 2024,Delmiro Gouveia,Eleito,824,1,12,61,0
+c0695,Lula,Luiz Inácio Lula da Silva,13,PT,Presidente 2026 (1º turno),Alagoas,,995459,102,1,13,0

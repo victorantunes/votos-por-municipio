@@ -1,17 +1,17 @@
-"""Votos por seção eleitoral do RN, agrupados por local de votação e por bairro do IBGE.
+"""Votos por seção eleitoral de um estado, agrupados por local de votação e por bairro do IBGE (uso: python scripts/secoes.py RN DF).
 
 Entradas
-  dados/tse/csv/votacao_secao_<ano>_RN.csv             votos por candidato e seção (TSE)
-  dados/tse/csv/votacao_secao_2022_RN_presidente.csv   Presidente de 2022 por seção (arquivo nacional filtrado pelo scripts/coletar_tse.py)
-  dados/bu/bweb_1t_RN_*.zip                            boletins de urna de 2026 (Presidente por seção)
-  dados/tse/csv/eleitorado_local_votacao_<ano>_RN.csv  locais de votação: bairro, coordenadas e eleitores por seção (TSE)
-  dados/malha_ibge/BR_bairros_CD2022.shp               bairros do Censo 2022 (IBGE), que só existem para 19 municípios do RN
-  dados/rn/candidaturas.csv                            candidaturas (scripts/preparar.py)
+  dados/tse/csv/votacao_secao_<ano>_<UF>.csv             votos por candidato e seção (TSE)
+  dados/tse/csv/votacao_secao_2022_presidente.csv   Presidente de 2022 por seção (arquivo nacional filtrado pelo scripts/coletar_tse.py)
+  dados/bu/bweb_1t_<UF>_*.zip                            boletins de urna de 2026 (Presidente por seção)
+  dados/tse/csv/eleitorado_local_votacao_<ano>_<UF>.csv  locais de votação: bairro, coordenadas e eleitores por seção (TSE)
+  dados/malha_ibge/BR_bairros_CD2022.shp               bairros do Censo 2022 (IBGE), que só existem para alguns municípios
+  dados/uf/<UF>/candidaturas.csv                            candidaturas (scripts/preparar.py)
 Saídas
-  dados/rn/locais.csv           um local de votação por linha, em cada ano, com coordenadas, eleitores e bairro do IBGE
-  dados/rn/contexto_local.csv   válidos, brancos, nulos e comparecimento de cada disputa em cada local
-  dados/rn/votos_local.csv      votos de cada candidatura em cada local
-  dados/rn/bairros.csv          bairros do IBGE usados (identificador, município, nome)
+  dados/uf/<UF>/locais.csv           um local de votação por linha, em cada ano, com coordenadas, eleitores e bairro do IBGE
+  dados/uf/<UF>/contexto_local.csv   válidos, brancos, nulos e comparecimento de cada disputa em cada local
+  dados/uf/<UF>/votos_local.csv      votos de cada candidatura em cada local
+  dados/uf/<UF>/bairros.csv          bairros do IBGE usados (identificador, município, nome)
   docs/dados/bairros_rn.geojson polígonos simplificados dos bairros
 
 Como um local entra no mapa
@@ -40,7 +40,9 @@ ROOT = Path(__file__).resolve().parent.parent
 D = ROOT / 'dados'
 TSE = D / 'tse' / 'csv'
 ANOS = (2020, 2022, 2024, 2026)
-BBOX = (-7.0, -4.8, -38.7, -34.9)  # lat mínima, lat máxima, lon mínima, lon máxima do RN
+UF = 'RN'  # estado em processamento (definido por processar)
+PASTA = D / 'uf' / UF
+BBOX = (-90.0, 90.0, -180.0, 180.0)  # lat mínima, lat máxima, lon mínima, lon máxima do estado (definido por processar)
 DISP = {k: v[0] for k, v in CARGOS.items()}
 DISP.update({(2022, 'Presidente', '1'): 'pres22t1', (2022, 'Presidente', '2'): 'pres22t2', (2026, 'Presidente', '1'): 'pres26t1'})
 DOIS_VOTOS = {'sen26': 'gov26', 'sen22': 'gov22'}  # no Senado de 2026 o eleitor dá dois votos: o comparecimento vem do governador
@@ -50,12 +52,12 @@ COLS = ['NR_TURNO', 'CD_MUNICIPIO', 'NR_ZONA', 'NR_SECAO', 'DS_CARGO', 'NR_VOTAV
 
 def presidente_2026():
     """Presidente de 2026 por seção, a partir dos boletins de urna, no mesmo formato dos arquivos de votação por seção."""
-    cache = TSE / 'bu_2026_RN_presidente_secao.csv'
+    cache = TSE / f'bu_2026_{UF}_presidente_secao.csv'
     if cache.exists():
         return pd.read_csv(cache, sep=';', dtype=str)
-    zip_bu = next((D / 'bu').glob('bweb_1t_RN_*.zip'), None)
+    zip_bu = next((D / 'bu').glob(f'bweb_1t_{UF}_*.zip'), None)
     if zip_bu is None:
-        raise SystemExit('faltam os boletins de urna do RN: rode scripts/coletar_bu_2026.py')
+        raise SystemExit(f'faltam os boletins de urna de {UF}: rode scripts/coletar_bu_2026.py')
     z = zipfile.ZipFile(zip_bu)
     usar = ['CD_MUNICIPIO', 'NR_ZONA', 'NR_SECAO', 'DS_CARGO_PERGUNTA', 'DS_TIPO_VOTAVEL', 'NR_VOTAVEL', 'QT_VOTOS']
     with z.open(next(n for n in z.namelist() if n.endswith('.csv'))) as f:
@@ -69,9 +71,10 @@ def presidente_2026():
 
 
 def votos_secao(ano):
-    s = pd.read_csv(TSE / f'votacao_secao_{ano}_RN.csv', sep=';', encoding='latin-1', dtype=str, usecols=COLS)
+    s = pd.read_csv(TSE / f'votacao_secao_{ano}_{UF}.csv', sep=';', encoding='latin-1', dtype=str, usecols=COLS)
     if ano == 2022:
-        s = pd.concat([s, pd.read_csv(TSE / 'votacao_secao_2022_RN_presidente.csv', sep=';', encoding='latin-1', dtype=str, usecols=COLS)], ignore_index=True)
+        pres = pd.read_csv(TSE / 'votacao_secao_2022_presidente.csv', sep=';', encoding='latin-1', dtype=str, usecols=COLS + ['SG_UF'])
+        s = pd.concat([s, pres[pres.SG_UF == UF][COLS]], ignore_index=True)
     if ano == 2026:
         s = pd.concat([s, presidente_2026()], ignore_index=True)
     s['cargo'] = s.DS_CARGO.str.title()
@@ -86,7 +89,7 @@ def votos_secao(ano):
 
 
 def locais_do_ano(ano, bairros):
-    l = pd.read_csv(TSE / f'eleitorado_local_votacao_{ano}_RN.csv', sep=';', encoding='latin-1', dtype=str)
+    l = pd.read_csv(TSE / f'eleitorado_local_votacao_{ano}_{UF}.csv', sep=';', encoding='latin-1', dtype=str)
     l = l[l.NR_TURNO == '1'].copy()
     for c in ('CD_MUNICIPIO', 'NR_ZONA', 'NR_SECAO', 'NR_LOCAL_VOTACAO'):
         l[c] = pd.to_numeric(l[c]).astype('int64')
@@ -110,6 +113,9 @@ def locais_do_ano(ano, bairros):
     g.insert(0, 'ano', ano)
     g['lid'] = np.arange(len(g))
     # bairro do IBGE: ponto dentro do polígono; senão, o mais próximo do mesmo município até DIST_MAX
+    if not len(bairros):
+        g['bairro'] = -1
+        return g, secoes
     pts = gpd.GeoDataFrame(g[['lid', 'CD_MUNICIPIO']], geometry=gpd.points_from_xy(g.lon, g.lat), crs='EPSG:4326').to_crs(bairros.crs)
     j = gpd.sjoin(pts, bairros[['b', 'geometry']], how='left', predicate='within').drop_duplicates('lid').set_index('lid')
     g['bairro'] = g.lid.map(j.b).fillna(-1).astype(int)
@@ -128,25 +134,32 @@ def locais_do_ano(ano, bairros):
     return g, secoes
 
 
-def main():
+def processar(uf):
+    global UF, PASTA, BBOX
+    UF, PASTA = uf, D / 'uf' / uf
     corr = pd.read_csv(D / 'correspondencia_tse_ibge.csv', dtype=str)
     corr['cd_tse'] = corr.CD_MUNICIPIO.astype(int)
     ibge_para_tse = dict(zip(corr.CD_IBGE, corr.cd_tse))
-    # ---- bairros do IBGE no RN
+    cen = pd.read_csv(D / 'centroides_ibge.csv', dtype={'CD_MUN': str})
+    cen = cen[cen.CD_MUN.isin(corr[corr.SG_UF == uf].CD_IBGE)]
+    BBOX = (cen.lat.min() - 0.8, cen.lat.max() + 0.8, cen.lon.min() - 0.8, cen.lon.max() + 0.8)  # caixa do estado, para descartar coordenadas erradas
+    # ---- bairros do IBGE no estado
     bg = gpd.read_file(D / 'malha_ibge' / 'BR_bairros_CD2022.shp')
-    bg = bg[bg.CD_MUN.astype(str).str.startswith('24')].copy()
+    bg = bg[bg.CD_MUN.astype(str).str.startswith(corr[corr.SG_UF == uf].CD_IBGE.iloc[0][:2])].copy()
     bg['cd_tse'] = bg.CD_MUN.astype(str).map(ibge_para_tse)
     bg = bg.sort_values(['CD_MUN', 'NM_BAIRRO']).reset_index(drop=True)
     bg['b'] = np.arange(len(bg))
-    print(f'bairros do IBGE no RN: {len(bg)} em {bg.CD_MUN.nunique()} municípios')
+    print(f'{uf}: bairros do IBGE: {len(bg)} em {bg.CD_MUN.nunique()} municípios')
 
-    cand = pd.read_csv(D / 'rn' / 'candidaturas.csv', dtype={'numero': str, 'sq': str}).fillna({'sq': ''})
+    cand = pd.read_csv(PASTA / 'candidaturas.csv', dtype={'numero': str, 'sq': str}).fillna({'sq': ''})
     cand = cand[cand.anulados == 0]  # candidaturas com votos anulados depois da eleição ficam sem detalhe por local
-    lula = cand[(cand.nome_urna == 'Lula') & cand.disp.str.startswith('pres')].set_index('disp').cid.to_dict()
+    lula = cand[(cand.nome_urna == 'Lula') & cand.disp.str.startswith('pres') & (cand.sq == '')].set_index('disp').cid.to_dict()  # só o de 2026 (o de 2022 tem SQ)
     por_sq = cand[cand.sq != ''][['cid', 'disp', 'sq']]
 
     locais, contexto, votos = [], [], []
     for ano in ANOS:
+        if not (TSE / f'votacao_secao_{ano}_{UF}.csv').exists():  # estado sem esse tipo de eleição (o DF não tem eleição municipal)
+            continue
         g, secoes = locais_do_ano(ano, bg)
         locais.append(g)
         s = votos_secao(ano)
@@ -184,37 +197,40 @@ def main():
     vot = pd.concat(votos, ignore_index=True)
     vot = vot[vot.votos > 0]
     loc_out = loc.rename(columns={'CD_MUNICIPIO': 'cd_tse', 'NR_ZONA': 'zona', 'NR_LOCAL_VOTACAO': 'nr_local'})
-    loc_out[['ano', 'lid', 'cd_tse', 'zona', 'nr_local', 'nome', 'bairro_tse', 'lat', 'lon', 'aptos', 'bairro', 'aprox']].round({'lat': 5, 'lon': 5}).to_csv(D / 'rn' / 'locais.csv', index=False)
-    ctx.to_csv(D / 'rn' / 'contexto_local.csv', index=False)
-    vot.sort_values(['cid', 'lid']).to_csv(D / 'rn' / 'votos_local.csv', index=False)
-    bg[['b', 'cd_tse', 'NM_BAIRRO']].rename(columns={'NM_BAIRRO': 'nome'}).to_csv(D / 'rn' / 'bairros.csv', index=False)
+    loc_out[['ano', 'lid', 'cd_tse', 'zona', 'nr_local', 'nome', 'bairro_tse', 'lat', 'lon', 'aptos', 'bairro', 'aprox']].round({'lat': 5, 'lon': 5}).to_csv(PASTA / 'locais.csv', index=False)
+    ctx.to_csv(PASTA / 'contexto_local.csv', index=False)
+    vot.sort_values(['cid', 'lid']).to_csv(PASTA / 'votos_local.csv', index=False)
+    bg[['b', 'cd_tse', 'NM_BAIRRO']].rename(columns={'NM_BAIRRO': 'nome'}).to_csv(PASTA / 'bairros.csv', index=False)
 
     # ---- verificação: soma por seção contra o total de cada candidatura (município) e de cada disputa
     tot = cand.set_index('cid').tot
     soma = vot.groupby('cid').votos.sum()
     dif = (soma - tot.reindex(soma.index)).dropna()
     print(f'candidaturas com detalhe: {len(soma)} de {len(cand)}; diferença total vs soma por seção: {int((dif != 0).sum())} candidaturas, maior diferença {int(dif.abs().max())} votos')
-    cm = pd.read_csv(D / 'rn' / 'contexto.csv')
+    cm = pd.read_csv(PASTA / 'contexto.csv')
     for disp, g in ctx.groupby('disp'):
         va_m = int(cm[cm.disp == disp].validos.sum())
         print(f'  {disp:9s} válidos por seção {int(g.va.sum()):>9,} | municipal {va_m:>9,} | diferença {(g.va.sum() / va_m - 1) * 100:+.2f}%')
 
-    # ---- polígonos dos bairros, simplificados, para a página
-    sim = shapely.coverage_simplify(bg.geometry.values, tolerance=0.0003)
-    feats = []
-    for r, geom in zip(bg.itertuples(), sim):
-        geom = shapely.make_valid(shapely.set_precision(geom, 0.0001))
-        if geom.is_empty:
-            continue
-        ponto = geom.representative_point()
-        feats.append({'type': 'Feature', 'properties': {'c': f'b{r.b}', 'b': int(r.b), 'n': r.NM_BAIRRO, 'm': r.CD_MUN, 'cx': round(ponto.x, 4), 'cy': round(ponto.y, 4)},
-                      'geometry': json.loads(shapely.to_geojson(geom))})
-    alvo = ROOT / 'docs' / 'dados' / 'bairros_rn.geojson'
-    alvo.write_text(json.dumps({'type': 'FeatureCollection', 'features': feats}, ensure_ascii=False, separators=(',', ':')), encoding='utf-8')
-    print(f'bairros_rn.geojson: {len(feats)} feições, {alvo.stat().st_size / 1e3:.0f} kB')
+    # ---- polígonos dos bairros, simplificados, para a página (um arquivo por estado com bairros)
+    if len(bg):
+        sim = shapely.coverage_simplify(bg.geometry.values, tolerance=0.0003)
+        feats = []
+        for r, geom in zip(bg.itertuples(), sim):
+            geom = shapely.make_valid(shapely.set_precision(geom, 0.0001))
+            if geom.is_empty:
+                continue
+            ponto = geom.representative_point()
+            feats.append({'type': 'Feature', 'properties': {'c': f'b{r.b}', 'b': int(r.b), 'n': r.NM_BAIRRO, 'm': r.CD_MUN, 'cx': round(ponto.x, 4), 'cy': round(ponto.y, 4)},
+                          'geometry': json.loads(shapely.to_geojson(geom))})
+        alvo = ROOT / 'docs' / 'dados' / 'bairros' / f'{uf.lower()}.geojson'
+        alvo.parent.mkdir(parents=True, exist_ok=True)
+        alvo.write_text(json.dumps({'type': 'FeatureCollection', 'features': feats}, ensure_ascii=False, separators=(',', ':')), encoding='utf-8')
+        print(f'{alvo.name}: {len(feats)} feições, {alvo.stat().st_size / 1e3:.0f} kB')
     for ano, g in loc.groupby('ano'):
         print(f'  {ano}: locais em bairro do IBGE {int((g.bairro >= 0).sum())} de {len(g)} ({(g.bairro >= 0).mean() * 100:.1f}%), eleitores em bairro {g[g.bairro >= 0].aptos.sum() / g.aptos.sum() * 100:.1f}%')
 
 
 if __name__ == '__main__':
-    main()
+    for uf in sys.argv[1:] or ['RN', 'DF']:
+        processar(uf)

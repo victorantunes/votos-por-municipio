@@ -1,13 +1,15 @@
-# Votos por município: Lula no Brasil e PT no Rio Grande do Norte
+# Votos por município: Lula no Brasil e PT em todos os estados
 
 Mapa, gráficos de dispersão e tabelas com os votos, a abstenção, os brancos e os nulos de cada município, com dados abertos do TSE. O site tem dois recortes:
 
 - **Lula no Brasil:** os votos de Lula para presidente em cada um dos 5.570 municípios, no 1º e no 2º turno de 2022 e no 1º turno de 2026.
-- **PT no Rio Grande do Norte:** os votos de todos os candidatos do PT no RN que concorreram em 2020 e 2024 (prefeito e vereador), em 2022 (governador, deputado federal e deputado estadual) e em 2026 (governador, senador, deputado federal e deputado estadual), mais Lula com os votos que recebeu no estado. Há três modos: **comparar com 2026** (quem concorreu em 2020, 2022 ou 2024 e também em 2026), **analisar isoladamente** (uma candidatura sozinha, de qualquer candidato e ano, sem outros dados no mapa) e **qualquer cargo e ano** (comparar livremente quaisquer candidaturas).
+- **PT em cada estado:** os votos de todos os candidatos do PT que concorreram em 2020 e 2024 (prefeito e vereador), em 2022 e em 2026 (governador, senador e deputados), mais Lula com os votos que recebeu no estado. Cada um dos 27 estados é um recorte, escolhido no topo da página. Há três modos: **comparar com 2026** (quem concorreu em 2020, 2022 ou 2024 e também em 2026), **analisar isoladamente** (uma candidatura sozinha, de qualquer candidato e ano, sem outros dados no mapa) e **qualquer cargo e ano** (comparar livremente quaisquer candidaturas do mesmo estado).
+
+Uma pessoa que foi candidata em estados diferentes (por exemplo, vereadora em um estado em 2020 e deputada federal em outro em 2026) aparece em cada um deles, só com os votos que recebeu ali. Um aviso abaixo do mapa lista as candidaturas dos outros estados com um link, e a busca de candidatos também encontra pessoas de outros estados (índice nacional carregado só na primeira busca).
 
 **Site:** https://victorantunes.github.io/votos-por-municipio/
 
-O site tem um mapa por município (em polígonos da malha do IBGE ou em círculos), um gráfico de dispersão (a candidatura A no eixo X, a B no eixo Y, com a linha de paridade), a mesma dispersão separada por região, UF ou porte do município, uma lista de candidatos (no recorte do RN) e uma aba com tabelas, método e downloads.
+O site tem um mapa por município (em polígonos da malha do IBGE ou em círculos), um gráfico de dispersão (a candidatura A no eixo X, a B no eixo Y, com a linha de paridade), a mesma dispersão separada por região, UF ou porte do município, uma lista de candidatos (nos recortes por estado, com paginação) e uma aba com tabelas, método e downloads.
 
 ## Como os dados estão organizados
 Uma pessoa pode concorrer a cargos diferentes ao longo dos anos, então os dados separam três coisas:
@@ -49,19 +51,20 @@ O percentil mostra a posição de um município em relação aos demais. Os muni
 
 Nas comparações da mesma pessoa ou do mesmo partido ao longo do tempo, as classes vão de Queda Severa a Destaque Positivo (vermelho a verde). Nas demais medidas vão de Menores 15% a Maiores 15%: os votos e a % dos votos do candidato usam a mesma escala de vermelho a verde (verde é mais votos), a abstenção, os brancos e os nulos usam azul (mais escuro é maior), e as diferenças que não são de desempenho usam marrom a verde-azulado. Municípios sem dados ficam em cinza, e quando há poucos municípios com dados (por exemplo, um candidato a vereador) não há percentis. As classes são relativas: dizem se o município está acima ou abaixo dos outros, e não se o valor é positivo ou negativo.
 
-## Detalhe por bairro e local de votação (recorte do RN)
+## Detalhe por bairro e local de votação (RN e DF)
 Marcando "Detalhar por bairro e local de votação", o mapa e o gráfico passam a mostrar os votos abaixo do município. O TSE publica os votos por seção eleitoral e, para cada local de votação, o bairro, as coordenadas e os eleitores por seção. As seções são somadas por local, e cada local é atribuído ao bairro do IBGE (Censo 2022) que o contém.
 
-- O IBGE só tem bairros para 19 dos 167 municípios (Natal, Mossoró e Parnamirim entre eles), com cerca de 41% do eleitorado. Nos outros e fora dos bairros (zona rural), cada local de votação é um ponto.
-- Ao comparar anos diferentes a unidade é o bairro e, onde não há, o município (ou a parte dele fora dos bairros), porque os locais de votação mudam de um ano para outro.
+- O detalhe existe hoje para o Rio Grande do Norte e o Distrito Federal, porque exige baixar e somar os votos de cada seção eleitoral (`UFS_SECAO` em `scripts/coletar_tse.py`). Os demais estados ficam para uma segunda etapa.
+- No RN, o IBGE só tem bairros para 19 dos 167 municípios (Natal, Mossoró e Parnamirim entre eles), com cerca de 44% do eleitorado. Nos outros e fora dos bairros (zona rural), cada local de votação é um ponto. O DF não tem bairros no IBGE, e todos os locais aparecem como pontos.
+- Ao comparar anos diferentes a unidade é o bairro e, fora dele, o local de votação que existe nos dois anos (mesmo município, nome e bairro no cadastro do TSE) ou, na falta dele, o município (ou a parte dele fora dos bairros), porque os locais de votação mudam de um ano para outro.
 - O fundo do mapa mostra o município inteiro, mais claro e com as mesmas faixas de cor, para a parte que não pertence a nenhum bairro do IBGE (como a zona rural) não ficar em branco.
 - O bairro é o do local de votação, não o de residência. Locais sem coordenada (cerca de 3%) recebem a média dos locais do mesmo bairro, e os fora de qualquer bairro vão para o mais próximo, até 2 km.
 - A soma das seções pode diferir até cerca de 2% do total do município (votos anulados depois da eleição aparecem nas seções).
 - Desempenho: o detalhe vem de arquivos estáticos em `docs/dados/granular/` (1,6 MB no total, no máximo 141 KB por eleição e 132 KB por grade de locais), baixados sob demanda só para as candidaturas A e B. Não há servidor.
 
-## O que entrou e o que ficou de fora (recorte do RN)
-- Entraram as pessoas que foram candidatas pelo PT no RN em 2020, 2022, 2024 ou 2026, com todas as candidaturas delas que tiveram votos próprios, inclusive as de outro partido em outro ano, e Lula (1º e 2º turnos de 2022 e 1º turno de 2026, só com os votos do estado).
-- Ficaram de fora vice-prefeitos, vice-governadores e suplentes de senador (os votos vão para o titular), os votos de legenda e candidatos de aliados do PT. Nos arquivos do TSE não há candidato do PT ao Senado com votos no RN em 2022.
+## O que entrou e o que ficou de fora
+- Entraram as pessoas que foram candidatas pelo PT no estado em 2020, 2022, 2024 ou 2026, com todas as candidaturas delas que tiveram votos próprios, inclusive as de outro partido em outro ano, e Lula (1º e 2º turnos de 2022 e 1º turno de 2026, só com os votos do estado).
+- Ficaram de fora vice-prefeitos, vice-governadores e suplentes de senador (os votos vão para o titular), os votos de legenda e candidatos de aliados do PT.
 - Em 2022 o PT formou federação com o PCdoB e o PV. A soma do PT considera só os candidatos registrados pelo próprio partido.
 
 ## Cuidados na leitura
@@ -69,31 +72,34 @@ Marcando "Detalhar por bairro e local de votação", o mapa e o gráfico passam 
 - Comparar cargos diferentes mistura efeitos distintos. Uma eleição para deputado tem dezenas de candidatos disputando os mesmos votos, então a % dos votos válidos de um deputado é sempre pequena.
 - O saldo em votos depende também do comparecimento.
 - O exterior não entra. Boa Esperança do Norte (MT) foi desmembrada de Sorriso e só existe em 2026, então os votos dos dois foram somados para manter o território de 2022.
-- Em 2024, o 2º turno para prefeito só houve em Natal. Votos anulados depois da eleição (candidaturas indeferidas) não entram na votação do candidato, e o número de votos anulados aparece nos detalhes.
-- Os dados de 2026 são do 1º turno. Os de Lula vêm dos boletins de urna de 05/10/2026, e os dos demais candidatos do RN, dos resultados por candidato baixados do TSE em 07/10/2026. A situação de cada candidato é a daquele arquivo, e os votos anulados sub judice não entram. O TSE pode atualizar os arquivos. Para uso oficial, confira no site do TSE.
+- Votos anulados depois da eleição (candidaturas indeferidas) não entram na votação do candidato, e o número de votos anulados aparece nos detalhes.
+- Os dados de 2026 são do 1º turno. Os de Lula vêm dos boletins de urna de 05/10/2026, e os dos demais candidatos, dos resultados por candidato baixados do TSE em 07/10/2026. A situação de cada candidato é a daquele arquivo, e os votos anulados sub judice não entram. O TSE pode atualizar os arquivos. Para uso oficial, confira no site do TSE.
 - Em 2026 o Senado tem duas vagas e cada eleitor dá dois votos. Os brancos e nulos dessa disputa são calculados sobre os votos dados (dois por eleitor), e a % dos votos válidos de um senador não é comparável com a de um governador.
 
 ## Estrutura
 ```
 docs/                     site publicado (GitHub Pages)
   index.html              página única, gerada por scripts/analisar.py
-  dados/                  dados lidos pela página (escopo_br.json, escopo_rn.json), malhas (municipios.geojson, municipios_rn.geojson, ufs.geojson, uf_rn.geojson,
-                          bairros_rn.geojson) e granular/ (locais de votação e votos por local, carregados sob demanda)
-                          e tabelas para baixar (resultado_municipios.csv, resumo_uf.csv, rn_candidaturas.csv, rn_votos_por_municipio.csv, rn_participacao.csv)
+  dados/                  dados lidos pela página: escopo_br.json (Lula), uf/<uf>.json (um por estado), ufs.json (estados) e indice_pessoas.json (busca nacional);
+                          malhas (municipios.geojson, ufs.geojson, malha/<uf>.geojson, bairros/<uf>.geojson); granular/<uf>/ (locais de votação e votos por local,
+                          carregados sob demanda); tabelas para baixar (resultado_municipios.csv, resumo_uf.csv, csv/<uf>_candidaturas.csv, csv/<uf>_participacao.csv)
 dados/
   br/                     Lula no Brasil: contexto.csv (participação por município e eleição) e lula.csv (votos)
-  rn/                     PT no RN: disputas.csv, contexto.csv, pessoas.csv, candidaturas.csv, votos.csv
+  uf/<UF>/                PT no estado: disputas.csv, contexto.csv, pessoas.csv, candidaturas.csv, votos.csv (e, no RN e no DF, locais.csv, contexto_local.csv e votos_local.csv)
   agg_2026/               votos de presidente em 2026, agregados por município e UF (boletins de urna do TSE)
   centroides_ibge.csv     ponto representativo de cada município (malha IBGE 2022)
   correspondencia_tse_ibge.csv
   tse/                    arquivos brutos do TSE (não versionados, porque o cadastro de candidatos traz CPF e e-mail)
 scripts/
-  coletar_tse.py          baixa do TSE os resultados de 2020, 2022, 2024 e 2026 (inclusive por seção e os locais de votação) e os bairros do IBGE
+  coletar_tse.py          baixa do TSE os resultados de 2020, 2022, 2024 e 2026 (e, para os estados com detalhe, as seções e os locais de votação) e os bairros do IBGE
   coletar_bu_2026.py      baixa os boletins de urna de 2026 e agrega os votos de presidente
-  preparar.py             organiza tudo em tabelas simples (dados/br e dados/rn)
-  secoes.py               soma os votos por seção em locais de votação e bairros do IBGE (dados/rn/locais.csv, contexto_local.csv, votos_local.csv)
+  preparar.py             organiza o recorte do Brasil (dados/br) e define as disputas
+  preparar_uf.py          organiza os candidatos do PT de cada estado (dados/uf/<UF>); o partido é o parâmetro PARTIDO
+  secoes.py               soma os votos por seção em locais de votação e bairros do IBGE de um estado (python scripts/secoes.py RN DF)
   centroides.py           extrai as coordenadas da malha do IBGE
-  malha.py                simplifica a malha municipal (polígonos do mapa), preservando as fronteiras entre vizinhos
+  malha.py                simplifica a malha municipal (Brasil e um arquivo por estado), preservando as fronteiras entre vizinhos
+  comum.py                funções usadas por analisar.py e gerar_ufs.py
+  gerar_ufs.py            gera o arquivo de cada estado, o índice de pessoas e as tabelas para baixar
   analisar.py             gera os dados da página, as tabelas para baixar e o site
   templates/app.html      modelo da página
 ```
@@ -101,12 +107,13 @@ scripts/
 ## Como refazer
 ```bash
 pip install pandas geopandas
-python scripts/coletar_tse.py       # baixa cerca de 2 GB do TSE (2020, 2022, 2024 e 2026, com as seções) e os bairros do IBGE
+python scripts/coletar_tse.py       # baixa cerca de 2 GB do TSE (2020, 2022, 2024 e 2026) e os bairros do IBGE
 python scripts/coletar_bu_2026.py   # baixa cerca de 5 GB do TSE e grava dados/agg_2026/ (opcional, os agregados já estão no repositório)
-python scripts/preparar.py          # gera dados/br e dados/rn
-python scripts/secoes.py            # votos por local de votação e bairro (precisa dos boletins de urna de 2026 e do coletar_tse.py)
+python scripts/preparar.py          # gera dados/br
+python scripts/preparar_uf.py       # gera dados/uf/<UF> para os 27 estados (cerca de 4 minutos)
+python scripts/secoes.py RN DF      # votos por local de votação e bairro (precisa dos boletins de urna de 2026 e do coletar_tse.py)
 python scripts/malha.py             # gera os polígonos do mapa (precisa da malha do IBGE em dados/malha_ibge/)
-python scripts/analisar.py          # gera docs/index.html, docs/dados/*.json e docs/dados/*.csv
+python scripts/analisar.py          # gera docs/index.html, docs/dados/*.json e docs/dados/csv/*.csv
 ```
 
 ## Fonte

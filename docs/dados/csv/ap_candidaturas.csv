@@ -1,0 +1,227 @@
+candidatura,nome_de_urna,nome_completo,numero,partido,disputa,circunscricao,situacao,votos_validos,municipios_com_votos,posicao,candidatos_na_disputa,votos_anulados
+c0001,Geovane Grangeiro,Geovane Grangeiro da Silva,13113,PT,Deputado Estadual 2022,Amapá,Suplente,357,11,149,335,0
+c0002,Lucélia Quaresma,Lucelia Araujo Quaresma,13134,PT,Deputado Estadual 2022,Amapá,Suplente,936,12,92,335,0
+c0003,Paulinho Rocha,Paulo da Rocha Santos,13456,PT,Deputado Estadual 2022,Amapá,Suplente,42,5,274,335,0
+c0004,Paulo Nogueira,Francisco Paulo Nogueira de Souza,13123,PT,Deputado Estadual 2022,Amapá,Eleito,6276,16,14,335,0
+c0005,Rose Duarte,Rosinete Duarte Pacheco,13600,PT,Deputado Estadual 2022,Amapá,Suplente,163,9,198,335,0
+c0006,Professor Miro,Mirovaldo dos Santos Monteiro,13222,PT,Deputado Estadual 2022,Amapá,Suplente,138,7,212,335,0
+c0007,Zeneide Costa,Zeneide da Silva Costa,19000,PODE,Deputado Estadual 2022,Amapá,Eleito,11547,16,3,335,0
+c0008,Rocha do Sucatão,Edilson Vieira Rocha,77380,SOLIDARIEDADE,Deputado Estadual 2022,Amapá,Suplente,62,3,251,335,0
+c0009,Claudiomar Rosa,Claudiomar Rosa da Silva,70123,AVANTE,Deputado Estadual 2022,Amapá,Não eleito,1981,15,58,335,0
+c0010,Professora Dalva,Maria Lucidalva Menezes da Silva,18222,REDE,Deputado Estadual 2026,Amapá,Suplente,39,4,170,183,0
+c0011,Jardel Eliezer,Jardel Eliezer Oliveira Silva,13141,PT,Deputado Estadual 2026,Amapá,Suplente,72,6,162,183,0
+c0012,Celisa Melo,Celisa Penna Melo Capelari,13113,PT,Deputado Estadual 2026,Amapá,Suplente,199,7,132,183,0
+c0013,Alcinete Santos,Alcinete Ferreira dos Santos,13333,PT,Deputado Estadual 2026,Amapá,Suplente,343,9,114,183,0
+c0014,Socorro Nogueira,Antônia do Socorro Nogueira de Souza,13123,PT,Deputado Estadual 2026,Amapá,Eleito,9253,16,10,183,0
+c0015,Zeneide Costa,Zeneide da Silva Costa,13456,PT,Deputado Estadual 2026,Amapá,Suplente,3516,15,44,183,0
+c0016,Manoel Araujo,Manoel Araujo do Carmo,13289,PT,Deputado Estadual 2026,Amapá,Suplente,53,6,168,183,0
+c0017,Van Vilhena,Edivandro Joao Vilhena de Oliveira,13130,PT,Deputado Estadual 2026,Amapá,Suplente,647,14,94,183,0
+c0018,Carlos Carmezim,José Carlos Silva Carmezim,13047,PT,Deputado Estadual 2026,Amapá,Suplente,264,7,123,183,0
+c0019,Lucélia Quaresma,Lucelia Araujo Quaresma,44789,UNIÃO,Deputado Estadual 2026,Amapá,Suplente,2015,15,66,183,0
+c0020,Paulo Lemos,Paulo Cesar Lemos de Oliveira,5050,PSOL,Deputado Federal 2022,Amapá,Eleito,9240,16,14,134,0
+c0021,Marco Nunes,Marco Antonio de Lima Nunes,2098,PSC,Deputado Federal 2022,Amapá,Não eleito,1370,16,61,134,0
+c0022,Lourival Freitas,Lourival do Carmo de Freitas,1300,PT,Deputado Federal 2022,Amapá,Suplente,580,14,85,134,0
+c0023,Professor Marcos,Marcos Roberto Marques da Silva,1310,PT,Deputado Federal 2022,Amapá,Suplente,2192,16,51,134,0
+c0024,Socorro Nogueira,Antonia do Socorro Nogueira de Souza,1312,PT,Deputado Federal 2022,Amapá,Suplente,8904,16,15,134,0
+c0025,Dalva 1313,Maria Dalva de Souza Figueiredo,1313,PT,Deputado Federal 2022,Amapá,Suplente,2414,16,47,134,0
+c0026,Camilo Capiberibe,Carlos Camilo Goes Capiberibe,4040,PSB,Deputado Federal 2022,Amapá,Não eleito,9631,16,12,134,0
+c0027,Professora Ivanéia,Ivaneia de Souza Alves,1313,PT,Deputado Federal 2026,Amapá,Suplente,756,15,55,84,0
+c0028,Paulo Lemos,Paulo Cesar Lemos de Oliveira,1350,PT,Deputado Federal 2026,Amapá,Suplente,16242,16,8,84,0
+c0029,Camilo Capiberibe,Carlos Camilo Goes Capiberibe,1340,PT,Deputado Federal 2026,Amapá,Suplente,6296,16,27,84,0
+c0030,Professor Marcio Marcello,Marcio Marcello Loureiro Cavalcante,13,PT,Prefeito 2020,Ferreira Gomes,Não eleito,12,1,5,5,0
+c0031,Professor Giro,Edenilton Lima Pereira,77,SOLIDARIEDADE,Prefeito 2020,Ferreira Gomes,Não eleito,1615,1,2,5,0
+c0032,Manoel da Conceição,Manoel Gomes Coelho,13,PT,Prefeito 2020,Laranjal do Jari,Não eleito,562,1,5,5,0
+c0033,Professor Marcos,Marcos Roberto Marques da Silva,13,PT,Prefeito 2020,Macapá,Não eleito,3075,1,8,9,0
+c0034,Paulo Lemos,Paulo Cesar Lemos de Oliveira,50,PSOL,Prefeito 2020,Macapá,Não eleito,7998,1,6,9,0
+c0035,Paulo 50,Paulo Cesar Lemos de Oliveira,50,PSOL,Prefeito 2024,Macapá,Não eleito,23491,1,2,8,0
+c0036,Professor Giro,Edenilton Lima Pereira,13,PT,Prefeito 2024,Ferreira Gomes,Não eleito,4,1,5,5,0
+c0037,Lula,Luiz Inácio Lula da Silva,13,PT,Presidente 2022 (1º turno),Amapá,2º turno,197382,16,2,11,0
+c0038,Lula,Luiz Inácio Lula da Silva,13,PT,Presidente 2022 (1º turno),Amapá,2º turno,197382,16,1,11,0
+c0039,Lula,Luiz Inácio Lula da Silva,13,PT,Presidente 2022 (1º turno),Amapá,2º turno,197382,16,1,11,0
+c0040,Lula,Luiz Inácio Lula da Silva,13,PT,Presidente 2022 (1º turno),Amapá,2º turno,197382,16,1,11,0
+c0041,Lula,Luiz Inácio Lula da Silva,13,PT,Presidente 2022 (1º turno),Amapá,2º turno,197382,16,1,11,0
+c0042,Lula,Luiz Inácio Lula da Silva,13,PT,Presidente 2022 (1º turno),Amapá,2º turno,197382,16,1,11,0
+c0043,Lula,Luiz Inácio Lula da Silva,13,PT,Presidente 2022 (1º turno),Amapá,2º turno,197382,16,2,11,0
+c0044,Lula,Luiz Inácio Lula da Silva,13,PT,Presidente 2022 (1º turno),Amapá,2º turno,197382,16,2,11,0
+c0045,Lula,Luiz Inácio Lula da Silva,13,PT,Presidente 2022 (1º turno),Amapá,2º turno,197382,16,2,11,0
+c0046,Lula,Luiz Inácio Lula da Silva,13,PT,Presidente 2022 (1º turno),Amapá,2º turno,197382,16,1,11,0
+c0047,Lula,Luiz Inácio Lula da Silva,13,PT,Presidente 2022 (1º turno),Amapá,2º turno,197382,16,1,11,0
+c0048,Lula,Luiz Inácio Lula da Silva,13,PT,Presidente 2022 (1º turno),Amapá,2º turno,197382,16,2,11,0
+c0049,Lula,Luiz Inácio Lula da Silva,13,PT,Presidente 2022 (1º turno),Amapá,2º turno,197382,16,2,11,0
+c0050,Lula,Luiz Inácio Lula da Silva,13,PT,Presidente 2022 (1º turno),Amapá,2º turno,197382,16,1,11,0
+c0051,Lula,Luiz Inácio Lula da Silva,13,PT,Presidente 2022 (1º turno),Amapá,2º turno,197382,16,1,11,0
+c0052,Lula,Luiz Inácio Lula da Silva,13,PT,Presidente 2022 (1º turno),Amapá,2º turno,197382,16,1,11,0
+c0053,Lula,Luiz Inácio Lula da Silva,13,PT,Presidente 2022 (1º turno),Amapá,2º turno,197382,16,1,11,0
+c0054,Lula,Luiz Inácio Lula da Silva,13,PT,Presidente 2022 (1º turno),Amapá,2º turno,197382,16,2,11,0
+c0055,Lula,Luiz Inácio Lula da Silva,13,PT,Presidente 2022 (1º turno),Amapá,2º turno,197382,16,2,11,0
+c0056,Lula,Luiz Inácio Lula da Silva,13,PT,Presidente 2022 (1º turno),Amapá,2º turno,197382,16,1,11,0
+c0057,Lula,Luiz Inácio Lula da Silva,13,PT,Presidente 2022 (1º turno),Amapá,2º turno,197382,16,2,11,0
+c0058,Lula,Luiz Inácio Lula da Silva,13,PT,Presidente 2022 (1º turno),Amapá,2º turno,197382,16,2,11,0
+c0059,Lula,Luiz Inácio Lula da Silva,13,PT,Presidente 2022 (1º turno),Amapá,2º turno,197382,16,2,11,0
+c0060,Lula,Luiz Inácio Lula da Silva,13,PT,Presidente 2022 (1º turno),Amapá,2º turno,197382,16,2,11,0
+c0061,Lula,Luiz Inácio Lula da Silva,13,PT,Presidente 2022 (1º turno),Amapá,2º turno,197382,16,1,11,0
+c0062,Lula,Luiz Inácio Lula da Silva,13,PT,Presidente 2022 (1º turno),Amapá,2º turno,197382,16,2,11,0
+c0063,Lula,Luiz Inácio Lula da Silva,13,PT,Presidente 2022 (1º turno),Amapá,2º turno,197382,16,1,11,0
+c0064,Lula,Luiz Inácio Lula da Silva,13,PT,Presidente 2022 (1º turno),Amapá,2º turno,197382,16,1,11,0
+c0065,Lula,Luiz Inácio Lula da Silva,13,PT,Presidente 2022 (2º turno),Amapá,2º turno,189918,16,2,2,0
+c0066,Lula,Luiz Inácio Lula da Silva,13,PT,Presidente 2022 (2º turno),Amapá,2º turno,189918,16,1,2,0
+c0067,Lula,Luiz Inácio Lula da Silva,13,PT,Presidente 2022 (2º turno),Amapá,2º turno,189918,16,1,2,0
+c0068,Lula,Luiz Inácio Lula da Silva,13,PT,Presidente 2022 (2º turno),Amapá,2º turno,189918,16,2,2,0
+c0069,Lula,Luiz Inácio Lula da Silva,13,PT,Presidente 2022 (2º turno),Amapá,2º turno,189918,16,1,2,0
+c0070,Lula,Luiz Inácio Lula da Silva,13,PT,Presidente 2022 (2º turno),Amapá,2º turno,189918,16,1,2,0
+c0071,Lula,Luiz Inácio Lula da Silva,13,PT,Presidente 2022 (2º turno),Amapá,2º turno,189918,16,2,2,0
+c0072,Lula,Luiz Inácio Lula da Silva,13,PT,Presidente 2022 (2º turno),Amapá,2º turno,189918,16,2,2,0
+c0073,Lula,Luiz Inácio Lula da Silva,13,PT,Presidente 2022 (2º turno),Amapá,2º turno,189918,16,2,2,0
+c0074,Lula,Luiz Inácio Lula da Silva,13,PT,Presidente 2022 (2º turno),Amapá,2º turno,189918,16,1,2,0
+c0075,Lula,Luiz Inácio Lula da Silva,13,PT,Presidente 2022 (2º turno),Amapá,2º turno,189918,16,1,2,0
+c0076,Lula,Luiz Inácio Lula da Silva,13,PT,Presidente 2022 (2º turno),Amapá,2º turno,189918,16,2,2,0
+c0077,Lula,Luiz Inácio Lula da Silva,13,PT,Presidente 2022 (2º turno),Amapá,2º turno,189918,16,2,2,0
+c0078,Lula,Luiz Inácio Lula da Silva,13,PT,Presidente 2022 (2º turno),Amapá,2º turno,189918,16,1,2,0
+c0079,Lula,Luiz Inácio Lula da Silva,13,PT,Presidente 2022 (2º turno),Amapá,2º turno,189918,16,1,2,0
+c0080,Lula,Luiz Inácio Lula da Silva,13,PT,Presidente 2022 (2º turno),Amapá,2º turno,189918,16,1,2,0
+c0081,Lula,Luiz Inácio Lula da Silva,13,PT,Presidente 2022 (2º turno),Amapá,2º turno,189918,16,1,2,0
+c0082,Lula,Luiz Inácio Lula da Silva,13,PT,Presidente 2022 (2º turno),Amapá,2º turno,189918,16,2,2,0
+c0083,Lula,Luiz Inácio Lula da Silva,13,PT,Presidente 2022 (2º turno),Amapá,2º turno,189918,16,2,2,0
+c0084,Lula,Luiz Inácio Lula da Silva,13,PT,Presidente 2022 (2º turno),Amapá,2º turno,189918,16,1,2,0
+c0085,Lula,Luiz Inácio Lula da Silva,13,PT,Presidente 2022 (2º turno),Amapá,2º turno,189918,16,2,2,0
+c0086,Lula,Luiz Inácio Lula da Silva,13,PT,Presidente 2022 (2º turno),Amapá,2º turno,189918,16,2,2,0
+c0087,Lula,Luiz Inácio Lula da Silva,13,PT,Presidente 2022 (2º turno),Amapá,2º turno,189918,16,2,2,0
+c0088,Lula,Luiz Inácio Lula da Silva,13,PT,Presidente 2022 (2º turno),Amapá,2º turno,189918,16,2,2,0
+c0089,Lula,Luiz Inácio Lula da Silva,13,PT,Presidente 2022 (2º turno),Amapá,2º turno,189918,16,1,2,0
+c0090,Lula,Luiz Inácio Lula da Silva,13,PT,Presidente 2022 (2º turno),Amapá,2º turno,189918,16,2,2,0
+c0091,Lula,Luiz Inácio Lula da Silva,13,PT,Presidente 2022 (2º turno),Amapá,2º turno,189918,16,1,2,0
+c0092,Lula,Luiz Inácio Lula da Silva,13,PT,Presidente 2022 (2º turno),Amapá,2º turno,189918,16,1,2,0
+c0093,Randolfe,Randolph Frederich Rodrigues Alves,130,PT,Senador 2026,Amapá,Não eleito,163857,16,3,9,0
+c0094,Chiquinho do Pipa,Francisco de Sa Coelho,18777,REDE,Vereador 2020,Laranjal do Jari,Suplente,88,1,60,185,0
+c0095,Prof Marcio Brito,Marcio de Oliveira Brito,55133,PSD,Vereador 2020,Tartarugalzinho,Suplente,88,1,38,86,0
+c0096,Ray Trindade,Raimunda da Silva Trindade,55225,PSD,Vereador 2020,Mazagão,Suplente,11,1,86,111,0
+c0097,Jose Orlando,Jose Orlando Pereira,13145,PT,Vereador 2020,Laranjal do Jari,Não eleito,3,1,167,185,0
+c0098,Irmão Walter,Walter Gama dos Santos,13222,PT,Vereador 2020,Laranjal do Jari,Não eleito,12,1,142,185,0
+c0099,Margarida do Pt,Margarida Maria Dias de Oliveira,13333,PT,Vereador 2020,Laranjal do Jari,Não eleito,3,1,167,185,0
+c0100,Cleide Duarte,Josicleide de Sousa Duarte,13515,PT,Vereador 2020,Laranjal do Jari,Não eleito,18,1,129,185,0
+c0101,Manu Conceição,Manuela Aragão Coelho,13777,PT,Vereador 2020,Laranjal do Jari,Não eleito,20,1,123,185,0
+c0102,Dioges Silva,Dioges dos Santos Silva,13120,PT,Vereador 2020,Laranjal do Jari,Não eleito,14,1,138,185,0
+c0103,Leo Amaral,Leonidas dos Santos do Amaral,13567,PT,Vereador 2020,Laranjal do Jari,Não eleito,7,1,157,185,0
+c0104,Gleice Borges,Gleiceane Borges Valente,13000,PT,Vereador 2020,Laranjal do Jari,Não eleito,4,1,165,185,0
+c0105,Marciano da Metalurgica,Marciano Silva Pedroso,13125,PT,Vereador 2020,Laranjal do Jari,Não eleito,2,1,172,185,0
+c0106,Pirico,Francisco Pereira da Silva,13123,PT,Vereador 2020,Laranjal do Jari,Não eleito,20,1,123,185,0
+c0107,Fabiola Oliveira,Fabiola de Oliveira Carvalho,13580,PT,Vereador 2020,Mazagão,Não eleito,7,1,93,111,0
+c0108,Zacarias,Zacarias da Silva Belo,13333,PT,Vereador 2020,Mazagão,Não eleito,95,1,47,111,0
+c0109,Prof. Sabá,Sebastião Rodrigues da Silva,13123,PT,Vereador 2020,Mazagão,Não eleito,39,1,61,111,0
+c0110,Naza Souza,Maria de Nazaré Nascimento de Souza,13789,PT,Vereador 2020,Mazagão,Não eleito,3,1,101,111,0
+c0111,Edmundo,Edmundo Alcantara Rosa,13130,PT,Vereador 2020,Mazagão,Não eleito,15,1,78,111,0
+c0112,Zeca da Tia Preta,Jose Pereira Ferreira,13456,PT,Vereador 2020,Mazagão,Não eleito,3,1,101,111,0
+c0113,Mauricio da Saúde,Mauricio Del Castillo Raiol,13000,PT,Vereador 2020,Mazagão,Não eleito,7,1,93,111,0
+c0114,Para,Jose Ferreira da Silva,13153,PT,Vereador 2020,Mazagão,Não eleito,6,1,97,111,0
+c0115,Agnaldo Soares,Agnaldo Soares Correia,13000,PT,Vereador 2020,Santana,Suplente,111,1,129,308,0
+c0116,Leide Ferreira,Leide Maria Pantoja Ferreira,13999,PT,Vereador 2020,Santana,Suplente,13,1,272,308,0
+c0117,Luh Salles,Lourdes Nonato de Sales,13456,PT,Vereador 2020,Santana,Suplente,29,1,228,308,0
+c0118,Waldir Carteiro,Waldir de Oliveira Sena,13013,PT,Vereador 2020,Santana,Suplente,70,1,158,308,0
+c0119,Socorro Nogueira,Antonia do Socorro Nogueira de Souza,13123,PT,Vereador 2020,Santana,Eleito,1090,1,5,308,0
+c0120,Erick Kong,Erick Victor da Silva Santos,13369,PT,Vereador 2020,Santana,Suplente,125,1,119,308,0
+c0121,Fábio Carreteiro,Fabio de Azevedo Viana,13222,PT,Vereador 2020,Santana,Suplente,65,1,167,308,0
+c0122,Drô Oliveira,Jadroelson de Oliveira da Silva,13131,PT,Vereador 2020,Santana,Suplente,1,1,300,308,0
+c0123,Josy Nunes,Josiete da Silva Nunes,13125,PT,Vereador 2020,Santana,Suplente,121,1,122,308,0
+c0124,Raimundinho do Delta,Raimundo de Alencar Mendonca,13555,PT,Vereador 2020,Santana,Suplente,100,1,136,308,0
+c0125,Pinduca,Jose de Jesus Barbosa da Silva,13147,PT,Vereador 2020,Santana,Suplente,59,1,176,308,0
+c0126,Toniel do Mercado,Toniel Lima da Silva,13015,PT,Vereador 2020,Santana,Suplente,45,1,196,308,0
+c0127,Ronaldo Lima,Ronaldo Wilson Santos Lima,13167,PT,Vereador 2020,Santana,Suplente,22,1,246,308,0
+c0128,Helena do Pt,Maria Helena da Costa,13003,PT,Vereador 2020,Santana,Suplente,12,1,274,308,0
+c0129,Ithiara Madureira,Ithiara Guedes das Virgens Madureira,13300,PT,Vereador 2020,Santana,Suplente,720,1,19,308,0
+c0130,Lucas Correa,Lucas Serrao Correa,13200,PT,Vereador 2020,Santana,Suplente,3,1,296,308,0
+c0131,Prof. Rômulo,Romulo Alves de Vasconcelos,13800,PT,Vereador 2020,Santana,Suplente,81,1,148,308,0
+c0132,Edson Moreira,Jose Edson dos Santos Moreira,13126,PT,Vereador 2020,Santana,Suplente,42,1,202,308,0
+c0133,Celisa Melo,Celisa Penna Melo Capelari,65321,PC do B,Vereador 2020,Macapá,Não eleito,1026,1,57,485,0
+c0134,Claudiomar Rosa,Claudiomar Rosa da Silva,70123,AVANTE,Vereador 2020,Macapá,Eleito,3468,1,3,485,0
+c0135,Mineirinho,Jose Raimundo Abreu Ferreira,13013,PT,Vereador 2020,Macapá,Não eleito,81,1,306,485,0
+c0136,Cacau,Cláudia Maria Gomes de Souza,13580,PT,Vereador 2020,Macapá,Não eleito,238,1,169,485,0
+c0137,Mara,Mara Nubia Rabelo da Silveira,13111,PT,Vereador 2020,Macapá,Não eleito,22,1,435,485,0
+c0138,Rocha do Sucatão,Edilson Vieira Rocha,13801,PT,Vereador 2020,Macapá,Não eleito,127,1,240,485,0
+c0139,Cleia Borges,Cleia Cardoso Borges,13123,PT,Vereador 2020,Macapá,Não eleito,261,1,158,485,0
+c0140,Teddy,Teddy Lobato de Almeida,13567,PT,Vereador 2020,Macapá,Não eleito,70,1,326,485,0
+c0141,Prof Rubem Junior,Rubem de Lima Pacheco Junior,13600,PT,Vereador 2020,Macapá,Não eleito,191,1,193,485,0
+c0142,Flexa Bibi,Francinaldo Flexa da Costa,13000,PT,Vereador 2020,Macapá,Não eleito,366,1,123,485,0
+c0143,Rabelo,Silvino Viana Rabelo,13113,PT,Vereador 2020,Macapá,Não eleito,21,1,441,485,0
+c0144,Van Vilhena,Edivandro Joao Vilhena de Oliveira,13613,PT,Vereador 2020,Macapá,Não eleito,358,1,129,485,0
+c0145,Saba Leitao,Sebastiao da Silva Leitao,13258,PT,Vereador 2020,Macapá,Não eleito,67,1,333,485,0
+c0146,Madalena,Maria Madalena Nunes da Silva,13131,PT,Vereador 2020,Macapá,Não eleito,84,1,300,485,0
+c0147,Cleonice Chaves,Cleonice Furtado Leite Chaves,25125,DEM,Vereador 2020,Santana,Suplente,157,1,99,308,0
+c0148,Professor Valnei,Valnei do Nascimento Guedes,25025,DEM,Vereador 2020,Santana,Suplente,365,1,54,308,0
+c0149,Ruth Paixão,Ruth Costa da Paixão,10777,REPUBLICANOS,Vereador 2020,Calçoene,Suplente,29,1,49,81,0
+c0150,Neto Costa,Casemiro Fernandes Cardoso Neto,10111,REPUBLICANOS,Vereador 2020,Calçoene,Suplente,50,1,37,81,0
+c0151,Camelô,Raimundo Alcindo Figueiredo dos Santos,20789,PSC,Vereador 2020,Calçoene,Não eleito,130,1,15,81,0
+c0152,Pepe Dias,Nazaré do Socorro de Sousa Dias,23169,CIDADANIA,Vereador 2020,Tartarugalzinho,Não eleito,28,1,56,86,0
+c0153,Caio Correa,Caio Cesar de Castro Correa,90000,PROS,Vereador 2020,Santana,Não eleito,212,1,82,308,0
+c0154,Rayara Maciel,Rayara Lobato Maciel,45000,PSDB,Vereador 2020,Cutias,Não eleito,2,1,55,58,0
+c0155,Maria Jose,Maria Jose Amaral,40789,PSB,Vereador 2020,Oiapoque,Não eleito,54,1,59,139,0
+c0156,Alcinete Santos,Alcinete Ferreira dos Santos,18132,REDE,Vereador 2024,Santana,Suplente,120,1,86,158,0
+c0157,Ruth Paixão,Ruth Costa da Paixão,13221,PT,Vereador 2024,Calçoene,Suplente,20,1,49,57,0
+c0158,Neto Costa,Casemiro Fernandes Cardoso Neto,13456,PT,Vereador 2024,Calçoene,Suplente,117,1,27,57,0
+c0159,Lucas Maranhão,Lucas Evangelista da Silva Costa,13123,PT,Vereador 2024,Calçoene,Suplente,134,1,21,57,0
+c0160,Professora Linda Viana,Lindaci Viana da Silva,13133,PT,Vereador 2024,Calçoene,Suplente,118,1,26,57,0
+c0161,Camelô,Raimundo Alcindo Figueiredo dos Santos,13789,PT,Vereador 2024,Calçoene,Suplente,149,1,16,57,0
+c0162,Lucélia Quaresma,Lucélia Araujo Quaresma,44124,UNIÃO,Vereador 2024,Macapá,Suplente,1150,1,70,258,0
+c0163,Ithiara Madureira,Ithiara Guedes das Virgens Madureira,77300,SOLIDARIEDADE,Vereador 2024,Santana,Eleito,2817,1,2,158,0
+c0164,Joel Gomes,Joel Gomes da Silva,13456,PT,Vereador 2024,Laranjal do Jari,Não eleito,14,1,76,82,0
+c0165,Dadá,João Gomes da Silva,13133,PT,Vereador 2024,Macapá,Suplente,105,1,200,258,0
+c0166,France Vidal,Francemare Vidal Mira da Silva,13200,PT,Vereador 2024,Macapá,Suplente,13,1,250,258,0
+c0167,Petró,Petronilo da Silva Sergio Filho,13777,PT,Vereador 2024,Macapá,Suplente,30,1,240,258,0
+c0168,Claudiomar Rosa,Claudiomar Rosa da Silva,13113,PT,Vereador 2024,Macapá,Eleito,2657,1,30,258,0
+c0169,Prof. Dalva Menezes,Maria Lucidalva Menezes da Silva,13323,PT,Vereador 2024,Macapá,Suplente,18,1,247,258,0
+c0170,Lorena Quintas,Lorena Fonseca Quintas,13222,PT,Vereador 2024,Macapá,Suplente,1246,1,66,258,0
+c0171,Marco Nunes,Marco Antonio de Lima Nunes,13198,PT,Vereador 2024,Macapá,Suplente,414,1,116,258,0
+c0172,Professora Ana Cristina,Ana Cristina de Paula Maues Soares,13131,PT,Vereador 2024,Macapá,Suplente,367,1,126,258,0
+c0173,Zé Luiz,Jose Luiz Nogueira de Sousa,13123,PT,Vereador 2024,Macapá,Suplente,2593,1,33,258,0
+c0174,Cajú,Kesley Pereira Ferreira,13469,PT,Vereador 2024,Ferreira Gomes,Não eleito,28,1,49,92,0
+c0175,Cirão,Ciro Lopes dos Santos,13102,PT,Vereador 2024,Ferreira Gomes,Não eleito,11,1,70,92,0
+c0176,Rúbia,Rúbia Santos da Costa,13123,PT,Vereador 2024,Ferreira Gomes,Não eleito,95,1,26,92,0
+c0177,Professor Márcio,Márcio Isacksson Tavares,13111,PT,Vereador 2024,Ferreira Gomes,Não eleito,18,1,58,92,0
+c0178,Professora Maria,Maria Raimunda Nascimento Ribeiro,13313,PT,Vereador 2024,Ferreira Gomes,Não eleito,5,1,81,92,0
+c0179,Guró,Patricilene Oliveira Lacerda,13333,PT,Vereador 2024,Ferreira Gomes,Não eleito,2,1,88,92,0
+c0180,Professor Charles,Francisco Charles Marinho Brito,13456,PT,Vereador 2024,Ferreira Gomes,Não eleito,15,1,63,92,0
+c0181,Caio Corrêa,Caio César de Castro Corrêa,13147,PT,Vereador 2024,Santana,Suplente,438,1,48,158,0
+c0182,Cleonice Chaves,Cleonice Furtado Leite Chaves,13125,PT,Vereador 2024,Santana,Suplente,192,1,76,158,0
+c0183,Raimundinho do Delta,Raimundo de Alencar Mendonça,13555,PT,Vereador 2024,Santana,Suplente,79,1,104,158,0
+c0184,Teófilo Alcolumbre,Teófilo Alcolumbre da Silva,13000,PT,Vereador 2024,Santana,Suplente,40,1,125,158,0
+c0185,Alex do Peixe,Alex Amador da Costa,13122,PT,Vereador 2024,Santana,Suplente,77,1,107,158,0
+c0186,Leônidas Almeida,Leônidas Soares de Almeida,13300,PT,Vereador 2024,Santana,Suplente,90,1,100,158,0
+c0187,Conselheira Maria,Maria José Nogueira de Souza,13789,PT,Vereador 2024,Santana,Suplente,1691,1,9,158,0
+c0188,Pedro Moreira,Pedro de Freitas Moreira,13222,PT,Vereador 2024,Santana,Suplente,199,1,74,158,0
+c0189,Professor Valnei,Valnei do Nascimento Guedes,13456,PT,Vereador 2024,Santana,Suplente,431,1,49,158,0
+c0190,Dra Eurídice Duarte,Euridice de Nazare Gaia Duarte,13333,PT,Vereador 2024,Santana,Suplente,149,1,80,158,0
+c0191,Socorro Nogueira,Antônia do Socorro Nogueira de Souza,13123,PT,Vereador 2024,Santana,Eleito,2945,1,1,158,0
+c0192,Alice Santos,Maria Alice Cardoso dos Santos,13777,PT,Vereador 2024,Santana,Suplente,79,1,104,158,0
+c0193,Professora Marilu,Marilu Tavares da Matta Pereira,13123,PT,Vereador 2024,Amapá,Suplente,154,1,17,61,0
+c0194,Jaya,Jaya Saboia de Souza,13111,PT,Vereador 2024,Amapá,Suplente,2,1,61,61,0
+c0195,Coelhinho,Jose Aguiar Coelho,13333,PT,Vereador 2024,Amapá,Suplente,3,1,60,61,0
+c0196,Professor Carlos Gomes,Carlos Gomes de Souza Neto,13000,PT,Vereador 2024,Amapá,Suplente,26,1,44,61,0
+c0197,Edson Correa Acs,Edson Correa de Oliveira,13777,PT,Vereador 2024,Amapá,Suplente,90,1,26,61,0
+c0198,Jeandro Coelho,Jeandro Pereira Coelho,13000,PT,Vereador 2024,Cutias,Não eleito,26,1,31,44,0
+c0199,Mel Sarges,Fernanda Mel Pantoja Sarges,13456,PT,Vereador 2024,Cutias,Não eleito,116,1,17,44,0
+c0200,Preto,Josue Cardoso Amaral,13111,PT,Vereador 2024,Cutias,Não eleito,6,1,40,44,0
+c0201,Ronaldo Propaganda,Ronaldo da Silva Carneiro,13123,PT,Vereador 2024,Cutias,Não eleito,10,1,39,44,0
+c0202,Lana Miranda,Lana Maria Miranda dos Santos,13123,PT,Vereador 2024,Pedra Branca do Amapari,Não eleito,0,0,54,59,0
+c0203,Ketto,Josino Maximiano de Souza,13976,PT,Vereador 2024,Pedra Branca do Amapari,Não eleito,0,0,54,59,0
+c0204,Irmão Joel,Joel Muniz Ananias,13321,PT,Vereador 2024,Pedra Branca do Amapari,Não eleito,0,0,54,59,0
+c0205,Tião Brito Reinventado,Dionison Santana Brito,13666,PT,Vereador 2024,Pedra Branca do Amapari,Não eleito,0,0,54,59,0
+c0206,Azul,Jose Airton Barbosa Soares,13000,PT,Vereador 2024,Pedra Branca do Amapari,Não eleito,0,0,54,59,0
+c0207,Prof. Miro,Mirovaldo dos Santos Monteiro,13222,PT,Vereador 2024,Oiapoque,Não eleito,19,1,103,139,0
+c0208,Eliane Palikur,Eliane Ioio Felicio,13555,PT,Vereador 2024,Oiapoque,Não eleito,51,1,76,139,0
+c0209,Joacy Rabelo,Joacy Rabelo da Silva,13156,PT,Vereador 2024,Oiapoque,Não eleito,47,1,77,139,0
+c0210,Maria José,Maria Jose Amaral,13456,PT,Vereador 2024,Oiapoque,Não eleito,30,1,92,139,0
+c0211,Irmão Eneas,Eneas Lima Gonçalvés,13911,PT,Vereador 2024,Oiapoque,Não eleito,19,1,103,139,0
+c0212,Prof. Homero,Homero Bezerra Ribeiro,13111,PT,Vereador 2024,Oiapoque,Não eleito,45,1,82,139,0
+c0213,Fabiola Oliveira,Fabiola de Oliveira Carvalho,23131,CIDADANIA,Vereador 2024,Mazagão,Não eleito,7,1,87,91,0
+c0214,Ezequias Monteiro,Ezequias Cruz Monteiro,13013,PT,Vereador 2024,Mazagão,Não eleito,0,0,91,91,0
+c0215,Ray Trindade,Raimunda da Silva Trindade,13333,PT,Vereador 2024,Mazagão,Não eleito,1,1,90,91,0
+c0216,Dona Irene,Irene Borges Gonçalves,13222,PT,Vereador 2024,Mazagão,Não eleito,16,1,73,91,0
+c0217,Pastor Charley,Jose Charley do Nascimento Coelho,13456,PT,Vereador 2024,Mazagão,Não eleito,30,1,67,91,0
+c0218,Betão do Camaipi,Jorge Alberto Evangelista Rodrigues,13000,PT,Vereador 2024,Mazagão,Não eleito,16,1,73,91,0
+c0219,Franciclei do Sindicato,Franciclei Freitas da Silva,13123,PT,Vereador 2024,Mazagão,Não eleito,172,1,36,91,0
+c0220,Professor Marcio Brito,Marcio de Oliveira Brito,13444,PT,Vereador 2024,Tartarugalzinho,Não eleito,50,1,41,74,0
+c0221,Valdiney Soares,Valdiney dos Santos Silva,13000,PT,Vereador 2024,Tartarugalzinho,Não eleito,63,1,38,74,0
+c0222,Maria Rodrigues,Maria Jose Rodrigues,13777,PT,Vereador 2024,Tartarugalzinho,Não eleito,1,1,72,74,0
+c0223,Pepê Dias,Nazaré do Socorro de Sousa Dias,13113,PT,Vereador 2024,Tartarugalzinho,Não eleito,4,1,66,74,0
+c0224,Nelinho Brito,Manoel Neris Souza Brito,13456,PT,Vereador 2024,Tartarugalzinho,Não eleito,6,1,60,74,0
+c0225,Rayara Lobato,Rayara Lobato Maciel,13113,PT,Vereador 2024,Cutias,Não eleito,4,1,43,44,0
+c0226,Lula,Luiz Inácio Lula da Silva,13,PT,Presidente 2026 (1º turno),Amapá,,212503,16,1,13,0

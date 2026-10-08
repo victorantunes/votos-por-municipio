@@ -1,0 +1,157 @@
+cid,pessoa,disp,nome_urna,nome,numero,partido,situacao,tot,nmun,rk,nc,anulados,ue,sq
+c0001,g32956,de22,Professor Roberto Ramos,Roberto Ramos Santos,90456,PROS,Suplente,568,11,105,379,0,Roraima,230001600092
+c0002,g39788,de22,Gorete Licá,Maria Gorete Licá de Oliveira,35345,PMB,Suplente,38,5,280,379,0,Roraima,230001600137
+c0003,g34795,de22,Padre Paulo,Paulo Pereira Mota,15000,MDB,Suplente,1454,15,57,379,0,Roraima,230001602837
+c0004,g31987,de22,Evangelista Siqueira,Evangelista Soares Siqueira,13456,PT,Não eleito,3533,15,24,379,0,Roraima,230001610921
+c0005,g5219,de22,Lourival Ribeiro,Lourival Ribeiro da Silva,13761,PT,Não eleito,33,3,293,379,0,Roraima,230001610927
+c0006,g10024,de22,Prof Sirdennys,Sirdennys da Silva Santana,13123,PT,Não eleito,650,13,96,379,0,Roraima,230001610931
+c0007,g41843,de22,Job Martins,Job Martins dos Santos,13444,PT,Não eleito,173,10,176,379,0,Roraima,230001610935
+c0008,g4755,de22,Namis Levino,Namis Levino da Silva Filho,13000,PT,Não eleito,64,3,241,379,0,Roraima,230001610936
+c0009,g11200,de22,Paulo do Crediario,Paulo da Costa Fegueredo,43333,PV,Não eleito,12,2,338,379,0,Roraima,230001610938
+c0010,g970,de22,Pedro Relojoeiro,Pedro Pereira de Oliveira,13100,PT,Não eleito,34,3,290,379,0,Roraima,230001610939
+c0011,g7727,de22,Rejy Carvalho,Rejane Messias de Oliveira Carvalho,13333,PT,Não eleito,424,10,119,379,0,Roraima,230001610941
+c0012,g14157,de22,Valdilson O Pink,Valdilson Macedo dos Santos,13001,PT,Não eleito,45,3,269,379,0,Roraima,230001734585
+c0013,g23117,de22,Jeane Ribeiro,Jeane da Silva Ribeiro,13222,PT,Não eleito,37,3,282,379,0,Roraima,230001734587
+c0014,g29851,de26,Pablo Sergio,Pablo Sergio Souza Bezerra,13613,PT,Não eleito,287,10,90,231,0,Roraima,230002549306
+c0015,g37473,de26,Ivanildo Braga,Ivanildo Braga Delmond,13283,PT,Não eleito,16,3,212,231,0,Roraima,230002549307
+c0016,g34667,de26,Raimundo do Posto,Raimundo Rodrigues da Cunha,13456,PT,Não eleito,187,8,108,231,0,Roraima,230002549309
+c0017,g40432,de26,Yngrid Narrara,Yngrid Narrara da Silva Barbosa,13111,PT,Não eleito,40,5,174,231,0,Roraima,230002549310
+c0018,g39677,de26,Edgard Zanette,Edgard Vinicius Cacho Zanette,13333,PT,Não eleito,913,15,54,231,0,Roraima,230002549313
+c0019,g42376,de26,Rômulo Braz,Anderson Romulo Garcia Braz,13777,PT,Não eleito,49,3,169,231,0,Roraima,230002549314
+c0020,g32956,de26,Prof. Roberto Ramos,Roberto Ramos Santos,13131,PT,Não eleito,954,14,53,231,0,Roraima,230002549315
+c0021,g9574,de26,Nelita Frank,Nelita Frank,13500,PT,Não eleito,867,15,56,231,0,Roraima,230002549317
+c0022,g31391,de26,Romerio Santiago,Romério Santana Santiago,13000,PT,Não eleito,217,11,101,231,0,Roraima,230002549318
+c0023,g34590,de26,Professor Telmo Macuxi,Telmo Ribeiro Paulino,13444,PT,Não eleito,713,12,61,231,0,Roraima,230002549319
+c0024,g39025,de26,Daniel Sampaio,Daniel Sampaio Alves,13321,PT,Não eleito,226,11,98,231,0,Roraima,230002549320
+c0025,g16093,de26,Prof. Leonardo,Leonardo Pereira da Silva,13130,PT,Não eleito,321,7,86,231,0,Roraima,230002549325
+c0026,g37219,de26,Aldenicia Cadete,Aldenicia Cadete de Lima,13555,PT,Não eleito,450,13,77,231,0,Roraima,230002549326
+c0027,g43305,de26,Zelandes Patamona,Zelandes Alberto Oliveira,13123,PT,Não eleito,1185,11,51,231,0,Roraima,230002549327
+c0028,g23388,de26,Marcia Santoro,Márcia Regina Maturano Santoro Chioratto,13100,PT,Não eleito,69,7,152,231,0,Roraima,230002549329
+c0029,g39788,de26,Professora Gorete Lica,Maria Gorete Licá de Oliveira,44044,UNIÃO,Suplente,61,5,158,231,0,Roraima,230002549340
+c0030,g24204,de26,Yasmin Nascimento,Yasmin Nascimento Cesar,13513,PT,Não eleito,44,4,171,231,0,Roraima,230002554225
+c0031,g1616,df22,Joenia Wapichana,Joenia Batista de Carvalho,1818,REDE,Não eleito,11221,15,6,146,0,Roraima,230001610810
+c0032,g8109,df22,Professora Antonia Pedrosa,Antonia Pedrosa Vieira,1313,PT,Não eleito,1920,15,33,146,0,Roraima,230001610860
+c0033,g37700,df22,Romulo Vaca,Romulo Wilson Vaca Marques,1323,PT,Não eleito,0,0,144,146,25,Roraima,230001610866
+c0034,g50437,df22,Prof Sivaldo,Sivaldo Souza Silva,1310,PT,Não eleito,279,13,77,146,0,Roraima,230001610868
+c0035,g24291,df22,Kassia Moura,Cassia Rejane do Nascimento,1477,PTB,Não eleito,167,9,88,146,0,Roraima,230001693309
+c0036,g24291,df26,Kassia Moura,Cássia Rejane do Nascimento,1377,PT,Não eleito,146,13,71,95,0,Roraima,230002549825
+c0037,g8109,df26,Prof. Antônia Pedrosa,Antonia Pedrosa Vieira,1313,PT,Não eleito,3997,15,21,95,0,Roraima,230002549826
+c0038,g37054,df26,Prof. Américo Lyra,Américo Alves de Lyra Junior,1365,PT,Não eleito,316,11,58,95,0,Roraima,230002549827
+c0039,g35502,df26,Fábio Almeida,Fabio Goncalves de Almeida,1300,PT,Não eleito,740,15,43,95,0,Roraima,230002549828
+c0040,g14988,df26,Telma Taurepang,Telma Marques da Silva,1314,PT,Não eleito,542,12,47,95,0,Roraima,230002549829
+c0041,g1616,df26,Joenia Wapichana,Joenia Batista de Carvalho,1333,PT,Não eleito,9998,15,15,95,0,Roraima,230002549830
+c0042,g37389,df26,Marreta Coletivo de Esquerda,Rubens Chioratto Junior,1395,PT,Não eleito,49,9,82,95,0,Roraima,230002549833
+c0043,g35502,gov22,Fábio Almeida,Fábio Gonçalves de Almeida,50,PSOL,Não eleito,3843,15,5,8,0,Roraima,230001610641
+c0044,g9574,gov22,Nelita Frank,Nelita Frank,13,PT,Não eleito,8948,15,4,8,0,Roraima,230002529954
+c0045,g35502,pref20,Fabio Almeida,Fábio Gonçalves de Almeida,50,PSOL,Não eleito,1130,1,9,10,0,Boa Vista,230000838292
+c0046,g37397,pres22t1,Lula,Luiz Inácio Lula da Silva,13,PT,2º turno,68760,15,2,11,0,Roraima,280001607829
+c0047,g37397,pres22t1,Lula,Luiz Inácio Lula da Silva,13,PT,2º turno,68760,15,1,11,0,Roraima,280001607829
+c0048,g37397,pres22t1,Lula,Luiz Inácio Lula da Silva,13,PT,2º turno,68760,15,1,11,0,Roraima,280001607829
+c0049,g37397,pres22t1,Lula,Luiz Inácio Lula da Silva,13,PT,2º turno,68760,15,1,11,0,Roraima,280001607829
+c0050,g37397,pres22t1,Lula,Luiz Inácio Lula da Silva,13,PT,2º turno,68760,15,1,11,0,Roraima,280001607829
+c0051,g37397,pres22t1,Lula,Luiz Inácio Lula da Silva,13,PT,2º turno,68760,15,1,11,0,Roraima,280001607829
+c0052,g37397,pres22t1,Lula,Luiz Inácio Lula da Silva,13,PT,2º turno,68760,15,2,11,0,Roraima,280001607829
+c0053,g37397,pres22t1,Lula,Luiz Inácio Lula da Silva,13,PT,2º turno,68760,15,2,11,0,Roraima,280001607829
+c0054,g37397,pres22t1,Lula,Luiz Inácio Lula da Silva,13,PT,2º turno,68760,15,2,11,0,Roraima,280001607829
+c0055,g37397,pres22t1,Lula,Luiz Inácio Lula da Silva,13,PT,2º turno,68760,15,1,11,0,Roraima,280001607829
+c0056,g37397,pres22t1,Lula,Luiz Inácio Lula da Silva,13,PT,2º turno,68760,15,1,11,0,Roraima,280001607829
+c0057,g37397,pres22t1,Lula,Luiz Inácio Lula da Silva,13,PT,2º turno,68760,15,2,11,0,Roraima,280001607829
+c0058,g37397,pres22t1,Lula,Luiz Inácio Lula da Silva,13,PT,2º turno,68760,15,2,11,0,Roraima,280001607829
+c0059,g37397,pres22t1,Lula,Luiz Inácio Lula da Silva,13,PT,2º turno,68760,15,1,11,0,Roraima,280001607829
+c0060,g37397,pres22t1,Lula,Luiz Inácio Lula da Silva,13,PT,2º turno,68760,15,1,11,0,Roraima,280001607829
+c0061,g37397,pres22t1,Lula,Luiz Inácio Lula da Silva,13,PT,2º turno,68760,15,1,11,0,Roraima,280001607829
+c0062,g37397,pres22t1,Lula,Luiz Inácio Lula da Silva,13,PT,2º turno,68760,15,1,11,0,Roraima,280001607829
+c0063,g37397,pres22t1,Lula,Luiz Inácio Lula da Silva,13,PT,2º turno,68760,15,2,11,0,Roraima,280001607829
+c0064,g37397,pres22t1,Lula,Luiz Inácio Lula da Silva,13,PT,2º turno,68760,15,2,11,0,Roraima,280001607829
+c0065,g37397,pres22t1,Lula,Luiz Inácio Lula da Silva,13,PT,2º turno,68760,15,1,11,0,Roraima,280001607829
+c0066,g37397,pres22t1,Lula,Luiz Inácio Lula da Silva,13,PT,2º turno,68760,15,2,11,0,Roraima,280001607829
+c0067,g37397,pres22t1,Lula,Luiz Inácio Lula da Silva,13,PT,2º turno,68760,15,2,11,0,Roraima,280001607829
+c0068,g37397,pres22t1,Lula,Luiz Inácio Lula da Silva,13,PT,2º turno,68760,15,2,11,0,Roraima,280001607829
+c0069,g37397,pres22t1,Lula,Luiz Inácio Lula da Silva,13,PT,2º turno,68760,15,2,11,0,Roraima,280001607829
+c0070,g37397,pres22t1,Lula,Luiz Inácio Lula da Silva,13,PT,2º turno,68760,15,1,11,0,Roraima,280001607829
+c0071,g37397,pres22t1,Lula,Luiz Inácio Lula da Silva,13,PT,2º turno,68760,15,2,11,0,Roraima,280001607829
+c0072,g37397,pres22t1,Lula,Luiz Inácio Lula da Silva,13,PT,2º turno,68760,15,1,11,0,Roraima,280001607829
+c0073,g37397,pres22t1,Lula,Luiz Inácio Lula da Silva,13,PT,2º turno,68760,15,1,11,0,Roraima,280001607829
+c0074,g37397,pres22t2,Lula,Luiz Inácio Lula da Silva,13,PT,2º turno,67128,15,2,2,0,Roraima,280001607829
+c0075,g37397,pres22t2,Lula,Luiz Inácio Lula da Silva,13,PT,2º turno,67128,15,1,2,0,Roraima,280001607829
+c0076,g37397,pres22t2,Lula,Luiz Inácio Lula da Silva,13,PT,2º turno,67128,15,1,2,0,Roraima,280001607829
+c0077,g37397,pres22t2,Lula,Luiz Inácio Lula da Silva,13,PT,2º turno,67128,15,2,2,0,Roraima,280001607829
+c0078,g37397,pres22t2,Lula,Luiz Inácio Lula da Silva,13,PT,2º turno,67128,15,1,2,0,Roraima,280001607829
+c0079,g37397,pres22t2,Lula,Luiz Inácio Lula da Silva,13,PT,2º turno,67128,15,1,2,0,Roraima,280001607829
+c0080,g37397,pres22t2,Lula,Luiz Inácio Lula da Silva,13,PT,2º turno,67128,15,2,2,0,Roraima,280001607829
+c0081,g37397,pres22t2,Lula,Luiz Inácio Lula da Silva,13,PT,2º turno,67128,15,2,2,0,Roraima,280001607829
+c0082,g37397,pres22t2,Lula,Luiz Inácio Lula da Silva,13,PT,2º turno,67128,15,2,2,0,Roraima,280001607829
+c0083,g37397,pres22t2,Lula,Luiz Inácio Lula da Silva,13,PT,2º turno,67128,15,1,2,0,Roraima,280001607829
+c0084,g37397,pres22t2,Lula,Luiz Inácio Lula da Silva,13,PT,2º turno,67128,15,1,2,0,Roraima,280001607829
+c0085,g37397,pres22t2,Lula,Luiz Inácio Lula da Silva,13,PT,2º turno,67128,15,2,2,0,Roraima,280001607829
+c0086,g37397,pres22t2,Lula,Luiz Inácio Lula da Silva,13,PT,2º turno,67128,15,2,2,0,Roraima,280001607829
+c0087,g37397,pres22t2,Lula,Luiz Inácio Lula da Silva,13,PT,2º turno,67128,15,1,2,0,Roraima,280001607829
+c0088,g37397,pres22t2,Lula,Luiz Inácio Lula da Silva,13,PT,2º turno,67128,15,1,2,0,Roraima,280001607829
+c0089,g37397,pres22t2,Lula,Luiz Inácio Lula da Silva,13,PT,2º turno,67128,15,1,2,0,Roraima,280001607829
+c0090,g37397,pres22t2,Lula,Luiz Inácio Lula da Silva,13,PT,2º turno,67128,15,1,2,0,Roraima,280001607829
+c0091,g37397,pres22t2,Lula,Luiz Inácio Lula da Silva,13,PT,2º turno,67128,15,2,2,0,Roraima,280001607829
+c0092,g37397,pres22t2,Lula,Luiz Inácio Lula da Silva,13,PT,2º turno,67128,15,2,2,0,Roraima,280001607829
+c0093,g37397,pres22t2,Lula,Luiz Inácio Lula da Silva,13,PT,2º turno,67128,15,1,2,0,Roraima,280001607829
+c0094,g37397,pres22t2,Lula,Luiz Inácio Lula da Silva,13,PT,2º turno,67128,15,2,2,0,Roraima,280001607829
+c0095,g37397,pres22t2,Lula,Luiz Inácio Lula da Silva,13,PT,2º turno,67128,15,2,2,0,Roraima,280001607829
+c0096,g37397,pres22t2,Lula,Luiz Inácio Lula da Silva,13,PT,2º turno,67128,15,2,2,0,Roraima,280001607829
+c0097,g37397,pres22t2,Lula,Luiz Inácio Lula da Silva,13,PT,2º turno,67128,15,2,2,0,Roraima,280001607829
+c0098,g37397,pres22t2,Lula,Luiz Inácio Lula da Silva,13,PT,2º turno,67128,15,1,2,0,Roraima,280001607829
+c0099,g37397,pres22t2,Lula,Luiz Inácio Lula da Silva,13,PT,2º turno,67128,15,2,2,0,Roraima,280001607829
+c0100,g37397,pres22t2,Lula,Luiz Inácio Lula da Silva,13,PT,2º turno,67128,15,1,2,0,Roraima,280001607829
+c0101,g37397,pres22t2,Lula,Luiz Inácio Lula da Silva,13,PT,2º turno,67128,15,1,2,0,Roraima,280001607829
+c0102,g15138,ver20,Amarildo Firmino,Amarildo Firmino Lucas,13789,PT,Não eleito,71,1,22,55,0,São João da Baliza,230000654995
+c0103,g51186,ver20,Dell Borba,Joaquim Rogèrio Borba,13456,PT,Não eleito,66,1,25,55,0,São João da Baliza,230000654996
+c0104,g4148,ver20,Andrè Bananinha,André Luiz Gomes dos Santos,13123,PT,Não eleito,33,1,39,55,0,São João da Baliza,230000654997
+c0105,g24867,ver20,Luh Santos,Luciane Manuela dos Santos,13222,PT,Não eleito,5,1,53,55,0,São João da Baliza,230000654999
+c0106,g37219,ver20,Professora Aldenicia Wapichana,Aldenicia Cadete de Lima,18181,REDE,Não eleito,93,1,35,120,0,Cantá,230000741653
+c0107,g39025,ver20,Tuxaua Daniel,Daniel Sampaio Alves,23333,CIDADANIA,Não eleito,10,1,63,80,0,Amajari,230000766869
+c0108,g31391,ver20,Romério Santiago,Romério Santana Santiago,18000,REDE,Não eleito,128,1,23,58,0,Alto Alegre,230000857657
+c0109,g48771,ver20,Cleiton da Confecção,Cleiton Cesar Costa Nogueira,13888,PT,Não eleito,92,1,292,556,0,Boa Vista,230001054004
+c0110,g42925,ver20,Profiro do Vila Jardim,Profiro dos Santos Bezerra,13234,PT,Não eleito,56,1,365,556,0,Boa Vista,230001054005
+c0111,g10304,ver20,Fabiola Cuidadora,Fabiola Sampaio dos Santos,13031,PT,Não eleito,92,1,292,556,0,Boa Vista,230001054006
+c0112,g7727,ver20,Regy Carvalho,Rejane Messias de Oliveira Carvalho,13333,PT,Não eleito,136,1,243,556,0,Boa Vista,230001054007
+c0113,g8109,ver20,Professora Antonia Pedrosa,Antonia Pedrosa Vieira,13556,PT,Não eleito,879,1,51,556,0,Boa Vista,230001054008
+c0114,g11859,ver20,Osmar Morais,Osmar Morais Santos,13444,PT,Não eleito,111,1,266,556,0,Boa Vista,230001054009
+c0115,g11200,ver20,Paulo do Crediario,Paulo da Costa Fegueredo,13190,PT,Não eleito,13,1,518,556,0,Boa Vista,230001054010
+c0116,g5045,ver20,Roberto Morais,Roberto Rodrigues Morais,13698,PT,Não eleito,189,1,195,556,0,Boa Vista,230001054011
+c0117,g44692,ver20,Jordel Santos,Jordel Ferreira dos Santos,13242,PT,Não eleito,97,1,284,556,0,Boa Vista,230001054012
+c0118,g42376,ver20,Rômulo Braz,Anderson Romulo Garcia Braz,13777,PT,Não eleito,18,1,493,556,0,Boa Vista,230001054013
+c0119,g8383,ver20,Ediane Rodrigues,Ediane Rodrigues Leandro,13060,PT,Não eleito,240,1,161,556,0,Boa Vista,230001054014
+c0120,g50451,ver20,Marcela Matarazzo,Marcelo Marinho Bernardino,13666,PT,Não eleito,21,1,486,556,0,Boa Vista,230001054015
+c0121,g20429,ver20,Marcos Vinicius,Marcos Vinicius Batista,13111,PT,Não eleito,198,1,188,556,0,Boa Vista,230001054016
+c0122,g34795,ver20,Padre Paulo Mota,Paulo Pereira Mota,13131,PT,Não eleito,1431,1,20,556,0,Boa Vista,230001054017
+c0123,g36341,ver20,Professor Betinho,Herbson dos Santos Silva,13123,PT,Não eleito,80,1,315,556,0,Boa Vista,230001054018
+c0124,g24046,ver20,Elias Freitas,Elias Freitas Santos,13456,PT,Não eleito,258,1,152,556,0,Boa Vista,230001054019
+c0125,g45460,ver20,Sheul Chaves,Francisco Araujo Chaves,13013,PT,Não eleito,28,1,454,556,0,Boa Vista,230001054020
+c0126,g10024,ver20,Professora Sirdennys,Sirdennys da Silva Santana,13112,PT,Não eleito,262,1,150,556,0,Boa Vista,230001054021
+c0127,g14157,ver20,Valdilson O Pink,Valdilson Macedo dos Santos,13001,PT,Não eleito,16,1,503,556,0,Boa Vista,230001054022
+c0128,g4755,ver20,Namis Levino,Namis Levino da Silva Filho,40000,PSB,Não eleito,265,1,146,556,0,Boa Vista,230001058247
+c0129,g32513,ver20,Lindomar Lima,Antonio Lindomar Marcelino Lima,13123,PT,Não eleito,121,1,16,89,0,Normandia,230001206608
+c0130,g41291,ver20,Andreia da Promoção Social,Andreia Cristina Jeronimo Oliveira,13333,PT,Não eleito,63,1,31,89,0,Normandia,230001206610
+c0131,g16320,ver20,Irmão Vilson,Vilson Souza da Silva,13000,PT,Não eleito,16,1,57,89,0,Normandia,230001206612
+c0132,g5219,ver20,Lourival Ribeiro,Lourival Ribeiro da Silva,90222,PROS,Não eleito,23,1,477,556,0,Boa Vista,230001251771
+c0133,g36736,ver20,Antonio Olavo,Antonio Soares dos Santos,27246,DC,Suplente,96,1,288,556,0,Boa Vista,230001264878
+c0134,g14844,ver20,Regiane Costa,Regiane Cláudia Gomes da Costa,13000,PT,Não eleito,32,1,40,55,0,São João da Baliza,230001272231
+c0135,g36736,ver24,Olavo da Construção Civil,Antônio Soares dos Santos,13123,PT,Não eleito,146,1,155,281,0,Boa Vista,230002127648
+c0136,g40432,ver24,Yngrid Narrara,Yngrid Narrara da Silva Barbosa,13111,PT,Não eleito,24,1,254,281,0,Boa Vista,230002127649
+c0137,g42376,ver24,Rômulo Braz,Anderson Rômulo Garcia Braz,13777,PT,Não eleito,87,1,192,281,0,Boa Vista,230002127650
+c0138,g24204,ver24,Yasmin Nascimento,Yasmin Nascimento Cesar,13456,PT,Não eleito,25,1,253,281,0,Boa Vista,230002127656
+c0139,g29851,ver24,Pablo Sérgio,Pablo Sérgio Souza Bezerra,13613,PT,Não eleito,361,1,105,281,0,Boa Vista,230002127657
+c0140,g20429,ver24,Marquinho do Pt,Marcos Vinicius Batista,13007,PT,Não eleito,11,1,269,281,0,Boa Vista,230002127663
+c0141,g26471,ver24,Fábia Patamona,Fábia José,13789,PT,Suplente,51,1,41,59,0,Uiramutã,230002127844
+c0142,g49732,ver24,Lucivania Ingaricó,Lucivania Sales Ingaricó,13147,PT,Suplente,49,1,43,59,0,Uiramutã,230002127849
+c0143,g7677,ver24,Esdras do Coração Macuxi,Esdras Kaian Ribeiro Xavier,13456,PT,Eleito,351,1,2,59,0,Uiramutã,230002127851
+c0144,g6682,ver24,Menosso Ingaricó,Menosso Sales Soares Ingaricó,13123,PT,Suplente,235,1,7,59,0,Uiramutã,230002127852
+c0145,g36341,ver24,Professor Betinho,Herbson dos Santos Silva,22022,PL,Não eleito,21,1,80,104,0,Cantá,230002139702
+c0146,g34795,ver24,Paulo Motta,Paulo Pereira Mota,12333,PDT,Suplente,768,1,65,281,0,Boa Vista,230002186572
+c0147,g7727,ver24,Regy Carvalho,Rejane Messias de Oliveira Carvalho,18124,REDE,Não eleito,438,1,96,281,0,Boa Vista,230002189902
+c0148,g20972,ver24,Mila do Araguaia,Cleidimar Sousa Silva,13133,PT,Não eleito,4,1,98,104,0,Cantá,230002219827
+c0149,g42065,ver24,Piauí da Dezenove,Sebastião Coêlho Lima,13456,PT,Não eleito,135,1,35,104,0,Cantá,230002219828
+c0150,g43007,ver24,Linda Vitória,Linda Vitória Lima Ferreira da Silva,13333,PT,Não eleito,86,1,50,104,0,Cantá,230002219829
+c0151,g24899,ver24,Welington Liarte,Welliton Andrade Liarte,13123,PT,Não eleito,12,1,88,104,0,Cantá,230002219830
+c0152,g43358,ver24,Sérgio Augusto,Sérgio Augusto Sales Peres,13777,PT,Não eleito,10,1,93,104,0,Cantá,230002219831
+c0153,g19715,ver24,Cosmino da São Raimundo,Cosmino Taveira dos Reis,13221,PT,Não eleito,10,1,93,104,0,Cantá,230002219833
+c0154,g32513,ver24,Lindomar Lima,Antônio Lindomar Marcelino Lima,18000,REDE,Não eleito,327,1,7,53,0,Normandia,230002250819
+c0155,g39025,ver24,Daniel Sampaio,Daniel Sampaio Alves,18123,REDE,Não eleito,129,1,19,61,0,Pacaraima,230002336876
+c0156,g37397,pres26t1,Lula,Luiz Inácio Lula da Silva,13,PT,,74420,15,2,13,0,Roraima,

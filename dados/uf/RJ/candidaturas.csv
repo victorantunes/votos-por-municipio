@@ -1,0 +1,1633 @@
+cid,pessoa,disp,nome_urna,nome,numero,partido,situacao,tot,nmun,rk,nc,anulados,ue,sq
+c0001,g47994,de22,Dr. Marcos Paulo,Marcos Paulo Costa da Silva,50000,PSOL,Suplente,22982,90,97,1561,0,Rio de Janeiro,190001600429
+c0002,g9359,de22,Benny Briolly,Benny Briolly,50555,PSOL,Suplente,25150,91,91,1561,0,Rio de Janeiro,190001600433
+c0003,g30254,de22,Rose Cipriano Colet.Periférica,Rose Cipriano Lapa,50800,PSOL,Suplente,13699,78,139,1561,0,Rio de Janeiro,190001600439
+c0004,g6825,de22,Mônica Francisco,Mônica Santos Francisco,50888,PSOL,Suplente,23831,86,94,1561,0,Rio de Janeiro,190001600441
+c0005,g22902,de22,Professor Wenderson Dias,Wenderson Dias Ribeiro,50350,PSOL,Suplente,1201,28,566,1561,0,Rio de Janeiro,190001600456
+c0006,g8699,de22,Celena Santos,Dulcelena dos Santos,50013,PSOL,Suplente,1035,35,615,1561,0,Rio de Janeiro,190001600459
+c0007,g45374,de22,Ana Leite,Ana Lucia Marinho Leite Freitas,90213,PROS,Suplente,107,13,1398,1561,0,Rio de Janeiro,190001613618
+c0008,g4076,de22,Anão Montanha,Gabriel Ferreira dos Santos,45369,PSDB,Não eleito,403,23,989,1561,0,Rio de Janeiro,190001615349
+c0009,g24752,de22,Silvia de Mendonça,Silvia Cristina de Mendonça,13777,PT,Suplente,2285,68,394,1561,0,Rio de Janeiro,190001620465
+c0010,g36830,de22,Verônica Lima,Verônica dos Santos Lima,13580,PT,Eleito,55738,91,28,1561,0,Rio de Janeiro,190001620466
+c0011,g23861,de22,Mônica Armada,Mônica Carris Armada,13135,PT,Suplente,7058,80,207,1561,0,Rio de Janeiro,190001620467
+c0012,g35472,de22,Roberto Monteiro,Roberto Monteiro Soares,13065,PT,Suplente,11764,76,151,1561,0,Rio de Janeiro,190001620468
+c0013,g46154,de22,Priscilla Canedo,Priscilla Canedo Loureiro,13456,PT,Suplente,11454,78,153,1561,0,Rio de Janeiro,190001620469
+c0014,g46905,de22,Ary Girota,Ary Gabriel Girota de Souza,13222,PT,Suplente,3516,82,308,1561,0,Rio de Janeiro,190001620470
+c0015,g10758,de22,Professora Clarice,Clarice de Freitas Silva Avila,13813,PT,Suplente,6337,84,225,1561,0,Rio de Janeiro,190001620472
+c0016,g38698,de22,Pastor Sebastião,Sebastião Silvério da Silva,13590,PT,Suplente,496,33,895,1561,0,Rio de Janeiro,190001620473
+c0017,g47373,de22,Carla Machado,Carla Maria Machado dos Santos,13321,PT,Eleito,34658,85,64,1561,0,Rio de Janeiro,190001620474
+c0018,g3372,de22,Célio Gari,Célio Viana,13100,PT,Suplente,5468,70,247,1561,0,Rio de Janeiro,190001620475
+c0019,g11297,de22,Andrezinho Ceciliano,Andre Luiz Ramalho Ceciliano,13567,PT,Eleito,54851,92,30,1561,0,Rio de Janeiro,190001620476
+c0020,g20744,de22,Claudete Costa,Claudete da Costa Ferreira,13772,PT,Suplente,975,56,631,1561,0,Rio de Janeiro,190001620477
+c0021,g40449,de22,Cosme Felippsen,Cosme Vinicius Felippsen,13300,PT,Suplente,1778,59,460,1561,0,Rio de Janeiro,190001620478
+c0022,g10861,de22,Dara Sant Anna,Dara Sant Anna Carvalho Ignacio,13031,PT,Suplente,6967,78,210,1561,0,Rio de Janeiro,190001620479
+c0023,g20988,de22,Mãe Dayse,Dayse Freitas de Mesquita,13029,PT,Suplente,541,44,852,1561,0,Rio de Janeiro,190001620480
+c0024,g8367,de22,Elika Takimoto,Elika Takimoto,13021,PT,Eleito,95263,92,8,1561,0,Rio de Janeiro,190001620481
+c0025,g41901,de22,Reginaldo Soró,Reginaldo de Oliveira Guimarães,13998,PT,Suplente,834,15,677,1561,0,Rio de Janeiro,190001620482
+c0026,g35672,de22,Carol Quintana,Ana Carolina Quintana de Serpa Vieira,13044,PT,Suplente,4600,72,274,1561,0,Rio de Janeiro,190001620483
+c0027,g41859,de22,Zeidan,Rosângela de Oliveira Zeidan,13103,PT,Eleito,50743,88,37,1561,0,Rio de Janeiro,190001620484
+c0028,g45240,de22,Marlos Costa,Marlos Luiz de Araujo Costa,13010,PT,Suplente,7478,62,195,1561,0,Rio de Janeiro,190001620485
+c0029,g14353,de22,Rodrigo Mondego,Rodrigo Ignacio Mondego,13000,PT,Suplente,13123,91,141,1561,0,Rio de Janeiro,190001620486
+c0030,g49410,de22,Professor Mauro Fernandes,Mauro Fernandes dos Santos,13388,PT,Suplente,655,30,771,1561,0,Rio de Janeiro,190001620487
+c0031,g22580,de22,Adelson Guedes,Adelson Pereira Guedes,13011,PT,Suplente,4484,78,277,1561,0,Rio de Janeiro,190001620488
+c0032,g28469,de22,Alberto Sensato,Alberto Luiz Vieira Costa,13455,PT,Suplente,1462,47,498,1561,0,Rio de Janeiro,190001620489
+c0033,g39739,de22,Inês Pandeló,Maria Inês Pandeló Cerqueira,13633,PT,Não eleito,0,0,1526,1561,10448,Rio de Janeiro,190001620490
+c0034,g2379,de22,Luiz Salomão,Luiz Alfredo Salomão,13121,PT,Suplente,2275,62,395,1561,0,Rio de Janeiro,190001620491
+c0035,g12216,de22,Marina do Mst,Lucia Marina dos Santos,13713,PT,Eleito,46422,91,44,1561,0,Rio de Janeiro,190001620492
+c0036,g9987,de22,Leticia Florêncio,Leticia Ribeiro de Oliveira,13613,PT,Suplente,8159,75,186,1561,0,Rio de Janeiro,190001620493
+c0037,g30515,de22,Leonel de Esquerda,Leonel Querino da Silva Neto,13012,PT,Suplente,9640,85,165,1561,0,Rio de Janeiro,190001620494
+c0038,g5239,de22,Kawan Lopes,Kawany Pedroza Lopes Tomé,13050,PT,Suplente,2997,61,346,1561,0,Rio de Janeiro,190001620495
+c0039,g1515,de22,Flávia Diniz  Afropcd,Flavia Souza Diniz Siqueira,13131,PT,Suplente,4831,85,261,1561,0,Rio de Janeiro,190001620496
+c0040,g162,de22,Eloa Moraes,Eloá Silva de Moraes,13024,PT,Suplente,3995,62,291,1561,0,Rio de Janeiro,190001620497
+c0041,g15400,de22,Naustria,Maria Naustria de Albuquerque,13123,PT,Suplente,8135,82,187,1561,0,Rio de Janeiro,190001620498
+c0042,g13475,de22,Marcel Silvano,Marcel Silvano da Silva Souza,13333,PT,Suplente,11769,89,150,1561,0,Rio de Janeiro,190001620501
+c0043,g23955,de22,Berriel,Sebastião Wagner Berriel,13513,PT,Suplente,5173,65,250,1561,0,Rio de Janeiro,190001620502
+c0044,g10272,de22,Alex Freitas Bartender,Alex Freitas de Oliveira,13867,PT,Suplente,487,30,908,1561,0,Rio de Janeiro,190001620503
+c0045,g15322,de22,Alex Lima,Alex Lima Rego,13130,PT,Suplente,1539,67,489,1561,0,Rio de Janeiro,190001620504
+c0046,g3934,de22,Jorge Murilo,Jorge Murilo de Menezes Filho,13133,PT,Suplente,3162,84,331,1561,0,Rio de Janeiro,190001620505
+c0047,g38021,de22,Mariléa da Saúde,Marilea Lucio Ormond,13888,PT,Suplente,1007,40,623,1561,0,Rio de Janeiro,190001620506
+c0048,g33856,de22,Paulo Matileti,Paulo Cesar Matileti,13104,PT,Suplente,2799,41,357,1561,0,Rio de Janeiro,190001620507
+c0049,g15116,de22,Adilson Pires,Adilson Nogueira Pires,13620,PT,Suplente,20226,78,106,1561,0,Rio de Janeiro,190001620508
+c0050,g28949,de22,Alessandro Trindade,Alessandro de Souza Trindade,13163,PT,Suplente,7228,80,202,1561,0,Rio de Janeiro,190001620509
+c0051,g36730,de22,Marcinha,Marcia Rodrigues da Silva,13667,PT,Suplente,404,32,988,1561,0,Rio de Janeiro,190001620510
+c0052,g2239,de22,Professor Gustavo,Gustavo Henrique Cornélio,13001,PT,Suplente,1927,66,437,1561,0,Rio de Janeiro,190001620511
+c0053,g18992,de22,Ribamar Dadinho,José Ribamar de Lima,13040,PT,Suplente,1264,44,554,1561,0,Rio de Janeiro,190001620512
+c0054,g39855,de22,Alexandro Tavares,Alexandro de Oliveira Tavares,13555,PT,Suplente,1113,60,587,1561,0,Rio de Janeiro,190001620515
+c0055,g6662,de22,Rafaela Albergaria,Rafaela Cristina Bonifácio Albergaria,13474,PT,Suplente,7036,62,209,1561,0,Rio de Janeiro,190001620516
+c0056,g32402,de22,Cláudio Cavalcante,Cláudio Ferreira Cavalcante,13261,PT,Suplente,429,37,968,1561,0,Rio de Janeiro,190001620518
+c0057,g28668,de22,Robson Leite,Robson Campos Leite,13013,PT,Suplente,14335,83,137,1561,0,Rio de Janeiro,190001620520
+c0058,g49172,de22,Rogério Machado,Rogerio Reis Machado,13014,PT,Suplente,1656,41,478,1561,0,Rio de Janeiro,190001620527
+c0059,g400,de22,Renato Machado,Renato da Costa Machado,13444,PT,Eleito,63803,91,20,1561,0,Rio de Janeiro,190001620529
+c0060,g13867,de22,Thiago de Paula O Aguinho,Thiago Gomes de Paula,13253,PT,Suplente,593,22,813,1561,0,Rio de Janeiro,190001620530
+c0061,g15917,de22,Nicole Sollberg,Nicole D  Halvor Sollberg,13180,PT,Suplente,1949,55,433,1561,0,Rio de Janeiro,190001620532
+c0062,g12567,de22,Aluizio Junior,Aluizio Firmiano da Silva Junior,40123,PSB,Suplente,8580,74,176,1561,0,Rio de Janeiro,190001639116
+c0063,g14178,de22,Ferreirinha,Carlos Roberto Ferreira,40620,PSB,Suplente,6203,35,227,1561,0,Rio de Janeiro,190001639137
+c0064,g49712,de22,Luana Mota,Luana Eller de Almeida Moreira Mota,12180,PDT,Suplente,2226,50,401,1561,0,Rio de Janeiro,190001654276
+c0065,g31627,de22,Adão,Adao Henrique Moreira,35333,PMB,Não eleito,527,30,864,1561,0,Rio de Janeiro,190001723125
+c0066,g43757,de22,Eduardo Acosta,Eduardo Jose Acosta Barbosa,12212,PDT,Suplente,480,54,919,1561,0,Rio de Janeiro,190001725955
+c0067,g38021,de26,Mariléa da Saúde,Marilea Lucio Ormond,40047,PSB,Suplente,418,27,618,1139,0,Rio de Janeiro,190002537734
+c0068,g47994,de26,Dr. Marcos Paulo,Marcos Paulo Costa da Silva,40123,PSB,Suplente,3453,65,257,1139,0,Rio de Janeiro,190002537760
+c0069,g47373,de26,Carla Machado,Carla Maria Machado dos Santos,55088,PSD,Eleito,39208,84,66,1139,0,Rio de Janeiro,190002538018
+c0070,g3934,de26,Murilo Du Rio,Jorge Murilo de Menezes Filho,55133,PSD,Suplente,399,28,636,1139,0,Rio de Janeiro,190002538036
+c0071,g2731,de26,Gesiel Lessa,Gesiel de Oliveira Lessa,44100,UNIÃO,Suplente,1597,44,337,1139,0,Rio de Janeiro,190002541648
+c0072,g6023,de26,Raimundo Nonato,Raimundo Nonato Araujo de Figueiredo,13321,PT,Suplente,282,37,733,1139,0,Rio de Janeiro,190002543292
+c0073,g27065,de26,Devaldo,Devaldo Marques de Almeida,13002,PT,Suplente,166,35,886,1139,0,Rio de Janeiro,190002543293
+c0074,g20394,de26,Neusa Guarani,Neusa Kunha Taqua Mendonça Martine,13008,PT,Suplente,3383,77,262,1139,0,Rio de Janeiro,190002543294
+c0075,g8769,de26,Indianarae Siqueira,Indianarae Pereira Siqueira,13169,PT,Suplente,2351,66,292,1139,0,Rio de Janeiro,190002543295
+c0076,g38233,de26,Erivaldo Filho,Erivaldo Pereira Alves,13150,PT,Suplente,436,56,612,1139,0,Rio de Janeiro,190002543296
+c0077,g16150,de26,Brunnão Realleza,Brunnão Realleza Barreto Soares Oliveira,13555,PT,Suplente,1135,70,396,1139,0,Rio de Janeiro,190002543297
+c0078,g12216,de26,Marina do Mst,Lucia Marina dos Santos,13713,PT,Eleito,66167,92,24,1139,0,Rio de Janeiro,190002543298
+c0079,g21536,de26,Missionário Thiago,Thiago Mothé Aguiar,13320,PT,Suplente,195,34,849,1139,0,Rio de Janeiro,190002543299
+c0080,g31667,de26,Mallu Côrtes,Maria Luiza de Souza Côrtes,13777,PT,Suplente,10281,80,156,1139,0,Rio de Janeiro,190002543302
+c0081,g5291,de26,Marco Aurélio Barreto,Marco Aurélio de Souza Barreto,13433,PT,Suplente,956,43,427,1139,0,Rio de Janeiro,190002543305
+c0082,g5076,de26,Carol Ontiveros,Caroline Machado Ontiveros Cespedes,13333,PT,Suplente,21809,81,115,1139,0,Rio de Janeiro,190002543306
+c0083,g400,de26,Renato Machado,Renato da Costa Machado,13444,PT,Não eleito,0,0,1108,1139,48300,Rio de Janeiro,190002543307
+c0084,g29798,de26,Mary Borges,Mary Borges de Oliveira,13888,PT,Suplente,523,51,568,1139,0,Rio de Janeiro,190002543308
+c0085,g25576,de26,André Ceciliano,Andre Luiz Ceciliano,13567,PT,Eleito,70628,92,21,1139,0,Rio de Janeiro,190002543309
+c0086,g38860,de26,Allyson Elias,Allyson da Silva Elias,13650,PT,Eleito,51145,86,42,1139,0,Rio de Janeiro,190002543310
+c0087,g30958,de26,Vinicios Betiol,Vinicios de Moraes Betiol,13134,PT,Suplente,3817,82,247,1139,0,Rio de Janeiro,190002543311
+c0088,g9954,de26,Zé Alexandre,José Alexandre Almeida da Silva,13193,PT,Suplente,14115,72,137,1139,0,Rio de Janeiro,190002543313
+c0089,g38845,de26,Tuninho da Padaria,Antonio Araujo Ferreira,13456,PT,Suplente,12930,87,144,1139,0,Rio de Janeiro,190002543314
+c0090,g23955,de26,Berriel,Sebastiao Wagner Berriel,13513,PT,Suplente,4706,72,225,1139,0,Rio de Janeiro,190002543315
+c0091,g9842,de26,Paulo Mustrangi,Paulo Roberto Mustrangi de Oliveira,13613,PT,Não eleito,0,0,1108,1139,1573,Rio de Janeiro,190002543316
+c0092,g3362,de26,Léo França,Leonardo Franca Souza,13040,PT,Suplente,5488,79,206,1139,0,Rio de Janeiro,190002543317
+c0093,g43757,de26,Eduardo Acosta,Eduardo Jose Acosta Barbosa,13611,PT,Suplente,521,46,569,1139,0,Rio de Janeiro,190002543318
+c0094,g250,de26,Jorge Braga,Jorge Antonio da Silva Braga,13157,PT,Suplente,1105,53,402,1139,0,Rio de Janeiro,190002543319
+c0095,g1886,de26,Durval Peçanha,Durval Pereira Gomes Peçanha,13167,PT,Suplente,132,21,930,1139,0,Rio de Janeiro,190002543320
+c0096,g16095,de26,Igo Menezes,Igo Alencar de Menezes,13123,PT,Suplente,16761,92,127,1139,0,Rio de Janeiro,190002543321
+c0097,g15116,de26,Adilson Pires,Adilson Nogueira Pires,13620,PT,Eleito,42467,92,61,1139,0,Rio de Janeiro,190002543322
+c0098,g6965,de26,Pr. Hudson M,Hudson Marques da Silva,13967,PT,Suplente,233,36,792,1139,0,Rio de Janeiro,190002543323
+c0099,g20216,de26,William Macedo,William de Almeida Macedo,13681,PT,Suplente,238,15,788,1139,0,Rio de Janeiro,190002543324
+c0100,g41356,de26,Edna Calheiros Mandatocoletivo,Edna Ferreira Calheiros Saraiva,13813,PT,Suplente,1336,51,365,1139,0,Rio de Janeiro,190002543325
+c0101,g27344,de26,Katia Macillo,Kátia Maria Diniz Macillo,13131,PT,Suplente,4289,81,236,1139,0,Rio de Janeiro,190002543326
+c0102,g30515,de26,Leonel de Esquerda,Leonel Querino da Silva Neto,13013,PT,Eleito,44597,92,52,1139,0,Rio de Janeiro,190002543327
+c0103,g37583,de26,Ney Soares,Roliney Alves Soares,13913,PT,Suplente,304,45,711,1139,0,Rio de Janeiro,190002543328
+c0104,g41859,de26,Zeidan,Rosangela de Oliveira Zeidan,13103,PT,Eleito,43115,91,58,1139,0,Rio de Janeiro,190002543329
+c0105,g26456,de26,Professor Waldeck Carneiro,Waldeck Carneiro da Silva,13001,PT,Suplente,17155,90,125,1139,0,Rio de Janeiro,190002543330
+c0106,g28597,de26,Graça do Pt,Maria das Graças Gomes Franco,13677,PT,Suplente,1720,68,325,1139,0,Rio de Janeiro,190002543332
+c0107,g30254,de26,Rose Cipriano,Rose Cipriano Lapa,13007,PT,Suplente,12528,81,147,1139,0,Rio de Janeiro,190002543576
+c0108,g24435,de26,Thaysa Ventura,Thaysa Rodrigues de Azevedo Ventura,13400,PT,Suplente,9550,83,162,1139,0,Rio de Janeiro,190002543577
+c0109,g19775,de26,Fabio Doutor Fosforo,Fabio Martins dos Santos,13706,PT,Suplente,59,16,1046,1139,0,Rio de Janeiro,190002543579
+c0110,g8367,de26,Elika Takimoto,Elika Takimoto,13021,PT,Eleito,135271,92,7,1139,0,Rio de Janeiro,190002543582
+c0111,g36830,de26,Verônica Lima,Veronica dos Santos Lima,13580,PT,Eleito,85421,92,15,1139,0,Rio de Janeiro,190002543583
+c0112,g47106,de26,Ricardo Santos,Ricardo Silva Santos,13616,PT,Suplente,107,19,976,1139,0,Rio de Janeiro,190002543584
+c0113,g25498,de26,Raone Ferreira,Raone Cassin Maia Ferreira,13000,PT,Eleito,28377,91,88,1139,0,Rio de Janeiro,190002543585
+c0114,g1719,de26,Hilder Ligeirinho,Hilder Rodrigues dos Santos,13006,PT,Suplente,153,22,902,1139,0,Rio de Janeiro,190002543587
+c0115,g3082,de26,João Panayotis Damatis,Joao Panayotis Damatis,13113,PT,Suplente,1000,71,422,1139,0,Rio de Janeiro,190002543588
+c0116,g49957,de26,Bruno Ryu,Bruno Lopes de Almeida,35070,DEMOCRATA,Não eleito,172,9,876,1139,0,Rio de Janeiro,190002552266
+c0117,g50547,df22,Eliel Jr Ocupa Baixada,Eliel Bezerra de Lima Junior,5060,PSOL,Suplente,497,30,680,1024,0,Rio de Janeiro,190001600469
+c0118,g36702,df22,Cristiano,Cristiano José Rodrigues de Souza,7751,SOLIDARIEDADE,Suplente,8500,54,169,1024,0,Rio de Janeiro,190001601688
+c0119,g2731,df22,Gesiel Lessa,Gesiel de Oliveira Lessa,4569,PSDB,Não eleito,2019,41,353,1024,0,Rio de Janeiro,190001613461
+c0120,g49054,df22,Thiago Fonseca,Paulo Thiago Fonseca de Araujo Ribeiro,7097,AVANTE,Não eleito,2437,44,315,1024,0,Rio de Janeiro,190001613700
+c0121,g47246,df22,Camila Marins,Camila Aparecida Marins Alvarenga Theodoro,1329,PT,Suplente,4628,73,224,1024,0,Rio de Janeiro,190001619190
+c0122,g18028,df22,Denilson Souza,Denilson de Souza,1368,PT,Suplente,353,26,774,1024,0,Rio de Janeiro,190001619192
+c0123,g34068,df22,Dimas Gadelha,Dimas de Paiva Gadelha Junior,1301,PT,Eleito,41238,81,50,1024,0,Rio de Janeiro,190001619193
+c0124,g41100,df22,Frank Alarcon,Franc Jeferson Alarcon de Barrientos,1366,PT,Suplente,2751,76,297,1024,0,Rio de Janeiro,190001619194
+c0125,g27144,df22,Gabriela Lima,Gabriela Correia de Souza e Lima,1331,PT,Suplente,3581,83,256,1024,0,Rio de Janeiro,190001619196
+c0126,g8769,df22,Indianarae Siqueira,Indianarae Pereira Siqueira,1369,PT,Suplente,4962,76,217,1024,0,Rio de Janeiro,190001619198
+c0127,g34776,df22,Ione Favela,Ione Efigenia dos Santos,1330,PT,Suplente,1133,68,471,1024,0,Rio de Janeiro,190001619199
+c0128,g11791,df22,Zé Maria,José Maria Ferreira Rangel,1350,PT,Suplente,25589,86,86,1024,0,Rio de Janeiro,190001619200
+c0129,g31048,df22,Maiara Felício,Maiara Felício da Silva,1307,PT,Suplente,14481,82,133,1024,0,Rio de Janeiro,190001619201
+c0130,g27600,df22,Benedita da Silva,Benedita Souza da Silva Sampaio,1377,PT,Eleito,113831,92,14,1024,0,Rio de Janeiro,190001619202
+c0131,g38228,df22,Dr Lobão,Antonio Pereira da Silva Lobão Filho,1344,PT,Suplente,3633,78,252,1024,0,Rio de Janeiro,190001619204
+c0132,g48758,df22,Francelino Paes,Francelino da Silva Paes,1317,PT,Suplente,467,48,699,1024,0,Rio de Janeiro,190001619205
+c0133,g6911,df22,Leonel Brizola,Leonel Brizola,1312,PT,Suplente,7989,85,178,1024,0,Rio de Janeiro,190001619206
+c0134,g5183,df22,Lindbergh Farias,Luiz Lindbergh Farias Filho,1300,PT,Eleito,152219,92,8,1024,0,Rio de Janeiro,190001619207
+c0135,g10666,df22,Narac,Nara Cristina Pereira da Silva,1391,PT,Suplente,373,19,760,1024,0,Rio de Janeiro,190001619208
+c0136,g16786,df22,Aranha,Paulo Vitor Xavier Santos,1357,PT,Suplente,399,52,744,1024,0,Rio de Janeiro,190001619209
+c0137,g19219,df22,Ricardo Lodi,Ricardo Lodi Ribeiro,1310,PT,Suplente,31490,89,68,1024,0,Rio de Janeiro,190001619211
+c0138,g15176,df22,Binho Favela,Robson Souza Santos,1388,PT,Suplente,460,37,706,1024,0,Rio de Janeiro,190001619212
+c0139,g42345,df22,Erick Vermelho,Wellington Moreira da Silva,1302,PT,Suplente,2812,77,292,1024,0,Rio de Janeiro,190001619213
+c0140,g36935,df22,Luciana Novaes,Luciana Gonçalves de Novaes,1355,PT,Suplente,31052,92,72,1024,0,Rio de Janeiro,190001619215
+c0141,g33129,df22,Margoth Cardoso,Margoth Silvana da Silva Cardoso,1323,PT,Suplente,1061,61,494,1024,0,Rio de Janeiro,190001619217
+c0142,g13014,df22,Reimont,Reimont Luiz Otoni Santa Bárbara,1333,PT,Eleito,39325,91,54,1024,0,Rio de Janeiro,190001619218
+c0143,g657,df22,Professor Virgilio,Virgilio de Oliveira Souza,1399,PT,Suplente,978,44,519,1024,0,Rio de Janeiro,190001619219
+c0144,g31211,df22,Wadih Damous,Wadih Nemer Damous Filho,1322,PT,Suplente,27833,90,80,1024,0,Rio de Janeiro,190001619220
+c0145,g33965,df22,Wesley Diniz,Wesley Diniz Furtado,1303,PT,Suplente,2810,61,293,1024,0,Rio de Janeiro,190001619221
+c0146,g43163,df22,Claudinho Pé No Chão,Claudimar Lourenço da Rocha,1394,PT,Suplente,550,20,655,1024,0,Rio de Janeiro,190001619222
+c0147,g41172,df22,Emília Amoêdo,Emília Rachel Bendelak Amoêdo,1305,PT,Suplente,581,50,637,1024,0,Rio de Janeiro,190001619223
+c0148,g41835,df22,Ruam Galhardo,Jose Antonio da Silva,1315,PT,Suplente,334,47,785,1024,0,Rio de Janeiro,190001619225
+c0149,g11340,df22,Leticia Pires do Megafone,Leticia Pires de Oliveira,1320,PT,Suplente,1382,59,425,1024,0,Rio de Janeiro,190001619226
+c0150,g28597,df22,Graça do Pt,Maria das Graças Gomes Franco,1367,PT,Suplente,1007,60,514,1024,0,Rio de Janeiro,190001619227
+c0151,g7200,df22,Doutora Lucia Costa,Maria Lucia Costa Silva,1370,PT,Suplente,774,56,571,1024,0,Rio de Janeiro,190001619228
+c0152,g20349,df22,Rodrigo Kekeu,Rodrigo Miguel Gomes Ferreira,1360,PT,Suplente,824,40,555,1024,0,Rio de Janeiro,190001619229
+c0153,g26846,df22,Marques,Rogério Lúcio Marques da Costa,1311,PT,Suplente,897,70,536,1024,0,Rio de Janeiro,190001619230
+c0154,g17854,df22,Sandro Cezar,Sandro Alex de Oliveira Cezar,1340,PT,Suplente,7324,81,187,1024,0,Rio de Janeiro,190001619231
+c0155,g47119,df22,Valdo Tavares,Valdomark Batista Tavares,1321,PT,Suplente,864,67,544,1024,0,Rio de Janeiro,190001619234
+c0156,g22328,df22,Washington Quaquá,Washington Luiz Cardoso Siqueira,1313,PT,Eleito,113282,92,15,1024,0,Rio de Janeiro,190001619235
+c0157,g25498,df22,Raone Ferreira,Raone Cassin Maia Ferreira,4070,PSB,Suplente,6312,72,197,1024,0,Rio de Janeiro,190001645396
+c0158,g48946,df22,Edson Santos,Edson Santos de Souza,4077,PSB,Não eleito,0,0,1005,1024,2740,Rio de Janeiro,190001645406
+c0159,g26456,df22,Waldeck Carneiro,Waldeck Carneiro da Silva,4040,PSB,Suplente,27879,91,79,1024,0,Rio de Janeiro,190001645420
+c0160,g41146,df22,Josiane Confeiteira,Josiane Silvestre,2756,DC,Não eleito,102,16,955,1024,0,Rio de Janeiro,190001714815
+c0161,g39854,df22,Luciana Nery,Luciana Neri da Silva,2700,DC,Não eleito,371,32,766,1024,0,Rio de Janeiro,190001714816
+c0162,g10314,df22,Fernando Freitas,Fernando Gomes de Freitas,3608,AGIR,Não eleito,51,5,990,1024,0,Rio de Janeiro,190001714943
+c0163,g33320,df22,Lili Morais,Maria Eliane Santos de Morais,3618,AGIR,Não eleito,698,22,592,1024,0,Rio de Janeiro,190001714950
+c0164,g10124,df22,Pr Wagner Avellar,Wagner Paulo Correa Avellar,1244,PDT,Suplente,809,56,559,1024,0,Rio de Janeiro,190001725950
+c0165,g46905,df26,Ary Girota,Ary Gabriel Girota de Souza,4099,PSB,Não eleito,1833,71,278,765,0,Rio de Janeiro,190002538428
+c0166,g18685,df26,Jose Diaz,Jair Jose Dias,1213,PDT,Suplente,1254,60,323,765,0,Rio de Janeiro,190002539648
+c0167,g29499,df26,Amélia Leal,Amelia Leal de Almeida,1304,PT,Suplente,1006,75,350,765,0,Rio de Janeiro,190002543061
+c0168,g19560,df26,Sub Antônio Andrade,Antonio Carlos de Andrade,1312,PT,Suplente,1766,75,284,765,0,Rio de Janeiro,190002543062
+c0169,g47491,df26,Beny Guerra,Benedito Felix Guerra,1355,PT,Suplente,1679,79,293,765,0,Rio de Janeiro,190002543063
+c0170,g9359,df26,Benny Briolly,Benny Briolly Rosa da Silva Santos,1350,PT,Suplente,22570,91,95,765,0,Rio de Janeiro,190002543064
+c0171,g19557,df26,Fabiano Horta,Fabiano Taques Horta,1303,PT,Eleito,82902,88,26,765,0,Rio de Janeiro,190002543065
+c0172,g38228,df26,Dr. Lobão,Antonio Pereira da Silva Lobao Filho,1344,PT,Suplente,2186,62,253,765,0,Rio de Janeiro,190002543066
+c0173,g39854,df26,Luciana Nery,Luciana Neri da Silva,1369,PT,Suplente,532,45,454,765,0,Rio de Janeiro,190002543067
+c0174,g12452,df26,Dra. Crislaine Coelho,Crislaine Coelho Nascimento da Conceição,1323,PT,Suplente,888,63,370,765,0,Rio de Janeiro,190002543068
+c0175,g28417,df26,Dr. José Ricardo,José Ricardo Tavares Corrêa,1306,PT,Suplente,294,45,554,765,0,Rio de Janeiro,190002543069
+c0176,g15882,df26,Diego Quaqua,Diego Zeidan Cardoso Siqueira,1313,PT,Eleito,68798,92,40,765,0,Rio de Janeiro,190002543072
+c0177,g3397,df26,Rubens Bomtempo,Rubens Jose Franca Bomtempo,1340,PT,Suplente,19613,86,103,765,0,Rio de Janeiro,190002543074
+c0178,g36543,df26,Emerson Tdb,Emerson Teixeira da Silva,1332,PT,Suplente,227,40,594,765,0,Rio de Janeiro,190002543075
+c0179,g14069,df26,Dr. Rubinho,Robercil da Rocha Parreira,1342,PT,Suplente,149,31,655,765,0,Rio de Janeiro,190002543076
+c0180,g16786,df26,Vitor Aranha,Paulo Vitor Xavier Santos,1357,PT,Suplente,186,36,626,765,0,Rio de Janeiro,190002543078
+c0181,g15460,df26,Dani Nunes,Danielle Nunes Rosa de Oliveira,1375,PT,Suplente,542,45,449,765,0,Rio de Janeiro,190002543079
+c0182,g8879,df26,Anielle Franco,Anielle Francisco da Silva,1330,PT,Eleito,149726,92,9,765,0,Rio de Janeiro,190002543080
+c0183,g19275,df26,Rose da Silva,Rosimeri da Silva Marongiu,1337,PT,Suplente,460,47,476,765,0,Rio de Janeiro,190002543082
+c0184,g7200,df26,Dra. Lucia Costa,Maria Lucia Costa Silva,1370,PT,Suplente,943,62,362,765,0,Rio de Janeiro,190002543084
+c0185,g10124,df26,Pastor Wagner Avellar,Wagner Paulo Corrêa Avellar,1367,PT,Suplente,647,56,421,765,0,Rio de Janeiro,190002543085
+c0186,g17854,df26,Sandrão da Saúde,Sandro Alex de Oliveira Cezar,1314,PT,Suplente,10182,87,138,765,0,Rio de Janeiro,190002543086
+c0187,g26992,df26,Leo Cdd,Leonardo Martins da Silva,1325,PT,Suplente,674,68,411,765,0,Rio de Janeiro,190002543088
+c0188,g31048,df26,Maiara Felicio,Maíara Felício da Silva,1307,PT,Suplente,11795,86,134,765,0,Rio de Janeiro,190002543089
+c0189,g14351,df26,Marcelo Pacheco,Marcelo Alves Pacheco,1399,PT,Suplente,685,64,408,765,0,Rio de Janeiro,190002543090
+c0190,g8057,df26,Nísia Trindade,Nisia Veronica Trindade Lima,1310,PT,Eleito,67350,92,43,765,0,Rio de Janeiro,190002543091
+c0191,g28391,df26,Freixo,Marcelo Ribeiro Freixo,1331,PT,Eleito,172969,92,6,765,0,Rio de Janeiro,190002543092
+c0192,g31326,df26,Tainá de Paula,Taina Reis de Paula,1377,PT,Suplente,59551,92,49,765,0,Rio de Janeiro,190002543093
+c0193,g18225,df26,Lourenço do Valle,Lourenço do Vale Cavalcante,1329,PT,Suplente,98,21,697,765,0,Rio de Janeiro,190002543094
+c0194,g48097,df26,Celso Pansera,Celso Pansera,1380,PT,Suplente,36045,89,75,765,0,Rio de Janeiro,190002543095
+c0195,g19696,df26,Orlando Carioca,Orlando Mendes de Souza,1347,PT,Suplente,97,20,698,765,0,Rio de Janeiro,190002543098
+c0196,g47119,df26,Valdo Tavares,Valdomark Batista Tavares,1321,PT,Suplente,729,62,403,765,0,Rio de Janeiro,190002543099
+c0197,g22580,df26,Adelson Guedes,Adelson Pereira Guedes,1311,PT,Suplente,3744,88,203,765,0,Rio de Janeiro,190002543100
+c0198,g5183,df26,Lindbergh,Luiz Lindbergh Farias Filho,1300,PT,Eleito,181768,92,3,765,0,Rio de Janeiro,190002543101
+c0199,g34068,df26,Dimas Gadelha,Dimas de Paiva Gadelha Junior,1301,PT,Suplente,45520,91,65,765,0,Rio de Janeiro,190002543102
+c0200,g40859,df26,Carlos Santana,Carlos Augusto Alves Santana,1302,PT,Suplente,7103,84,157,765,0,Rio de Janeiro,190002543103
+c0201,g13014,df26,Reimont,Reimont Luiz Otoni Santa Barbara,1333,PT,Suplente,46688,92,64,765,0,Rio de Janeiro,190002543104
+c0202,g3372,df26,Célio Gari,Célio Viana,3310,MOBILIZA,Não eleito,2367,38,240,765,0,Rio de Janeiro,190002547258
+c0203,g36702,df26,Cristiano,Cristiano José Rodrigues de Souza,4551,PSDB,Suplente,2336,47,242,765,0,Rio de Janeiro,190002550482
+c0204,g5783,df26,Márcia Peixoto,Marcia Peixoto de Oliveira,1320,PT,Suplente,675,57,410,765,0,Rio de Janeiro,190002554002
+c0205,g28391,gov22,Marcelo Freixo,Marcelo Ribeiro Freixo,40,PSB,Não eleito,2300980,92,2,7,0,Rio de Janeiro,190001609389
+c0206,g33182,pref20,Odisseia,Odisseia Pinto de Carvalho,13,PT,Não eleito,4664,1,7,10,0,Campos dos Goytacazes,190000657065
+c0207,g9424,pref20,Bira Pina,Ubirajara Manoel de Pina,13,PT,Não eleito,319,1,4,5,0,Casimiro de Abreu,190000680918
+c0208,g40391,pref20,Cida Diogo,Maria Aparecida Diogo Braga,13,PT,Não eleito,3459,1,8,13,0,Volta Redonda,190000740815
+c0209,g12926,pref20,Dr Flávio Henrique,Flávio Henrique Costa de Freitas,13,PT,Não eleito,873,1,4,6,0,Barra do Piraí,190000770151
+c0210,g21539,pref20,Professor Luizinho,Luiz Henrique Gomes Alves,13,PT,Não eleito,429,1,7,7,0,Rio das Ostras,190000772122
+c0211,g50601,pref20,Zequinha Miguel,Jose Miguel Filho,13,PT,Não eleito,1804,1,5,9,0,Angra dos Reis,190000789906
+c0212,g26685,pref20,Cláudio Damião,Cláudio Damião Santos Pereira,50,PSOL,Não eleito,5088,1,7,16,0,Nova Friburgo,190000815895
+c0213,g22778,pref20,Igor,Igor Paes Nunes Sardinha,13,PT,Não eleito,8499,1,4,10,0,Macaé,190000832379
+c0214,g19557,pref20,Fabiano Horta,Fabiano Taques Horta,13,PT,Eleito,76285,1,1,4,0,Maricá,190000852382
+c0215,g12567,pref20,Aluizio Junior,Aluizio Firmiano da Silva Junior,13,PT,Não eleito,10854,1,6,9,0,Duque de Caxias,190000853889
+c0216,g34068,pref20,Dimas Gadelha,Dimas de Paiva Gadelha Junior,13,PT,2º turno,117346,1,1,9,0,São Gonçalo,190000857139
+c0217,g23269,pref20,Paulinho do Sindicato,Paulo Sergio Henriques Aguiar,13,PT,Não eleito,5190,1,8,8,0,São João de Meriti,190000858989
+c0218,g39733,pref20,Zeca Carvalho do Pt,José Mario de Carvalho Silva,13,PT,Não eleito,726,1,5,5,0,Nilópolis,190000863555
+c0219,g47974,pref20,Dra Fernanda Ontiveros,Fernanda Machado Ontiveros,12,PDT,Eleito,20259,1,1,5,0,Japeri,190000865516
+c0220,g47013,pref20,Renata Neves,Renata Feno Neves,13,PT,Não eleito,330,1,5,5,0,Cordeiro,190000871950
+c0221,g23955,pref20,Berriel,Sebastião Wagner Berriel,13,PT,Não eleito,4885,1,6,10,0,Nova Iguaçu,190000894201
+c0222,g27600,pref20,Benedita da Silva,Benedita Souza da Silva,13,PT,Não eleito,296847,1,4,13,0,Rio de Janeiro,190000945336
+c0223,g8699,pref20,Celena Santos,Dulcelena dos Santos,50,PSOL,Não eleito,1240,1,6,10,0,Queimados,190000955518
+c0224,g18992,pref20,Ribamar Dadinho,Jose Ribamar de Lima,13,PT,Não eleito,756,1,7,10,0,Queimados,190000965677
+c0225,g7722,pref20,Erivelton,Erivelton Dias Costa,13,PT,Não eleito,2488,1,3,7,0,Paracambi,190000989403
+c0226,g47373,pref20,Carla Machado,Carla Maria Machado dos Santos,11,PP,Eleito,19106,1,1,6,0,São João da Barra,190001006073
+c0227,g48737,pref20,Willian Luz,Willian Cesar da Luz Silva,13,PT,Não eleito,487,1,5,5,0,Arraial do Cabo,190001053167
+c0228,g19047,pref20,Alex Papa,Alex Papa Alves,13,PT,Não eleito,489,1,3,4,0,Engenheiro Paulo de Frontin,190001069102
+c0229,g5461,pref20,Pedrosa,Rivalney Desserbelles Pedrosa,27,DC,Não eleito,2981,1,2,5,0,Pinheiral,190001075094
+c0230,g37243,pref20,Romi da Serra,Romi Proença,22,PL,Não eleito,339,1,3,5,0,Casimiro de Abreu,190001085330
+c0231,g38658,pref20,Dr. Marcelo Araújo,Marcelo Araújo,13,PT,Não eleito,316,1,7,7,0,Cachoeiras de Macacu,190001106708
+c0232,g45858,pref20,Silvia Faltz,Silvia Andreia Klein Faltz,13,PT,Não eleito,1059,1,12,16,0,Nova Friburgo,190001122670
+c0233,g37105,pref20,Professor Gutemberg,Gutemberg Cardoso  dos Santos,43,PV,Não eleito,2469,1,8,9,0,Duque de Caxias,190001135276
+c0234,g33129,pref20,Dra Margoth Cardoso,Margoth Silvana da Silva Cardoso,13,PT,Não eleito,381,1,3,3,0,Iguaba Grande,190001154754
+c0235,g27144,pref20,Gabriela Lima,Gabriela Correia de Souza e Lima,13,PT,Não eleito,1287,1,4,7,0,Resende,190001227001
+c0236,g10758,pref20,Professora Clarice,Clarice de Freitas Silva Avila,13,PT,Não eleito,6479,1,4,10,0,Barra Mansa,190001232315
+c0237,g1433,pref20,Edinho Oficial de Justica,Ederson Jose Vieira,35,PMB,Não eleito,2081,1,5,5,0,Itaboraí,190001253751
+c0238,g3397,pref20,Rubens Bomtempo,Rubens José França Bomtempo,40,PSB,2º turno,39093,1,1,13,0,Petrópolis,190001254499
+c0239,g28366,pref20,Professor Habibe,Alexandre Fernandes Habibe,65,PC do B,Não eleito,1617,1,10,13,0,Volta Redonda,190001255380
+c0240,g34068,pref20t2,Dimas Gadelha,Dimas de Paiva Gadelha Junior,13,PT,2º turno,183811,1,2,2,0,São Gonçalo,190000857139
+c0241,g3397,pref20t2,Rubens Bomtempo,Rubens José França Bomtempo,40,PSB,2º turno,64907,1,1,2,0,Petrópolis,190001254499
+c0242,g19047,pref24,Alex Papa,Alex Papa Alves,13,PT,Não eleito,363,1,3,7,0,Engenheiro Paulo de Frontin,190001957808
+c0243,g27344,pref24,Kátia Macillo do Pt,Kátia Maria Diniz Macillo,13,PT,Não eleito,2339,1,4,5,0,Rio das Ostras,190001986501
+c0244,g34068,pref24,Dimas Gadelha,Dimas de Paiva Gadelha Junior,13,PT,Não eleito,0,0,6,6,48457,São Gonçalo,190001992705
+c0245,g46649,pref24,Professor Jefferson,Jefferson Manhaes de Azevedo,13,PT,Não eleito,13222,1,3,7,0,Campos dos Goytacazes,190001994091
+c0246,g8655,pref24,Leyla Macedo,Leyla Rodrigues de Macedo,13,PT,Não eleito,560,1,3,5,0,São Fidélis,190002021315
+c0247,g47974,pref24,Dra Fernanda Ontiveros,Fernanda Machado Ontiveros,13,PT,Eleito,22686,1,1,6,0,Japeri,190002032724
+c0248,g37243,pref24,Romi da Serra,Romi Proença,13,PT,Não eleito,570,1,3,4,0,Casimiro de Abreu,190002042359
+c0249,g24172,pref24,Adilson Ribeiro,Adilson Ribeiro Rodrigues,13,PT,Não eleito,1457,1,5,5,0,Itaperuna,190002049273
+c0250,g38845,pref24,Tuninho da Padaria,Antonio Araujo Ferreira,13,PT,Não eleito,23555,1,2,6,0,Nova Iguaçu,190002117266
+c0251,g9954,pref24,Zé Alexandre,José Alexandre Almeida da Silva,13,PT,Não eleito,10471,1,3,5,0,Nova Friburgo,190002119721
+c0252,g28366,pref24,Professor Habibe,Alexandre Fernandes Habibe,13,PT,Não eleito,8493,1,3,6,0,Volta Redonda,190002125448
+c0253,g11297,pref24,Andrezinho Ceciliano,Andre Luiz Ramalho Ceciliano,13,PT,Eleito,16401,1,1,3,0,Paracambi,190002141635
+c0254,g23955,pref24,Berriel,Sebastião Wagner Berriel,18,REDE,Não eleito,1408,1,3,4,0,Seropédica,190002159080
+c0255,g5461,pref24,Pedrosa,Rivalney Desserbelles Pedrosa,13,PT,Não eleito,1740,1,4,5,0,Pinheiral,190002161573
+c0256,g20638,pref24,Xicão do Pt,Francisco Carlos Oliveira Vellasco,13,PT,Não eleito,29,1,3,3,0,Cambuci,190002168488
+c0257,g43429,pref24,Professor Dito,Adilton Jorge Ferreira Cruz,13,PT,Não eleito,589,1,2,3,0,Carmo,190002205597
+c0258,g23796,pref24,Doutor Luiz Claudio,Luiz Claudio Lopes de Souza,13,PT,Não eleito,4986,1,3,4,0,Mesquita,190002213243
+c0259,g22328,pref24,Quaquá,Washington Luiz Cardoso Siqueira,13,PT,Eleito,91789,1,1,4,0,Maricá,190002218644
+c0260,g20821,pref24,Valdo Gomes,Valdo Duarte Gomes,13,PT,Não eleito,1410,1,3,4,0,Resende,190002226893
+c0261,g19296,pref24,Mônica Andrade,Monica Andrade dos Santos,13,PT,Não eleito,293,1,3,3,0,Iguaba Grande,190002282130
+c0262,g49170,pref24,Cláudio Sarkis,Claudio Sarkis Assis,13,PT,Não eleito,1181,1,6,8,0,Valença,190002290892
+c0263,g18685,pref24,Dias do Pt,Jair José Dias,13,PT,Não eleito,7732,1,2,2,0,Itaboraí,190002332811
+c0264,g3397,pref24,Rubens Bomtempo,Rubens Jose Franca Bomtempo,40,PSB,Não eleito,27158,1,3,5,0,Petrópolis,190002336915
+c0265,g19662,pref24,Tedi,Lídia Mercedes Oliveira Soares,13,PT,Não eleito,428,1,4,4,0,Conceição de Macabu,190002357451
+c0266,g37397,pres22t1,Lula,Luiz Inácio Lula da Silva,13,PT,2º turno,3847143,92,2,11,0,Rio de Janeiro,280001607829
+c0267,g37397,pres22t1,Lula,Luiz Inácio Lula da Silva,13,PT,2º turno,3847143,92,1,11,0,Rio de Janeiro,280001607829
+c0268,g37397,pres22t1,Lula,Luiz Inácio Lula da Silva,13,PT,2º turno,3847143,92,1,11,0,Rio de Janeiro,280001607829
+c0269,g37397,pres22t1,Lula,Luiz Inácio Lula da Silva,13,PT,2º turno,3847143,92,1,11,0,Rio de Janeiro,280001607829
+c0270,g37397,pres22t1,Lula,Luiz Inácio Lula da Silva,13,PT,2º turno,3847143,92,1,11,0,Rio de Janeiro,280001607829
+c0271,g37397,pres22t1,Lula,Luiz Inácio Lula da Silva,13,PT,2º turno,3847143,92,1,11,0,Rio de Janeiro,280001607829
+c0272,g37397,pres22t1,Lula,Luiz Inácio Lula da Silva,13,PT,2º turno,3847143,92,2,11,0,Rio de Janeiro,280001607829
+c0273,g37397,pres22t1,Lula,Luiz Inácio Lula da Silva,13,PT,2º turno,3847143,92,2,11,0,Rio de Janeiro,280001607829
+c0274,g37397,pres22t1,Lula,Luiz Inácio Lula da Silva,13,PT,2º turno,3847143,92,2,11,0,Rio de Janeiro,280001607829
+c0275,g37397,pres22t1,Lula,Luiz Inácio Lula da Silva,13,PT,2º turno,3847143,92,1,11,0,Rio de Janeiro,280001607829
+c0276,g37397,pres22t1,Lula,Luiz Inácio Lula da Silva,13,PT,2º turno,3847143,92,1,11,0,Rio de Janeiro,280001607829
+c0277,g37397,pres22t1,Lula,Luiz Inácio Lula da Silva,13,PT,2º turno,3847143,92,2,11,0,Rio de Janeiro,280001607829
+c0278,g37397,pres22t1,Lula,Luiz Inácio Lula da Silva,13,PT,2º turno,3847143,92,2,11,0,Rio de Janeiro,280001607829
+c0279,g37397,pres22t1,Lula,Luiz Inácio Lula da Silva,13,PT,2º turno,3847143,92,1,11,0,Rio de Janeiro,280001607829
+c0280,g37397,pres22t1,Lula,Luiz Inácio Lula da Silva,13,PT,2º turno,3847143,92,1,11,0,Rio de Janeiro,280001607829
+c0281,g37397,pres22t1,Lula,Luiz Inácio Lula da Silva,13,PT,2º turno,3847143,92,1,11,0,Rio de Janeiro,280001607829
+c0282,g37397,pres22t1,Lula,Luiz Inácio Lula da Silva,13,PT,2º turno,3847143,92,1,11,0,Rio de Janeiro,280001607829
+c0283,g37397,pres22t1,Lula,Luiz Inácio Lula da Silva,13,PT,2º turno,3847143,92,2,11,0,Rio de Janeiro,280001607829
+c0284,g37397,pres22t1,Lula,Luiz Inácio Lula da Silva,13,PT,2º turno,3847143,92,2,11,0,Rio de Janeiro,280001607829
+c0285,g37397,pres22t1,Lula,Luiz Inácio Lula da Silva,13,PT,2º turno,3847143,92,1,11,0,Rio de Janeiro,280001607829
+c0286,g37397,pres22t1,Lula,Luiz Inácio Lula da Silva,13,PT,2º turno,3847143,92,2,11,0,Rio de Janeiro,280001607829
+c0287,g37397,pres22t1,Lula,Luiz Inácio Lula da Silva,13,PT,2º turno,3847143,92,2,11,0,Rio de Janeiro,280001607829
+c0288,g37397,pres22t1,Lula,Luiz Inácio Lula da Silva,13,PT,2º turno,3847143,92,2,11,0,Rio de Janeiro,280001607829
+c0289,g37397,pres22t1,Lula,Luiz Inácio Lula da Silva,13,PT,2º turno,3847143,92,2,11,0,Rio de Janeiro,280001607829
+c0290,g37397,pres22t1,Lula,Luiz Inácio Lula da Silva,13,PT,2º turno,3847143,92,1,11,0,Rio de Janeiro,280001607829
+c0291,g37397,pres22t1,Lula,Luiz Inácio Lula da Silva,13,PT,2º turno,3847143,92,2,11,0,Rio de Janeiro,280001607829
+c0292,g37397,pres22t1,Lula,Luiz Inácio Lula da Silva,13,PT,2º turno,3847143,92,1,11,0,Rio de Janeiro,280001607829
+c0293,g37397,pres22t1,Lula,Luiz Inácio Lula da Silva,13,PT,2º turno,3847143,92,1,11,0,Rio de Janeiro,280001607829
+c0294,g37397,pres22t2,Lula,Luiz Inácio Lula da Silva,13,PT,2º turno,4156217,92,2,2,0,Rio de Janeiro,280001607829
+c0295,g37397,pres22t2,Lula,Luiz Inácio Lula da Silva,13,PT,2º turno,4156217,92,1,2,0,Rio de Janeiro,280001607829
+c0296,g37397,pres22t2,Lula,Luiz Inácio Lula da Silva,13,PT,2º turno,4156217,92,1,2,0,Rio de Janeiro,280001607829
+c0297,g37397,pres22t2,Lula,Luiz Inácio Lula da Silva,13,PT,2º turno,4156217,92,2,2,0,Rio de Janeiro,280001607829
+c0298,g37397,pres22t2,Lula,Luiz Inácio Lula da Silva,13,PT,2º turno,4156217,92,1,2,0,Rio de Janeiro,280001607829
+c0299,g37397,pres22t2,Lula,Luiz Inácio Lula da Silva,13,PT,2º turno,4156217,92,1,2,0,Rio de Janeiro,280001607829
+c0300,g37397,pres22t2,Lula,Luiz Inácio Lula da Silva,13,PT,2º turno,4156217,92,2,2,0,Rio de Janeiro,280001607829
+c0301,g37397,pres22t2,Lula,Luiz Inácio Lula da Silva,13,PT,2º turno,4156217,92,2,2,0,Rio de Janeiro,280001607829
+c0302,g37397,pres22t2,Lula,Luiz Inácio Lula da Silva,13,PT,2º turno,4156217,92,2,2,0,Rio de Janeiro,280001607829
+c0303,g37397,pres22t2,Lula,Luiz Inácio Lula da Silva,13,PT,2º turno,4156217,92,1,2,0,Rio de Janeiro,280001607829
+c0304,g37397,pres22t2,Lula,Luiz Inácio Lula da Silva,13,PT,2º turno,4156217,92,1,2,0,Rio de Janeiro,280001607829
+c0305,g37397,pres22t2,Lula,Luiz Inácio Lula da Silva,13,PT,2º turno,4156217,92,2,2,0,Rio de Janeiro,280001607829
+c0306,g37397,pres22t2,Lula,Luiz Inácio Lula da Silva,13,PT,2º turno,4156217,92,2,2,0,Rio de Janeiro,280001607829
+c0307,g37397,pres22t2,Lula,Luiz Inácio Lula da Silva,13,PT,2º turno,4156217,92,1,2,0,Rio de Janeiro,280001607829
+c0308,g37397,pres22t2,Lula,Luiz Inácio Lula da Silva,13,PT,2º turno,4156217,92,1,2,0,Rio de Janeiro,280001607829
+c0309,g37397,pres22t2,Lula,Luiz Inácio Lula da Silva,13,PT,2º turno,4156217,92,1,2,0,Rio de Janeiro,280001607829
+c0310,g37397,pres22t2,Lula,Luiz Inácio Lula da Silva,13,PT,2º turno,4156217,92,1,2,0,Rio de Janeiro,280001607829
+c0311,g37397,pres22t2,Lula,Luiz Inácio Lula da Silva,13,PT,2º turno,4156217,92,2,2,0,Rio de Janeiro,280001607829
+c0312,g37397,pres22t2,Lula,Luiz Inácio Lula da Silva,13,PT,2º turno,4156217,92,2,2,0,Rio de Janeiro,280001607829
+c0313,g37397,pres22t2,Lula,Luiz Inácio Lula da Silva,13,PT,2º turno,4156217,92,1,2,0,Rio de Janeiro,280001607829
+c0314,g37397,pres22t2,Lula,Luiz Inácio Lula da Silva,13,PT,2º turno,4156217,92,2,2,0,Rio de Janeiro,280001607829
+c0315,g37397,pres22t2,Lula,Luiz Inácio Lula da Silva,13,PT,2º turno,4156217,92,2,2,0,Rio de Janeiro,280001607829
+c0316,g37397,pres22t2,Lula,Luiz Inácio Lula da Silva,13,PT,2º turno,4156217,92,2,2,0,Rio de Janeiro,280001607829
+c0317,g37397,pres22t2,Lula,Luiz Inácio Lula da Silva,13,PT,2º turno,4156217,92,2,2,0,Rio de Janeiro,280001607829
+c0318,g37397,pres22t2,Lula,Luiz Inácio Lula da Silva,13,PT,2º turno,4156217,92,1,2,0,Rio de Janeiro,280001607829
+c0319,g37397,pres22t2,Lula,Luiz Inácio Lula da Silva,13,PT,2º turno,4156217,92,2,2,0,Rio de Janeiro,280001607829
+c0320,g37397,pres22t2,Lula,Luiz Inácio Lula da Silva,13,PT,2º turno,4156217,92,1,2,0,Rio de Janeiro,280001607829
+c0321,g37397,pres22t2,Lula,Luiz Inácio Lula da Silva,13,PT,2º turno,4156217,92,1,2,0,Rio de Janeiro,280001607829
+c0322,g25576,sen22,Andre Ceciliano,André Luiz Ceciliano,133,PT,Não eleito,986676,92,4,11,0,Rio de Janeiro,190001614199
+c0323,g27600,sen26,Benedita da Silva,Benedita Souza da Silva Sampaio,131,PT,Não eleito,3220765,92,3,15,0,Rio de Janeiro,190002548141
+c0324,g22446,ver20,Araújo Jose,Jose Iraneide de Araújo,55333,PSD,Suplente,151,1,84,274,0,Maricá,190000632654
+c0325,g38021,ver20,Dra Mariléa Ormond,Mariléa Lúcio Ormond,70567,AVANTE,Suplente,471,1,674,1692,0,Rio de Janeiro,190000633038
+c0326,g34776,ver20,Caçula do Horto,Ione Efigenia dos Santos,11031,PP,Suplente,58,1,1535,1692,0,Rio de Janeiro,190000639019
+c0327,g36279,ver20,Nathalia Gabriel,Nathalia Cordeiro Gabriel,11277,PP,Suplente,17,1,480,570,0,Magé,190000643877
+c0328,g11340,ver20,Letícia Pires do Megafone,Letícia Pires de Oliveira,17011,PSL,Suplente,73,1,289,570,0,Magé,190000644789
+c0329,g35672,ver20,Carol Quintana,Ana Carolina Quintana de Serpa Vieira,50123,PSOL,Não eleito,773,1,24,424,0,Teresópolis,190000648522
+c0330,g2234,ver20,Pastor Damião,Damião dos Santos da Costa,13009,PT,Não eleito,65,1,408,697,0,São João de Meriti,190000650186
+c0331,g14896,ver20,Paulo Micena,Paulo Alves dos Santos,15615,MDB,Não eleito,27,1,120,171,0,Guapimirim,190000657870
+c0332,g33654,ver20,Evaristo Feliciano,Evaristo Feliciano dos Santos,33360,PMN,Não eleito,60,1,75,195,0,Casimiro de Abreu,190000664122
+c0333,g41237,ver20,Ana Barcelos,Ana Aparecida da Costa Barcelos,50555,PSOL,Não eleito,66,1,144,345,0,Três Rios,190000664503
+c0334,g50940,ver20,Rômulo Santos,Romulo Severino dos Santos,50100,PSOL,Não eleito,266,1,46,345,0,Três Rios,190000664504
+c0335,g30254,ver20,Rose Cipriano,Rose Cipriano Lapa,50123,PSOL,Não eleito,4741,1,17,675,0,Duque de Caxias,190000671185
+c0336,g9359,ver20,Benny Briolly,Bennio Augusto Rosa da Silva Santos,50777,PSOL,Eleito,4367,1,5,682,0,Niterói,190000675864
+c0337,g35221,ver20,Renatão do Quilombo,Jose Renato Gomes da Costa,50100,PSOL,Suplente,673,1,82,682,0,Niterói,190000675866
+c0338,g49719,ver20,Macaia,José Alexandre Alves,27456,DC,Suplente,692,1,58,529,0,Volta Redonda,190000681250
+c0339,g19591,ver20,Mestre Abel,Abel de Paula de Oliveira,51525,PATRIOTA,Suplente,72,1,321,529,0,Volta Redonda,190000681372
+c0340,g5239,ver20,Kawan Lopes,Kawany Pedrosa Lopes Tome,50040,PSOL,Suplente,952,1,404,1692,0,Rio de Janeiro,190000684944
+c0341,g47994,ver20,Dr Marcos Paulo,Marcos Paulo Costa da Silva,50505,PSOL,Eleito,9009,1,57,1692,0,Rio de Janeiro,190000684964
+c0342,g6911,ver20,Leonel Brizola Neto,Leonel Brizola,50000,PSOL,Suplente,5978,1,75,1692,0,Rio de Janeiro,190000684967
+c0343,g28417,ver20,Ten Corrêa Médico,José Ricardo Tavares Corrêa,25721,DEM,Suplente,152,1,1239,1692,0,Rio de Janeiro,190000688354
+c0344,g43200,ver20,Paulo Ney,Paulo Ney Guimaraes Pina,51190,PATRIOTA,Eleito,3860,1,2,326,0,Itaboraí,190000733717
+c0345,g43495,ver20,Kaku Amigo de Paracambi,Carlos Alberto Callegaris Neves,11111,PP,Eleito,1052,1,7,148,0,Paracambi,190000736008
+c0346,g30520,ver20,Altair Leonildo,Altair Leonildo da Silva,25356,DEM,Suplente,37,1,60,105,0,Pinheiral,190000737002
+c0347,g3537,ver20,Pablo Rafael,Pablo Rafael Marques dos Santos,55015,PSD,Suplente,114,1,257,529,0,Volta Redonda,190000742297
+c0348,g40370,ver20,Dona Rita,Rita de Cássia Macedo da Silva,13479,PT,Não eleito,26,1,552,672,0,Campos dos Goytacazes,190000744977
+c0349,g11791,ver20,José Maria Rangel,José Maria Ferreira Rangel,13456,PT,Não eleito,2934,1,5,672,0,Campos dos Goytacazes,190000744978
+c0350,g35547,ver20,Adão do Eldorado,Adão Elias de Souza Carvalho,13343,PT,Não eleito,68,1,392,672,0,Campos dos Goytacazes,190000744979
+c0351,g47227,ver20,Gilberto Gomes,Gilberto Azeredo Gomes,13333,PT,Não eleito,848,1,59,672,0,Campos dos Goytacazes,190000744980
+c0352,g5980,ver20,Paulo Silva,Paulo Luis da Silva,13222,PT,Não eleito,79,1,364,672,0,Campos dos Goytacazes,190000744981
+c0353,g20393,ver20,Eduardo Peixoto,Eduardo Peixoto da Silva,13612,PT,Não eleito,158,1,245,672,0,Campos dos Goytacazes,190000744982
+c0354,g25385,ver20,Augusto Azevedo,Luiz Augusto Nogueira,13579,PT,Não eleito,40,1,482,672,0,Campos dos Goytacazes,190000744983
+c0355,g20833,ver20,Ana Lu Mattoso,Ana Lúcia de Souza,13013,PT,Não eleito,39,1,487,672,0,Campos dos Goytacazes,190000744984
+c0356,g12162,ver20,Dani Barros,Daniela de Carvalho Barros,20000,PSC,Suplente,626,1,19,349,0,Japeri,190000745391
+c0357,g32649,ver20,Chris Santos,Christine Souza Santos,11789,PP,Suplente,189,1,34,126,0,São João da Barra,190000745988
+c0358,g27038,ver20,Soninha Pereira,Sonia Maria da Silva Pereira,11613,PP,Eleito,1084,1,7,126,0,São João da Barra,190000745997
+c0359,g12603,ver20,Nilson Neneco,Nilson de Freitas Ferreira,90251,PROS,Não eleito,102,1,273,529,0,Volta Redonda,190000746246
+c0360,g36546,ver20,Susi da Nova Esperança,Susimar dos Santos,12293,PDT,Suplente,77,1,272,539,0,Belford Roxo,190000747562
+c0361,g41922,ver20,Antenor Batalha,Antenor de Souza Batalha,13100,PT,Suplente,107,1,266,529,0,Volta Redonda,190000749415
+c0362,g16834,ver20,Paulinho da Padaria,Paulo da Silva Valadares,13313,PT,Suplente,50,1,380,529,0,Volta Redonda,190000749416
+c0363,g16937,ver20,Sebastião Paulo,Sebastião Paulo de Assis,13613,PT,Suplente,215,1,165,529,0,Volta Redonda,190000749417
+c0364,g45519,ver20,Rilda Jhonpri,Rilda Maria Campos Ferraz,13456,PT,Suplente,19,1,472,529,0,Volta Redonda,190000749418
+c0365,g33027,ver20,Laerce Berteges,Laerce Rodrigues Berteges,13113,PT,Suplente,15,1,489,529,0,Volta Redonda,190000749419
+c0366,g29746,ver20,Felix Pelayo,Felix Gomes Pelayo,13888,PT,Suplente,13,1,495,529,0,Volta Redonda,190000749420
+c0367,g14281,ver20,Fabiana Carmo,Fabiana Carmo dos Santos,13055,PT,Suplente,68,1,330,529,0,Volta Redonda,190000749421
+c0368,g4554,ver20,Carmo,Carmo Gonzaga de Freitas,13555,PT,Suplente,114,1,257,529,0,Volta Redonda,190000749422
+c0369,g48693,ver20,Carolina Patitucci Advogada,Carolina Patitucci de Azevedo,13180,PT,Suplente,540,1,71,529,0,Volta Redonda,190000749423
+c0370,g35192,ver20,Dayse Ribeiro,Dayse dos Santos Pereira,13133,PT,Suplente,87,1,291,529,0,Volta Redonda,190000749424
+c0371,g7960,ver20,Francis das Excursões,Francis Oliveira Barreto,13000,PT,Suplente,33,1,426,529,0,Volta Redonda,190000749425
+c0372,g23005,ver20,Nilson Carneiro,Nilson Carneiro Sales,13413,PT,Suplente,68,1,330,529,0,Volta Redonda,190000749426
+c0373,g45264,ver20,Professora Kelen Martins,Kelen Ferreira Martins,13001,PT,Suplente,27,1,442,529,0,Volta Redonda,190000749427
+c0374,g25461,ver20,Marcelo Rocha Xeroso,Marcelo de Oliveira Rocha,13007,PT,Suplente,20,1,464,529,0,Volta Redonda,190000749428
+c0375,g41175,ver20,Mãe Célia Morais,Iladir Célia Aparecida de Morais,13057,PT,Suplente,682,1,60,529,0,Volta Redonda,190000749429
+c0376,g33102,ver20,Priscila Barbosa,Priscila de Souza Barbosa,13567,PT,Suplente,90,1,287,529,0,Volta Redonda,190000749430
+c0377,g18936,ver20,Wanderley do Retiro,Wanderley Dias de Moura,13003,PT,Suplente,38,1,412,529,0,Volta Redonda,190000749431
+c0378,g50631,ver20,Julinho da Capotaria,Julio Cesar dos Santos Xavier,13300,PT,Suplente,55,1,361,529,0,Volta Redonda,190000749432
+c0379,g38565,ver20,Professora Aline Menezes,Aline Alves de Menezes,13130,PT,Suplente,295,1,124,529,0,Volta Redonda,190000749433
+c0380,g48683,ver20,Conceição Santos,Maria Conceição dos Santos,13777,PT,Suplente,701,1,57,529,0,Volta Redonda,190000749434
+c0381,g15196,ver20,Carlos Leiteiro,Carlos Antonio Soares,13013,PT,Suplente,100,1,277,529,0,Volta Redonda,190000749435
+c0382,g15674,ver20,Herick Machado,Herick Machado,13054,PT,Suplente,26,1,444,529,0,Volta Redonda,190000749436
+c0383,g3728,ver20,Walmir Vitor,Walmir Vitor de Souza,13609,PT,Eleito,1220,1,30,529,0,Volta Redonda,190000749437
+c0384,g23424,ver20,Marcos Carola,Marcos Fernando Carola,13123,PT,Suplente,92,1,284,529,0,Volta Redonda,190000749439
+c0385,g6278,ver20,Thalles,Thalles de Medeiros Santos,13050,PT,Suplente,219,1,163,529,0,Volta Redonda,190000749440
+c0386,g44194,ver20,Iracema,Iracema Verissimo dos Santos da Cruz,65051,PC do B,Não eleito,39,1,230,338,0,Angra dos Reis,190000755835
+c0387,g7862,ver20,Francisco Broder Sumake,Francisco Gonçalves de Oliveira,27700,DC,Não eleito,8,1,137,166,0,Conceição de Macabu,190000766147
+c0388,g1369,ver20,João Carlos do Rapel,João Carlos Dutra Teixeira,13010,PT,Não eleito,68,1,119,187,0,Barra do Piraí,190000771332
+c0389,g42889,ver20,Tania Mara,Tania Mara Fernandes Guimarães Montella,13013,PT,Não eleito,299,1,45,187,0,Barra do Piraí,190000771333
+c0390,g50400,ver20,Amauri Verdureiro,Amauri de Lima Gomes,13655,PT,Não eleito,64,1,123,187,0,Barra do Piraí,190000771334
+c0391,g38736,ver20,Cida Figueira,Maria Aparecida Gomes Figueira,13131,PT,Não eleito,48,1,140,187,0,Barra do Piraí,190000771335
+c0392,g20253,ver20,Jorge Ratier,Jorge Fernandes Ratier Cruz,13000,PT,Suplente,83,1,111,274,0,Maricá,190000776513
+c0393,g14396,ver20,Zé Baixinho,Jose Ivanildo Dias,13222,PT,Suplente,104,1,102,274,0,Maricá,190000776514
+c0394,g41777,ver20,Tião da Radiologia,Sebastião Ferreira Alves,13789,PT,Suplente,321,1,56,274,0,Maricá,190000776515
+c0395,g37039,ver20,Patricia Chagas,Patricia Batista das Chagas,13211,PT,Suplente,8,1,235,274,0,Maricá,190000776516
+c0396,g7853,ver20,Claudinho do Povo,Claudio de Castro,13100,PT,Suplente,47,1,144,274,0,Maricá,190000776517
+c0397,g34452,ver20,Helter Ferreira,Helter Viana Ferreira de Almeida,13133,PT,Eleito,2753,1,3,274,0,Maricá,190000776518
+c0398,g11628,ver20,Andrea Cunha,Andrea Cunha da Silva Monken,13456,PT,Suplente,860,1,30,274,0,Maricá,190000776519
+c0399,g25833,ver20,Lene de Oliveira,Clesirlene Silva de Oliveira,13713,PT,Suplente,157,1,82,274,0,Maricá,190000776520
+c0400,g30751,ver20,Ana Deise,Ana Deise Alves da Silva,13677,PT,Suplente,73,1,118,274,0,Maricá,190000776521
+c0401,g13748,ver20,Aldair de Linda,Aldair Nunes Elias,13650,PT,Eleito,4469,1,1,274,0,Maricá,190000776522
+c0402,g16629,ver20,Wagner Soares,Wagner de Barros Soares,13413,PT,Suplente,400,1,49,274,0,Maricá,190000776523
+c0403,g24789,ver20,Ricardo Guidorizzi,Ricardo Gomes Guidorizzi,13567,PT,Suplente,17,1,208,274,0,Maricá,190000776524
+c0404,g25169,ver20,Hadesh,Luiz Felipe Santos de Oliveira,13500,PT,Eleito,2061,1,12,274,0,Maricá,190000776525
+c0405,g48644,ver20,Thaisa Muniz,Thaisa da Silva Muniz Santarem,13111,PT,Suplente,267,1,63,274,0,Maricá,190000776526
+c0406,g30767,ver20,Jorge Castor,Jorge Luiz Cordeiro da Costa,13613,PT,Eleito,2265,1,8,274,0,Maricá,190000776527
+c0407,g33208,ver20,Professor Marcos Ribeiro,Marcos Ribeiro Martins,13123,PT,Suplente,1405,1,22,274,0,Maricá,190000776528
+c0408,g30697,ver20,Rafa Ribeiro,Rafaela Ribeiro da Costa,13213,PT,Suplente,36,1,171,274,0,Maricá,190000776529
+c0409,g30979,ver20,Robgol,Robson Teixeira da Silva,13999,PT,Suplente,1694,1,19,274,0,Maricá,190000776530
+c0410,g32120,ver20,Chris de Itaipuaçu,Christiane de Lima Correa Botelho,13013,PT,Suplente,299,1,57,274,0,Maricá,190000776531
+c0411,g42770,ver20,Mauro Campos,Jose Mauro da Silva Campos,13050,PT,Suplente,21,1,196,274,0,Maricá,190000776533
+c0412,g8786,ver20,Dra Janete,Janete Celano Valladao,13313,PT,Suplente,335,1,53,274,0,Maricá,190000776534
+c0413,g23484,ver20,Juliano,Juliano Angelo de Almeida,20111,PSC,Suplente,62,1,165,314,0,Rio das Ostras,190000786494
+c0414,g25904,ver20,Mil Grau,Robson de Souza Pimenta,13000,PT,Não eleito,6,1,118,135,0,São Francisco de Itabapoana,190000792947
+c0415,g28864,ver20,Raquel Mota,Raquel Mota Franco,13118,PT,Não eleito,7,1,114,135,0,São Francisco de Itabapoana,190000792948
+c0416,g541,ver20,Amaury Rodrigues,Amaury Rodrigues Figueredo Filho,13789,PT,Não eleito,25,1,86,135,0,São Francisco de Itabapoana,190000792949
+c0417,g335,ver20,Meu Nome É Eneas,Eneas Paes Abilio,13013,PT,Não eleito,39,1,67,135,0,São Francisco de Itabapoana,190000792950
+c0418,g43016,ver20,Celio,Jocileio Tavares Candido,13456,PT,Não eleito,33,1,73,135,0,São Francisco de Itabapoana,190000792951
+c0419,g17931,ver20,Palloma Queiroz,Palloma Queiroz Monteiro,13518,PT,Não eleito,9,1,109,135,0,São Francisco de Itabapoana,190000792952
+c0420,g24203,ver20,Guilherme de Nova Belem,Guilherme dos Santos Alves,13111,PT,Não eleito,24,1,87,135,0,São Francisco de Itabapoana,190000792953
+c0421,g42185,ver20,Valdeci Pereira,Valdeci Pereira Alvarenga,13222,PT,Não eleito,14,1,96,135,0,São Francisco de Itabapoana,190000792954
+c0422,g50869,ver20,Carlinho Cachimbo,Jose Carlos Romão Flor,13888,PT,Não eleito,10,1,107,135,0,São Francisco de Itabapoana,190000792955
+c0423,g2224,ver20,Miriam de Gargaú,Miriam Cardoso Moreira,13123,PT,Não eleito,0,0,132,135,0,São Francisco de Itabapoana,190000792956
+c0424,g40033,ver20,Lelei Estevam,Clesio Estevam Jorge Sousa,13108,PT,Não eleito,110,1,41,135,0,São Francisco de Itabapoana,190000792957
+c0425,g96,ver20,Zé da Vassoura,Jose Pereira Tavares,13333,PT,Não eleito,8,1,111,135,0,São Francisco de Itabapoana,190000792958
+c0426,g10156,ver20,Marta Cordeiro,Marta Cordeiro da Silva,13103,PT,Não eleito,9,1,109,135,0,São Francisco de Itabapoana,190000792959
+c0427,g36113,ver20,Cordeiro,Antônio Edineide Cordeiro e Silva,13456,PT,Não eleito,75,1,170,338,0,Angra dos Reis,190000794987
+c0428,g38133,ver20,Marilene Dopazo,Marilene de Freitas Dopazo,13633,PT,Não eleito,42,1,220,338,0,Angra dos Reis,190000794988
+c0429,g1688,ver20,Roberto Botelho,Roberto Carlos Câmara Botelho,13617,PT,Não eleito,30,1,246,338,0,Angra dos Reis,190000794989
+c0430,g43530,ver20,Cristiane Marcolino,Cristiane Marcolino Vergilio de Souza,13013,PT,Não eleito,346,1,72,338,0,Angra dos Reis,190000794990
+c0431,g43881,ver20,Hugo Vilela,Hugo Rafael Rufino Vilela,13000,PT,Não eleito,303,1,78,338,0,Angra dos Reis,190000794991
+c0432,g9145,ver20,Mauro Nask,Mauro Nascimento dos Santos,13123,PT,Não eleito,162,1,113,338,0,Angra dos Reis,190000794992
+c0433,g7317,ver20,Lecy de Mambucaba,Lecy Maria do Nascimento Rosa,13321,PT,Não eleito,40,1,225,338,0,Angra dos Reis,190000794993
+c0434,g32478,ver20,Renatinha Morais,Renata Oliveira Cavalcanti,13130,PT,Não eleito,24,1,258,338,0,Angra dos Reis,190000794994
+c0435,g10526,ver20,Sergio Ribeiro,Sergio Luiz Marques Ribeiro,13131,PT,Não eleito,30,1,246,338,0,Angra dos Reis,190000794995
+c0436,g30288,ver20,Marcelo Oliveira,Marcelo dos Santos Oliveira,13789,PT,Não eleito,48,1,206,338,0,Angra dos Reis,190000794996
+c0437,g7248,ver20,Donato Borges,Donato Borges da Silva Filho,13133,PT,Não eleito,37,1,233,338,0,Angra dos Reis,190000794997
+c0438,g19619,ver20,Ronaira Faria,Ronaira Therezinha Faria da Costa,23044,CIDADANIA,Suplente,99,1,66,220,0,Paraíba do Sul,190000796943
+c0439,g16347,ver20,Diego do Taxi,Diego Crespo Pessanha,90333,PROS,Suplente,22,1,101,166,0,Conceição de Macabu,190000797078
+c0440,g24405,ver20,Wlad da Pesca,Wladimir da Conceição Pereira,11789,PP,Eleito,718,1,5,200,0,Mangaratiba,190000805066
+c0441,g9237,ver20,Vinni Boy,Vinicius Fonseca da Costa,55020,PSD,Suplente,89,1,122,374,0,Araruama,190000824093
+c0442,g47123,ver20,Arison Batista,Arison Batista de Almeida,13014,PT,Suplente,30,1,559,682,0,Niterói,190000832940
+c0443,g780,ver20,Ana Lucia,Ana Lucia Fernandes Pereira,13180,PT,Suplente,419,1,114,682,0,Niterói,190000832941
+c0444,g11620,ver20,Alessandro Bertoni,Alessandro Bertoni Moreira,13603,PT,Suplente,29,1,562,682,0,Niterói,190000832942
+c0445,g39481,ver20,Bruno Ribeiro,Bruno Gonçalves Ribeiro,13001,PT,Suplente,1710,1,31,682,0,Niterói,190000832943
+c0446,g15666,ver20,Mario Fonseca Fialho,Mario Fonseca Fialho,13331,PT,Suplente,84,1,395,682,0,Niterói,190000832944
+c0447,g2700,ver20,Mima,Dilma Francisca dos Santos,13999,PT,Suplente,100,1,361,682,0,Niterói,190000832945
+c0448,g16311,ver20,Dr. Cidinha Maranata,Maria Aparecida Martins Magrina,13888,PT,Suplente,42,1,509,682,0,Niterói,190000832947
+c0449,g23067,ver20,Mariagela Fernandes,Mariangela Fernandes de Oliveira,13913,PT,Suplente,163,1,273,682,0,Niterói,190000832948
+c0450,g2296,ver20,Michelle Amorim,Michelle de Almeida Correa de Amorim,13777,PT,Suplente,285,1,170,682,0,Niterói,190000832949
+c0451,g49763,ver20,Bacalha,Albert Anderson da Silva Fernandes,13022,PT,Suplente,83,1,400,682,0,Niterói,190000832950
+c0452,g34020,ver20,Jocimar do Frete (Pico),Jocimar Marques de Souza,13380,PT,Suplente,216,1,218,682,0,Niterói,190000832951
+c0453,g1624,ver20,Thiago Risso,Thiago Soares Risso Possas,13651,PT,Suplente,779,1,73,682,0,Niterói,190000832952
+c0454,g39439,ver20,Ricardo Santos,Jose Ricardo dos Santos,13013,PT,Suplente,560,1,93,682,0,Niterói,190000832953
+c0455,g9804,ver20,Robson Carvalho,Luiz Robson Carvalho Soares,13370,PT,Suplente,165,1,267,682,0,Niterói,190000832954
+c0456,g47891,ver20,Nubia Silva,Nubia Maria Lima da Silva Alves Pereira,13068,PT,Suplente,16,1,618,682,0,Niterói,190000832956
+c0457,g13799,ver20,Marinalva Fonseca,Marinalva Almeida da Fonseca,13345,PT,Suplente,93,1,377,682,0,Niterói,190000832957
+c0458,g36830,ver20,Veronica Lima,Veronica dos Santos Lima,13580,PT,Eleito,4220,1,7,682,0,Niterói,190000832959
+c0459,g40058,ver20,Anderson Pipico,Anderson Jose Rodrigues,13000,PT,Suplente,3066,1,14,682,0,Niterói,190000832960
+c0460,g43666,ver20,Walquiria Filizola,Walquiria Filizola,22120,PL,Suplente,16,1,120,159,0,Piraí,190000846916
+c0461,g46084,ver20,Andinho do Som,Anderson Silveira Rosa,45085,PSDB,Suplente,210,1,306,675,0,Duque de Caxias,190000851110
+c0462,g46897,ver20,André Casquinha,André Luiz Azeredo da Silva,15000,MDB,Eleito,3305,1,2,274,0,Maricá,190000852180
+c0463,g36953,ver20,Filipe Bittencourt,Filipe Dias Bittencourt,15123,MDB,Eleito,2386,1,6,274,0,Maricá,190000852181
+c0464,g1918,ver20,Lucia da Bolsa,Lúcia Fatima Moreira de Lima,13015,PT,Suplente,7,1,483,539,0,Belford Roxo,190000852681
+c0465,g34791,ver20,Xico Bezerras,Francisco Cleiton Bezerra da Silva,13133,PT,Suplente,17,1,428,539,0,Belford Roxo,190000852682
+c0466,g1034,ver20,Daniel Pezão,Daniel Souza Andrade,13000,PT,Suplente,819,1,83,539,0,Belford Roxo,190000852683
+c0467,g28267,ver20,Bido Jogador,Claudio Aniceto da Silva,13150,PT,Suplente,47,1,338,539,0,Belford Roxo,190000852684
+c0468,g43497,ver20,Fabio do Waguinho,Fabio Azevedo Carneiro,13500,PT,Suplente,663,1,97,539,0,Belford Roxo,190000852685
+c0469,g16583,ver20,Flavio Mattos,Flavio Mattos dos Santos,13777,PT,Suplente,15,1,438,539,0,Belford Roxo,190000852686
+c0470,g23753,ver20,Jaco,Jorge Soares Braga,13455,PT,Suplente,1371,1,51,539,0,Belford Roxo,190000852687
+c0471,g48310,ver20,Luciane Oliveira,Luciane Oliveira de Almeida,13998,PT,Suplente,10,1,467,539,0,Belford Roxo,190000852688
+c0472,g20840,ver20,Fabio Bida,Fabio Lima da Costa,13130,PT,Suplente,588,1,104,539,0,Belford Roxo,190000852689
+c0473,g25316,ver20,Helen Delvito,Helen Delvito de Souza,13601,PT,Suplente,2,1,511,539,0,Belford Roxo,190000852690
+c0474,g7488,ver20,Telma Verao,Telma de Souza Braga,13606,PT,Suplente,2,1,511,539,0,Belford Roxo,190000852691
+c0475,g11225,ver20,Soraia da Saúde,Soraia Carlos de Melo,13025,PT,Suplente,136,1,208,539,0,Belford Roxo,190000852692
+c0476,g24610,ver20,Alessandra Oliveira,Alessandra da Silva Oliveira Anacleto,13602,PT,Suplente,13,1,450,539,0,Belford Roxo,190000852693
+c0477,g47710,ver20,Ana Lu do Forró,Ana Lucia Freire Silva,13605,PT,Suplente,26,1,398,539,0,Belford Roxo,190000852694
+c0478,g40725,ver20,Jorge Aleluia,Jorge Augusto Correa de Barcelos,13044,PT,Suplente,135,1,211,539,0,Belford Roxo,190000852695
+c0479,g11767,ver20,Tony Lunz,José Antonio Lunz da Silva,13122,PT,Suplente,349,1,132,539,0,Belford Roxo,190000852696
+c0480,g13719,ver20,Marisete Costa,Marisete da Silva da Costa,13615,PT,Suplente,36,1,365,539,0,Belford Roxo,190000852697
+c0481,g20220,ver20,Waltair Filho,Waltair Marques de Oliveira Filho,13789,PT,Suplente,1360,1,53,539,0,Belford Roxo,190000852698
+c0482,g25172,ver20,Terezinha de Jesus,Terezinha de Jesus Rodrigues Macedo,13603,PT,Suplente,1,1,523,539,0,Belford Roxo,190000852699
+c0483,g16095,ver20,Igo Menezes,Igo Alencar de Menezes,13123,PT,Eleito,2094,1,24,539,0,Belford Roxo,190000852700
+c0484,g33479,ver20,Alexandre Plena Forma,Alexandre Herick Buthers,13555,PT,Suplente,795,1,86,539,0,Belford Roxo,190000852701
+c0485,g49787,ver20,Andressa Silva,Andressa Rufino da Silva dos Reis,13612,PT,Suplente,2,1,511,539,0,Belford Roxo,190000852702
+c0486,g15218,ver20,Paollo,Paollo Gomes Bispo Nascimento,13210,PT,Suplente,71,1,288,539,0,Belford Roxo,190000852703
+c0487,g12401,ver20,Valcler,Valcler Vieira Pereira,13222,PT,Suplente,46,1,341,539,0,Belford Roxo,190000852704
+c0488,g28723,ver20,Ziquinho,Ezequiel Augusto da Silva,13321,PT,Suplente,124,1,221,539,0,Belford Roxo,190000852705
+c0489,g21496,ver20,Gina do Bira,Jorgina Pereira da Silva,13001,PT,Suplente,6,1,486,539,0,Belford Roxo,190000852706
+c0490,g17068,ver20,Marlene Moraes,Marlene Souza de Moraes,13888,PT,Suplente,2,1,511,539,0,Belford Roxo,190000852707
+c0491,g522,ver20,Filippe Jesus,Luis Filippe de Jesus da Silva,13456,PT,Suplente,1363,1,52,539,0,Belford Roxo,190000852708
+c0492,g30584,ver20,Jackson Roque,Jackson Roque de Lima Araújo,13631,PT,Suplente,109,1,235,539,0,Belford Roxo,190000852709
+c0493,g23830,ver20,Professor Augusto,Augusto de Oliveira Thimóteo,13100,PT,Suplente,34,1,375,539,0,Belford Roxo,190000852710
+c0494,g34655,ver20,Genesio,Genésio Gomes da Silva,13010,PT,Suplente,36,1,365,539,0,Belford Roxo,190000852711
+c0495,g14781,ver20,Ana Paula,Ana Paula de Aguiar Duarte,13002,PT,Suplente,5,1,488,539,0,Belford Roxo,190000852712
+c0496,g47828,ver20,Jean Maia,Jean da Mota Maia,13038,PT,Suplente,0,0,530,539,0,Belford Roxo,190000852713
+c0497,g1395,ver20,Jacó Fé e Esperança,Jailson Feitosa Pereira,13131,PT,Suplente,80,1,266,539,0,Belford Roxo,190000852714
+c0498,g16289,ver20,Dj Juquinha,Reinaldo de Oliveira Castro,13205,PT,Suplente,139,1,206,539,0,Belford Roxo,190000852715
+c0499,g16830,ver20,Junior Ceguinho,João Maria do Nascimento Romão,13071,PT,Suplente,22,1,414,539,0,Belford Roxo,190000852716
+c0500,g7794,ver20,André da Farmácia,Vivaldino André Gomes,13234,PT,Suplente,147,1,200,539,0,Belford Roxo,190000852717
+c0501,g6618,ver20,Carlos Careca,José Carlos da Silva,13004,PT,Suplente,16,1,433,539,0,Belford Roxo,190000852718
+c0502,g35573,ver20,Rafael do Gás,Rafael Santos Soares Rocha,15190,MDB,Suplente,957,1,70,539,0,Belford Roxo,190000852983
+c0503,g8041,ver20,Wilkes Silva,Wilkes da Silva Dias,70030,AVANTE,Suplente,66,1,276,551,0,Nova Friburgo,190000855196
+c0504,g43458,ver20,Joaquim da Capelinha,Joaquim Marcio Barros de Moura,13123,PT,Não eleito,16,1,119,166,0,Conceição de Macabu,190000855273
+c0505,g32875,ver20,Silas de Oliveira,Silas de Oliveira Maria,13000,PT,Não eleito,5,1,153,166,0,Conceição de Macabu,190000855274
+c0506,g18322,ver20,Marcinha,Marciliana Monteiro,13013,PT,Não eleito,0,0,164,166,0,Conceição de Macabu,190000855275
+c0507,g13589,ver20,Professor Badu,Felipe Mota dos Santos,40333,PSB,Não eleito,518,1,171,916,0,São Gonçalo,190000857826
+c0508,g3280,ver20,Massimoel,Massimoel Teixeira de Carvalho,40640,PSB,Não eleito,238,1,353,916,0,São Gonçalo,190000857840
+c0509,g39855,ver20,Alexandro Tavares,Alexandro de Oliveira Tavares,70555,AVANTE,Suplente,98,1,149,482,0,Queimados,190000861089
+c0510,g20349,ver20,Rodrigo Kekeu,Rodrigo Miguel Gomes Ferreira,12612,PDT,Não eleito,225,1,68,249,0,Nilópolis,190000863068
+c0511,g38931,ver20,Adalberto Amaral,Adalberto Jose do Amaral Ferreira,10789,REPUBLICANOS,Suplente,217,1,60,298,0,São Pedro da Aldeia,190000869231
+c0512,g39058,ver20,Sonia do Pt,Sonia Maria Bittencourt Waldstein de Moura,13000,PT,Não eleito,84,1,115,298,0,São Pedro da Aldeia,190000870584
+c0513,g33150,ver20,Ormindo Costa,Ormindo Barreto da Costa Neto,13380,PT,Não eleito,18,1,231,298,0,São Pedro da Aldeia,190000870585
+c0514,g49216,ver20,Gustavo Coruja,Luiz Gustavo de Souza Zaniboni,13123,PT,Não eleito,31,1,67,105,0,Cordeiro,190000871951
+c0515,g20866,ver20,Tiely Castro,Cristiele de Castro Pinto,13333,PT,Não eleito,5,1,103,105,0,Cordeiro,190000871952
+c0516,g4999,ver20,Luana Nunes,Luana de Souza Nunes,15000,MDB,Suplente,86,1,60,200,0,Mangaratiba,190000872316
+c0517,g36673,ver20,Bruno de Lú,Bruno Manhaes,20010,PSC,Suplente,115,1,41,128,0,Quissamã,190000872908
+c0518,g22580,ver20,Adelson Guedes,Adelson Pereira Guedes,10023,REPUBLICANOS,Suplente,729,1,494,1692,0,Rio de Janeiro,190000885304
+c0519,g39442,ver20,Lilinho,Luiz Virgílio Ferreira e Silva,51999,PATRIOTA,Não eleito,1453,1,38,682,0,Niterói,190000889093
+c0520,g26093,ver20,Bel da Educação,Elisabeth de Araujo Oliveira,10453,REPUBLICANOS,Suplente,20,1,129,200,0,Mangaratiba,190000898329
+c0521,g7373,ver20,Saraiva,Manoel Saraiva da Silva Junior,13456,PT,Não eleito,554,1,51,444,0,Macaé,190000936820
+c0522,g41888,ver20,Abdel Krajah,Abdel Aziz da Silva Krajah Dias,13194,PT,Não eleito,23,1,369,444,0,Macaé,190000936821
+c0523,g3069,ver20,João Pereira,João Batista Pereira,13113,PT,Não eleito,40,1,319,444,0,Macaé,190000936822
+c0524,g32439,ver20,Professora Ivone Lopes,Ivone da Mota Lopes,13176,PT,Não eleito,146,1,160,444,0,Macaé,190000936823
+c0525,g43591,ver20,Marcio Gotinha,Marcio Vinicius da Silva Borges,13888,PT,Não eleito,55,1,274,444,0,Macaé,190000936824
+c0526,g49671,ver20,Marco Indio,Marcos Rezende Santos,13006,PT,Não eleito,17,1,397,444,0,Macaé,190000936825
+c0527,g28597,ver20,Graça do Pt,Maria das Graças Gomes Franco,13677,PT,Não eleito,83,1,224,444,0,Macaé,190000936826
+c0528,g19208,ver20,Mauricio D Macaé,Mauricio Silva de Souza,13133,PT,Não eleito,49,1,289,444,0,Macaé,190000936827
+c0529,g11229,ver20,Leidesul Pt,Leidesul Maia Nunes,13213,PT,Não eleito,14,1,408,444,0,Macaé,190000936828
+c0530,g9407,ver20,Anderson Ferreira,Anderson de Souza Ferreira,13111,PT,Não eleito,106,1,192,444,0,Macaé,190000936829
+c0531,g13475,ver20,Marcel Silvano,Marcel Silvano da Silva Souza,13333,PT,Não eleito,1520,1,13,444,0,Macaé,190000936830
+c0532,g11707,ver20,Yonara Cezario,Yonara da Silva Cezario,13777,PT,Não eleito,48,1,293,444,0,Macaé,190000936831
+c0533,g8739,ver20,Erica Sarzedas,Erica Ladeira Sarzedas,13023,PT,Não eleito,74,1,240,444,0,Macaé,190000936832
+c0534,g4468,ver20,Alexandre de Oliveira,Alexandre de Oliveira,13101,PT,Não eleito,6,1,433,444,0,Macaé,190000936833
+c0535,g33611,ver20,Miriam Seso Simbora de Luta,Miriam Amaral Queiroz,13000,PT,Não eleito,193,1,128,444,0,Macaé,190000936835
+c0536,g6477,ver20,Professor Paulo Henrique,Paulo Henrique Dantas Pinto,13013,PT,Não eleito,633,1,45,444,0,Macaé,190000936836
+c0537,g27046,ver20,Bira da Educação,Ubiratan Torres Lacerda,13123,PT,Não eleito,86,1,218,444,0,Macaé,190000936837
+c0538,g15792,ver20,Luiz Fernando Dedão,Luiz Fernando dos Santos,13234,PT,Não eleito,46,1,301,444,0,Macaé,190000936838
+c0539,g7397,ver20,Beto Guindasteiro,Alberto Cardoso de Jesus,13555,PT,Não eleito,16,1,400,444,0,Macaé,190000936839
+c0540,g36702,ver20,Cristiano,Cristiano Jose Rodrigues de Souza,35456,PMB,Suplente,2207,1,53,675,0,Duque de Caxias,190000940580
+c0541,g49480,ver20,Juliano Freitas,Juliano de Freitas Costa,18123,REDE,Não eleito,1636,1,35,916,0,São Gonçalo,190000942672
+c0542,g5611,ver20,Dr Igor Diogo,Igor Franco de Souza Araujo Diogo,12000,PDT,Não eleito,468,1,14,148,0,Paracambi,190000953488
+c0543,g50805,ver20,Professor Castelano,Luiz Felipp Castelano,43456,PV,Não eleito,854,1,9,482,0,Queimados,190000955644
+c0544,g43847,ver20,Gilmar Motorista,Gilmar Duarte Ferreira,10020,REPUBLICANOS,Suplente,232,1,152,529,0,Volta Redonda,190000975276
+c0545,g50485,ver20,Tiarô Pt,Rosangela Martins da Silva,13013,PT,Não eleito,48,1,139,255,0,Seropédica,190000981534
+c0546,g20737,ver20,João Guerra,João Guerra Duval Kobler Corrêa,13333,PT,Não eleito,13,1,218,255,0,Seropédica,190000981535
+c0547,g7872,ver20,Humberto José O Fogueteiro,Humberto José Rodrigues Alves,22444,PL,Suplente,194,1,32,126,0,São João da Barra,190000984420
+c0548,g20792,ver20,Ezequiel,Ezequiel Rodrigues Teixeira,13007,PT,Suplente,871,1,112,675,0,Duque de Caxias,190000985164
+c0549,g34724,ver20,Fatima Monteiro,Fatima Andréa Monteiro do Nascimento de Melo Jeronimo,13357,PT,Suplente,66,1,490,675,0,Duque de Caxias,190000985165
+c0550,g30269,ver20,Itamar Filho,Itamar da Silva Filho,13222,PT,Suplente,108,1,414,675,0,Duque de Caxias,190000985166
+c0551,g30142,ver20,Professor Marroni,Marroni dos Santos Alves,13313,PT,Suplente,758,1,124,675,0,Duque de Caxias,190000985168
+c0552,g3549,ver20,Nei da Lagoinha,Nei Robson de Azevedo,13115,PT,Suplente,2066,1,56,675,0,Duque de Caxias,190000985169
+c0553,g17232,ver20,Rogerin Morador,Rogerio Oliveira dos Santos,13001,PT,Suplente,191,1,325,675,0,Duque de Caxias,190000985170
+c0554,g21096,ver20,Nivan,Nivan Almeida,13648,PT,Suplente,2205,1,54,675,0,Duque de Caxias,190000985173
+c0555,g42340,ver20,Titia Flor,Rosangela Rosa de Souza Gomes,13677,PT,Suplente,105,1,423,675,0,Duque de Caxias,190000985174
+c0556,g2964,ver20,Dg,Douglas Marcolino Henrique,13019,PT,Suplente,86,1,457,675,0,Duque de Caxias,190000985175
+c0557,g50933,ver20,Samuel Santos,Samuel dos Santos Luciano,13135,PT,Suplente,107,1,416,675,0,Duque de Caxias,190000985176
+c0558,g42231,ver20,Eduardo Moreira,Eduardo Moreira,13239,PT,Eleito,5339,1,9,675,0,Duque de Caxias,190000985178
+c0559,g48122,ver20,Mestre Izaias,Izaias Pereira Gomes,13017,PT,Suplente,121,1,396,675,0,Duque de Caxias,190000985179
+c0560,g4059,ver20,Guerreiro,Jose Alves da Cunha,13015,PT,Suplente,600,1,147,675,0,Duque de Caxias,190000985181
+c0561,g23276,ver20,Marco Sapo,Marco Antonio Lima,13610,PT,Suplente,104,1,424,675,0,Duque de Caxias,190000985182
+c0562,g5202,ver20,Luciana Fatima,Luciana Fatima da Silva,13157,PT,Suplente,10,1,649,675,0,Duque de Caxias,190000985183
+c0563,g27716,ver20,Rogerio da Pipoca,Rogerio da Silva Ferreira,13555,PT,Suplente,107,1,416,675,0,Duque de Caxias,190000985184
+c0564,g44879,ver20,Augusto Teles,Jose Augusto Telles de Lima,13133,PT,Suplente,63,1,496,675,0,Duque de Caxias,190000985185
+c0565,g5039,ver20,Zia Presidente,Josias Costa da Silva,13008,PT,Suplente,155,1,358,675,0,Duque de Caxias,190000985186
+c0566,g35526,ver20,Marcelo Nascimento,Marcelo Marinho do Nascimento,13123,PT,Suplente,438,1,182,675,0,Duque de Caxias,190000985187
+c0567,g2681,ver20,Professora Natalina,Natalina Vera Castilho de Assis,13613,PT,Suplente,231,1,287,675,0,Duque de Caxias,190000985188
+c0568,g45023,ver20,Armando Amazonas,Jose Armando Borges do Amazonas,13012,PT,Suplente,519,1,169,675,0,Duque de Caxias,190000985189
+c0569,g8206,ver20,Bruno Leonardo,Bruno Leonardo Sant Anna Teixeira,13567,PT,Suplente,240,1,279,675,0,Duque de Caxias,190000985190
+c0570,g44316,ver20,Fabricio Cordeiro,Fabricio de Souza Cordeiro,13111,PT,Suplente,352,1,223,675,0,Duque de Caxias,190000985192
+c0571,g17717,ver20,Fernando Frederico,Fernando Frederico,13241,PT,Suplente,150,1,361,675,0,Duque de Caxias,190000985195
+c0572,g33535,ver20,Vanderlei Cardoso,Vanderlei Cardoso da Silva,13777,PT,Suplente,253,1,271,675,0,Duque de Caxias,190000985197
+c0573,g18054,ver20,Bernadete Reis,Bernadete Rocha Rodrigues Reis,13124,PT,Suplente,4,1,661,675,0,Duque de Caxias,190000985198
+c0574,g8271,ver20,Leandro da Saude,Leandro Freitas dos Santos,13150,PT,Suplente,557,1,158,675,0,Duque de Caxias,190000985199
+c0575,g31504,ver20,Andreia,Andreia Cristina da Silva,13552,PT,Suplente,5,1,658,675,0,Duque de Caxias,190000985200
+c0576,g49957,ver20,Bruno Ryu,Bruno Lopes de Almeida,13162,PT,Suplente,26,1,603,675,0,Duque de Caxias,190000985202
+c0577,g39226,ver20,Cassio da Piscina,Cassio Luiz Veiga,13013,PT,Suplente,1064,1,102,675,0,Duque de Caxias,190000985203
+c0578,g2017,ver20,Japão,Jose Aguinaldo Ribeiro,13333,PT,Suplente,97,1,441,675,0,Duque de Caxias,190000985205
+c0579,g1263,ver20,Walmir Presidente,Walmir Batista,40999,PSB,Suplente,61,1,342,529,0,Volta Redonda,190000985504
+c0580,g25498,ver20,Raone Ferreira,Raone Cassin Maia Ferreira,40000,PSB,Suplente,1409,1,21,529,0,Volta Redonda,190000985508
+c0581,g40487,ver20,Cremildo Ferreira,Cremildo Pinto Ferreira,13151,PT,Não eleito,36,1,148,293,0,Cachoeiras de Macacu,190000987109
+c0582,g38441,ver20,Robson Lessa,Robson Lessa Labeta,13123,PT,Não eleito,11,1,220,293,0,Cachoeiras de Macacu,190000987110
+c0583,g34145,ver20,Elisa Escaleira,Ana Elisabete Escaleira Ribeiro,13111,PT,Não eleito,2,1,273,293,0,Cachoeiras de Macacu,190000987111
+c0584,g41519,ver20,Fernando Teixeira,Fernando Teixeira Ribeiro,13420,PT,Não eleito,26,1,172,293,0,Cachoeiras de Macacu,190000987112
+c0585,g35741,ver20,Amélia Ramos,Amélia de Farias Ramos Nunes,13231,PT,Não eleito,0,0,287,293,0,Cachoeiras de Macacu,190000987113
+c0586,g38230,ver20,Sônia Bernabé,Sônia Barroso Bernabé,13777,PT,Não eleito,20,1,195,293,0,Cachoeiras de Macacu,190000987114
+c0587,g44332,ver20,Eliézio Brasil,Eliézio Dias Machado,13635,PT,Não eleito,10,1,227,293,0,Cachoeiras de Macacu,190000987115
+c0588,g25434,ver20,Mário Sérgio (Sepe),Mário Sérgio Martins,13113,PT,Não eleito,23,1,179,293,0,Cachoeiras de Macacu,190000987116
+c0589,g21651,ver20,Marlon Victorino,Marlon Custódio Victorino,13456,PT,Não eleito,1,1,282,293,0,Cachoeiras de Macacu,190000987117
+c0590,g6487,ver20,Tatiana Custódio,Tatiana Custódia Justino Pereira,13013,PT,Não eleito,2,1,273,293,0,Cachoeiras de Macacu,190000987118
+c0591,g11607,ver20,Dirlei (Lele),Dirlei Lyrio da Silva Moraes,13888,PT,Não eleito,22,1,184,293,0,Cachoeiras de Macacu,190000987120
+c0592,g3539,ver20,Helena Lima,Helena Lima,13435,PT,Não eleito,10,1,227,293,0,Cachoeiras de Macacu,190000987121
+c0593,g23977,ver20,Dra. Juliana Mendes,Juliana da Costa Pena Mendes,13321,PT,Não eleito,26,1,172,293,0,Cachoeiras de Macacu,190000987122
+c0594,g18620,ver20,Professor Jorge - Gim,Jorge Conceição da Silva,13333,PT,Não eleito,4,1,262,293,0,Cachoeiras de Macacu,190000987123
+c0595,g25586,ver20,Ricardo do Gás,Ricardo da Rocha,13058,PT,Não eleito,1,1,282,293,0,Cachoeiras de Macacu,190000987124
+c0596,g29344,ver20,Wilson Barbudo do Pt,Wilson de Araujo Brandão,13113,PT,Não eleito,11,1,225,249,0,Nilópolis,190000987695
+c0597,g4624,ver20,Rivanda Sales,Rivanda Sales Alves,13188,PT,Não eleito,6,1,238,249,0,Nilópolis,190000987696
+c0598,g13636,ver20,Felipe Rei,Felipe Goulart Siqueira,13123,PT,Não eleito,41,1,166,249,0,Nilópolis,190000987697
+c0599,g14938,ver20,Paulo Sergio de Ogún,Paulo Sérgio Fernandes Lima,13777,PT,Não eleito,15,1,217,249,0,Nilópolis,190000987698
+c0600,g20967,ver20,Andréa Curty,Andréa Curty Maciel,13123,PT,Não eleito,46,1,252,482,0,Queimados,190000989079
+c0601,g44148,ver20,Vander Leal,Vander de Carvalho Leal,13513,PT,Não eleito,57,1,218,482,0,Queimados,190000989083
+c0602,g21968,ver20,Professor Denis,Denis da Silveira Peixoto,13171,PT,Não eleito,38,1,285,482,0,Queimados,190000989084
+c0603,g16324,ver20,Professor Jacob Rodney,Jacob Rodney Campos,13017,PT,Não eleito,78,1,178,482,0,Queimados,190000989087
+c0604,g51038,ver20,Rosane,Rosane de Assis Santos,40027,PSB,Suplente,20,1,207,249,0,Nilópolis,190000989927
+c0605,g35252,ver20,Gladiston Leão,Gladiston França Leão,13555,PT,Não eleito,36,1,80,148,0,Paracambi,190000990872
+c0606,g16707,ver20,Dj Buzina,Ronaldo Lima da Silva,13456,PT,Não eleito,7,1,135,148,0,Paracambi,190000990873
+c0607,g34508,ver20,Nuza Manicure,Luzinete Peixoto de Souza,13887,PT,Não eleito,35,1,82,148,0,Paracambi,190000990874
+c0608,g29871,ver20,Bruno da Avenida,Bruno Côrtes Gonçalves,13604,PT,Não eleito,19,1,103,148,0,Paracambi,190000990875
+c0609,g20844,ver20,Jonas da Leal,Jonas Batista Fraga,13134,PT,Não eleito,45,1,69,148,0,Paracambi,190000990876
+c0610,g10370,ver20,Marlan Alves,Marlan Alves Teixeira,13620,PT,Não eleito,36,1,80,148,0,Paracambi,190000990877
+c0611,g46876,ver20,Aline do Valerio da Padaria,Aline Rodrigues Constancio,13333,PT,Não eleito,46,1,68,148,0,Paracambi,190000990878
+c0612,g32507,ver20,Taninha do Trailer,Tanea Maria Faustino,13123,PT,Não eleito,20,1,101,148,0,Paracambi,190000990879
+c0613,g49938,ver20,Euler Castro,Euler de Castro Dias,13789,PT,Não eleito,7,1,135,148,0,Paracambi,190000990880
+c0614,g9662,ver20,Andreza,Andreza da Silva Cardoso Fogia,13444,PT,Não eleito,14,1,116,148,0,Paracambi,190000990881
+c0615,g44808,ver20,Renato Maspero Biólogo,Renato Cesar Maspero,13000,PT,Não eleito,44,1,70,148,0,Paracambi,190000990882
+c0616,g45655,ver20,Eliane do Povão,Eliane da Cunha Silva,13013,PT,Não eleito,14,1,116,148,0,Paracambi,190000990883
+c0617,g49712,ver20,Luana Mota,Luana Eller de Almeida Moreira Mota,12012,PDT,Não eleito,539,1,166,916,0,São Gonçalo,190000998280
+c0618,g10362,ver20,Miguel Moraes,Miguel de Moraes Filho,12612,PDT,Não eleito,891,1,98,916,0,São Gonçalo,190000998285
+c0619,g38698,ver20,Pastor Sebastião,Sebastião Silverio da Silva,51700,PATRIOTA,Suplente,379,1,230,916,0,São Gonçalo,190001000281
+c0620,g640,ver20,Geraldo de Arrozal,Geraldo Pedroso Martins,10120,REPUBLICANOS,Suplente,33,1,81,159,0,Piraí,190001001517
+c0621,g45798,ver20,Paulo Ganga,Paulo Roberto Câmara dos Santos,15116,MDB,Suplente,145,1,1266,1692,0,Rio de Janeiro,190001005398
+c0622,g42112,ver20,Dr Cacau,Jose Carlos Fonseca,18654,REDE,Não eleito,1116,1,86,442,0,Nova Iguaçu,190001007036
+c0623,g45736,ver20,Oliveira,Wagner Oliveira Batista da Silva,70040,AVANTE,Suplente,567,1,96,672,0,Campos dos Goytacazes,190001014439
+c0624,g14080,ver20,Fernando Carioca,Fernando de Souza,50138,PSOL,Não eleito,19,1,85,145,0,Mendes,190001018933
+c0625,g34992,ver20,Pretta Gonçalves,Patrícia Araújo Gonçalves Ferreira,51321,PATRIOTA,Suplente,166,1,67,255,0,Seropédica,190001020242
+c0626,g23419,ver20,Monica Rabelo,Monica Martins Rabelo,13001,PT,Suplente,281,1,939,1692,0,Rio de Janeiro,190001022673
+c0627,g13014,ver20,Reimont,Reimont Luiz Otoni Santa Barbara,13333,PT,Eleito,16082,1,27,1692,0,Rio de Janeiro,190001022674
+c0628,g34024,ver20,Aldeniso Oliveira,Antonio Aldeniso de Oliveira,13007,PT,Suplente,164,1,1204,1692,0,Rio de Janeiro,190001022675
+c0629,g8769,ver20,Indianarae Siqueira,Indianarae Siqueira,13169,PT,Suplente,2504,1,181,1692,0,Rio de Janeiro,190001022676
+c0630,g5183,ver20,Lindbergh Farias,Luiz Lindbergh Farias Filho,13123,PT,Eleito,24912,1,9,1692,0,Rio de Janeiro,190001022677
+c0631,g47134,ver20,Geraldo Meneses,Geraldo Correia de Meneses Filho,13690,PT,Suplente,48,1,1568,1692,0,Rio de Janeiro,190001022678
+c0632,g33869,ver20,Renata Bessa,Renata Bessa de Freitas,13762,PT,Suplente,87,1,1441,1692,0,Rio de Janeiro,190001022679
+c0633,g21124,ver20,Adilson do Coco,Adilson Luziaria,13604,PT,Suplente,146,1,1261,1692,0,Rio de Janeiro,190001022680
+c0634,g20744,ver20,Claudete Costa,Claudete da Costa Ferreira,13772,PT,Suplente,413,1,737,1692,0,Rio de Janeiro,190001022681
+c0635,g46351,ver20,Ribamar Santos,José Ribamar Pereira dos Santos,13451,PT,Suplente,99,1,1404,1692,0,Rio de Janeiro,190001022682
+c0636,g9373,ver20,Robson do Chocolate,Robson Gomes Santos,13383,PT,Suplente,2366,1,197,1692,0,Rio de Janeiro,190001022683
+c0637,g40617,ver20,Paulão da Saúde,Paulo Fernandes de Souza,13301,PT,Suplente,127,1,1317,1692,0,Rio de Janeiro,190001022684
+c0638,g46732,ver20,Ricardo Chapolim,Ricardo da Silva Souza,13567,PT,Suplente,836,1,449,1692,0,Rio de Janeiro,190001022685
+c0639,g32576,ver20,Gilmara Cunha,Gilmara Santos da Cunha,13130,PT,Suplente,614,1,561,1692,0,Rio de Janeiro,190001022686
+c0640,g50705,ver20,Professor Diogo de Andrade,Diogo Pinheiro dos Reis Andrade,13330,PT,Suplente,978,1,395,1692,0,Rio de Janeiro,190001022687
+c0641,g29156,ver20,João Raphael Ramos,João Raphael Ramos dos Santos,13321,PT,Suplente,611,1,564,1692,0,Rio de Janeiro,190001022688
+c0642,g21960,ver20,Cadu da Enfermagem,Carlos Eduardo de Oliveira Gomes,13558,PT,Suplente,219,1,1077,1692,0,Rio de Janeiro,190001022689
+c0643,g8367,ver20,Elika Takimoto,Elika Takimoto,13021,PT,Suplente,11857,1,42,1692,0,Rio de Janeiro,190001022690
+c0644,g49487,ver20,Karoline Miranda,Karoline Nascimento Miranda,13444,PT,Suplente,653,1,530,1692,0,Rio de Janeiro,190001022691
+c0645,g35880,ver20,Professora Cristina Costa,Cristina da Silva Costa,13767,PT,Suplente,430,1,717,1692,0,Rio de Janeiro,190001022692
+c0646,g150,ver20,Lorrane,Jose de Arimateia Faustino de Lima,13003,PT,Suplente,540,1,614,1692,0,Rio de Janeiro,190001022693
+c0647,g14854,ver20,Pc Allevato,Paulo Cesar Allevato Espírito Santo,13233,PT,Suplente,1395,1,307,1692,0,Rio de Janeiro,190001022694
+c0648,g36935,ver20,Luciana Novaes,Luciana Gonçalves de Novaes,13535,PT,Suplente,15311,1,30,1692,0,Rio de Janeiro,190001022695
+c0649,g47688,ver20,Alberto Buscapé,Alberto Gonçalves de Jesus,13696,PT,Suplente,278,1,946,1692,0,Rio de Janeiro,190001022696
+c0650,g48946,ver20,Edson Santos,Edson Santos de Souza,13222,PT,Suplente,4468,1,101,1692,0,Rio de Janeiro,190001022697
+c0651,g9268,ver20,Gabriel Oliveira,Gabriel Aparecido de Oliveira,13131,PT,Suplente,267,1,969,1692,0,Rio de Janeiro,190001022698
+c0652,g21346,ver20,André Santa Cruz,André da Silva,13888,PT,Suplente,264,1,974,1692,0,Rio de Janeiro,190001022699
+c0653,g1350,ver20,Diene da Silva,Diene da Silva Soares Morais,13350,PT,Suplente,756,1,486,1692,0,Rio de Janeiro,190001022700
+c0654,g4951,ver20,Jorge Leal,Jorge Ferreira Leal,13031,PT,Suplente,81,1,1465,1692,0,Rio de Janeiro,190001022701
+c0655,g7473,ver20,Margareth Dallaruvera,Margareth Alves Dallaruvera,13016,PT,Suplente,330,1,859,1692,0,Rio de Janeiro,190001022702
+c0656,g51117,ver20,Eduardo Coelho,Eduardo Coelho de Lima,13133,PT,Suplente,236,1,1035,1692,0,Rio de Janeiro,190001022703
+c0657,g43757,ver20,Eduardo Acosta Ambientalista,Eduardo Jose Acosta Barbosa,13611,PT,Suplente,154,1,1232,1692,0,Rio de Janeiro,190001022705
+c0658,g32982,ver20,Economista Atalmir,Atalmir Herminio de Souza,13137,PT,Suplente,119,1,1339,1692,0,Rio de Janeiro,190001022706
+c0659,g25568,ver20,Júlio César do Pt,Julio Cesar Silva da Costa,13010,PT,Suplente,139,1,1283,1692,0,Rio de Janeiro,190001022707
+c0660,g25266,ver20,Douglas Abobrão,Douglas Soares Silva,13111,PT,Suplente,424,1,727,1692,0,Rio de Janeiro,190001022708
+c0661,g47595,ver20,Professor Marcelo Viola,Marcelo dos Santos Viola,13700,PT,Suplente,291,1,919,1692,0,Rio de Janeiro,190001022709
+c0662,g2403,ver20,Adriana Valente,Adriana da Silva Freire Valente,13580,PT,Suplente,363,1,801,1692,0,Rio de Janeiro,190001022710
+c0663,g51119,ver20,Jp Farelli,João Paulo Martins Farelli,13013,PT,Suplente,780,1,475,1692,0,Rio de Janeiro,190001022711
+c0664,g41574,ver20,Marcio Santos,Marcio Silva dos Santos,13047,PT,Suplente,165,1,1200,1692,0,Rio de Janeiro,190001022712
+c0665,g26807,ver20,Paulinho Sacramento,Paulo Maurício Barty Silva,13823,PT,Suplente,333,1,851,1692,0,Rio de Janeiro,190001022713
+c0666,g14636,ver20,Tigre,Aristides Jose Fernandes,13388,PT,Suplente,29,1,1620,1692,0,Rio de Janeiro,190001022714
+c0667,g41748,ver20,Nathália do Divercidade,Nathália Martins de Assis,13000,PT,Suplente,895,1,424,1692,0,Rio de Janeiro,190001022715
+c0668,g7793,ver20,Sandra Rabello,Sandra Rabello de Frias,13060,PT,Suplente,497,1,651,1692,0,Rio de Janeiro,190001022716
+c0669,g2178,ver20,Niquinho,Flavio das Graças Miranda,13860,PT,Suplente,3006,1,160,1692,0,Rio de Janeiro,190001022717
+c0670,g31326,ver20,Tainá de Paula,Tainá Reis de Paula Kapaz,13777,PT,Eleito,24881,1,10,1692,0,Rio de Janeiro,190001022718
+c0671,g13033,ver20,Rudson Gomes,Rudson de Andrade Gomes,13376,PT,Suplente,125,1,1323,1692,0,Rio de Janeiro,190001022719
+c0672,g4501,ver20,Sólon Rubem,Sólon Cunha Rubem,13100,PT,Suplente,364,1,799,1692,0,Rio de Janeiro,190001022720
+c0673,g16607,ver20,Simone Lima,Simone Alves de Lima,13694,PT,Suplente,84,1,1455,1692,0,Rio de Janeiro,190001022722
+c0674,g51356,ver20,Rodrigo Mendonça,Rodrigo Mendonça dos Santos,13014,PT,Suplente,331,1,856,1692,0,Rio de Janeiro,190001022723
+c0675,g47460,ver20,Anita Leorne,Anita Rodrigues Teixeira,13248,PT,Suplente,60,1,1526,1692,0,Rio de Janeiro,190001022724
+c0676,g10768,ver20,Lucas Toledo,Lucas Toledo de Freitas,13258,PT,Não eleito,13,1,200,243,0,Saquarema,190001034864
+c0677,g37631,ver20,Dr. Bruno,Bruno Telles Povoa,13456,PT,Não eleito,58,1,121,243,0,Saquarema,190001034865
+c0678,g27114,ver20,Amarildo da Reciclagem,Amarildo Lirio Martins,13608,PT,Não eleito,10,1,213,243,0,Saquarema,190001034866
+c0679,g14669,ver20,Érica Graciano,Érica Graciano Moreira,13123,PT,Não eleito,12,1,205,243,0,Saquarema,190001034868
+c0680,g13463,ver20,Celso do Guarani,Celso Jose da Costa da Silva,13180,PT,Não eleito,3,1,235,243,0,Saquarema,190001034869
+c0681,g18538,ver20,Gabry,Flavio Gabry Lima,13555,PT,Não eleito,29,1,165,243,0,Saquarema,190001034870
+c0682,g42902,ver20,Jane Pescadora,Zaine dos Santos Coutinho,13751,PT,Não eleito,4,1,229,243,0,Saquarema,190001034872
+c0683,g44949,ver20,Carla de Naval,Carla da Conceição dos Santos,13233,PT,Não eleito,19,1,184,243,0,Saquarema,190001034873
+c0684,g39429,ver20,Sonia Regina,Sonia Regina Clementino Lima,13000,PT,Não eleito,17,1,191,243,0,Saquarema,190001034874
+c0685,g32207,ver20,Dr. Telles,Anylcio Teixeira Pinto Telles Filho,13777,PT,Não eleito,9,1,217,243,0,Saquarema,190001034875
+c0686,g19178,ver20,Abreu da Segurança,Luis Fábio Abreu da Silva,13322,PT,Não eleito,20,1,180,243,0,Saquarema,190001034876
+c0687,g3799,ver20,Magno Alves Mandato Coletivo,Magno Alves dos Santos,13131,PT,Não eleito,67,1,114,243,0,Saquarema,190001034877
+c0688,g33858,ver20,Pamella da Madressilva,Pamella Fernandes da Silva,13013,PT,Não eleito,4,1,229,243,0,Saquarema,190001034878
+c0689,g33833,ver20,Nem do Cicle,Josilane de Nazareth Leonardo,13478,PT,Não eleito,11,1,210,243,0,Saquarema,190001034879
+c0690,g33344,ver20,Jose Domingos Mattos,Jose Domingos Mattos da Silva,13333,PT,Não eleito,30,1,161,243,0,Saquarema,190001034880
+c0691,g49527,ver20,Mara da Padaria,Neucimara Camilo Rodrigues,10500,REPUBLICANOS,Suplente,48,1,64,128,0,Quissamã,190001053114
+c0692,g17396,ver20,Cida da Praia,Maria Aparecida Vera,15678,MDB,Suplente,29,1,74,128,0,Quissamã,190001053702
+c0693,g50636,ver20,Marcelo da Farmacia,Marcelo Maia Chagas,22139,PL,Não eleito,24,1,80,128,0,Quissamã,190001055487
+c0694,g34177,ver20,Luciano Clementino,Luciano Clementino,13231,PT,Suplente,304,1,101,570,0,Magé,190001055619
+c0695,g31208,ver20,Ademir Madeira,Ademir Madeira,13455,PT,Suplente,57,1,324,570,0,Magé,190001055620
+c0696,g31480,ver20,Sergio Cordeiro Longevidade,Sérgio Cordeiro,13999,PT,Suplente,32,1,401,570,0,Magé,190001055621
+c0697,g11945,ver20,Tia Rose da Bené,Rosemar de Souza Soares,13077,PT,Suplente,62,1,311,570,0,Magé,190001055622
+c0698,g12818,ver20,Pinduca da Oficina,Vagner Soares Ribeiro,13888,PT,Suplente,94,1,249,570,0,Magé,190001055623
+c0699,g28103,ver20,Alessandro Cruz,Alessandro Dutra da Cruz,13123,PT,Suplente,378,1,86,570,0,Magé,190001055624
+c0700,g35483,ver20,Felipe Pinheiro,Felipe da Silva Pinheiro,13131,PT,Suplente,18,1,474,570,0,Magé,190001055625
+c0701,g636,ver20,Adriano Costa,Adriano Costa,13014,PT,Suplente,126,1,209,570,0,Magé,190001055626
+c0702,g48070,ver20,Rosilene Adria,Rosilene Adria Barboza Santos,13013,PT,Suplente,56,1,328,570,0,Magé,190001055627
+c0703,g30237,ver20,Gustavo Meirelles,Gustavo Meirelles Dias,13369,PT,Suplente,100,1,239,570,0,Magé,190001055628
+c0704,g24251,ver20,Adésio Verdureiro,Adesio Batista Souza,13133,PT,Suplente,65,1,305,570,0,Magé,190001055629
+c0705,g6117,ver20,Demilsom do Povo,Demilson Flores de Oliveira,13507,PT,Suplente,81,1,272,570,0,Magé,190001055630
+c0706,g14120,ver20,Dedego do Povo,Denilson Souza Santos,13633,PT,Suplente,177,1,148,570,0,Magé,190001055631
+c0707,g7459,ver20,Álvaro Alencar,Álvaro Alencar de Oliveira Rodrigues,13456,PT,Eleito,1527,1,16,570,0,Magé,190001055632
+c0708,g30238,ver20,Aloir Torres,Aloir Torres de Vasconcellos,13023,PT,Suplente,255,1,113,570,0,Magé,190001055633
+c0709,g24697,ver20,Alexandre Baixinho do Flepper,Alexandre Linhares de Lima,13333,PT,Suplente,44,1,367,570,0,Magé,190001055634
+c0710,g45008,ver20,Pastor Henrique,José Henrique da Silva Xavier,13234,PT,Suplente,26,1,427,570,0,Magé,190001055635
+c0711,g14275,ver20,Andrinho Vila Inca,Anderson Martins Camara,13200,PT,Suplente,238,1,123,570,0,Magé,190001055636
+c0712,g13522,ver20,Ivaneide de Andrade,Ivaneide de Andrade,13444,PT,Suplente,32,1,401,570,0,Magé,190001055637
+c0713,g30425,ver20,Nega Luíza,Luíza Enedina Vidal,13137,PT,Suplente,152,1,173,570,0,Magé,190001055638
+c0714,g12358,ver20,Gloria Rebelo do Anjo Sem Asa,Glória de Fátima Rebelo Silva,13777,PT,Suplente,115,1,218,570,0,Magé,190001055639
+c0715,g1008,ver20,Dona Rosa,Rose Mary Vieira Guedes,13033,PT,Suplente,53,1,345,570,0,Magé,190001055640
+c0716,g8981,ver20,Simone Saraiva,Simone Saraiva Lomba,13067,PT,Suplente,10,1,525,570,0,Magé,190001055641
+c0717,g20142,ver20,Chimba,Carlos Antônio da Silva Junior,13613,PT,Suplente,423,1,75,570,0,Magé,190001055642
+c0718,g49248,ver20,Carlos Caruso,Carlos Roberto de Souza Caruso,25777,DEM,Não eleito,11,1,125,144,0,Miracema,190001066664
+c0719,g28726,ver20,Professor Geraldo Lacerda,Geraldo Lacerda Machado Filho,13246,PT,Não eleito,10,1,78,104,0,Engenheiro Paulo de Frontin,190001068245
+c0720,g28316,ver20,Dedé Camarão,Andre Luiz Mendes Ferreira,13013,PT,Não eleito,5,1,96,104,0,Engenheiro Paulo de Frontin,190001068246
+c0721,g30636,ver20,Rodrigo Gonçalves,Rodrigo Gonçalves de Souza,13567,PT,Não eleito,165,1,14,104,0,Engenheiro Paulo de Frontin,190001068247
+c0722,g43076,ver20,Victor Professor,Victor Leonardo de Lima Silva,13555,PT,Não eleito,45,1,40,104,0,Engenheiro Paulo de Frontin,190001068248
+c0723,g9673,ver20,Debora Pires,Debora de Souza Pires,13418,PT,Não eleito,15,1,70,104,0,Engenheiro Paulo de Frontin,190001068249
+c0724,g34903,ver20,Hugo Cinelli,Hugo Leonardo Cardoso Cinelli,13789,PT,Não eleito,42,1,42,104,0,Engenheiro Paulo de Frontin,190001068250
+c0725,g15653,ver20,Michela Walpassos,Michela Pereira Walpassos,13669,PT,Não eleito,18,1,65,104,0,Engenheiro Paulo de Frontin,190001068251
+c0726,g41558,ver20,Carmen Goulart,Carmen Goulart,13259,PT,Não eleito,13,1,73,104,0,Engenheiro Paulo de Frontin,190001068252
+c0727,g2002,ver20,Leonardo Laport,Leonardo Veloso Laport,13123,PT,Não eleito,46,1,38,104,0,Engenheiro Paulo de Frontin,190001068253
+c0728,g21665,ver20,Professora Leandra Silva,Leandra Souza Silva,13913,PT,Não eleito,116,1,20,104,0,Engenheiro Paulo de Frontin,190001068254
+c0729,g50107,ver20,Rodrigo Estofador,Rodrigo da Silva Barboza,13009,PT,Não eleito,9,1,84,104,0,Engenheiro Paulo de Frontin,190001068255
+c0730,g23098,ver20,Pablo Farias,Pablo Henrique de Farias Granadeiro,13222,PT,Não eleito,7,1,92,104,0,Engenheiro Paulo de Frontin,190001068257
+c0731,g35643,ver20,Verônica Santos,Maria Cícera dos Santos,15487,MDB,Suplente,17,1,87,105,0,Pinheiral,190001070304
+c0732,g48594,ver20,Geraldo Luiz,Geraldo Luiz Brinate,13010,PT,Não eleito,674,1,91,697,0,São João de Meriti,190001073304
+c0733,g48550,ver20,Iyá Lúcia,Ana Lúcia Ferreira,13277,PT,Não eleito,181,1,229,697,0,São João de Meriti,190001073305
+c0734,g48235,ver20,Joca,Jorge Antonio Ribeiro Faye,13013,PT,Não eleito,75,1,373,697,0,São João de Meriti,190001073306
+c0735,g3532,ver20,João Griot,João Carlos Alves Silva,13248,PT,Não eleito,82,1,350,697,0,São João de Meriti,190001073307
+c0736,g20832,ver20,Geovanna Latavanha,Geovanna Latavanha da Silva,13123,PT,Não eleito,138,1,261,697,0,São João de Meriti,190001073308
+c0737,g36826,ver20,Gustavo Henriques,Gustavo Henriques Zacarias de Aguiar,13134,PT,Não eleito,680,1,89,697,0,São João de Meriti,190001073310
+c0738,g19746,ver20,Mauricio Brasil,Mauricio Luis de Souza Brasil,13100,PT,Não eleito,4,1,662,697,0,São João de Meriti,190001073311
+c0739,g2853,ver20,Ernesto,Ernesto Geisel da Silva Sampaio,13200,PT,Não eleito,541,1,108,697,0,São João de Meriti,190001073312
+c0740,g29733,ver20,Ivan,Ivan Rodrigues de Oliveira,13688,PT,Não eleito,191,1,221,697,0,São João de Meriti,190001073313
+c0741,g12600,ver20,Alcina,Alcina Soares Pontes Araujo,13113,PT,Não eleito,33,1,520,697,0,São João de Meriti,190001073314
+c0742,g40565,ver20,Marco Antonio,Marco Antonio de Oliveira,13057,PT,Não eleito,29,1,539,697,0,São João de Meriti,190001073315
+c0743,g41150,ver20,Adriana Vaz,Adriana Nascimento Vaz,13051,PT,Não eleito,71,1,393,697,0,São João de Meriti,190001073316
+c0744,g7100,ver20,Marinete,Marinete Valentim,13615,PT,Não eleito,247,1,186,697,0,São João de Meriti,190001073317
+c0745,g9666,ver20,Eduardo Silva,Eduardo Silva,13125,PT,Não eleito,38,1,501,697,0,São João de Meriti,190001073318
+c0746,g27506,ver20,Bira da Vila,Ubirantan Soares dos Santos,13133,PT,Não eleito,45,1,472,697,0,São João de Meriti,190001073319
+c0747,g14025,ver20,Haroldo,Haroldo Marcio Silva de Castro,13721,PT,Não eleito,61,1,419,697,0,São João de Meriti,190001073320
+c0748,g46833,ver20,Deda,Eliane Cristina da Cruz,13012,PT,Não eleito,17,1,601,697,0,São João de Meriti,190001073321
+c0749,g43395,ver20,Clebinho,Cleber Jacob de Campos,13333,PT,Não eleito,33,1,520,697,0,São João de Meriti,190001073322
+c0750,g30275,ver20,Angelica de Jesus,Angelica de Jesus Santos,13247,PT,Não eleito,902,1,66,697,0,São João de Meriti,190001073323
+c0751,g22168,ver20,Ronaldo dos Pobres,Ronaldo de Oliveira,13624,PT,Não eleito,19,1,592,697,0,São João de Meriti,190001073324
+c0752,g27937,ver20,Maria Inez,Maria Inez Valentim,13050,PT,Não eleito,47,1,462,697,0,São João de Meriti,190001073325
+c0753,g31791,ver20,Damião do Sião,Damião Pereira de Carvalho,13457,PT,Suplente,89,1,134,349,0,Japeri,190001080470
+c0754,g6451,ver20,Junior Martins,Adeoclemes de Sousa Martins Junior,13567,PT,Eleito,809,1,11,349,0,Japeri,190001080471
+c0755,g18190,ver20,Iram Gabriel,Iram Sampaio Gabriel,13155,PT,Suplente,197,1,76,349,0,Japeri,190001080472
+c0756,g35892,ver20,Luiza Thome,Ana Luiza Batista Thomé,13777,PT,Suplente,107,1,119,349,0,Japeri,190001080473
+c0757,g45237,ver20,Keilon,Keilon Diovany Fernandes,13020,PT,Suplente,505,1,29,349,0,Japeri,190001080474
+c0758,g50781,ver20,Rogéria da Chacrinha,Ana Rogeria de Andrade Pinto,13300,PT,Suplente,117,1,112,349,0,Japeri,190001080475
+c0759,g3534,ver20,Antonio Marcos Aguiar,Antonio Marcos Almeida de Aguiar,13456,PT,Suplente,388,1,41,349,0,Japeri,190001080476
+c0760,g33730,ver20,Luciano de Oliveira,Luciano de Oliveira Nascimento,13333,PT,Suplente,601,1,21,349,0,Japeri,190001080477
+c0761,g40499,ver20,Vitor Mantovani,Vitor Mantovani Rocha,13000,PT,Suplente,426,1,36,349,0,Japeri,190001080478
+c0762,g2434,ver20,Cecília Magalhães,Cecilia da Silva Carias,13013,PT,Suplente,50,1,183,349,0,Japeri,190001080479
+c0763,g48743,ver20,Jorginho do Transporte,Jorge Luiz Costa dos Santos,13555,PT,Suplente,218,1,68,349,0,Japeri,190001080480
+c0764,g29221,ver20,Ziel Pavani,Ziel Pavani de Mesquita,13044,PT,Eleito,615,1,20,349,0,Japeri,190001080481
+c0765,g34243,ver20,Prof Roberta Martins,Roberta Martins da Silva Almeida,13100,PT,Suplente,209,1,73,349,0,Japeri,190001080482
+c0766,g50296,ver20,Larisse Henrique,Larisse Henrique da Silva,13123,PT,Suplente,93,1,132,349,0,Japeri,190001080483
+c0767,g30015,ver20,Mateus Ferraz,Mateus Coutinho Ferraz,13001,PT,Suplente,555,1,25,349,0,Japeri,190001080484
+c0768,g15384,ver20,Léo Moura,Leandro dos Santos Moura,13010,PT,Suplente,523,1,26,349,0,Japeri,190001080485
+c0769,g31430,ver20,Julyanna Amorim,Juliana de Amorim Gonçalves,13500,PT,Suplente,246,1,65,349,0,Japeri,190001080486
+c0770,g2680,ver20,João Bosco,João Bosco de Arruda,13622,PT,Não eleito,92,1,359,442,0,Nova Iguaçu,190001113415
+c0771,g25700,ver20,Jupira,Jupira Brasilino,13124,PT,Não eleito,53,1,407,442,0,Nova Iguaçu,190001113416
+c0772,g38304,ver20,Tia Célia da Educação,Célia Regina Rocha de Souza,13022,PT,Não eleito,58,1,401,442,0,Nova Iguaçu,190001113417
+c0773,g28832,ver20,Claudinho da Sucam,Claudio Gomes de Barros,13331,PT,Não eleito,269,1,233,442,0,Nova Iguaçu,190001113418
+c0774,g30900,ver20,Ronaldo Castro,Ronaldo Monteiro Cerqueira,13013,PT,Não eleito,180,1,282,442,0,Nova Iguaçu,190001113419
+c0775,g39537,ver20,Everaldo Luis,Luis Francisco da Silva Santos,13123,PT,Não eleito,501,1,162,442,0,Nova Iguaçu,190001113420
+c0776,g45176,ver20,Helinho da Padaria,Wellington Alves da Silva,13113,PT,Não eleito,439,1,171,442,0,Nova Iguaçu,190001113421
+c0777,g34843,ver20,Luciana Luck Azevedo,Luciana da Silva Azevedo,13111,PT,Não eleito,382,1,187,442,0,Nova Iguaçu,190001113422
+c0778,g50495,ver20,Silvana Maria,Silvana Maria Santos da Silva Albuquerque,13458,PT,Não eleito,148,1,307,442,0,Nova Iguaçu,190001113423
+c0779,g16803,ver20,Professora Michelle,Michelle Pessanha Cabral,13456,PT,Não eleito,160,1,294,442,0,Nova Iguaçu,190001113424
+c0780,g27644,ver20,Everton Sampaio,Everton Sampaio da Silva,13023,PT,Não eleito,189,1,276,442,0,Nova Iguaçu,190001113425
+c0781,g23715,ver20,Andinho do Gás,Wanderson da Conceição Nogueira,13132,PT,Não eleito,178,1,285,442,0,Nova Iguaçu,190001113426
+c0782,g51016,ver20,Jairon da Sucam,Sebastião Jairon Bispo dos Santos,13007,PT,Não eleito,170,1,288,442,0,Nova Iguaçu,190001113427
+c0783,g24100,ver20,Jorginho Marco 2,Jorge Luiz de Lima Castro,13335,PT,Não eleito,55,1,404,442,0,Nova Iguaçu,190001113428
+c0784,g22189,ver20,Armandinho Teperino,Armando Teperino Alves,13000,PT,Não eleito,317,1,211,442,0,Nova Iguaçu,190001113429
+c0785,g39380,ver20,Pastora Magda,Magda Lucia Oliveira dos Santos da Silva,13044,PT,Não eleito,176,1,286,442,0,Nova Iguaçu,190001113430
+c0786,g4179,ver20,Alcimario,Alcimario Soares da Costa Junior,13567,PT,Não eleito,362,1,192,442,0,Nova Iguaçu,190001113431
+c0787,g3362,ver20,Léo França,Leonardo França Souza,40123,PSB,Suplente,1319,1,22,410,0,Petrópolis,190001115731
+c0788,g10142,ver20,Dudu Casa da Foto,Eduardo Castro de Araujo,90111,PROS,Não eleito,675,1,125,916,0,São Gonçalo,190001123786
+c0789,g41221,ver20,Mineiro,Carlos Antonio da Silva,13190,PT,Suplente,70,1,263,551,0,Nova Friburgo,190001123859
+c0790,g31048,ver20,Maiara Felicio,Maiara Felicio da Silva,13713,PT,Eleito,1870,1,1,551,0,Nova Friburgo,190001123860
+c0791,g11424,ver20,Silvinho da Saúde,Silvio Fontes Borges,13123,PT,Suplente,302,1,86,551,0,Nova Friburgo,190001123861
+c0792,g25615,ver20,Professor Daniel Silva,Daniel Lopes da Silva,13300,PT,Suplente,37,1,370,551,0,Nova Friburgo,190001123862
+c0793,g6629,ver20,Tia Dani,Daniela Goncalves de Souza,13110,PT,Suplente,168,1,145,551,0,Nova Friburgo,190001123863
+c0794,g50300,ver20,Darlan Costa,Darlan Lisboa Costa,13177,PT,Suplente,66,1,276,551,0,Nova Friburgo,190001123864
+c0795,g48181,ver20,Luiza Ottoni,Luiza Ottoni de Menezes Almeida,13221,PT,Suplente,122,1,183,551,0,Nova Friburgo,190001123865
+c0796,g17410,ver20,Bete do Povo,Odete da Silveira Roberto,13504,PT,Suplente,53,1,312,551,0,Nova Friburgo,190001123866
+c0797,g2400,ver20,Lucas de Moraes,Lucas de Moraes Garcia,13255,PT,Suplente,9,1,509,551,0,Nova Friburgo,190001123867
+c0798,g15531,ver20,Paulo Mangano,Paulo Roberto Mangano Barreiros Filho,13789,PT,Suplente,11,1,495,551,0,Nova Friburgo,190001123868
+c0799,g18195,ver20,Edna Batista,Edna Cezar Batista Klen,13111,PT,Suplente,43,1,346,551,0,Nova Friburgo,190001123869
+c0800,g9785,ver20,Edu,Carlos Eduardo da Silva Costa,13456,PT,Suplente,46,1,331,551,0,Nova Friburgo,190001123871
+c0801,g35470,ver20,Edvar Vogas,Edvar Vogas Diniz,13333,PT,Suplente,102,1,204,551,0,Nova Friburgo,190001123872
+c0802,g24125,ver20,Léo Borges,Leonardo da Rocha Borges,13013,PT,Suplente,55,1,307,551,0,Nova Friburgo,190001123873
+c0803,g15985,ver20,Professor Alexandre Ouverney,Alexandre Ouverney de Carvalho,13888,PT,Suplente,137,1,172,551,0,Nova Friburgo,190001123874
+c0804,g36485,ver20,Professor Aroilton Barradas,Aroilton Barradas,13131,PT,Suplente,71,1,261,551,0,Nova Friburgo,190001123875
+c0805,g466,ver20,Olavo de Oliveira,Antonio Olavo de Oliveira,13155,PT,Suplente,24,1,415,551,0,Nova Friburgo,190001123876
+c0806,g15812,ver20,Fabio Nestor,Fabio Nestor Pinto,13237,PT,Suplente,19,1,443,551,0,Nova Friburgo,190001123877
+c0807,g48104,ver20,Mari Stela,Mari Stela Sanches,13777,PT,Suplente,12,1,488,551,0,Nova Friburgo,190001123878
+c0808,g48669,ver20,Nilce Negona,Nilce Helena Reis Carvalho,13555,PT,Suplente,23,1,423,551,0,Nova Friburgo,190001123880
+c0809,g24178,ver20,Sanhaço,Jocemar da Silva,13635,PT,Suplente,64,1,281,551,0,Nova Friburgo,190001123881
+c0810,g38653,ver20,Gabriela Sousa,Gabriela de Sousa Lopes,13025,PT,Suplente,206,1,125,551,0,Nova Friburgo,190001123882
+c0811,g30674,ver20,Norival,Norival Espindola do Amaral,13000,PT,Suplente,741,1,30,551,0,Nova Friburgo,190001123883
+c0812,g15173,ver20,Betinho Matias,Roberto Carlos Matias Prudente,14000,PTB,Não eleito,25,1,179,226,0,Itaperuna,190001124461
+c0813,g657,ver20,Professor Virgilio,Virgilio de Oliveira Souza,40999,PSB,Não eleito,263,1,265,675,0,Duque de Caxias,190001128328
+c0814,g30694,ver20,Cleilza Souza,Cleilza Souza Lima Graça,40123,PSB,Não eleito,6,1,147,177,0,Carapebus,190001138183
+c0815,g28140,ver20,Romario,Onecimo da Silva Abranches,15015,MDB,Suplente,428,1,85,410,0,Petrópolis,190001145494
+c0816,g38814,ver20,Mineiro Mecânico,Walace Gomes Rosa,13313,PT,Não eleito,9,1,324,351,0,Itaguaí,190001145878
+c0817,g26672,ver20,Dr Marcos Vinícius,Marcos Vinícius de Castro Silva,13913,PT,Não eleito,130,1,126,351,0,Itaguaí,190001145879
+c0818,g40333,ver20,Prof Marco Antônio,Marco Antônio Almada Santos,13069,PT,Não eleito,1,1,341,351,0,Itaguaí,190001145880
+c0819,g41632,ver20,Glorinha do Charles,Gloria Maria Raimundo,13111,PT,Não eleito,1,1,341,351,0,Itaguaí,190001145881
+c0820,g51189,ver20,Soninha Guerreira,Sônia Maria de Carvalho Sebastião,13777,PT,Não eleito,10,1,321,351,0,Itaguaí,190001145883
+c0821,g26750,ver20,Evandro Teixeira,Evandro Teixeira Rodrigues,13213,PT,Não eleito,32,1,266,351,0,Itaguaí,190001145884
+c0822,g45437,ver20,Ronie de Coroa,Ronie de Jesus,13321,PT,Não eleito,7,1,332,351,0,Itaguaí,190001145885
+c0823,g20714,ver20,Indio do Mototaxi,Luis Carlos de Oliveira,13888,PT,Não eleito,19,1,302,351,0,Itaguaí,190001145886
+c0824,g5291,ver20,Marco Barreto (Dr.Marquinho),Marco Aurelio de Souza Barreto,13333,PT,Não eleito,239,1,75,351,0,Itaguaí,190001145887
+c0825,g39302,ver20,Amanda Valente,Amanda Alves da Cruz Valente,13444,PT,Não eleito,8,1,330,351,0,Itaguaí,190001145888
+c0826,g7245,ver20,Marcos Rocha,Marcos Thadeu dos Santos Rocha,13123,PT,Não eleito,53,1,219,351,0,Itaguaí,190001145889
+c0827,g15093,ver20,Paty Garcia,Patrícia Maria Raimundo Garcia,13007,PT,Não eleito,0,0,347,351,0,Itaguaí,190001145891
+c0828,g10515,ver20,Garcia do Pt,Marcos André da Silva Garcia,13000,PT,Não eleito,24,1,283,351,0,Itaguaí,190001145892
+c0829,g43653,ver20,Dioro,Luis Antônio da Silva Axiotelis,13334,PT,Não eleito,32,1,266,351,0,Itaguaí,190001145893
+c0830,g28562,ver20,Beth Moura,Elizabeth dos Santos Moura de Souza,13713,PT,Não eleito,21,1,292,351,0,Itaguaí,190001145894
+c0831,g43656,ver20,Roberto Carlos,Roberto Carlos de Oliveira,13120,PT,Não eleito,1,1,448,464,0,Cabo Frio,190001150610
+c0832,g8821,ver20,Edson Gama,Edson da Silva Gama,13613,PT,Não eleito,87,1,196,464,0,Cabo Frio,190001150611
+c0833,g7871,ver20,João Gomes do Pt,João Gomes dos Santos,13610,PT,Não eleito,52,1,252,464,0,Cabo Frio,190001150612
+c0834,g42841,ver20,Jucilene Barbosa,Jucilene da Silva Barbosa,13513,PT,Não eleito,12,1,394,464,0,Cabo Frio,190001150613
+c0835,g4551,ver20,Cecilia Ferreira,Cecilia de Oliveira Silva Ferreira,13131,PT,Não eleito,111,1,167,464,0,Cabo Frio,190001150615
+c0836,g25674,ver20,Fabio Paes,Fabio Batista Paes,13013,PT,Não eleito,39,1,290,464,0,Cabo Frio,190001150616
+c0837,g31259,ver20,Miranda,Carlos Alberto Miranda de Oliveira,13113,PT,Não eleito,17,1,369,464,0,Cabo Frio,190001150617
+c0838,g48430,ver20,Ronald Mureb,Ronald Ribeiro Mureb,13138,PT,Não eleito,16,1,376,464,0,Cabo Frio,190001150618
+c0839,g16837,ver20,Sol Belloti,Solange Belloti Pexenine,13182,PT,Não eleito,14,1,384,464,0,Cabo Frio,190001150619
+c0840,g35532,ver20,Lopes Garçom,Antônio Carlos Lopes da Conceição,13366,PT,Não eleito,8,1,413,464,0,Cabo Frio,190001150620
+c0841,g16499,ver20,Adriano Brisola,Adriano de Lucena Pereira,13123,PT,Não eleito,77,1,209,464,0,Cabo Frio,190001150621
+c0842,g27201,ver20,Carminha Protetora,Maria do Carmo Duarte,18999,REDE,Não eleito,342,1,66,464,0,Cabo Frio,190001152949
+c0843,g50547,ver20,Eliel Junior,Eliel Bezerra de Lima Junior,50000,PSOL,Não eleito,712,1,119,442,0,Nova Iguaçu,190001154247
+c0844,g50566,ver20,Fabricio da Ambulância,Fabricio Martins,13192,PT,Não eleito,13,1,92,113,0,Iguaba Grande,190001154951
+c0845,g5318,ver20,Taina Curitiba,Taina Curitiba de Souza,13123,PT,Não eleito,18,1,84,113,0,Iguaba Grande,190001154952
+c0846,g48161,ver20,Marcio Cardoso,Márcio Pacheco Cardoso,13000,PT,Não eleito,51,1,57,113,0,Iguaba Grande,190001154953
+c0847,g7361,ver20,Junior Mangueira,Edvaldo Vicente Gomes Junior,33312,PMN,Suplente,3096,1,153,1692,0,Rio de Janeiro,190001157086
+c0848,g6782,ver20,Tia Dirce,Maria Adilce Lopes de Lacerda,13033,PT,Não eleito,32,1,236,336,0,Mesquita,190001157190
+c0849,g50455,ver20,Professora Simone Moura,Simone Fátima de Moura,13222,PT,Não eleito,105,1,128,336,0,Mesquita,190001157191
+c0850,g27776,ver20,André Português,André Fernando Rodrigues Miranda,13000,PT,Não eleito,674,1,35,336,0,Mesquita,190001157192
+c0851,g13465,ver20,Pc do Alto Uruguai,Paulo Cesar de Souza,13100,PT,Não eleito,154,1,98,336,0,Mesquita,190001157193
+c0852,g27035,ver20,Neném,Jucyara Itibiryciara Albuquerque dos Santos,13123,PT,Não eleito,54,1,187,336,0,Mesquita,190001157194
+c0853,g42597,ver20,Zé Carlos Parque Central,José Carlos Baptista,13122,PT,Não eleito,136,1,109,336,0,Mesquita,190001157197
+c0854,g7322,ver20,Enfermeira Ana,Ana Maria Rabello Simôes Geraldo,13300,PT,Não eleito,10,1,295,336,0,Mesquita,190001157198
+c0855,g36205,ver20,Claudio Macalé,Claudemilson dos Santos Rosa,13333,PT,Não eleito,175,1,94,336,0,Mesquita,190001157200
+c0856,g10769,ver20,Renan Trakinas,Renan Eleutério da Silva Santos,13631,PT,Não eleito,21,1,260,336,0,Mesquita,190001157201
+c0857,g37145,ver20,Suzi do Pt,Suzi de Oliveira Santos Ferreira,13133,PT,Não eleito,78,1,150,336,0,Mesquita,190001157202
+c0858,g45353,ver20,Vitinho Oliveira,Vitor Oliveira da Silva,13617,PT,Não eleito,59,1,169,336,0,Mesquita,190001157203
+c0859,g13449,ver20,Vandinho Bazani,Osvaldo Bazani da Silva,13013,PT,Não eleito,106,1,127,336,0,Mesquita,190001157204
+c0860,g40481,ver20,Doutora Valéria dos Santos,Valéria Lúcia dos Santos,13790,PT,Não eleito,203,1,88,336,0,Mesquita,190001157205
+c0861,g35279,ver20,Adailton do Morro,Adailton da Silva Araújo,13555,PT,Não eleito,245,1,81,336,0,Mesquita,190001157206
+c0862,g48664,ver20,Tereza,Maria Tereza Moreira Galdino,15655,MDB,Suplente,8,1,24,27,0,Laje do Muriaé,190001178847
+c0863,g6445,ver20,Rômulo Saloto,Luiz Romulo Fernandes Saloto,13031,PT,Não eleito,93,1,160,392,0,Resende,190001226893
+c0864,g1073,ver20,Marcela do Barbado,Marcela da Silva Oliveira,13333,PT,Não eleito,79,1,177,392,0,Resende,190001226894
+c0865,g6684,ver20,Gabriel Tavares da Banca Manej,Gabriel Rios Tavares,13025,PT,Não eleito,37,1,268,392,0,Resende,190001226895
+c0866,g37328,ver20,Paulo Corredor,Paulo Roberto Monteiro Machado,13456,PT,Não eleito,56,1,214,392,0,Resende,190001226897
+c0867,g37976,ver20,Zé Roberto Sampaio,José Roberto Pereira Sampaio,13813,PT,Não eleito,44,1,247,392,0,Resende,190001226898
+c0868,g12132,ver20,José Roberto,José Roberto Pereira da Cunha,13013,PT,Não eleito,57,1,212,392,0,Resende,190001226899
+c0869,g36923,ver20,Alvaro Britto Mandato Coletivo,Alvaro Miguel de Britto Saraiva,13123,PT,Não eleito,181,1,102,392,0,Resende,190001226900
+c0870,g20796,ver20,Professor Luciano,Luciano Gonçalves da Silva,13888,PT,Não eleito,394,1,43,392,0,Resende,190001226901
+c0871,g5173,ver20,Luciana Souza,Luciana Souza Farias,13008,PT,Não eleito,70,1,188,392,0,Resende,190001226902
+c0872,g46675,ver20,Fernando Dentista,Fernando Coelho Machado,18018,REDE,Suplente,243,1,55,345,0,Três Rios,190001227182
+c0873,g15455,ver20,Faustinho,Fausto José Serpa Teixeira,45000,PSDB,Suplente,22,1,254,345,0,Três Rios,190001227394
+c0874,g4329,ver20,Vany do Ovo,Vany Lopes de Oliveira,13151,PT,Suplente,234,1,357,916,0,São Gonçalo,190001230013
+c0875,g44072,ver20,Manoelzinho do Siticom,Manoel Vaz de Lima,13131,PT,Suplente,582,1,152,916,0,São Gonçalo,190001230014
+c0876,g45268,ver20,Lazaro Santana,Lazaro Antonio de Santana,13021,PT,Suplente,286,1,305,916,0,São Gonçalo,190001230015
+c0877,g25795,ver20,Mestre Queiroga,Joao Arthur Duque Queiroga,13633,PT,Suplente,83,1,628,916,0,São Gonçalo,190001230016
+c0878,g50843,ver20,Gustavo Costa,Gustavo Magno da Costa Riter,13513,PT,Suplente,199,1,395,916,0,São Gonçalo,190001230017
+c0879,g46154,ver20,Priscilla Canedo,Priscilla Canedo Loureiro,13456,PT,Eleito,2644,1,13,916,0,São Gonçalo,190001230018
+c0880,g10314,ver20,Fernando Freitas,Fernando Gomes de Freitas,13413,PT,Suplente,167,1,451,916,0,São Gonçalo,190001230019
+c0881,g44991,ver20,Ricardo Castor,Ricardo Crespo de Araujo,13000,PT,Suplente,1394,1,45,916,0,São Gonçalo,190001230020
+c0882,g11350,ver20,Val do Pt,Valquiria Correia da Silva,13992,PT,Suplente,36,1,795,916,0,São Gonçalo,190001230021
+c0883,g39622,ver20,Graciane Volotão,Graciane de Souza Rocha,13010,PT,Suplente,613,1,142,916,0,São Gonçalo,190001230023
+c0884,g38901,ver20,Geison Rocha,Geison Rocha dos Santos,13455,PT,Suplente,199,1,395,916,0,São Gonçalo,190001230024
+c0885,g41321,ver20,Braz Campos,Braz Campos Junior,13678,PT,Suplente,44,1,768,916,0,São Gonçalo,190001230025
+c0886,g29646,ver20,Andre Emerick,Andre Costa Emerick,13321,PT,Suplente,436,1,204,916,0,São Gonçalo,190001230026
+c0887,g15492,ver20,Flavio da Banca,Flavio Cristian Rodrigues,13999,PT,Suplente,777,1,116,916,0,São Gonçalo,190001230028
+c0888,g2141,ver20,Nivia Angelica,Nivia Angelica,13404,PT,Suplente,307,1,290,916,0,São Gonçalo,190001230029
+c0889,g11032,ver20,Thiago Freixo,Thiago Freixo Martins,13122,PT,Suplente,932,1,94,916,0,São Gonçalo,190001230030
+c0890,g14374,ver20,Magico Renato,Renato Lopes Coutinho,13001,PT,Suplente,340,1,256,916,0,São Gonçalo,190001230031
+c0891,g2731,ver20,Geisiel Lessa,Gesiel de Oliveira Lessa,13222,PT,Suplente,1320,1,53,916,0,São Gonçalo,190001230032
+c0892,g38947,ver20,Haroldo Vicente,Haroldo Vicente do Nascimento,13007,PT,Suplente,554,1,162,916,0,São Gonçalo,190001230033
+c0893,g11790,ver20,Professor Max,Max Almeida Vidal,13500,PT,Suplente,231,1,360,916,0,São Gonçalo,190001230034
+c0894,g30707,ver20,Rafaelzinho Pq,Rafael Jose da Silva,13363,PT,Suplente,572,1,155,916,0,São Gonçalo,190001230035
+c0895,g50361,ver20,Esmeralda Scaff,Esmeralda Ferreira de Jesus,13133,PT,Suplente,45,1,762,916,0,São Gonçalo,190001230036
+c0896,g47507,ver20,Carol Maia,Ana Caroline Azevedo Maia,13613,PT,Suplente,618,1,140,916,0,São Gonçalo,190001230038
+c0897,g4774,ver20,Dalva Gomes,Dalva Gomes do Nascimento Silva,13100,PT,Suplente,1297,1,57,916,0,São Gonçalo,190001230039
+c0898,g33174,ver20,Tia Lu,Luciana da Conceição Silva,13111,PT,Suplente,129,1,529,916,0,São Gonçalo,190001230040
+c0899,g35761,ver20,Claudinho do Bar,Luis Claudio Barreto de Aguiar,13013,PT,Suplente,264,1,327,916,0,São Gonçalo,190001230041
+c0900,g33042,ver20,Oscar Bessa,Oscar Ricardo Bessa da Silva,13123,PT,Suplente,1079,1,75,916,0,São Gonçalo,190001230042
+c0901,g37111,ver20,Tia Nea,Lucinea da Silva,13022,PT,Suplente,344,1,251,916,0,São Gonçalo,190001230043
+c0902,g34428,ver20,Geber Haikal,Geber Mussa Haikal,13789,PT,Suplente,667,1,127,916,0,São Gonçalo,190001230044
+c0903,g35983,ver20,Francisco Vilela,Francisco Vilela,13777,PT,Suplente,580,1,153,916,0,São Gonçalo,190001230045
+c0904,g6670,ver20,Carlinhos Miranda,Carlos de Miranda Barreto,33133,PMN,Não eleito,37,1,498,672,0,Campos dos Goytacazes,190001230744
+c0905,g1852,ver20,Adilson Bygu,Adilson José Rodrigues Junior,27000,DC,Não eleito,462,1,194,916,0,São Gonçalo,190001235349
+c0906,g36324,ver20,Manuel do Sindicato,Manuel Jose da Silva,13111,PT,Não eleito,18,1,120,176,0,Arraial do Cabo,190001237842
+c0907,g32338,ver20,Felipe Mello,Felipe Pacheco Ferreira de Mello,13013,PT,Não eleito,1,1,164,176,0,Arraial do Cabo,190001237843
+c0908,g8409,ver20,Elleson Costa,Elleson Costa dos Santos,13333,PT,Não eleito,10,1,140,176,0,Arraial do Cabo,190001237844
+c0909,g1230,ver20,Rubinho Oliveira,Rubens de Oliveira Souza Lima dos Santos,13000,PT,Não eleito,26,1,105,176,0,Arraial do Cabo,190001237845
+c0910,g49632,ver20,Sayonara Nalla,Sayonara Santos de Nalla,13113,PT,Não eleito,10,1,140,176,0,Arraial do Cabo,190001237846
+c0911,g44801,ver20,Priscila Luz,Priscila da Luz Silva,13222,PT,Não eleito,26,1,105,176,0,Arraial do Cabo,190001237847
+c0912,g36532,ver20,Marcio Balbino,Marcio Rangel da Silva,13456,PT,Não eleito,18,1,120,176,0,Arraial do Cabo,190001237848
+c0913,g45537,ver20,Vinicius Kibe,Vinicius Maia Nunes,13313,PT,Não eleito,105,1,56,176,0,Arraial do Cabo,190001237849
+c0914,g527,ver20,Vivi Capriny,Viviane Rosa Vieira,13613,PT,Não eleito,18,1,120,176,0,Arraial do Cabo,190001237850
+c0915,g7958,ver20,Dandara Melo,Dandara Araujo Gomes Melo,13123,PT,Não eleito,50,1,84,176,0,Arraial do Cabo,190001237851
+c0916,g25605,ver20,Alex da Causa Animal,Alexandre Alfredo Knupfer,13001,PT,Não eleito,38,1,89,176,0,Arraial do Cabo,190001237852
+c0917,g14295,ver20,Paulo Nunes,Paulo Antonio de Paula Nunes,13321,PT,Não eleito,5,1,154,176,0,Arraial do Cabo,190001237853
+c0918,g8783,ver20,Elisa,Elisa Maria Ferreira,13121,PT,Suplente,417,1,58,396,0,Barra Mansa,190001238754
+c0919,g9063,ver20,Paulo da Celeste,Paulo Sergio Frangoso de Avila,13613,PT,Suplente,125,1,139,396,0,Barra Mansa,190001238755
+c0920,g11888,ver20,Jormiro,Jormiro Jose de Souza,13605,PT,Suplente,61,1,211,396,0,Barra Mansa,190001238756
+c0921,g32011,ver20,Keka Dias,Jessica Dias Ferreira,13207,PT,Suplente,40,1,256,396,0,Barra Mansa,190001238757
+c0922,g45111,ver20,Isabel,Maria Isabel Valentino Klingner,13611,PT,Suplente,105,1,151,396,0,Barra Mansa,190001238758
+c0923,g12070,ver20,Jose Carlos,Jose Carlos Oliveira de Almeida,13301,PT,Suplente,73,1,190,396,0,Barra Mansa,190001238759
+c0924,g34792,ver20,Divino Vem Aí,Carlos Divino de Souza,13456,PT,Suplente,29,1,287,396,0,Barra Mansa,190001238760
+c0925,g35083,ver20,Willian Carvel,Wílliam Carvel Araujo,13333,PT,Suplente,23,1,313,396,0,Barra Mansa,190001238761
+c0926,g28666,ver20,Maestro Mister Tin,Reinaldo Victor,13663,PT,Suplente,13,1,351,396,0,Barra Mansa,190001238762
+c0927,g477,ver20,Selmo Queiroz,Selmo Jose Queiroz,13013,PT,Suplente,138,1,132,396,0,Barra Mansa,190001238763
+c0928,g51041,ver20,Grazi Maciel,Grazielle Aparecida Maciel,13222,PT,Suplente,29,1,287,396,0,Barra Mansa,190001238764
+c0929,g3637,ver20,Professora Fernanda Carreiro,Fernanda Carreiro Alves,13666,PT,Eleito,839,1,28,396,0,Barra Mansa,190001238765
+c0930,g9975,ver20,Amarildo,Jose Amarildo de Almeida,13123,PT,Suplente,483,1,50,396,0,Barra Mansa,190001238766
+c0931,g40239,ver20,Joao Vitor,Joao Vitor Ferreira Mazzanti,13113,PT,Suplente,49,1,232,396,0,Barra Mansa,190001238767
+c0932,g8073,ver20,Irma Regina,Sandra Regina Guimarães de Gouvea,13777,PT,Suplente,32,1,278,396,0,Barra Mansa,190001238768
+c0933,g8186,ver20,Dulceneia,Dulcineia Siqueira Rocha,13633,PT,Suplente,342,1,71,396,0,Barra Mansa,190001238769
+c0934,g15955,ver20,Fran Cruz,Francoise da Silva Cruz,13303,PT,Suplente,59,1,217,396,0,Barra Mansa,190001238770
+c0935,g32362,ver20,Araci Izaquiel,Araci Izaquiel Leandro,13335,PT,Suplente,69,1,198,396,0,Barra Mansa,190001238771
+c0936,g44969,ver20,Ciro Borba Cirinho,Ciro de Souza Borba,10000,REPUBLICANOS,Suplente,1294,1,26,570,0,Magé,190001238863
+c0937,g48101,ver20,Venicio da Van,Venicio Alves da Silva,77013,SOLIDARIEDADE,Não eleito,45,1,53,121,0,Natividade,190001242056
+c0938,g42575,ver20,Rosane  Graça,Rosane Gomes Graça,13077,PT,Não eleito,13,1,622,697,0,São João de Meriti,190001242690
+c0939,g5066,ver20,Ronaldo Hansen,Ronaldo Vitório Elias Hansen,13555,PT,Suplente,29,1,106,176,0,Paraty,190001250851
+c0940,g32881,ver20,Ronaldo dos Santos,Ronaldo dos Santos,13777,PT,Suplente,242,1,35,176,0,Paraty,190001250852
+c0941,g19720,ver20,Vaguinho de São Gonçalo,Vagno Martins da Cruz,13333,PT,Suplente,258,1,30,176,0,Paraty,190001250853
+c0942,g35486,ver20,Professor Marco,Marco Antonio Fernandes de Souza,13222,PT,Suplente,72,1,75,176,0,Paraty,190001250854
+c0943,g47747,ver20,Iandara,Iandara Marques Souza,13133,PT,Suplente,79,1,71,176,0,Paraty,190001250855
+c0944,g46813,ver20,Professor Joel,Joel José de Sampaio,13123,PT,Suplente,70,1,78,176,0,Paraty,190001250856
+c0945,g162,ver20,Eloá Moraes,Eloa Silva de Moraes,13579,PT,Suplente,194,1,43,176,0,Paraty,190001250858
+c0946,g48724,ver20,Ulisses Nam,Ulisses Pereira Pinto,13131,PT,Suplente,18,1,124,176,0,Paraty,190001250859
+c0947,g27858,ver20,Vera da Trindade,Vera Lucia de Oliveira,13999,PT,Suplente,121,1,58,176,0,Paraty,190001250860
+c0948,g35447,ver20,Julia Katerine,Julia Katerine Conceição Jesus da Anunciação,13456,PT,Suplente,245,1,32,176,0,Paraty,190001250861
+c0949,g22775,ver20,Kaka,Maria do Carmo Pinacio de Medeiros,13001,PT,Suplente,9,1,142,176,0,Paraty,190001250862
+c0950,g31572,ver20,Juliana Frateschi,Juliana Frateschi,13000,PT,Suplente,22,1,119,176,0,Paraty,190001250863
+c0951,g8055,ver20,Professora Flora,Flora Maria Salles França Pinto,13013,PT,Eleito,373,1,16,176,0,Paraty,190001250864
+c0952,g20598,ver20,Gilvanea Busquet,Gilvanea Abreu Busquet,13555,PT,Não eleito,9,1,232,293,0,Cachoeiras de Macacu,190001253380
+c0953,g35896,ver20,Duda de Duques,Geralda Alves de Oliveira,13444,PT,Não eleito,33,1,257,326,0,Itaboraí,190001253648
+c0954,g20695,ver20,Renatinho Bom Trabalhador,Renato Feliciano Lourenço,13010,PT,Não eleito,87,1,179,326,0,Itaboraí,190001253649
+c0955,g13394,ver20,Jurandir Mecânico,Jurandir Ferreira Lessa,13888,PT,Não eleito,42,1,238,326,0,Itaboraí,190001253650
+c0956,g30833,ver20,Zé Luiz Barbeiro,Jose Luiz Miguel de Oliveira,13123,PT,Não eleito,74,1,190,326,0,Itaboraí,190001253651
+c0957,g8609,ver20,Alessandro do Vermelhinho,Alessandro dos Santos Faria,13777,PT,Não eleito,67,1,203,326,0,Itaboraí,190001253653
+c0958,g4076,ver20,Gabriel Montanha,Gabriel Ferreira dos Santos,13222,PT,Não eleito,86,1,180,326,0,Itaboraí,190001253654
+c0959,g43296,ver20,Martha Cherry,Martha Catarina dos Santos Mendes,13333,PT,Não eleito,73,1,193,326,0,Itaboraí,190001253655
+c0960,g22510,ver20,Tio Jorge,Jorge Luiz Soares Figueiredo,13022,PT,Não eleito,280,1,87,326,0,Itaboraí,190001253656
+c0961,g23030,ver20,Marcão do Povo,Marcos Evangelista de Pinho,13012,PT,Não eleito,15,1,293,326,0,Itaboraí,190001253657
+c0962,g4955,ver20,Mara da Reta,Rosimara Assunção Mendes,13024,PT,Não eleito,35,1,248,326,0,Itaboraí,190001253658
+c0963,g2449,ver20,Alexandre Simpatia,Alexandre Carvalho da Silva,13678,PT,Não eleito,163,1,122,326,0,Itaboraí,190001253659
+c0964,g19275,ver20,Rose da Silva,Rosimeri da Silva Marongiu,13137,PT,Não eleito,10,1,309,326,0,Itaboraí,190001253660
+c0965,g47379,ver20,Rosane Araujo Assiste Social,Rosane Araujo dos Santos,13000,PT,Não eleito,736,1,43,326,0,Itaboraí,190001253661
+c0966,g32397,ver20,Heros Claudio,Heros da Silva Claudio,13111,PT,Não eleito,167,1,119,326,0,Itaboraí,190001253662
+c0967,g25357,ver20,Simone Ferreira,Simone Ferreira da Silva,13131,PT,Não eleito,9,1,180,215,0,Tanguá,190001254473
+c0968,g25482,ver20,Alcino Produtor,Alcino Jose da Rosa,13101,PT,Não eleito,23,1,139,215,0,Tanguá,190001254474
+c0969,g42096,ver20,Rafael Pinto,Rafael Vieira Pinto,13333,PT,Não eleito,24,1,136,215,0,Tanguá,190001254475
+c0970,g41287,ver20,Tia Carla,Carla Ferreira Oliveira,13013,PT,Não eleito,0,0,214,215,0,Tanguá,190001254476
+c0971,g28012,ver20,Professor Alan Coqueiro,Alan Coqueiro da Cruz,13000,PT,Não eleito,74,1,73,215,0,Tanguá,190001254477
+c0972,g39867,ver20,Vânia Rocha,Vania da Rocha Figueiredo,13555,PT,Não eleito,41,1,113,215,0,Tanguá,190001254478
+c0973,g4684,ver20,Tiago Lopes,Tiago Lopes,13123,PT,Não eleito,50,1,102,215,0,Tanguá,190001254479
+c0974,g29035,ver20,Dr. Pedro Protético,Pedro Francisco Alves,13222,PT,Não eleito,41,1,113,215,0,Tanguá,190001254480
+c0975,g19289,ver20,Fabricio Nasoli,Fabricio Nascimento Oliveira,13994,PT,Não eleito,5,1,196,215,0,Tanguá,190001254481
+c0976,g18600,ver20,Clovis Marcelino,Clovis Marcelino,13379,PT,Não eleito,87,1,266,410,0,Petrópolis,190001254516
+c0977,g7264,ver20,Aladim,Luiz Carlos de Assis Andrade,13612,PT,Não eleito,68,1,292,410,0,Petrópolis,190001254517
+c0978,g47981,ver20,Angélica Rosa,Angelica dos Santos Rosa,13300,PT,Não eleito,62,1,306,410,0,Petrópolis,190001254518
+c0979,g24656,ver20,Jose Padeiro,Jose Augusto de Carvalho Silva,13113,PT,Não eleito,40,1,345,410,0,Petrópolis,190001254520
+c0980,g22426,ver20,Elenir Fernandes,Elenir Fernandes de Araujo,13400,PT,Não eleito,24,1,376,410,0,Petrópolis,190001254522
+c0981,g5994,ver20,Sagati,Marcos Antonio da Costa Borges,13613,PT,Não eleito,95,1,256,410,0,Petrópolis,190001254525
+c0982,g28807,ver20,Renilda Jardim,Renilda  da  Silva Jardim  Souza,13222,PT,Suplente,129,1,204,570,0,Magé,190001258040
+c0983,g7619,ver20,Professor Gerson,Gerson de Castro Fernandes Estevão,13000,PT,Suplente,1028,1,34,570,0,Magé,190001258060
+c0984,g31691,ver20,Márcio Júnior,Márcio Cabreira Xavier Júnior,19120,PODE,Eleito,273,1,7,59,0,Silva Jardim,190001259686
+c0985,g34705,ver20,Cidinho da Pesca,Alcides da Costa Monteiro,13101,PT,Suplente,364,1,234,916,0,São Gonçalo,190001261738
+c0986,g25579,ver20,Pablo da Agua,Pablo Henrique Barreto de Souza,13333,PT,Eleito,1696,1,32,916,0,São Gonçalo,190001261739
+c0987,g36827,ver20,Sandra Mendes,Sandra Cecilia Ferreira Mendes,13138,PT,Suplente,60,1,709,916,0,São Gonçalo,190001261740
+c0988,g20487,ver20,Luciana Damas  de Azeredo,Luciana Dama de Azeredo,13613,PT,Não eleito,36,1,503,672,0,Campos dos Goytacazes,190001261932
+c0989,g30326,ver20,Antônio Carlos Jiló,Antônio Carlos Rosa Martins,13516,PT,Não eleito,83,1,354,672,0,Campos dos Goytacazes,190001261933
+c0990,g15917,ver20,Nicole Mandato Para Todos,Nicole D  Halvor Sollberg,13444,PT,Suplente,460,1,55,551,0,Nova Friburgo,190001265455
+c0991,g43616,ver20,Tiana Santos,Sebastiana Maria Santos Paula,13113,PT,Não eleito,59,1,169,336,0,Mesquita,190001266418
+c0992,g44607,ver20,Valdecir Rodrigues,Valdecir Rodrigues de Lima,13482,PT,Suplente,18,1,624,675,0,Duque de Caxias,190001266647
+c0993,g31195,ver20,João Batista,Joao Batista Ferreira Guedes,13677,PT,Suplente,141,1,503,916,0,São Gonçalo,190001267314
+c0994,g4071,ver20,Marcão Povão,Marcos Pedro Carvalho da Silva,13113,PT,Suplente,205,1,388,916,0,São Gonçalo,190001267315
+c0995,g22293,ver20,Sandra da Saude,Sandra Cristina Maia,13888,PT,Suplente,7,1,890,916,0,São Gonçalo,190001267316
+c0996,g49829,ver20,Amanda Maganha,Amanda Maganha de Almeida,13567,PT,Suplente,36,1,795,916,0,São Gonçalo,190001267318
+c0997,g48058,ver20,Priscila Melo,Priscila Renata de Melo,13406,PT,Não eleito,4,1,384,392,0,Resende,190001271572
+c0998,g32489,ver20,Thayná Ferreira,Thayná da Silva Ferreira,13689,PT,Suplente,0,0,673,675,0,Duque de Caxias,190001273506
+c0999,g13166,ver20,Moliza,Moliza de Souza,13900,PT,Suplente,102,1,433,675,0,Duque de Caxias,190001273517
+c1000,g26214,ver20,Tássia Fernanda,Tássia Fernanda da Silva e Silva,13020,PT,Suplente,1,1,668,675,0,Duque de Caxias,190001273521
+c1001,g26082,ver20,Ana do Sacolão,Ana Lucia da Costa,13003,PT,Suplente,7,1,656,675,0,Duque de Caxias,190001273522
+c1002,g26973,ver20,Professora Janete Dias,Janete Dias,13767,PT,Suplente,12,1,640,675,0,Duque de Caxias,190001273655
+c1003,g3063,ver20,Vanessa Penha,Vanessa Silva da Penha,13048,PT,Suplente,0,0,673,675,0,Duque de Caxias,190001273673
+c1004,g15278,ver20,Rosa do Pt,Rozilda Maximino dos Santos,13171,PT,Suplente,3,1,662,675,0,Duque de Caxias,190001273721
+c1005,g15492,ver24,Flavio da Banca Jornaleiro,Flavio Cristian Rodrigues,77577,SOLIDARIEDADE,Suplente,667,1,152,470,0,São Gonçalo,190001886753
+c1006,g2731,ver24,Gesiel Lessa,Gesiel de Oliveira Lessa,77369,SOLIDARIEDADE,Suplente,1568,1,76,470,0,São Gonçalo,190001886758
+c1007,g38947,ver24,Haroldo Vicente,Haroldo Vicente do Nascimento,10777,REPUBLICANOS,Suplente,453,1,214,470,0,São Gonçalo,190001901842
+c1008,g34705,ver24,Cidinho da Pesca,Alcides da Costa Monteiro,25888,PRD,Suplente,429,1,221,470,0,São Gonçalo,190001901952
+c1009,g2115,ver24,Tati do Porto,Carlos Alberto Alves Teixeira,13456,PT,Não eleito,138,1,112,228,0,Angra dos Reis,190001902401
+c1010,g15566,ver24,Klauber Valente,Klauber Valente de Carvalho,13789,PT,Não eleito,535,1,53,228,0,Angra dos Reis,190001902402
+c1011,g11516,ver24,Raul Alevato,Raul Alevato,13623,PT,Não eleito,154,1,104,228,0,Angra dos Reis,190001902406
+c1012,g47452,ver24,Alex Almeida,Alex de Almeida,13123,PT,Não eleito,344,1,69,228,0,Angra dos Reis,190001902409
+c1013,g22936,ver24,Georgia Maia,Georgia Helena Maia,13012,PT,Não eleito,33,1,192,228,0,Angra dos Reis,190001902410
+c1014,g48320,ver24,Renata dos Santos,Renata Souza dos Santos,13888,PT,Não eleito,35,1,188,228,0,Angra dos Reis,190001902411
+c1015,g29597,ver24,Antônio Siri,Antônio Alves de Lima,13300,PT,Não eleito,519,1,55,228,0,Angra dos Reis,190001902413
+c1016,g44194,ver24,Iracema,Iracema Veríssimo dos Santos,13400,PT,Não eleito,84,1,140,228,0,Angra dos Reis,190001902415
+c1017,g16353,ver24,Ana Maria Filemes,Ana Maria Filemes da Rocha,13655,PT,Não eleito,18,1,109,156,0,Miracema,190001905179
+c1018,g50044,ver24,Will Bezerra,Will Bezerra da Silva,13013,PT,Não eleito,19,1,106,156,0,Miracema,190001905180
+c1019,g49248,ver24,Carlos Caruso,Carlos Roberto de Souza Caruso,13113,PT,Não eleito,8,1,138,156,0,Miracema,190001905181
+c1020,g13238,ver24,Márcia do Pt,Marcia Helena Reis Tostes,13455,PT,Não eleito,50,1,62,156,0,Miracema,190001905182
+c1021,g45283,ver24,Aninha Lomba,Ana Luzia Lomba dos Santos,13333,PT,Não eleito,54,1,58,156,0,Miracema,190001905183
+c1022,g5400,ver24,Gleice Feijó,Gleice Vaz Feijó Barros,13321,PT,Não eleito,230,1,22,156,0,Miracema,190001905184
+c1023,g5393,ver24,Alexandre Neves,Alexandre da Silva Neves,13123,PT,Não eleito,10,1,130,156,0,Miracema,190001905186
+c1024,g44036,ver24,Professora Nilcinei,Nilcenei da Cruz,13777,PT,Não eleito,17,1,115,156,0,Miracema,190001905187
+c1025,g37105,ver24,Professor Gutemberg,Gutemberg Cardoso dos Santos,13013,PT,Suplente,741,1,132,476,0,Duque de Caxias,190001907354
+c1026,g46024,ver24,Marcinha do Canaan,Marcia Gomes,13117,PT,Suplente,171,1,250,476,0,Duque de Caxias,190001907355
+c1027,g27285,ver24,Glorya Ramos,Glória Maria Alves Ramos,13713,PT,Suplente,303,1,190,476,0,Duque de Caxias,190001907356
+c1028,g35526,ver24,Marcelo Nascimento,Marcelo Marinho do Nascimento,13123,PT,Suplente,846,1,121,476,0,Duque de Caxias,190001907357
+c1029,g24752,ver24,Silvia de Mendonça,Silvia Cristina de Mendonça,13777,PT,Suplente,247,1,209,476,0,Duque de Caxias,190001907358
+c1030,g3549,ver24,Nei Lagoinha,Nei Robson de Azevedo,13115,PT,Suplente,1280,1,95,476,0,Duque de Caxias,190001907360
+c1031,g30763,ver24,Alexia Santos,Alexia dos Santos Valentim,13007,PT,Suplente,91,1,304,476,0,Duque de Caxias,190001907361
+c1032,g8206,ver24,Bruno Leonardo,Bruno Leonardo Sant Anna Teixeira,13567,PT,Suplente,449,1,164,476,0,Duque de Caxias,190001907362
+c1033,g36702,ver24,Cristiano,Cristiano José Rodrigues de Souza,13001,PT,Suplente,1641,1,80,476,0,Duque de Caxias,190001907363
+c1034,g46117,ver24,Wagner Gente da Gente,Wagner Santos da Silva,13444,PT,Suplente,967,1,115,476,0,Duque de Caxias,190001907365
+c1035,g2917,ver24,Miguel Dupot,José Miguel da Silva,13613,PT,Suplente,151,1,258,476,0,Duque de Caxias,190001907368
+c1036,g32491,ver24,Ronaldo Gente da Gente,Ronaldo Batista de Souza,13555,PT,Suplente,411,1,171,476,0,Duque de Caxias,190001907369
+c1037,g46084,ver24,Andinho do Som,Anderson Silveira Rosa,13085,PT,Suplente,170,1,251,476,0,Duque de Caxias,190001907371
+c1038,g15643,ver24,Professora Gisele Santos,Gisele Cristiane dos Santos,13999,PT,Suplente,39,1,381,476,0,Duque de Caxias,190001907372
+c1039,g40289,ver24,Renata Rangel,Renata da Silva Rangel,13015,PT,Suplente,93,1,302,476,0,Duque de Caxias,190001907375
+c1040,g42684,ver24,Bruno Bbzão,Bruno Bastos Silva Guimarães,13456,PT,Suplente,1895,1,65,476,0,Duque de Caxias,190001907378
+c1041,g19437,ver24,Erickson Teixeira,Erickson Santos Teixeira,13333,PT,Suplente,296,1,193,476,0,Duque de Caxias,190001907379
+c1042,g21122,ver24,Artuzinho da Piscina,Artur Silva da Costa,13888,PT,Suplente,1224,1,100,476,0,Duque de Caxias,190001907381
+c1043,g46732,ver24,Ricardo Chapolim,Ricardo da Silva Souza,20567,PODE,Suplente,637,1,421,995,0,Rio de Janeiro,190001909298
+c1044,g36279,ver24,Nathalia Gabriel,Nathalia Cordeiro Gabriel,13277,PT,Suplente,40,1,124,170,0,Magé,190001913670
+c1045,g44969,ver24,Cirinho Ciro,Ciro de Souza Borba,13123,PT,Suplente,1547,1,36,170,0,Magé,190001913674
+c1046,g11945,ver24,Tia Rose,Rosemar de Souza Soares,13777,PT,Suplente,116,1,100,170,0,Magé,190001913675
+c1047,g7459,ver24,Álvaro Alencar,Alvaro Alencar de Oliveira Rodrigues,13456,PT,Suplente,2248,1,22,170,0,Magé,190001913680
+c1048,g7619,ver24,Professor Gerson,Gerson de Castro Fernandes Estevão,13000,PT,Suplente,1659,1,33,170,0,Magé,190001913683
+c1049,g37264,ver24,Professora Vanderlea,Vanderlea de Nazareth Rodrigues Costa Ramos,13555,PT,Suplente,642,1,91,298,0,Niterói,190001926234
+c1050,g37338,ver24,Elaiô Vavío,Elaiô Vavío Januário Verly,13737,PT,Suplente,47,1,252,298,0,Niterói,190001926235
+c1051,g14390,ver24,Rebecca do Pt,Rebecca Vieira Lima da Silva,13123,PT,Suplente,618,1,94,298,0,Niterói,190001926236
+c1052,g34326,ver24,Mayara Gomes,Mayara Micaela Alves Gomes,13500,PT,Suplente,897,1,77,298,0,Niterói,190001926242
+c1053,g39439,ver24,Ricardo do Estado,José Ricardo dos Santos,13013,PT,Suplente,584,1,98,298,0,Niterói,190001926244
+c1054,g27799,ver24,Luiz Justino,Luiz Carlos da Costa Justino,13456,PT,Suplente,736,1,84,298,0,Niterói,190001926245
+c1055,g39442,ver24,Lilinho,Luiz Virgilio Ferreira e Silva,13999,PT,Suplente,1172,1,68,298,0,Niterói,190001926247
+c1056,g40058,ver24,Anderson Pipico,Anderson José Rodrigues,13000,PT,Eleito,5488,1,7,298,0,Niterói,190001926249
+c1057,g35221,ver24,Renatão do Quilombo,José Renato Gomes da Costa,13100,PT,Suplente,581,1,99,298,0,Niterói,190001926251
+c1058,g322,ver24,Sylvio,Sylvio Maurício de Freitas,13580,PT,Eleito,4045,1,16,298,0,Niterói,190001926252
+c1059,g28049,ver24,Tatiara,Tatiara da Silveira Souza,13777,PT,Suplente,302,1,144,298,0,Niterói,190001926253
+c1060,g1624,ver24,Thiago Risso,Thiago Soares Risso Possas,55800,PSD,Suplente,1120,1,70,298,0,Niterói,190001928311
+c1061,g44991,ver24,Ricardo Castor,Ricardo Crespo de Araujo,23000,CIDADANIA,Suplente,2845,1,44,470,0,São Gonçalo,190001929357
+c1062,g25579,ver24,Pablo da Água,Pablo Henrique Barreto de Souza,23333,CIDADANIA,Suplente,2278,1,57,470,0,São Gonçalo,190001929364
+c1063,g4071,ver24,Marcão Povão,Marcos Pedro Carvalho da Silva,13113,PT,Suplente,148,1,361,470,0,São Gonçalo,190001931117
+c1064,g47856,ver24,Francelino O Abençoado de Deus,Francelino Jose de Souza,13148,PT,Suplente,22,1,457,470,0,São Gonçalo,190001931118
+c1065,g10142,ver24,Dudu Casa da Foto,Eduardo Castro de Araujo,13111,PT,Suplente,936,1,114,470,0,São Gonçalo,190001931119
+c1066,g33042,ver24,Oscar Bessa,Oscar Ricardo Bessa da Silva,13123,PT,Suplente,2089,1,62,470,0,São Gonçalo,190001931120
+c1067,g4774,ver24,Dalva Gomes,Dalva Gomes do Nascimento Silva,13100,PT,Suplente,1205,1,93,470,0,São Gonçalo,190001931121
+c1068,g46154,ver24,Priscilla Canedo,Priscilla Canedo Loureiro,13456,PT,Suplente,3967,1,28,470,0,São Gonçalo,190001931122
+c1069,g1852,ver24,Adilson Bygu,Adilson Jose Rodrigues Junior,13000,PT,Suplente,1228,1,91,470,0,São Gonçalo,190001931125
+c1070,g49480,ver24,Juliano Freitas,Juliano de Freitas Costa,13333,PT,Eleito,4414,1,21,470,0,São Gonçalo,190001931127
+c1071,g11032,ver24,Thiago Freixo,Thiago Freixo Martins,13001,PT,Suplente,2384,1,53,470,0,São Gonçalo,190001931128
+c1072,g38698,ver24,Pr Sebastião Silvério,Sebastiao Silverio da Silva,13590,PT,Suplente,58,1,425,470,0,São Gonçalo,190001931129
+c1073,g10362,ver24,Miguel Moraes,Miguel de Moraes Filho,13613,PT,Suplente,1134,1,99,470,0,São Gonçalo,190001931130
+c1074,g13589,ver24,Professor Badu,Felipe Mota dos Santos,13010,PT,Suplente,753,1,134,470,0,São Gonçalo,190001931131
+c1075,g46746,ver24,Hebert da Saúde,Hebert Freitas Pinto,13131,PT,Suplente,68,1,409,470,0,São Gonçalo,190001931132
+c1076,g49712,ver24,Luana Mota,Luana Eller de Almeida Moreira Mota,13300,PT,Suplente,673,1,150,470,0,São Gonçalo,190001931133
+c1077,g39622,ver24,Graciane Volotão,Graciane de Souza Rocha Volotão,13021,PT,Suplente,1189,1,96,470,0,São Gonçalo,190001931134
+c1078,g22286,ver24,Rosane Santos,Rosane Silva dos Santos,13016,PT,Suplente,18,1,460,470,0,São Gonçalo,190001931135
+c1079,g43258,ver24,Elza Costa,Elza Vieira da Costa,13513,PT,Suplente,162,1,352,470,0,São Gonçalo,190001931140
+c1080,g3280,ver24,Massimoel,Massimoel Teixeira de Carvalho,13413,PT,Suplente,119,1,374,470,0,São Gonçalo,190001931142
+c1081,g1093,ver24,Carlinhos,Antonio Carlos da Silva,13013,PT,Suplente,117,1,376,470,0,São Gonçalo,190001931143
+c1082,g4059,ver24,José Guerreiro,Jose Alves da Cunha,25023,PRD,Suplente,265,1,200,476,0,Duque de Caxias,190001932519
+c1083,g23276,ver24,Marco Sapo,Marco Antonio Lima,70610,AVANTE,Não eleito,74,1,322,476,0,Duque de Caxias,190001932642
+c1084,g21096,ver24,Professor Nivan,Nivan Almeida,11015,PP,Suplente,2064,1,61,476,0,Duque de Caxias,190001940077
+c1085,g26093,ver24,Bel da Educação,Elisabeth de Araújo Oliveira,13123,PT,Suplente,41,1,126,213,0,Mangaratiba,190001943226
+c1086,g942,ver24,Dr. Evandro,Evandro da Silva Sobral,13777,PT,Suplente,61,1,107,213,0,Mangaratiba,190001943227
+c1087,g35935,ver24,Iosana Mathias,Iosana Rosineide Mathias Domingos,13773,PT,Suplente,107,1,79,213,0,Mangaratiba,190001943228
+c1088,g4999,ver24,Luana Nunes,Luana de Souza Nunes,13000,PT,Suplente,24,1,150,213,0,Mangaratiba,190001943231
+c1089,g33320,ver24,Lili Morais,Maria Eliane Santos de Morais,13024,PT,Suplente,86,1,87,213,0,Mangaratiba,190001943232
+c1090,g24405,ver24,Wlad da Pesca,Wladimir da Conçeição Pereira,13789,PT,Eleito,840,1,7,213,0,Mangaratiba,190001943239
+c1091,g40499,ver24,Vitor Mantovani,Vitor Mantovani Rocha,13000,PT,Suplente,553,1,32,218,0,Japeri,190001945847
+c1092,g30015,ver24,Mateus Ferraz,Mateus Coutinho Ferraz,13001,PT,Eleito,1240,1,4,218,0,Japeri,190001945849
+c1093,g12162,ver24,Dani Barros,Daniela de Carvalho Barros,13222,PT,Suplente,687,1,23,218,0,Japeri,190001945850
+c1094,g1460,ver24,Rosangela Aguiar,Rosangela de Aguiar do Rosario Souza,13691,PT,Suplente,94,1,126,218,0,Japeri,190001945852
+c1095,g5999,ver24,Luiz Henrique,Luiz Henrique Pereira Xavier,13123,PT,Suplente,698,1,21,218,0,Japeri,190001945853
+c1096,g29221,ver24,Ziel Pavani,Ziel Pavani de Mesquita,13044,PT,Suplente,670,1,24,218,0,Japeri,190001945854
+c1097,g45237,ver24,Keilon,Keilon Diovany Fernandes,13020,PT,Suplente,280,1,66,218,0,Japeri,190001945856
+c1098,g46201,ver24,Marcia Curty,Marcia da Silva Prucho,13011,PT,Suplente,40,1,159,218,0,Japeri,190001945857
+c1099,g17232,ver24,Rogerin Morador,Rogério Oliveira dos Santos,50001,PSOL,Não eleito,78,1,317,476,0,Duque de Caxias,190001949785
+c1100,g30254,ver24,Rose Cipriano,Rose Cipriano Lapa,50123,PSOL,Não eleito,4455,1,28,476,0,Duque de Caxias,190001949795
+c1101,g46515,ver24,Sérgio Miranda,Sérgio Miranda Oliveira Silva,13013,PT,Não eleito,51,1,68,122,0,Miguel Pereira,190001956204
+c1102,g20006,ver24,Claudinha Dantas,Cláudia de Almeida Dantas,13456,PT,Não eleito,116,1,43,122,0,Miguel Pereira,190001956205
+c1103,g16721,ver24,Carlos Salerno,Jose Carlos Rodrigues Salerno,13000,PT,Não eleito,20,1,99,122,0,Miguel Pereira,190001956207
+c1104,g42176,ver24,Marco Aurélio Queiroz,Marco Aurélio de Queiroz Vieira,13333,PT,Não eleito,74,1,61,122,0,Miguel Pereira,190001956209
+c1105,g48000,ver24,Enilda Fernandes,Enilda dos Santos Fernandes,13126,PT,Não eleito,175,1,27,122,0,Miguel Pereira,190001956213
+c1106,g20792,ver24,Ezequiel,Ezequiel Rodrigues Teixeira,22007,PL,Suplente,1103,1,109,476,0,Duque de Caxias,190001956964
+c1107,g16095,ver24,Igo Menezes,Igo Alencar de Menezes,13123,PT,Eleito,2401,1,28,391,0,Belford Roxo,190001957454
+c1108,g45374,ver24,Ana Leite,Ana Lucia Marinho Leite Freitas,13213,PT,Suplente,70,1,258,391,0,Belford Roxo,190001957455
+c1109,g11767,ver24,Tony Lunz,Jose Antonio Lunz da Silva,13122,PT,Suplente,178,1,188,391,0,Belford Roxo,190001957459
+c1110,g20578,ver24,Bola Daher,Matheus Daher de Oliveira Souza,13456,PT,Suplente,506,1,125,391,0,Belford Roxo,190001957461
+c1111,g36546,ver24,Susi da Nova Esperança,Susimar dos Santos,13293,PT,Suplente,74,1,254,391,0,Belford Roxo,190001957463
+c1112,g7124,ver24,Ribamar Santos,José Ribamar Bezerra dos Santos,13569,PT,Suplente,34,1,315,391,0,Belford Roxo,190001957464
+c1113,g50104,ver24,Renata Aleixo,Renata Aleixo de Moraes,13888,PT,Suplente,523,1,121,391,0,Belford Roxo,190001957465
+c1114,g43497,ver24,Fabio do Waguinho,Fabio Azevedo Carneiro,13500,PT,Suplente,210,1,178,391,0,Belford Roxo,190001957466
+c1115,g38897,ver24,Bokinha do Maringá,Manoel Luiz da Silva,13013,PT,Suplente,57,1,276,391,0,Belford Roxo,190001957468
+c1116,g35573,ver24,Rafael do Gás,Rafael Santos Soares Rocha,13222,PT,Suplente,1873,1,39,391,0,Belford Roxo,190001957469
+c1117,g20220,ver24,Waltair Filho,Waltair Marques de Oliveira Filho,13789,PT,Não eleito,0,0,371,391,44,Belford Roxo,190001957472
+c1118,g23243,ver24,Boneca Laranja,Angélica Silva da Conceição,13520,PT,Suplente,42,1,303,391,0,Belford Roxo,190001957474
+c1119,g522,ver24,Filippe Jesus,Luis Filippe de Jesus da Silva,13777,PT,Eleito,2905,1,15,391,0,Belford Roxo,190001957476
+c1120,g20349,ver24,Rodrigo Kekeu,Rodrigo Miguel Gomes Ferreira,11660,PP,Suplente,198,1,57,138,0,Nilópolis,190001965740
+c1121,g33479,ver24,Alexandre Plena Forma,Alexandre Herick Buthers,77777,SOLIDARIEDADE,Suplente,1510,1,55,391,0,Belford Roxo,190001968721
+c1122,g42340,ver24,Titia Flor,Rosangela Rosa de Souza Gomes,44777,UNIÃO,Suplente,125,1,274,476,0,Duque de Caxias,190001970870
+c1123,g16499,ver24,Adriano Brizola,Adriano de Lucena Pereira,18333,REDE,Não eleito,427,1,77,249,0,Cabo Frio,190001972144
+c1124,g2550,ver24,Adriano do Aílton,Adriano Duarte Ferreira,13111,PT,Suplente,17,1,312,360,0,Queimados,190001976407
+c1125,g50805,ver24,Professor Castelano,Luiz Felipp Castelano,13333,PT,Eleito,1546,1,8,360,0,Queimados,190001976408
+c1126,g7239,ver24,Brall do Povo,Americo Robson Monteiro Cardoso,13020,PT,Suplente,9,1,335,360,0,Queimados,190001976412
+c1127,g8699,ver24,Celena Santos,Dulcelena dos Santos,13013,PT,Suplente,92,1,165,360,0,Queimados,190001976414
+c1128,g28535,ver24,Carine Saramago,Lucia Carine Rocha Corlinos Saramago Hess,13456,PT,Suplente,26,1,279,360,0,Queimados,190001976417
+c1129,g2819,ver24,Cláudio Vicente,Claudio Ferreira Martins,13789,PT,Suplente,0,0,355,360,0,Queimados,190001976418
+c1130,g18574,ver24,Ismael Lopes,Ismael Lopes de Oliveira,13123,PT,Suplente,401,1,54,360,0,Queimados,190001976419
+c1131,g42326,ver24,Luciana Soares,Luciana Soares Pereira,13007,PT,Suplente,24,1,284,360,0,Queimados,190001976420
+c1132,g48458,ver24,Euclides,Euclides José da Silva Neto,13021,PT,Não eleito,157,1,129,369,0,Teresópolis,190001983910
+c1133,g2768,ver24,Clara Valverde,Maria Clara Valverde Sevalho,13555,PT,Não eleito,38,1,259,369,0,Teresópolis,190001983912
+c1134,g48753,ver24,Cris Reis,Tereza Cristina dos Reis,13019,PT,Não eleito,46,1,240,369,0,Teresópolis,190001983913
+c1135,g12996,ver24,Paulo Teixeira,Paulo Cesar Teixeira,13644,PT,Não eleito,32,1,267,369,0,Teresópolis,190001983914
+c1136,g23361,ver24,Francisco Linder,Francisco Linder de Oliveira Rocha,13123,PT,Não eleito,50,1,238,369,0,Teresópolis,190001983915
+c1137,g32752,ver24,Rodrigo Herculano,Rodrigo Herculano da Silva,13030,PT,Não eleito,21,1,293,369,0,Teresópolis,190001983916
+c1138,g14675,ver24,Elson Sabiá,Elson Emilio Paulo,13333,PT,Não eleito,201,1,107,369,0,Teresópolis,190001983917
+c1139,g17596,ver24,Rebecca Alves,Rebecca Loren Alves dos Santos,13013,PT,Não eleito,129,1,153,369,0,Teresópolis,190001983918
+c1140,g7771,ver24,Willian Sousa,Willian de Oliveira Sousa,13007,PT,Não eleito,5,1,343,369,0,Teresópolis,190001983919
+c1141,g12545,ver24,José Barbosa,Jose Pontes Barbosa,13630,PT,Não eleito,45,1,243,369,0,Teresópolis,190001983920
+c1142,g7830,ver24,Paulo Abençoado,Paulo Sergio Martins,13285,PT,Não eleito,0,0,347,369,0,Teresópolis,190001983922
+c1143,g35672,ver24,Carol Quintana,Ana Carolina Quintana de Serpa Vieira,13044,PT,Não eleito,826,1,28,369,0,Teresópolis,190001983923
+c1144,g27814,ver24,Alcir Menezes,Alcir Menezes,13016,PT,Não eleito,12,1,317,369,0,Teresópolis,190001983924
+c1145,g7958,ver24,Dandara Melo -Mandato Coletivo,Dandara Araujo Gomes Melo,13333,PT,Não eleito,148,1,42,122,0,Arraial do Cabo,190001985378
+c1146,g48737,ver24,Willian Luz,Willian Cesar da Luz Silva,13123,PT,Não eleito,614,1,15,122,0,Arraial do Cabo,190001985381
+c1147,g34776,ver24,Ione Favela,Ione Efigenia dos Santos,35331,PMB,Não eleito,6,1,986,995,0,Rio de Janeiro,190001986602
+c1148,g27776,ver24,Andre Portugues,Andre Fernando Rodrigues Miranda,77777,SOLIDARIEDADE,Suplente,1468,1,22,231,0,Mesquita,190001987220
+c1149,g41777,ver24,Tião da Radiologia,Sebastião Ferreira Alves,12789,PDT,Suplente,492,1,49,165,0,Maricá,190001989620
+c1150,g26973,ver24,Janete Dança de Salão,Janete Dias,40180,PSB,Não eleito,18,1,440,476,0,Duque de Caxias,190001992404
+c1151,g43296,ver24,Martha Cherry,Martha Catarina dos Santos Mendes,10555,REPUBLICANOS,Não eleito,80,1,120,165,0,Itaboraí,190001992877
+c1152,g2449,ver24,Alexandre Simpatia,Alexandre Carvalho da Silva,10000,REPUBLICANOS,Não eleito,168,1,92,165,0,Itaboraí,190001992886
+c1153,g47379,ver24,Rosane Araujo,Rosane Araujo dos Santos,13000,PT,Suplente,1095,1,34,165,0,Itaboraí,190001995898
+c1154,g12037,ver24,Mariana,Mariana Pereira Agostinho Emerick Pinto,13100,PT,Suplente,382,1,65,165,0,Itaboraí,190001995899
+c1155,g26766,ver24,Quebra Galho,Luciano de Freitas Rodrigues,13123,PT,Suplente,494,1,55,165,0,Itaboraí,190001995901
+c1156,g43200,ver24,Paulo Ney,Paulo Ney Guimaraes Pina,13190,PT,Eleito,4092,1,6,165,0,Itaboraí,190001995904
+c1157,g1433,ver24,Edinho Oficial de Justiça,Ederson Jose Vieira,13193,PT,Suplente,1088,1,35,165,0,Itaboraí,190001995905
+c1158,g42849,ver24,Jorge Junior,Jorge Júnior de Carvalho Duarte de Sá,13580,PT,Suplente,656,1,49,165,0,Itaboraí,190001995906
+c1159,g47473,ver24,Tia Silvana,Silvana Moraes Rodrigues,13456,PT,Suplente,326,1,72,165,0,Itaboraí,190001995907
+c1160,g4820,ver24,Rogerio Machado,Rogério Azevedo Machado,13650,PT,Não eleito,92,1,257,382,0,Campos dos Goytacazes,190001998809
+c1161,g47117,ver24,Clara Pereira,Ana Clara de Jesus Pereira,13188,PT,Não eleito,29,1,339,382,0,Campos dos Goytacazes,190001998810
+c1162,g47227,ver24,Gilberto Gomes,Gilberto Azeredo Gomes,13333,PT,Não eleito,723,1,97,382,0,Campos dos Goytacazes,190001998811
+c1163,g33182,ver24,Odisseia,Odisseia Pinto de Carvalho,13613,PT,Não eleito,1216,1,70,382,0,Campos dos Goytacazes,190001998812
+c1164,g50919,ver24,Decio Guimaraes,Decio Nascimento Guimaraes,13146,PT,Não eleito,285,1,169,382,0,Campos dos Goytacazes,190001998813
+c1165,g45736,ver24,Oliveira,Wagner Oliveira Batista da Silva,13123,PT,Não eleito,427,1,138,382,0,Campos dos Goytacazes,190001998814
+c1166,g6520,ver24,Professor Raul da Uenf,Raul Ernesto Lopez Palacio,13000,PT,Não eleito,372,1,146,382,0,Campos dos Goytacazes,190001998815
+c1167,g32819,ver24,Dandão,Roberto Duarte,13338,PT,Não eleito,67,1,283,382,0,Campos dos Goytacazes,190001998817
+c1168,g29184,ver24,Celio Roque,Celio Pinto Roque,13222,PT,Não eleito,0,0,375,382,17,Campos dos Goytacazes,190001998818
+c1169,g41607,ver24,Elaine Leao,Elaine Fontes Leão Porto,13012,PT,Não eleito,817,1,89,382,0,Campos dos Goytacazes,190001998819
+c1170,g35587,ver24,Marcia Pereira,Márcia Valéria Cirilo Pereira,13656,PT,Não eleito,41,1,318,382,0,Campos dos Goytacazes,190001998821
+c1171,g29506,ver24,Mateus do Mst,Mateus da Silva dos Santos,13713,PT,Não eleito,277,1,172,382,0,Campos dos Goytacazes,190001998823
+c1172,g24540,ver24,Tezeu,Tezeu Freitas Bezerra,13456,PT,Não eleito,2181,1,42,382,0,Campos dos Goytacazes,190001998824
+c1173,g6670,ver24,Carlos Miranda,Carlos de Miranda Barreto,13013,PT,Não eleito,64,1,286,382,0,Campos dos Goytacazes,190001998825
+c1174,g11572,ver24,Cricio Manhaes,Cricio Manhaes Pinto,13033,PT,Não eleito,0,0,375,382,6,Campos dos Goytacazes,190001998826
+c1175,g4966,ver24,Alessandra Isabel,Alessandra Isabel da Silva,13113,PT,Não eleito,0,0,375,382,41,Campos dos Goytacazes,190001998829
+c1176,g29787,ver24,Hermes Mineiro,Hermes Cipriano de Oliveira,13014,PT,Não eleito,129,1,232,382,0,Campos dos Goytacazes,190001998831
+c1177,g8318,ver24,Professor Cristiano,Cristiano Peixoto Maciel,13026,PT,Não eleito,465,1,126,382,0,Campos dos Goytacazes,190001998832
+c1178,g32520,ver24,Professora Lourdes,Lourdes Juliao Soares,13233,PT,Não eleito,87,1,264,382,0,Campos dos Goytacazes,190001998833
+c1179,g42231,ver24,Eduardo Moreira,Eduardo Moreira da Silva,15239,MDB,Eleito,8645,1,6,476,0,Duque de Caxias,190002000015
+c1180,g8271,ver24,Leandro Hospital do Cachorro,Leandro Freitas dos Santos,15150,MDB,Suplente,530,1,153,476,0,Duque de Caxias,190002000020
+c1181,g34243,ver24,Roberta Perna,Roberta Martins da Silva Almeida,15100,MDB,Suplente,104,1,122,218,0,Japeri,190002001887
+c1182,g20909,ver24,Catia Abreu da Portelinha,Cátia Tamiris de Abreu,13007,PT,Não eleito,84,1,161,283,0,Rio das Ostras,190002012529
+c1183,g13749,ver24,Pr Edson Gomes,Edson Pereira Gomes,13123,PT,Não eleito,14,1,250,283,0,Rio das Ostras,190002012532
+c1184,g21539,ver24,Professor Luizinho,Luiz Henrique Gomes Alves,13000,PT,Não eleito,534,1,34,283,0,Rio das Ostras,190002012533
+c1185,g9896,ver24,Jackeline da Tranquilizze,Jackeline Rosa de Carvalho,13013,PT,Não eleito,81,1,169,283,0,Rio das Ostras,190002012534
+c1186,g44859,ver24,Cris Brasil,Cristiani de Oliveira Brasil,13456,PT,Não eleito,70,1,114,212,0,Saquarema,190002020945
+c1187,g3799,ver24,Magno Alves Mandato Coletivo,Magno Alves dos Santos,13131,PT,Não eleito,228,1,65,212,0,Saquarema,190002020949
+c1188,g18538,ver24,Gabry Carteiro,Flavio Gabry Lima,13555,PT,Não eleito,67,1,116,212,0,Saquarema,190002020953
+c1189,g26310,ver24,Roninho de Pureza,Ronalt Aguiar Santiago,13070,PT,Não eleito,17,1,93,136,0,São Fidélis,190002021316
+c1190,g9322,ver24,Gemima Crelier,Gemima Souza Crelier,13131,PT,Não eleito,22,1,86,136,0,São Fidélis,190002021317
+c1191,g5714,ver24,Regina Rocha,Regina Rocha de Freitas,13000,PT,Não eleito,71,1,41,136,0,São Fidélis,190002021318
+c1192,g11040,ver24,Sidinho do Pt,Sidney Siqueira,13123,PT,Não eleito,53,1,52,136,0,São Fidélis,190002021319
+c1193,g42050,ver24,Geneci da Gruta D Água,Geneci Cardozo de Oliveira,13113,PT,Não eleito,26,1,81,136,0,São Fidélis,190002021320
+c1194,g50111,ver24,Matheus Almeida,Matheus Martins Leal de Almeida,13013,PT,Não eleito,49,1,54,136,0,São Fidélis,190002021321
+c1195,g1034,ver24,Daniel Pezão,Daniel Souza Andrade,45321,PSDB,Suplente,943,1,85,391,0,Belford Roxo,190002026391
+c1196,g41287,ver24,Tia Carla das Casinhas,Carla Ferreira Oliveira,55333,PSD,Não eleito,40,1,74,124,0,Tanguá,190002031442
+c1197,g50869,ver24,Carlinhos Cachimbo,José Carlos Romão Flor,25335,PRD,Não eleito,14,1,76,113,0,São Francisco de Itabapoana,190002032713
+c1198,g38021,ver24,Marilea da Saúde,Mariléa Lúcio Ormond,36666,AGIR,Não eleito,467,1,507,995,0,Rio de Janeiro,190002037325
+c1199,g10156,ver24,Marta Cordeiro,Marta Cordeiro da Silva,10111,REPUBLICANOS,Suplente,8,1,91,113,0,São Francisco de Itabapoana,190002046464
+c1200,g9511,ver24,Simone Venturine,Simone Maria da Silva Rodrigues,13074,PT,Não eleito,9,1,221,234,0,Itaperuna,190002049177
+c1201,g15173,ver24,Betinho Matias,Roberto Carlos Matias Prudente,13000,PT,Não eleito,8,1,223,234,0,Itaperuna,190002049178
+c1202,g14151,ver24,Nego Fi,Antonio Marcos Rocha Francisco,13140,PT,Não eleito,10,1,219,234,0,Itaperuna,190002049179
+c1203,g6085,ver24,Professora Drielle,Drielle da Silva Pereira,13013,PT,Não eleito,347,1,40,234,0,Itaperuna,190002049180
+c1204,g36249,ver24,Jose Alexandre,Jose Alexandre Silva Alves,13358,PT,Não eleito,19,1,189,234,0,Itaperuna,190002049181
+c1205,g1158,ver24,Adriana do Assentamento,Adriana Rodrigues Silva de Lima Pereira,13123,PT,Não eleito,320,1,43,234,0,Itaperuna,190002049183
+c1206,g37217,ver24,Jonas do Uber,Jonas Motta da Silva,13080,PT,Não eleito,21,1,181,234,0,Itaperuna,190002049184
+c1207,g38931,ver24,Adalberto Amaral,Adalberto Jose do Amaral Ferreira,13789,PT,Não eleito,115,1,81,184,0,São Pedro da Aldeia,190002053065
+c1208,g13061,ver24,Sandro Silva,Sandro Silva Almeida,13500,PT,Não eleito,26,1,150,184,0,São Pedro da Aldeia,190002053066
+c1209,g4234,ver24,Professor Serjão,Sergio Rodrigues dos Santos,13123,PT,Não eleito,191,1,58,184,0,São Pedro da Aldeia,190002053067
+c1210,g17964,ver24,Soninha da Pesquisa,Sonia Regina Caminha dos Santos,13999,PT,Não eleito,7,1,169,184,0,São Pedro da Aldeia,190002053068
+c1211,g19829,ver24,Tonia Badu,Tonia Coelho Valladares,13888,PT,Não eleito,205,1,56,184,0,São Pedro da Aldeia,190002053069
+c1212,g1556,ver24,Dr Thomaz,Cosme Thomaz,13051,PT,Não eleito,33,1,137,184,0,São Pedro da Aldeia,190002053070
+c1213,g49957,ver24,Bruno Ryu,Bruno Lopes de Almeida,35765,PMB,Não eleito,42,1,375,476,0,Duque de Caxias,190002053982
+c1214,g30690,ver24,Angela Ayres,Angela do Nascimento Ayres de Souza,13581,PT,Não eleito,2,1,77,78,0,Carapebus,190002057119
+c1215,g24844,ver24,Clarim da Agricultura,Clarim Moura dos Santos,13013,PT,Não eleito,0,0,78,78,0,Carapebus,190002057120
+c1216,g36981,ver24,Genilson Ramos,Genilson Ramos,13444,PT,Não eleito,9,1,66,78,0,Carapebus,190002057121
+c1217,g29280,ver24,Pedrão de Ubás,Pedro Thiago Ramos Correia,13575,PT,Não eleito,4,1,73,78,0,Carapebus,190002057122
+c1218,g46988,ver24,Fernando Vitorino,Fernando da Silva Vitorino,13456,PT,Não eleito,41,1,46,78,0,Carapebus,190002057123
+c1219,g25861,ver24,Fabricio Barcelos,Fabricio da Silva Barcelos,13333,PT,Não eleito,44,1,42,78,0,Carapebus,190002057124
+c1220,g31723,ver24,Professora Débora Lucas,Débora do Nascimento Lucas,13000,PT,Não eleito,8,1,67,78,0,Carapebus,190002057125
+c1221,g21866,ver24,Claudete Carvalho,Claudete Carvalho Silva da Costa,13767,PT,Não eleito,6,1,71,78,0,Carapebus,190002057127
+c1222,g30694,ver24,Cleilza Lima,Cleilza Souza Lima Graça,13123,PT,Não eleito,10,1,64,78,0,Carapebus,190002057128
+c1223,g586,ver24,Manu Soares,Emanuelle Soares do Amaral,13456,PT,Suplente,52,1,53,83,0,São João da Barra,190002059401
+c1224,g12188,ver24,Rafael de Barcelos,Rafael Pereira de Oliveira,13333,PT,Suplente,452,1,24,83,0,São João da Barra,190002059404
+c1225,g27038,ver24,Soninha Pereira,Sônia Maria Pereira Machado,13613,PT,Eleito,1669,1,5,83,0,São João da Barra,190002059405
+c1226,g50065,ver24,Leleka,Elenine Pereira Franco,13123,PT,Suplente,644,1,19,83,0,São João da Barra,190002059408
+c1227,g32649,ver24,Chris Santos,Christine Souza Santos,13013,PT,Suplente,188,1,34,83,0,São João da Barra,190002059410
+c1228,g7872,ver24,Humberto Fogueteiro,Humberto Jose Rodrigues Alves,13444,PT,Suplente,66,1,50,83,0,São João da Barra,190002059411
+c1229,g18476,ver24,Taty Pereira,Tatiana Pereira Cosme,13901,PT,Não eleito,9,1,84,126,0,Engenheiro Paulo de Frontin,190002062710
+c1230,g43883,ver24,Nelsinho do Bar,Nelson Gomes,13000,PT,Não eleito,10,1,80,126,0,Engenheiro Paulo de Frontin,190002062711
+c1231,g17100,ver24,Mirian Santos,Mirian Pereira dos Santos,13133,PT,Não eleito,5,1,95,126,0,Engenheiro Paulo de Frontin,190002062712
+c1232,g2002,ver24,Leonardo Laport,Leonardo Veloso Laport,13123,PT,Não eleito,11,1,77,126,0,Engenheiro Paulo de Frontin,190002062713
+c1233,g45981,ver24,Marcelo Melo,Marcelo Melo de Araujo,13333,PT,Não eleito,3,1,101,126,0,Engenheiro Paulo de Frontin,190002062714
+c1234,g46733,ver24,Simone do Chafre,Simone Soares Alonso,13204,PT,Não eleito,13,1,73,126,0,Engenheiro Paulo de Frontin,190002062715
+c1235,g18283,ver24,Alexsandro Papa,Alexsandro Silveira Delgado Papa Alves,13567,PT,Não eleito,77,1,32,126,0,Engenheiro Paulo de Frontin,190002062716
+c1236,g22423,ver24,Fernanda Bersot,Fernanda Bersot Salvador,13101,PT,Não eleito,26,1,62,126,0,Engenheiro Paulo de Frontin,190002062717
+c1237,g17280,ver24,Karyn da Cocada,Karyn Aparecida da Silva Cerqueira,13126,PT,Não eleito,59,1,39,126,0,Engenheiro Paulo de Frontin,190002062718
+c1238,g29316,ver24,Dona Beth,Elizabeth Ramos Dublasievicz,13620,PT,Não eleito,3,1,101,126,0,Engenheiro Paulo de Frontin,190002062719
+c1239,g16629,ver24,Wagner Soares,Wagner de Barros Soares,70413,AVANTE,Suplente,1234,1,34,165,0,Maricá,190002063228
+c1240,g31691,ver24,Marcio Junior,Márcio Cabreira Xavier Junior,13000,PT,Eleito,522,1,9,71,0,Silva Jardim,190002065259
+c1241,g26704,ver24,Laura Cruz,Laura Cruz Espindola,13777,PT,Suplente,153,1,28,71,0,Silva Jardim,190002065262
+c1242,g34635,ver24,Paulino do Pt,Paulino Jose da Silva,13513,PT,Suplente,60,1,47,71,0,Silva Jardim,190002065263
+c1243,g9387,ver24,Pc da Barbearia,Paulo Cezar da Silva,13123,PT,Suplente,145,1,29,71,0,Silva Jardim,190002065264
+c1244,g36093,ver24,Jurema da Agricultura,Jurema Maria da Conceição,13333,PT,Suplente,32,1,60,71,0,Silva Jardim,190002065265
+c1245,g30767,ver24,Jorge Castor,Jorge Luiz Cordeiro da Costa,13613,PT,Eleito,2661,1,17,165,0,Maricá,190002066763
+c1246,g30979,ver24,Robgol,Robson Teixeira da Silva,13999,PT,Suplente,2330,1,23,165,0,Maricá,190002066764
+c1247,g32120,ver24,Chris,Christiane de Lima Corrêa Botelho,13013,PT,Suplente,478,1,51,165,0,Maricá,190002066765
+c1248,g11628,ver24,Andrea Cunha,Andrea Cunha da Silva Monken,13456,PT,Suplente,2357,1,22,165,0,Maricá,190002066766
+c1249,g36953,ver24,Filipe Bittencourt,Filipe Dias Bittencourt,13123,PT,Eleito,3867,1,7,165,0,Maricá,190002066767
+c1250,g46897,ver24,André Casquinha,Andre Luis Azeredo da Silva,13000,PT,Eleito,4848,1,4,165,0,Maricá,190002066769
+c1251,g22446,ver24,Araujo de Inoã,José Iraneide de Araujo,13213,PT,Suplente,128,1,91,165,0,Maricá,190002066770
+c1252,g49054,ver24,Thiago Fonseca,Paulo Thiago Fonseca de Araujo Ribeiro,13097,PT,Suplente,424,1,53,165,0,Maricá,190002066771
+c1253,g23431,ver24,Kelly Bernardos,Gleice Kelly  Bernardo dos Santos Figueiredo,13180,PT,Suplente,487,1,50,165,0,Maricá,190002066773
+c1254,g3747,ver24,Pastor Oliver,Oliver Costa Goiano,13777,PT,Suplente,150,1,86,165,0,Maricá,190002066774
+c1255,g13748,ver24,Aldair de Linda,Aldair Nunes Elias,13650,PT,Eleito,7602,1,1,165,0,Maricá,190002066775
+c1256,g25169,ver24,Hadesh,Luiz Felipe Santos de Oliveira,13500,PT,Eleito,5889,1,3,165,0,Maricá,190002066776
+c1257,g21584,ver24,Kanu Lyrio,Anderson Araujo Lyrio,13789,PT,Suplente,195,1,78,165,0,Maricá,190002066777
+c1258,g7144,ver24,Rita Rocha,Rita de Cássia Rocha Livermore,13998,PT,Eleito,2801,1,13,165,0,Maricá,190002066778
+c1259,g48024,ver24,Denise  Alemão,Denise de Oliveira Costa,13113,PT,Suplente,103,1,98,165,0,Maricá,190002066779
+c1260,g49393,ver24,Emilia Gorjão,Emilia Gorjão Bastos,13111,PT,Suplente,39,1,135,165,0,Maricá,190002066780
+c1261,g34452,ver24,Helter Ferreira,Helter Viana Ferreira de Almeida,13133,PT,Eleito,4415,1,6,165,0,Maricá,190002066784
+c1262,g26200,ver24,Professor Pedro Paulo,Pedro Paulo de Souza Almeida,13101,PT,Suplente,152,1,132,249,0,Cabo Frio,190002072809
+c1263,g2824,ver24,Wagner Leal,Wagner da Cruz Leal da Silva,13133,PT,Suplente,95,1,157,249,0,Cabo Frio,190002072812
+c1264,g29717,ver24,Tiano da Vila,Cristiano Ferreira dos Santos,13353,PT,Suplente,65,1,173,249,0,Cabo Frio,190002072813
+c1265,g27201,ver24,Carminha Protetora,Maria do Carmo Duarte,13123,PT,Suplente,478,1,72,249,0,Cabo Frio,190002072815
+c1266,g32078,ver24,Diego da Silva,Diego Aldano da Silva,13777,PT,Suplente,767,1,46,249,0,Cabo Frio,190002072819
+c1267,g20521,ver24,Paulo Sergio do Kenia,Paulo Sergio Pereira de Souza,13555,PT,Suplente,93,1,159,249,0,Cabo Frio,190002072821
+c1268,g30899,ver24,Raquel Castilho,Raquel Castilho Ferreira,13602,PT,Suplente,8,1,240,249,0,Cabo Frio,190002072823
+c1269,g1269,ver24,Zé Biônico,José Joaquim Neves de Oliveira,13531,PT,Suplente,31,1,246,261,0,Petrópolis,190002074355
+c1270,g33965,ver24,Wesley Diniz,Wesley Diniz Furtado,13123,PT,Suplente,1728,1,26,261,0,Petrópolis,190002074356
+c1271,g28140,ver24,Romário,Onecimo da Silva Abranches,13333,PT,Suplente,296,1,125,261,0,Petrópolis,190002074360
+c1272,g19030,ver24,Thiagão,Thiago Dias de Mattos Costa,13777,PT,Suplente,801,1,52,261,0,Petrópolis,190002074362
+c1273,g623,ver24,Enfermeira Estela,Maria Estela Eleodoro,13813,PT,Suplente,53,1,228,261,0,Petrópolis,190002074364
+c1274,g49341,ver24,Lu Pomin,Luciana Martins Teixeira,13613,PT,Suplente,109,1,196,261,0,Petrópolis,190002074367
+c1275,g43338,ver24,Fernando Araújo,Fernando Luis de Araújo,13789,PT,Suplente,1394,1,31,261,0,Petrópolis,190002074369
+c1276,g36730,ver24,Marcinha,Marcia Rodrigues da Silva,18900,REDE,Não eleito,72,1,361,467,0,Nova Iguaçu,190002116738
+c1277,g25498,ver24,Raone Ferreira,Raone Cassin Maia Ferreira,40000,PSB,Eleito,4474,1,2,338,0,Volta Redonda,190002124848
+c1278,g31897,ver24,Valci do Fogão,Valci Gomes Martins,13456,PT,Não eleito,18,1,74,87,0,Guapimirim,190002129316
+c1279,g25251,ver24,Fernandinho Corretor,Fernando Souza Mascarenhas,13134,PT,Não eleito,2,1,85,87,0,Guapimirim,190002129319
+c1280,g15491,ver24,Fábio Machado,Fábio dos Santos Machado,13100,PT,Não eleito,21,1,71,99,0,Mendes,190002129330
+c1281,g14080,ver24,Fernando Carioca,Fernando de Souza,13000,PT,Não eleito,10,1,87,99,0,Mendes,190002129331
+c1282,g4217,ver24,Sandro Amorim,Alexsandro de Amorim,13021,PT,Não eleito,2,1,85,87,0,Guapimirim,190002129359
+c1283,g16512,ver24,Luiz Carlos Beiço,Luiz Carlos Teixeira Mello,13123,PT,Não eleito,15,1,76,87,0,Guapimirim,190002129360
+c1284,g14896,ver24,Paulo Micena,Paulo Alves dos Santos,13133,PT,Não eleito,41,1,66,87,0,Guapimirim,190002129361
+c1285,g26608,ver24,José Luis Dalcin,José Luis Dalcin,13333,PT,Não eleito,69,1,57,87,0,Guapimirim,190002129362
+c1286,g40018,ver24,Patrícia,Patrícia Chrispim Deodato,13103,PT,Não eleito,21,1,72,87,0,Guapimirim,190002129363
+c1287,g12464,ver24,Kamilly Vitória,Kamilly Vitória Franco Ribeiro dos Santos,13131,PT,Não eleito,1,1,87,87,0,Guapimirim,190002129364
+c1288,g47479,ver24,Lorena,Lorena de Paula Santos Carlos,13111,PT,Não eleito,6,1,80,87,0,Guapimirim,190002129365
+c1289,g32691,ver24,Cristiane Moura,Cristiane da Silva Moura,13222,PT,Não eleito,6,1,80,87,0,Guapimirim,190002129366
+c1290,g16527,ver24,Marcio Rolete,Marcio de Araújo Rodrigues,13100,PT,Não eleito,59,1,61,87,0,Guapimirim,190002129367
+c1291,g31366,ver24,Kândida,Kandida Adelise dos Santos Sales,20555,PODE,Suplente,1,1,75,76,0,Sapucaia,190002130640
+c1292,g41643,ver24,Alice,Alice Helena Casemiro de Almeida,13123,PT,Suplente,298,1,79,324,0,Barra Mansa,190002133014
+c1293,g47684,ver24,Chiquinha Marques,Francisca Imaculada Marques,13633,PT,Suplente,278,1,82,324,0,Barra Mansa,190002133015
+c1294,g3637,ver24,Prof. Fernanda Carreiro,Fernanda Carreiro Alves,13666,PT,Suplente,1584,1,15,324,0,Barra Mansa,190002133018
+c1295,g25604,ver24,Tulio Costa,Túlio Costa Silva,13313,PT,Suplente,986,1,30,324,0,Barra Mansa,190002133023
+c1296,g36087,ver24,Ivo da Pampa,Ivo Rodrigues,13213,PT,Suplente,84,1,161,324,0,Barra Mansa,190002133026
+c1297,g41857,ver24,Luiz Melo,Luiz Carlos Melo da Silva,13000,PT,Suplente,98,1,150,324,0,Barra Mansa,190002133028
+c1298,g23180,ver24,Geraldo Silva,Geraldo da Silva,13665,PT,Suplente,65,1,187,324,0,Barra Mansa,190002133029
+c1299,g10758,ver24,Professora Clarice,Clarice de Freitas Silva  Avila,13813,PT,Suplente,492,1,54,324,0,Barra Mansa,190002133031
+c1300,g29377,ver24,Ivo Jose,Ivo Jose da Silva,13456,PT,Suplente,71,1,174,324,0,Barra Mansa,190002133032
+c1301,g43895,ver24,Camila Peçanha,Camila Peçanha Batista,13137,PT,Suplente,304,1,612,995,0,Rio de Janeiro,190002134262
+c1302,g28555,ver24,Tiago Santana,Tiago Santana da Conceição,13021,PT,Suplente,8763,1,90,995,0,Rio de Janeiro,190002134263
+c1303,g39854,ver24,Luciana Nery,Luciana Neri da Silva,13969,PT,Suplente,117,1,855,995,0,Rio de Janeiro,190002134264
+c1304,g36935,ver24,Luciana Novaes,Luciana Gonçalves de Novaes,13535,PT,Suplente,11994,1,67,995,0,Rio de Janeiro,190002134265
+c1305,g15460,ver24,Dani Nunes,Dani Nunes,13031,PT,Suplente,697,1,402,995,0,Rio de Janeiro,190002134266
+c1306,g6662,ver24,Rafaela Albergaria,Rafaela Cristina Bonifácio Albergaria,65000,PC do B,Suplente,4546,1,149,995,0,Rio de Janeiro,190002134267
+c1307,g46900,ver24,Gilberto Palmares,Gilberto Silva Palmares,13455,PT,Suplente,6664,1,117,995,0,Rio de Janeiro,190002134268
+c1308,g23723,ver24,Miltão Santos,Milton dos Santos Rosa,13738,PT,Suplente,213,1,708,995,0,Rio de Janeiro,190002134269
+c1309,g36820,ver24,Clatia Vieira,Clátia Regina Vieira,13456,PT,Suplente,1254,1,311,995,0,Rio de Janeiro,190002134270
+c1310,g38228,ver24,Dr Lobão,Antônio Pereira da Silva Lobão Filho,13444,PT,Suplente,296,1,623,995,0,Rio de Janeiro,190002134271
+c1311,g44234,ver24,Felipe Pires,Felipe da Silva Pires,13620,PT,Eleito,15136,1,51,995,0,Rio de Janeiro,190002134272
+c1312,g6549,ver24,Maíra do Mst,Maíra Santana Marinho da Cunha,13713,PT,Eleito,14667,1,53,995,0,Rio de Janeiro,190002134273
+c1313,g51117,ver24,Eduardo Coelho,Eduardo Coelho de Lima,13133,PT,Suplente,241,1,674,995,0,Rio de Janeiro,190002134274
+c1314,g11510,ver24,Lico,Luiz Henrique de Morais,13065,PT,Suplente,111,1,863,995,0,Rio de Janeiro,190002134275
+c1315,g12977,ver24,Dj Brandon Lee,Brandon Fernandes de Lima Galeno,13091,PT,Suplente,53,1,948,995,0,Rio de Janeiro,190002134276
+c1316,g30515,ver24,Leonel de Esquerda,Leonel Querino da Silva Neto,13012,PT,Eleito,13325,1,60,995,0,Rio de Janeiro,190002134277
+c1317,g7361,ver24,Junior Mangueira,Edvaldo Vicente Gomes Junior,13131,PT,Suplente,7677,1,105,995,0,Rio de Janeiro,190002134278
+c1318,g46196,ver24,Enfermeira Líbia,Líbia Dantas Bellusci,13100,PT,Suplente,2053,1,240,995,0,Rio de Janeiro,190002134279
+c1319,g48946,ver24,Edson Santos,Edson Santos de Souza,13222,PT,Não eleito,0,0,989,995,5639,Rio de Janeiro,190002134280
+c1320,g14069,ver24,Dr Rubinho da Divineia,Robercil da Rocha Parreira,13422,PT,Suplente,107,1,872,995,0,Rio de Janeiro,190002134281
+c1321,g39709,ver24,Alex Lima,Alex dos Santos Lima,13500,PT,Suplente,409,1,539,995,0,Rio de Janeiro,190002134282
+c1322,g51119,ver24,Jp Farelli,João Paulo Martins Farelli,13013,PT,Suplente,943,1,352,995,0,Rio de Janeiro,190002134283
+c1323,g15646,ver24,Coletiva Maracajá Rosapotiguar,Rosangela Rosa do Nascimento Henriques Teixeira,13313,PT,Suplente,462,1,509,995,0,Rio de Janeiro,190002134284
+c1324,g45798,ver24,Paulo Ganga,Paulo Roberto Câmara dos Santos,13111,PT,Suplente,180,1,749,995,0,Rio de Janeiro,190002134285
+c1325,g14353,ver24,Rodrigo Mondego,Rodrigo Ignacio Mondego,13000,PT,Suplente,4992,1,142,995,0,Rio de Janeiro,190002134286
+c1326,g17854,ver24,Sandrão da Cut,Sandro Alex de Oliveira Cezar,13123,PT,Suplente,3844,1,173,995,0,Rio de Janeiro,190002134287
+c1327,g11923,ver24,Alvaro Américo,Alvaro Américo Conceição,13315,PT,Suplente,73,1,921,995,0,Rio de Janeiro,190002134288
+c1328,g31326,ver24,Tainá de Paula,Tainá Reis de Paula Kapaz,13777,PT,Eleito,49986,1,3,995,0,Rio de Janeiro,190002134289
+c1329,g47328,ver24,Edilene das Matas Fechadas,Edilene da Conceição Santos de Souza,13999,PT,Suplente,99,1,890,995,0,Rio de Janeiro,190002134290
+c1330,g2403,ver24,Adriana Valente,Adriana da Silva Freire Valente,13613,PT,Suplente,1115,1,329,995,0,Rio de Janeiro,190002134292
+c1331,g22580,ver24,Adelson Guedes,Adelson Pereira Guedes,13011,PT,Suplente,1568,1,276,995,0,Rio de Janeiro,190002134293
+c1332,g2178,ver24,Niquinho,Flávio das Graças Miranda,13860,PT,Suplente,8842,1,89,995,0,Rio de Janeiro,190002134294
+c1333,g30784,ver24,Professor Raphael,Raphael Furtado da Silva,13397,PT,Suplente,204,1,721,995,0,Rio de Janeiro,190002134295
+c1334,g20988,ver24,Mãe Dayse,Dayse Freitas de Mesquita,13029,PT,Suplente,140,1,813,995,0,Rio de Janeiro,190002134296
+c1335,g29499,ver24,Amelia Leal,Amelia Leal de Almeida,13952,PT,Suplente,137,1,818,995,0,Rio de Janeiro,190002134297
+c1336,g14714,ver24,Professora Fátima Lima,Maria de Fátima Magalhães de Lima,13113,PT,Suplente,4940,1,145,995,0,Rio de Janeiro,190002134298
+c1337,g6825,ver24,Mônica Francisco,Mônica Santos Francisco,13888,PT,Suplente,6965,1,113,995,0,Rio de Janeiro,190002134299
+c1338,g8769,ver24,Indianarae Siqueira,Indianarae Pereira Siqueira,13169,PT,Suplente,1765,1,258,995,0,Rio de Janeiro,190002134300
+c1339,g9610,ver24,Robson Duarte,Robson Duarte de Faria,13474,PT,Suplente,7960,1,103,995,0,Rio de Janeiro,190002134301
+c1340,g35472,ver24,Roberto Monteiro,Roberto Monteiro Soares,65123,PC do B,Suplente,6574,1,118,995,0,Rio de Janeiro,190002134302
+c1341,g9151,ver24,Ana Cláudia,Ana Claudia dos Santos,13007,PT,Suplente,247,1,672,995,0,Rio de Janeiro,190002134303
+c1342,g38655,ver24,Barbara Barros,Barbara Mariana da Silva de Barros,13513,PT,Suplente,1187,1,323,995,0,Rio de Janeiro,190002134304
+c1343,g21902,ver24,Eduardo Pipito,Eduardo Salles de Araújo Junior,13318,PT,Suplente,205,1,719,995,0,Rio de Janeiro,190002134305
+c1344,g47994,ver24,Dr Marcos Paulo,Marcos Paulo Costa da Silva,13555,PT,Suplente,8000,1,101,995,0,Rio de Janeiro,190002134306
+c1345,g19922,ver24,Camila Moradia,Camila Aparecida Silva Santos,13578,PT,Suplente,2724,1,208,995,0,Rio de Janeiro,190002134307
+c1346,g41172,ver24,Emilia Amoêdo,Emilia Rachel Bendelak Amoêdo,13597,PT,Suplente,177,1,755,995,0,Rio de Janeiro,190002134308
+c1347,g47389,ver24,Rodrigo D Oliveira,Rodrigo Antonio D Oliveira Graça,13333,PT,Suplente,770,1,381,995,0,Rio de Janeiro,190002134309
+c1348,g36673,ver24,Bruno de Lú,Bruno Manhães,13010,PT,Não eleito,71,1,54,97,0,Quissamã,190002142070
+c1349,g39809,ver24,Billy,Enildo Azevedo Silva,13123,PT,Não eleito,67,1,58,97,0,Quissamã,190002142071
+c1350,g17396,ver24,Cida da Praia,Maria Aparecida Vera,13160,PT,Não eleito,50,1,69,97,0,Quissamã,190002142072
+c1351,g6140,ver24,Wesley Mascarenhas,Wesley Mascarenhas Batista,13333,PT,Não eleito,113,1,39,97,0,Quissamã,190002142073
+c1352,g49527,ver24,Mara,Neucimara Camilo Rodrigues,13555,PT,Não eleito,120,1,36,97,0,Quissamã,190002142074
+c1353,g38902,ver24,Canecão,José Luiz de Souza,13456,PT,Não eleito,22,1,78,97,0,Quissamã,190002142075
+c1354,g33044,ver24,Marcos Carteiro,Marcos Antonio de Castro,13444,PT,Não eleito,18,1,80,97,0,Quissamã,190002142076
+c1355,g33412,ver24,Mário Toca,Mario Cesar Barcelos Ferreira,13013,PT,Não eleito,8,1,91,97,0,Quissamã,190002142077
+c1356,g2797,ver24,Laura,Laura Roberta Basílio Vieira Wanisangh,13111,PT,Não eleito,24,1,76,97,0,Quissamã,190002142078
+c1357,g15901,ver24,Queli Carvalho,Queli dos Santos Carvalho Azevedo,13000,PT,Não eleito,63,1,62,97,0,Quissamã,190002142080
+c1358,g5611,ver24,Doutor Igor Diogo,Igor Franco de Souza Araujo Diogo,13567,PT,Eleito,1205,1,4,85,0,Paracambi,190002142306
+c1359,g43495,ver24,Kaku,Carlos Alberto Callegaris Neves,13111,PT,Suplente,1051,1,8,85,0,Paracambi,190002142309
+c1360,g2196,ver24,Jessie Freitas,Jessica Cristina Freitas de Oliveira Ápis,13123,PT,Suplente,77,1,55,85,0,Paracambi,190002142311
+c1361,g9359,ver24,Benny Briolly,Benny Briolly,50777,PSOL,Eleito,4801,1,9,298,0,Niterói,190002149461
+c1362,g49255,ver24,Gabriel Gouvêa,Gabriel Gouvêa,13123,PT,Não eleito,19,1,100,145,0,Santo Antônio de Pádua,190002151361
+c1363,g45042,ver24,Mario Amaral,Mario Alves do Amaral,13125,PT,Não eleito,6,1,126,145,0,Santo Antônio de Pádua,190002151362
+c1364,g49566,ver24,Marcelo Beca,Marcelo Carvalho Calonio,13113,PT,Não eleito,4,1,131,145,0,Santo Antônio de Pádua,190002151363
+c1365,g390,ver24,Pati Calderon,Patrícia Pereira Calderon,13169,PT,Não eleito,3,1,133,145,0,Santo Antônio de Pádua,190002151364
+c1366,g11136,ver24,Juliano Diricinha,Juliano de Souza Ramos,13197,PT,Não eleito,42,1,80,145,0,Santo Antônio de Pádua,190002151365
+c1367,g47233,ver24,Ana Lúcia Monteiro,Ana Lúcia Monteiro,13100,PT,Não eleito,7,1,123,145,0,Santo Antônio de Pádua,190002151366
+c1368,g24780,ver24,Wallace Dias,Wallace Dias da Silva,13456,PT,Não eleito,14,1,108,145,0,Santo Antônio de Pádua,190002151367
+c1369,g15951,ver24,Alba Carvalho,Alba Luciana Carvalho Barroso Machado,13001,PT,Não eleito,2,1,137,145,0,Santo Antônio de Pádua,190002151368
+c1370,g15813,ver24,Hélio Campelo,Hélio Campelo,13444,PT,Não eleito,1,1,140,145,0,Santo Antônio de Pádua,190002151369
+c1371,g13950,ver24,Davi Campelo,Davi Azerêdo Campelo,13000,PT,Não eleito,20,1,98,145,0,Santo Antônio de Pádua,190002151370
+c1372,g31447,ver24,Eraldo Salsicha,Eraldo Galete de Oliveira,13013,PT,Não eleito,0,0,141,145,0,Santo Antônio de Pádua,190002151371
+c1373,g48812,ver24,Creuza Isabel,Creuza Isabel da Silva,13130,PT,Não eleito,0,0,141,145,0,Santo Antônio de Pádua,190002151372
+c1374,g30636,ver24,Rodrigo Gonçalves,Rodrigo Goncalves de Souza,55123,PSD,Suplente,277,1,10,126,0,Engenheiro Paulo de Frontin,190002154398
+c1375,g30383,ver24,Zoraia Braz,Zoraia Braz Sobrinho Dias,13060,PT,Suplente,162,1,115,245,0,Macaé,190002155174
+c1376,g15792,ver24,Luis Fernando Dedão,Luiz Fernando dos Santos,13234,PT,Suplente,38,1,199,245,0,Macaé,190002155175
+c1377,g7373,ver24,Saraiva,Manoel Saraiva da Silva Junior,13456,PT,Suplente,1629,1,24,245,0,Macaé,190002155176
+c1378,g13475,ver24,Marcel Silvano,Marcel Silvano da Silva Souza,13333,PT,Suplente,1695,1,23,245,0,Macaé,190002155177
+c1379,g28597,ver24,Graça do Pt,Maria das Graças Gomes Franco,13677,PT,Suplente,125,1,128,245,0,Macaé,190002155178
+c1380,g6477,ver24,Professor Paulo Henrique,Paulo Henrique Dantas Pinto,13013,PT,Suplente,410,1,73,245,0,Macaé,190002155182
+c1381,g31757,ver24,Leandra Lopes,Leandra Lopes Vieira,13123,PT,Eleito,2773,1,11,245,0,Macaé,190002155186
+c1382,g20216,ver24,William Macedo,William de Almeida Macedo,23681,CIDADANIA,Suplente,95,1,893,995,0,Rio de Janeiro,190002159141
+c1383,g9673,ver24,Tia Débora,Débora de Souza Pires,15678,MDB,Não eleito,3,1,101,126,0,Engenheiro Paulo de Frontin,190002160479
+c1384,g49000,ver24,Michel Miranda,Michel Miranda,13100,PT,Não eleito,65,1,46,116,0,Pinheiral,190002160841
+c1385,g18213,ver24,Barrinha,Sílvio José Ribeiro Alves,13013,PT,Não eleito,192,1,24,116,0,Pinheiral,190002160842
+c1386,g10281,ver24,Valdir da Área Rural,Valdir Francisco da Silva,13567,PT,Não eleito,13,1,92,116,0,Pinheiral,190002160843
+c1387,g23000,ver24,Cristiano Barcelos,Cristiano Alves Barcelos,13166,PT,Não eleito,82,1,41,116,0,Pinheiral,190002160844
+c1388,g30520,ver24,Altair Leonildo,Altair Leonildo da Silva,13356,PT,Não eleito,34,1,65,116,0,Pinheiral,190002160845
+c1389,g35643,ver24,Verônica Santos,Maria Cícera dos Santos,13191,PT,Não eleito,6,1,106,116,0,Pinheiral,190002160846
+c1390,g14281,ver24,Fabiana Carmo Somos Sementes,Fabiana Carmo dos Santos Rodrigues,13055,PT,Não eleito,98,1,36,116,0,Pinheiral,190002160847
+c1391,g48222,ver24,Neno Pit,José Donizetti de Souza Junior,13123,PT,Não eleito,41,1,58,116,0,Pinheiral,190002160848
+c1392,g40988,ver24,Lúcia do Bar,Maria Florencia Moura,13125,PT,Não eleito,19,1,84,116,0,Pinheiral,190002160849
+c1393,g36057,ver24,Rogério Lemos Ratão,Paulo Rogério de Oliveira Lemos,13022,PT,Não eleito,46,1,56,116,0,Pinheiral,190002160850
+c1394,g10575,ver24,Yorrana Fersura,Yorrana Silva Fersura,13137,PT,Suplente,65,1,204,360,0,Nova Friburgo,190002162294
+c1395,g19608,ver24,Jornalista José Duarte,José Emilson Perrut Duarte,13133,PT,Suplente,13,1,308,360,0,Nova Friburgo,190002162295
+c1396,g9785,ver24,Carlos Eduardo,Carlos Eduardo da Silva Costa,43000,PV,Suplente,29,1,274,360,0,Nova Friburgo,190002162296
+c1397,g47431,ver24,Sandrão,Sandro Vieira de Andrade,13017,PT,Suplente,12,1,311,360,0,Nova Friburgo,190002162297
+c1398,g12402,ver24,Cezar Bezerra,Cezar Luiz Martins Bezerra,13613,PT,Suplente,92,1,173,360,0,Nova Friburgo,190002162298
+c1399,g31048,ver24,Maiara Felício,Maiara Felício da Silva,13713,PT,Eleito,2592,1,1,360,0,Nova Friburgo,190002162299
+c1400,g17637,ver24,Sinesia,Maria Sinésia Galdino,13888,PT,Suplente,124,1,159,360,0,Nova Friburgo,190002162301
+c1401,g45858,ver24,Silvia Faltz,Silvia Andreia Klein Faltz,13022,PT,Suplente,247,1,106,360,0,Nova Friburgo,190002162302
+c1402,g8041,ver24,Wilkles,Wilkles da Silva Dias,13113,PT,Suplente,163,1,134,360,0,Nova Friburgo,190002162303
+c1403,g24443,ver24,Natanael Mota Theo do Trailer,Natanael da Mota Gonçalves,13131,PT,Suplente,26,1,279,360,0,Nova Friburgo,190002162305
+c1404,g48669,ver24,Nilce Negona,Nilce Helena Reis Carvalho,65747,PC do B,Suplente,12,1,311,360,0,Nova Friburgo,190002162306
+c1405,g30674,ver24,Norival,Norival Espíndola do Amaral,13000,PT,Suplente,646,1,43,360,0,Nova Friburgo,190002162307
+c1406,g33164,ver24,Orlando América,Orlando José Vieira,13111,PT,Suplente,63,1,207,360,0,Nova Friburgo,190002162308
+c1407,g13300,ver24,Paulo do Sindicato,Paulo Cesar Fernandes,13135,PT,Suplente,332,1,79,360,0,Nova Friburgo,190002162309
+c1408,g5409,ver24,Genecy Dias,Genecy Pereira Dias,13777,PT,Suplente,351,1,72,360,0,Nova Friburgo,190002162311
+c1409,g18321,ver24,Leandro Lopes,Leandro da Costa Lopes,13123,PT,Suplente,87,1,178,360,0,Nova Friburgo,190002162312
+c1410,g30466,ver24,Dila Marry Febret,Adilene de Fatima Evangelista,13001,PT,Suplente,37,1,252,360,0,Nova Friburgo,190002162313
+c1411,g26685,ver24,Cláudio Damião,Cláudio Damião Santos Pereira,13013,PT,Eleito,2034,1,4,360,0,Nova Friburgo,190002162314
+c1412,g44949,ver24,Carla de Naval,Carla da Conceição dos Santos,12233,PDT,Não eleito,3,1,202,212,0,Saquarema,190002167212
+c1413,g3576,ver24,Arleni do Xicão,Arleni Machado Vellasco,13013,PT,Não eleito,3,1,61,62,0,Cambuci,190002168466
+c1414,g9672,ver24,Elson Cabeludo,Elson Antonio Rastoldo Lima,13130,PT,Não eleito,5,1,58,62,0,Cambuci,190002168467
+c1415,g41547,ver24,Manoel do Kiosk,Manoel Francisco de Oliveira,13430,PT,Não eleito,15,1,47,62,0,Cambuci,190002168468
+c1416,g43757,ver24,Eduardo Acosta,Eduardo Jose Acosta Barbosa,12212,PDT,Suplente,137,1,818,995,0,Rio de Janeiro,190002169850
+c1417,g3934,ver24,Jorge Murilo,Jorge Murilo de Menezes Filho,44232,UNIÃO,Suplente,308,1,608,995,0,Rio de Janeiro,190002171243
+c1418,g42987,ver24,Filipe Azeredo,Luis Filipe Azeredo Moura,13111,PT,Não eleito,54,1,61,103,0,Bom Jardim,190002200620
+c1419,g33495,ver24,Pablo Gimenes,Pablo Gimenes Pinheiro,13333,PT,Não eleito,391,1,15,103,0,Bom Jardim,190002200621
+c1420,g44906,ver24,Laureane Moraes,Laureane Moraes Lomeu,13113,PT,Não eleito,24,1,82,103,0,Bom Jardim,190002200622
+c1421,g2220,ver24,Jacques do Mengão,Jorge Luiz Jacques,13612,PT,Não eleito,26,1,109,138,0,Nilópolis,190002201332
+c1422,g41146,ver24,Joseane Santos Confeiteira,Josiane Silvestre dos Santos,13777,PT,Não eleito,30,1,107,138,0,Nilópolis,190002201334
+c1423,g4624,ver24,Rivanda Sales,Rivanda Sales Alves,13188,PT,Não eleito,2,1,120,138,0,Nilópolis,190002201335
+c1424,g51038,ver24,Rosane Santos,Rosane de Assis Santos,13113,PT,Não eleito,56,1,92,138,0,Nilópolis,190002201336
+c1425,g10701,ver24,Mau Mau do Paiol,Gleisson Souza Domingos Durade,13123,PT,Não eleito,32,1,104,138,0,Nilópolis,190002201337
+c1426,g39733,ver24,Zéca Carvalho do Pt,José Mario de Carvalho Silva,13013,PT,Não eleito,269,1,51,138,0,Nilópolis,190002201338
+c1427,g22902,ver24,Professor Wenderson,Wenderson Dias Ribeiro,13001,PT,Não eleito,449,1,37,138,0,Nilópolis,190002201340
+c1428,g49855,ver24,Professor Cidney,Cidney de Oliveira Inácio,13333,PT,Não eleito,179,1,59,138,0,Nilópolis,190002201342
+c1429,g15384,ver24,Léo Moura,Leandro dos Santos Moura,45045,PSDB,Eleito,1213,1,6,218,0,Japeri,190002202714
+c1430,g31430,ver24,Ju Amorim,Juliana de Amorim Gonçalves Cardoso,45555,PSDB,Suplente,192,1,95,218,0,Japeri,190002202715
+c1431,g50781,ver24,Rogéria da Chacrinha,Ana Rogeria de Andrade Pinto,10222,REPUBLICANOS,Não eleito,89,1,130,218,0,Japeri,190002203023
+c1432,g6451,ver24,Junior Martins,Adeoclemes de Sousa Martins Junior,10777,REPUBLICANOS,Não eleito,641,1,28,218,0,Japeri,190002203025
+c1433,g3534,ver24,Antonio Marcos Aguiar,Antonio Marcos Almeida de Aguiar,10651,REPUBLICANOS,Não eleito,208,1,87,218,0,Japeri,190002203032
+c1434,g39517,ver24,Flavio Carteiro,Flavio Pereira Viana,13000,PT,Não eleito,65,1,73,124,0,Rio Bonito,190002211434
+c1435,g48188,ver24,Tiele Morais,Tiele da Silva Morais,13123,PT,Não eleito,49,1,82,124,0,Rio Bonito,190002211437
+c1436,g43878,ver24,Pc Onofre,Paulo Cesar de Almeida Freitas Junior,13456,PT,Não eleito,21,1,61,101,0,Carmo,190002213281
+c1437,g30816,ver24,Professor Marcelo,Marcelo de Souza Virissimo,13280,PT,Não eleito,160,1,26,101,0,Carmo,190002213282
+c1438,g35349,ver24,Aguiar Enfermeiro,Jose Aguiar Souza Junior,13333,PT,Não eleito,17,1,66,101,0,Carmo,190002213283
+c1439,g22612,ver24,Lucilia Hughenin,Lucilia Tavares Huguenin,13013,PT,Não eleito,10,1,81,101,0,Carmo,190002213284
+c1440,g35277,ver24,Flavielli,Flavielli Schettino Ramos,13000,PT,Não eleito,9,1,85,101,0,Carmo,190002213285
+c1441,g31839,ver24,Chico Pedreiro,Francisco Fernando da Silva,13123,PT,Não eleito,21,1,61,101,0,Carmo,190002213286
+c1442,g31195,ver24,João Batista,João Batista Ferreira Guedes,40214,PSB,Não eleito,58,1,425,470,0,São Gonçalo,190002214033
+c1443,g45519,ver24,Rilda Campos,Rilda Maria Campos Ferraz,13456,PT,Não eleito,41,1,271,338,0,Volta Redonda,190002215366
+c1444,g1263,ver24,Walmir,Walmir Batista,13413,PT,Não eleito,39,1,276,338,0,Volta Redonda,190002215367
+c1445,g3728,ver24,Walmir Vitor,Walmir Vitor de Souza,13609,PT,Não eleito,1082,1,46,338,0,Volta Redonda,190002215368
+c1446,g35192,ver24,Dayse Ribeiro,Dayse dos Santos Pereira,13133,PT,Não eleito,198,1,148,338,0,Volta Redonda,190002215369
+c1447,g49719,ver24,Macaia,Jose Alexandre Alves,13100,PT,Não eleito,315,1,114,338,0,Volta Redonda,190002215370
+c1448,g34399,ver24,Fabio Martins,Fabio Martins da Silva,13040,PT,Não eleito,595,1,75,338,0,Volta Redonda,190002215371
+c1449,g48683,ver24,Conceição Santos,Maria Conceição dos Santos,13777,PT,Não eleito,769,1,59,338,0,Volta Redonda,190002215372
+c1450,g50317,ver24,Geslia Marques,Géslia Marques,13180,PT,Não eleito,331,1,110,338,0,Volta Redonda,190002215374
+c1451,g839,ver24,Dani Teobaldo,Daniele Teobaldo de Almeida,13039,PT,Não eleito,73,1,232,338,0,Volta Redonda,190002215375
+c1452,g43847,ver24,Gilmar Motorista,Gilmar Duarte Ferreira,13020,PT,Não eleito,205,1,142,338,0,Volta Redonda,190002215376
+c1453,g24975,ver24,Jader,Jader Fagundes Pedrosa,13113,PT,Não eleito,131,1,181,338,0,Volta Redonda,190002215377
+c1454,g3537,ver24,Pablo Rafael,Pablo Rafael Marques dos Santos,13123,PT,Não eleito,159,1,161,338,0,Volta Redonda,190002215378
+c1455,g26075,ver24,Marcos Araujo,Marcos Antonio Araujo,13013,PT,Não eleito,758,1,61,338,0,Volta Redonda,190002215379
+c1456,g12603,ver24,Nilson Nenêco,Nilson de Freitas Ferreira,13001,PT,Não eleito,109,1,199,338,0,Volta Redonda,190002215380
+c1457,g19591,ver24,Mestre Abel,Abel de Paula de Oliveira,13325,PT,Não eleito,81,1,222,338,0,Volta Redonda,190002215381
+c1458,g16834,ver24,Paulinho da Padaria,Paulo da Silva Valadares,13313,PT,Não eleito,33,1,282,338,0,Volta Redonda,190002215382
+c1459,g9809,ver24,Rodrigo Beltrão,Rodrigo Silva Beltrão Chaves,13000,PT,Não eleito,507,1,81,338,0,Volta Redonda,190002215383
+c1460,g21563,ver24,Bel,Izabel Gomes,13213,PT,Não eleito,12,1,319,338,0,Volta Redonda,190002215385
+c1461,g31627,ver24,Adão,Adão Henrique Moreira,13333,PT,Não eleito,193,1,152,338,0,Volta Redonda,190002215386
+c1462,g6957,ver24,Douglas Mucciolo,Douglas Roberto de Oliveira Mucciolo,13456,PT,Não eleito,810,1,117,467,0,Nova Iguaçu,190002216138
+c1463,g42112,ver24,Dr Cacau,José Carlos Fonseca,13100,PT,Não eleito,1191,1,90,467,0,Nova Iguaçu,190002216139
+c1464,g14178,ver24,Ferreirinha,Carlos Roberto Ferreira,13620,PT,Não eleito,1906,1,68,467,0,Nova Iguaçu,190002216140
+c1465,g41917,ver24,Andressa Barros,Andressa Barros Fernandes,13444,PT,Não eleito,512,1,152,467,0,Nova Iguaçu,190002216144
+c1466,g34884,ver24,Bruno Vigilante,Sergio Barbosa Bruno,13667,PT,Não eleito,42,1,411,467,0,Nova Iguaçu,190002216147
+c1467,g6913,ver24,Edison Medeiros,Edison da Silva Medeiros,13013,PT,Não eleito,581,1,140,467,0,Nova Iguaçu,190002216150
+c1468,g7559,ver24,Marquinho do Peixe,Marco Antônio Barboza da Costa,13123,PT,Não eleito,202,1,255,467,0,Nova Iguaçu,190002216151
+c1469,g34843,ver24,Luciana Azevedo,Luciana da Silva Azevedo,13111,PT,Não eleito,668,1,129,467,0,Nova Iguaçu,190002216152
+c1470,g5507,ver24,Ane Santos,Viviane da Silva Santos Gonçalves,13557,PT,Não eleito,227,1,241,467,0,Nova Iguaçu,190002216153
+c1471,g18921,ver24,Elaine Monteiro,Elaine Monteiro Ribeiro,13180,PT,Não eleito,1322,1,83,467,0,Nova Iguaçu,190002216154
+c1472,g50547,ver24,Eliel Junior,Eliel Bezerra de Lima Junior,13000,PT,Não eleito,400,1,179,467,0,Nova Iguaçu,190002216155
+c1473,g51016,ver24,Jairon da Sucam,Sebastião Jairon Bispo dos Santos,13007,PT,Não eleito,184,1,265,467,0,Nova Iguaçu,190002216157
+c1474,g48941,ver24,Francisco do Orgânico,Francisco Jose Carvalho Belieny,13333,PT,Não eleito,8,1,44,53,0,Aperibé,190002221783
+c1475,g46237,ver24,Simone Blanc,Simone Vieira Blanc,13123,PT,Não eleito,25,1,35,53,0,Aperibé,190002221784
+c1476,g40576,ver24,Cleiton de Búzios,Cleiton da Conceição Neto,13777,PT,Não eleito,0,0,97,97,12,Armação dos Búzios,190002226197
+c1477,g41105,ver24,Professora Maria Augusta,Maria Augusta Leite de Santana,13013,PT,Não eleito,214,1,36,97,0,Armação dos Búzios,190002226198
+c1478,g35536,ver24,Angélica Machado,Angélica Machado Moreira Mangerotti,13999,PT,Não eleito,8,1,94,97,0,Armação dos Búzios,190002226199
+c1479,g44841,ver24,Claudio Barros,Antonio Claudio Guimarães de Barros,13123,PT,Não eleito,36,1,79,97,0,Armação dos Búzios,190002226200
+c1480,g13465,ver24,Pc do Alto Uruguai,Paulo Cesar de Souza,13100,PT,Não eleito,143,1,89,231,0,Mesquita,190002228334
+c1481,g5784,ver24,Haile Teffe,Haile da Fonseca Teffe dos Reis,13555,PT,Não eleito,90,1,110,231,0,Mesquita,190002228335
+c1482,g5229,ver24,Elisa Campos,Elisa de Campos Salles de Oliveira,13620,PT,Não eleito,139,1,92,231,0,Mesquita,190002228337
+c1483,g50455,ver24,Professora Simone,Simone Fatima de Moura,13222,PT,Não eleito,181,1,81,231,0,Mesquita,190002228338
+c1484,g35978,ver24,Augusto Cesar,Augusto Cesar Sandino Ferreira Cortez,13777,PT,Não eleito,842,1,39,231,0,Mesquita,190002228342
+c1485,g7176,ver24,Eduardo Costa,Carlos Eduardo do Nascimento Costa,13144,PT,Não eleito,203,1,73,231,0,Mesquita,190002228343
+c1486,g17638,ver24,Cleber Louzada,Cleber Barros Louzada,13615,PT,Não eleito,199,1,76,231,0,Mesquita,190002228344
+c1487,g22573,ver24,Isadora Taffarel,Isadora Taffarel Marques dos Santos,13699,PT,Não eleito,1003,1,29,231,0,Mesquita,190002228346
+c1488,g8426,ver24,Cesinha Professor,Mario Cesar Ferreira Macedo,13133,PT,Não eleito,46,1,107,187,0,Seropédica,190002235988
+c1489,g34992,ver24,Pretta Gonçalves,Patrícia Araújo Gonçalves Ferreira,13013,PT,Não eleito,283,1,43,187,0,Seropédica,190002235989
+c1490,g32385,ver24,Jorjão do Km,Jorge Luis Conrado Lopes,13465,PT,Não eleito,15,1,142,187,0,Seropédica,190002235990
+c1491,g26943,ver24,Índio Carteiro,Gilmar da Silva Calegário,13123,PT,Não eleito,64,1,89,187,0,Seropédica,190002235992
+c1492,g34944,ver24,Professora Cleide,Cleide da Silva,13021,PT,Não eleito,56,1,95,187,0,Seropédica,190002235994
+c1493,g39855,ver24,Alexandro Tavares,Alexandro de Oliveira Tavares,33555,MOBILIZA,Não eleito,50,1,224,360,0,Queimados,190002236689
+c1494,g7539,ver24,Professor Marcus,Marcus Vinicius Alves da Silva,13213,PT,Não eleito,41,1,82,110,0,Vassouras,190002247164
+c1495,g26590,ver24,Amanda Ferreira,Amanda Ferreira Soares,13000,PT,Não eleito,141,1,46,110,0,Vassouras,190002247170
+c1496,g34271,ver24,Maycon de Faria,Maycon de Faria Celestino,13007,PT,Não eleito,19,1,241,274,0,Araruama,190002249566
+c1497,g7528,ver24,Tirsa Tulosa,Terezinha de Jesus Tulosa de Souza,13777,PT,Não eleito,37,1,204,274,0,Araruama,190002249567
+c1498,g23555,ver24,Marcela do Lula,Marcela dos Reis Barreto,13111,PT,Não eleito,208,1,69,274,0,Araruama,190002249568
+c1499,g4814,ver24,Fabrizzio Voz Ativa,Fabrizzio Castaneda da Silva,13013,PT,Não eleito,349,1,54,274,0,Araruama,190002249569
+c1500,g32377,ver24,Alexandre Lopes,Alexandre Lopes,13555,PT,Não eleito,28,1,226,274,0,Araruama,190002249570
+c1501,g16843,ver24,Lyana e Leo Mandato Coletivo,Lyana da Silva Oliveira Teixeira,13113,PT,Não eleito,104,1,116,274,0,Araruama,190002249571
+c1502,g9237,ver24,Vini,Vinicius Fonseca da Costa,13000,PT,Não eleito,184,1,81,274,0,Araruama,190002249572
+c1503,g50945,ver24,Dudu Valladares,Waldemar Freire Valladares,13123,PT,Não eleito,58,1,165,274,0,Araruama,190002249573
+c1504,g34067,ver24,Cilange do Povo,Cilange Carvalho dos Santos,13456,PT,Não eleito,72,1,148,274,0,Araruama,190002249575
+c1505,g51136,ver24,Diego do Gás,Diego de Azevedo Martins,13444,PT,Não eleito,581,1,41,274,0,Araruama,190002249576
+c1506,g13175,ver24,Kely e Guga Mandato Coletivo,Aldinara Silva de Almeida,13333,PT,Não eleito,19,1,241,274,0,Araruama,190002249577
+c1507,g15076,ver24,André Limoeiro,André Luiz Limoeiro de Paiva,13213,PT,Não eleito,8,1,258,274,0,Araruama,190002249578
+c1508,g46522,ver24,Rose e Neide Mandato Coletivo,Rosilda Cordeiro de Souza,13405,PT,Não eleito,33,1,213,274,0,Araruama,190002249582
+c1509,g20861,ver24,Zé Renato Goes,Jose Renato Goes Telles,13300,PT,Não eleito,89,1,132,274,0,Araruama,190002249583
+c1510,g20593,ver24,João Regis,Joao Guaracy Ferreira Regis,13159,PT,Suplente,16,1,126,156,0,Paty do Alferes,190002251012
+c1511,g2328,ver24,Fernando Espindola,Luiz Fernando de Paula Espindola,13456,PT,Suplente,96,1,51,156,0,Paty do Alferes,190002251018
+c1512,g6508,ver24,Preta do Ultimo Gole,Tania Regina de Freitas Rocha,13222,PT,Suplente,19,1,116,156,0,Paty do Alferes,190002251020
+c1513,g3362,ver24,Léo França,Leonardo Franca Souza,40123,PSB,Eleito,3228,1,7,261,0,Petrópolis,190002263791
+c1514,g27144,ver24,Gabriela Lima,Gabriela Correia de Souza e Lima,40752,PSB,Suplente,407,1,546,995,0,Rio de Janeiro,190002266170
+c1515,g46172,ver24,Oliveira,Luís Carlos de Oliveira,13000,PT,Não eleito,15,1,284,301,0,Resende,190002277756
+c1516,g51316,ver24,Sergio Paulino Psicólogo,Sergio Paulino Rosário,13131,PT,Não eleito,50,1,212,301,0,Resende,190002277757
+c1517,g36923,ver24,Alvaro Britto Coletivo Popular,Alvaro Miguel de Britto Saraiva,13123,PT,Não eleito,164,1,118,301,0,Resende,190002277758
+c1518,g19877,ver24,Ana Lúcia do Beira-Rio,Ana Lúcia Corrêa de Souza,13333,PT,Não eleito,201,1,99,301,0,Resende,190002277759
+c1519,g39985,ver24,Derik Roberto,Derik Roberto da Silva Rozas,13456,PT,Não eleito,797,1,18,301,0,Resende,190002277760
+c1520,g4385,ver24,Arthur Carvalho,Arthur Carvalho da Silveira,13261,PT,Não eleito,30,1,248,301,0,Resende,190002277761
+c1521,g11964,ver24,Gigi,Gislene da Conceição Domingos,13321,PT,Não eleito,13,1,289,301,0,Resende,190002277762
+c1522,g40760,ver24,Ana Sória,Ana Maria Sória,13013,PT,Não eleito,27,1,257,301,0,Resende,190002277764
+c1523,g31710,ver24,Marta Baltar,Marta Fernanda de Souza Baltar,13139,PT,Não eleito,7,1,297,301,0,Resende,190002277765
+c1524,g2632,ver24,Carlos Pereira,José Carlos Pereira,13045,PT,Não eleito,9,1,294,301,0,Resende,190002277766
+c1525,g47109,ver24,Ricardo Kadim,Ricardo Rodrigues de Souza Berbe,13280,PT,Não eleito,47,1,221,301,0,Resende,190002277767
+c1526,g36184,ver24,Edivaldo Farias,Edivaldo Faria Rosa,13023,PT,Não eleito,90,1,164,301,0,Resende,190002277770
+c1527,g7132,ver24,Kaio Carvalho,Kaio Santos de Carvalho,13130,PT,Não eleito,14,1,286,301,0,Resende,190002277773
+c1528,g42477,ver24,Catia Enfermeira,Catia Cilene Ribeiro Camilo,13613,PT,Não eleito,11,1,88,97,0,Quissamã,190002284484
+c1529,g50636,ver24,Marcelo da Farmácia,Marcelo Maia Chagas,13131,PT,Não eleito,16,1,83,97,0,Quissamã,190002284485
+c1530,g31493,ver24,Lucy Freitas,Lucy de Freitas Bochorny,13222,PT,Não eleito,10,1,101,134,0,Casimiro de Abreu,190002285770
+c1531,g21541,ver24,Andre Maia,Andre Batista Maia de Andrade,13513,PT,Não eleito,39,1,67,134,0,Casimiro de Abreu,190002285771
+c1532,g1867,ver24,Celma da Chácara Dolores,Celma Proença,13164,PT,Não eleito,10,1,101,134,0,Casimiro de Abreu,190002285773
+c1533,g37116,ver24,Comandante da Casa das Bombas,Celso Brito Sacramento,13726,PT,Não eleito,15,1,92,134,0,Casimiro de Abreu,190002285774
+c1534,g14679,ver24,Glauber Rosa,Glauber Rosa Leandro,13312,PT,Não eleito,17,1,90,134,0,Casimiro de Abreu,190002285777
+c1535,g23484,ver24,Juliano da Construção,Juliano Angelo de Almeida,13333,PT,Não eleito,124,1,41,134,0,Casimiro de Abreu,190002285778
+c1536,g3781,ver24,Doutor Marlen Ramos,Marlen Ferreira Ramos,13123,PT,Não eleito,64,1,60,134,0,Casimiro de Abreu,190002285779
+c1537,g33654,ver24,Evaristo Feliciano,Evaristo Feliciano dos Santos,13360,PT,Não eleito,32,1,73,134,0,Casimiro de Abreu,190002285780
+c1538,g5860,ver24,Eliza Faria,Elisangela Faria da Silva,13000,PT,Não eleito,12,1,96,134,0,Casimiro de Abreu,190002285781
+c1539,g14999,ver24,Eliezir,Eliezir Marchiote,13111,PT,Não eleito,36,1,51,110,0,Natividade,190002287694
+c1540,g45799,ver24,Vandalucia,Vandalucia Valentin do Nascimento Teixeira,13333,PT,Não eleito,8,1,92,110,0,Natividade,190002287697
+c1541,g48101,ver24,Venicio da Van,Venicio Alves da Silva,13123,PT,Não eleito,33,1,55,110,0,Natividade,190002287700
+c1542,g585,ver24,Daniel Furtado,Daniel Furtado Alves,13333,PT,Não eleito,200,1,66,223,0,Barra do Piraí,190002304495
+c1543,g24200,ver24,Valter Filho,Valter da Silva Filho,13007,PT,Não eleito,21,1,175,223,0,Barra do Piraí,190002304496
+c1544,g24584,ver24,Jussara Franco,Jussara Franco,13123,PT,Não eleito,73,1,114,223,0,Barra do Piraí,190002304497
+c1545,g12926,ver24,Dr Flávio Henrique,Flávio Henrique Costa de Freitas,13000,PT,Não eleito,41,1,154,223,0,Barra do Piraí,190002304498
+c1546,g28646,ver24,Marcelo Nity,Marcelo de Souza Vitorino,13234,PT,Não eleito,34,1,162,223,0,Barra do Piraí,190002304499
+c1547,g45269,ver24,Newtinho,Newton da Silva Filho,13100,PT,Não eleito,147,1,84,223,0,Barra do Piraí,190002304501
+c1548,g2687,ver24,Fátima Mendes,Maria de Fátima Dias Mendes,13611,PT,Não eleito,155,1,81,223,0,Barra do Piraí,190002304502
+c1549,g25506,ver24,Braguinha do Sindicato,Valmir Braga,13678,PT,Não eleito,20,1,176,223,0,Barra do Piraí,190002304503
+c1550,g42889,ver24,Tania Mara,Tania Mara Fernandes Guimarães Montella,13013,PT,Não eleito,193,1,69,223,0,Barra do Piraí,190002304504
+c1551,g11424,ver24,Silvinho de Todos,Silvio Fontes Borges,77444,SOLIDARIEDADE,Suplente,127,1,158,360,0,Nova Friburgo,190002306850
+c1552,g24495,ver24,Lucas Vieira,Lucas Vieira Rodrigues,13023,PT,Não eleito,36,1,105,137,0,Paraíba do Sul,190002331078
+c1553,g13152,ver24,Julião,Julio Cesar Pompeo de Oliveira,13456,PT,Não eleito,7,1,133,137,0,Paraíba do Sul,190002331080
+c1554,g48265,ver24,João Soares,João Batista Soares,13640,PT,Não eleito,54,1,92,137,0,Paraíba do Sul,190002331081
+c1555,g13939,ver24,Misael Sasso,Misael Rodrigues Sasso,13010,PT,Não eleito,21,1,119,137,0,Paraíba do Sul,190002331082
+c1556,g19619,ver24,Ronaira Faria,Ronaira Therezinha Faria da Costa,13144,PT,Não eleito,62,1,85,137,0,Paraíba do Sul,190002331083
+c1557,g7347,ver24,Leandro Galdino,Leandro Galdino Teixeira,13333,PT,Não eleito,342,1,41,232,0,Três Rios,190002334937
+c1558,g50940,ver24,Rômulo Santos,Rômulo Severino dos Santos,13100,PT,Não eleito,286,1,49,232,0,Três Rios,190002334938
+c1559,g41237,ver24,Ana Barcelos,Ana Aparecida da Costa Barcelos,13555,PT,Não eleito,33,1,173,232,0,Três Rios,190002334939
+c1560,g30332,ver24,Carlos Alberto Farol,Carlos Alberto Barbosa,13365,PT,Não eleito,22,1,198,232,0,Três Rios,190002334940
+c1561,g84,ver24,Professora Leandra,Leandra Jacinto Pereira,13013,PT,Não eleito,169,1,76,232,0,Três Rios,190002334941
+c1562,g15455,ver24,Fausto Serpa Faustinho,Fausto José Serpa Teixeira,13777,PT,Não eleito,32,1,175,232,0,Três Rios,190002334942
+c1563,g22973,ver24,Waltinho Abreu,Walter Sidinei de Abreu Lima,13000,PT,Não eleito,31,1,177,232,0,Três Rios,190002334943
+c1564,g22954,ver24,Alex Viana,Alexsander Vieira Viana,13567,PT,Não eleito,168,1,78,232,0,Três Rios,190002334946
+c1565,g44184,ver24,Luciane Marini,Luciane Barbosa Marini de Souza Rodrigues,13713,PT,Não eleito,17,1,205,232,0,Três Rios,190002334947
+c1566,g46675,ver24,Fernando Dentista,Fernando Coelho Machado,13123,PT,Não eleito,104,1,112,232,0,Três Rios,190002334948
+c1567,g21536,ver24,Missionário Thiago Aguiar,Thiago Mothé Aguiar,12222,PDT,Não eleito,8,1,242,245,0,Macaé,190002336519
+c1568,g7100,ver24,Marinete,Marinete Valentim,13615,PT,Não eleito,317,1,118,298,0,São João de Meriti,190002344726
+c1569,g2853,ver24,Ernesto,Ernesto Geisel da Silva Sampaio,13123,PT,Não eleito,2817,1,31,298,0,São João de Meriti,190002344730
+c1570,g9987,ver24,Letícia Florêncio,Leticia Ribeiro de Oliveira,13613,PT,Não eleito,2530,1,33,298,0,São João de Meriti,190002344733
+c1571,g5320,ver24,Douglas Almeida,Douglas Monteiro de Almeida,13456,PT,Não eleito,816,1,72,298,0,São João de Meriti,190002344735
+c1572,g39866,ver24,Brauner,Brauner Cavalcanti Bledes,13631,PT,Não eleito,186,1,147,298,0,São João de Meriti,190002344738
+c1573,g48664,ver24,Terezão,Maria Tereza Moreira Galdino,13456,PT,Não eleito,9,1,55,68,0,Laje do Muriaé,190002354785
+c1574,g27364,ver24,Patricio do Aparicio,Patricio Dias da Silva,13999,PT,Não eleito,33,1,36,68,0,Laje do Muriaé,190002354786
+c1575,g40611,ver24,Bethania Abel,Bethânia Abel Fernandes da Silva,13333,PT,Não eleito,84,1,23,68,0,Laje do Muriaé,190002354787
+c1576,g26625,ver24,Paulo Marcolongo,Paulo Roberto Marcolongo,13111,PT,Não eleito,18,1,45,68,0,Laje do Muriaé,190002354788
+c1577,g49288,ver24,Sidmar Brastemp,Sidmar Pereira da Silva,13444,PT,Não eleito,6,1,58,68,0,Laje do Muriaé,190002354789
+c1578,g648,ver24,Rosimere Leite,Rosimere Oliveira Leite,13666,PT,Não eleito,12,1,50,68,0,Laje do Muriaé,190002354790
+c1579,g4458,ver24,Rodolfo Samby,Rodolfo Fernandes da Silva,13000,PT,Não eleito,32,1,37,68,0,Laje do Muriaé,190002354792
+c1580,g314,ver24,Leo Costa,Leovegildo Costa Ferreira,13236,PT,Não eleito,15,1,47,68,0,Laje do Muriaé,190002354793
+c1581,g32787,ver24,Davi de Sá,Davi de Sá,13123,PT,Não eleito,5,1,61,68,0,Laje do Muriaé,190002354794
+c1582,g2084,ver24,Jossi Valadares,Jossi Valadares,13789,PT,Não eleito,21,1,83,137,0,Conceição de Macabu,190002357898
+c1583,g16347,ver24,Diego do Táxi,Diego Crespo Pessanha,13123,PT,Não eleito,60,1,56,137,0,Conceição de Macabu,190002357899
+c1584,g37126,ver24,Marquinho da Antena,Antonio Marcos de Lima Ribeiro,13456,PT,Não eleito,33,1,68,137,0,Conceição de Macabu,190002357900
+c1585,g41300,ver24,Thiago Faria,Thiago Faria da Silva,13000,PT,Não eleito,86,1,44,137,0,Conceição de Macabu,190002357902
+c1586,g4985,ver24,Paloma,Alexandar Balieiro Guimarães Santiago Ramos,13133,PT,Não eleito,3,1,129,137,0,Conceição de Macabu,190002357904
+c1587,g41296,ver24,Vera Casimiro,Vera Lúcia Fernandes Casimiro Alves,13130,PT,Não eleito,6,1,117,137,0,Conceição de Macabu,190002357905
+c1588,g5524,ver24,Aline Moraes,Aline dos Santos Moraes,13713,PT,Não eleito,17,1,89,137,0,Conceição de Macabu,190002357906
+c1589,g31291,ver24,Lúcio Gadernal,Lúcio Flávio Oliveira Soares,13111,PT,Não eleito,45,1,59,137,0,Conceição de Macabu,190002357907
+c1590,g7862,ver24,Broder Sumakê,Francisco Gonçalves de Oliveira,13777,PT,Não eleito,22,1,81,137,0,Conceição de Macabu,190002357908
+c1591,g21576,ver24,Rikinho,Jorge Henrique de Souza Rosa,13331,PT,Não eleito,16,1,91,137,0,Conceição de Macabu,190002357909
+c1592,g40231,ver24,Philipe Country,Luis Philipe Nascimento da Silva,13333,PT,Não eleito,0,0,194,195,53,Valença,190002360224
+c1593,g25680,ver24,Alfredo Santini,Alfredo José Santini Rodrigues da Silva,13123,PT,Não eleito,68,1,117,195,0,Valença,190002360225
+c1594,g49386,ver24,Marcio Reis,Márcio Henrique dos Reis,13313,PT,Não eleito,94,1,90,195,0,Valença,190002360226
+c1595,g9976,ver24,Pedro Neto,Sebastião Pedro da Silva Neto,13001,PT,Não eleito,51,1,131,195,0,Valença,190002360227
+c1596,g7341,ver24,Lulu Graciosa,Luciana Graciosa da Fonseca,13777,PT,Não eleito,228,1,50,195,0,Valença,190002360228
+c1597,g47422,ver24,Vera de Oliveira,Vera Lucia de Oliveira Benedicto,13981,PT,Não eleito,31,1,158,195,0,Valença,190002360229
+c1598,g18404,ver24,Marcus Prado,Marcus Pires Gonçalves,13321,PT,Não eleito,71,1,114,195,0,Valença,190002360230
+c1599,g17552,ver24,Vavá Gerônymo,Vanderson de Carvalho Geronymo,13222,PT,Não eleito,29,1,161,195,0,Valença,190002360231
+c1600,g26356,ver24,Zé Den D Água,José Ricardo Medeiros,13111,PT,Não eleito,0,0,194,195,29,Valença,190002360232
+c1601,g8653,ver24,Josi Ferreira,Josi Ferreira da Silva,13456,PT,Não eleito,8,1,192,195,0,Valença,190002360233
+c1602,g37989,ver24,Roberta Valim,Roberta Ramos Vallim,13013,PT,Não eleito,19,1,175,195,0,Valença,190002360234
+c1603,g40562,ver24,João Carlos,João Carlos Pereira,13000,PT,Não eleito,148,1,72,195,0,Valença,190002360235
+c1604,g45449,ver24,Marcia do Allan,Marcia Paula Gomes de Souza Marques dos Santos,13013,PT,Não eleito,30,1,96,172,0,Piraí,190002362570
+c1605,g7377,ver24,Natal Afonso,Natalino Hilário Afonso,13000,PT,Não eleito,33,1,92,172,0,Piraí,190002362571
+c1606,g43666,ver24,Advogada Walquiria,Walquiria Filizola,13629,PT,Não eleito,17,1,123,172,0,Piraí,190002362573
+c1607,g640,ver24,Geraldo Pedroso,Geraldo Pedroso Martins,13113,PT,Não eleito,34,1,90,172,0,Piraí,190002362574
+c1608,g27723,ver24,Lucinete,Lucinete Gregório Domingos,13880,PT,Não eleito,4,1,165,172,0,Piraí,190002362575
+c1609,g46955,ver24,Marcelinho Cabeleireiro,Marcelo Jorge Coelho da Silva,13892,PT,Não eleito,10,1,141,172,0,Piraí,190002362576
+c1610,g21115,ver24,Zé Carlos da Feijoada,José Carlos Guedes,13007,PT,Não eleito,22,1,112,172,0,Piraí,190002362577
+c1611,g29957,ver24,Marli Peres,Marli dos Santos Peres,13456,PT,Não eleito,19,1,118,172,0,Piraí,190002362578
+c1612,g50106,ver24,Molequinho do Taxi,Sebastião da Silva,13067,PT,Não eleito,26,1,102,172,0,Piraí,190002362579
+c1613,g1884,ver24,Manoelzinho do Pt,Manoel Ferreira Muniz,13131,PT,Não eleito,3,1,169,172,0,Piraí,190002362580
+c1614,g7384,ver24,Fábio Santos,Fábio Santos da Silva,13131,PT,Não eleito,13,1,59,94,0,Trajano de Moraes,190002364510
+c1615,g5370,ver24,Paulo Cezar do Pt,Paulo Cezar Ventura Mendonça,13000,PT,Não eleito,23,1,47,94,0,Trajano de Moraes,190002364511
+c1616,g119,ver24,Alana,Alana Gomes Klen,13111,PT,Não eleito,1,1,90,94,0,Trajano de Moraes,190002364512
+c1617,g42797,ver24,Fabiana,Luiza Fabiana de Faria,13200,PT,Não eleito,5,1,76,94,0,Trajano de Moraes,190002364513
+c1618,g28478,ver24,Antonio Carlos Vinte e Um,Antonio Carlos Moreira,13121,PT,Não eleito,1,1,90,94,0,Trajano de Moraes,190002364514
+c1619,g20394,ver24,Neusa Guarani,Neusa Kunha Taqua Mendonça Martine,13008,PT,Suplente,56,1,87,200,0,Paraty,190002370017
+c1620,g122,ver24,Milena Cardoso,Milena Cardoso Barros,13123,PT,Suplente,253,1,34,200,0,Paraty,190002370020
+c1621,g19720,ver24,Vaguinho de Sao Gonçalo,Vagno Martins da Cruz,13333,PT,Eleito,792,1,6,200,0,Paraty,190002370021
+c1622,g8055,ver24,Professora Flora,Flora Maria Salles França Pinto,13013,PT,Suplente,469,1,15,200,0,Paraty,190002370022
+c1623,g5414,ver24,Marcelo Alves,Marcelo Alves do Nascimento,13024,PT,Suplente,53,1,92,200,0,Paraty,190002370024
+c1624,g20579,ver24,Marcello Ribeiro,Marcello de Camargo Ribeiro,13000,PT,Suplente,36,1,110,200,0,Paraty,190002370025
+c1625,g3643,ver24,Tia Cátia,Catia de Oliveira Carneiro Borges,13913,PT,Suplente,113,1,190,261,0,Petrópolis,190002377304
+c1626,g34791,ver24,Xico Bezerra,Francisco Cleiton Bezerra da Silva,15044,MDB,Suplente,52,1,285,391,0,Belford Roxo,190002380063
+c1627,g15833,ver24,Fábio Alves,Fabio Alves de Alencar,13001,PT,Suplente,236,1,158,298,0,Niterói,190002386118
+c1628,g47121,ver24,Jorginho do Gás,Jorge Alberto da Costa,13000,PT,Suplente,66,1,219,261,0,Petrópolis,190002389225
+c1629,g16485,ver24,Professora Iracy Ferreira,Iracy Ferreira Fernandes,13113,PT,Não eleito,39,1,104,137,0,Paraíba do Sul,190002390548
+c1630,g9202,ver24,Beth Morra,Maria Elizabeth Bordim de Carvalho Morra,13567,PT,Não eleito,9,1,91,99,0,Mendes,190002394027
+c1631,g17421,ver24,Lucia Regina,Lucia Regina Costa da Silva,13122,PT,Não eleito,3,1,373,382,0,Campos dos Goytacazes,190002396640
+c1632,g37397,pres26t1,Lula,Luiz Inácio Lula da Silva,13,PT,,3693021,92,2,13,0,Rio de Janeiro,

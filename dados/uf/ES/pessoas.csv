@@ -1,0 +1,698 @@
+pessoa,nome,nome_urna,externo
+g10010,Francisco de Assis Tozo Binda,Chico Binda,False
+g10014,Luciete de Oliveira Cerqueira,Ciety,False
+g10068,Maria Aparecida Pereira Costa,Cida Costa,False
+g1027,Jose Roberto Ramos da Silva,Pretinho Ferro Véi,False
+g10307,José Francisco Costa,José Costa,False
+g10358,Willian Fontes,Willian Fontes,False
+g10385,Givanildo Alves de Freitas,Gil Elói,False
+g10454,Jarbas Almeida de Souza,Jarbas,False
+g10499,Valdir Pereira de Castro,Valdir Castro,False
+g10587,Marlei Bernado Moreira,Marlei,False
+g10607,Sandro Nunes Martins,Diácono Sandrinho,False
+g10634,Isaura da Penha Busato,Isaura da Penha Busato,False
+g10676,Alessandra Guilhermino da Silva,Professora Alessandra,False
+g10714,Isaque de Almeida,Isaque de Almeida,False
+g10806,David Souza Ramos,David Ramos,False
+g10833,Magno Pires da Silva,Magno Pires,False
+g10883,Marcos Antonio Garcia,Batman,False
+g10906,Wendel Ferreira da Silva,Wendel Silva,False
+g10909,Adenilza da Silva Barbosa Alves,Russa,False
+g11130,Paulo Sergio Ramos,Negão da Boa Vista,False
+g11167,Márcio de Sousa Bolzan,Professor Márcio Bolzan,False
+g11282,Vanessa de Oliveira Miranda,Vanessa Oliveira,False
+g11320,Clodoaldo Cassaro,Clodoaldo Cassaro,False
+g11423,Maria Vieira da Silva,Fatinha,False
+g11517,Jose Carlos Nunes da Silva,Nunes,False
+g11579,Rosangela Lugao Rafael,Rosangela Lugao,False
+g11590,Beatriz Vieira Bueno,Beatriz Bueno,False
+g11704,Marcial Pinto dos Santos,Marcial Pinto,False
+g11800,Felipe Souza Lima Gaspar,Felipe Gaspar,False
+g11954,Julio Cezar Mendel,Julio da Fetaes,False
+g12032,Magno Serodio Silva Araujo,Magno Serodio,False
+g12034,Antonio Lafaiete Leite,Toim do Churrasquinho,False
+g12049,Hugo Duraes dos Santos,Hugo Durães,False
+g12054,Maicon de Souza Gonçalo,Maicon do Assentamento,False
+g12097,Adevalter Francisco Santos,Adevalter Índio,False
+g1216,Katia dos Santos Alvarenga,Katia Alice,False
+g12185,Toribio Manoel Moreira de Lima,Toribio Manoel,False
+g12248,Ademar Lemes de Araujo,Ademar Lemes,False
+g12299,Brenda de Oliveira Melo,Brenda Melo,False
+g12302,Ilona Açucena Chaves Gonçalves,Açucena,False
+g12356,Joao Batista Pires de Oliveira,Joao Pires,False
+g12414,Paulo Sergio Zagoto,Nem Zagoto,False
+g12531,Ana Maria Petronetto Serpa,Ana Petronetto,False
+g12625,Claudiane Soares Machado,Branquinha,False
+g12646,Joao Henrique da Cruz Boaventura,Henrique Boaventura,False
+g12677,Francimar de Souza Oliveira,Francimar,False
+g12752,Beatriz Moraes da Silva,Beatriz Moraes,False
+g12804,Antonia Tania Fermiano dos Santos,Tânia,False
+g12889,Paula Eliana Gomes da Silva,Paula Eliana,False
+g12953,Janete Valani,Janete Valani,False
+g13136,Jamaica Aparecida Siqueira,Jamaica do Gas,False
+g13154,Valter Nunes Cabral,Valtinho,False
+g1322,Maria Inês Rodrigues de Abreu,Inês da Feira,False
+g13258,Antonia Maria Alves,Antonia Alves,False
+g13307,Tatiana Claudia Delunardo,Tati Delunardo,False
+g13318,Maria do Carmo da Cruz de Carvalho,Maria do Carmo,False
+g134,Carlos Roberto Casteglione Dias,Casteglione,False
+g13474,Eneias Zanelato Carvalho,Eneias,False
+g13482,Luciane Dias de Souza,Luciane Dias,False
+g13490,Hilda Gomes Faria,Hilda Faria,False
+g13580,Maria das Graças Cabral Gonçalves,Cirinha,False
+g13654,Maria da Penha Pereira Costa,Penha Costa,False
+g13656,Edmundo Francisco Dias,Edmundo Dias,False
+g13732,Davi Pinto da Rocha,Davi Pinto,False
+g13751,Angélica Aroeira Alves,Angélica do Bela Vista,False
+g1378,Neilson Mariane Marinoti,Neilson,False
+g13832,Jozino Ferreira de Araujo,Zino Ferreira,False
+g13838,Maria Aparecida Neves Vargas,Cida,False
+g13913,Isaias Teixeira Timóteo,Isaias Timóteo,False
+g14008,Ailton Silva,Ailton Silva,False
+g14140,Aldemir Silva de Jesus,Demi,False
+g14208,Ivanilson Vieira dos Santos,Ivanilson,False
+g14376,Sonia Maria de Oliveira Soares,Sonia Soares,False
+g14408,Marta Couto dos Santos,Marta Couto,False
+g14411,Marcos dos Santos,Marquinho Santos,False
+g14440,Marcel Merlo Mendes,Marcel,False
+g14594,Marcela Romão Silva,Marcela Romão,False
+g14599,Jose Francisco de Castro,Chico Tiófilo,False
+g14685,Maria Aparecida Rezende da Silva,Cida São Pedro,False
+g14710,Maria Aparecida Sian Capaz,Cida Sian,False
+g14713,Wanderlei Thomas,Wanderlei Thomas,False
+g14759,Valdeci Venturim,Valdeci Venturim,False
+g14775,Adilson Simao Mendes,Adilson Simao,False
+g14857,Genilton Lima Rodrigues,Genilton Lobão,False
+g14889,Sonia Hortencio,Sonia dos Temperos,False
+g14981,Lourenço Sebastiao Dias,Tiloro,False
+g15004,Celio Morozeski,Célinho da Saúde,False
+g15012,Taynná Francisco Miranda,Taynná Miranda,False
+g1503,Laziomar de Souza Furlani,Lazio,False
+g1504,Maura Lucia Dias de Azevedo,Maura Azevedo,False
+g15070,José Luis da Silva,Zé Luis,False
+g15206,Valdecy Dulcilina Laurindo,Valdecy Nego Dengo,False
+g15277,Maria Aparecida da Silva Oliveira,Maria Aparecida,False
+g15505,Ronaldo Luiz  Cassundé,Professor Cassundé,False
+g15544,Jose Lino Loriato,Zé Lino,False
+g15623,Maria Aparecida de Miranda,Aparecida Miranda,False
+g15716,Marcia Tania Ribeiro,Márcia M Bertha Lutz,False
+g15736,Elizabete Cristina de Azevedo,Bete Azevedo,False
+g15744,Eledir dos Santos,Eledir da Rua Uruguaiana,False
+g15851,Adjar Antonio Zambon,Adjar Zambon,False
+g15897,Adenir Gomes de Moura,Adenir Gomes de Moura,False
+g1594,Litunoy Gomes de Araujo,Araujo Pescador,False
+g15996,Luiz Natal de Paula Ferreira,Luiz Natal,False
+g16000,Adão Luiz da Silva,Adão Petróleo,False
+g16032,Julio Celio de Mendonca Rodrigues,Julio Mendonça,False
+g16098,Ezio de Oliveira Rezende,Neguinho da Cofril,False
+g1611,Marco Aurelio Roriz Ferreira,Marco Ferreira,False
+g1612,Waldir Jose de Oliveira,Waldir,False
+g16135,Jose Maria Caetano de Souza,Jose Maria Caetano,False
+g16301,Rosenilda Simoes Bispo,Nilde de Santana,False
+g16335,Dauri Correia da Silva,Professor Dauri,False
+g16387,Rosinaldo Ribeiro Alves,Naldinho,False
+g16483,Luciano Peixoto Guimarães,Lu Mesa Redonda,False
+g16619,Avani Silva Rodrigues,Pretinha,False
+g16669,Ademilson Bahiense,Ratinho,False
+g16959,Zeulita de Fátima Quinelato,Zeulita Quinelato,False
+g17086,Maria Madalena dos Santos Correia,Mada Correia,False
+g17243,Rosane da Silva Amancio,Rosane Amancio,False
+g17255,Julmario Serafim Conrado,Chabinha,False
+g1734,Wanderley Fernandes de Oliveira,Wanderley,False
+g17375,Paulo Sergio de Oliveira Alves,Paulo Alves,False
+g17492,Helio Bubach,Professor Helio,False
+g17536,Emiliana Barboza Pacheco Costa,Emiliana,False
+g18052,Fabiana Ferreira de Morais,Fabiana Morais,False
+g18151,José Gabriel Cassa,José Gabriel,False
+g18155,Carlos Antonio Vilarino Leal,Nem,False
+g1820,Fraudelino Alves de Souza,Fredinho,False
+g1821,Walker Vinicius Rodrigues de Almeida,Walker Filho do Valtinho Poeta,False
+g1823,Tania da Silva,Tania da Silva,False
+g18268,Adelma Almendo de Oliveira,Adelma,False
+g18291,Zelia Maria Rebuli,Zelia Rebuli,False
+g1831,Arkdaley Manhães Marçal,Arkdaley Manhães,False
+g18361,Edson Wilson Bernardes França,Edinho,False
+g18375,Edmundo Tomaz Soares Norberto,Edmundo Norberto,False
+g18503,Nataliene Andrade Luiz Otto,Nataliene Otto,False
+g18581,Luseni Alves Santos de Souza,Ducha,False
+g18621,Arlindo Coelho Pariz,Arlindo Contador,False
+g18673,Rafaela Queiroz Ximenes,Rafa Ximenes,False
+g18707,Frederico Rodrigues Silva,Professor Fred,False
+g18923,Alexandre Lemos Junior,Alexandre Lemos,False
+g18993,Solange Martins Caldeira,Solange Caldeira,False
+g19128,Elisangela de Paula Neto,Elisangela da Reciclagem,False
+g19168,Valdeci Jose de Sa Mota,Valdeci Pedreiro,False
+g19277,Ricardo Nery de Barros,Ricardo Nery do Pt,False
+g1928,Maria da Penha da Silva,Penha do Amado,False
+g19309,Jenivaldo Almeida dos Santos,Jeninho,False
+g19314,Queila Edivania Andrade,Queila Costa,False
+g19371,Celia Maria Vilela Tavares,Célia Tavares,False
+g19423,Charles de Souza Santos,Charles Firmino,False
+g19633,Matozinhos Alves de Lima,Lico,False
+g19663,Shamara Cristina de Souza Lino,Shamara,False
+g19707,Darly Muller,Darly Muller,False
+g19766,Rosa Zilma Tietz Schvanz,Rosa Titiz,False
+g19862,Fabio de Oliveira,Fábio do São Bras,False
+g19893,Sirlene de Souza Paier,Sirlene Paier,False
+g19928,Sandro José Costa,Sandro da Svnet,False
+g19948,Carlos Antonio Mendes Lacerda,Carlos Lacerda,False
+g20197,Maria de Lurdes,Maria de Lurdes,False
+g20291,Mônica Pereira Conceição,Mônica Quinha,False
+g20343,Marcelo Rainha Gobbi,Marcelo Gobbi,False
+g20447,Marli Rodrigues dos Santos Monteiro,Tia Marli do Marmitex,False
+g20451,Elder Barbosa da Silva,Elder do Alegrense,False
+g20510,Varly Lima,Varly Lima,False
+g2055,Arthur Borges de Almeida,Arthur de São Benedito,False
+g20716,Roberto Carvalho da Rocha,Kiko,False
+g20739,Gabriel da Conceição Pereira,Gabriel do Pt,False
+g20740,Luana Monteiro Trugilho,Luana Trugilho,False
+g21015,Claudia Antunes da Silva,Professora Claudia,False
+g21095,Acacio dos Santos Ferreira,Acácio,False
+g21111,Barbara Silva Cividanes da Hora,Bárbara Hora,False
+g2112,Charles Claudio Nesio,Charles,False
+g21132,Vanda Volpato,Vanda Volpato,False
+g21348,Geovanna Taina de Oliveira Rocha,Geovanna Tainá,False
+g21356,Rogerio Rosa Vago,Rogerio Vago,False
+g21365,Marco Antonio Mendonça Morozesky,Móroba,False
+g2144,Cleber Galavotti Falqueto,Cleber Carteiro,False
+g21460,Pedro Henrique da Silva,Seu Pedro,False
+g21531,Sidinei Schvantz,Sidinei Schvantz,False
+g21760,Laurentino Mungo,Laurentino Loro,False
+g21803,Eduvirgem de Moraes,Eduvirgem de Moraes,False
+g21815,Raniery Nunes Ferreira,Raniery Ferreira,False
+g21856,Pedro José Luiz,Pedro Colodino,False
+g21989,Marcela Paladini Demarce,Marcela Atílio Gourmet,False
+g22146,Marcos de Assis Francisco,Kiko Padilha,False
+g22253,Joana D Arck Caetano,Joana D Arck,False
+g22364,Diana Sodré Lourenço da Silva,Diana Sodré,False
+g22588,Elimar Mattielo,Elimario Mattielo,False
+g22667,Alessandro Cardoso Silveira,Alessandro Cafezinho,False
+g22746,Fabiano Contarato,Fabiano Contarato,False
+g22779,Edmar Amorim de Oliveira,Edimar Capitão,False
+g22923,Edmundo Nascimento Bastos,Edmundo  Bastos,False
+g22984,Mario José da Silva,Mario da Sombrinha,False
+g22990,Valdeci Lopes Ferreira,Sirilo,False
+g230,Creudiceia Ferreira da Silva,Céia do Villaschi,False
+g23029,Gercy Jose Carlos,Carlinhos do Esporte,False
+g23059,Alfredo Meireles,Alfredo do Bar,False
+g23072,Danilo Alves Dias,Dan Dias,False
+g23092,Josimar de Oliveira Mendonça,Doda Mendonça,False
+g23129,André Carvalho Valani,André Valani,False
+g23132,Igor Carvalho Pereira dos Santos,Igor Cian,False
+g23376,Valdirene Bernadino Pires,Professora Valdirene,False
+g23491,Thiago Xavier Gaurink Dias,Thiago Gaurink,False
+g23549,Eustaquio Rodrigues da Silva,Eustaquio Topa Tudo,False
+g23629,Edileuza dos Santos,Leu Salles,False
+g23636,Aparecida das Dores de Oliveira,Aparecida,False
+g23659,Carlos Alberto Carleti Jovita,Carlinhos,False
+g23710,Silvana Rocha Pereira,Silvana Rocha,False
+g23721,Izadora de Souza Borsoni,Izadora Borsoni,False
+g23770,Raysa Ferreira Marconsini,Raysa Marconcini,False
+g23782,Luciano Gomes de Souza,Luciano do Pt,False
+g23836,Paulo Rodrigues de Souza,Paulo do Sindicato,False
+g2391,Ana Paula da Silva Alves,Ana Paula,False
+g23925,Rosimar Silva Domingos,Zimá Domingos,False
+g23967,Jerri Adriani Eleuterio Francisco,Jerrim,False
+g24121,Ramon Matheus dos Santos e Silva,Ramon Matheus,False
+g24295,Ozilio Partelli,Ozilio Partelli,False
+g24349,Thaciana Barcelos de Oliveira,Thacyah Barcellos,False
+g24371,Eloisa Lourenço da Silva,Eloisa Lourenço,False
+g24470,Sebastiao Gildo Mares Pereira,Gildo do Sindicato,False
+g24569,Antonio Francisco Pacheco Goncalves,Pacheco,False
+g2458,Renildo Silva de Souza,Renner Silva,False
+g24599,Ingrid Schaider Rodrigues Dias,Ingrid Schaider,False
+g24631,Eduardo da Costa Paiva,Oficial de Justiça Paiva,False
+g24824,Odair Jose dos Santos,Odair das Maquinas,False
+g24868,Adenires Ramos dos Santos,Ramos do Viveiro,False
+g24896,José Luís Oliveira Silva,Zé Luiz do Pt,False
+g24988,Devarli Correa da Silva,Devarli Correa,False
+g25055,Marcone Silvares Miranda,Marconinho Miranda,False
+g25092,Miguel Arthur Monteiro Intra,Miguel Intra,False
+g25173,Amanda  de Souza Silva Carvalho,Amanda Carvalho,False
+g2518,Fabricio de Santana,Fabricio Santana,False
+g25233,Adalto Pereira da Costa,Adalto Costa,False
+g25239,Genivaldo Jose Lievore,Genivaldo Lievore,False
+g25253,Iriny Nicolau Corres Lopes,Iriny,False
+g25302,Maria Rosemeyre Barbosa Batista,Rose Professora,False
+g25330,Jose Tarcisio Ribeiro Pinto,Pastor Tarcisio,False
+g25422,Ataniel Santos de Oliveira,Lata Ataniel,False
+g25469,Elisangela Aparecida Torezani,Elisangela,False
+g25478,Marcia Regina Candido,Marcinha do Sindicato,False
+g25614,Anderson Pirovani da Silva,Anderson Pirovani,False
+g25632,Marta Adelaide Binda Finco,Marta Binda,False
+g25638,Marlene de Abreu Ferreira,Marlene,False
+g25643,Sidicley Esteves Cantão,Sidicley Cantão,False
+g25654,Marli Quiuqui,Marli Quiuqui,False
+g25720,Zenilza Aparecida Barros Pauli,Professora Zenilza Pauli,False
+g25879,Arnaldo Perciano Faneli,Arnaldinho,False
+g25943,Otniel Barcelos de Aquino,Otniel,False
+g26150,Fernando Colombo Oliveira,Fernando Colombo,False
+g26166,Poliana Silva Carvalho,Poliana Carvalho,False
+g26230,Luizmar de Souza Vieira,Luizmar de Souza Vieira,False
+g26231,Ronivaldo Teixeira Campos,Rony Campos,False
+g2624,Samuel Kalk,Samuel Kalk,False
+g26321,Ivo da Silva Lopes,Ivo Lopes,False
+g26346,Renan Douglas Pimenta,Renan Pimenta,False
+g26372,Maria Aparecida Batista,Cida Batista,False
+g26403,André Monteiro Lopes,André Lopes,False
+g26491,Claudiney Alves Siqueira,Claudiney Toledo,False
+g26632,Lucyano Jesus Ribeiro,Luciano Ribeiro,False
+g26698,José Julio Martins da Silva,Julinho da Distribuidora,False
+g26863,Roberto Carlos Lemes,Robertin Carteiro,False
+g26875,Luiz Carlos Francisco de Abreu,Carlao Barriga Lisa,False
+g27049,Roberto Carlos Neves,Robertinho do Ônibus,False
+g27106,Idelbrando Neris,Gari Martins,False
+g27166,Daniel Caldas Soares Ferreira,Dandan-Daniel Caldas,False
+g27203,Carmem Barcellos Sant Ana Guimarães,Carmem Barcellos,False
+g27512,Vania Teresa Lanschi Ferreira,Vania Lanschi,False
+g27630,Maria Cleonice Pereira de Souza,Cleonice,False
+g2769,Jaime Trajano de Oliveira,Picapau do Sem Terra,False
+g27839,Renato Antonio da Silva Filho,Renato Filho,False
+g27840,Joao Carlos Coser,João Coser,False
+g27885,Lucio Rezende Xavier,Lúcio do Pt,False
+g28003,Crauciano Simpriano Porcino,Crauciano Porcino,False
+g28172,Jaciara Teixeira do Nascimento,Jaciara,False
+g28187,Marcos Adriano dos Santos de Carvalho,Marcos Adriano,False
+g28202,Jose Valdeci de Souza,Zé Valdeci,False
+g28262,Pedro Antonio Rodrigues,Pedrim Pedreiro,False
+g28393,Zélia Pereira Oliveira,Zélia da Vala,False
+g28408,Lourival Zeferino Pereira,Lourivaldopt,False
+g28433,André Nery de Barros,Xarope do Pt,False
+g28508,Ana Claudia Feu Ferri,Ana Claudia,False
+g28577,Tania Maria Trento,Tania Trento,False
+g28706,Renata Alves da Silva,Renata Alves,False
+g28858,Samuel Pereira Nunes,Samuel Nunes,False
+g28867,Jocimar Soares Degasperi,Jô Degasperi,False
+g28955,Weverton Pereira do Sacramento,Professor Weverton,False
+g2901,Darcy Altoe,Darcy Altoe,False
+g29045,Patricia Rodrigues Correia,Patricia das Obras,False
+g29055,Zélia Alberto da Silva Boni,Zélia Alberto,False
+g2908,Marcelo Santos Freitas,Marcelão,False
+g29257,Elaeci Morello,Elaeci Morello,False
+g29284,Edineuza Louza dos Santos Neves,Edineuza Assistente Social,False
+g29328,Zenilda Monteiro,Zen Monteiro,False
+g29343,Maria Angela Traspadini,Angela,False
+g29345,Cícera Isaany Chaves Batista,Cícera Isaany,False
+g29364,Ailton Pereira dos Santos,Ailton Pereira,False
+g29373,Jose Moura Pereira,José Moura,False
+g29416,João Flavio Figueiredo Alves,João Flavio Motorista,False
+g29424,Eliane Gomes da Silva,Professora Eliane Gomes,False
+g29437,Naslla Alexandrina Tembra,Naslla,False
+g29490,Manoel Ferreira Couto,Manoel da Kidelicia,False
+g29550,Aguinaldo Rocha de Souza,Professor Aguinaldo,False
+g29576,Leidmar Nicolau,Leidmar,False
+g29681,Andreia Alves,Andreia da Feira,False
+g29760,Nilson Santos Barbieri,Nilson Barbieri,False
+g29793,Ginas Carlos Florencio Ferreira,Gina Professora,False
+g29880,Wallace Braz Rosa,Wallace,False
+g2990,Silvio Moulin Rego,Silvio Moulin,False
+g30023,Helena Pinto de Assunção,Helena,False
+g30131,Rozane Chaves de Sales,Rozane Benicio,False
+g30148,Nelci Sanches da Rocha,Nelci das Camponesas,False
+g30209,Warley Cabral,Famozim de Conceição,False
+g30322,Renato Rodrigues da Silva,Renato Agente de Saúde,False
+g30350,Huender Ferreira Guedes,Huender Deco,False
+g30564,Wezilei Cristem Guedes,Zilei Guedes,False
+g3074,Jose Maria de Sousa,Zé Maria do Sindicato,False
+g30780,Sueli Valiato,Sueli Valiato,False
+g30869,Gesonias Estevam do Nascimento,Gesonias do Café da Roça,False
+g30932,Adriana Pessim de Oliveira,Adriana Pessim,False
+g31,Yanka Martins Alves,Yanka Martins,False
+g31020,João Henrique dos Santos,Joãozinho Motoboy,False
+g31025,Gleicy dos Santos da Vitoria,Gy Santos da Vitória,False
+g31257,Luiz Alves Leite,Professor Luiz Leite,False
+g31311,Ana Claudia da Silva Archanjo,Claudia Arcanjo,False
+g31319,Marcos Roberto Lopes,Marcos,False
+g3133,Helio Alves Gonçalves,Helio Mascate,False
+g31350,Jovesmil Gomes Romão,Jovesmil Mil,False
+g31360,Elson Soares da Paixao,Elson do Sindicato,False
+g31369,Paulo Paschoal Chagas,Paulo Chagas,False
+g31557,Carlos Fernando de Oliveira,Dunga,False
+g31688,Maria Aparecida Gonçalves de Oliveira,Cida do Pt,False
+g31690,Jaimerson Marques da Silva,Jaimerson do Divino,False
+g31712,Edson Luiz Garcia Pimentel,Edinho,False
+g31774,Geraldo Justiniano de Souza,Geraldo Justiniano,False
+g31824,Joelma Martins,Joelma,False
+g31834,Jean Carlos Milhorato,Jean Milhorato,False
+g3189,Isaac Fonseca de Abreu,Isaac Abreu,False
+g31954,Luiz Claudio da Silva Pereira,Claudio Barão,False
+g32073,Marcos Savio Oliveira,Marcos Savio,False
+g32177,Irene Cristina dos Santos Costa,Irene Cristina,False
+g32305,Edcarlos Soares Martins,Edcarlos (Edinho),False
+g32375,Marin Aparecido Rafael Ferreira,Marin Rafael,False
+g32379,Maria Helena da Costa,Lia,False
+g32401,Roger Ribeiro Rangel,Roger Caçulinha,False
+g32503,Alzira de Almeida,Alzira de Almeida,False
+g32555,Paulo Roberto Poian,Paulo Poian da Nassau,False
+g32582,Pamela Gonçalves Monteiro Hastenreiter,Professora Pâmela Hastenreiter,False
+g32709,Valmir José Noventa,Valmir Noventa,False
+g32720,Antônio  Alexandre dos Passos Souza,Alexandre Passos,False
+g32837,Silvio Nascimento Ferreira,Silvio Jacaré,False
+g32880,Aguiberto Oliveira de Jesus,Baiano do Uber,False
+g32910,Nilzo Vallotto,Nilzo,False
+g32921,Eleandro Reis Konoski,Eleandro,False
+g33014,Edluz Cardoso Souza,Edluz Cardoso,False
+g33043,Perly Cipriano,Perly Cipriano,False
+g33050,Isaias Santana da Rocha,Isaias Santana,False
+g33087,Claudio Bins,Claudio Bins,False
+g33094,Rosangelo Felix Kretli,Rosangelo,False
+g33144,Jairo de Oliveira,Jairo do Assentamento,False
+g33235,Maria Fernandes de Souza Falcão,Maria Fernandes,False
+g33298,Marta Ines Brunelli Caretta,Marta Caretta,False
+g33312,Dermeval Cesar Ribeiro,Vaval,False
+g3339,Joareis Mathias dos Santos,Juca,False
+g33466,Alexandre Nazario Neto,Alexandre Nazario,False
+g3355,Antonio Amaro de Souza Jonas,Marinho Romaria,False
+g33582,Edson Quintino do Nascimento,Edson Quintino,False
+g33742,Marlene Celda Amado Demicheli,Marlene Celda,False
+g33819,Liz Antonia Reinoso de Queiroz,Liz de Queiroz,False
+g33940,Antonio Valentin Leal,Valentin do Quiabo,False
+g33974,Doris Maria Gomes da Vitoria,Doris Maria,False
+g34034,Dione Albani da Silva,Professor Dione Albani,False
+g34035,Gildo Fontoura,Gildo Fontoura,False
+g34275,Jurandi Rosa de Oliveira,Carteiro Jurandi,False
+g34393,João Bitencourt da Fonseca,Jb Forrozão,False
+g34403,Carlos Magno de Jesus,Carlos Maia Temperoo,False
+g34448,Jonas Chequetto,Jonas Chequetto,False
+g34649,Deyvith Pereira Dias,Deyvith da Civil,False
+g34945,Natalia de Sousa Gomes,Natalia Gomes,False
+g34955,Maria da Penha Santana da Silva,Penha do Walentim,False
+g34957,João Batista Teixeira,João Teixeira,False
+g35057,Jorge Reis Caetano,Jorge Reis,False
+g35077,Adriano Rezende Teixeira,Dr Adriano Dentista,False
+g3510,Mauricio Abdalla Guerrieri,Mauricio Abdalla,False
+g35296,Monica Matias Borges,Mônica Borges,False
+g35355,Carlos Alberto Ferreira Zerbone,Beto da Empada,False
+g35525,Francisco Sana,Nel da Terra do Sol,False
+g35592,Roberto Souza Santos,Roberto do Bar,False
+g35651,Mario Lucio Cordeiro Godinho,Mario Cordeiro,False
+g35701,Gustavo Minervino Souza Ferreira,Gustavo Minervino,False
+g35721,Sidinei de Oliveira Rocha,Sid Rocha,False
+g35774,Dauri José Tamanhão,Dauri Tamanhão,False
+g35779,Maria de Cassia Batista Alves Silva,Cassia Alves,False
+g35786,Gesiel Lopes da Silva Felix,Gesiel Lopes,False
+g35803,Fabio Veiga Silva Pires,Fabio Veiga,False
+g3589,Welito Augusto Alves,Welito do Sindicato,False
+g35931,Gilmar Carlos da Silva,Gilmar,False
+g36018,Luiz Carlos Gaurink Dias,Dr. Luiz Gaurink,False
+g36046,Elias Severiano Rosa,Elias da Lanchonete,False
+g36138,Maria Neuza Rodrigues Salomao,Maria Neuza,False
+g36187,Oseias Teixeira Souza,Oseias,False
+g36240,Jose Rodrigues Alves,Pelé,False
+g36278,Isaltino Venturim,Isaltino Venturim,False
+g36362,Alcenil Gomes Moreira,Dil da Reciclagem,False
+g36473,João Parreiras de Lacerda,João Parreiras,False
+g3650,Marlucia Gonçalves Coelho,Marlucia Geladinho,False
+g36560,Alexandra Moreira Domingues,Missionária Alexandra,False
+g36597,Alessandro Soares,Alessandro Sangue Bom,False
+g36689,Oylas Pereira dos Santos,Oylas Pereira,False
+g36692,Maria Aparecida Ribeiro Guimarães,Aparecida,False
+g36786,Francisco da Rocha Sousa,Chiquinho do Sindicato,False
+g36816,Janildes Inacio dos Santos,Janildes (Jani),False
+g369,Mikail Coser Cavalcanti,Mikail Lula Coser,False
+g36915,Geraldo Francisco Costa,Geraldo Costa,False
+g36936,Maria Auxiliadora dos Santos,Maria Malô,False
+g36964,Sebastiao Rodrigues Chagas,Bita,False
+g36978,Carlos Eduardo Campista de Lyrio,Carlos Lyrio,False
+g37018,Pedro Soares Rodrigues,Pedrinho do Sindicato,False
+g3703,Evandro Paulo Dutra,Pepê,False
+g37043,Luciara Elias Reis Costa,Luciara Reis,False
+g37127,Gerson Ferreira da Conceicao,Gerson Lano,False
+g37130,Jose Ribeiro Geraldo,Zé Capivara,False
+g37222,José Izidoro Rodrigues,Zé Izidoro,False
+g37287,Mauro Pereira Daniel,Mauro Daniel,False
+g37349,Aecio Darli de Jesus Leite,Aecio Leite,False
+g37397,Luiz Inácio Lula da Silva,Lula,True
+g37495,Waldir Paixão Graciano,Waldir de Itaúnas,False
+g37504,Luzia Dias,Luzia Dias,False
+g37547,Luciano Curto Pimentel,Luciano Pimentel,False
+g3761,Mauro Ferreira Wagmacker,Mauro,False
+g3763,Sibeli Madeira de Souza Sana,Sibeli Filha do Borboleta,False
+g37699,Lucideia Bahiense Vieira,Lucideia,False
+g37938,Igor Ribeiro Amado,Iguinho,False
+g38036,Marta Maria Alves da Silva Farias,Marta,False
+g38042,Cleide Aparecida Azevedo,Cleide Azevedo,False
+g3817,Wagner Martins,Pr Wagner Martins,False
+g38278,Adeci Getrude Miranda,Sabiá,False
+g38444,Iraci Miranda Alves,Iraci Alves,False
+g38460,Marco Antonio de Castro Barreto,Marquinho do Ewelton,False
+g38471,Maria Helena Brandão Andrade Maioli,Lena Brandão,False
+g38662,Cleides Helena Capetini,Cleide do Sindicato,False
+g38680,Izanildo Sabino,Izanildo Sabino,False
+g38690,Marcia Regina Marques,Professora Marcia,False
+g3871,Hildete Gomes de Souza,Dete Gomes,False
+g38728,Kleber Rodrigues de Oliveira,Kleber Rodrigues,False
+g38752,Vilson Benedito de Oliveira,Vilson Jaguareté,False
+g38783,Genacir Lovatti,Genacir Lovatti,False
+g38825,Adma Valani,Adma Valani,False
+g38984,Jean Mendonça Tatagiba,Jean Tatagiba,False
+g38996,Marilza Ferreira Castelo,Marilza de Setiba,False
+g39016,Marcio Jose Marques de Souza,Márcio Marques,False
+g39081,Roberto Gonçalves dos Reis,Roberlanches,False
+g39477,Nilza Maria Eggerth,Nilza do Salão,False
+g39551,Francisco Felipe Coelho,Francisco Coelho,False
+g39554,Adenilson Andrade de Brito,Adenilson Brito,False
+g39575,Girlene de Jesus Mengalli Guasti,Girlene Mengalli Guasti,False
+g39598,Zilma Matos,Zilma Matos,False
+g39623,Marcos Tadeu da Silva,Tadeu,False
+g39648,Zilda Maria de Jesus,Dona Zilda,False
+g39680,Eleildo Balduino Correia,Eleildo Balduino,False
+g39828,Fábio Júnior Anercinio,Fabin Radiador,False
+g39984,Orlandina Bastos Saude,Landa,False
+g40074,Antônio Carvalho,Cacique Toninho Guarani,False
+g4018,Lucineia Rodrigues do Nascimento,Lúcia,False
+g40295,Jean Carlos Gomes da Silva Teixeira,Jean Carlos,False
+g40323,Adeilson Goncalves Gomes,Careca,False
+g40561,Braz Figueiredo,Braz Figueiredo,False
+g4063,Roberto Haase de Carvalho,Robertinho,False
+g40637,Ronni Marcial Fontoura Alvares,Ronni Fontoura,False
+g40773,Antonio Pereira dos Santos,Antonio Pescador,False
+g40803,Elzirene Maria Mourão de Souza,Elzirene Mourão,False
+g40817,Jackeline Oliveira Rocha,Jack Rocha,False
+g40847,Antônio Carlos Caralo,Carlinhos do Coqueiro,False
+g40894,Adriano Macedo Nascimento de Deus,Adriano Pastel,False
+g40908,Marcio Jhonatan Almeida da Silva,Marcio J. Barra do Sahy,False
+g4097,Robson Fernandes Garcia,Robinho,False
+g41130,Nilson Caetano Lima,Nilson Carioca,False
+g41168,Adilson Geltner,Adilson da Vidraçaria,False
+g41180,João Batista Gagno Intra,João Batista Babá,False
+g41189,Fernando Jovencio de Almeida,Nando Jovencio,False
+g41323,Alexandre Valim Camargo,Alexandre Goiano,False
+g41495,Adriana Manske Klipel,Adriana do Brote,False
+g41536,Leide Maria Fagundes Alves,Professora Leide,False
+g41568,Wagner Vieira França,Waguinho França,False
+g41695,Paulo Cezar Ramiro Batista,Cezinha Beiçola,False
+g41741,Valdivo Pereira Pratis,Valdivo Pratis,False
+g41771,Ana Maria Kretli Conrado,Ana Maria,False
+g41783,Luciene Bino Farias da Silva,Lucia do Flor,False
+g41815,Thiago Martinelli,Thiago Martinelli,False
+g4193,Gilmar Emiliano da Silva,Gilmar Emiliano,False
+g41965,Jose de Paula,Jose de Paula,False
+g41976,Antonio Carlos da Paixao,Antonio Carlos Melancia,False
+g4212,Layza Lima Leopoldino,Layza Lima,False
+g42139,Marcos Vinicius Dias Reis,Marcos Dias,False
+g42150,Teany Moreira,Teany do Sintvest,False
+g42171,Flavia Valadao Mozelle,Flavia Valadao,False
+g42196,Arão Soares Silva,Arão do Taxi,False
+g42224,Ana Cláudia Hebling Meira,Professora Ana Cláudia,False
+g42494,Odete Costa da Cruz,Odete Costa,False
+g42495,João Cândido Soares,Pastor João,False
+g42546,Marcia Hosana Matias Borges de Souza,Marcia do Sindicato,False
+g42568,Adnilson da Silva,Denilson do Assentamento,False
+g42618,Wallace dos Santos Moura,Wallace Moura,False
+g42641,Edmar Barbosa Pena,Edmar Pena,False
+g42644,Celia Maria de Jesus,Celia do Assentamento,False
+g42649,Walacy Basilio da Silva,Walacy Basilio,False
+g42756,Jorcy de Oliveira Filho,Cizinho,False
+g42774,Gersom Ribeiro de Assis,Gersom Ribeiro,False
+g42900,Sebastião Alves,Sebastião da Feira,False
+g4292,Romildo Antonio Poleze,Romildo,False
+g43069,Maria Teresa Frizera,Teresa Unir Pra Reconstruir,False
+g43121,Viviane Aparecida Corte da Silva,Viviane,False
+g43224,Victor Hugo de Mattos Martins,Vitao,False
+g43357,Arlete Pereira,Arlete Pereira,False
+g43525,Inês Simon Ferreira,Inês Simon,False
+g43669,Laércio André Nochang,Laércio Gaúcho,False
+g43709,Aldair José Belo,Deizin,False
+g43839,Marcelino dos Santos Ramos,Martelo de Samambaia,False
+g43852,Elias de Brito,Elias Cabelo,False
+g43873,Denise Assis Ourique,Denise Ourique,False
+g43876,Elenilson Souza Barros,Neto Barros,False
+g43929,Mauro Rodrigues da Silva,Mauro Rodrigues,False
+g43942,Elcio Abreu Gomes,Elcinho,False
+g4400,Alan Cardec Max,Sargento Max,False
+g44235,Elcimara Rangel Loureiro Alicio,Elcimara Loureiro,False
+g44496,Mel Corrêa Rosário,Mel Rosário,False
+g44534,Antonia Maria de Souza,Dona Antonia,False
+g44569,Rafael da Silva Sá,Rafael Sá,False
+g44602,Thaís dos Santos Oliveira,Thaís Oliveira,False
+g44783,Marivaldo Andrade da Silva,Val da Garra,False
+g44832,José Enes Pinheiro Zanardi,Zé Enes,False
+g44843,Agilberto Correia de Barros,Gilberto de Kubitschek,False
+g44869,Ademir Dordenoni,Dordenoni,False
+g44881,Eduarda Celestino Amorim,Duda,False
+g450,Creuza Rangel Alves,Creuza do Assentamento,False
+g45017,Edson Baiense dos Santos,Edson Baiense,False
+g45114,Jaldo Ferreira Gomes,Jaldo Gomes do Sindicato,False
+g45146,Giovani Rossoni,Professor Rossoni,False
+g45183,Valduir Planticow,Duti,False
+g452,Agnaldo dos Santos Reis,Agnaldo Sassa,False
+g45213,Gilberta Cristina de Marchi,Gilberta Cristina,False
+g45481,Sergio Cardoso,Serginho Cardoso,False
+g45579,Amarino Rodrigues da Silva,Marino,False
+g45582,Maria Orcinio Ribeiro Bastos,Maria Orcinio,False
+g45612,Millena Ferreira dos Santos Souza,Millena Ferreira,False
+g45631,Valdomiro Dias Rodrigues,Valdomiro Rodrigues,False
+g45633,Whislany Carvalho Pinheiro,Whislany Carvalho,False
+g45677,Antonio de Freitas,Prof. Antonio de Freitas,False
+g45738,Marilza Fantonio Serqueira Custodio,Marilza Serqueira,False
+g45820,Elvira Pereira de Souza Silva,Elvira do Bela Vista,False
+g45848,Karla Silva,Karla Silva,False
+g45889,Aislah de Paula Moraes,Aislah de Paula,False
+g45976,Gessimara Sousa,Gessimara,False
+g46036,Gabriel Goncalves Marques,Gabriel do Vela,False
+g46086,Lucinéa Vicente Caetano Coelho,Lucinéa,False
+g46135,Gedeao Piedade,Gedeão Piedade,False
+g46228,Elisangela Montemor Coutinho,Elisangela Montemor,False
+g46286,José Carlos Pilon,Pilon,False
+g46358,Joana Pinheiro de Oliveira,Joana Pinheiro,False
+g46423,Maria Selma Salina de Paula Santana,Selma Bar,False
+g46564,Jorge Antonio dos Santos Bertoldo,Jorge Antônio,False
+g4660,Vando de Jesus Morais,Vando,False
+g46722,Celso Marcelo Chequetto,Marcelo Chequetto,False
+g46728,Marcela dos Santos Rocha,Cacique Marcela,False
+g46739,Natalia da Silva Oliveira Rocha,Natalia Rocha,False
+g46871,Marcia dos Santos,Marcia India,False
+g46881,Thiago Amurim Barbosa,Thiago Amurim,False
+g46886,Valdete Gomes dos Santos Neves,Valdete do Restaurante,False
+g46901,Antonio de Araujo Elles,Antonio Elles,False
+g46936,Rosilda Oliveira Pessoa,Rosilda,False
+g46962,Izaac Reinholz dos Santos,Izaac de Santa Terezinha,False
+g47022,Madalena Garcia da Silva,Madalena Garcia,False
+g472,Penha Chaves Cordeiro,Penha Chaves,False
+g47406,Barbara Adarruana Barboza,Barbara,False
+g4743,Taislane Teixeira de Souza,Taislane,False
+g47508,Tadeu Villanova  de Mello,Tadeu Villanova,False
+g47543,João Luis das Dores,Zoca,False
+g47660,Agnaldo Cardoso,Agnaldo Cardoso,False
+g47707,Roberto da Silva Mello,Roberto Melo,False
+g47712,Edimar de Jesus Santos,Mazinho da Grama,False
+g47749,Osmiro Jesus Figueiredo,Osmiro O Rei do Bolo,False
+g47806,Gilcinea Rocha Passos da Silva,Néia Passos,False
+g47813,Joel Pinto de Oliveira,Joel Pinto,False
+g47896,Itamar de Oliveira,Itamar,False
+g48021,Job Cândido da Silveira,Jobinho da Silveira,False
+g48035,Jaqueline Andrade de Araujo Assis,Jaqueline Araujo,False
+g48103,Josinete Mara da Fonseca,Josi do Sindicato,False
+g48148,Edileia Matias,Edileia Matias,False
+g4815,Juscelina Maria dos Santos,Juscelina,False
+g482,José Amaral dos Santos,Amaral,False
+g48280,Mayara dos Santos Batista,Mayara Batista,False
+g48328,Jose Marcos Bolzan,Marcos Bolzan,False
+g48339,Luan Éricles Damázio da Silva,Luan do Cinema,False
+g48412,Sandra Helena da Silva Miranda,Sandra Miranda,False
+g48505,Glaubia Lucia Loredo de Souza,Professora Gláubia,False
+g48555,Francisco Amaro de Alencar Oliveira,Amaro,False
+g48671,Naor Nascimento,Naor do Trem Bala,False
+g48684,Celio Barbosa,Celio Femopovi,False
+g48787,Rafael Primo Turra,Rafael Primo,False
+g48866,Valdemir Silva Almeida,Valdemir Almeida,False
+g48968,Aldair Alves da Silva,Aldair,False
+g48973,Maria do Carmo Balduíno,Lilico,False
+g48994,Francisca de Sousa Santiago,Francisca Santiago,False
+g49015,Vinícius Bonfin dos Santos,Vinícius Bonfin,False
+g49110,Saulo Leao Guimaraes,Tody,False
+g49179,Edson Onofre,Edinho,False
+g49294,Maria de Fatima Santos,Fatinha da Saúde,False
+g49464,Francisco de Assis de Sousa Santiago,Francisco Santiago,False
+g49490,Jaqueline Lopes Chiapani da Silva,Jaqueline Jj,False
+g49536,Vinícius Rodrigues Daflon,Professor Vinícius,False
+g49653,Osvaldo Messias Rodrigues,Osvaldo,False
+g49677,José Olimpio Scheppa,José Scheppa,False
+g49766,Fatima Daleprane Lyra,Fatinha do Campo,False
+g49825,Antonio José Silveira Ramos,Toninho,False
+g49951,Jailson Coutinho Daniel,Jailson Coutinho,False
+g50006,Valdíléia Amorim,Valdíléia Amorim,False
+g50108,Alceia Souza dos Santos de Oliveira,Ceinha do Kilão,False
+g50267,Severino Jose da Silva,Severino do Povao,False
+g50291,Fabrício Alves de Oliveira Guimarães,Fabricio Alves,False
+g50348,João Danizette da Silva,Donizette,False
+g50414,Jocelino da Conceição Silva Junior,Professor Jocelino,False
+g50651,Mary Lane da Costa de Oliveira,Mary Lane,False
+g5071,Leonardo Rodrigues Cosme,Léo,False
+g50735,Reginaldo Penha,Reginaldo Penha,False
+g5074,Joelma Ribeiro de Oliveira,Joelma Pedagoga,False
+g50764,Valdir Jose Pereira da Silva,Valdir do Acampamento,False
+g5091,Jose Paulo Ramos Lima,Paulinho Lima,False
+g51090,Levino de Paulo Vaz,Levino Vaz,False
+g51140,Karla Silva Coser,Karla Coser,False
+g51153,Alex da Silva Carvalho D Ávila,Alex D Ávila,False
+g51166,Adailza Pereira Vander-Mas Luz,Adailza,False
+g51230,Erismal Silva de Araújo,Erismal Araújo,False
+g51262,Marcos Antonio de Jesus,Engenheiro Marcos de Jesus,False
+g51360,Nancy Regio da Silva Neta,Missionária Nancy Oliver,False
+g5154,Rogério Favoretti,Rogério Favoretti,False
+g524,Jhonwilas Berger de Freitas,Jhonwilas,False
+g5267,Ananias Costa de Souza,Ananias de Souza,False
+g5301,Eliton Mendes,Bolinha,False
+g5350,Dilzete Nascimento Pereira,Nêga do Jongo,False
+g5355,Wellington Schmild,Wellington Schmild,False
+g5502,Roberto Carlos Teles Braga,Professor Roberto Carlos,False
+g5608,Samuel Felix,Samuel Felix,False
+g5630,Luciano Sampaio de Sousa,Luciano Sampaio,False
+g5685,Iohara Werneck Mendonça,Iohara Werneck,False
+g5701,Mario Lucio Ribeiro Marquez,Mário Lucio,False
+g5754,Francisco Emmanuel Soares dos Santos,Chico do Pt,False
+g5763,Valéria Amorim,Valéria Amorim,False
+g5765,Maria Gorete Pimenta das Chagas,Gorete,False
+g5880,Fernando Abreu Dias,Fernando Abreu,False
+g5962,Jane Aparecida Teles Soares,Jane Bairro Nossa Sra da Penha,False
+g5970,Marcilene Cerqueira Mergace,Marcilene Mergace,False
+g6094,Odilia Aparecida Ferreira Lordelo,Odilia Lordelo,False
+g6159,Olga Maria Lipaus Vilaca,Olga Lipaus,False
+g6266,Ideer da Costa Vieira,Ideer Vieira,False
+g6277,Ademar Pereira,Ademar Pereira (Prea),False
+g6353,Adriana de Araujo Brunow,Adriana Araujo,False
+g6430,Grazielle Felicio dos Santos,Grazi,False
+g6482,Kassio Bolzani Vieira,Kassio Bolzani Vieira,False
+g6505,Luís Paulo Guimarães Caralo,Luís Paulo Caralo,False
+g6513,Felicio Casemiro Brito,Felicio Brito,False
+g6642,Ambrosio Riva Junior,Ambrosio Riva Junior Brobro,False
+g673,Rosângela Maria Ramos Figueiredo,Rosinha,False
+g6808,Ivanete Dias Fontana dos Santos,Nete,False
+g6954,Marcos Antonio de Oliveira,Marquim Esquerdinha,False
+g7019,Darcy Ribeiro dos Santos,Darci Ribeiro,False
+g7109,Maria Anastasia Corona Totola,Anastasia,False
+g7117,Luys Felipe Nogueira Cavalcanti,Felipe Nogueira,False
+g7237,Patrícia de Souza Rodrigues,Patrícia Karate,False
+g7489,Milca Alves Barboza Souza,Milca Alves da Saúde,False
+g7611,Sebastião Salgado Cerqueira,Tião Pintor,False
+g7656,Ednalva Sant Ana,Nalvinha,False
+g7686,Rosãngela Curvelano de Moura G Torres,Rosangela Moura,False
+g7831,Maria Jose Nobre de Morais,Maria Morais,False
+g7849,Helder Ignacio Salomao,Helder Salomão,False
+g7886,Marcos Antonio Ramos,Marco Antonio Tropical,False
+g7897,Gildasio Costabeber Belo,Gildásio da Disa,False
+g7942,Gecy dos Santos,Gecy Sapateiro,False
+g8386,Katia Silva Barbosa,Katia,False
+g8558,Devaldir Antonio Bandeira,Devaldir Bandeira,False
+g8559,Altiane Blandino dos Santos,Pipi do Paraiso,False
+g864,Douglas Viana Carneiro,Douglas Tocão,False
+g8661,Gersica Aparecida de Freitas Santana,Gersica Santana,False
+g8662,Adilson Oliveira Torres,Adilson Torres,False
+g8676,Daniel Pereira,Daniel Pereira,False
+g8679,Joao Carlos Pinheiro dos Santos,Gordinho do Sindicato,False
+g8694,Dhiulia Pereira Torres,Dhiulia Torres,False
+g877,Lucineia Rocha dos Santos,Neia Rocha,False
+g8795,Pedro Vitor Guaitolini Mainette dos Santos,Pedro Vitor Tirello,False
+g8798,Ana Paulla Guzzo Machado,Ana Paulla Guzzo,False
+g8966,Elias Epitacio de Souza,Elias da Ambulância,False
+g9010,Jessica Grillo Blunck,Jessica Grillo,False
+g9024,Claudenir Batista,Negão do Frete,False
+g9035,Dalva Rosa Honorato Pratis,Dalva Honorato,False
+g9277,Robeson Soares Haidmann,Biro Biro,False
+g9292,Florentina Luzia Bertti,Florentina,False
+g9317,Paulo de Tarso Caralo,Paulo Caralo,False
+g9321,Elizângela de Miranda Altoé,Eliz Altoé,False
+g9393,Elias Teixeira Leite,Elias Cigano,False
+g9958,Alex Batista,Alex Batista,False

@@ -1,0 +1,108 @@
+cid,pessoa,disp,nome_urna,nome,numero,partido,situacao,tot,nmun,rk,nc,anulados,ue,sq
+c0001,g21561,dd22,Lima,Edmilson Rodrigues de Lima,13456,PT,Suplente,1536,1,183,578,0,Distrito Federal,70001596084
+c0002,g11469,dd22,Professor Garibel,Carlos Antoneto de Souza Lima Montania,13123,PT,Suplente,2454,1,137,578,0,Distrito Federal,70001596085
+c0003,g36315,dd22,Tuquinha Bessa,Claudio Bessa dos Santos,13023,PT,Suplente,1762,1,168,578,0,Distrito Federal,70001596086
+c0004,g21051,dd22,Cris do Coletivação,Cristiane Pereira dos Santos,13613,PT,Suplente,2083,1,148,578,0,Distrito Federal,70001596087
+c0005,g17533,dd22,Fabiano Trompetista,Fabiano e Silva Leitão Duarte,13007,PT,Suplente,4460,1,87,578,0,Distrito Federal,70001596088
+c0006,g40556,dd22,Fatima Rola,Fatima Lucia Rola,13321,PT,Suplente,2180,1,144,578,0,Distrito Federal,70001596089
+c0007,g427,dd22,Gabriel Magno,Gabriel Magno Pereira Cruz,13131,PT,Eleito,18063,1,21,578,0,Distrito Federal,70001596090
+c0008,g40570,dd22,Coletiva Somos Hellen Frida,Hellen Cristhyan Correia Boaventura,13180,PT,Suplente,7626,1,55,578,0,Distrito Federal,70001596091
+c0009,g36273,dd22,João Dão Rodoviário,João Jesus de Oliveira,13222,PT,Suplente,8802,1,50,578,0,Distrito Federal,70001596092
+c0010,g49043,dd22,Prof Lêda Coletive Chão,Lêda Gonçalves de Freitas,13000,PT,Suplente,4894,1,77,578,0,Distrito Federal,70001596093
+c0011,g47241,dd22,Ricardo Vale,Ricardo Vale da Silva,13013,PT,Eleito,17077,1,25,578,0,Distrito Federal,70001596094
+c0012,g50802,dd22,Patrício,Sidney da Silva Patrício,13190,PT,Não eleito,0,0,572,578,1113,Distrito Federal,70001596095
+c0013,g5230,dd22,Thelma Mello,Thelma Regina Vieira de Mello,13061,PT,Suplente,2229,1,143,578,0,Distrito Federal,70001596096
+c0014,g214,dd22,Chico Vigilante,Francisco Domingos dos Santos,13100,PT,Eleito,43854,1,2,578,0,Distrito Federal,70001596100
+c0015,g26118,dd22,Meg Guimaraes,Magnete Barbosa Guimaraes,13130,PT,Suplente,3248,1,109,578,0,Distrito Federal,70001596101
+c0016,g17895,dd22,Marivaldo Pereira,Marivaldo de Castro Pereira,50050,PSOL,Suplente,9412,1,45,578,0,Distrito Federal,70001601759
+c0017,g214,dd26,Chico Vigilante,Francisco Domingos dos Santos,13100,PT,Eleito,50046,1,3,415,0,Distrito Federal,70002540503
+c0018,g38456,dd26,Dayse Hansa,Dayse de Hansa Nogueira Lima,13056,PT,Suplente,636,1,217,415,0,Distrito Federal,70002540504
+c0019,g40556,dd26,Fátima Rôla,Fátima Lúcia Rôla,13321,PT,Suplente,1312,1,162,415,0,Distrito Federal,70002540505
+c0020,g51329,dd26,Laureano de Faria,Laureano de Faria Rodrigues,13193,PT,Suplente,380,1,285,415,0,Distrito Federal,70002540508
+c0021,g26857,dd26,Profa. Keila Sanches,Keila Lima Sanches,13613,PT,Suplente,996,1,190,415,0,Distrito Federal,70002540509
+c0022,g19237,dd26,Pardim,Jarbas Campos Pardim,13405,PT,Suplente,1078,1,185,415,0,Distrito Federal,70002540510
+c0023,g17533,dd26,Fabiano Trompetista,Fabiano e Silva Leitão Duarte,13007,PT,Suplente,6244,1,56,415,0,Distrito Federal,70002540511
+c0024,g47241,dd26,Ricardo Vale,Ricardo Vale da Silva,13013,PT,Eleito,29387,1,15,415,0,Distrito Federal,70002540512
+c0025,g2453,dd26,João Favorito,João Vítor de Oliveira Santos,13061,PT,Suplente,408,1,275,415,0,Distrito Federal,70002540513
+c0026,g11842,dd26,Andrey Lemos,Andrey Roosewelt Chagas Lemos,13012,PT,Suplente,1765,1,138,415,0,Distrito Federal,70002540514
+c0027,g33440,dd26,Zé do Coco,José Roberto Melo Machado,13123,PT,Suplente,1216,1,171,415,0,Distrito Federal,70002540515
+c0028,g24250,dd26,Mariana Rosa,Mariana Rosa Moreira dos Santos,13333,PT,Suplente,2543,1,104,415,0,Distrito Federal,70002540517
+c0029,g9221,dd26,Jacy Afonso,Jacy Afonso de Melo,13001,PT,Suplente,7165,1,50,415,0,Distrito Federal,70002540519
+c0030,g37968,dd26,Pastora Luzinete,Luzinete Camilo da Silva,13556,PT,Suplente,433,1,267,415,0,Distrito Federal,70002540520
+c0031,g21305,dd26,Rosi Costa,Rosilene Silva da Costa,13000,PT,Suplente,4988,1,65,415,0,Distrito Federal,70002540521
+c0032,g15192,dd26,Lúcia Carvalho,Lucia Helena de Carvalho,13111,PT,Suplente,2611,1,102,415,0,Distrito Federal,70002540523
+c0033,g34834,dd26,Prof. Altaci Kokama,Altaci Correa Rubim,13133,PT,Suplente,1852,1,132,415,0,Distrito Federal,70002540524
+c0034,g427,dd26,Gabriel Magno,Gabriel Magno Pereira Cruz,13131,PT,Eleito,42331,1,7,415,0,Distrito Federal,70002540525
+c0035,g8088,dd26,Daniel Barros,Daniel Henrique Costa de Barros,13197,PT,Suplente,633,1,219,415,0,Distrito Federal,70002540526
+c0036,g50476,df22,Ruth Venceremos,Erivan Hilário dos Santos,1361,PT,Suplente,31538,1,10,197,0,Distrito Federal,70001595677
+c0037,g25710,df22,Vanessa É O Bicho,Vanessa Negrini,1324,PT,Suplente,10816,1,27,197,0,Distrito Federal,70001595678
+c0038,g36640,df22,Erika Kokay,Erika Jucá Kokay,1331,PT,Eleito,146092,1,3,197,0,Distrito Federal,70001595679
+c0039,g48006,df22,Policarpo,Roberto Policarpo Fagundes,1313,PT,Suplente,22608,1,16,197,0,Distrito Federal,70001595680
+c0040,g17895,df26,Marivaldo Pereira,Marivaldo de Castro Pereira,1300,PT,Suplente,12345,1,29,163,0,Distrito Federal,70002539534
+c0041,g25710,df26,Vanessa É O Bicho,Vanessa Bicho Negrini,1324,PT,Suplente,9197,1,33,163,0,Distrito Federal,70002539535
+c0042,g30328,df26,Rosilene Corrêa,Rosilene Correa Lima,1333,PT,Suplente,34253,1,13,163,0,Distrito Federal,70002539536
+c0043,g50476,df26,Ruth Venceremos,Erivan Hilario dos Santos,1361,PT,Suplente,36117,1,12,163,0,Distrito Federal,70002539537
+c0044,g22214,df26,Márcia Abrahão,Marcia Abrahao Moura,1331,PT,Suplente,16986,1,23,163,0,Distrito Federal,70002539539
+c0045,g20726,df26,Agnelo Queiroz,Agnelo Santos Queiroz Filho,1310,PT,Eleito,43542,1,9,163,0,Distrito Federal,70002539540
+c0046,g48006,df26,Policarpo,Roberto Policarpo Fagundes,1313,PT,Suplente,24563,1,17,163,0,Distrito Federal,70002539541
+c0047,g45089,gov22,Leandro Grass,Leandro Antônio Grass Peixoto,43,PV,Não eleito,434587,1,2,10,0,Distrito Federal,70001597108
+c0048,g45089,gov26,Leandro Grass,Leandro Antônio Grass Peixoto,13,PT,2º turno,569930,1,2,10,0,Distrito Federal,70002552496
+c0049,g37397,pres22t1,Lula,Luiz Inácio Lula da Silva,13,PT,2º turno,649534,1,2,11,0,Distrito Federal,280001607829
+c0050,g37397,pres22t1,Lula,Luiz Inácio Lula da Silva,13,PT,2º turno,649534,1,1,11,0,Distrito Federal,280001607829
+c0051,g37397,pres22t1,Lula,Luiz Inácio Lula da Silva,13,PT,2º turno,649534,1,1,11,0,Distrito Federal,280001607829
+c0052,g37397,pres22t1,Lula,Luiz Inácio Lula da Silva,13,PT,2º turno,649534,1,1,11,0,Distrito Federal,280001607829
+c0053,g37397,pres22t1,Lula,Luiz Inácio Lula da Silva,13,PT,2º turno,649534,1,1,11,0,Distrito Federal,280001607829
+c0054,g37397,pres22t1,Lula,Luiz Inácio Lula da Silva,13,PT,2º turno,649534,1,1,11,0,Distrito Federal,280001607829
+c0055,g37397,pres22t1,Lula,Luiz Inácio Lula da Silva,13,PT,2º turno,649534,1,2,11,0,Distrito Federal,280001607829
+c0056,g37397,pres22t1,Lula,Luiz Inácio Lula da Silva,13,PT,2º turno,649534,1,2,11,0,Distrito Federal,280001607829
+c0057,g37397,pres22t1,Lula,Luiz Inácio Lula da Silva,13,PT,2º turno,649534,1,2,11,0,Distrito Federal,280001607829
+c0058,g37397,pres22t1,Lula,Luiz Inácio Lula da Silva,13,PT,2º turno,649534,1,1,11,0,Distrito Federal,280001607829
+c0059,g37397,pres22t1,Lula,Luiz Inácio Lula da Silva,13,PT,2º turno,649534,1,1,11,0,Distrito Federal,280001607829
+c0060,g37397,pres22t1,Lula,Luiz Inácio Lula da Silva,13,PT,2º turno,649534,1,2,11,0,Distrito Federal,280001607829
+c0061,g37397,pres22t1,Lula,Luiz Inácio Lula da Silva,13,PT,2º turno,649534,1,2,11,0,Distrito Federal,280001607829
+c0062,g37397,pres22t1,Lula,Luiz Inácio Lula da Silva,13,PT,2º turno,649534,1,1,11,0,Distrito Federal,280001607829
+c0063,g37397,pres22t1,Lula,Luiz Inácio Lula da Silva,13,PT,2º turno,649534,1,1,11,0,Distrito Federal,280001607829
+c0064,g37397,pres22t1,Lula,Luiz Inácio Lula da Silva,13,PT,2º turno,649534,1,1,11,0,Distrito Federal,280001607829
+c0065,g37397,pres22t1,Lula,Luiz Inácio Lula da Silva,13,PT,2º turno,649534,1,1,11,0,Distrito Federal,280001607829
+c0066,g37397,pres22t1,Lula,Luiz Inácio Lula da Silva,13,PT,2º turno,649534,1,2,11,0,Distrito Federal,280001607829
+c0067,g37397,pres22t1,Lula,Luiz Inácio Lula da Silva,13,PT,2º turno,649534,1,2,11,0,Distrito Federal,280001607829
+c0068,g37397,pres22t1,Lula,Luiz Inácio Lula da Silva,13,PT,2º turno,649534,1,1,11,0,Distrito Federal,280001607829
+c0069,g37397,pres22t1,Lula,Luiz Inácio Lula da Silva,13,PT,2º turno,649534,1,2,11,0,Distrito Federal,280001607829
+c0070,g37397,pres22t1,Lula,Luiz Inácio Lula da Silva,13,PT,2º turno,649534,1,2,11,0,Distrito Federal,280001607829
+c0071,g37397,pres22t1,Lula,Luiz Inácio Lula da Silva,13,PT,2º turno,649534,1,2,11,0,Distrito Federal,280001607829
+c0072,g37397,pres22t1,Lula,Luiz Inácio Lula da Silva,13,PT,2º turno,649534,1,2,11,0,Distrito Federal,280001607829
+c0073,g37397,pres22t1,Lula,Luiz Inácio Lula da Silva,13,PT,2º turno,649534,1,1,11,0,Distrito Federal,280001607829
+c0074,g37397,pres22t1,Lula,Luiz Inácio Lula da Silva,13,PT,2º turno,649534,1,2,11,0,Distrito Federal,280001607829
+c0075,g37397,pres22t1,Lula,Luiz Inácio Lula da Silva,13,PT,2º turno,649534,1,1,11,0,Distrito Federal,280001607829
+c0076,g37397,pres22t1,Lula,Luiz Inácio Lula da Silva,13,PT,2º turno,649534,1,1,11,0,Distrito Federal,280001607829
+c0077,g37397,pres22t2,Lula,Luiz Inácio Lula da Silva,13,PT,2º turno,729295,1,2,2,0,Distrito Federal,280001607829
+c0078,g37397,pres22t2,Lula,Luiz Inácio Lula da Silva,13,PT,2º turno,729295,1,1,2,0,Distrito Federal,280001607829
+c0079,g37397,pres22t2,Lula,Luiz Inácio Lula da Silva,13,PT,2º turno,729295,1,1,2,0,Distrito Federal,280001607829
+c0080,g37397,pres22t2,Lula,Luiz Inácio Lula da Silva,13,PT,2º turno,729295,1,2,2,0,Distrito Federal,280001607829
+c0081,g37397,pres22t2,Lula,Luiz Inácio Lula da Silva,13,PT,2º turno,729295,1,1,2,0,Distrito Federal,280001607829
+c0082,g37397,pres22t2,Lula,Luiz Inácio Lula da Silva,13,PT,2º turno,729295,1,1,2,0,Distrito Federal,280001607829
+c0083,g37397,pres22t2,Lula,Luiz Inácio Lula da Silva,13,PT,2º turno,729295,1,2,2,0,Distrito Federal,280001607829
+c0084,g37397,pres22t2,Lula,Luiz Inácio Lula da Silva,13,PT,2º turno,729295,1,2,2,0,Distrito Federal,280001607829
+c0085,g37397,pres22t2,Lula,Luiz Inácio Lula da Silva,13,PT,2º turno,729295,1,2,2,0,Distrito Federal,280001607829
+c0086,g37397,pres22t2,Lula,Luiz Inácio Lula da Silva,13,PT,2º turno,729295,1,1,2,0,Distrito Federal,280001607829
+c0087,g37397,pres22t2,Lula,Luiz Inácio Lula da Silva,13,PT,2º turno,729295,1,1,2,0,Distrito Federal,280001607829
+c0088,g37397,pres22t2,Lula,Luiz Inácio Lula da Silva,13,PT,2º turno,729295,1,2,2,0,Distrito Federal,280001607829
+c0089,g37397,pres22t2,Lula,Luiz Inácio Lula da Silva,13,PT,2º turno,729295,1,2,2,0,Distrito Federal,280001607829
+c0090,g37397,pres22t2,Lula,Luiz Inácio Lula da Silva,13,PT,2º turno,729295,1,1,2,0,Distrito Federal,280001607829
+c0091,g37397,pres22t2,Lula,Luiz Inácio Lula da Silva,13,PT,2º turno,729295,1,1,2,0,Distrito Federal,280001607829
+c0092,g37397,pres22t2,Lula,Luiz Inácio Lula da Silva,13,PT,2º turno,729295,1,1,2,0,Distrito Federal,280001607829
+c0093,g37397,pres22t2,Lula,Luiz Inácio Lula da Silva,13,PT,2º turno,729295,1,1,2,0,Distrito Federal,280001607829
+c0094,g37397,pres22t2,Lula,Luiz Inácio Lula da Silva,13,PT,2º turno,729295,1,2,2,0,Distrito Federal,280001607829
+c0095,g37397,pres22t2,Lula,Luiz Inácio Lula da Silva,13,PT,2º turno,729295,1,2,2,0,Distrito Federal,280001607829
+c0096,g37397,pres22t2,Lula,Luiz Inácio Lula da Silva,13,PT,2º turno,729295,1,1,2,0,Distrito Federal,280001607829
+c0097,g37397,pres22t2,Lula,Luiz Inácio Lula da Silva,13,PT,2º turno,729295,1,2,2,0,Distrito Federal,280001607829
+c0098,g37397,pres22t2,Lula,Luiz Inácio Lula da Silva,13,PT,2º turno,729295,1,2,2,0,Distrito Federal,280001607829
+c0099,g37397,pres22t2,Lula,Luiz Inácio Lula da Silva,13,PT,2º turno,729295,1,2,2,0,Distrito Federal,280001607829
+c0100,g37397,pres22t2,Lula,Luiz Inácio Lula da Silva,13,PT,2º turno,729295,1,2,2,0,Distrito Federal,280001607829
+c0101,g37397,pres22t2,Lula,Luiz Inácio Lula da Silva,13,PT,2º turno,729295,1,1,2,0,Distrito Federal,280001607829
+c0102,g37397,pres22t2,Lula,Luiz Inácio Lula da Silva,13,PT,2º turno,729295,1,2,2,0,Distrito Federal,280001607829
+c0103,g37397,pres22t2,Lula,Luiz Inácio Lula da Silva,13,PT,2º turno,729295,1,1,2,0,Distrito Federal,280001607829
+c0104,g37397,pres22t2,Lula,Luiz Inácio Lula da Silva,13,PT,2º turno,729295,1,1,2,0,Distrito Federal,280001607829
+c0105,g30328,sen22,Rosilene Corrêa,Rosilene Corrêa Lima,133,PT,Não eleito,356198,1,3,11,0,Distrito Federal,70001606812
+c0106,g36640,sen26,Erika Kokay,Erika Jucá Kokay,131,PT,Não eleito,610950,1,4,11,0,Distrito Federal,70002552490
+c0107,g37397,pres26t1,Lula,Luiz Inácio Lula da Silva,13,PT,,675627,1,2,13,0,Distrito Federal,

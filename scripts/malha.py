@@ -82,18 +82,20 @@ out2 = ROOT / 'docs' / 'dados' / 'ufs.geojson'
 out2.write_text(json.dumps({'type': 'FeatureCollection', 'features': ufs}, ensure_ascii=False, separators=(',', ':')), encoding='utf-8')
 print('ufs.geojson:', len(ufs), 'feições,', round(out2.stat().st_size / 1e6, 2), 'MB')
 
-# ---- Rio Grande do Norte com mais detalhe (recorte "PT no RN"), para o mapa aproximado no estado
-TOL_RN = 0.002                                               # cerca de 220 m
-rn = gdf[gdf.SIGLA_UF == 'RN'].copy()
+# ---- uma malha por estado, com mais detalhe, para o mapa de cada estado (municípios e o contorno do estado)
+TOL_UF = 0.002                                               # cerca de 220 m
+pasta = ROOT / 'docs' / 'dados' / 'malha'
+pasta.mkdir(parents=True, exist_ok=True)
 bruto = gpd.read_file(SHP, columns=['CD_MUN', 'SIGLA_UF', 'geometry'])
 bruto['CD_MUN'] = bruto['CD_MUN'].astype(str)
-bruto = bruto[bruto.CD_MUN.isin(set(rn.CD_MUN))].reset_index(drop=True)
-bruto['geometry'] = shapely.coverage_simplify(bruto.geometry.values, tolerance=TOL_RN)
-feats_rn = [{'type': 'Feature', 'properties': {'c': cod}, 'geometry': geojson(g)} for cod, g in zip(bruto.CD_MUN, bruto.geometry)]
-out3 = ROOT / 'docs' / 'dados' / 'municipios_rn.geojson'
-out3.write_text(json.dumps({'type': 'FeatureCollection', 'features': feats_rn}, ensure_ascii=False, separators=(',', ':')), encoding='utf-8')
-print('municipios_rn.geojson:', len(feats_rn), 'feições,', round(out3.stat().st_size / 1e6, 2), 'MB')
-uf_rn = {'type': 'FeatureCollection', 'features': [{'type': 'Feature', 'properties': {'u': 'RN'}, 'geometry': geojson(shapely.union_all(bruto.geometry.values))}]}
-out4 = ROOT / 'docs' / 'dados' / 'uf_rn.geojson'
-out4.write_text(json.dumps(uf_rn, ensure_ascii=False, separators=(',', ':')), encoding='utf-8')
-print('uf_rn.geojson:', round(out4.stat().st_size / 1e6, 3), 'MB')
+bruto = bruto[bruto.CD_MUN.isin(codigos)].reset_index(drop=True)
+tam = {}
+for uf, g in bruto.groupby('SIGLA_UF'):
+    g = g.reset_index(drop=True)
+    g['geometry'] = shapely.coverage_simplify(g.geometry.values, tolerance=TOL_UF)
+    feats = [{'type': 'Feature', 'properties': {'c': cod}, 'geometry': geojson(geom)} for cod, geom in zip(g.CD_MUN, g.geometry)]
+    feats.append({'type': 'Feature', 'properties': {'u': uf, 'uf': 1}, 'geometry': geojson(shapely.union_all(g.geometry.values))})
+    alvo = pasta / f'{uf.lower()}.geojson'
+    alvo.write_text(json.dumps({'type': 'FeatureCollection', 'features': feats}, ensure_ascii=False, separators=(',', ':')), encoding='utf-8')
+    tam[uf] = round(alvo.stat().st_size / 1e3)
+print('malha por estado (kB):', tam, '| total', sum(tam.values()), 'kB')
