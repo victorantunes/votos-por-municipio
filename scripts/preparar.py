@@ -1,18 +1,18 @@
 """Organiza os dados do TSE em tabelas simples (uma linha por disputa, candidatura ou município).
 
 Entradas
-  dados/tse/csv/*.csv        RN de 2020, 2022 e 2026 e Presidente de 2022 (scripts/coletar_tse.py)
+  dados/tse/csv/*.csv        RN de 2020, 2022, 2024 e 2026 e Presidente de 2022 (scripts/coletar_tse.py)
   dados/agg_2026/agg_*.csv   boletins de urna de 2026, Presidente, por município (scripts/coletar_bu_2026.py)
   dados/correspondencia_tse_ibge.csv
 Saídas
   dados/br/contexto.csv, dados/br/lula.csv                       Lula no Brasil (2022 1º e 2º turnos, 2026 1º turno)
   dados/rn/disputas.csv, contexto.csv                            disputas do RN e participação (aptos, abstenção, brancos, nulos)
-  dados/rn/pessoas.csv, candidaturas.csv, votos.csv              candidatos do PT no RN em 2020, 2022 e 2026 (e Lula)
+  dados/rn/pessoas.csv, candidaturas.csv, votos.csv              candidatos do PT no RN em 2020, 2022, 2024 e 2026 (e Lula)
 
 Conceitos
   disputa      eleição de um cargo em um ano e turno (por exemplo, Governador 2022 ou Vereador 2020)
   candidatura  um candidato em uma disputa
-  pessoa       o mesmo candidato ao longo das disputas (ligado pelo CPF, que não é publicado)
+  pessoa       o mesmo candidato ao longo das disputas (ligado pelo título de eleitor, que não é publicado)
   contexto     por município e disputa: aptos, comparecimento, abstenções, brancos, nulos e votos válidos
 """
 import hashlib
@@ -109,17 +109,18 @@ def brasil():
 
 
 # ============================================================ RN: candidatos do PT
-CARGOS = {  # (ano, DS_CARGO do TSE) -> (id da disputa, cargo, tipo)
-    (2022, 'Governador'): ('gov22', 'Governador', 'maj'), (2022, 'Senador'): ('sen22', 'Senador', 'maj'),
-    (2022, 'Deputado Federal'): ('df22', 'Deputado Federal', 'prop'), (2022, 'Deputado Estadual'): ('de22', 'Deputado Estadual', 'prop'),
-    (2020, 'Prefeito'): ('pref20', 'Prefeito', 'maj'), (2020, 'Vereador'): ('ver20', 'Vereador', 'prop'),
-    (2026, 'Governador'): ('gov26', 'Governador', 'maj'), (2026, 'Senador'): ('sen26', 'Senador', 'maj'),
-    (2026, 'Deputado Federal'): ('df26', 'Deputado Federal', 'prop'), (2026, 'Deputado Estadual'): ('de26', 'Deputado Estadual', 'prop')}
-ORDEM_DISP = ['ver20', 'pref20', 'de22', 'df22', 'sen22', 'gov22', 'pres22t1', 'pres22t2', 'de26', 'df26', 'sen26', 'gov26', 'pres26t1']
+CARGOS = {  # (ano, DS_CARGO do TSE, turno) -> (id da disputa, cargo, tipo)
+    (2022, 'Governador', '1'): ('gov22', 'Governador', 'maj'), (2022, 'Senador', '1'): ('sen22', 'Senador', 'maj'),
+    (2022, 'Deputado Federal', '1'): ('df22', 'Deputado Federal', 'prop'), (2022, 'Deputado Estadual', '1'): ('de22', 'Deputado Estadual', 'prop'),
+    (2020, 'Prefeito', '1'): ('pref20', 'Prefeito', 'maj'), (2020, 'Vereador', '1'): ('ver20', 'Vereador', 'prop'),
+    (2024, 'Prefeito', '1'): ('pref24t1', 'Prefeito', 'maj'), (2024, 'Prefeito', '2'): ('pref24t2', 'Prefeito', 'maj'), (2024, 'Vereador', '1'): ('ver24', 'Vereador', 'prop'),
+    (2026, 'Governador', '1'): ('gov26', 'Governador', 'maj'), (2026, 'Senador', '1'): ('sen26', 'Senador', 'maj'),
+    (2026, 'Deputado Federal', '1'): ('df26', 'Deputado Federal', 'prop'), (2026, 'Deputado Estadual', '1'): ('de26', 'Deputado Estadual', 'prop')}
+ORDEM_DISP = ['ver20', 'pref20', 'de22', 'df22', 'sen22', 'gov22', 'pres22t1', 'pres22t2', 'ver24', 'pref24t1', 'pref24t2', 'de26', 'df26', 'sen26', 'gov26', 'pres26t1']
 NOMES_DISP = {'ver20': 'Vereador 2020', 'pref20': 'Prefeito 2020', 'de22': 'Deputado Estadual 2022', 'df22': 'Deputado Federal 2022',
               'sen22': 'Senador 2022', 'gov22': 'Governador 2022', 'pres22t1': 'Presidente 2022 (1º turno)',
               'pres22t2': 'Presidente 2022 (2º turno)', 'pres26t1': 'Presidente 2026 (1º turno)', 'de26': 'Deputado Estadual 2026',
-              'df26': 'Deputado Federal 2026', 'sen26': 'Senador 2026', 'gov26': 'Governador 2026'}
+              'df26': 'Deputado Federal 2026', 'ver24': 'Vereador 2024', 'pref24t1': 'Prefeito 2024 (1º turno)', 'pref24t2': 'Prefeito 2024 (2º turno)', 'sen26': 'Senador 2026', 'gov26': 'Governador 2026'}
 SITUACAO = {'ELEITO': 'Eleito', 'ELEITO POR QP': 'Eleito', 'ELEITO POR MÉDIA': 'Eleito', 'SUPLENTE': 'Suplente', 'NÃO ELEITO': 'Não eleito',
             '2º TURNO': '2º turno'}
 
@@ -133,7 +134,7 @@ def titulo(txt):
 def rn():
     cad = {}
     votos_all = {}
-    for ano in (2020, 2022, 2026):
+    for ano in (2020, 2022, 2024, 2026):
         c = ler(f'consulta_cand_{ano}_RN.csv')
         c['ano'] = ano
         cad[ano] = c
@@ -141,11 +142,13 @@ def rn():
         v['ano'] = ano
         votos_all[ano] = v
     cons = pd.concat(cad.values(), ignore_index=True)
+    # o TSE esconde o CPF a partir de 2024, então as pessoas são ligadas pelo título de eleitor (que coincide com o CPF onde os dois existem)
+    cons['chave'] = cons.NR_TITULO_ELEITORAL_CANDIDATO.where(cons.NR_TITULO_ELEITORAL_CANDIDATO.str.len() == 12, 'sq' + cons.SQ_CANDIDATO)
     vot = pd.concat(votos_all.values(), ignore_index=True)
     vot['v'] = inteiro(vot.QT_VOTOS_NOMINAIS_VALIDOS)
     vot['v_total'] = inteiro(vot.QT_VOTOS_NOMINAIS)
     vot['cd_tse'] = inteiro(vot.CD_MUNICIPIO)
-    chaves = vot.apply(lambda r: CARGOS.get((r.ano, r.DS_CARGO)), axis=1)
+    chaves = vot.apply(lambda r: CARGOS.get((r.ano, r.DS_CARGO, r.NR_TURNO)), axis=1)
     vot = vot[chaves.notna()].copy()
     vot['disp'] = chaves[chaves.notna()].map(lambda t: t[0])
 
@@ -154,15 +157,15 @@ def rn():
     nmun = vot[vot.v > 0].groupby(['disp', 'SQ_CANDIDATO']).cd_tse.nunique().rename('nmun')
     por_cand = por_cand.merge(nmun, on=['disp', 'SQ_CANDIDATO'], how='left').fillna({'nmun': 0})
     info = cons.drop_duplicates('SQ_CANDIDATO').set_index('SQ_CANDIDATO')
-    por_cand = por_cand.join(info[['NR_CPF_CANDIDATO', 'NM_CANDIDATO', 'NM_URNA_CANDIDATO', 'NR_CANDIDATO', 'SG_PARTIDO', 'DS_SIT_TOT_TURNO', 'NM_UE', 'SG_UE']], on='SQ_CANDIDATO')
-    assert por_cand.NR_CPF_CANDIDATO.notna().all()
+    por_cand = por_cand.join(info[['chave', 'NM_CANDIDATO', 'NM_URNA_CANDIDATO', 'NR_CANDIDATO', 'SG_PARTIDO', 'DS_SIT_TOT_TURNO', 'NM_UE', 'SG_UE']], on='SQ_CANDIDATO')
+    assert por_cand.chave.notna().all()
 
     # --- pessoas: quem foi candidato pelo PT em 2020, 2022 ou 2026
-    cpf_pt = set(por_cand[por_cand.SG_PARTIDO == 'PT'].NR_CPF_CANDIDATO)
-    por_cand = por_cand[por_cand.NR_CPF_CANDIDATO.isin(cpf_pt)].copy()
-    cpfs = sorted(por_cand.NR_CPF_CANDIDATO.unique(), key=lambda c: hashlib.sha1(c.encode()).hexdigest())
-    ids = {c: f'p{n:04d}' for n, c in enumerate(cpfs, 1)}
-    por_cand['pessoa'] = por_cand.NR_CPF_CANDIDATO.map(ids)
+    chaves_pt = set(por_cand[por_cand.SG_PARTIDO == 'PT'].chave)
+    por_cand = por_cand[por_cand.chave.isin(chaves_pt)].copy()
+    ordem = sorted(por_cand.chave.unique(), key=lambda c: hashlib.sha1(c.encode()).hexdigest())
+    ids = {c: f'p{n:04d}' for n, c in enumerate(ordem, 1)}
+    por_cand['pessoa'] = por_cand.chave.map(ids)
 
     # --- posição na disputa (entre todos os candidatos do mesmo cargo e da mesma circunscrição)
     todos = vot.groupby(['disp', 'SG_UE', 'SQ_CANDIDATO']).v.sum().reset_index()
@@ -177,7 +180,7 @@ def rn():
     por_cand['cid'] = [f'c{n:04d}' for n in range(1, len(por_cand) + 1)]
 
     # --- votos por município das candidaturas
-    vot2 = vot.merge(por_cand[['SQ_CANDIDATO', 'cid']], on='SQ_CANDIDATO')
+    vot2 = vot.merge(por_cand[['SQ_CANDIDATO', 'disp', 'cid']], on=['SQ_CANDIDATO', 'disp'])
     votos = vot2.groupby(['cid', 'cd_tse']).v.sum().reset_index().rename(columns={'v': 'votos'})
 
     # --- contexto das disputas do RN
@@ -185,9 +188,10 @@ def rn():
     det22 = ler('detalhe_votacao_munzona_2022_RN.csv')
     det20 = ler('detalhe_votacao_munzona_2020_RN.csv')
     det26 = ler('detalhe_votacao_munzona_2026_RN.csv')
-    for (ano, cargo), (disp, _, _) in CARGOS.items():
-        det = {2020: det20, 2022: det22, 2026: det26}[ano]
-        det = det[det.DS_CARGO == cargo]
+    det24 = ler('detalhe_votacao_munzona_2024_RN.csv')
+    for (ano, cargo, turno), (disp, _, _) in CARGOS.items():
+        det = {2020: det20, 2022: det22, 2024: det24, 2026: det26}[ano]
+        det = det[(det.DS_CARGO == cargo) & (det.NR_TURNO == turno)]
         if disp in set(por_cand.disp) and len(det):
             ctx.append(contexto(det, disp))
     # presidente 2022 (RN) e 2026

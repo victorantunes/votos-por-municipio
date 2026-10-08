@@ -1,594 +1,975 @@
 pessoa,nome,nome_urna,externo
-p0001,Brisa Silva Bracchi,Brisa,False
-p0002,Rita Candido da Silva Gomes,Ritinha,False
-p0003,Francisco Caninde Margarida,Canindé Moreno,False
-p0004,Jackeline de Araujo Silva,Jackeline Araujo,False
-p0005,Francisco Lindemberg Filgueira Monteiro Junior,Junior Monteiro,False
-p0006,Francisco Leonardo da Silva,Gal,False
-p0007,Raquel Lilian de Medeiros Soares,Raquel Lilian,False
-p0008,Rita de Cassia da Costa Lima,Cassia Lima,False
-p0009,Erineide Maria Dantas,Tileide Dantas,False
-p0010,Francinaldo Macedo de Andrade,Naldo Simpinson,False
-p0011,Jeferson Roberto da Silva,Jeferson Roberto,False
-p0012,Luciano Pinheiro de Almeida,Luciano Pinheiro,False
-p0013,Maria Carolina Silva dos Santos,Carol de Biu,False
-p0014,Maria de Fatima Bezerra,Fatima Bezerra,False
-p0015,Jaqueline Rodrigues de Valença,Jaqueline,False
-p0016,Maria de Lourdes Pinheiro Fortes,Lourdes Fortes,False
-p0017,João Maria Victo da Silva,João do Rui,False
-p0018,Glisiany Pluvia de Oliveira,Plúvia,False
-p0019,Jeane Cleia Costa Moreira,Jeane Moreira,False
-p0020,Maria das Vitórias Garcia de Oliveira,Vitória Garcia,False
-p0021,Webson Silva Cruz,Beto Cruz,False
-p0022,Cristiane Saraiva de Medeiros,Christiane Saraiva Professora,False
-p0023,Jose Joailton Soares de Lima de Oliveira,Dede(Joailton),False
-p0024,Jakson Diego dos Santos Bezerra,Diego Bezerra,False
-p0025,Leonardo Sales de Souza,Léo Sales,False
-p0026,Allan Davy Paiva Silva,Allan Paiva,False
-p0027,Anamélcia Pereira Varela,Anamélcia Varela,False
-p0028,Ana Maria Fidelis Barboza,Ana Fidelis,False
-p0029,Jose Jair da Trindade,Jair Trindade,False
-p0030,Antonia Gilvana Mota Sousa,Gilvana Mota,False
-p0031,João Maria Campos,João Campos,False
-p0032,Francisco Ubiratan Barbosa Bezerra,Ubiratan Bezerra,False
-p0033,Silvia Ribeiro Barbosa,Silvinha,False
-p0034,Anna Maria Mendonça Nunes,Anninha Nunes,False
-p0035,Jackson de Santa Cruz Albuquerque Bezerra,Jackson Bezerra,False
-p0036,Sebastião Jorge Maia Neto,Netinho de Dedé Soldado,False
-p0037,Eduardo Cesar Holanda Melo,Cesar Holanda,False
-p0038,Sueli Sabino de Araújo,Sueli Sabino,False
+p0001,Maria Eliza Felix de Oliveira,Eliza Cantalice,False
+p0002,Maria de Fatima Medeiros,Fátima Horácio,False
+p0003,Tatiane Serafim da Silva,Tatiane Serafim,False
+p0004,Darliane Taise Carrilho Luciano,Darliane Carrilho,False
+p0005,Leonardo Oliveira de Araujo,Léo da Mata Fome,False
+p0006,Selma Maria da Silva Feitosa,Selma Maria,False
+p0007,Gilberto Pereira de Lima,Betinho,False
+p0008,Eduardo de Souza Santos,Eduardo Manara,False
+p0009,Romildo Miguel de Oliveira,Romildo Miguel,False
+p0010,Maria Luiza Barreto,Luiza Barreto,False
+p0011,Cláudia Reis Gonçalves,Cláudia Reis,False
+p0012,Alberto Carlos Lopes da Silva,Professor Carlinhos,False
+p0013,Webson Silva Cruz,Beto Cruz,False
+p0014,Maria do Rosário Araújo Vitoriano Dantas Pereira,Rosário,False
+p0015,Marcos Antonio Santana,Marquinhos Sindsuper,False
+p0016,José Maurício de Souza Medeiros,Professor Maurício,False
+p0017,Rodrigo Rodrigues Araújo,Professor Rodrigo,False
+p0018,Francisco Felipe Souza de Oliveira,Felipão,False
+p0019,Marcos Felipe Pereira da Silva,Felipe do Pt,False
+p0020,Iris Xavier Gomes,Iris Xavier,False
+p0021,Maria Aparecida de Souza Fernandes,Cida da Saúde,False
+p0022,Milene Shirley Soares Carvalho,Milene do Porto,False
+p0023,José Severiano de Figueiredo Maia Júnior,Junior de Bebel,False
+p0024,Pablo Maxi Soares Pereira,Pablo,False
+p0025,Petrônio Chaves da Costa Freitas,Petrônio Chaves,False
+p0026,Danielle Medeiros de Araujo,Danielle Rondinele,False
+p0027,Cleoneide Acioli da Silva,Cleoneide Acioli,False
+p0028,Maria Francisca de Lima,Chica do Pt,False
+p0029,Carla Cristina Silva de Carvalho,Carla do Matão,False
+p0030,Maria Patricia Lopes de Lima,Patrícia Lopes,False
+p0031,Francisco Franklin de Araujo,Padre Franklin,False
+p0032,Paula Gabriela Martins Morais,Gaby Morais,False
+p0033,Gecilda Monteiro Dantas,Tilda,False
+p0034,Lindevania Teixeira de Lima,Nega do Bolsa,False
+p0035,Itamar Pereira da Cruz,Irmão Itamar,False
+p0036,Deusimar Bernardino de Bessa,Deusimar,False
+p0037,Edmilson Francisco de Sousa,Edmilson Sousa,False
+p0038,Moises Glaubert dos Santos Silva,Moises Glaubert,False
 p0039,Luzitercio da Silva Albuquerque,Luzitercio,False
-p0040,Platiny Marinho dos Santos,Platiny Marinho,False
-p0041,Manuellyso da Silva Maia,Manuellyso Maia,False
-p0042,Francisco Ugmar Nogueira,Ugmar Nogueira,False
-p0043,João Arian de Souza Lima,Arian da Saúde,False
-p0044,Marcelo Augusto de Queiroz Lima,Marcelo Augusto,False
-p0045,Manoel Valerio Neto,Valerio Silva,False
-p0046,Pedro Lopes de Araujo Neto,Pedro Lopes,False
-p0047,Luciano Alves Tavares,Luciano,False
-p0048,Deusimar Silva do Nascimento,Deusimar,False
-p0049,Diego Marcos Candido da Rocha,Diego do Baldum,False
-p0050,Micarla Soares da Silva,Micarla do Baixio,False
-p0051,Joseane Regina da Silva,Josy Regina,False
-p0052,Luiz Eduardo de Alexandria,Pisca,False
-p0053,Francisco Enildo da Silva Fernandes,Enildo Fernandes,False
-p0054,Genesio Francisco Pinto Neto,Pola Pinto,False
-p0055,Francisco Canindé de França,Tiquinho do Povo,False
-p0056,Marcia Raniele Silvino da Costa,Marcia Raniele,False
-p0057,José Carlos Sena de Oliveira,Professor Zé Sena,False
-p0058,Paulo Eduardo Campielo Barreto Ramos,Paulo Barreto,False
-p0059,Cícero da Silva Militão,Cícero Militão,False
-p0060,Maria Jose de Lima Amorim,Zezinha Enfermeira,False
-p0061,Francisco Ronicleide da Silva,Roni Silva,False
-p0062,Giorgia Penereiro Pascoal,Dra Giorgia,False
-p0063,Eraldo Alves de Araujo,Eraldo Alves,False
-p0064,Antonio Delgado de Paiva Junior,Buzig,False
-p0065,Denilson Gomes do Nascimento,Denilson  Manga Vein,False
-p0066,Alexsandra Ferreira Maia de Melo,Professora Alexsandra,False
-p0067,Francisco Hermínio da Silva,Castelo,False
-p0068,Romildo Miguel de Oliveira,Romildo Miguel,False
-p0069,Erasmo Antônio da Silva,Lau de Elias,False
-p0070,Jadiel Luis Dantas de Medeiros,Jadiel Luis,False
-p0071,Julio Gonçalves Moreira Araujo,Professor Julio,False
-p0072,Licélia Jovino da Silva,Licélia,False
-p0073,Flavio Azevedo de Macedo,Flavio,False
-p0074,Najara Karoliny Jeronimo de Oliveira,Karoliny Jeronimo,False
-p0075,José Domingos Carneiro da Costa,Zé Domingos,False
-p0076,Francisco Benedito de Paula,Benedito de Caiana,False
-p0077,Francisco Felipe Souza de Oliveira,Felipão,False
-p0078,Reginaldo Francisco,Reginaldo,False
-p0079,Antonia Marina Delmiro Alves de Lima,Marina Lima,False
-p0080,Josélia Lôpo Modesto da Silva,Josélia Lôpo,False
-p0081,Marcos Aurelio de Araujo Estevam,Marcos da Saude,False
-p0082,Marcia Maria Bezerra Soares,Márcia Bezerra,False
-p0083,Severino Dionisio Filho,Bihino,False
-p0084,José Rômulo Arnaud Amâncio,Professor Rômulo,False
-p0085,Maria Yamara dos Santos Paiva,Yamara,False
-p0086,Maria José da Silva Rodrigues,Didé Rodrigues,False
-p0087,Joao Maria Cabral do Nascimento,Cabral do Sindicato,False
-p0088,Francisco Floriano de Souza,Chicão do Pt,False
-p0089,Aurino Marcondes de Aquino Santos,Professor Marcondes,False
-p0090,Irenilde Oliveira de Sousa,Maninha Macae,False
-p0091,Mikael Kellyson dos Santos Sousa,Kellyson Sousa,False
-p0092,Márcio Medeiros de Lima,Márcio de Maria de Olindina,False
-p0093,Liziane Richelle Pinheiro dos Santos,Richelle Pinheiro,False
-p0094,Jarbas Ribeiro da Costa,Jarbas Ribeiro,False
-p0095,Luciano Tertulino Barbosa,Luciano Barbosa,False
-p0096,João Soares Lopes,Professor João Soares,False
-p0097,Francisco Jose de Menezes,Sabugo do Mulungu,False
-p0098,Samara Mistica Ferreira dos Santos,Samara de Luiz,False
-p0099,Jose Romario Santos da Silva,Romario Santos,False
-p0100,Francisco Erinaldo Ferreira da Rocha,Naldo Rocha,False
-p0101,Petronio Chaves da Costa Freitas,Petrônio Chaves,False
-p0102,Mabely Cristina Soares de Lima,Professora Mabely,False
-p0103,Nielson do Nascimento,Nielson,False
-p0104,Mario Ilo Garcia,Mario Ilo,False
-p0105,Donisete Nascimento da Silva,Ligeirinho,False
-p0106,Maria Jussioneide Pereira de Bessa Silva,Toneide,False
-p0107,Carlos Antonio Alves da Silva,Carlinhos do Rosado,False
-p0108,Cabrino Querino da Silva,Cabrino Querino,False
-p0109,Raimundo Fernandes da Silva,Raimundo do Patativa,False
-p0110,Damião Lacerda de Souza,Damião Lacerda,False
-p0111,Jose Sidney Ramos Florencio,Sidney Magal,False
-p0112,Carla Cristina Silva de Carvalho,Carla do Matão,False
-p0113,Ana Paula Ribeiro da Fonseca Lopes,Enf Ana Paula do Frutilândia,False
-p0114,Reginaldo Vieira dos Santos,Nem do Lava Jato,False
-p0115,Erivan José da Silva,Erivan do Bujão,False
-p0116,George Andre Almeida de Andrade,George Almeida,False
-p0117,Antônio Claudio Leite,Claudio Leite,False
-p0118,Elismar Bezerra,Elismar Bezerra,False
-p0119,Divino Rodrigues da Silva,Divino,False
-p0120,Fernando Wanderley Vargas da Silva,Mineiro,False
-p0121,Artur Araujo do Amaral,Artur Filho de Caiado,False
-p0122,Jaqueline de Oliveira,Jaqueline Artesã,False
-p0123,Rita de Cáscia da Silva Abrantes,Professora Ritinha,False
-p0124,Edmilson Xavier da Costa Filho,Edmilson Bracinho,False
-p0125,Francisco Augusto de Barros,Irmão Erivan,False
-p0126,Raimundo Paulo de Brito,Paulo Binho,False
-p0127,Antonio Gomes Batista,Braga,False
-p0128,Paulo Cesar Elias Ferreira,Paulo Cesar,False
-p0129,Gedalva de Alexandria Lourenço,Gedalva de Chuca,False
-p0130,Ivone Anselmo de Medeiros,Ivone,False
-p0131,Paula Gabriela Martins Morais,Gaby Morais,False
-p0132,Jose Maria da Silva,Zé Maria,False
-p0133,Paulo Sergio Francisco,Paulo Sérgio,False
-p0134,Leonardo Oliveira de Araujo,Léo da Mata Fome,False
-p0135,Carlos Eduardo Xavier,Cadu de Lula,False
-p0136,Arliane Barbosa da Silva,Lila,False
-p0137,Aisamaque Dalyton Fagundes Conceicao,Aisamaque,False
-p0138,Hyllka Rachel de Sousa Lucena,Hyllka,False
-p0139,Joao Corcino Barbosa Neto,Joao Corcino,False
-p0140,Maria Aparecida Morais de Araujo,Cida Julião,False
-p0141,Rejane Jerônimo Gomes de Oliveira,Rejane Gomes,False
-p0142,Antonio de Souza e Silva,Zico do Sindicato,False
-p0143,Edinaide Pinheiro da Costa,Naide de Bado,False
-p0144,Fernando Lucena Pereira dos Santos,Fernando Lucena,False
-p0145,Jerry Ildegar Dantas Pontual,Jerry do Hospital,False
-p0146,Aurino Carlos de Lima,Aurino Carlos,False
-p0147,Francisco Ferreira Arcanjo,Chico Gago,False
-p0148,Natalia Bastos Bonavides,Natália Bonavides,False
-p0149,Sanzia Maria Ribeiro da Silva Mendonça,Sanzia,False
-p0150,Tiago Lopes Pereira,Tiago Lopes,False
-p0151,Elinalva Pereira,Eli,False
-p0152,Telma Maria Rodrigues de Sales,Professora Telma Rodrigues,False
-p0153,Odair Jose  Gomes Bispo,Odair,False
-p0154,Glauco Araujo Lima de Sena,Glauco,False
-p0155,Omério Juvencio de Almeida,Galego dos Necos,False
-p0156,Lindomar Matias Cabral,Lindomar Balinha,False
-p0157,Marivaldo Braz,Marivaldo D Dois,False
-p0158,Aurelia Sergio Avelino,Aurelia Professora,False
-p0159,Maria Marleide da Cunha Matias,Marleide Cunha,False
-p0160,José Mota da Silva Júnior,Zé Mota,False
-p0161,Jeane Dantas dos Santos Bezerra,Professora  Jeane Dantas,False
-p0162,Barbara Caroline da Silva  Lima,Barbára,False
-p0163,Girleno do Amaral Silva,Kavinho,False
-p0164,Jailson Almeida Ferreira,Jailson,False
-p0165,Alberto Carlos Lopes da Silva,Professor Carlinhos,False
-p0166,Hérica Francisco da Silva,Hérica,False
-p0167,Jorge Luiz de Lima,Nego Jorge,False
-p0168,Flávio Julio Xavier,Flávio Júnior,False
-p0169,Eloni Maria da Silva,Elô Silva,False
-p0170,Milton Urbano Aires,Milton Urbano,False
-p0171,João Cabral de Lira,João Cabral,False
-p0172,Sebastião Ferreira Filho,Júnior Bastinho,False
-p0173,Juliana Garcia dos Santos Soares,Juliana Garcia,False
-p0174,Delaías Alves Barbosa,Delaías Barbosa,False
-p0175,Patricia Valeria Dias dos Santos,Patricia da Saude,False
-p0176,Marcos Antônio Soares,Toinho de Goiano,False
-p0177,Francisco Evangelista da Silva,Carlinhos Evangelista,False
-p0178,Raniery Alves do Nascimento Filho,Raniery Filho,False
-p0179,Emanuela Rayane do Nascimento,Emanuela,False
-p0180,Irlane Freire de Farias,Irlane Freire,False
-p0181,Jadson Carlos Coutinho da Silva,Jadson Carlos,False
-p0182,Maria Katiana Barbosa da Silva,Katiana Barbosa,False
-p0183,Gerte Ridia Carvalho,Rídia,False
-p0184,Carlos Alexandre Alves,Alexandre Bevenuto,False
-p0185,Francisca Jeova Leite Alves,Geó,False
-p0186,Douglas Pereira da Costa,Douglas Costa,False
-p0187,Antonia Neide Nazario Nunes,Neide Nazario,False
-p0188,Paulo Adriano Gomes Filho,Paulinho Gomes,False
-p0189,Sesiom Quinino Wanderley,Dr Sesiom,False
-p0190,Débora Reis Ferreira,Débora Refe,False
-p0191,Vinicius Marcelino Cortês,Vinicius Marcelino,False
-p0192,Erinaldo Correia Rego,Erinaldo Correia,False
-p0193,Josefa Aldaceia Chagas de Oliveira,Professora Aldacéia,False
-p0194,João Batista Gomes Moreira,Joao Moreira,False
-p0195,Maria Adriana Confessor,Adriana de Neguinho,False
-p0196,Gabriel Fernandes da Silva Brito,Gabriel Fernandes,False
-p0197,Ricardo de Lima Câmara,Macarrão,False
-p0198,Tito Diogo Ribeiro da Silva,Diogo Ribeiro,False
-p0199,Francineide Fernandes de Souza,Neide Barbará,False
-p0200,Ana Lucélia Chaves,Lucélia Chaves,False
-p0201,Katia Alves de Faria,Katia,False
-p0202,José Carlos da Silva Félix,Carlos Félix,False
-p0203,Lázaro Pinheiro da Silva,Lazaro,False
-p0204,Maria Idomesia Oliveira,Idomesia,False
-p0205,Itamar Pereira da Cruz,Irmão Itamar,False
-p0206,Julio Cesar Dalcin,Julio Gaucho,False
-p0207,Paulo Cesar do Nascimento,Paulo Macena,False
-p0208,Michele Venancio da Silva,Michele Venancio,False
-p0209,Francisca Eliane Silva Ferreira,Eliane Ferreira,False
-p0210,Patricio Adriano de Freitas,Patricio Adriano,False
-p0211,Everaldo Afonso Ribeiro,Professor Everaldo,False
-p0212,Manoel Thiago Vicente da Silva,Thiago Silva,False
-p0213,Rosimary Ferreira Barbosa,Rosimary Ferreira,False
-p0214,Francisco das Chagas dos Santos,Professor das Chagas,False
-p0215,Joao Maria Ramalho de Almeida,Professor Joao Maria,False
-p0216,Pedro Paulo Chaves Mattos,Pedro Che,False
-p0217,Jose Geraldo Saraiva Pinto,Geraldao do Pt,False
-p0218,Eliano Nogueira Chaves,Eliano Nogueira,False
-p0219,Selma Maria da Silva Feitosa,Selma Maria,False
-p0220,Antonio Lucinaldo Chaves,Lucinaldo Chaves,False
-p0221,Mariza Lourenço da Silva,Mariza de Lico,False
-p0222,Maria do Rosário Araújo Vitoriano Dantas Pereira,Rosário,False
-p0223,Elmar Anselmo de Lima,Professor Elmar,False
-p0224,Eliane Maria da Silva,Eliane Silva,False
-p0225,Francicarlos da Silva Santos,Francicarlos do Sindicato,False
-p0226,Maria Francicleide de Oliveira,Cleide Panca,False
-p0227,Rayssa Aline Batista de Araújo,Rayssa Aline,False
-p0228,Francisca Maria Alves,Maria da Barra,False
-p0229,Antonio Junior da Silva,Junior Rodoviario,False
-p0230,Edna Medeiros da Silva Fonseca,Edna,False
-p0231,Francisco de Assis dos Santos,Professor Quinho,False
-p0232,Maria Eliane da Silva,Loreda,False
-p0233,Wanessa Moisés dos Santos,Wanessa Gg Brasil,False
-p0234,Sebastião Valério da Fonseca,Dr Valério,False
-p0235,Jean Paul Terra Prates,Senador Jean,False
-p0236,Suely da Silva Santos,Lili,False
-p0237,José Roberto Dantas do Nascimento,Roberto do Pt,False
-p0238,Diana Silva de Albuquerque,Diana Silva,False
-p0239,Valdicelio Viterbo Lobo,Valdicelio Lobo,False
-p0240,Euzanan Oliveira da Silva,Euzanan,False
-p0241,Daniel Araujo Valenca,Daniel Valença,False
-p0242,Paulo Cesar Lima  de Araujo,Paulo da Barreta,False
-p0243,Amarildo Elias de Morais Filho,Amarildinho,False
-p0244,Rosana Maria Barbosa,Rosana Jovem,False
-p0245,Jonas Franklin da Paz,Professor Jonas,False
-p0246,Joao Venancio Ferreira,João Venâncio,False
-p0247,Luiz Ribeiro Rocha Junior,Junior do Quilombo,False
-p0248,Victor Gomes de Morais,Victor Morais,False
-p0249,João Batista França do Nascimento,João Batista França,False
-p0250,Francisco Alvaro da Costa,Alvinho,False
-p0251,Francisco Caninde Reinaldo,Irmão Canindé,False
-p0252,Maira Cintia Lucena Melo,Maira Melo,False
-p0253,Joao Paulo Elias da Silva,Joao Paulo,False
-p0254,Maria Eliza Felix de Oliveira,Eliza Cantalice,False
-p0255,Leonilson Batista,Didi da Cavalgada,False
-p0256,Anna Regina de Oliveira Margarida,Anna Regina,False
-p0257,Deusimar Bernardino de Bessa,Deusimar,False
-p0258,Frank Kleber de Lima,Frank Professor,False
-p0259,Petronio Souza Spinelli,Petrônio Spinelli,False
-p0260,Francisca da Conceição Bezerra,Francisca do Tapará,False
-p0261,Igor Murilo da Silva Oliveira,Murilo Oliveira,False
-p0262,Adriana Leoncio da Cruz,Adriana de Banjo,False
-p0263,Ednilson Fortunato de Araújo,Painho de Bubu,False
-p0264,Katia Linhares Mendes Cavalcante,Katia Linhares,False
-p0265,Silvia Daniele da Silva,Silvia Daniele,False
-p0266,Suzy Raquel Fernandes Nogueira,Raquel Nogueira,False
-p0267,Maria de Lourdes Pereira,Irmã Lurdes,False
-p0268,Maria Elizete Palhares de Melo,Elizete Palhares,False
-p0269,Rozilene Souza da Silva,Rose Silva,False
-p0270,Francisco de Assis do Nascimento,Assis de Seu Pedrinho,False
-p0271,Erivam do Carmo Silva,Erivam do Sindicato,False
-p0272,Fabricia Negreiros Marinho,Biomedica Fabricia,False
-p0273,João José de Sousa,Jota Jota,False
-p0274,Ivanildo da Silva,Nildo do Frei Damião,False
-p0275,Cicero Araujo da Silva,Cicero Araujo,False
-p0276,Ewerthon Lucas de Oliveira Lima Santos,Ewerthon Lucas,False
-p0277,Jose Lucianilde de Oliveira,Branco Basílio,False
-p0278,Roqueschneider Lima dos Santos,Roque,False
-p0279,Djairla Patricia Mendes de Farias,Dja Mendes,False
-p0280,Maria Divaneide Basilio,Divaneide Basílio,False
-p0281,Antônio Liberato da Silva,Liberato,False
-p0282,Natan Ovidio de Lira,Natan,False
-p0283,Francisco Nailton Soares,Nailton,False
-p0284,Mauricio Soares de Lima,Mauricio,False
-p0285,Jurglavia de Souza Pereira,Jurglavia Professora,False
-p0286,Yara Vitoria dos Santos Costa,Yara Costa,False
-p0287,Orlando Rodrigues Silva,Orlando,False
-p0288,Marcio do Carmo de Morais,Marcio Morais,False
-p0289,Jose Garrido de Lima Neto,Dede da Pastoral,False
-p0290,Camila Janille Pereira do Nascimento,Camila Escoteira,False
-p0291,Elioneide Felix de Lima,Elioneide,False
-p0292,Maria Lucia Rodrigues,Lucia,False
-p0293,Kleverlan Felix da Rocha,Kleverlan do Sindicato,False
-p0294,José Ekeoma Alves dos Santos,Ekeoma Santos,False
-p0295,José Freitas de Oliveira,Dedinho,False
-p0296,Gilson Bezerra de Medeiros,Gilson da Farmácia,False
-p0297,Antônia Gomes Farias,Antônia Gomes,False
-p0298,Julio Candido de Souza Junior,Junior de Quixabeira,False
-p0299,Luiz Carlos da Silva,Luiz Carlos Petroleiro,False
-p0300,Luiz Humberto Lopes da Silva,Humberto Damiao,False
-p0301,Maria das Neves Placido,Neves Plácido,False
-p0302,Fabiano de Araujo Medeiros,Fabiano Pacomio,False
-p0303,George Flávio Aires Teixeira,George Flávio Lotação,False
-p0304,Fábio Duarte da Silva,Fábio Duarte,False
-p0305,Pedro Carlos Ribeiro,Pedro de Margarida,False
-p0306,Rodrigo Raniere de Oliveira,Rodrigo Raniere,False
-p0307,Adilson Andrade de Azevedo,Adilson do Relógio,False
-p0308,Rodrigo Cesar Souza de Macedo,Rodrido Bico,False
-p0309,Jose Eduardo Paz Coutinho,Eduardo,False
-p0310,Maria do Desterro dos Santos,Tetê,False
-p0311,Diego Monteiro Fernandes,Diego do Ermo,False
-p0312,Denilson Pereira Barbalho,Denilson do Sindicato,False
-p0313,Marcos Aurélio Lima Imperial,Marcos Imperial,False
-p0314,Bruno Luiz Santos de Araújo,Bruno Luiz,False
-p0315,Francisco Alberto Lima de Mendonça,Francisco Alberto,False
-p0316,Maria do Livramento Almeida de Paiva,Lil,False
-p0317,Alysson Moises de Medeiros,Alysson,False
-p0318,Danyelle Rosana Guedes,Dany Guedes,False
-p0319,Isac Carlos dos Santos,Isac do Pt,False
-p0320,Francisca Canindé Garcia,Galega Taveira,False
-p0321,Francisco Agnaldo de Oliveira Fernandes,Agnaldo Fernandes,False
-p0322,Francisca Maria Batista,Francisca Batista,False
-p0323,Ítalo Matheus Araújo de Menezes,Ítalo,False
-p0324,Francisca das Chagas Paiva Silva,Mãetinha do Pt,False
-p0325,Judson Pereira Dias da Silva,Judson Pereira,False
-p0326,Hugo Manso Júnior,Hugo Manso,False
-p0327,Michael Douglas Alves,Michael Douglas,False
-p0328,Alcilene Araújo das Neves,Cilene de Cidão,False
-p0329,Antonio Victor da Fonseca,Borges,False
-p0330,Luiza Hillary Gomes da Silva,Hillary Gomes,False
-p0331,Maria Isolda Dantas de Moura,Isolda Dantas,False
-p0332,Sócrates Medeiros da Silva,Soró,False
-p0333,Állison Azevedo de Farias,Alinho,False
-p0334,Alexsandro Lima Pereira,Leo Gari,False
-p0335,Rafael Pereira de Medeiros,Rafael Profeta,False
-p0336,Messias Medeiros,Messias Medeiros,False
-p0337,Gilberto Pereira de Lima,Betinho,False
-p0338,Maria da Conceição Gomes do Nascimento,Ceição de Boneca,False
-p0339,Elias Bernardino de Gois,Professor Elias,False
-p0340,Marcos Antônio da Silva,Marcos Antônio,False
-p0341,Damiao Galvao de Figueiredo,Damiao Galvao,False
-p0342,Maria Jose da Silva,Like,False
-p0343,Francisca Geiane de Freitas,Geiane Freitas,False
-p0344,Valdeni Medeiros Nunes,Valdeni Medeiros,False
-p0345,Rafael Carvalho Moreno,Enf. Rafael Moreno,False
-p0346,Rodoval Xavier Patricio,Rodoval Patricio,False
-p0347,Maria do Socorro Adelino dos Santos Silva,Socorro,False
-p0348,José Geraldo da Silva Júnior,Júnior de Zé Geraldo,False
-p0349,Olga Macedo,Olga Macedo,False
-p0350,Paulo Antonio da Silva,Paulo Teodosio,False
-p0351,Maria Juraci de Araújo,Professora Juraci,False
-p0352,Esmeraldina Maria de Medeiros,Prof Esmeraldina Medeiros,False
-p0353,Milene Shirley Soares Carvalho,Milene do Porto,False
-p0354,Raimundo Nonato Neto,Irmao Netinho,False
-p0355,José Carlos do Nascimento,Major,False
-p0356,Antonio Wellinton Franco Quirino,Nego do Paraiso,False
-p0357,Antonio Andre da Silva Junior,Adre Junior,False
-p0358,Alcimar Dantas de Araujo Junior,Leleco,False
-p0359,Fabio dos Santos Correia,Tanjão Moto Peças,False
-p0360,Joao da Mata Cunha Neto,Joao Neto Cunha,False
-p0361,Alainy Kalianne Lima do Nascimento Simões,Alainy Simões,False
-p0362,Sonia Alexandre da Costa,Margarida Sonia,False
-p0363,Josivaldo do Nascimento,Josivaldo Papeto,False
-p0364,Francisco Amorim de Freitas,Amorim,False
-p0365,Alex Alvares da Silva,Alex Alvares,False
-p0366,Célia Maria da Silva,Professora Célia,False
-p0367,Eliete Venancio da Silva,Tia Naninha,False
-p0368,Francisco Caninde dos Santos,Chico da Ambulancia,False
-p0369,Ramon de Lima Luduvico,Ramon,False
-p0370,Maria de Lourdes Custodio da Silva,Lourdes de Duda,False
-p0371,Marcio Barbosa de Medeiros,Pepino,False
-p0372,Cláudia Reis Gonçalves,Cláudia Reis,False
-p0373,Alexandre Duarte de Souza,Irmão Alexandre,False
-p0374,Alcivan Batista de Oliveira,Alcivan Oliveira,False
-p0375,Jose Alves de Oliveira,Bobò Amigo dos Amigos,False
-p0376,Luzia Kalianne Vivianne da Silva,Kalianne Roque,False
-p0377,Jaelson Soares de Lima,Cocada Moto Táxi,False
-p0378,Flavio Camara de Souza,Flavio da Gameleira,False
-p0379,Gilmara Francisca da Silva,Gilmara Silva,False
-p0380,Manoel Reginaldo de Medeiros,Reginaldo Chico,False
-p0381,Neuma Vicente Nobre,Neuma Nobre,False
-p0382,Maria José Soares,Maria Sereia,False
-p0383,Luiz Marcos Constâncio,Mainho Constâncio,False
-p0384,Fabio Julio de Menezes,Juninho,False
-p0385,Ana Cristhina Nunes de Araujo,Cristhina Araujo,False
-p0386,Paulo Gondigio Ferreira,Irmão Paulo,False
-p0387,Cleber Paulo Siqueira da Silva,Cleber Siqueira,False
-p0388,Marciel Carlos de Sousa,Professor Marciel,False
-p0389,Cremilda Vieira de Souza,Cremilda Vieira,False
-p0390,Eliane Bandeira e Silva,Eliane Bandeira,False
-p0391,Maria Patricia Lopes de Lima,Patrícia Lopes,False
-p0392,Cilene de Melo da Silva de Oliveira,Cilene,False
-p0393,Francisca Geruza de Souza,Geruza Souza,False
-p0394,Juscelino da Silva Belmiro,Juscelino Belmiro,False
-p0395,Jocelio Arruda de Morais,Jocelio Morais,False
-p0396,João Marques de Souza,João de Edgar,False
-p0397,Maria Rita de Cassia Oliveira,Maria Rita,False
-p0398,Maria da Conceição Santos de Gois,Ceiça Gois,False
-p0399,Danielle Medeiros de Araujo,Danielle Rondinele,False
-p0400,Karla Artemizia Lima de Assis,Artemizia,False
-p0401,Carla Priscila Alves da Silva,Priscila Alcantara,False
-p0402,Francisco Franklin de Araujo,Padre Franklin,False
-p0403,Alcides Ferreira de Souza,Cid Ferreira,False
-p0404,Raimundo Sergio de Lima Paiva,Sergio Lima,False
-p0405,Francisco Canindé Fagundes,Canindé de Lilia,False
-p0406,Alex de Pontes Silva,Alex Pontes,False
-p0407,Antonio Fagner Gurgel,Nelinho,False
-p0408,Luiz Dantas de Araujo,Luiz Dantas,False
-p0409,Manoel Carlos Lopes de Morais,Manoel Carlos,False
-p0410,Jose Francisco Neto,Neto de Ana,False
-p0411,Francisco Fabio Dias de Luna,Fábio Luna,False
-p0412,Natividade Vieira de Melo Oliveira,Natividade,False
-p0413,Antonia Farias Campos,Antonia Farias,False
-p0414,Antonio Bezerra da Trindade,Toinho,False
-p0415,Francisco Darinaldo Duarte Camilo,Darinaldo Camilo,False
-p0416,Francisca Irisneide Lima Alves,Neide Lima,False
-p0417,Ozean Faustino Lourenco,Ozean Faustino,False
-p0418,Flora Medeiros Rodrigues do Nascimento,Flora Medeiros,False
-p0419,Valéria Ferreira da Silva,Valéria Silva,False
-p0420,Tarcilio Alves Batista,Novo de Pixilinga,False
-p0421,Jose Roberto Garcia de Araujo,Jose Roberto,False
-p0422,José de Arimateia Lopes de Lima,Arimateia Lima,False
-p0423,José Arimateia de Medeiros Guerra,Zé Guerreiro,False
-p0424,Jose Heriberto Barbosa de Oliveira,Beto do Assentamento,False
-p0425,Bruno Augusto Bezerra Jota,Bruno Augusto,False
-p0426,Rayane Cristina de Andrade Gomes,Rayane Andrade,False
-p0427,Sueliton Ivo da Costa,Sueliton Costa,False
-p0428,Alexsandro Gomes Batista,Alex,False
-p0429,Juscelino Gregorio da Silva,Juscelino Gregorio,False
-p0430,Francisco Ramos Neves,Professor Ramos,False
-p0431,Abel Soares Ferreira,Abel Neto,False
-p0432,Maria das Graças de Carvalho,Graça de Alzir,False
-p0433,Teofilo Fernandes Pimenta Neto,Tanildo Fernandes,False
-p0434,Aneirica Rocha da Silva,Anérica Rocha,False
-p0435,Macário Felix de Meneses Neto,Macário,False
-p0436,Weverlania de Sousa Santos Cristino,Werlania,False
-p0437,Ivan Nogueira de Morais,Ivan Nogueira de Morais,False
-p0438,Josilene Azevedo da Luz Macedo,Nenem do Tuiuiú,False
-p0439,Zélia Primo do Nascimento,Zélia Primo,False
-p0440,Francisco das Chagas da Silva Júnior,Júnior Silva,False
-p0441,Cezar Abdala,Cezar Abdala,False
-p0442,Marluce Teixeira de Morais,Marluce Morais,False
-p0443,Elisangela Silva da Costa Palombo,Professora Elisangela,False
-p0444,Joas Ferreira de Andrade,Joas,False
-p0445,Lucas David Gomes da Silva,Lucas David,False
-p0446,Antônio Inácio da Silva,Toinho Bacana,False
-p0447,Maria Edileuza Costa,Edileuza,False
-p0448,Francisco José da Penha,Chico Penha,False
-p0449,José Maria de Arimateia,Pirex,False
-p0450,Denilson Francisco Terto Barbosa,Denilson Barbosa,False
-p0451,Brendo dos Santos Silva,Breno de Lau,False
-p0452,Lucia Aparecida Lima de Oliveira,Professora Aparecida,False
-p0453,Maria de Fatima da Silva,Fatima Silva,False
-p0454,Claudia Cabral dos Santos,Claudinha de Elvis,False
-p0455,Lhys Oriany de Sena Morais Costa,Lhys Oriany,False
-p0456,Jose Genilson da Silva,Genilson Silva,False
+p0040,Luzia Alves de Paula Costa,Luzia de Sula,False
+p0041,Ivaneide do Carmo Barbosa,Preta da Saude,False
+p0042,Ricardo José de Medeiros,Rickardo Medeiros,False
+p0043,Paulo Márcio de Melo,Paulo Marcio,False
+p0044,Jose Francisco Filho,Dedé Carnaúba,False
+p0045,Dalva Maria de Souza,Dalva Lanches,False
+p0046,Hyllka Rachel de Sousa Lucena,Hyllka,False
+p0047,Márcio do Carmo de Morais,Márcio Morais,False
+p0048,Carlos Cabanas de Campos Cortez Filho,Pastor Cabanas,False
+p0049,Francisco Assis de Medeiros,Francisco do Pt,False
+p0050,Valéria Ferreira da Silva,Valéria Silva,False
+p0051,Francisco Agnaldo de Oliveira Fernandes,Agnaldo Fernandes,False
+p0052,Ednilson Fortunato de Araújo,Painho de Bubu,False
+p0053,Jailson de Oliveira,Dito Borracheiro,False
+p0054,Iranilson Alves de Macedo,Nildjackson,False
+p0055,Ariane dos Santos Stigger,Ariane da Pipa,False
+p0056,Francisco Jose de Menezes,Sabugo do Mulungu,False
+p0057,Jose Domingos Carneiro da Costa,Zé Domingos,False
+p0058,Manuel Avelino da Trindade Filho,Manuel Trindade,False
+p0059,Ruanda Cardozo Regis,Ruanda Regis,False
+p0060,Francisco Canindé Reinaldo,Irmão Canindé,False
+p0061,José Belchior Neto,Neto Belchior,False
+p0062,João Marinheiro Neto,João Marinheiro,False
+p0063,Maria de Lourdes Pinheiro Fortes,Lourdes Fortes,False
+p0064,Josimar Soares do Nascimento,Josimar,False
+p0065,Francisco de Assis Carvalho Souza,Francisco de Assis,False
+p0066,Marcia Raniele Silvino da Costa,Marcia Raniele,False
+p0067,Glauco Araujo Lima de Sena,Glauco,False
+p0068,Gerlândia Mendes da Silva Azevedo,Gerlandia do Pt,False
+p0069,Antonia Gilvana Mota Sousa,Gilvana Mota,False
+p0070,Gilberto Pereira da Silva,Gilberto,False
+p0071,Frank Fabiany Flor de Assis,Pastor Frank,False
+p0072,Ana Alice da Costa,Ana Alice,False
+p0073,Sócrates Medeiros da Silva,Soró,False
+p0074,Jeane Cleia Costa Moreira,Jeane Moreira,False
+p0075,Maria Lucivalda Nobre,Lucivalda Nobre,False
+p0076,Francisco Douglas Bezerra de Oliveira,Preto,False
+p0077,Luiz Agnaldo de Souza,Luiz Agnaldo,False
+p0078,Maria de Fátima Freire Ribeiro,Branca de Marinalva,False
+p0079,Fernando da Silva,Fernando Matiais,False
+p0080,Francimario Vital dos Santos,Caboré do Queijo,False
+p0081,Ednaldo Araújo do Nascimento,Ednaldo Araújo,False
+p0082,Lidiano Bezerra da Nobrega,Lidiano,False
+p0083,Verissio Tavares de Souza,Verissio Tavares,False
+p0084,Francicarlos da Silva Santos,Francicarlos do Sindicato,False
+p0085,Francisco das Chagas da Silva Júnior,Júnior Silva,False
+p0086,Francisco Ramos Neves,Professor Ramos,False
+p0087,Francisco Gildo Pinheiro,Gildo Pinheiro,False
+p0088,Josefa Ferreira Brito,Zefinha Brito,False
+p0089,Rejane Jeronimo Gomes de Oliveira,Rejane Gomes,False
+p0090,Tarcilio Alves Batista,Novo de Pixilinga,False
+p0091,José Dantas de Lima,Zé Caboclo,False
+p0092,José Wellington Nunes,Wellington Nunes,False
+p0093,Berenice Costa do Nascimento Gomes,Berenice Nascimento,False
+p0094,Patricia Valeria Dias dos Santos,Patricia da Saude,False
+p0095,Antonia Neide Nazário Nunes,Neide Nazário,False
+p0096,Jose Nicodemos Bezerra,Cocó do Trator,False
+p0097,Edna Ferreira da Silva,Edna de Carrasco,False
+p0098,Vinicius Marcelino Cortês,Vinicius Marcelino,False
+p0099,Luzanira Belo do Nascimento,Mirelly Negreiros,False
+p0100,Neper Ilo Atanazio Ferreira,Neper,False
+p0101,Milton Urbano Aires,Milton Urbano,False
+p0102,Roberto Marconi Guedes de Oliveira,Betinho da Conceição,False
+p0103,Francisca da Conceição Bezerra,Cacica Francisca,False
+p0104,Odon Oliveira de Souza Junior,Odon Junior,False
+p0105,Emanoel Dantas Pereira,Emanoel Karkará,False
+p0106,Francisco José da Penha,Chico Penha,False
+p0107,Divino Rodrigues da Silva,Divino,False
+p0108,Suzy Raquel Fernandes Nogueira,Raquel Nogueira,False
+p0109,Manoel Carlos Lopes de Morais,Manoel Carlos,False
+p0110,Inácio Damião da Silva,Inácio Garapa,False
+p0111,Weverlania de Sousa Santos Cristino,Werlania,False
+p0112,Elmar Anselmo de Lima,Elmar,False
+p0113,Natan Ovidio de Lira,Natan,False
+p0114,Liziane Richelle Pinheiro dos Santos,Richelle da Cidade do Sol,False
+p0115,Jackeline de Araujo Silva,Jackeline Araujo,False
+p0116,Marcia Nestor Silva,Marcia Nestor,False
+p0117,Aline Juliete de Abreu Feliciano,Aline Juliete,False
+p0118,Damiao Bento da Silva Filho,Jofim,False
+p0119,Edmilson Xavier da Costa Filho,Edmilson Bracinho,False
+p0120,Deusimar Silva do Nascimento,Deusimar,False
+p0121,Judson Pereira Dias da Silva,Judson Pereira,False
+p0122,Bruno Francisco Malheiro,Bruno Francisco,False
+p0123,Vaerton Bertoldo do Nascimento,Vaerton Irmão de Valderedo,False
+p0124,Victor Gomes de Morais,Victor Morais,False
+p0125,Cláudio Pascoal Macário de Oliveira,Babá Cláudio,False
+p0126,Marcos Uelton da Silva,Uelton da Capoeira,False
+p0127,Francisco Erinaldo Ferreira da Rocha,Naldo Rocha,False
+p0128,Maria Conceição Bezerra Silva,Ceiça de Bebida-Velha,False
+p0129,Cleber Paulo Siqueira da Silva,Cleber Siqueira,False
+p0130,Jose Antonio da Penha,Dé Vicente,False
+p0131,Rozilene Souza da Silva,Rose Silva,False
+p0132,Sueli Sabino de Araujo,Sueli Sabino,False
+p0133,Najara Karoliny Jeronimo de Oliveira,Karoliny Jeronimo,False
+p0134,José Gabriel de Souza,Gabriel Souza,False
+p0135,Cicero Araujo da Silva,Cicero Araujo,False
+p0136,José Nazareno Tavares de Morais,Nazareno Tavares,False
+p0137,Cosmo Nascimento Silva,Cosmo Silva,False
+p0138,Francisco de Assis da Silva Santos,Betê,False
+p0139,Francisco Darinaldo Duarte Camilo,Darinaldo Camilo,False
+p0140,Fernando Iago de Moura Alexandre,Fernando Alexandre,False
+p0141,Marcos Antônio da Silva,Marcos Antônio,False
+p0142,Kleverlan Felix da Rocha,Kleverlan do Sindicato,False
+p0143,Edson Valban Tinoco de Oliveira,Edson Valban,False
+p0144,Hildemar Peixoto de Vasconcelos,Hildemar,False
+p0145,Natalia Bastos Bonavides,Natália Bonavides,False
+p0146,Thiago Moreira Ferreira,Thiago Gato Preto,False
+p0147,Antonia Farias Campos,Antonia Farias,False
+p0148,João Evangelista Bezerra,João Evangelista,False
+p0149,Marcos Antonio Gonçalves Soares,Marquinhos do Pt,False
+p0150,Francirégia de Lima David,Régia,False
+p0151,Maria José Soares,Maria Sereia,False
+p0152,Edivaldo de Lima,Edivaldo da Quixaba,False
+p0153,João Arian de Souza Lima,Arian da Saúde,False
+p0154,Rafaela Cruz do Nascimento,Rafaela Cruz,False
+p0155,Clodoaldo Varela de Medeiros,Clodoaldo Varela,False
+p0156,Julio Candido de Souza Junior,Junior de Quixabeira,False
+p0157,Jean Paul Terra Prates,Senador Jean,False
+p0158,Luzia Kalianne Vivianne da Silva,Kalianne Roque,False
+p0159,Camila Janille Pereira do Nascimento,Camila Escoteira,False
+p0160,Maria Lucia Rodrigues,Lucia,False
+p0161,Pedro Simão Keffas de Oliveira Junior,Pedro Keffas,False
+p0162,Patrícia Rejane Fernandes de Oliveira,Patrícia de da Luz,False
+p0163,Arthur David Costa Pereira,Arthur Kaxopa,False
+p0164,Damiao Galvao de Figueiredo,Damiao Galvao,False
+p0165,André Vicente e Silva,André Vicente,False
+p0166,Daniel Araujo Valenca,Daniel Valença,False
+p0167,Zemario Carlos Silva do Nascimento,Irmão Zemario,False
+p0168,Diana Silva de Albuquerque,Diana Silva,False
+p0169,Josélia Lôpo Modesto da Silva,Josélia Lôpo,False
+p0170,Manoel Dias de Araújo,Manoel Dias,False
+p0171,Paulo Cesar Santos de Oliveira,Paulo César (Pc),False
+p0172,Francisco Amorim de Freitas,Amorim,False
+p0173,Marcos Aurélio Lima Imperial,Marcos Imperial,False
+p0174,Lucas Correia de Miranda,Lucas do Pt,False
+p0175,Maria Eduarda Moura Oliveira,Eduarda de Eudim,False
+p0176,Inacio Jose de Medeiros,Inácio Agente,False
+p0177,Samuel Santos Silva,Samuel,False
+p0178,Suely da Silva Santos,Lili,False
+p0179,Rita de Cassia da Silva,Rita Sena,False
+p0180,Roqueschneider Lima dos Santos,Roque,False
+p0181,Magnos Paulo do Nascimento,Magnos Paulo,False
+p0182,Edvan Ferreira da Silva,Edvan Ferreira,False
+p0183,Irlane Freire de Farias,Irlane Freire,False
+p0184,Antonio Wellinton Franco Quirino,Nego do Paraiso,False
+p0185,Antonio Vaneilson do Rego,Vaneilson O Tesouro do Povo,False
+p0186,Maria Isolda Dantas de Moura,Isolda Dantas,False
+p0187,Joao Paulo Elias da Silva,Joao Paulo,False
+p0188,Djailson Luiz Câmara da Costa,Djailson da Agricultura,False
+p0189,Denilson Pereira Barbalho,Denilson do Sindicato,False
+p0190,Maria Betania da Silva,Betânia Silva,False
+p0191,Manoel Leoncio do Nascimento,Cacique Manoelzinho,False
+p0192,José Nicodemos de Souza,Lila de Chaguinhas,False
+p0193,Francisco Herminio da Silva,Castelo,False
+p0194,Kalinina da Silva Campos,Kalenina,False
+p0195,Ionara Maria da Silva,Naná de Alencar,False
+p0196,João Batista Gomes Moreira,Joao Moreira,False
+p0197,Mayara Amanda de Oliveira Morais Feitosa,Amanda de Pili,False
+p0198,Katia Linhares Mendes Cavalcante,Katia Linhares,False
+p0199,Rodoval Xavier Patricio,Rodoval Patricio,False
+p0200,Igor Murilo da Silva Oliveira,Murilo Oliveira,False
+p0201,Erasmo Antônio da Silva,Lau de Elias,False
+p0202,Jose Alves de Oliveira,Bobò Amigo dos Amigos,False
+p0203,Francisco Josivan da Silva,Josivan da Arábia,False
+p0204,Flavio Camara de Souza,Flavio da Gameleira,False
+p0205,Ilzenete Barbosa da Silva,Ilza Fernandes,False
+p0206,Leonardo Antônio da Costa Silva,Leonardo de Arnóbio,False
+p0207,Alcilene Araújo das Neves,Cilene de Cidão,False
+p0208,Jurglavia de Souza Pereira,Jurglavia,False
+p0209,Irenilde Oliveira de Sousa,Maninha Macae,False
+p0210,Rodrigo Raniere de Oliveira,Rodrigo Raniere,False
+p0211,Bruno Luiz Santos de Araújo,Bruno Luiz,False
+p0212,Lhys Oriany de Sena Morais Costa,Lhys Oriany,False
+p0213,Creuza Cabral dos Santos,Creuza,False
+p0214,Rodrigo Nascimento Ferreira,Rodrigo,False
+p0215,Rosineide Gonçalves do Nascimento,Rosineide,False
+p0216,Eduardo Cesar Holanda Melo,Cesar Holanda,False
+p0217,Jocelio da Silva Moraes,Jocelio,False
+p0218,Marweel Dantas Carlos,Marweel Garras,False
+p0219,Francisco Jailson da Costa Ferreira,Jailson,False
+p0220,José Alves do Nascimento,Ozário de Neci,False
+p0221,Domingos Sávio Bezerra,Sávio Antas,False
+p0222,Luiz Humberto Lopes da Silva,Humberto Damião,False
+p0223,George Flávio Aires Teixeira,George Flávio Lotação,False
+p0224,Zuleide Vital Lopes,Professora Zuleide,False
+p0225,Brisa Silva Bracchi,Brisa,False
+p0226,Antonio Bezerra da Trindade,Toinho,False
+p0227,Elto Luiz Ramos,Elto Luiz,False
+p0228,Maria Gislene Flor Satiro do Nascimento,Professora Gislene,False
+p0229,Maria de Lourdes Leonardo de Lima,Nenem da Saúde,False
+p0230,Paula Frassinetti de Araujo Teixeira,Paula Frassinetti,False
+p0231,Maria de Lourdes Dionísio da Silva,Nêga,False
+p0232,Manoel Messias Santos da Silva,Messias do Turismo,False
+p0233,Fábio Clementinos dos Santos,Veinho de Biró,False
+p0234,José Nicodemos Filho,Zé Filho,False
+p0235,José Ferreira da Silva Junior,Junior Moto,False
+p0236,Priscila Marques de Oliveira Basílio da Silva,Missionária Cuidadora Priscila,False
+p0237,Ludmila Thaís Dias Arruda,Ludmila,False
+p0238,Maria Juraci de Araújo,Professora Juraci,False
+p0239,Edio Alves de Oliveira,Edio de Barrocas,False
+p0240,Leonilson Batista,Didi da Cavalgada,False
+p0241,Erineide Maria Dantas,Tileide,False
+p0242,Valdomiro Francisco do Nascimento,Binho do Crepe,False
+p0243,Milklenilson Leite de Farias,Milklenilson,False
+p0244,Wellington Nobre Celestino,Wellington da Varzinha,False
+p0245,Maria do Desterro dos Santos,Tetê,False
+p0246,Jose Francisco Genilson Feitosa,Genilson de Geniro,False
+p0247,Maria de Fátima Alves do Nascimento,Fatinha da Dengue,False
+p0248,Mabely Cristina Soares de Lima,Professora Mabely,False
+p0249,Samuel Araújo Silva,Samuel Araújo,False
+p0250,Katia Vivianne da Silva,Vivi Braga,False
+p0251,Elias Bernardino de Gois,Professor Elias,False
+p0252,Maria da Conceição Gomes do Nascimento,Ceição de Boneca,False
+p0253,Eronildo Marques Fernandes,Irmão Eronildo,False
+p0254,Delaías Alves Barbosa,Delaías Barbosa,False
+p0255,Adilson Andrade de Azevedo,Adilson do Relógio,False
+p0256,José Rômulo Arnaud Amâncio,Professor Rômulo,False
+p0257,Jaqueline Rodrigues de Valença,Jaqueline,False
+p0258,Francineide Fernandes de Souza,Neide Barbará,False
+p0259,Eliel Araújo Dantas,Eliel da Polpa,False
+p0260,Tiago Lopes Pereira,Tiago Lopes,False
+p0261,Francisco de Assis Barbosa,Chico Almeida,False
+p0262,José Ferreira Mendes,Zé Mendes,False
+p0263,Luciano Alves Tavares,Luciano,False
+p0264,Donisete Nascimento da Silva,Ligeirinho,False
+p0265,Joas Ferreira de Andrade,Joas,False
+p0266,Edimar Silva Cordeiro Rodrigues,Edimar do Gravata,False
+p0267,Creginaldo Pinheiro Sabino,Creginaldo Pinheiro,False
+p0268,Francisco Lucivaldo Alves Silva,Chico de Linda Flor,False
+p0269,Jailson Almeida Ferreira,Jailson,False
+p0270,Veronica Lago Oliveira de Almeida,Veronica Lago,False
+p0271,Michael Douglas Alves,Douglas Alves,False
+p0272,Paulo Augusto de Souza,Paulo Augusto,False
+p0273,Francisco Antonio da Silva,Duquinha do Sintraf,False
+p0274,Damião Confessor dos Santos,Damião Confessor,False
+p0275,Jose Lucianilde de Oliveira,Branco Basílio,False
+p0276,Jose Evangelista Vicente,Van Vicente,False
+p0277,Vilma Moura Barbosa de Lima,Vilma Moura,False
+p0278,Anailza Feitoza dos Santos Monteiro,Anailza Santos,False
+p0279,Julio Cesar Dalcin,Julio Gaucho,False
+p0280,Maria Josiana da Costa Oliveira,Josiana,False
+p0281,Isac Carlos dos Santos,Isac do Pt,False
+p0282,Maria das Graças de Carvalho,Graça Carvalho,False
+p0283,Antonio Junior da Silva,Junior Rodoviario,False
+p0284,Norma Cléa Romeiro de Lima,Norma do Posto,False
+p0285,Carlos Alberto de Lima,Seu Carlos,False
+p0286,Joao da Mata Cunha Neto,Joao Neto Cunha,False
+p0287,Marivaldo Braz,Marivaldo D Dois,False
+p0288,Sebastião Antonio Pereira,Veinho da Bica,False
+p0289,José de Arimateia Lopes de Lima,Arimateia Lima,False
+p0290,Cláudia Cabral dos Santos,Claudinha de Elvis,False
+p0291,Joao Maria Medeiros de Oliveira,João Maria,False
+p0292,Luiz Carlos da Silva,Luiz Carlos Petroleiro,False
+p0293,Anderson de Lira Alves,Anderson Alves,False
+p0294,Maria Gorete de Souza,Gorete,False
+p0295,Josafa Tavares da Silva Filho,Juninho Tavares,False
+p0296,João Maria Ramalho de Almeida,João Maria,False
+p0297,Francisco Evangelista da Silva,Carlinhos Evangelista,False
+p0298,Maria Francisca de Souza,Maria de Noelson,False
+p0299,Sonia Alexandre da Costa,Margarida Sonia,False
+p0300,Michely Barbosa de Pontes,Michely Barbosa,False
+p0301,Pedro Carlos Ribeiro,Pedro de Margarida,False
+p0302,Ewerthon Lucas de Oliveira Lima Santos,Ewerthon Lucas,False
+p0303,Jose Genilson da Silva,Genilson Silva,False
+p0304,José Roberto Dantas do Nascimento,Roberto do Pt,False
+p0305,Denilson Gomes do Nascimento,Denilson  Manga Vein,False
+p0306,Juvenal Gomes de Sales Neto,Juvenal Sales,False
+p0307,Mara Jovanka da Costa Rodrigues,Mara Jovanka,False
+p0308,Anderson do Prado Alves,Anderson Barba da Saúde,False
+p0309,Jadson Carlos Coutinho da Silva,Jadson Carlos,False
+p0310,Maria de Jesus Campos,Jesus Campos,False
+p0311,Francisco Edivaldo do Nascimento,Dr. Edivaldo,False
+p0312,Gilmar Batista da Silva,Gil Bala,False
+p0313,Damiana Alissandra Tavares da Silva,Alissandra Pia,False
+p0314,Paulo Eduardo Félix de Souza,Eduardo Félix,False
+p0315,Mikael Kellyson dos Santos Sousa,Kellyson Sousa,False
+p0316,Jose Heriberto Barbosa de Oliveira,Beto do Assentamento,False
+p0317,Gilmara Francisca da Silva,Gilmara Silva,False
+p0318,Jakson Diego dos Santos Bezerra,Diego Bezerra,False
+p0319,Rita Candido da Silva Gomes,Ritinha,False
+p0320,Francisco Canindé de França,Tiquinho do Povo,False
+p0321,Gerson Gomes de Oliveira,Gersinho do Rio Novo,False
+p0322,Maria de Fátima Araújo da Silva,Dra. Fátima,False
+p0323,Alberis Eron Flavio de Oliveira,Professor Eron,False
+p0324,Elisabeth Rodrigues de Oliveira Corcino,Betinha de Chico do Bar,False
+p0325,Maria Gessica Araújo Bezerra,Géssica de Marcos,False
+p0326,Manuellyso da Silva Maia,Manu Maia,False
+p0327,Marcos Antônio Soares,Toinho de Goiano,False
+p0328,Omério Juvencio de Almeida,Galego dos Necos,False
+p0329,Janine de Lima Amâncio,Janine Amâncio,False
+p0330,Samara Mistica Ferreira dos Santos,Samara de Luiz,False
+p0331,Edemarcos Moreira de Oliveira,Prof. Edemarcos do Pt,False
+p0332,Jose Eduardo do Nascimento,Dudu de Tião,False
+p0333,Joao Alberto de Morais Filho,Beto de Joãozinho,False
+p0334,Luiz Dantas de Araujo,Luiz Dantas,False
+p0335,Naelson Abreu da Silva,Palhaço Naelson Abreu,False
+p0336,Joseilton de Medeiros,Zito de Doutor,False
+p0337,Joziel Paulo da Silva,Jo,False
+p0338,Francisca Geiane de Freitas,Geiane Freitas,False
+p0339,Rosana Maria Barbosa,Rosana Jovem,False
+p0340,Tyciana Pessoa Fernandes de Lima,Tyciana Fernandes,False
+p0341,Paulo Cesar Lima  de Araujo,Paulo da Barreta,False
+p0342,Flavia Ribeiro Dantas,Flavia do Pará,False
+p0343,Raimundo Colaça da Silva Filho,Júnior Colaça,False
+p0344,Luiz Eduardo de Alexandria,Luíz Eduardo Pisca,False
+p0345,Adeilson Saraiva de Mascena,Adeilson Tattoo,False
+p0346,Márcia Maria Soares de Oliveira,Márcia Soares,False
+p0347,Emanuella Renata Rabelo Cosme,Dra Emanuella,False
+p0348,Josefa Aldacéia Chagas de Oliveira,Professora Aldacéia,False
+p0349,Erivam do Carmo Silva,Erivam do Sindicato,False
+p0350,Francisca Maria Alves,Maria da Barra,False
+p0351,Raimundo Sergio de Lima Paiva,Sergio Lima,False
+p0352,Deroci Freitas Araujo,Deró Araújo,False
+p0353,Jose Sidney Ramos Florencio,Sidney Magal,False
+p0354,Raimundo Fernandes da Silva,Raimundo do Patativa,False
+p0355,Pedro Luiz Coutinho,Bilú Coutinho,False
+p0356,Maria do Socorro Adelino dos Santos Silva,Socorro,False
+p0357,Maria Natividade do Nascimento,Natividade Nascimento,False
+p0358,Jose Francisco Neto,Neto de Ana,False
+p0359,Maria da Conceicao Dantas da Silva,Branca do Espetinho,False
+p0360,Margarete da Silva Evangelista Coutinho,Margarete,False
+p0361,Jose Garrido de Lima Neto,Dede da Pastoral,False
+p0362,Tatiana Muniz de Siqueira,Tatiana Muniz,False
+p0363,Itamario Bezerra de Lima,Itamario Bezerra,False
+p0364,Maria de Fatima Bezerra,Fatima Bezerra,False
+p0365,Djairla Patricia Mendes de Farias,Dja Mendes,False
+p0366,Ana Maria Fidelis Barboza,Ana Fidelis,False
+p0367,Jerri Ildegar Dantas Pontual,Jerri da Saúde,False
+p0368,Liduína Fernandes da Silva Borges,Liduína do Posto,False
+p0369,Maria Dalva de Oliveira,Dalva Pio,False
+p0370,Débora Reis Ferreira,Débora Refe,False
+p0371,Jonas Franklin da Paz,Professor Jonas,False
+p0372,Maria Luiza Lopes de Medeiros,Maria Luiza,False
+p0373,Messias Medeiros,Messias Medeiros,False
+p0374,Edimilson Rodrigues de Souza,Edimilson Cigano,False
+p0375,Jackson de Santa Cruz Albuquerque Bezerra,Jackson Bezerra,False
+p0376,Maria Idomesia Oliveira,Idomesia,False
+p0377,Nerias Ferreira Cardoso,Índio Guerreiro,False
+p0378,Sônia Maria Ribeiro da Silva,Sônia Agente de Saúde,False
+p0379,Laelson Marques Caetano,Laelson Quilombola,False
+p0380,Cristiane Dantas de Araújo,Cristiane do Pt,False
+p0381,Jose Galdino da Silva,Deda do Mst,False
+p0382,Gilberto Pedro do Nascimento,Giba do Pt,False
+p0383,Raniery Soares Camara,Dr Raniery,False
+p0384,Cristiane Araujo de Melo,Prof. Cristiane,False
+p0385,Célia Maria da Silva,Professora Célia,False
+p0386,Antonio Lucinaldo Chaves,Lucinaldo Chaves,False
+p0387,Platiny Marinho dos Santos,Platiny Marinho,False
+p0388,Dimona Itnan de Souza Brito,Dimona Itnan,False
+p0389,Francisco Wender de Andrade,Wender Andrade,False
+p0390,Maria de Fatima da Silva,Fatima Silva,False
+p0391,Tito Diogo Ribeiro da Silva,Diogo Ribeiro,False
+p0392,Allan Davy Paiva Silva,Allan Paiva,False
+p0393,Mikael Lucas da Silva Dionísio,Mikael,False
+p0394,Maria Adriana Confessor,Adriana de Neguinho,False
+p0395,Maria da Conceição Santos de Gois,Ceiça Gois,False
+p0396,Meline Kaline de Souza e Silva,Meline de Tarcisio,False
+p0397,Licélia Jovino da Silva,Licélia,False
+p0398,Carlos Antonio Alves da Silva,Carlinhos do Rosado,False
+p0399,Lucineide Rodrigues da Silva,Cineide Rodrigues,False
+p0400,Andrezza Brasil Souto Bezerra,Andrezza Brasil,False
+p0401,Gedalva de Alexandria Lourenço,Gedalva de Chuca,False
+p0402,Olga Macedo,Olga Macedo,False
+p0403,Francisca Jeova Leite Alves,Geó,False
+p0404,Antônia Gomes Farias,Antônia Gomes,False
+p0405,Ivan Nogueira de Morais,Ivan Nogueira de Morais,False
+p0406,Alcimar Dantas de Araujo Junior,Leleco,False
+p0407,Adriana Leoncio da Cruz,Adriana de Banjo,False
+p0408,Paulo Henrique do Nascimento,Paulinho do Acredito,False
+p0409,Katia Alves de Faria,Katia,False
+p0410,Carlos Silvestre da Silva,Professor Carlos Silvestre,False
+p0411,Katiuscia Pinto Bezerra,Katiuscia Pinto,False
+p0412,Maria da Glória de Souza,Glória Agente de Saúde,False
+p0413,Antônio Henrique da Silva,Toinho de Marina,False
+p0414,Edval Ferreira de Medeiros,Edival Pompom,False
+p0415,Alberto Cabral Cortês,Alberto do Onibus,False
+p0416,Paulo Adriano Gomes Filho,Paulinho Gomes,False
+p0417,Silvia Daniele da Silva,Silvia Daniele,False
+p0418,Maria José de Oliveira Spinelli,Professora Maria José,False
+p0419,Neuma Vicente Nobre,Neuma Nobre,False
+p0420,Waldomiro Henrique Bezerra Júnior,Henrique de Dodó,False
+p0421,Luciano Pinheiro de Almeida,Luciano Pinheiro,False
+p0422,Michele Venancio da Silva,Michele Venancio,False
+p0423,Jerson Alves da Costa,Sargento Jerson,False
+p0424,Célio Gonçalves de Queiroz,Célio de Elizeu,False
+p0425,Edilza Paloma dos Santos,Paloma Véras,False
+p0426,Francinaldo Macedo de Andrade,Naldo Simpinson,False
+p0427,Ernani Andrade de Medeiros,Ernani Calango,False
+p0428,Joezia Leite do Nascimento da Silva,Irmã Joezia,False
+p0429,Francisco Ubiratan Barbosa Bezerra,Ubiratan Bezerra,False
+p0430,Jeane Dantas dos Santos Bezerra,Professora  Jeane Dantas,False
+p0431,Rayane Cristina de Andrade Gomes,Rayane Andrade,False
+p0432,Jarbas Ribeiro da Costa,Jarbas Ribeiro,False
+p0433,Antonio Chaves Neto,Antonio Chaves,False
+p0434,Frank Kleber de Lima,Frank Professor,False
+p0435,Amarildo Elias de Morais Filho,Amarildinho,False
+p0436,Maria Divaneide Basilio,Divaneide Basílio,False
+p0437,Damiao Lopes Pereira,Professor Damião,False
+p0438,Paulo Marcio Rodrigues Pereira,Paulo Marcio,False
+p0439,Francisca Ariane Alves,Ariane Alves,False
+p0440,Francisco Rufino Bezerra,Moacir,False
+p0441,Cristiane Saraiva de Medeiros,Christiane Saraiva Professora,False
+p0442,Juscelino da Silva Belmiro,Juscelino Belmiro,False
+p0443,Francisco Nailton Soares,Nailton,False
+p0444,João Pedro Evangelista de Oliveira,João Oliveira,False
+p0445,Everaldo Afonso Ribeiro,Professor Everaldo,False
+p0446,José Nunes Terceiro,Dr Terceiro,False
+p0447,Julio Gonçalves Moreira Araujo,Professor Julio,False
+p0448,Roberta Adriana Fernandes,Roberta Fernandes,False
+p0449,Joao Venancio Ferreira,João Venâncio,False
+p0450,Fernando Gurgel dos Santos,Fernando Gurgel,False
+p0451,Rodrigo Bezerra de Lima,Rodrigo Bezerra,False
+p0452,Anadilha Maria de Araujo,Anadilha Araujo,False
+p0453,Jose Giliardo de Oliveira,Gilly,False
+p0454,Pedro Paulo Chaves Mattos,Pedro Che,False
+p0455,Janaína de Lima,Janaína Lima,False
+p0456,Francisca das Chagas Paiva Silva,Mãetinha do Pt,False
 p0457,Maria Gorete da Silva,Gorete de Amoedo,False
-p0458,Thiago Moreira Ferreira,Thiago Gato Preto,False
-p0459,Wigna Brito de Souza Araújo,Wigna,False
-p0460,Damiana de Holanda Alves Feitoza,Damiana Feitoza,False
-p0461,Edson Valban Tinoco de Oliveira,Edson Valban,False
-p0462,José Emerson Erek da Silva Francelino,Ver. Prof. Emerson,False
-p0463,Joao Batista da Cunha Neto,Neto de Zoraide,False
-p0464,Josimar Soares do Nascimento,Josimar,False
-p0465,Cosmo Nascimento Silva,Cosmo Silva,False
-p0466,Macinaldo Costa de Assis,Marcinaldo,False
-p0467,Carlito Lucas dos Santos Neto,Professor Carlitos Lucas,False
-p0468,Avanir Domingos Souza da Silva,Avanir de Raimundão,False
-p0469,João Evangelista Bezerra,João Evangelista,False
-p0470,Francisca Lúcia Barros da Silva,Lúcia de Dedé,False
-p0471,Cristiane Dantas Gomes Silva,Cristiane Gomes,False
-p0472,Odecio Goncalves da Costa Filho,Costa,False
-p0473,Maria Lioneusa da Silva Alves,Irmã Lioneusa de Cachoeira,False
-p0474,Jean Ferreira da Silva,Jean do Canto,False
-p0475,Jose Mauricio de Souza Medeiros,Professor Mauricio,False
-p0476,Maria Gorete Pereira dos Santos,Gorete Pereira,False
-p0477,Francisco Xisto Cavalcanti,Dr Xisto,False
-p0478,Francisco Jorge de Lima Freire,Jorge de Lima,False
-p0479,Francisco Rufino Bezerra,Moacir,False
-p0480,Rafaela Cruz do Nascimento,Rafaela Cruz,False
-p0481,Antonio Celio Sabino do Rego,Antonio de Edna,False
-p0482,Maria Natividade do Nascimento,Natividade Nascimento,False
-p0483,Emanoel Dantas Pereira,Emanoel Karkará,False
-p0484,Maria da Vitória de Lima,Vitória de Rapadura,False
-p0485,Maria Aucilene de Brito,Aucilene Brito,False
-p0486,Fabio Barbosa de Oliveira,Fabio Barbosa,False
-p0487,Cadmo Alisson Moreira de Araujo,Cadu,False
-p0488,Paulo Marcio Rodrigues Pereira,Paulo Marcio,False
-p0489,Francisco Assis de Medeiros,Francisco do Pt,False
-p0490,Edimilson Rodrigues de Souza,Edimilson Cigano,False
-p0491,Creuza Cabral dos Santos,Creuza,False
-p0492,Diogo Benicio Silva,Diogo Benicio,False
-p0493,Frank Fabiany Flor de Assis,Pastor Frank,False
-p0494,Arnaldo Vital da Silva,Arnaldo de Dedêu,False
-p0495,Gilberto Pereira da Silva,Gilberto,False
-p0496,Elizane Ferreira Mendes Inacio,Zaninha,False
-p0497,Cayla Santos Rodrigues,Cayla Rodrigues,False
-p0498,Gecilda Monteiro Dantas,Tilda,False
-p0499,Alexandre Motta Câmara,Alexandre Motta,False
-p0500,José Alves do Nascimento,Ozário de Neci,False
-p0501,Marcos Antonio Santana,Marquinhos Sindsuper,False
-p0502,Renilson Dantas de Oliveira,Irmão Renilson,False
-p0503,Nadia Rafaelly Araujo Nogueira,Rafaelly Nogueirra,False
-p0504,Lucineide Rodrigues da Silva,Cineide Rodrigues,False
-p0505,Rodrigo Bezerra de Lima,Rodrigo Bezerra,False
-p0506,Severino Nazario da Silva,Silva de Ramimim,False
-p0507,Deroci Freitas Araujo,Deró Araújo,False
-p0508,Adriana Maria da Silva,Adriana de Alexandre,False
-p0509,Jose Teixeira da Silva,Zé Teixeira,False
-p0510,Wedson de Farias Xavier,Wedson Farias,False
-p0511,Severino Marcos Martins da Silva,Esquibe,False
-p0512,José Severiano de Figueiredo Maia Júnior,Junior de Bebel,False
-p0513,Maria Valdinízia da Silva,Ninha,False
-p0514,Francisca Costa da Silva,Francisca Costa,False
-p0515,Flavia Ribeiro Dantas,Flavia do Pará,False
-p0516,Antonia Jocielma da Silva,Jocielma,False
-p0517,Ana Patricia Oliveira da Silva Romano,Patricia,False
-p0518,Otila da Silva Franca,Otila França,False
-p0519,Fernanda Santana Pinheiro,Fernanda Pinheiro,False
-p0520,Maria Conceição Bezerra Silva,Ceiça de Bebida-Velha,False
-p0521,Janille Nogueira Alves Santos,Janille Nogueira,False
-p0522,Eliete Beserra de Morais,Eliete Pili,False
-p0523,Cleoneide Acioli da Silva,Cleoneide Acioli,False
-p0524,Rodrigo Nascimento Ferreira,Rodrigo,False
-p0525,Elisabeth Rodrigues de Oliveira Corcino,Betinha de Chico do Bar,False
-p0526,Elizabeth Lima da Silva,Beth Lima,False
-p0527,Solanje Jota do Nascimento,Solange,False
-p0528,Francisca Romualdo Marreiro de Oliveira,Raimunda de Tato,False
-p0529,Tatiana Muniz de Siqueira,Tatiana Muniz,False
-p0530,Maria das Graças de Almeida Silva,Graça Almeida,False
-p0531,Damião Confessor dos Santos,Damião Confessor,False
-p0532,Maria Luiza Barreto,Luiza Barreto,False
-p0533,Fernando da Silva,Fernando Matiais,False
-p0534,Andrezza Brasil Souto,Andrezza Brasil,False
-p0535,Esteffany Karolayne dos Santos da Silva,Karol de Nenem Carlota,False
-p0536,Mattson Ranier Gomes de Araújo,Mattson,False
-p0537,Margarida Pereira da Cunha,Guida do Pt,False
-p0538,Valdemir Luiz da Silva,Valdemir Luiz,False
-p0539,Ricardo José de Medeiros,Rickardo Medeiros,False
-p0540,Giovani Nelo da Silva,Geh Nelo,False
-p0541,Elto Luiz Ramos,Elto Luiz,False
-p0542,Jerson Alves da Costa,Sargento Jerson,False
-p0543,Clodoaldo Varela de Medeiros,Clodoaldo Varela,False
-p0544,Maria Dalva Medeiros de Araújo,Miúda,False
-p0545,Paula Frassinetti de Araujo Teixeira,Paula Frassinetti,False
-p0546,Anadilha Maria de Araujo,Anadilha Araujo,False
-p0547,Adriano Gomes de Oliveira,Dril,False
-p0548,Gilton Sampaio de Souza,Gilton Sampaio,False
-p0549,Carlos Cabanas de Campos Cortez Filho,Pastor Cabanas,False
-p0550,Iranilson Alves de Macedo,Nildjackson,False
-p0551,Jose Antonio da Penha,Dé Vicente,False
-p0552,Marcília Dhelania dos Santos Olegário Gonçalves,Professora Dhelania,False
-p0553,Carlos Braulio Alaminos,Carlos Alaminos,False
-p0554,Antonia Keila Lopes Paiva Amorim,Keila Lopes,False
-p0555,Edvan Ferreira da Silva,Edvan Ferreira,False
-p0556,Gilmar Bernardo da Silva,Gilmar Bernardo,False
-p0557,Cleber Vinicius Castro da Silva,Cléber Dimarzzio,False
-p0558,Cristiane Costa Araújo,Professora Cristiane Costa,False
-p0559,João Targino de Lima,João Targino,False
-p0560,Aline Juliete de Abreu Feliciano,Aline Juliete,False
-p0561,Rocelito Miranda da Rocha,Miranda,False
-p0562,Michely Barbosa de Pontes,Michely Barbosa,False
-p0563,Nelson Alves Teixeira,Nelson Teixeira,False
-p0564,Ana Lúcia da Silva,Preta,False
-p0565,Odon Oliveira de Souza Junior,Odon Junior,False
-p0566,Arthur David Costa Pereira,Arthur Kaxopa,False
-p0567,Francisca Marcia  Fernandes de Morais,Marcia Fernandes,False
-p0568,Fernando Iago de Moura Alexandre,Fernando Alexandre,False
-p0569,Patrícia Rejane Fernandes de Oliveira,Patrícia de da Luz,False
-p0570,Edilson Firmino Torres,Edilson da Borracharia,False
-p0571,José Rodrigo da Silva,Zé Reis,False
-p0572,Maciel do Nascimento de Souza,Maciel Souza,False
-p0573,Ranilda da Silva,Branca de Antonimar,False
-p0574,Magnos Paulo do Nascimento,Magnos Paulo,False
-p0575,Marweel Dantas Carlos,Marweel Garras,False
-p0576,Jose Alberto da Costa Junior,Alberto Junior,False
-p0577,Eliel Araújo Dantas,Eliel da Polpa,False
-p0578,Raimundo Colaça da Silva Filho,Júnior Colaça,False
-p0579,Domingos Sávio Bezerra,Sávio Antas,False
-p0580,Samanda Alves de Freitas,Samanda de Lula,False
-p0581,Vilma Moura Barbosa de Lima,Vilma Moura,False
-p0582,Gerlailson Goncalves Abrantes,Gerlailson Abrantes (Nenem),False
-p0583,Joziel Paulo da Silva,Jo,False
-p0584,Maria Rita Ribeiro de Bessa,Ritinha de Rêgo,False
-p0585,Norma Cléa Romeiro de Lima,Norma do Posto,False
-p0586,Maria dos Disterro Holanda de Nogueira Costa,Lilia Holanda,False
-p0587,Erilânia Marreiro Cunha,Erilânia Marreiro,False
-p0588,Edivaldo de Lima,Edivaldo da Quixaba,False
-p0589,Francisca Fransualda Sales de Oliveira,Fransualda Sales,False
-p0590,Maria Gessica Araújo Bezerra,Géssica de Marcos,False
-p0591,Zemario Carlos Silva do Nascimento,Irmão Zemario,False
-p0592,Jorian Pereira dos Santos,Prof. Jorian Santos,False
-p0593,Luiz Inácio Lula da Silva,Lula,True
+p0458,Cícero Belarmino,Peixeinho do Pt,False
+p0459,Maria de Fatima Ferreira Ramalho,Fafá Ramalho,False
+p0460,Santina de Fátima Danielle Azevedo,Santina Azevedo,False
+p0461,Tercia Maria da Silva Arruda Cruz,Tercia Cruz do Mst,False
+p0462,Danyelle Rosana Guedes,Dany Guedes,False
+p0463,Edjane Leite de Souza,Edjane,False
+p0464,Jaelson Soares de Lima,Cocada Moto Táxi,False
+p0465,Edna Medeiros da Silva Fonseca,Edna,False
+p0466,Cícero da Silva Militão,Cícero Militão,False
+p0467,Sezinaldo Silva dos Reis,Naldo de Brancar,False
+p0468,Genilson Medeiros Maia,Genilson Maia,False
+p0469,Aisamaque Dalyton Fagundes Conceicao,Aisamaque,False
+p0470,Francisco Xisto Cavalcanti,Dr. Xisto,False
+p0471,Raimundo de Lima Bezerra,Raimundo Lima,False
+p0472,David Felix Aragão,Professor David,False
+p0473,Severino Dionisio Filho,Bihino,False
+p0474,Maria Aparecida da Silva,Cida do Cajueiro,False
+p0475,Girleno do Amaral Silva,Kavinho,False
+p0476,Maria Aparecida Morais de Araujo,Cida Julião,False
+p0477,Antônio Inácio da Silva,Toinho Inácio,False
+p0478,Juscelino Gregório da Silva,Juscelino Gregório,False
+p0479,Damiao Lopes Silva,Damiao Lopes,False
+p0480,Regilene Moreira de Souza,Lene do Pt,False
+p0481,Manoel Galdêncio de Sales,Manoel Galdêncio,False
+p0482,Maria Adna Costa Mendes,Adna Mendes,False
+p0483,Cleber José da Silva,Cleber,False
+p0484,Paulo Cesar do Nascimento,Paulo Macena,False
+p0485,Állison Azevedo de Farias,Alinho,False
+p0486,Erinaldo Correia Rego,Erinaldo Correia,False
+p0487,Orlando Rodrigues Silva,Orlando,False
+p0488,Jose Leite dos Santos Filho,Dedé de Tota,False
+p0489,Maria Carlinda Saraiva Dantas,Carlinda Saraiva,False
+p0490,Adriano Gomes de Oliveira,Dril,False
+p0491,Ivanildo Evaristo da Costa,Filiu do Esporte,False
+p0492,Carla Priscila Alves da Silva,Priscila Alcantara,False
+p0493,Edson Sales Leonardo,Dida de Nenéu,False
+p0494,Rayssa Aline Batista de Araújo,Rayssa,False
+p0495,José Anderson Lima Aguiar,Anderson Aguiar,False
+p0496,Maria das Neves Placido,Neves Plácido,False
+p0497,Anamelcia Pereira Varela,Anamélcia Varela,False
+p0498,Francisco Canindé dos Santos,Chico Varela,False
+p0499,Cristiane Dantas Gomes Silva,Cristiane Gomes,False
+p0500,Maria Yamara dos Santos Paiva,Yamara,False
+p0501,Josivan Alves Pereira,Josivan Alves,False
+p0502,Fernanda Santana Pinheiro,Fernanda Pinheiro,False
+p0503,Pericles Elder Costa Fonseca,Pepé,False
+p0504,Alainy Kalianne Lima do Nascimento Simões,Alainy Simões,False
+p0505,Maria das Graças Lucena,Graça de Haroldo,False
+p0506,Nayara Karla Oliveira da Silva,Nayara da Capoeira,False
+p0507,Francisco Jardel dos Santos de Lima,Jardel da Serra,False
+p0508,Francisco das Chagas dos Santos,Professor das Chagas,False
+p0509,Francisca Fransualda Sales de Oliveira,Fransualda Sales,False
+p0510,Rosangela de Souza Leite,Rosa Leite,False
+p0511,João Batista de Souza,Joãozinho do Pt,False
+p0512,Luiz Ribeiro Rocha Junior,Junior do Quilombo,False
+p0513,Sanzia Maria Ribeiro da Silva Mendonça,Sanzia de Pulo,False
+p0514,Jose Teixeira da Silva,Zé Teixeira,False
+p0515,Raniery Alves do Nascimento Filho,Raniery Filho,False
+p0516,Estella Emylle dos Santos Alves,Estella Alves,False
+p0517,Rafael Carvalho Moreno,Rafael Enfermeiro,False
+p0518,Francisco Ugmar Nogueira,Ugmar,False
+p0519,Weliton Pinheiro de Almeida,Weliton Almeida,False
+p0520,Franciele Medeiros de Moura,Fran de Massaranduba,False
+p0521,Isa Maria Nobrega Macedo,Isa Macêdo,False
+p0522,Antonio Delgado de Paiva Junior,Buzig,False
+p0523,Maria Jussioneide Pereira de Bessa Silva,Toneide,False
+p0524,Flavio Acioli Pereira,Flavio da Serra,False
+p0525,José Rodrigo da Silva,Zé Reis,False
+p0526,Gerfeson Oliveira do Nascimento,Gerfeson Oliveira,False
+p0527,Alexsandro Lima Pereira,Leo Gari,False
+p0528,Luciano Tertulino Barbosa,Luciano Barbosa,False
+p0529,Jose Maria da Silva,Zé Maria,False
+p0530,Francisca Maria Batista,Francisca Batista,False
+p0531,Ivanaldo Alexandre,Ivanaldo Alexandre,False
+p0532,José Joseni Oliveira de Andrade,Professor Joseni,False
+p0533,Carlos Alexandre Rocha de Sousa,Alexandre  Rocha,False
+p0534,Patricia Lourenço de Souza,Patricia Souza,False
+p0535,Manoel Felix de Lima,Furão,False
+p0536,Macário Felix de Meneses Neto,Macário,False
+p0537,Isac Gonçalves Costa,Isac de Titico,False
+p0538,Elvira Gomes de Araujo,Elvira,False
+p0539,Eliete Beserra de Morais,Eliete Pili,False
+p0540,Abel Soares Ferreira,Abel Neto,False
+p0541,José Adailton da Silva,Adailton Silva,False
+p0542,Aurino Marcondes de Aquino Santos,Professor Marcondes,False
+p0543,Francisco de Assis dos Santos,Professor Quinho,False
+p0544,Maria Katiana Barbosa da Silva,Katiana Barbosa,False
+p0545,Guilherme Richelieu da Silva Junior,Guilherme,False
+p0546,Francisca Geruza de Souza,Geruza Souza,False
+p0547,Ramon de Lima Luduvico,Ramon,False
+p0548,Sueliton Ivo da Costa,Sueliton Costa,False
+p0549,Fabricia Negreiros Marinho,Biomedica Fabricia,False
+p0550,Flávio Julio Xavier,Flávio Júnior,False
+p0551,Erilania Marreiro Cunha,Erilania Marreiro,False
+p0552,Jocelio Arruda de Morais,Jocelio Morais,False
+p0553,Edson Francelino da Silva,Edu Silva,False
+p0554,João Cabral de Lira,João Cabral,False
+p0555,Antonio Celio Sabino do Rego,Antonio de Edna,False
+p0556,Miguel Salustiano de Lima,Prof Miguel,False
+p0557,Francisco Lindemberg Filgueira Monteiro Junior,Junior Monteiro,False
+p0558,Aurino Carlos de Lima,Aurino Carlos,False
+p0559,Frank Efraim Rebouças de Morais,Frank Areia,False
+p0560,Augusto Morais de Medeiros,Lourinha de Januário,False
+p0561,Alcivam Batista de Oliveira,Alcivam Oliveira,False
+p0562,João Maria Dantas Pereira,João de Doca,False
+p0563,Francisca Marcia  Fernandes de Morais,Marcia Fernandes,False
+p0564,Jaqueline de Oliveira,Jaqueline Artesã,False
+p0565,Ricardo de Lima Câmara,Macarrão,False
+p0566,Karla Beatriz de Mendonça Silva,Bia Mendonça,False
+p0567,Francisca Eliane Silva Ferreira,Eliane Ferreira,False
+p0568,Alex Alvares da Silva,Alex Alvares,False
+p0569,Fabio Barbosa de Oliveira,Fabio Barbosa,False
+p0570,Denise Marques dos Santos,Denise Marques,False
+p0571,Diego Monteiro Fernandes,Diego do Ermo,False
+p0572,Marcelo Leite Fontes,Marcelo do Pt,False
+p0573,Paulo Sergio Francisco,Paulo Sérgio,False
+p0574,Naiara Rochelly Fernandes,Naiara  Fernandes,False
+p0575,Flavio Azevedo de Macedo,Flavio Azevedo,False
+p0576,Edson Tavares,Negao Publicidade,False
+p0577,Jadiel Luís Dantas de Medeiros,Jadiel Luís,False
+p0578,Aurelia Sergio Avelino,Aurelia Professora,False
+p0579,Maria Creuza Delmiro,Maria Creuza,False
+p0580,Jose Romario Santos da Silva,Romario Santos,False
+p0581,Francisco Alvaro da Costa,Alvinho,False
+p0582,Lucimaria Medeiros dos Santos,Lucimaria,False
+p0583,Paulo Antônio da Silva,Paulo Teodósio,False
+p0584,Elvécio Gurgel de Sales,Elvécio Gurgel,False
+p0585,Carlison Rafael Barbosa da Silva,Rafael Barbosa,False
+p0586,Simone Maria Lima de Souza,Prof Simone Maria,False
+p0587,Rita de Cássia Alves,Cássia Alves,False
+p0588,Francisco Enildo da Silva Fernandes,Enildo Fernandes,False
+p0589,Diogo Benicio Silva,Diogo Benicio,False
+p0590,Francisca Costa da Silva,Francisca Costa,False
+p0591,Arlete Domingos Soares,Arlete da Pamonha,False
+p0592,José Roberto Garcia de Araújo,Zé Roberto,False
+p0593,Josiane de Araujo Silva,Josi Costureira,False
+p0594,Alysson Moises de Medeiros,Alysson,False
+p0595,Renilson Dantas de Oliveira,Irmão Renilson,False
+p0596,Geraldo Zacarias de Andrade,Geraldo Zacarias,False
+p0597,José Alexsandro Alves Ribeiro,Alex Ribeiro,False
+p0598,Carlos Braulio Alaminos,Carlinhos,False
+p0599,Maria Vitória Alves,Vitória Alves,False
+p0600,Ismael Januário de Oliveira,Ismael D Avilla,False
+p0601,Ana Paula Ribeiro da Fonseca Lopes,Enf Ana Paula do Frutilândia,False
+p0602,Margarida Pereira da Cunha,Guida do Pt,False
+p0603,Alexsandro Gomes Batista,Alex Povão,False
+p0604,José Teixeira da Silva,Dede de Serrinha,False
+p0605,Antonio Victor da Fonseca,Borges,False
+p0606,Marcelo Francisco da Silva,Prof Marcelo da Cultura,False
+p0607,Carlos Emanuel Sales da Costa,Emanuel Sales,False
+p0608,Maria das Graças de Almeida Silva,Graça Almeida,False
+p0609,Expedita Neuma da Silva Lima,Neuma de Novo,False
+p0610,Elisângela Silva da Costa Palombo,Professora Elisângela,False
+p0611,Antônio Liberato da Silva,Liberato,False
+p0612,Ivan Fioravante Feitosa,Ivan do Pt,False
+p0613,Genesio Francisco Pinto Neto,Pola Pinto,False
+p0614,Mario Ilo Garcia,Mario Ilo,False
+p0615,Lucas Fagundes de Oliveira,Lucas Fagundes,False
+p0616,Josivaldo do Nascimento,Josivaldo Papeto,False
+p0617,Luiza Hillary Gomes da Silva,Hillary Gomes,False
+p0618,Edilson Firmino Torres,Edilson da Borracharia,False
+p0619,Maria José da Silva Rodrigues,Didé Rodrigues,False
+p0620,Gilmar Bernardo da Silva,Gilmar Bernardo,False
+p0621,Sandra Alves do Nascimento Oliveira,Sandra de Cajazeiras,False
+p0622,Natividade Vieira de Melo,Natividade,False
+p0623,Nadia Rafaelly Araujo Nogueira,Rafaelly Nogueirra,False
+p0624,Zulamar Juarez de Sousa,Zulamar,False
+p0625,Ítalo Matheus Araújo de Menezes,Ítalo,False
+p0626,Anna Maria Mendonça Nunes,Anninha Nunes,False
+p0627,Ivanice Bezerra de Oliveira Macedo,Professora Ivanice,False
+p0628,João Maria Campos,João Campos,False
+p0629,Ana Patricia Oliveira da Silva Romano,Patricia,False
+p0630,Wanessa Moisés dos Santos,Wanessa Gg Brasil,False
+p0631,Ana Lucia da Silva,Preta do Coletivo Avoar,False
+p0632,Manoel Thiago Vicente da Silva,Thiago Silva,False
+p0633,José Aldi dos Santos,Dida do Beiju,False
+p0634,Mônica Maria da Silva,Mônica Silva,False
+p0635,Otila da Silva Franca,Otila França,False
+p0636,Mário Roberto Medeiros da Silva,Mário da Pamonha,False
+p0637,Maria Elizete Palhares de Melo,Elizete Palhares,False
+p0638,Adriana Maria da Silva,Adriana de Alexandre,False
+p0639,Jose Olariano de Souza Filho,Zezinho da Porcaria,False
+p0640,Tereza Cristina de Araújo Nascimento,Tereza Araújo,False
+p0641,Eloni Maria da Silva,Elô Silva,False
+p0642,José Emerson Erek da Silva Francelino,Ver. Prof. Emerson,False
+p0643,Deusdeth Gonçalves Alves,Deusdeth,False
+p0644,Maria da Vitoria Costa,Vitoria de Margela,False
+p0645,Odecio Goncalves da Costa Filho,Costa,False
+p0646,Francisco Erinaldo Felipe,Naldinho de Canindé,False
+p0647,Zélia Primo do Nascimento,Zélia Primo,False
+p0648,Jose Freitas de Oliveira,Dedinho Freitas,False
+p0649,Wedson de Farias Xavier,Wedson Farias,False
+p0650,Fábio Duarte da Silva,Fábio Duarte,False
+p0651,Vitoria Regis Morais de Lima,Vitória Regis,False
+p0652,Ozean Faustino Lourenço,Ozean Faustino,False
+p0653,Jose Joailton Soares de Lima de Oliveira,Dede(Joailton),False
+p0654,Eraldo Alves de Araújo,Eraldo,False
+p0655,Francisco Maciel Almeida de Souza,Maciel das Malvinas,False
+p0656,Ivanildo da Silva,Nildo do Frei Damião,False
+p0657,Eliane Bandeira e Silva,Eliane Bandeira,False
+p0658,Irailson Feliciano da Silva,Irailson,False
+p0659,Esmeraldina Maria de Medeiros,Prof Esmeraldina Medeiros,False
+p0660,Jose Braz Ferreira Neto,Neto dos Quintos,False
+p0661,José Carlos da Silva Félix,Carlos Félix,False
+p0662,Francisca Romualdo Marreiro de Oliveira,Raimunda de Tato,False
+p0663,Maria Dalva Medeiros de Araújo,Miúda,False
+p0664,Eliete Barbosa Cirilo,Eliete Barbosa,False
+p0665,Cabrino Querino da Silva,Cabrino Querino,False
+p0666,Micaela Francisca da Silva,Micaela,False
+p0667,Manoel Reginaldo de Medeiros,Reginaldo Chico,False
+p0668,Maria Francicleide de Oliveira,Cleide Panca,False
+p0669,Jane Carmem Pereira Silva,Jane Costureira,False
+p0670,Damiana de Holanda Alves Feitoza,Damiana Feitoza,False
+p0671,Maria Rita Ribeiro de Bessa,Ritinha de Rêgo,False
+p0672,Maria de Fátima Medeiros,Maria de Fátima,False
+p0673,Maria Marleide da Cunha Matias,Marleide Cunha,False
+p0674,Mara Regis de Queiroz,Mara,False
+p0675,Cleto Belo Soares Junior,Professor Cleto Belinhos,False
+p0676,Francisco Augusto de Barros,Irmão Erivan,False
+p0677,Shirley Carlos Rodrigues da Camara,Shirley,False
+p0678,Jose Alberto da Costa Junior,Alberto Junior,False
+p0679,Maria Aucilene de Brito,Aucilene Brito,False
+p0680,Josilene Azevedo da Luz Macedo,Nenem do Tuiuiú,False
+p0681,Joildo Lobato Bezerra,Joildo Lobato,False
+p0682,Francisca Lúcia Barros da Silva,Lúcia de Dedé,False
+p0683,Denilson Francisco Terto Barbosa,Denilson Barbosa,False
+p0684,Esteffany Karolayne dos Santos da Silva,Karol de Nenem Carlota,False
+p0685,Elioneide Felix de Lima,Elioneide,False
+p0686,Alexandre Duarte de Souza,Irmão Alexandre,False
+p0687,Euzanan Oliveira da Silva,Euzanan,False
+p0688,Wilson Nogueira Mendes Neto,Farofa,False
+p0689,Giovani Nelo da Silva,Geh Nelo,False
+p0690,Francisco Leonardo da Silva,Gal,False
+p0691,Jorgivan de Medeiros Lima,Jorge de Mulungu,False
+p0692,Fabio dos Santos Correia,Tanjão Moto Peças,False
+p0693,Francisco Nilo da Silva,Nilo Silva,False
+p0694,Antonia Jocielma da Silva,Jocielma,False
+p0695,Jose Jair da Trindade,Jair Trindade,False
+p0696,Jose Milton Medeiros da Silva,Milton Vigilante,False
+p0697,Ailson Alves dos Santos,Alison Santos,False
+p0698,Antonio de Souza e Silva,Zico do Sindicato,False
+p0699,Maria Francisca Pereira de Araujo Silva,Maria de Lero,False
+p0700,José Maria de Arimateia,Pirex,False
+p0701,Francisca Dorotea Fernandes Dantas,Dorotea Dantas,False
+p0702,Nelson Alves Teixeira,Nelson Teixeira,False
+p0703,Rogério Barbosa Jales,Rogerio Jales,False
+p0704,Lindomar Matias Cabral,Lindomar Balinha,False
+p0705,Maria Gorete Pereira dos Santos,Gorete Pereira,False
+p0706,Arthur Barbosa de Lima,Arthur Barbosa,False
+p0707,Ana Paula Rosa Rodrigues,Ana Paula,False
+p0708,Marciel Carlos de Sousa,Professor Marciel,False
+p0709,Antônio Claudio Leite,Claudio Leite,False
+p0710,Sebastião Ferreira Filho,Júnior Bastinho,False
+p0711,Manoel Valerio Neto,Valerio Silva,False
+p0712,Rodrigo Cesar Souza de Macedo,Rodrido Bico,False
+p0713,Íris Maria da Silva,Íris Maria,False
+p0714,Macinaldo Costa de Assis,Marcinaldo,False
+p0715,Querubina Ariane de Araujo,Ariane,False
+p0716,Ana Cristhina Nunes de Araujo,Cristhina Araujo,False
+p0717,Sebastião Valério da Fonseca,Dr Valério,False
+p0718,Francisco Alberto Lima de Mendonça,Francisco Alberto,False
+p0719,Paulo Cesar Elias Ferreira,Paulo Cesar,False
+p0720,Maciel do Nascimento de Souza,Maciel Souza,False
+p0721,Teofilo Fernandes Pimenta Neto,Tanildo Fernandes,False
+p0722,Severino Nazario da Silva,Silva de Ramimim,False
+p0723,Jairo de Souza Mafaldo,Jairo Mafaldo,False
+p0724,Ubernilda Batista Gurgel de Almeida,Ubernilda Gurgel,False
+p0725,João José de Sousa,Jota Jota,False
+p0726,Flora Medeiros Rodrigues do Nascimento,Flora Medeiros,False
+p0727,Pedro Lopes de Araujo Neto,Pedro Lopes,False
+p0728,Anderson de Souza,Ganso,False
+p0729,Cadmo Alisson Moreira de Araujo,Cadu,False
+p0730,Jorian Pereira dos Santos,Prof. Jorian Santos,False
+p0731,Luiz Marcos Constâncio,Mainho Constâncio,False
+p0732,Maria Rita de Cassia Oliveira,Maria Rita,False
+p0733,Albimar Gonçalves de Mello,Albimar,False
+p0734,Francimar Faustino de Azevedo,Francimar Faustino,False
+p0735,Joao Marques de Souza,João de Edigar,False
+p0736,Mauricio Soares de Lima,Mauricio,False
+p0737,Francisco de Assis do Nascimento,Assis de Seu Pedrinho,False
+p0738,Francisco Gabriel de Azevedo,Gabriel Azevedo,False
+p0739,Lucas Galvão da Cruz,Lucas,False
+p0740,Damião Lacerda de Souza,Damião Lacerda,False
+p0741,Valdicelio Viterbo Lobo,Valdicelio Lobo,False
+p0742,Margarida do Desterro da Silva,Lidinha,False
+p0743,Márcio Medeiros de Lima,Márcio de Maria de Olindina,False
+p0744,Marcia Maria Bezerra Soares,Márcia Bezerra,False
+p0745,José Arimateia de Medeiros Guerra,Zé Guerreiro,False
+p0746,Odair José Gomes Bispo,Odair Bispo,False
+p0747,Aneirica Rocha da Silva,Anérica Rocha,False
+p0748,Francisco Canindé Fagundes,Canindé de Lilia,False
+p0749,Francisco das Chagas Bezerra,Chico do Pt,False
+p0750,Antonio Fagner Gurgel,Nelinho,False
+p0751,Maria Eliane da Silva,Loreda,False
+p0752,Sesiom Quinino Wanderley,Dr Sesiom,False
+p0753,Eraldo Daniel de Paiva,Eraldo,False
+p0754,Marcília Dhelania dos Santos Olegário Gonçalves,Professora Dhelania,False
+p0755,Francisca Irisneide Lima Alves,Neide Lima,False
+p0756,Nell Armstrong de Souza Tavares,Nell Armstrong,False
+p0757,Rocelito Miranda da Rocha,Miranda,False
+p0758,Carlos Eduardo Xavier,Cadu de Lula,False
+p0759,Cremilda Vieira de Souza,Cremilda Vieira,False
+p0760,Everton Araújo Santos,Everton Ferralli,False
+p0761,Alexandre Motta Câmara,Alexandre Motta,False
+p0762,Francisco Ferreira Arcanjo,Chico Gago,False
+p0763,Rosimary Ferreira Barbosa,Rosimary Ferreira,False
+p0764,Emanuela Rayane do Nascimento,Emanuela,False
+p0765,Eliano Nogueira Chaves,Eliano Nogueira,False
+p0766,Janille Nogueira Alves Santos,Janille Nogueira,False
+p0767,Jose Geraldo da Silva Junior,Junior de Zé Geraldo,False
+p0768,Jeferson Roberto da Silva,Jeferson Roberto,False
+p0769,Maria Frascineide da Silva Dias do Nascimento,Neide Ex-Conselheira Tutelar,False
+p0770,Carlito Lucas dos Santos Neto,Professor Carlitos Lucas,False
+p0771,Fabio Julio de Menezes,Juninho,False
+p0772,Wigna Brito de Souza Araújo,Wigna do Sindicato,False
+p0773,José Klicio da Silva,Klicio do Sítio,False
+p0774,Renato Gomes de Souza,Renato Souza,False
+p0775,Cayla Santos Rodrigues,Cayla Rodrigues,False
+p0776,Arliane Barbosa da Silva,Lila,False
+p0777,Douglas Pereira da Costa,Douglas Costa,False
+p0778,Guilherme Gaspar Nogueira,Guilherme Gaspar,False
+p0779,Alcides Ferreira de Souza,Cide Ferreira,False
+p0780,Maria das Vitórias Garcia de Oliveira,Vitória Garcia,False
+p0781,Maria Ionilde Medeiros de Araujo Barros,Bibi de Maria Ivone,False
+p0782,Gilton Sampaio de Souza,Gilton Sampaio,False
+p0783,Milena Santiago Mendes Balbino,Milena Mendes,False
+p0784,João Soares Lopes,Professor João Soares,False
+p0785,Raquel Lilian de Medeiros Soares,Raquel Lilian,False
+p0786,José Mota da Silva Júnior,Zé Mota,False
+p0787,Telma Maria Rodrigues de Sales,Professora Telma Rodrigues,False
+p0788,Rejane de Souza,Professora Rejane,False
+p0789,Mariza Lourenço da Silva,Mariza de Lico,False
+p0790,Anna Regina de Oliveira Margarida,Anna Regina,False
+p0791,Ana Lucélia Chaves,Lucélia Chaves,False
+p0792,Francisco Jorge de Lima Freire,Jorge de Lima,False
+p0793,Paulo Gondigio Ferreira,Irmão Paulo,False
+p0794,Maria Aparecida Vieira Diogenes,Aparecida Vieira,False
+p0795,Rita de Cáscia da Silva Abrantes,Professora Ritinha,False
+p0796,Gabriel Fernandes da Silva Brito,Gabriel Fernandes,False
+p0797,Fernando Wanderley Vargas da Silva,Mineiro,False
+p0798,Damião Higino de Oliveira,Damião Oliveira,False
+p0799,Francisco Aleixo,Kinho Prémoldados,False
+p0800,Nelciclei Costa Santos,Pretinho do Pt,False
+p0801,Cleyton Silva de Araujo,Dote Olissassi,False
+p0802,Maria Jose de Lima Amorim,Zezinha Enfermeira,False
+p0803,Joao Batista da Cunha Neto,Neto de Zoraide,False
+p0804,Carlos Alberto Fernandes Soares de Maria,Betinho,False
+p0805,Lucilene da Silva Melo,Lucilene de Peteca,False
+p0806,Lucia Aparecida Lima de Oliveira,Professora Aparecida,False
+p0807,Matheus Andre da Silva,Matheus Andre,False
+p0808,Hugo Manso Júnior,Hugo Manso,False
+p0809,Tiago Marques Macêdo,Tiago Marques,False
+p0810,Jorge Luiz de Lima,Nego Jorge,False
+p0811,Firmino Gomes de Castro Neto,Firmino,False
+p0812,Joao Batista de Souza Junior,Junior do Trapiá,False
+p0813,Carlos Alexandre Alves,Alexandre  Bevenuto,False
+p0814,Maria Eudenice Borges,Denisinha,False
+p0815,Petronio Souza Spinelli,Petrônio Spinelli,False
+p0816,Itaci de Brito Mariz Neto,Itaci Neto,False
+p0817,Ana Flávia Oliveira Barbosa de Lira,Ana Flávia,False
+p0818,Willi Kesle Ferreira,Willi Kesle,False
+p0819,Francineide da Silva Maia do Nascimento,Francy Maia Matrizes Africanas,False
+p0820,Marcos Antonio da Silva,Marcos Silva,False
+p0821,Remo da Fonseca Silveira,Remo,False
+p0822,Maria da Conceição Silva,Ceição Silva,False
+p0823,Ranilda da Silva,Branca,False
+p0824,Sebastião Jorge Maia Neto,Netinho de Dedé Soldado,False
+p0825,Valdeni Medeiros Nunes,Valdeni Medeiros,False
+p0826,Francisca Canindé Garcia,Galega Taveira,False
+p0827,Francisco Caninde Margarida,Canindé Moreno,False
+p0828,João Batista França do Nascimento,João Batista França,False
+p0829,Marcio Barbosa de Medeiros,Pepino,False
+p0830,Antonia Keila Lopes Paiva Amorim,Keila Lopes,False
+p0831,Elizane Ferreira Mendes Inacio,Zaninha,False
+p0832,João Targino de Lima,João Targino,False
+p0833,Francisco Cesielio Soares Sobrinho,Cesiélio Motorista,False
+p0834,Ogildo Francelino Soares,Ogildo Francelino,False
+p0835,Cezar Abdala,Cezar Abdala,False
+p0836,João Maria Victo da Silva,João do Rui,False
+p0837,Raimundo Nonato Neto,Irmao Netinho,False
+p0838,Avanir Domingos Souza da Silva,Avanir de Raimundão,False
+p0839,Lucas David Gomes da Silva,Lucas David,False
+p0840,Karla Artemizia Lima de Assis,Artemizia,False
+p0841,Alexsandra Ferreira Maia de Melo,Professora Alexsandra,False
+p0842,Antonio Araujo Neto,Araujo Neto,False
+p0843,Maria do Livramento Almeida de Paiva,Liu do Bairro Novo,False
+p0844,Tairon Mederos Jales Diniz,Tairone Medeiros,False
+p0845,Janiere Ferreira de Lima,Aninha de Paulo,False
+p0846,Francisco  Benedito  de Paula,Benedito do Pt,False
+p0847,Mariana de Aquino Alves,Mariana Aquino,False
+p0848,Ana Aline Morais,Ana Aline,False
+p0849,George Andre Almeida de Andrade,George Almeida,False
+p0850,José Carlos do Nascimento,Major,False
+p0851,Elizabeth Lima da Silva,Beth Lima,False
+p0852,Francisco Floriano de Souza,Chicão do Pt,False
+p0853,Laerty Carlos de Brito,Laerty Brito,False
+p0854,Diego Marcos Candido da Rocha,Diego do Baldum,False
+p0855,Rayane Duarte da Silva,Rayane Duarte,False
+p0856,José Eduardo Aguiar dos Anjos,Eduardo Aguiar,False
+p0857,Francisco Ronicleide da Silva,Roni Silva,False
+p0858,Rita de Cassia da Costa Lima,Cassia Lima,False
+p0859,Nilvan Rodrigues da Silva,Nilvan Rodrigues,False
+p0860,Rogéria Layanne Caldas Dantas,Rogéria Dantas,False
+p0861,Maria Lúcia da Rocha,Mãe Lúcia,False
+p0862,Hérica Francisco da Silva,Hérica,False
+p0863,Fabiano de Araujo Medeiros,Fabiano Pacomio,False
+p0864,Jeska Thayse da Silva Fernandes da Cunha,Jeska Fernandes,False
+p0865,Marluce Teixeira de Morais,Marluce Morais,False
+p0866,Paula Ranira da Silva,Paula Ranira,False
+p0867,Jucileide Carlos Correia da Costa,Neide de Orlando,False
+p0868,Maria de Lourdes Pereira,Irmã Lurdes,False
+p0869,Reginaldo Vitorino da Silva,Reginaldo Vitorino,False
+p0870,Joao Maria Cabral do Nascimento,Cabral do Sindicato,False
+p0871,José Carlos Sena de Oliveira,Professor Zé Sena,False
+p0872,José Bernardino Filho,Zé Filho,False
+p0873,Miguel Ferreira Neto,Neto de Bibi,False
+p0874,Gerlailson Goncalves Abrantes,Gerlailson Abrantes (Nenem),False
+p0875,Francisco de Assis Costa Filho,Diassis Filho,False
+p0876,Elismar Bezerra,Professor Elismar,False
+p0877,Josielma Duarte da Silva,Josielma do Sindicato,False
+p0878,Francisco das Chagas do Nascimento,Chagas Nascimento,False
+p0879,Severino Marcos Martins da Silva,Esquibe,False
+p0880,Valdemir Luiz da Silva,Valdemir Luiz,False
+p0881,Paulo Eduardo Campielo Barreto Ramos,Paulo Barreto,False
+p0882,José Ekeoma Alves dos Santos,Ekeoma Santos,False
+p0883,José Faustino Cavalcante dos Santos,Zé de Bolinha,False
+p0884,Gerte Ridia Carvalho,Rídia,False
+p0885,Mauricio Viana Moreno,Maurício Viana,False
+p0886,Yara Vitoria dos Santos Costa,Yara Costa,False
+p0887,Marcos Aurelio de Araujo Estevam,Marcos da Saude,False
+p0888,Brendo dos Santos Silva,Breno de Lau,False
+p0889,Jairo José Campos da Costa,Jairo Campos,False
+p0890,Juliana Garcia dos Santos Soares,Juliana Garcia,False
+p0891,Maria de Lourdes Custodio da Silva,Lourdes de Duda Custódio,False
+p0892,Joseane Regina da Silva,Josy Regina,False
+p0893,Micarla Soares da Silva,Micarla do Baixio,False
+p0894,Marinaldo Joaquim da Silva,Marinaldo,False
+p0895,Maria Jose da Silva,Like,False
+p0896,Maria Valdinízia da Silva,Ninha,False
+p0897,Francisco Fabio Dias de Luna,Fábio Luna,False
+p0898,Antônio Leandro de Souza,Leandro Neris,False
+p0899,Eliane Maria da Silva,Eliane Silva,False
+p0900,Antonio Gomes Batista,Braga,False
+p0901,Patricio Adriano de Freitas,Patricio Adriano,False
+p0902,Emerson Barros,Som,False
+p0903,Jose Geraldo Saraiva Pinto,Geraldao do Pt,False
+p0904,Kleber Xavier Rocha,Kleber Xavier,False
+p0905,Maria dos Disterro Holanda de Nogueira Costa,Lilia Holanda,False
+p0906,Cleber Vinicius Castro da Silva,Cléber Dimarzzio,False
+p0907,Ingryd Jamyle da Silva Solano,Ingrid Jamyle,False
+p0908,Elinalva Pereira,Eli,False
+p0909,Erivan José da Silva,Erivan do Sindicato,False
+p0910,Francisco Mario Alves Tavares,Mário Tavares Cadeirante,False
+p0911,Cristiane Costa Araújo,Professora Cristiane Costa,False
+p0912,Rosangela Domingos do Nascimento,Rosangela do Pt,False
+p0913,Joana Paula da Silva Pereira,Paula Pereira,False
+p0914,Giorgia Penereiro Pascoal,Dra Giorgia,False
+p0915,Lázaro Pinheiro da Silva,Lazaro,False
+p0916,Francisca das Chagas da Conceição Silva,Professora Chaguinha,False
+p0917,Reginaldo Vieira dos Santos,Nem do Lava Jato,False
+p0918,Marcelo Augusto de Queiroz Lima,Marcelo,False
+p0919,Maria Lioneusa da Silva Alves,Irmã Lioneusa de Cachoeira,False
+p0920,Adenilson Junior de Macedo,Branco Junior,False
+p0921,Adeilson Alves de Medeiros,Adeilson Alves,False
+p0922,Cilene de Melo da Silva de Oliveira,Cilene,False
+p0923,Leonardo Sales de Souza,Léo Sales,False
+p0924,Alex de Pontes Silva,Alex Pontes,False
+p0925,Wellington Jose da Silva,Wellington do Cimento,False
+p0926,Barbara Caroline da Silva  Lima,Barbára,False
+p0927,Ana Catia de Souza Maciel,Katia da Saúde,False
+p0928,Naldivan de Lima Basilio,Naldivan,False
+p0929,Maria Ana Lucia do Rosario,Pastora Lucia,False
+p0930,Maria Neli de Sena Soares,Nelly de Darí,False
+p0931,Joao Corcino Barbosa Neto,João Corcino,False
+p0932,Damiao Pinheiro de Araujo,Damião Sem Medo,False
+p0933,Fernando Lucena Pereira dos Santos,Fernando Lucena,False
+p0934,Francisco Luciano de Oliveira,Luciano do Pt,False
+p0935,Fernando Antonio da Silva Alves,Delegado Fernando,False
+p0936,Valmir Bernardino de Oliveira Junior,Juninho do Conselho,False
+p0937,Silvia Ribeiro Barbosa,Silvinha,False
+p0938,Gilson Bezerra de Medeiros,Gilson da Farmácia,False
+p0939,Antonia Marina Delmiro Alves de Lima,Marina Lima,False
+p0940,Eliete Venancio da Silva,Tia Naninha,False
+p0941,Adriana Gomes da Silva,Adriana de Zé de Tino,False
+p0942,Nielson do Nascimento,Nielson,False
+p0943,Edinaide Pinheiro da Costa,Naide de Bado,False
+p0944,Wilmar Alves Diniz Filho,Wilmar Filho Pain,False
+p0945,Myldred Manuella Guedes Alcoforado,Lela de Fatinha,False
+p0946,Antonio Andre da Silva Junior,Adre Junior,False
+p0947,Antonia Iza do Rego de Assis,Iza Rego,False
+p0948,Maira Cintia Lucena Melo,Maira Melo,False
+p0949,Ivone Anselmo de Medeiros,Ivone,False
+p0950,Bruno Augusto Bezerra Jota,Bruno Augusto,False
+p0951,Glisiany Plúvia de Oliveira,Plúvia,False
+p0952,Rafael Pereira de Medeiros,Rafael Profeta,False
+p0953,Elcy Nascimento de Melo,Elcy Melo,False
+p0954,Sanzia Maria Silva de Souza,Professora Sanzia,False
+p0955,Elizabete Barbalho Bezerra,Elizabete Agente de Saude,False
+p0956,Maria da Vitória de Lima,Vitória de Rapadura,False
+p0957,Solanje Jota do Nascimento,Solange,False
+p0958,Paulo Viana da Silva,Paulo Viana,False
+p0959,Artur Araujo do Amaral,Artur Filho de Caiado,False
+p0960,Maria Margarida de Mendonça,Margarida da Timbaúba,False
+p0961,Maria Edileuza Costa,Edileuza,False
+p0962,Maria Carolina Silva dos Santos,Carol de Biu,False
+p0963,Jean Ferreira da Silva,Jean Ferreira,False
+p0964,Samanda Alves de Freitas,Samanda de Lula,False
+p0965,Jose Helder Monteiro de Souza,Dedé da Oficina,False
+p0966,Jose Eduardo Paz Coutinho,Eduardo,False
+p0967,Raimundo Paulo de Brito,Paulo Binho,False
+p0968,Reginaldo Francisco,Reginaldo,False
+p0969,Iara Lúcia dos Reis,Iara Reis,False
+p0970,Arnaldo Vital da Silva,Arnaldo de Dedêu,False
+p0971,Mattson Ranier Gomes de Araújo,Mattson,False
+p0972,Francisco Fabricio Pinheiro Regis,Fabrício da Ambulância,False
+p0973,Maria do Socorro da Silva,Corrinha da Saúde,False
+p0974,Luiz Inácio Lula da Silva,Lula,True

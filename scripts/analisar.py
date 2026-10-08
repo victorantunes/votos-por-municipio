@@ -12,6 +12,7 @@ Saídas
 import json
 import re
 import sys
+from datetime import datetime
 from pathlib import Path
 
 import numpy as np
@@ -29,6 +30,7 @@ REGIAO = {**dict.fromkeys(['AC', 'AM', 'AP', 'PA', 'RO', 'RR', 'TO'], 'Norte'),
           **dict.fromkeys(['ES', 'MG', 'RJ', 'SP'], 'Sudeste'),
           **dict.fromkeys(['PR', 'RS', 'SC'], 'Sul')}
 PARTICULAS = {'De', 'Da', 'Do', 'Das', 'Dos', 'E'}
+BUILD = datetime.now().strftime('%Y%m%d%H%M%S')  # evita que o navegador use dados antigos em cache
 REPO = 'votos-por-municipio'  # nome do repositório no GitHub, usado nos links da página
 CTX = ['aptos', 'comparec', 'abst', 'brancos', 'nulos', 'validos']
 
@@ -43,6 +45,9 @@ DISPUTAS = {
     'pres22t1': ('Presidente 2022 (1º turno)', 'Presidente 2022 1ºT', 'Presidente', 2022, 'maj'),
     'pres22t2': ('Presidente 2022 (2º turno)', 'Presidente 2022 2ºT', 'Presidente', 2022, 'maj'),
     'pres26t1': ('Presidente 2026 (1º turno)', 'Presidente 2026 1ºT', 'Presidente', 2026, 'maj'),
+    'ver24': ('Vereador 2024', 'Vereador 2024', 'Vereador', 2024, 'prop'),
+    'pref24t1': ('Prefeito 2024 (1º turno)', 'Prefeito 2024 1ºT', 'Prefeito', 2024, 'maj'),
+    'pref24t2': ('Prefeito 2024 (2º turno)', 'Prefeito 2024 2ºT', 'Prefeito', 2024, 'maj'),
     'de26': ('Deputado Estadual 2026', 'Dep. Estadual 2026', 'Deputado Estadual', 2026, 'prop'),
     'df26': ('Deputado Federal 2026', 'Dep. Federal 2026', 'Deputado Federal', 2026, 'prop'),
     'sen26': ('Senador 2026', 'Senador 2026', 'Senador', 2026, 'maj'),
@@ -202,7 +207,7 @@ por_pessoa = {0: []}
 for r in cand_rn.sort_values(['pessoa', 'd']).itertuples():
     v = votos_rn[votos_rn.cid == r.cid]
     c = {'p': idx_p[r.pessoa], 'd': int(r.d), 'n': r.nome_urna, 'num': str(r.numero), 'par': r.partido, 'sit': r.situacao, 'tot': int(r.tot),
-         'nm': int(r.nmun), 'rk': int(r.rk), 'nc': int(r.nc), 'ue': r.ue if r.disp in ('ver20', 'pref20') else '',
+         'nm': int(r.nmun), 'rk': int(r.rk), 'nc': int(r.nc), 'ue': r.ue if DISPUTAS[r.disp][2] in ('Vereador', 'Prefeito') else '',
          'v': pares(v, cds_rn)}
     if r.anulados:
         c['an'] = int(r.anulados)
@@ -307,7 +312,7 @@ trocas = {
     '__SALDO__': decimal(nacional.saldo / 1e6, 2, True) + ' mi', '__P22__': decimal(nacional.pct_2022_2T), '__P26__': decimal(nacional.pct_2026_1T),
     '__VARPP__': decimal(nacional.var_pp, 1, True), '__FLAVIO__': decimal(flavio_pct),
     '__TAB_REGIAO__': linhas_lula(por_regiao), '__TAB_UF__': linhas_lula(por_uf), '__TAB_PART_BR__': linhas_part_br(), '__TAB_PART_REG__': linhas_part_regiao(),
-    '__TAB_PART_RN__': linhas_part_rn(), '__RN_NPESS__': inteiro(len(pess_rn) - 1), '__RN_NCAND__': inteiro(n_pt_cand), '__RN_NMUN__': inteiro(len(mun_rn)), '__REPO__': REPO}
+    '__TAB_PART_RN__': linhas_part_rn(), '__RN_NPESS__': inteiro(len(pess_rn) - 1), '__RN_NCAND__': inteiro(n_pt_cand), '__RN_NMUN__': inteiro(len(mun_rn)), '__REPO__': REPO, '__BUILD__': BUILD}
 idx = (ROOT / 'scripts' / 'templates' / 'app.html').read_text(encoding='utf-8')
 for k, v in trocas.items():
     idx = idx.replace(k, v)
