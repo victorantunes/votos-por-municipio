@@ -433,8 +433,8 @@
       <h3>Participação (abstenção, brancos e nulos)</h3>
       <p>Também é possível colorir pela abstenção, pelos brancos e pelos nulos de cada disputa, e pela variação deles entre A e B (em pontos percentuais). Essas medidas dizem respeito ao eleitorado do município e não ao candidato, então aparecem em todos os municípios da disputa, mesmo onde o candidato não concorreu.</p>
       <h3>Percentis e as seis cores</h3>
-      <p>O percentil mostra a posição de um município em relação aos demais. Os municípios com dados são colocados em ordem, do menor valor ao maior. O percentil 15 (P15) é o valor abaixo do qual ficam 15% dos municípios, o P50 é a mediana e o P85 é o valor acima do qual ficam os 15% maiores. Os cinco cortes dividem os municípios em seis classes, com 15%, 20%, 15%, 15%, 20% e 15% dos municípios, do menor ao maior valor. Os limites aparecem na legenda e mudam conforme a medida escolhida.</p>
-      <p>Nas comparações da mesma pessoa ou do mesmo partido ao longo do tempo, as classes vão de "Queda Severa" a "Destaque Positivo" e usam vermelho e verde. Nas demais medidas as classes vão de "Menores 15%" a "Maiores 15%". Os votos e a % dos votos do candidato usam a mesma escala de vermelho a verde das comparações, em que verde quer dizer mais votos. A abstenção, os brancos e os nulos usam azul, mais escuro quanto maior o valor, e as diferenças que não são de desempenho (por exemplo, a variação da abstenção) usam marrom a verde-azulado. Municípios sem dados ficam em cinza. Quando há poucos municípios com dados, como no caso de um candidato a vereador, não há percentis e os municípios com dados aparecem em vermelho.</p>
+      <p>O percentil mostra a posição de um município em relação aos demais. Os municípios com dados são colocados em ordem, do menor valor ao maior. O percentil 15 (P15) é o valor abaixo do qual ficam 15% dos municípios, o P50 é a mediana e o P85 é o valor acima do qual ficam os 15% maiores. Os cinco cortes dividem os municípios em seis classes, com 15%, 20%, 15%, 15%, 20% e 15% dos municípios, do menor ao maior valor. A legenda mostra o valor de cada corte (um ponto, e não uma faixa) e ele muda conforme a medida escolhida.</p>
+      <p>Nas comparações da mesma pessoa ou do mesmo partido ao longo do tempo, as classes vão de "Queda Severa" a "Destaque Positivo" e usam vermelho e verde. Nas demais medidas as classes se chamam "Até P15", "Até P35", "Até P50", "Até P65", "Até P85" e "Acima de P85". Os votos e a % dos votos do candidato usam a mesma escala de vermelho a verde das comparações, em que verde quer dizer mais votos. A abstenção, os brancos e os nulos usam azul, mais escuro quanto maior o valor, e as diferenças que não são de desempenho (por exemplo, a variação da abstenção) usam marrom a verde-azulado. Municípios sem dados ficam em cinza. Quando há poucos municípios com dados, como no caso de um candidato a vereador, não há percentis e os municípios com dados aparecem em vermelho.</p>
       <p>As classes são relativas: elas dizem se o município está acima ou abaixo dos outros, e não se o valor é positivo ou negativo. Por isso, nas comparações, a classe "Destaque Positivo" pode incluir municípios que caíram menos do que os demais.</p>
       <p>Além das seis classes, a legenda traz duas categorias para os extremos: <b>Mínimo</b> (violeta) e <b>Máximo</b> (dourado), que marcam o município de menor e o de maior valor da medida escolhida (o P0 e o P100). Um anel dessa cor aparece no mapa, para achá-los em qualquer zoom, e um clique no item da legenda leva ao município. Elas não mudam os cortes das seis classes. Se mais de 10 municípios empatam no menor ou no maior valor, a categoria correspondente não aparece.</p>
 
@@ -501,13 +501,13 @@ const PALS = {
 };
 const NOMES = {
   perf: ['Queda Severa', 'Queda Forte', 'Abaixo da Mediana', 'Acima da Mediana', 'Retenção Forte', 'Destaque Positivo'],
-  lvl:  ['Menores 15%', 'P15 a P35', 'P35 a P50', 'P50 a P65', 'P65 a P85', 'Maiores 15%'],
-  part: ['Menores 15%', 'P15 a P35', 'P35 a P50', 'P50 a P65', 'P65 a P85', 'Maiores 15%'],
-  neu:  ['Menores 15%', 'P15 a P35', 'P35 a P50', 'P50 a P65', 'P65 a P85', 'Maiores 15%']
+  lvl:  ['Até P15', 'Até P35', 'Até P50', 'Até P65', 'Até P85', 'Acima de P85'],
+  part: ['Até P15', 'Até P35', 'Até P50', 'Até P65', 'Até P85', 'Acima de P85'],
+  neu:  ['Até P15', 'Até P35', 'Até P50', 'Até P65', 'Até P85', 'Acima de P85']
 };
 /* Além das seis classes por percentil (que não mudam), duas categorias marcam o município de menor valor (P0) e o de maior valor (P100) da medida */
 const EXTRA = ['#5e2a84', '#e8b100'], NOMES_EXTRA = ['Mínimo', 'Máximo'], MAX_EMPATE = 10;
-const FAIXAS_P = ['Pior 15%', 'P15 a P35', 'P35 a P50', 'P50 a P65', 'P65 a P85', 'Melhor 15%'];
+const PERC = [15, 35, 50, 65, 85], FAIXAS_P = ['até P15', 'até P35', 'até P50', 'até P65', 'até P85', 'acima de P85'];
 const SEMDADO = '#d9dde3', ACENTO = '#b3201f';
 const ORDEM_REG = ['Norte', 'Nordeste', 'Centro-Oeste', 'Sudeste', 'Sul'];
 const TAM = [
@@ -551,7 +551,7 @@ function preparar(js) {
 function carregarEscopo(id) {
   if (cacheEsc[id]) return Promise.resolve(cacheEsc[id]);
   const url = id === 'br' ? 'dados/escopo_br.json' : 'dados/uf/' + id + '.json';
-  return fetch(url + '?v=20261008135624').then(r => { if (!r.ok) throw new Error('escopo'); return r.json(); }).then(js => {
+  return fetch(url + '?v=20261008135954').then(r => { if (!r.ok) throw new Error('escopo'); return r.json(); }).then(js => {
     cacheEsc[id] = preparar(js); ordemCache.push(id);
     while (ordemCache.length > 3) delete cacheEsc[ordemCache.shift()];  // guarda só os últimos recortes, para não acumular memória
     return cacheEsc[id];
@@ -635,7 +635,7 @@ function calcClasses0() {
   CL = {m, arr, cuts, cls, few: false, n: vals.length, min: mn, max: mx, iMin: podeMin ? iMin : [], iMax: podeMax ? iMax : []};
 }
 const cor = i => CL.cls[i] < 0 ? SEMDADO : CL.few ? ACENTO : CL.cls[i] > 5 ? EXTRA[CL.cls[i] - 6] : PALS[CL.m.t][CL.cls[i]];
-function nomeClasse(i) { return CL.cls[i] < 0 ? 'sem dados' : CL.few ? '' : CL.cls[i] > 5 ? NOMES_EXTRA[CL.cls[i] - 6] + (CL.cls[i] === 6 ? ' (menor valor)' : ' (maior valor)') : NOMES[CL.m.t][CL.cls[i]] + ' (' + FAIXAS_P[CL.cls[i]] + ')'; }
+function nomeClasse(i) { return CL.cls[i] < 0 ? 'sem dados' : CL.few ? '' : CL.cls[i] > 5 ? NOMES_EXTRA[CL.cls[i] - 6] + (CL.cls[i] === 6 ? ' (menor valor)' : ' (maior valor)') : NOMES[CL.m.t][CL.cls[i]] + (CL.m.t === 'perf' ? ' (' + FAIXAS_P[CL.cls[i]] + ')' : ''); }
 
 /* ------------------------------------------------ detalhes de um município */
 function partHTML(d, i, titulo) {
@@ -672,7 +672,8 @@ function legendaHTML() {
   const sem = Array.prototype.some.call(CL.cls, k => k < 0) ? item(SEMDADO, 'Sem dados', '') : vazio;
   if (CL.few) return item(ACENTO, 'Com dados', `${CL.n} ${G.on ? 'unidade' : 'município'}${CL.n === 1 ? '' : 's'}`) + sem + vazio.repeat(7);
   const m = CL.m, fm = v => MFMT[m.u](m, v), c = CL.cuts, nm = NOMES[m.t], pal = PALS[m.t];
-  const tx = [`≤ ${fm(c[0])}`, `${fm(c[0])} a ${fm(c[1])}`, `${fm(c[1])} a ${fm(c[2])}`, `${fm(c[2])} a ${fm(c[3])}`, `${fm(c[3])} a ${fm(c[4])}`, `> ${fm(c[4])}`];
+  /* cada percentil é um ponto: as classes de comparação dizem até que percentil vão (com o valor do corte) e as demais já levam o percentil no nome */
+  const tx = nm.map((n, k) => m.t === 'perf' ? `${FAIXAS_P[k]} · ${fm(c[Math.min(k, 4)])}` : fm(c[Math.min(k, 4)]));
   const extra = (lista, k) => lista.length ? item(EXTRA[k], NOMES_EXTRA[k] + (lista.length > 1 ? ` (${lista.length})` : ''), fm(CL.arr[lista[0]]), lista[0]) : vazio;
   return extra(CL.iMin, 0) + nm.map((n, k) => item(pal[k], n, tx[k])).join('') + extra(CL.iMax, 1) + sem;
 }
@@ -920,7 +921,7 @@ const estiloPoli = i => {
   return {fillColor: cor(i), fillOpacity: fo, color: pin ? '#000' : branca ? '#ffffff' : cor(i), weight: pin ? 2.6 : on ? (branca ? w : 0.7) : 0, opacity: pin ? 1 : branca ? 0.9 : fo};
 };
 function clicarMapa(i) { S.pins.has(i) ? S.pins.delete(i) : S.pins.add(i); contador(); $('info').innerHTML = detalhe(i); pintarMapa(); }
-const baixarJSON = u => malhas[u] || (malhas[u] = fetch(u + '?v=20261008135624').then(r => { if (!r.ok) throw new Error(u); return r.json(); }).catch(e => { delete malhas[u]; throw e; }));
+const baixarJSON = u => malhas[u] || (malhas[u] = fetch(u + '?v=20261008135954').then(r => { if (!r.ok) throw new Error(u); return r.json(); }).catch(e => { delete malhas[u]; throw e; }));
 const NOTA_GRAN = (modo, poli) => {
   const ib = E.infoB, tem = ib && ib.n > 0, fora = tem ? 'nos demais, e fora dos bairros (como a zona rural), ' : '';
   const bairros = tem ? `O IBGE só tem bairros para ${ib.n} dos ${fmt(ib.total)} municípios, que reúnem cerca de ${ib.pct}% do eleitorado` : 'O IBGE não tem a divisão em bairros para os municípios deste estado';
@@ -1416,7 +1417,7 @@ window.addEventListener('hashchange', () => { const h = lerHash(); if (h.esc !==
 
 const inicial = lerHash();
 S.view = inicial.v === 'candidatos' && inicial.esc === 'br' ? 'mapa' : inicial.v; document.body.dataset.view = S.view; S.escopo = inicial.esc;
-const carregarUFs = fetch('dados/ufs.json?v=20261008135624').then(r => r.json()).then(j => {
+const carregarUFs = fetch('dados/ufs.json?v=20261008135954').then(r => r.json()).then(j => {
   UFS = j.ufs; UFS.forEach(u => { INFO[u.id] = u; });
   $('escUF').innerHTML = '<option value="">PT em um estado...</option>' + UFS.map(u => `<option value="${u.id}">${esc(u.nome)}</option>`).join('');
 }).catch(() => {});
