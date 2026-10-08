@@ -16,10 +16,16 @@
 
   /* topo */
   .top { padding: 16px 0 12px; display: grid; grid-template-columns: 1fr auto; gap: 12px 28px; align-items: end; }
-  .segs { display: flex; flex-wrap: wrap; gap: 8px 10px; margin-bottom: 10px; }
-  .scopes { display: inline-flex; flex-wrap: wrap; background: #e6ebf1; border-radius: 10px; padding: 3px; gap: 2px; max-width: 100%; }
-  .scopes button { appearance: none; border: 0; background: none; font: inherit; font-size: 13px; font-weight: 600; color: var(--muted); padding: 6px 14px; border-radius: 8px; cursor: pointer; }
+  .segs { display: flex; flex-direction: column; align-items: flex-start; gap: 8px; margin-bottom: 10px; max-width: 100%; }
+  .scopes { display: inline-flex; background: #e6ebf1; border-radius: 10px; padding: 3px; gap: 2px; max-width: 100%; }
+  .scopes button { appearance: none; border: 0; background: none; font: inherit; font-size: 13px; font-weight: 600; color: var(--muted); padding: 6px 14px; border-radius: 8px; cursor: pointer; white-space: nowrap; }
   .scopes button[aria-pressed="true"] { background: #fff; color: var(--accent); box-shadow: 0 1px 3px rgba(0,0,0,.14); }
+  .tiporow { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 10px; }
+  .tiporow .cap { font-size: 12px; font-weight: 600; color: var(--muted); }
+  .pills { display: flex; flex-wrap: wrap; gap: 6px; }
+  .pills button { appearance: none; font: inherit; font-size: 13px; font-weight: 600; color: #4a5568; background: #fff; border: 1px solid #cbd5e0; border-radius: 999px; padding: 5px 13px; cursor: pointer; }
+  .pills button:hover { background: var(--soft); }
+  .pills button[aria-pressed="true"] { color: var(--accent); background: #fbeceb; border-color: var(--accent); }
   h1 { font-size: 24px; line-height: 1.2; letter-spacing: -.01em; }
   .sub { color: var(--muted); font-size: 14px; margin-top: 4px; max-width: 660px; }
   .selinfo { font-size: 13px; margin-top: 8px; max-width: 700px; color: #2d3748; }
@@ -155,7 +161,9 @@
     .legend { display: grid; grid-template-columns: 1fr 1fr; gap: 6px 10px; font-size: 11.5px; }
     .li { white-space: normal; align-items: flex-start; }
     .li .dotc { margin-top: 3px; }
-    .scopes button { padding: 6px 10px; }
+    .scopes { display: flex; width: 100%; }
+    .scopes button { flex: 1 1 auto; padding: 6px 8px; }
+    .pills button { font-size: 12.5px; padding: 5px 11px; }
   }
 </style>
 </head>
@@ -168,10 +176,13 @@
           <button type="button" data-e="br" aria-pressed="true">Lula no Brasil</button>
           <button type="button" data-e="rn" aria-pressed="false">PT no Rio Grande do Norte</button>
         </div>
-        <div class="scopes so-rn" id="tipos" role="group" aria-label="Tipo de mapa">
-          <button type="button" data-t="comp" aria-pressed="true" title="Candidatos que concorreram em 2020, 2022 ou 2024 e também em 2026">Comparar 2020, 2022 e 2024 com 2026</button>
-          <button type="button" data-t="novo" aria-pressed="false" title="Candidatos que não tinham concorrido em 2020, 2022 nem 2024">Candidatos só de 2026</button>
-          <button type="button" data-t="livre" aria-pressed="false" title="Qualquer cargo e ano, de qualquer candidato">Qualquer cargo e ano</button>
+        <div class="tiporow so-rn">
+          <span class="cap">Tipo de mapa</span>
+          <div class="pills" id="tipos" role="group" aria-label="Tipo de mapa">
+            <button type="button" data-t="comp" aria-pressed="true" title="Quem concorreu em 2020, 2022 ou 2024 e também em 2026: mostra a votação anterior (A) e a de 2026 (B)">Comparar com 2026</button>
+            <button type="button" data-t="novo" aria-pressed="false" title="Quem não tinha concorrido em 2020, 2022 nem 2024: mostra onde foi votado em 2026">Só candidatos de 2026</button>
+            <button type="button" data-t="livre" aria-pressed="false" title="Qualquer cargo e ano, de qualquer candidato">Qualquer cargo e ano</button>
+          </div>
         </div>
       </div>
       <h1 id="h1">Lula em 2022 e 2026, município a município</h1>
@@ -285,8 +296,8 @@ __TAB_PART_REG__
         <p>Cada pessoa pode ter concorrido a cargos diferentes ao longo dos anos, então os dados separam três coisas. A <b>disputa</b> é a eleição de um cargo em um ano e turno, por exemplo Governador 2022 ou Vereador 2020. A <b>candidatura</b> é um candidato em uma disputa. A <b>pessoa</b> reúne todas as candidaturas de um mesmo candidato, ligadas pelo título de eleitor no cadastro do TSE (o número só é usado para ligar os anos e não é publicado). Isso permite acompanhar, por exemplo, quem foi candidato a vereador em 2020 e a deputado federal em 2026.</p>
         <p>No topo da página, o <b>tipo de mapa</b> define o que cada candidato mostra:</p>
         <ul>
-          <li><b>Comparar 2020, 2022 e 2024 com 2026:</b> para quem concorreu em 2020, 2022 ou 2024 e também em 2026. A candidatura A é a anterior (por padrão, do mesmo cargo, como deputado estadual 2022, ou a mais recente se não houver) e a B é a de 2026. Dá para trocar a A por qualquer outra candidatura anterior da mesma pessoa. O mapa mostra, município a município, quanto a votação mudou. A soma do PT e Lula também entram nesse tipo.</li>
-          <li><b>Candidatos só de 2026:</b> para quem não tinha concorrido em 2020, 2022 nem 2024. Não há votação anterior para comparar, então o mapa mostra onde o candidato foi votado em 2026. Se quiser uma referência, escolha em "Comparar com (B)" a soma do PT em uma disputa anterior, ou a de 2026.</li>
+          <li><b>Comparar com 2026:</b> para quem concorreu em 2020, 2022 ou 2024 e também em 2026. A candidatura A é a anterior (por padrão, do mesmo cargo, como deputado estadual 2022, ou a mais recente se não houver) e a B é a de 2026. Dá para trocar a A por qualquer outra candidatura anterior da mesma pessoa. O mapa mostra, município a município, quanto a votação mudou. A soma do PT e Lula também entram nesse tipo.</li>
+          <li><b>Só candidatos de 2026:</b> para quem não tinha concorrido em 2020, 2022 nem 2024. Não há votação anterior para comparar, então o mapa mostra onde o candidato foi votado em 2026. Se quiser uma referência, escolha em "Comparar com (B)" a soma do PT em uma disputa anterior, ou a de 2026.</li>
           <li><b>Qualquer cargo e ano:</b> escolha livremente a candidatura A e, se quiser, a B, de qualquer pessoa, da soma do PT ou de Lula.</li>
         </ul>
         <p>Escolha o candidato no campo de busca e depois as candidaturas A e B. As cores, o gráfico de dispersão e as estatísticas do topo passam a mostrar B em relação a A.</p>
