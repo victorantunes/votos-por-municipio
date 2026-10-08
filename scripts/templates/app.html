@@ -208,7 +208,7 @@
   <div class="bar">
     <div class="item so-rn"><label for="pessoa">Candidato(a)</label><div class="sb" id="wpessoa"><input type="search" id="pessoa" placeholder="Buscar candidato(a) ou PT (soma)..." autocomplete="off"><ul class="sug" id="sug-pessoa" role="listbox"></ul></div></div>
     <label>Candidatura A <select id="selA"></select></label>
-    <label>Comparar com (B) <select id="selB"></select></label>
+    <label id="lblB">Comparar com (B) <select id="selB"></select></label>
     <button class="btn" id="troca" type="button" title="Trocar A e B">&#8644;</button>
     <label>Colorir por <select id="metrica"></select></label>
     <label class="so-br">UF <select id="uf"><option value="">Brasil</option></select></label>
@@ -298,7 +298,7 @@ __TAB_PART_REG__
         <p>No topo da página, o <b>tipo de mapa</b> define o que cada candidato mostra:</p>
         <ul>
           <li><b>Comparar com 2026:</b> para quem concorreu em 2020, 2022 ou 2024 e também em 2026. A candidatura A é a anterior (por padrão, do mesmo cargo, como deputado estadual 2022, ou a mais recente se não houver) e a B é a de 2026. Dá para trocar a A por qualquer outra candidatura anterior da mesma pessoa. O mapa mostra, município a município, quanto a votação mudou. A soma do PT e Lula também entram nesse tipo.</li>
-          <li><b>Só candidatos de 2026:</b> para quem não tinha concorrido em 2020, 2022 nem 2024. Como não há votação anterior, o mapa mostra onde o candidato foi votado em 2026 e este tipo não compara com outros anos. Para ter uma referência dentro de 2026, escolha em "Comparar com (B)" a soma do PT em alguma disputa de 2026 ou Lula.</li>
+          <li><b>Só candidatos de 2026:</b> para quem não tinha concorrido em 2020, 2022 nem 2024. Como não há votação anterior, o mapa mostra só onde o candidato foi votado em 2026, sem comparação com outros candidatos nem com outros anos. Para comparar, use os outros tipos de mapa.</li>
           <li><b>Qualquer cargo e ano:</b> escolha livremente a candidatura A e, se quiser, a B, de qualquer pessoa, da soma do PT ou de Lula.</li>
         </ul>
         <p>Escolha o candidato no campo de busca e depois as candidaturas A e B. As cores, o gráfico de dispersão e as estatísticas do topo passam a mostrar B em relação a A.</p>
@@ -901,11 +901,12 @@ function popularAB() {
   const todos = [[foco.n, foco.c]].concat(extras), filtra = (gs, f) => gs.map(([g, cs]) => [g, cs.filter(f)]).filter(([g, cs]) => cs.length);
   let gA = todos, gB = todos;
   if (t === 'comp') { gA = filtra(todos, k => ano(k) < 2026); gB = filtra(todos, k => ano(k) === 2026); }
-  else if (t === 'novo') { gA = filtra([[foco.n, foco.c]], k => ano(k) === 2026); gB = filtra(extras, k => ano(k) === 2026); }
+  else if (t === 'novo') { gA = filtra([[foco.n, foco.c]], k => ano(k) === 2026); gB = []; S.B = null; }
   const mk = (sel, gs, nenhuma) => { sel.innerHTML = (nenhuma ? '<option value="">Nenhuma (só A)</option>' : '') + gs.map(([g, cs]) => `<optgroup label="${esc(g)}">` + cs.map(k => `<option value="${k}">${esc(rotOpc(E.cand[k]))}</option>`).join('') + '</optgroup>').join(''); };
   mk($('selA'), gA, false); mk($('selB'), gB, t !== 'comp');
   $('selA').value = S.A; $('selB').value = S.B === null ? '' : S.B;
   $('troca').style.display = t === 'livre' ? '' : 'none';
+  $('lblB').style.display = t === 'novo' ? 'none' : '';
   document.querySelectorAll('#tipos button').forEach(b => b.setAttribute('aria-pressed', b.dataset.t === t));
   pessoaEl.value = E.pess[S.pessoa].n;
 }
