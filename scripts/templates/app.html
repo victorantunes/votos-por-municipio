@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Lula em 2022 e 2026, município a município</title>
-<meta name="description" content="Votos nominais de Lula em cada município brasileiro, 2º turno de 2022 e 1º turno de 2026: mapa, dispersão e comparação por região, com dados do TSE.">
+<title>Votos por município: Lula no Brasil e PT no RN</title>
+<meta name="description" content="Votos de Lula em todos os municípios do Brasil (2022 e 2026) e dos candidatos do PT no Rio Grande do Norte (2020 e 2022), com abstenção, brancos e nulos: mapa, dispersão e tabelas com dados do TSE.">
 <style>
   :root { --bg:#f4f6f9; --card:#fff; --ink:#1a202c; --muted:#64707f; --line:#e3e8ee; --accent:#b3201f; --link:#1f5fa8; --soft:#edf2f7; }
   * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -12,14 +12,19 @@
   body { background: var(--bg); color: var(--ink); font: 15px/1.55 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; }
   a { color: var(--link); }
   .wrap { max-width: 1400px; margin: 0 auto; padding: 0 16px; }
+  body[data-escopo="br"] .so-rn, body[data-escopo="rn"] .so-br { display: none !important; }
 
   /* topo */
-  .top { padding: 20px 0 14px; display: grid; grid-template-columns: 1fr auto; gap: 14px 28px; align-items: end; }
+  .top { padding: 16px 0 12px; display: grid; grid-template-columns: 1fr auto; gap: 12px 28px; align-items: end; }
+  .scopes { display: inline-flex; background: #e6ebf1; border-radius: 10px; padding: 3px; gap: 2px; margin-bottom: 10px; max-width: 100%; }
+  .scopes button { appearance: none; border: 0; background: none; font: inherit; font-size: 13px; font-weight: 600; color: var(--muted); padding: 6px 14px; border-radius: 8px; cursor: pointer; white-space: nowrap; }
+  .scopes button[aria-pressed="true"] { background: #fff; color: var(--accent); box-shadow: 0 1px 3px rgba(0,0,0,.14); }
   h1 { font-size: 24px; line-height: 1.2; letter-spacing: -.01em; }
-  .sub { color: var(--muted); font-size: 14px; margin-top: 4px; max-width: 640px; }
-  .stats { display: grid; grid-template-columns: repeat(4, auto); gap: 6px 26px; }
+  .sub { color: var(--muted); font-size: 14px; margin-top: 4px; max-width: 660px; }
+  .selinfo { font-size: 13px; margin-top: 8px; max-width: 700px; color: #2d3748; }
+  .stats { display: grid; grid-template-columns: repeat(3, minmax(0, auto)); gap: 8px 28px; }
   .stat span { display: block; font-size: 11.5px; color: var(--muted); }
-  .stat b { display: block; font-size: 18px; line-height: 1.25; white-space: nowrap; }
+  .stat b { display: block; font-size: 17px; line-height: 1.25; white-space: nowrap; }
   .stat small { font-size: 11px; color: var(--muted); }
 
   /* abas */
@@ -31,10 +36,12 @@
   .tab[aria-selected="true"] { color: var(--accent); border-bottom-color: var(--accent); }
 
   /* controles */
-  .bar { display: flex; flex-wrap: wrap; gap: 10px 16px; align-items: center; padding: 12px 0; font-size: 13px; color: #4a5568; }
+  .bar { display: flex; flex-wrap: wrap; gap: 10px 16px; align-items: center; padding: 12px 0 8px; font-size: 13px; color: #4a5568; }
   .bar label { display: flex; align-items: center; gap: 6px; }
-  select, input[type=search] { font: inherit; font-size: 13px; border: 1px solid #cbd5e0; background: #fff; color: #2d3748; border-radius: 8px; padding: 6px 10px; max-width: 100%; }
+  select, input[type=search], input[type=text] { font: inherit; font-size: 13px; border: 1px solid #cbd5e0; background: #fff; color: #2d3748; border-radius: 8px; padding: 6px 10px; max-width: 100%; }
   select:disabled { opacity: .5; }
+  #selA, #selB { max-width: 330px; }
+  #metrica { max-width: 300px; }
   input[type=search] { width: 190px; }
   .btn { font: inherit; font-size: 13px; font-weight: 600; background: #fff; border: 1px solid #cbd5e0; color: #4a5568; border-radius: 8px; padding: 6px 12px; cursor: pointer; }
   .btn:hover { background: var(--soft); }
@@ -42,8 +49,8 @@
   body:not([data-view="dispersao"]) .only-scale { display: none !important; }
   .grow { flex: 1; }
   .legend { display: flex; flex-wrap: wrap; gap: 6px 14px; font-size: 12px; padding: 0 0 12px; color: #3b4656; }
-  body[data-view="dados"] .legend, body[data-view="regioes"] .legend, body[data-view="dispersao"] .legend { display: none; }
-  body[data-view="dados"] .bar { display: none; }
+  body[data-view="dados"] .legend, body[data-view="regioes"] .legend, body[data-view="dispersao"] .legend, body[data-view="candidatos"] .legend { display: none; }
+  body[data-view="dados"] .bar, body[data-view="candidatos"] .bar { display: none; }
   body:not([data-view="mapa"]) .only-map { display: none !important; }
   .fleg { display: flex; flex-wrap: wrap; gap: 4px 14px; font-size: 11.5px; color: #3b4656; margin-top: 8px; padding-top: 8px; border-top: 1px solid var(--line); }
   .li { display: inline-flex; align-items: center; gap: 6px; white-space: nowrap; }
@@ -51,7 +58,7 @@
 
   /* vistas */
   .view { display: none; }
-  body[data-view="mapa"] #v-mapa, body[data-view="dispersao"] #v-dispersao, body[data-view="dados"] #v-dados { display: block; }
+  body[data-view="mapa"] #v-mapa, body[data-view="dispersao"] #v-dispersao, body[data-view="dados"] #v-dados, body[data-view="candidatos"] #v-candidatos { display: block; }
   body[data-view="dispersao"]:not([data-sep="n"]) #v-regioes { display: block; }
   body[data-view="dispersao"]:not([data-sep="n"]) #v-dispersao { display: none; }
   .card { background: var(--card); border: 1px solid var(--line); border-radius: 14px; box-shadow: 0 2px 12px rgba(20,30,50,.04); }
@@ -59,10 +66,13 @@
   #mapwrap { position: relative; height: 560px; overflow: hidden; }
   #map { position: absolute; inset: 0; }
   #mapmsg { position: absolute; inset: 0; display: none; align-items: center; justify-content: center; text-align: center; padding: 24px; color: var(--muted); z-index: 500; background: var(--card); }
-  #info { position: absolute; z-index: 600; top: 10px; left: 56px; width: 290px; max-width: calc(100% - 70px); background: #fff; border: 1px solid #d5dbe3; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,.18); padding: 10px 14px; font-size: 12.5px; line-height: 1.5; }
+  #info { position: absolute; z-index: 600; top: 10px; left: 56px; width: 310px; max-width: calc(100% - 70px); background: #fff; border: 1px solid #d5dbe3; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,.18); padding: 10px 14px; font-size: 12.5px; line-height: 1.5; max-height: calc(100% - 20px); overflow: auto; }
   #info h3 { font-size: 14px; margin-bottom: 2px; }
   .cz { color: var(--muted); font-size: 11.5px; }
   hr.s { border: 0; border-top: 1px solid var(--line); margin: 6px 0; }
+  #carregando { display: none; padding: 40px 0; text-align: center; color: var(--muted); }
+  body.carregando #carregando { display: block; }
+  body.carregando .wrap > .bar, body.carregando .wrap > .legend, body.carregando .wrap > .view { display: none !important; }
 
   .chartcard { padding: 14px 16px 10px; }
   .chart-box { position: relative; width: 100%; height: clamp(420px, 72vh, 720px); }
@@ -75,11 +85,13 @@
   .zwrap { position: relative; }
   .sb { position: relative; flex: 0 1 270px; }
   .sb input { width: 100%; }
-  .sug { position: absolute; top: calc(100% + 4px); left: 0; right: 0; min-width: 260px; background: #fff; border: 1px solid #cbd5e0; border-radius: 10px; box-shadow: 0 8px 24px rgba(0,0,0,.16); z-index: 1200; max-height: 330px; overflow: auto; display: none; list-style: none; padding: 4px; }
-  .sug li { padding: 7px 10px; border-radius: 6px; cursor: pointer; font-size: 13px; display: flex; justify-content: space-between; gap: 10px; color: #2d3748; }
+  .item { display: flex; align-items: center; gap: 6px; flex: 0 1 auto; }
+  #wpessoa { flex: 0 0 250px; }
+  .sug { position: absolute; top: calc(100% + 4px); left: 0; right: 0; min-width: 280px; background: #fff; border: 1px solid #cbd5e0; border-radius: 10px; box-shadow: 0 8px 24px rgba(0,0,0,.16); z-index: 1200; max-height: 340px; overflow: auto; display: none; list-style: none; padding: 4px; }
+  .sug li { padding: 7px 10px; border-radius: 6px; cursor: pointer; font-size: 13px; display: flex; flex-direction: column; gap: 1px; color: #2d3748; }
   .sug li.on, .sug li[data-i]:hover { background: var(--soft); }
   .sug li.vazio { color: var(--muted); cursor: default; }
-  .sug small { color: var(--muted); }
+  .sug small { color: var(--muted); font-size: 11.5px; }
   .leaflet-tooltip.pin-tip { font: 700 11px/1.3 sans-serif; color: #111; background: rgba(255,255,255,.96); border: 1px solid #111; border-radius: 6px; padding: 2px 6px; box-shadow: none; }
   .facet canvas { aspect-ratio: 16 / 10; height: auto; touch-action: pan-y; cursor: crosshair; }
   .chart-box canvas { touch-action: pan-y; cursor: crosshair; }
@@ -89,8 +101,22 @@
   .zbtns button.md { font-size: 15px; }
   .zbtns button.rst.on { color: #fff; background: var(--link); border-color: var(--link); }
   .zsel { position: absolute; display: none; border: 1.5px dashed var(--link); background: rgba(31,95,168,.12); pointer-events: none; z-index: 4; }
-  .tooltip { position: fixed; display: none; background: rgba(26,32,44,.95); color: #fff; padding: 10px 14px; border-radius: 8px; font-size: 12px; line-height: 1.5; pointer-events: none; box-shadow: 0 4px 14px rgba(0,0,0,.25); z-index: 80; max-width: 300px; }
+  .tooltip { position: fixed; display: none; background: rgba(26,32,44,.95); color: #fff; padding: 10px 14px; border-radius: 8px; font-size: 12px; line-height: 1.5; pointer-events: none; box-shadow: 0 4px 14px rgba(0,0,0,.25); z-index: 80; max-width: 320px; }
+  .tooltip .cz { color: #cbd5e0; }
+  .tooltip hr.s { border-top-color: rgba(255,255,255,.2); }
   .note { font-size: 12px; color: var(--muted); margin: 12px 2px 0; line-height: 1.55; }
+  .vazio-msg { padding: 28px 20px; text-align: center; color: var(--muted); font-size: 14px; }
+
+  /* candidatos */
+  .filtros { display: flex; flex-wrap: wrap; gap: 10px 16px; align-items: center; padding: 14px 16px 6px; font-size: 13px; color: #4a5568; }
+  .filtros label { display: flex; align-items: center; gap: 6px; }
+  #tabcand th { cursor: pointer; user-select: none; }
+  #tabcand th.ord::after { content: " \25BE"; }
+  #tabcand th.ord.asc::after { content: " \25B4"; }
+  #tabcand tbody tr { cursor: pointer; }
+  #tabcand tbody tr:hover { background: #f5f8fc; }
+  #tabcand td.nome { white-space: normal; min-width: 150px; }
+  #tabcand tr.soma td { background: #fbf6f6; font-weight: 600; }
 
   /* dados e método */
   .doc { padding: 22px 24px 8px; }
@@ -110,34 +136,41 @@
 
   @media (max-width: 820px) {
     .top { grid-template-columns: 1fr; }
-    .stats { grid-template-columns: repeat(2, 1fr); gap: 10px 16px; }
+    .stats { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px 10px; }
+    .stat b { font-size: 14.5px; }
+    .stat span, .stat small { font-size: 10.5px; }
+    .sub { font-size: 13px; }
     h1 { font-size: 21px; }
     .bar label { flex: 1 1 46%; }
     .bar label select { flex: 1; min-width: 0; }
+    #selA, #selB, #metrica { max-width: none; }
     input[type=search] { width: 100%; flex: 1 1 100%; }
     .sb { flex: 1 1 100%; }
-    #info { top: auto; bottom: 8px; left: 8px; width: auto; right: 8px; max-width: none; }
+    .item { flex: 1 1 100%; }
+    #wpessoa { flex: 1 1 auto; }
+    #info { top: auto; bottom: 8px; left: 8px; width: auto; right: 8px; max-width: none; max-height: 45%; }
     .doc { padding: 18px 16px 4px; }
     .facet canvas { aspect-ratio: 4 / 3; }
     .legend { display: grid; grid-template-columns: 1fr 1fr; gap: 6px 10px; font-size: 11.5px; }
     .li { white-space: normal; align-items: flex-start; }
     .li .dotc { margin-top: 3px; }
+    .scopes button { padding: 6px 10px; }
   }
 </style>
 </head>
-<body data-view="mapa" data-sep="n">
+<body data-view="mapa" data-sep="n" data-escopo="br">
 <div class="wrap">
   <header class="top">
     <div>
-      <h1>Lula em 2022 e 2026, município a município</h1>
-      <p class="sub">Votos nominais de Lula para presidente em cada um dos __N_MUN__ municípios: 2º turno de 2022 contra 1º turno de 2026, com dados abertos do TSE.</p>
+      <div class="scopes" role="group" aria-label="Recorte dos dados">
+        <button type="button" data-e="br" aria-pressed="true">Lula no Brasil</button>
+        <button type="button" data-e="rn" aria-pressed="false">PT no Rio Grande do Norte</button>
+      </div>
+      <h1 id="h1">Lula em 2022 e 2026, município a município</h1>
+      <p class="sub" id="sub"></p>
+      <p class="selinfo" id="selinfo"></p>
     </div>
-    <div class="stats">
-      <div class="stat"><span>2022 (2ºT)</span><b>__L22__</b><small>votos</small></div>
-      <div class="stat"><span>2026 (1ºT)</span><b>__L26__</b><small>votos</small></div>
-      <div class="stat"><span>Saldo</span><b>__SALDO__</b><small>de votos</small></div>
-      <div class="stat"><span>Votos nominais</span><b>__P22__% → __P26__%</b><small>__VARPP__ pp</small></div>
-    </div>
+    <div class="stats" id="stats"></div>
   </header>
 </div>
 
@@ -145,29 +178,31 @@
   <div class="tabs" role="tablist" aria-label="Visualizações">
     <button class="tab" role="tab" data-v="mapa" aria-selected="true">Mapa</button>
     <button class="tab" role="tab" data-v="dispersao" aria-selected="false">Dispersão</button>
+    <button class="tab so-rn" role="tab" data-v="candidatos" aria-selected="false">Candidatos</button>
     <button class="tab" role="tab" data-v="dados" aria-selected="false">Dados e método</button>
   </div>
 </div></div>
 
 <div class="wrap">
+  <div id="carregando">Carregando os dados...</div>
   <div class="bar">
-    <label>Colorir por <select id="metrica">
-      <option value="pp">Variação em pontos percentuais</option>
-      <option value="s">Saldo de votos</option>
-      <option value="rt">Retenção (variação % dos votos)</option>
-    </select></label>
-    <label>UF <select id="uf"><option value="">Brasil</option></select></label>
+    <div class="item so-rn"><label for="pessoa">Candidato(a)</label><div class="sb" id="wpessoa"><input type="search" id="pessoa" placeholder="Buscar candidato(a) ou PT (soma)..." autocomplete="off"><ul class="sug" id="sug-pessoa" role="listbox"></ul></div></div>
+    <label>Candidatura A <select id="selA"></select></label>
+    <label>Comparar com (B) <select id="selB"></select></label>
+    <button class="btn" id="troca" type="button" title="Trocar A e B">&#8644;</button>
+    <label>Colorir por <select id="metrica"></select></label>
+    <label class="so-br">UF <select id="uf"><option value="">Brasil</option></select></label>
     <label class="only-map">Visualização <select id="modo"><option value="poli">Polígonos (municípios)</option><option value="circ">Círculos</option></select></label>
     <div class="sb only-map"><input type="search" id="buscamapa" placeholder="Buscar município no mapa..." autocomplete="off" aria-label="Buscar município no mapa"><ul class="sug" id="sugestoes" role="listbox"></ul></div>
     <label class="only-disp"><input type="search" id="busca" placeholder="Buscar município..."></label>
-    <label class="only-disp"><input type="checkbox" id="cinza" checked> Outros estados em cinza</label>
+    <label class="only-disp so-br"><input type="checkbox" id="cinza" checked> Outros estados em cinza</label>
     <label class="only-scale"><input type="checkbox" id="zroda" checked> Zoom com a rolagem</label>
     <label class="only-scale">Escala <select id="escala"><option value="log">Logarítmica</option><option value="lin">Linear</option></select></label>
-    <label class="only-reg">Separar por <select id="sep"><option value="n">Nenhum (Brasil inteiro)</option><option value="g">Região</option><option value="u">UF</option><option value="f">Faixa de tamanho</option></select></label>
-    <label class="only-reg">Tamanho <select id="faixa"></select></label>
+    <label class="only-reg">Separar por <select id="sep"></select></label>
+    <label class="only-reg">Porte <select id="faixa"></select></label>
     <span class="grow"></span>
-    <span class="only-pins cz" id="pinned-count"></span>
-    <button class="btn only-pins" id="limpar">Limpar marcações</button>
+    <span class="cz" id="pinned-count"></span>
+    <button class="btn" id="limpar">Limpar marcações</button>
   </div>
   <div class="legend" id="legend"></div>
 
@@ -178,136 +213,348 @@
 
   <section class="view" id="v-dispersao">
     <div class="card chartcard"><div class="chart-box" id="box1"><canvas id="cv1"></canvas></div><div class="fleg" id="fleg1"></div></div>
-    <p class="note">Eixo X: votos de Lula em 2022 (2ºT). Eixo Y: votos em 2026 (1ºT). Abaixo da diagonal (paridade, Y = X), o município perdeu votos. Passe o mouse para ver os números e clique em um ponto para manter o nome marcado. Com uma UF ou uma busca, o gráfico se ajusta a essa seleção e os demais municípios ficam em cinza (dá para desligar em "Outros estados em cinza"). Arraste para mover o gráfico. Para dar zoom, role o mouse sobre o gráfico (desmarque "Zoom com a rolagem" para voltar a rolar a página), use os botões + e − ou a pinça no celular, ou troque o botão ✥ por ▭ para arrastar e selecionar uma área (Shift inverte o modo, e Ctrl + rolagem sempre dá zoom). O duplo clique, ou o botão ↻, volta ao enquadramento padrão. Para ver o país separado por região, UF ou tamanho do município, use "Separar por".</p>
+    <p class="note" id="dispnote"></p>
   </section>
 
   <section class="view" id="v-regioes">
     <div class="grid" id="grid"></div>
-    <p class="note">Os painéis ficam um abaixo do outro e cada um tem a própria escala e a própria legenda, o que mostra melhor o padrão dentro de cada grupo. Em escala linear, as cidades grandes dominam o gráfico, então use o filtro de tamanho (medido pelos votos de Lula em 2022) ou a escala logarítmica. As cores são as mesmas do mapa. Cada gráfico se ajusta aos dados da seleção (UF, região ou tamanho) e aceita arrastar e dar zoom: arraste para mover e use os botões + e − ou a pinça no celular. Nos painéis, a rolagem do mouse rola a página (marque "Zoom com a rolagem" para dar zoom com ela, ou use Ctrl + rolagem), e o botão ✥ pode ser trocado por ▭ para selecionar uma área com o mouse (Shift inverte o modo). O duplo clique, ou o botão ↻, volta ao enquadramento padrão.</p>
+    <p class="note">Os painéis ficam um abaixo do outro e cada um tem a própria escala e a própria legenda, o que mostra melhor o padrão dentro de cada grupo. Em escala linear, as cidades grandes dominam o gráfico, então use o filtro de porte (medido pelo número de eleitores aptos) ou a escala logarítmica. As cores são as mesmas do mapa. Cada gráfico se ajusta aos dados da seleção e aceita arrastar e dar zoom: arraste para mover e use os botões + e − ou a pinça no celular. Nos painéis, a rolagem do mouse rola a página (marque "Zoom com a rolagem" para dar zoom com ela, ou use Ctrl + rolagem), e o botão ✥ pode ser trocado por ▭ para selecionar uma área com o mouse (Shift inverte o modo). O duplo clique, ou o botão ↻, volta ao enquadramento padrão.</p>
+  </section>
+
+  <section class="view" id="v-candidatos">
+    <div class="card">
+      <div class="filtros">
+        <label>Disputa <select id="fdisp"></select></label>
+        <label>Situação <select id="fsit"><option value="">Todas</option><option value="Eleito">Eleito(a)</option><option value="Suplente">Suplente</option><option value="Não eleito">Não eleito(a)</option></select></label>
+        <label><input type="search" id="fnome" placeholder="Buscar candidato(a)..."></label>
+        <label><input type="checkbox" id="fsoma" checked> Incluir a soma do PT</label>
+        <span class="cz" id="fcont"></span>
+      </div>
+      <div class="tablewrap" style="margin:8px 16px 16px">
+        <table id="tabcand"><thead><tr>
+          <th data-c="n">Candidato(a)</th><th data-c="d">Disputa</th><th data-c="ue">Onde concorreu</th><th data-c="par">Partido</th><th data-c="sit">Situação</th>
+          <th class="n" data-c="tot">Votos</th><th class="n" data-c="pct">% dos válidos</th><th class="n" data-c="nm">Municípios com votos</th><th class="n" data-c="rk">Posição</th>
+        </tr></thead><tbody></tbody></table>
+      </div>
+    </div>
+    <p class="note">Cada linha é uma candidatura (um candidato em uma disputa). Clique em uma linha para abrir o candidato no mapa. A % dos votos válidos é calculada sobre os votos válidos do município ou dos municípios onde ele concorreu, e a posição compara o candidato com todos os outros da mesma disputa (no estado inteiro ou no município). "PT (soma)" é a soma dos candidatos do PT em cada disputa. Clique no título de uma coluna para ordenar.</p>
   </section>
 
   <section class="view" id="v-dados">
     <div class="card doc">
-      <h2>Por região e por UF</h2>
-      <div class="tablewrap"><table>
-        <thead><tr><th>Região</th><th class="n">Municípios</th><th class="n">Lula 2022 (2ºT)</th><th class="n">Lula 2026 (1ºT)</th><th class="n">Saldo</th><th class="n">% 2022</th><th class="n">% 2026</th><th class="n">Variação (pp)</th></tr></thead>
-        <tbody>
-__TAB_REGIAO__
-        </tbody></table></div>
-      <details><summary>Ver por UF</summary>
+
+      <div class="so-br">
+        <h2>Lula por região e por UF</h2>
         <div class="tablewrap"><table>
-        <thead><tr><th>UF</th><th class="n">Municípios</th><th class="n">Lula 2022 (2ºT)</th><th class="n">Lula 2026 (1ºT)</th><th class="n">Saldo</th><th class="n">% 2022</th><th class="n">% 2026</th><th class="n">Variação (pp)</th></tr></thead>
-        <tbody>
+          <thead><tr><th>Região</th><th class="n">Municípios</th><th class="n">Lula 2022 (2ºT)</th><th class="n">Lula 2026 (1ºT)</th><th class="n">Saldo</th><th class="n">% 2022</th><th class="n">% 2026</th><th class="n">Variação (pp)</th></tr></thead>
+          <tbody>
+__TAB_REGIAO__
+          </tbody></table></div>
+        <details><summary>Ver por UF</summary>
+          <div class="tablewrap"><table>
+          <thead><tr><th>UF</th><th class="n">Municípios</th><th class="n">Lula 2022 (2ºT)</th><th class="n">Lula 2026 (1ºT)</th><th class="n">Saldo</th><th class="n">% 2022</th><th class="n">% 2026</th><th class="n">Variação (pp)</th></tr></thead>
+          <tbody>
 __TAB_UF__
-        </tbody></table></div></details>
+          </tbody></table></div></details>
+
+        <h2>Abstenção, brancos e nulos no Brasil</h2>
+        <p>Os percentuais abaixo são calculados com a soma de todos os municípios. A abstenção é sobre os eleitores aptos, e os brancos e nulos são sobre o comparecimento. Os votos válidos são os votos nominais, porque a eleição presidencial não tem voto de legenda.</p>
+        <div class="tablewrap"><table>
+          <thead><tr><th>Eleição</th><th class="n">Eleitores aptos</th><th class="n">Abstenção</th><th class="n">Brancos</th><th class="n">Nulos</th><th class="n">Votos válidos</th><th class="n">Votos de Lula</th><th class="n">% dos válidos</th></tr></thead>
+          <tbody>
+__TAB_PART_BR__
+          </tbody></table></div>
+        <div class="tablewrap"><table>
+          <thead><tr><th>Região</th><th class="n">Abstenção 2022 (2ºT)</th><th class="n">Brancos 2022</th><th class="n">Nulos 2022</th><th class="n">Abstenção 2026 (1ºT)</th><th class="n">Brancos 2026</th><th class="n">Nulos 2026</th></tr></thead>
+          <tbody>
+__TAB_PART_REG__
+          </tbody></table></div>
+      </div>
+
+      <div class="so-rn">
+        <h2>Como os dados estão organizados</h2>
+        <p>Cada pessoa pode ter concorrido a cargos diferentes ao longo dos anos, então os dados separam três coisas. A <b>disputa</b> é a eleição de um cargo em um ano e turno, por exemplo Governador 2022 ou Vereador 2020. A <b>candidatura</b> é um candidato em uma disputa. A <b>pessoa</b> reúne todas as candidaturas de um mesmo candidato, ligadas pelo número do CPF no cadastro do TSE (o CPF é usado só para ligar 2020 e 2022 e não é publicado). Isso permite acompanhar, por exemplo, quem foi candidato a prefeito em 2020 e a deputado em 2022.</p>
+        <p>No topo da página, escolha o candidato e depois a <b>candidatura A</b>. Se quiser comparar, escolha a <b>candidatura B</b>: pode ser outro cargo do mesmo candidato, a soma dos candidatos do PT em uma disputa ou Lula na mesma eleição. As cores, o gráfico de dispersão e as estatísticas do topo passam a mostrar B em relação a A.</p>
+        <h3>O que entrou</h3>
+        <ul>
+          <li>As <b>__RN_NPESS__ pessoas</b> que foram candidatas pelo PT no Rio Grande do Norte em 2020 (prefeito e vereador) ou em 2022 (governador, deputado federal e deputado estadual), mais Lula, com os votos que recebeu no estado. São __RN_NCAND__ candidaturas do PT com votos próprios nessas disputas. Quando uma dessas pessoas concorreu por outro partido no outro ano, essa candidatura também aparece, identificada pelo partido.</li>
+          <li>Em cada disputa, a <b>soma do PT</b> reúne os votos nominais de todos os candidatos do partido. Nas eleições de 2020 ela só existe nos municípios em que o PT lançou candidatos.</li>
+          <li>Lula aparece com o 1º e o 2º turnos de 2022 e o 1º turno de 2026, só com os votos dos __RN_NMUN__ municípios do estado.</li>
+        </ul>
+        <h3>O que ficou de fora</h3>
+        <ul>
+          <li>Vice-prefeitos, vice-governadores e suplentes de senador, porque não têm votos próprios: os votos vão para o titular da chapa.</li>
+          <li>Senador em 2022: nos arquivos do TSE não há candidato do PT ao Senado no RN com votos.</li>
+          <li>Os votos de legenda. Nas eleições proporcionais, o voto no número do partido entra nos votos válidos do município, mas não é de nenhum candidato.</li>
+          <li>Candidatos da federação do PT (PCdoB e PV) em 2022 que não sejam do PT, e as eleições de 2024 e de 2026, exceto Lula em 2026.</li>
+        </ul>
+        <h3>Eleições municipais</h3>
+        <p>Quem concorreu a prefeito ou vereador em 2020 só recebeu votos no seu próprio município. Por isso o mapa de um candidato municipal destaca um único município, e os demais ficam em cinza. Para ver o desempenho do partido no estado em 2020, escolha "PT (soma dos candidatos)". A aba Candidatos lista todos, com a posição de cada um entre os candidatos do município.</p>
+        <h2>Participação e votos do PT por disputa no RN</h2>
+        <p>Cada linha considera os municípios em que o PT teve candidatos na disputa, que são todos os 167 em 2022 e só parte deles em 2020 (coluna Municípios). A abstenção é sobre os eleitores aptos, e os brancos e nulos são sobre o comparecimento. Os votos válidos incluem os votos de legenda nas eleições proporcionais. Os votos do PT são os nominais, e a porcentagem é calculada sobre os votos válidos desses municípios.</p>
+        <div class="tablewrap"><table>
+          <thead><tr><th>Disputa</th><th class="n">Municípios</th><th class="n">Eleitores aptos</th><th class="n">Abstenção</th><th class="n">Brancos</th><th class="n">Nulos</th><th class="n">Votos válidos</th><th class="n">Candidatos do PT</th><th class="n">Votos do PT</th><th class="n">% dos válidos</th><th class="n">Eleitos do PT</th></tr></thead>
+          <tbody>
+__TAB_PART_RN__
+          </tbody></table></div>
+      </div>
+
+      <h2>Votos, abstenção, brancos e nulos</h2>
+      <p>Para cada município e cada disputa, os dados trazem os eleitores aptos e o que aconteceu com eles:</p>
+      <ul>
+        <li><b>Abstenção:</b> eleitores aptos que não compareceram, em porcentagem dos aptos. Os eleitores de seções que não puderam ser instaladas contam como abstenção.</li>
+        <li><b>Brancos:</b> votos em branco, em porcentagem do comparecimento.</li>
+        <li><b>Nulos:</b> o que sobra do comparecimento depois de tirar os votos válidos e os brancos, em porcentagem do comparecimento. Inclui os nulos digitados pelo eleitor, os votos anulados depois da eleição (por exemplo, de candidaturas indeferidas) e os anulados sub judice. Nos boletins de urna de 2026 só há votos válidos, brancos e nulos.</li>
+        <li><b>Votos válidos:</b> votos nominais, mais os votos de legenda nas eleições proporcionais (deputado e vereador). Nas eleições majoritárias (presidente, governador, senador e prefeito) não existe voto de legenda.</li>
+        <li><b>% dos votos válidos:</b> votos do candidato divididos pelos votos válidos do município. Brancos e nulos ficam fora da conta.</li>
+      </ul>
+      <p>Em cada município, aptos = abstenções + comparecimento, e comparecimento = válidos + brancos + nulos. Os votos de um candidato dependem, portanto, de quatro coisas: quantos eleitores há, quantos comparecem, quantos votos são válidos e que parcela dos válidos o candidato recebe. Por isso o mapa e os gráficos também podem ser coloridos pela abstenção, pelos brancos e pelos nulos, e os detalhes de cada município mostram esses números.</p>
 
       <h2>O que cada métrica mede</h2>
-      <p>O mapa e os gráficos podem ser coloridos de três formas. Todas comparam o mesmo município nas duas eleições, e um valor negativo significa que Lula teve menos votos no 1º turno de 2026 do que no 2º turno de 2022. Em qualquer uma delas, as seis cores usam percentis (P15, P35, P50, P65 e P85) calculados entre os __N_MUN__ municípios.</p>
-
+      <p>Quando há uma candidatura B para comparar com a A, o mapa e os gráficos podem ser coloridos por três medidas de comparação. Todas olham o mesmo município nas duas candidaturas, e o valor é sempre B menos A: um número negativo quer dizer que B teve menos votos do que A naquele município. Em qualquer medida, as seis cores usam percentis (P15, P35, P50, P65 e P85) calculados entre os municípios que têm dados.</p>
       <h3>Variação em pontos percentuais (padrão)</h3>
-      <p>É a diferença entre a participação de Lula nos votos nominais de 2026 e a de 2022, ou seja, <b>% em 2026 &minus; % em 2022</b>. A participação é o número de votos de Lula dividido pelos votos nominais de todos os candidatos no município, o que exclui brancos e nulos. Como é uma proporção, não depende do tamanho do município nem de quantos eleitores compareceram, e por isso é a medida mais comparável entre cidades grandes e pequenas. Parte da queda é estrutural, porque em 2022 (2º turno) havia dois candidatos e em 2026 (1º turno) há vários.</p>
-
+      <p>É a diferença entre a % dos votos válidos de B e a de A, ou seja, <b>% de B &minus; % de A</b>. Como é uma proporção, não depende do tamanho do município nem de quantos eleitores compareceram, e por isso é a medida mais comparável entre cidades grandes e pequenas.</p>
       <h3>Saldo em votos</h3>
-      <p>É a diferença absoluta entre os votos de Lula nas duas eleições, ou seja, <b>votos em 2026 &minus; votos em 2022</b>. Mostra quantos votos o município ganhou ou perdeu. Como depende do tamanho do município, as maiores perdas ficam nas cidades grandes: São Paulo perdeu 625.572 votos, e uma cidade pequena dificilmente perde mais do que alguns milhares. O saldo também sofre com a variação do comparecimento. Serve para ver o peso de cada município no total nacional (&minus;6,47 milhões), e não para comparar o desempenho entre municípios.</p>
-
+      <p>É a diferença absoluta entre os votos, ou seja, <b>votos de B &minus; votos de A</b>. Como depende do tamanho do município, as maiores diferenças ficam nas cidades grandes. Serve para ver o peso de cada município no total, e não para comparar o desempenho entre municípios.</p>
       <h3>Retenção</h3>
-      <p>É a variação percentual dos votos do próprio Lula no município, ou seja, <b>(votos em 2026 &divide; votos em 2022 &minus; 1) &times; 100</b>. Uma retenção de &minus;17%, por exemplo, quer dizer que Lula manteve 83% dos votos que teve em 2022. Cada município é comparado com a sua própria base, então o tamanho não pesa, mas, ao contrário dos pontos percentuais, a retenção também reflete mudanças no comparecimento e nos votos brancos e nulos, porque olha só para os votos de Lula e não para a proporção.</p>
-
+      <p>É a variação percentual dos votos em relação à base de cada município, ou seja, <b>(votos de B &divide; votos de A &minus; 1) &times; 100</b>. Uma retenção de &minus;17% quer dizer que B ficou com 83% dos votos de A. O tamanho do município não pesa, mas, ao contrário dos pontos percentuais, a retenção também reflete mudanças no comparecimento e nos votos brancos e nulos.</p>
+      <h3>Participação (abstenção, brancos e nulos)</h3>
+      <p>Também é possível colorir pela abstenção, pelos brancos e pelos nulos de cada disputa, e pela variação deles entre A e B (em pontos percentuais). Essas medidas dizem respeito ao eleitorado do município e não ao candidato, então aparecem em todos os municípios da disputa, mesmo onde o candidato não concorreu.</p>
       <h3>Percentis e as seis cores</h3>
-      <p>O percentil mostra a posição de um município em relação aos demais. Para a métrica escolhida, os __N_MUN__ municípios são colocados em ordem, do pior valor ao melhor. O percentil 15 (P15) é o valor abaixo do qual ficam 15% dos municípios, o P50 é a mediana (metade fica abaixo e metade acima) e o P85 é o valor acima do qual ficam os 15% melhores. Os cinco cortes P15, P35, P50, P65 e P85 dividem os municípios em seis classes:</p>
-      <ul>
-        <li><b>Queda Severa:</b> os 15% piores, do P0 ao P15.</li>
-        <li><b>Queda Forte:</b> 20% dos municípios, do P15 ao P35.</li>
-        <li><b>Abaixo da Mediana:</b> 15%, do P35 ao P50.</li>
-        <li><b>Acima da Mediana:</b> 15%, do P50 ao P65.</li>
-        <li><b>Retenção Forte:</b> 20%, do P65 ao P85.</li>
-        <li><b>Destaque Positivo:</b> os 15% melhores, do P85 ao P100.</li>
-      </ul>
-      <p>Os limites de cada classe aparecem na legenda e mudam conforme a métrica. Na variação em pontos percentuais, com os dados atuais, os cortes P15, P35, P50, P65 e P85 são __Q_PP__ pontos percentuais. Os percentis são calculados entre todos os municípios do país, então as cores têm o mesmo significado no mapa, na dispersão e em cada painel por região ou UF.</p>
-      <p>As classes são relativas, e não absolutas. Elas dizem se o município foi melhor ou pior do que os outros, e não se ele ganhou ou perdeu votos. Com os dados atuais, até o limite inferior do Destaque Positivo é negativo (__Q85__ pontos percentuais), o que significa que muitos municípios dessa classe também tiveram queda, só que menor do que a da maioria.</p>
+      <p>O percentil mostra a posição de um município em relação aos demais. Os municípios com dados são colocados em ordem, do menor valor ao maior. O percentil 15 (P15) é o valor abaixo do qual ficam 15% dos municípios, o P50 é a mediana e o P85 é o valor acima do qual ficam os 15% maiores. Os cinco cortes dividem os municípios em seis classes, com 15%, 20%, 15%, 15%, 20% e 15% dos municípios, do menor ao maior valor. Os limites aparecem na legenda e mudam conforme a medida escolhida.</p>
+      <p>Nas comparações da mesma pessoa ou do mesmo partido ao longo do tempo, as classes vão de "Queda Severa" a "Destaque Positivo" e usam vermelho e verde. Nas demais medidas as classes vão de "Menores 15%" a "Maiores 15%" e usam uma só cor, mais escura quanto maior o valor. Municípios sem dados ficam em cinza. Quando há poucos municípios com dados, como no caso de um candidato a vereador, não há percentis e os municípios com dados aparecem em vermelho.</p>
+      <p>As classes são relativas: elas dizem se o município está acima ou abaixo dos outros, e não se o valor é positivo ou negativo.</p>
 
-      <h3>Exemplo: São Paulo</h3>
-      <p>Em 2022 (2º turno), Lula teve 3.677.921 votos entre 6.869.405 votos nominais, ou 53,54%. Em 2026 (1º turno), teve 3.052.349 entre 6.553.181, ou 46,58%. O <b>saldo</b> é de &minus;625.572 votos. A <b>variação</b> é de 46,58 &minus; 53,54 = &minus;6,96 pontos percentuais. A <b>retenção</b> é de 3.052.349 &divide; 3.677.921 &minus; 1 = &minus;17,0%. A retenção cai mais do que os pontos percentuais porque o total de votos nominais na cidade também diminuiu, de 6,87 para 6,55 milhões.</p>
+      <div class="so-br">
+        <h3>Exemplo: São Paulo, Lula de 2022 (2º turno) para 2026 (1º turno)</h3>
+        <p>Em 2022, Lula teve 3.677.921 votos entre 6.869.405 votos válidos, ou 53,54%. Em 2026, teve 3.052.349 entre 6.553.181, ou 46,58%. O <b>saldo</b> é de &minus;625.572 votos. A <b>variação</b> é de 46,58 &minus; 53,54 = &minus;6,96 pontos percentuais. A <b>retenção</b> é de 3.052.349 &divide; 3.677.921 &minus; 1 = &minus;17,0%. A retenção cai mais do que os pontos percentuais porque o total de votos válidos na cidade também diminuiu, de 6,87 para 6,55 milhões.</p>
+        <p>Na variação em pontos percentuais, com os dados atuais, os cortes P15, P35, P50, P65 e P85 são __Q_PP__ pontos percentuais. Até o limite inferior da melhor classe é negativo (__Q85__ pontos percentuais), o que significa que muitos municípios dessa classe também tiveram queda, só que menor do que a da maioria. Nos dados, o saldo quase não se relaciona com as outras duas medidas (correlação próxima de zero), enquanto a variação em pontos percentuais e a retenção andam juntas (correlação de 0,57).</p>
+        <h2>Como foi feito</h2>
+        <ul>
+          <li>Para cada município, somaram-se os votos de Lula (número 13) para presidente no 1º e no 2º turnos de 2022 e no 1º turno de 2026. O percentual é calculado sobre os votos válidos, o que exclui brancos e nulos.</li>
+          <li>Os dados de 2022 vêm dos resultados de votação por município do TSE. Os de 2026 vêm dos boletins de urna do 1º turno, divulgados em 05/10/2026, somados por município.</li>
+          <li>O exterior não entra, porque não é município. Boa Esperança do Norte (MT) foi criada a partir de Sorriso e só existe em 2026, então os votos dos dois foram somados em "Sorriso (com Boa Esperança do Norte)", para manter o território de 2022.</li>
+        </ul>
+        <h2>Cuidados na leitura</h2>
+        <ul>
+          <li>O 2º turno de 2022 teve dois candidatos e o 1º turno de 2026 teve vários. Em 2026, Lula somou __P26__% dos votos válidos e Flávio Bolsonaro, __FLAVIO__%. Parte da diferença em pontos percentuais vem da mudança no número de candidatos, e não de eleitores que deixaram de votar em Lula.</li>
+          <li>O saldo em votos depende também do comparecimento, que varia entre as duas eleições. Os detalhes de cada município mostram a abstenção, os brancos e os nulos de cada eleição.</li>
+          <li>Os dados de 2026 são dos boletins de urna divulgados em 05/10/2026, e o TSE pode atualizar os arquivos depois. Para uso oficial, confira os números no site do TSE.</li>
+        </ul>
+      </div>
 
-      <h3>Qual usar</h3>
-      <p>Para comparar o desempenho entre municípios, use os pontos percentuais. Para ver onde estão os votos perdidos em números absolutos, use o saldo. Para ver a variação em relação à base de cada município, use a retenção. Nos dados, o saldo quase não se relaciona com as outras duas medidas (correlação próxima de zero), enquanto a variação em pontos percentuais e a retenção andam juntas (correlação de 0,57).</p>
-
-      <h2>Como foi feito</h2>
-      <ul>
-        <li>Para cada município, somaram-se os votos nominais de Lula (número 13) para presidente, no 2º turno de 2022 e no 1º turno de 2026. O percentual é calculado sobre os votos nominais, o que exclui brancos e nulos.</li>
-        <li>Os dados de 2022 vêm dos resultados de votação por município do TSE. Os de 2026 vêm dos boletins de urna do 1º turno, divulgados em 05/10/2026, somados por município.</li>
-        <li>A cor de cada município usa os percentis P15, P35, P50, P65 e P85 da métrica escolhida entre todos os municípios: variação em pontos percentuais (padrão), saldo em votos ou retenção.</li>
-        <li>O exterior não entra, porque não é município. Boa Esperança do Norte (MT) foi criada a partir de Sorriso e só existe em 2026, então os votos dos dois foram somados em "Sorriso (com Boa Esperança do Norte)", para manter o território de 2022.</li>
-      </ul>
-
-      <h2>Cuidados na leitura</h2>
-      <ul>
-        <li>O 2º turno de 2022 teve dois candidatos e o 1º turno de 2026 teve vários. Em 2026, Lula somou __P26__% dos votos nominais e Flávio Bolsonaro, __FLAVIO__%. Parte da diferença em pontos percentuais vem da mudança no número de candidatos, e não de eleitores que deixaram de votar em Lula.</li>
-        <li>O saldo em votos depende também do comparecimento, que varia entre as duas eleições. O comparecimento de cada município aparece nos detalhes do mapa e dos gráficos.</li>
-        <li>Os dados são dos boletins de urna divulgados em 05/10/2026, e o TSE pode atualizar os arquivos depois. Para uso oficial, confira os números no site do TSE.</li>
-      </ul>
+      <div class="so-rn">
+        <h2>Cuidados na leitura</h2>
+        <ul>
+          <li>Comparar cargos diferentes mistura efeitos distintos. Uma eleição para deputado tem dezenas de candidatos disputando os mesmos votos e uma para governador tem poucos, então a % dos votos válidos de um deputado é sempre pequena.</li>
+          <li>Em 2020 não existiam federações e as coligações só valiam nas eleições para prefeito. Em 2022 o PT formou federação com o PCdoB e o PV. A soma do PT considera apenas os candidatos registrados pelo próprio partido, e não os de aliados.</li>
+          <li>Um candidato municipal só tem votos em um município, e a posição dele (por exemplo, "2º de 13") é entre os candidatos daquele município.</li>
+          <li>Os dados de 2026 (só Lula) são dos boletins de urna divulgados em 05/10/2026, e o TSE pode atualizar os arquivos depois. Para uso oficial, confira os números no site do TSE.</li>
+        </ul>
+      </div>
 
       <h2>Dados e código</h2>
       <ul>
-        <li><a href="dados/resultado_municipios.csv">resultado_municipios.csv</a>: uma linha por município, com votos, percentuais, saldo, variação, comparecimento e coordenadas.</li>
-        <li><a href="dados/resumo_uf.csv">resumo_uf.csv</a>: totais por UF.</li>
-        <li>Código e instruções para refazer a análise: <a href="https://github.com/victorantunes/lula-2022-2026">github.com/victorantunes/lula-2022-2026</a>.</li>
+        <li class="so-br"><a href="dados/resultado_municipios.csv">resultado_municipios.csv</a>: uma linha por município, com votos de Lula, percentuais, participação (abstenção, brancos, nulos) e coordenadas nas três eleições.</li>
+        <li class="so-br"><a href="dados/resumo_uf.csv">resumo_uf.csv</a>: totais por UF.</li>
+        <li class="so-rn"><a href="dados/rn_candidaturas.csv">rn_candidaturas.csv</a>: uma linha por candidatura, com disputa, partido, situação, votos e posição.</li>
+        <li class="so-rn"><a href="dados/rn_votos_por_municipio.csv">rn_votos_por_municipio.csv</a>: votos de cada candidatura em cada município.</li>
+        <li class="so-rn"><a href="dados/rn_participacao.csv">rn_participacao.csv</a>: aptos, comparecimento, abstenção, brancos, nulos e votos válidos de cada município em cada disputa.</li>
+        <li>Código e instruções para refazer a análise: <a href="https://github.com/victorantunes/__REPO__">github.com/victorantunes/__REPO__</a>.</li>
       </ul>
     </div>
-    <footer>Fonte: Tribunal Superior Eleitoral (dados abertos), resultados de 2022 e boletins de urna de 2026. Malha municipal: IBGE.</footer>
+    <footer>Fonte: Tribunal Superior Eleitoral (dados abertos), resultados de 2020 e 2022 e boletins de urna de 2026. Malha municipal: IBGE.</footer>
   </section>
 </div>
 <div class="tooltip" id="tooltip"></div>
 
 <script>
-const DATA = __DATA__;
-const PAL = ['#99000d','#d92523','#fe9929','#99d8c9','#41ae76','#005a32'];
-const NOMES = ['Queda Severa','Queda Forte','Abaixo da Mediana','Acima da Mediana','Retenção Forte','Destaque Positivo'];
-const FAIXAS_P = ['Pior 15%','P15 a P35','P35 a P50','P50 a P65','P65 a P85','Melhor 15%'];
-const ORDEM_REG = ['Norte','Nordeste','Centro-Oeste','Sudeste','Sul'];
 const $ = id => document.getElementById(id);
 const fmt = n => n.toLocaleString('pt-BR');
 const f1 = (n, d = 1) => (n > 0 ? '+' : '') + n.toLocaleString('pt-BR', {minimumFractionDigits: d, maximumFractionDigits: d});
+const fp = n => n.toLocaleString('pt-BR', {minimumFractionDigits: n < 10 ? 2 : 1, maximumFractionDigits: n < 10 ? 2 : 1}) + '%';
+const esc = s => String(s).replace(/[&<>"]/g, c => ({'&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;'}[c]));
+const norm = t => t.normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase();
+const ok = Number.isFinite;
+
+/* ------------------------------------------------ paletas e classes */
+const PALS = {
+  perf: ['#99000d', '#d92523', '#fe9929', '#99d8c9', '#41ae76', '#005a32'],
+  lvl:  ['#dbe8f5', '#b3d0ea', '#84b3dc', '#5591c8', '#2f69a8', '#103f77'],
+  neu:  ['#dbe8f5', '#b3d0ea', '#84b3dc', '#5591c8', '#2f69a8', '#103f77']
+};
+const NOMES = {
+  perf: ['Queda Severa', 'Queda Forte', 'Abaixo da Mediana', 'Acima da Mediana', 'Retenção Forte', 'Destaque Positivo'],
+  lvl:  ['Menores 15%', 'P15 a P35', 'P35 a P50', 'P50 a P65', 'P65 a P85', 'Maiores 15%'],
+  neu:  ['Menores 15%', 'P15 a P35', 'P35 a P50', 'P50 a P65', 'P65 a P85', 'Maiores 15%']
+};
+const FAIXAS_P = ['Pior 15%', 'P15 a P35', 'P35 a P50', 'P50 a P65', 'P65 a P85', 'Melhor 15%'];
+const SEMDADO = '#d9dde3', ACENTO = '#b3201f';
+const ORDEM_REG = ['Norte', 'Nordeste', 'Centro-Oeste', 'Sudeste', 'Sul'];
 const TAM = [
-  {k:'', n:'Todos os tamanhos'},
-  {k:'a', n:'Até 5 mil votos de Lula (2022)', f:d => d.x < 5000},
-  {k:'b', n:'De 5 mil a 20 mil', f:d => d.x >= 5000 && d.x < 20000},
-  {k:'c', n:'De 20 mil a 100 mil', f:d => d.x >= 20000 && d.x < 100000},
-  {k:'d', n:'Mais de 100 mil', f:d => d.x >= 100000}
+  {k:'', n:'Todos os portes'},
+  {k:'a', n:'Até 5 mil eleitores', f:v => v < 5000},
+  {k:'b', n:'De 5 mil a 10 mil', f:v => v >= 5000 && v < 10000},
+  {k:'c', n:'De 10 mil a 30 mil', f:v => v >= 10000 && v < 30000},
+  {k:'d', n:'De 30 mil a 100 mil', f:v => v >= 30000 && v < 100000},
+  {k:'e', n:'Mais de 100 mil', f:v => v >= 100000}
 ];
-const norm = t => t.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase();
-DATA.forEach(d => { d.k = norm(d.n); d.f = TAM.slice(1).find(t => t.f(d)).k; d.t22 = d.x / d.px * 100; d.t26 = d.y / d.py * 100; });
+const TITULOS = {
+  br: {h1: 'Lula em 2022 e 2026, município a município', sub: 'Votos de Lula para presidente em cada um dos 5.570 municípios do Brasil, com abstenção, brancos e nulos: 1º e 2º turnos de 2022 e 1º turno de 2026, com dados abertos do TSE.'},
+  rn: {h1: 'PT no Rio Grande do Norte, 2020 e 2022', sub: 'Votos dos candidatos do PT no RN em cada um dos 167 municípios, em todos os cargos disputados em 2020 e 2022, com abstenção, brancos e nulos. Lula entra com os votos que recebeu no estado.'}
+};
 
-/* ------------------------------------------------ estado e classes */
-let zoomManual = false;
-const S = {zoomRoda:true, modo:'poli', cinza:true, view:'mapa', metrica:'pp', uf:'', termo:'', escala:'log', sep:'n', faixa:'', pins:new Set()};
-function quantil(s, q) { const pos = (s.length - 1) * q / 100, lo = Math.floor(pos), hi = Math.ceil(pos); return s[lo] + (s[hi] - s[lo]) * (pos - lo); }
-function classes(chave) {
-  const vals = DATA.map(d => d[chave]).filter(v => v !== null).sort((a, b) => a - b);
-  const cuts = [15, 35, 50, 65, 85].map(q => quantil(vals, q));
-  return {cuts, cls: DATA.map(d => { const v = d[chave]; if (v === null) return 2; let k = 0; while (k < 5 && v > cuts[k]) k++; return k; })};
+/* ------------------------------------------------ dados do recorte atual */
+let E = null, M = [], N = 0;
+const S = {escopo: 'br', zoomRoda: true, modo: 'poli', cinza: true, view: 'mapa', metrica: 'pp', uf: '', termo: '', escala: 'log', sep: 'n', faixa: '', pessoa: 0, A: 0, B: null, pins: new Set()};
+let zoomManual = false, CL = null, METS = [];
+const cacheEsc = {};
+
+function preparar(js) {
+  const n = js.mun.length, ref = js.disp.find(d => d.id === 'pres22t2') || js.disp[0];
+  js.disp.forEach(d => {
+    ['ap', 'cp', 'br', 'nu', 'va'].forEach(f => { d[f] = Float64Array.from(d[f], x => x === null ? NaN : x); });
+    d.pa = new Float64Array(n); d.pb = new Float64Array(n); d.pn = new Float64Array(n); d.pc = new Float64Array(n);
+    for (let i = 0; i < n; i++) { d.pa[i] = (d.ap[i] - d.cp[i]) / d.ap[i] * 100; d.pc[i] = d.cp[i] / d.ap[i] * 100; d.pb[i] = d.br[i] / d.cp[i] * 100; d.pn[i] = d.nu[i] / d.cp[i] * 100; }
+  });
+  js.mun.forEach((m, i) => { m.k = norm(m.n); m.ap = ref.ap[i]; m.f = TAM.slice(1).find(t => t.f(m.ap)).k; });
+  js.cand.forEach((c, k) => {
+    c.id = k; c.dx = c.d; c.d = js.disp[c.dx]; c.vv = null;
+    let sv = 0, sva = 0; c.v.forEach(([i, x]) => { sv += x; sva += c.d.va[i]; }); c.pct = sva > 0 ? sv / sva * 100 : NaN;
+  });
+  js.pess.forEach(p => { p.tot = Math.max(0, ...p.c.map(k => js.cand[k].tot)); p.k = norm(p.n + ' ' + p.nc); p.resumo = p.c.map(k => { const c = js.cand[k]; return c.d.curto + (c.ue ? ' (' + c.ue + ')' : ''); }).join(' · '); });
+  js.ordemP = js.pess.map((p, i) => i).sort((a, b) => (js.pess[b].agg ? 1 : 0) - (js.pess[a].agg ? 1 : 0) || js.pess[b].tot - js.pess[a].tot);
+  return js;
 }
-let CL = classes(S.metrica);
-const noUF = d => !S.uf || d.u === S.uf;
-const noBusca = d => !S.termo || d.n.toLowerCase().includes(S.termo);
+function carregarEscopo(id) {
+  if (cacheEsc[id]) return Promise.resolve(cacheEsc[id]);
+  return fetch('dados/escopo_' + id + '.json').then(r => { if (!r.ok) throw new Error('escopo'); return r.json(); }).then(js => (cacheEsc[id] = preparar(js)));
+}
+function vv(c) {
+  if (c.vv) return c;
+  const a = new Float64Array(N).fill(NaN); c.v.forEach(([i, x]) => { a[i] = x; }); c.vv = a;
+  c.pv = a.map((x, i) => c.d.va[i] > 0 ? x / c.d.va[i] * 100 : NaN);
+  c.ps = a.map(x => c.tot > 0 ? x / c.tot * 100 : NaN);
+  return c;
+}
+const cA = () => vv(E.cand[S.A]);
+const cB = () => S.B === null ? null : vv(E.cand[S.B]);
+const nomeC = c => c.agg ? 'PT' : c.n;
+const votosDe = c => (c.agg ? 'Votos do ' : 'Votos de ') + rotC(c);
+const rotC = c => nomeC(c) + ', ' + c.d.curto + (c.ue ? ' (' + c.ue + ')' : '');
+const noUF = i => !S.uf || M[i].u === S.uf;
+const noBusca = i => !S.termo || M[i].n.toLowerCase().includes(S.termo);
 
+/* ------------------------------------------------ medidas e classes */
+const MFMT = {
+  pp: (m, v) => (m.t === 'lvl' ? v.toLocaleString('pt-BR', {minimumFractionDigits: 2, maximumFractionDigits: 2}) : f1(v, 2)) + ' pp',
+  '%': (m, v) => m.t === 'lvl' ? fp(v) : f1(v, 1) + '%',
+  v: (m, v) => m.t === 'lvl' ? fmt(Math.round(v)) : f1(v, 0)
+};
+function listaMetricas() {
+  const A = cA(), B = cB(), out = [], mesmaPessoa = B && A.p === B.p, mesmaDisp = B && A.d === B.d;
+  const part = (X, tag) => [
+    {k: tag + 'pa', r: 'Abstenção', t: 'lvl', u: '%', f: i => X.d.pa[i]}, {k: tag + 'pb', r: 'Brancos', t: 'lvl', u: '%', f: i => X.d.pb[i]}, {k: tag + 'pn', r: 'Nulos', t: 'lvl', u: '%', f: i => X.d.pn[i]}];
+  const cand = (X, tag) => [{k: tag + 'pv', r: '% dos votos válidos', t: 'lvl', u: '%', f: i => X.pv[i]}, {k: tag + 'v', r: 'Votos', t: 'lvl', u: 'v', f: i => X.vv[i]}]
+    .concat(X.v.length > 1 ? [{k: tag + 'ps', r: '% do total de votos do candidato', t: 'lvl', u: '%', f: i => X.ps[i]}] : []);
+  if (B) {
+    const t = mesmaPessoa ? 'perf' : 'neu', g = {g: 'Comparação (B menos A)', m: [
+      {k: 'pp', r: 'Variação em pontos percentuais', t, u: 'pp', f: i => B.pv[i] - A.pv[i]},
+      {k: 'sd', r: 'Saldo de votos', t, u: 'v', f: i => B.vv[i] - A.vv[i]},
+      {k: 'rt', r: 'Retenção (variação % dos votos)', t, u: '%', f: i => A.vv[i] > 0 ? (B.vv[i] / A.vv[i] - 1) * 100 : NaN}]};
+    if (!mesmaDisp) g.m.push({k: 'da', r: 'Variação da abstenção (pp)', t: 'neu', u: 'pp', f: i => B.d.pa[i] - A.d.pa[i]}, {k: 'db', r: 'Variação dos brancos (pp)', t: 'neu', u: 'pp', f: i => B.d.pb[i] - A.d.pb[i]},
+      {k: 'dn', r: 'Variação dos nulos (pp)', t: 'neu', u: 'pp', f: i => B.d.pn[i] - A.d.pn[i]});
+    out.push(g);
+  }
+  out.push({g: 'A: ' + rotC(A), m: cand(A, 'A').concat(part(A, 'A'))});
+  if (B) out.push({g: 'B: ' + rotC(B), m: cand(B, 'B').concat(mesmaDisp ? [] : part(B, 'B'))});
+  return out;
+}
+const metAtual = () => { for (const g of METS) for (const m of g.m) if (m.k === S.metrica) return m; return METS[0].m[0]; };
+function quantil(s, q) { const pos = (s.length - 1) * q / 100, lo = Math.floor(pos), hi = Math.ceil(pos); return s[lo] + (s[hi] - s[lo]) * (pos - lo); }
+function calcClasses() {
+  const m = metAtual(), arr = new Float64Array(N), vals = [], cls = new Int8Array(N).fill(-1);
+  for (let i = 0; i < N; i++) { const v = m.f(i); arr[i] = v; if (ok(v)) vals.push(v); }
+  vals.sort((a, b) => a - b);
+  if (vals.length < 8) { for (let i = 0; i < N; i++) if (ok(arr[i])) cls[i] = 0; CL = {m, arr, cuts: [], cls, few: true, n: vals.length}; return; }
+  const cuts = [15, 35, 50, 65, 85].map(q => quantil(vals, q));
+  for (let i = 0; i < N; i++) { const v = arr[i]; if (!ok(v)) continue; let k = 0; while (k < 5 && v > cuts[k]) k++; cls[i] = k; }
+  CL = {m, arr, cuts, cls, few: false, n: vals.length};
+}
+const cor = i => CL.cls[i] < 0 ? SEMDADO : CL.few ? ACENTO : PALS[CL.m.t][CL.cls[i]];
+function nomeClasse(i) { return CL.cls[i] < 0 ? 'sem dados' : CL.few ? '' : NOMES[CL.m.t][CL.cls[i]] + ' (' + FAIXAS_P[CL.cls[i]] + ')'; }
+
+/* ------------------------------------------------ detalhes de um município */
+function partHTML(d, i, titulo) {
+  return `<span class="cz"><b>${esc(titulo)}</b>: comparecimento ${d.pc[i].toFixed(1)}% &bull; abstenção ${d.pa[i].toFixed(1)}% &bull; brancos ${d.pb[i].toFixed(1)}% &bull; nulos ${d.pn[i].toFixed(1)}%</span><br>`;
+}
+function linhaC(c, i, tag) {
+  const v = c.vv[i], nome = `<b>${tag}: ${esc(nomeC(c))}, ${esc(c.d.curto)}</b>`;
+  if (!ok(v)) return `${nome}<br><span class="cz">sem candidatura neste município</span><br>`;
+  const pos = (c.ue && c.rk) ? ` &bull; ${c.rk}º de ${c.nc}${c.sit ? ' (' + esc(c.sit) + ')' : ''}` : '';
+  return `${nome}<br>${fmt(v)} votos (${fp(c.pv[i])} dos válidos)${pos}<br>`;
+}
 function detalhe(i) {
-  const d = DATA[i], part = (a, c) => (a && c) ? ` &bull; comparecimento ${(c / a * 100).toFixed(1)}%` : '';
-  return `<h3>${d.n} - ${d.u}</h3><span class="cz">${d.g} &bull; ${fmt(d.sc)} seções</span><hr class="s">` +
-    `<b>2022 (2ºT):</b> ${fmt(d.x)} votos (${d.px.toFixed(1)}%)${part(d.ap22, d.cp22)}<br><b>2026 (1ºT):</b> ${fmt(d.y)} votos (${d.py.toFixed(1)}%)${part(d.ap26, d.cp26)}<br>` +
-    `<b>Saldo:</b> <span style="color:#d9730d;font-weight:700">${f1(d.s, 0)} votos</span> (${f1(d.rt, 1)}%) &bull; ${f1(d.pp, 2)} pp<br><span class="cz">${NOMES[CL.cls[i]]} (${FAIXAS_P[CL.cls[i]]})</span>`;
+  const m = M[i], A = cA(), B = cB();
+  let h = `<h3>${esc(m.n)} - ${m.u}</h3><span class="cz">${m.g} &bull; ${fmt(A.d.ap[i])} eleitores aptos</span><hr class="s">` + linhaC(A, i, 'A');
+  if (B) {
+    h += linhaC(B, i, 'B');
+    if (ok(A.vv[i]) && ok(B.vv[i])) h += `<b>B menos A:</b> <span style="color:#d9730d;font-weight:700">${f1(B.vv[i] - A.vv[i], 0)} votos</span>${A.vv[i] > 0 ? ' (' + f1((B.vv[i] / A.vv[i] - 1) * 100, 1) + '%)' : ''} &bull; ${f1(B.pv[i] - A.pv[i], 2)} pp<br>`;
+  }
+  h += '<hr class="s">' + partHTML(A.d, i, A.d.curto);
+  if (B && B.d !== A.d) h += partHTML(B.d, i, B.d.curto);
+  const v = CL.arr[i];
+  h += `<hr class="s"><span class="cz">${esc(CL.m.r)}: ${ok(v) ? MFMT[CL.m.u](CL.m, v) : 'sem dados'}${nomeClasse(i) && ok(v) ? ' &bull; ' + nomeClasse(i) : ''}</span>`;
+  return h;
+}
+function pinTxt(i) {
+  const m = M[i], A = cA(), B = cB(), s = `${m.n}${S.escopo === 'br' ? '-' + m.u : ''}`;
+  if (B && ok(A.vv[i]) && ok(B.vv[i])) return `${s} (${f1(B.vv[i] - A.vv[i], 0)} | ${f1(B.pv[i] - A.pv[i], 1)} pp)`;
+  if (ok(A.vv[i])) return `${s} (${fmt(A.vv[i])} | ${fp(A.pv[i])})`;
+  return s;
 }
 function legendaHTML() {
-  const fm = {pp: v => f1(v, 2) + ' pp', s: v => f1(v, 0) + ' votos', rt: v => f1(v, 1) + '%'}[S.metrica], c = CL.cuts;
+  const sem = Array.prototype.some.call(CL.cls, k => k < 0) ? `<span class="li"><span class="dotc" style="background:${SEMDADO}"></span><b>Sem dados</b></span>` : '';
+  if (CL.few) return `<span class="li"><span class="dotc" style="background:${ACENTO}"></span><b>Com dados</b> ${CL.n} município${CL.n === 1 ? '' : 's'}</span>` + sem;
+  const m = CL.m, fm = v => MFMT[m.u](m, v), c = CL.cuts, nm = NOMES[m.t], pal = PALS[m.t];
   const tx = [`≤ ${fm(c[0])}`, `${fm(c[0])} a ${fm(c[1])}`, `${fm(c[1])} a ${fm(c[2])}`, `${fm(c[2])} a ${fm(c[3])}`, `${fm(c[3])} a ${fm(c[4])}`, `> ${fm(c[4])}`];
-  return NOMES.map((n, k) => `<span class="li"><span class="dotc" style="background:${PAL[k]}"></span><b>${n}</b> ${tx[k]}</span>`).join('');
+  return nm.map((n, k) => `<span class="li"><span class="dotc" style="background:${pal[k]}"></span><b>${n}</b> ${tx[k]}</span>`).join('') + sem;
 }
-function legenda() { $('legend').innerHTML = legendaHTML(); document.querySelectorAll('.fleg').forEach(e => e.innerHTML = legendaHTML()); }
+function legenda() { const h = legendaHTML(); $('legend').innerHTML = h; document.querySelectorAll('.fleg').forEach(e => { e.innerHTML = h; }); }
 function contador() { const k = S.pins.size; $('pinned-count').innerText = k ? `${k} município(s) fixado(s)` : 'Nenhum município fixado'; }
+
+/* ------------------------------------------------ estatísticas do topo */
+function universo() {
+  const A = cA(), B = cB(), ids = [];
+  for (let i = 0; i < N; i++) if (ok(A.vv[i]) && (!B || ok(B.vv[i]))) ids.push(i);
+  return ids;
+}
+function somas(ids, X) {
+  let v = 0, va = 0, ap = 0, cp = 0, br = 0, nu = 0;
+  ids.forEach(i => { if (ok(X.vv[i])) { v += X.vv[i]; va += X.d.va[i]; } ap += X.d.ap[i]; cp += X.d.cp[i]; br += X.d.br[i]; nu += X.d.nu[i]; });
+  return {v, va, pct: va > 0 ? v / va * 100 : NaN, abst: (ap - cp) / ap * 100, br: br / cp * 100, nu: nu / cp * 100};
+}
+function atualizarTopo() {
+  const A = cA(), B = cB(), ids = universo(), a = somas(ids, A), b = B ? somas(ids, B) : null, mesma = B && A.d === B.d;
+  const caixa = (l, g, s) => `<div class="stat"><span>${l}</span><b>${g}</b><small>${s}</small></div>`;
+  const par = (x, y, f) => mesma ? f(x) : `${f(x)} &rarr; ${f(y)}`;
+  let h;
+  if (B) {
+    h = caixa('A: ' + esc(A.d.curto), fmt(a.v), ok(a.pct) ? fp(a.pct) + ' dos válidos' : '') + caixa('B: ' + esc(B.d.curto), fmt(b.v), ok(b.pct) ? fp(b.pct) + ' dos válidos' : '') +
+      caixa('Saldo (B menos A)', f1(b.v - a.v, 0), ok(a.pct) && ok(b.pct) ? f1(b.pct - a.pct, 2) + ' pp' : '') +
+      caixa('Abstenção', par(a.abst, b.abst, x => x.toFixed(1) + '%'), mesma ? 'mesma disputa' : 'A &rarr; B') + caixa('Brancos', par(a.br, b.br, x => x.toFixed(1) + '%'), mesma ? 'mesma disputa' : 'A &rarr; B') + caixa('Nulos', par(a.nu, b.nu, x => x.toFixed(1) + '%'), mesma ? 'mesma disputa' : 'A &rarr; B');
+  } else {
+    h = caixa('Votos', fmt(a.v), esc(rotC(A))) + caixa('% dos votos válidos', ok(a.pct) ? fp(a.pct) : '-', 'nos municípios com candidatura') + caixa('Municípios com votos', fmt(A.v.length), 'de ' + fmt(N)) +
+      caixa('Abstenção', a.abst.toFixed(1) + '%', 'dos eleitores aptos') + caixa('Brancos', a.br.toFixed(1) + '%', 'do comparecimento') + caixa('Nulos', a.nu.toFixed(1) + '%', 'do comparecimento');
+  }
+  $('stats').innerHTML = h;
+  const onde = ids.length === N ? 'em todos os ' + fmt(N) + ' municípios' : 'em ' + fmt(ids.length) + ' município' + (ids.length === 1 ? '' : 's') + (S.escopo === 'rn' ? ' em que houve candidatura' : '');
+  $('selinfo').innerHTML = B ? `Comparando <b>${esc(rotC(A))}</b> (A) com <b>${esc(rotC(B))}</b> (B), ${onde}.` : `Mostrando <b>${esc(rotC(A))}</b>, ${onde}.`;
+}
 
 /* ------------------------------------------------ dispersão (usada em duas vistas) */
 const tip = $('tooltip');
-const rot = v => v >= 1e6 ? (v / 1e6).toLocaleString('pt-BR', {maximumFractionDigits: 1}) + ' mi' : v >= 1e3 ? (v / 1e3).toLocaleString('pt-BR', {maximumFractionDigits: 1}) + ' mil' : fmt(Math.round(v));
+const abrev = v => v >= 1e6 ? (v / 1e6).toLocaleString('pt-BR', {maximumFractionDigits: 1}) + ' mi' : v >= 1e3 ? (v / 1e3).toLocaleString('pt-BR', {maximumFractionDigits: 1}) + ' mil' : fmt(Math.round(v));
 const gt = (v, log) => log ? Math.log10(Math.max(v, 1e-9)) : v;
 const gi = (t, log) => log ? Math.pow(10, t) : t;
 function passo(v) { const e = Math.pow(10, Math.floor(Math.log10(v))), m = v / e; return (m <= 1 ? 1 : m <= 2 ? 2 : m <= 5 ? 5 : 10) * e; }
@@ -319,60 +566,67 @@ function ticksDe(a, b, log) {
   } else { const st = passo((b - a) / 5); for (let v = Math.ceil(a / st) * st; v <= b + 1e-9; v += st) out.push(v); }
   return out;
 }
-/* enquadramento padrão: ajustado aos dados da seleção atual (UF, região, tamanho) */
-function ajuste(ids, log) {
-  let mn = Infinity, mx = 0;
-  ids.forEach(i => { const d = DATA[i]; mn = Math.min(mn, d.x, d.y); mx = Math.max(mx, d.x, d.y); });
-  if (!isFinite(mn)) { mn = 10; mx = 1000; }
-  if (log) { mn = Math.max(mn, 1); return {x0: mn / 1.35, x1: mx * 1.35, y0: mn / 1.35, y1: mx * 1.35}; }
-  const hi = mx * 1.06; return {x0: 0, x1: hi, y0: 0, y1: hi};
+function eixos() {
+  const A = cA(), B = cB();
+  if (B) return {x: A.vv, y: B.vv, lx: votosDe(A), ly: votosDe(B), cx: 'A: ' + A.d.curto, cy: 'B: ' + B.d.curto, par: true};
+  return {x: A.d.ap, y: A.vv, lx: 'Eleitores aptos do município', ly: votosDe(A), cx: 'Eleitores aptos', cy: 'Votos de ' + nomeC(A), par: false};
+}
+const valido = (ex, log, i) => ok(ex.x[i]) && ok(ex.y[i]) && (!log || (ex.x[i] > 0 && ex.y[i] > 0));
+/* enquadramento padrão: ajustado aos dados da seleção atual */
+function ajuste(ids, log, ex) {
+  let a0 = Infinity, a1 = 0, b0 = Infinity, b1 = 0;
+  ids.forEach(i => { if (!valido(ex, log, i)) return; a0 = Math.min(a0, ex.x[i]); a1 = Math.max(a1, ex.x[i]); b0 = Math.min(b0, ex.y[i]); b1 = Math.max(b1, ex.y[i]); });
+  if (!isFinite(a0)) { a0 = b0 = 10; a1 = b1 = 1000; }
+  if (ex.par) { a0 = b0 = Math.min(a0, b0); a1 = b1 = Math.max(a1, b1); }
+  if (log) { a0 = Math.max(a0, 1); b0 = Math.max(b0, 1); return {x0: a0 / 1.35, x1: a1 * 1.35, y0: b0 / 1.35, y1: b1 * 1.35}; }
+  return {x0: 0, x1: a1 * 1.06, y0: 0, y1: b1 * 1.06};
 }
 function desenhar(cv, ids, o) {
   const ctx = cv.getContext('2d'), dpr = window.devicePixelRatio || 1, W = cv.clientWidth, H = cv.clientHeight;
   if (!W || !H) return null;
   cv.width = W * dpr; cv.height = H * dpr; ctx.setTransform(dpr, 0, 0, dpr, 0, 0); ctx.clearRect(0, 0, W, H);
-  const small = o.pequeno, log = S.escala === 'log', m = small ? {t:12, r:14, b:36, l:56} : {t:18, r:26, b:50, l:72}, pw = W - m.l - m.r, ph = H - m.t - m.b;
-  const dom = o.dono.view || ajuste(o.fitIds || ids, log);
+  const ex = o.ex, small = o.pequeno, log = S.escala === 'log', m = small ? {t: 12, r: 14, b: 36, l: 56} : {t: 18, r: 26, b: 50, l: 72}, pw = W - m.l - m.r, ph = H - m.t - m.b;
+  const dom = o.dono.view || ajuste(o.fitIds || ids, log, ex);
   const gx0 = gt(dom.x0, log), gx1 = gt(dom.x1, log), gy0 = gt(dom.y0, log), gy1 = gt(dom.y1, log);
   const sx = v => m.l + (gt(v, log) - gx0) / (gx1 - gx0) * pw, sy = v => m.t + ph - (gt(v, log) - gy0) / (gy1 - gy0) * ph;
   ctx.font = (small ? '10.5px' : '11px') + ' sans-serif'; ctx.strokeStyle = '#edf2f7'; ctx.lineWidth = 1; ctx.setLineDash([3, 3]);
   ctx.fillStyle = '#718096';
-  ticksDe(dom.x0, dom.x1, log).forEach(v => { ctx.beginPath(); ctx.moveTo(sx(v), m.t); ctx.lineTo(sx(v), m.t + ph); ctx.stroke(); ctx.textAlign = 'center'; ctx.fillText(rot(v), sx(v), m.t + ph + 15); });
-  ticksDe(dom.y0, dom.y1, log).forEach(v => { ctx.beginPath(); ctx.moveTo(m.l, sy(v)); ctx.lineTo(m.l + pw, sy(v)); ctx.stroke(); ctx.textAlign = 'right'; ctx.fillText(rot(v), m.l - 7, sy(v) + 4); });
+  ticksDe(dom.x0, dom.x1, log).forEach(v => { ctx.beginPath(); ctx.moveTo(sx(v), m.t); ctx.lineTo(sx(v), m.t + ph); ctx.stroke(); ctx.textAlign = 'center'; ctx.fillText(abrev(v), sx(v), m.t + ph + 15); });
+  ticksDe(dom.y0, dom.y1, log).forEach(v => { ctx.beginPath(); ctx.moveTo(m.l, sy(v)); ctx.lineTo(m.l + pw, sy(v)); ctx.stroke(); ctx.textAlign = 'right'; ctx.fillText(abrev(v), m.l - 7, sy(v) + 4); });
   ctx.setLineDash([]);
   ctx.save(); ctx.beginPath(); ctx.rect(m.l, m.t, pw, ph); ctx.clip();
   const lo = Math.max(dom.x0, dom.y0), hi = Math.min(dom.x1, dom.y1);
-  if (lo < hi) { ctx.setLineDash([6, 6]); ctx.strokeStyle = '#a0aec0'; ctx.lineWidth = 1.6; ctx.beginPath(); ctx.moveTo(sx(lo), sy(lo)); ctx.lineTo(sx(hi), sy(hi)); ctx.stroke(); ctx.setLineDash([]); }
-  const ativo = i => o.destaque ? o.destaque(DATA[i]) : true;
-  if (!o.destaque || S.cinza) ids.forEach(i => { if (ativo(i) || S.pins.has(i)) return; const d = DATA[i]; ctx.beginPath(); ctx.arc(sx(d.x), sy(d.y), small ? 2.6 : 2.8, 0, 6.2832); ctx.fillStyle = '#d5dbe3'; ctx.globalAlpha = .6; ctx.fill(); ctx.globalAlpha = 1; });
-  ids.forEach(i => { if (!ativo(i) || S.pins.has(i)) return; const d = DATA[i]; ctx.beginPath(); ctx.arc(sx(d.x), sy(d.y), small ? 3.2 : 3.6, 0, 6.2832); ctx.fillStyle = PAL[CL.cls[i]]; ctx.globalAlpha = .85; ctx.fill(); ctx.globalAlpha = 1; ctx.lineWidth = .6; ctx.strokeStyle = '#fff'; ctx.stroke(); });
+  if (ex.par && lo < hi) { ctx.setLineDash([6, 6]); ctx.strokeStyle = '#a0aec0'; ctx.lineWidth = 1.6; ctx.beginPath(); ctx.moveTo(sx(lo), sy(lo)); ctx.lineTo(sx(hi), sy(hi)); ctx.stroke(); ctx.setLineDash([]); }
+  const ativo = i => o.destaque ? o.destaque(i) : true, pts = ids.filter(i => valido(ex, log, i));
+  if (!o.destaque || S.cinza) pts.forEach(i => { if (ativo(i) || S.pins.has(i)) return; ctx.beginPath(); ctx.arc(sx(ex.x[i]), sy(ex.y[i]), small ? 2.6 : 2.8, 0, 6.2832); ctx.fillStyle = '#d5dbe3'; ctx.globalAlpha = .6; ctx.fill(); ctx.globalAlpha = 1; });
+  pts.forEach(i => { if (!ativo(i) || S.pins.has(i)) return; ctx.beginPath(); ctx.arc(sx(ex.x[i]), sy(ex.y[i]), small ? 3.2 : 3.6, 0, 6.2832); ctx.fillStyle = cor(i); ctx.globalAlpha = .85; ctx.fill(); ctx.globalAlpha = 1; ctx.lineWidth = .6; ctx.strokeStyle = '#fff'; ctx.stroke(); });
   ctx.restore();
   ctx.setLineDash([]); ctx.strokeStyle = '#cbd5e0'; ctx.lineWidth = 1.4; ctx.beginPath(); ctx.moveTo(m.l, m.t); ctx.lineTo(m.l, m.t + ph); ctx.lineTo(m.l + pw, m.t + ph); ctx.stroke();
-  if (!small && W > 560 && lo < hi) {
+  if (ex.par && !small && W > 560 && lo < hi) {
     const t = 0.7, v = log ? Math.pow(10, Math.log10(lo) + (Math.log10(hi) - Math.log10(lo)) * t) : lo + (hi - lo) * t;
-    ctx.save(); ctx.translate(sx(v), sy(v)); ctx.rotate(-Math.atan2(sy(lo) - sy(hi), sx(hi) - sx(lo))); ctx.fillStyle = '#a0aec0'; ctx.textAlign = 'center'; ctx.fillText('Linha de paridade (2026 = 2022)', 0, -7); ctx.restore();
+    ctx.save(); ctx.translate(sx(v), sy(v)); ctx.rotate(-Math.atan2(sy(lo) - sy(hi), sx(hi) - sx(lo))); ctx.fillStyle = '#a0aec0'; ctx.textAlign = 'center'; ctx.font = '11px sans-serif'; ctx.fillText('Linha de paridade (B = A)', 0, -7); ctx.restore();
   }
-  const estreito = W < 520;
+  const estreito = W < 520, corta = (t, mx) => t.length > mx ? t.slice(0, mx - 1) + '…' : t;
   ctx.fillStyle = '#2d3748'; ctx.font = (small ? '600 11px' : '700 12.5px') + ' sans-serif'; ctx.textAlign = 'center';
-  ctx.fillText(estreito ? 'Lula 2022 (2º turno)' : 'Votos de Lula em 2022 (2º turno)' + (log ? ', escala log' : ''), m.l + pw / 2, H - 5);
-  ctx.save(); ctx.translate(small ? 12 : 16, m.t + ph / 2); ctx.rotate(-Math.PI / 2); ctx.fillText(estreito ? 'Lula 2026 (1º turno)' : 'Votos em 2026 (1º turno)' + (log ? ', escala log' : ''), 0, 0); ctx.restore();
+  ctx.fillText(corta(estreito ? ex.cx : ex.lx, estreito ? 40 : 90) + (!estreito && log ? ', escala log' : ''), m.l + pw / 2, H - 5);
+  ctx.save(); ctx.translate(small ? 12 : 16, m.t + ph / 2); ctx.rotate(-Math.PI / 2); ctx.fillText(corta(estreito ? ex.cy : ex.ly, estreito ? 32 : Math.max(24, Math.floor(ph / 6.2))) + (!estreito && log ? ', escala log' : ''), 0, 0); ctx.restore();
   ctx.font = '700 ' + (small ? '10.5px' : '11.5px') + ' sans-serif'; ctx.textAlign = 'left';
-  ids.forEach(i => { if (!S.pins.has(i)) return; const d = DATA[i], x = sx(d.x), y = sy(d.y); if (x < m.l || x > m.l + pw || y < m.t || y > m.t + ph) return;
-    ctx.beginPath(); ctx.arc(x, y, 6, 0, 6.2832); ctx.fillStyle = PAL[CL.cls[i]]; ctx.fill(); ctx.lineWidth = 2.5; ctx.strokeStyle = '#000'; ctx.stroke();
-    const tx = `${d.n}-${d.u} (${f1(d.s, 0)} | ${f1(d.pp, 1)} pp)`, w = ctx.measureText(tx).width, lx = (x + 9 + w > W - 2) ? x - 9 - w : x + 9;
+  pts.forEach(i => { if (!S.pins.has(i)) return; const x = sx(ex.x[i]), y = sy(ex.y[i]); if (x < m.l || x > m.l + pw || y < m.t || y > m.t + ph) return;
+    ctx.beginPath(); ctx.arc(x, y, 6, 0, 6.2832); ctx.fillStyle = cor(i); ctx.fill(); ctx.lineWidth = 2.5; ctx.strokeStyle = '#000'; ctx.stroke();
+    const tx = pinTxt(i), w = ctx.measureText(tx).width, lx = (x + 9 + w > W - 2) ? x - 9 - w : x + 9;
     ctx.lineWidth = 3; ctx.strokeStyle = '#fff'; ctx.strokeText(tx, lx, y - 7); ctx.fillStyle = '#1a202c'; ctx.fillText(tx, lx, y - 7); });
   if (o.dono.btnReset) o.dono.btnReset.classList.toggle('on', !!o.dono.view);
   cv.style.touchAction = o.dono.view ? 'none' : 'pan-y';
-  return {sx, sy, m, pw, ph, dom, log};
+  return {sx, sy, m, pw, ph, dom, log, ex};
 }
 function proximo(ev, cv, ids, geom, ativo) {
-  const r = cv.getBoundingClientRect(), mx = ev.clientX - r.left, my = ev.clientY - r.top, g = geom; let b = -1, bd = 120;
+  const r = cv.getBoundingClientRect(), mx = ev.clientX - r.left, my = ev.clientY - r.top, g = geom, ex = g.ex; let b = -1, bd = 120;
   if (mx < g.m.l || mx > g.m.l + g.pw || my < g.m.t || my > g.m.t + g.ph) return -1;
-  ids.forEach(i => { const d = DATA[i]; if (ativo && !ativo(d)) return; const dx = g.sx(d.x) - mx, dy = g.sy(d.y) - my, dd = dx * dx + dy * dy; if (dd < bd) { bd = dd; b = i; } });
+  ids.forEach(i => { if (!valido(ex, g.log, i) || (ativo && !ativo(i))) return; const dx = g.sx(ex.x[i]) - mx, dy = g.sy(ex.y[i]) - my, dd = dx * dx + dy * dy; if (dd < bd) { bd = dd; b = i; } });
   return b;
 }
 
-/* zoom: arrastar para selecionar uma área, Shift+arrastar para mover, Ctrl+rolagem, botões, pinça, duplo clique para voltar */
+/* zoom: arrastar para mover (ou selecionar uma área), rolagem, botões, pinça, duplo clique para voltar */
 const minSpan = log => log ? 0.04 : 15;
 function aplicarZoom(v, fx0, fx1, fy0, fy1) {
   const g = v.geom, log = g.log, d = g.dom, a = gt(d.x0, log), b = gt(d.x1, log), c = gt(d.y0, log), e = gt(d.y1, log);
@@ -387,7 +641,7 @@ function ligar(wrap, cv, v) {
   const bt = document.createElement('div'); bt.className = 'zbtns';
   bt.innerHTML = '<button type="button" class="md"></button><button type="button" title="Aproximar">+</button><button type="button" title="Afastar">&minus;</button><button type="button" title="Voltar ao enquadramento padrão" class="rst">&#8634;</button>';
   wrap.appendChild(bt); const [bd, bm, bn, br] = bt.children; v.btnReset = br; v.modo = 'mover';
-  v.estilo = () => { bd.textContent = v.modo === 'mover' ? '\u2725' : '\u25AD'; bd.title = v.modo === 'mover' ? 'Arrastar move o gráfico. Clique para trocar para zoom em área.' : 'Arrastar seleciona uma área para dar zoom. Clique para trocar para mover.'; cv.style.cursor = v.modo === 'mover' ? 'grab' : 'crosshair'; };
+  v.estilo = () => { bd.textContent = v.modo === 'mover' ? '✥' : '▭'; bd.title = v.modo === 'mover' ? 'Arrastar move o gráfico. Clique para trocar para zoom em área.' : 'Arrastar seleciona uma área para dar zoom. Clique para trocar para mover.'; cv.style.cursor = v.modo === 'mover' ? 'grab' : 'crosshair'; };
   bd.onclick = () => { v.modo = v.modo === 'mover' ? 'area' : 'mover'; v.estilo(); }; v.estilo();
   bm.onclick = () => v.geom && zoomCentro(v, .5, .5, .7); bn.onclick = () => v.geom && zoomCentro(v, .5, .5, 1 / .7); br.onclick = () => resetar(v);
   let arrasto = null; const toques = new Map(); let pinca = null, tpan = null;
@@ -398,8 +652,8 @@ function ligar(wrap, cv, v) {
     zoomCentro(v, cl((ev.clientX - r.left - g.m.l) / g.pw), cl(1 - (ev.clientY - r.top - g.m.t) / g.ph), Math.exp(dy * 0.0018)); }, {passive: false});
   cv.addEventListener('mousemove', ev => {
     if (!v.geom || arrasto) return; const i = proximo(ev, cv, v.ids, v.geom, v.ativo); if (i < 0) { tip.style.display = 'none'; return; }
-    tip.innerHTML = detalhe(i); tip.style.left = Math.min(ev.clientX + 14, window.innerWidth - 310) + 'px'; tip.style.top = Math.max(8, ev.clientY - 20) + 'px'; tip.style.display = 'block'; });
-  cv.addEventListener('mouseleave', () => tip.style.display = 'none');
+    tip.innerHTML = detalhe(i); tip.style.left = Math.min(ev.clientX + 14, window.innerWidth - 330) + 'px'; tip.style.top = Math.max(8, Math.min(ev.clientY - 20, window.innerHeight - tip.offsetHeight - 8)) + 'px'; tip.style.display = 'block'; });
+  cv.addEventListener('mouseleave', () => { tip.style.display = 'none'; });
   cv.addEventListener('pointerdown', ev => {
     if (!v.geom) return;
     if (ev.pointerType === 'touch') { toques.set(ev.pointerId, {x: ev.clientX, y: ev.clientY}); if (toques.size === 2) { const [p, q] = [...toques.values()]; pinca = {d: Math.hypot(p.x - q.x, p.y - q.y)}; tpan = null; } else if (v.view) tpan = {x: ev.clientX, y: ev.clientY}; return; }
@@ -428,70 +682,90 @@ function ligar(wrap, cv, v) {
 }
 
 /* vista: dispersão geral */
-const V1 = {ids: DATA.map((d, i) => i), geom: null, view: null, ativo: d => noUF(d) && noBusca(d), redraw() { vDispersao(); }};
+const V1 = {ids: [], geom: null, view: null, ativo: i => noUF(i) && noBusca(i), redraw() { vDispersao(); }};
 function vDispersao() {
-  V1.ids = DATA.map((d, i) => i).filter(i => !S.faixa || DATA[i].f === S.faixa);
-  const act = V1.ids.filter(i => V1.ativo(DATA[i]));
-  V1.geom = desenhar($('cv1'), V1.ids, {dono: V1, destaque: V1.ativo, fitIds: act.length ? act : V1.ids, pequeno: false});
+  if (!E) return;
+  const ex = eixos(), todos = []; for (let i = 0; i < N; i++) if (!S.faixa || M[i].f === S.faixa) todos.push(i);
+  V1.ids = todos;
+  const act = todos.filter(V1.ativo);
+  V1.geom = desenhar($('cv1'), V1.ids, {dono: V1, destaque: V1.ativo, fitIds: act.length ? act : V1.ids, pequeno: false, ex});
 }
 ligar($('box1'), $('cv1'), V1);
 
-/* vista: por região (ou UF, ou faixa de tamanho) */
+/* vista: separada por região, UF ou porte */
 let paineis = [];
 function grupos() {
-  if (S.sep === 'g') return ORDEM_REG.map(k => ({k, n:k}));
-  if (S.sep === 'u') return [...new Set(DATA.map(d => d.u))].sort().map(k => ({k, n:k}));
-  return TAM.slice(1).map(t => ({k:t.k, n:t.n}));
+  if (S.sep === 'g') return ORDEM_REG.map(k => ({k, n: k}));
+  if (S.sep === 'u') return [...new Set(M.map(m => m.u))].sort().map(k => ({k, n: k}));
+  return TAM.slice(1).map(t => ({k: t.k, n: t.n}));
 }
-function pertence(d, g) { return (S.sep === 'g' ? d.g : S.sep === 'u' ? d.u : d.f) === g.k; }
+const pertence = (i, g) => (S.sep === 'g' ? M[i].g : S.sep === 'u' ? M[i].u : M[i].f) === g.k;
 function montarRegioes() {
-  const grid = $('grid'); grid.innerHTML = ''; paineis = [];
+  const grid = $('grid'); grid.innerHTML = ''; paineis = []; if (!E) return;
+  const A = cA(), B = cB(), ex = eixos();
   grupos().forEach(g => {
-    const ids = DATA.map((d, i) => i).filter(i => pertence(DATA[i], g) && noUF(DATA[i]) && (S.sep === 'f' || !S.faixa || DATA[i].f === S.faixa));
-    if (!ids.length) return;
-    const sx = ids.reduce((a, i) => a + DATA[i].x, 0), sy = ids.reduce((a, i) => a + DATA[i].y, 0), t22 = ids.reduce((a, i) => a + DATA[i].t22, 0), t26 = ids.reduce((a, i) => a + DATA[i].t26, 0);
+    const ids = []; for (let i = 0; i < N; i++) if (pertence(i, g) && noUF(i) && (S.sep === 'f' || !S.faixa || M[i].f === S.faixa)) ids.push(i);
+    const uni = ids.filter(i => ok(A.vv[i]) && (!B || ok(B.vv[i])));
+    if (!uni.length) return;
+    const a = somas(uni, A), b = B ? somas(uni, B) : null;
+    const st = B ? `<b>${fmt(uni.length)}</b> municípios &bull; ${esc(nomeC(A))} <b>${fmt(a.v)}</b> &rarr; <b>${fmt(b.v)}</b> (${f1(b.v - a.v, 0)})<br>${fp(a.pct)} &rarr; ${fp(b.pct)} dos votos válidos (${f1(b.pct - a.pct, 2)} pp) &bull; abstenção ${a.abst.toFixed(1)}%${A.d === B.d ? '' : ' &rarr; ' + b.abst.toFixed(1) + '%'}`
+      : `<b>${fmt(uni.length)}</b> municípios &bull; <b>${fmt(a.v)}</b> votos (${fp(a.pct)} dos votos válidos)<br>abstenção ${a.abst.toFixed(1)}% &bull; brancos ${a.br.toFixed(1)}% &bull; nulos ${a.nu.toFixed(1)}%`;
     const el = document.createElement('div'); el.className = 'card facet';
-    el.innerHTML = `<h3>${g.n}</h3><div class="st"><b>${fmt(ids.length)}</b> municípios &bull; Lula <b>${fmt(sx)}</b> &rarr; <b>${fmt(sy)}</b> (${f1(sy - sx, 0)})<br>${(sx / t22 * 100).toFixed(1)}% &rarr; ${(sy / t26 * 100).toFixed(1)}% dos votos nominais (${f1(sy / t26 * 100 - sx / t22 * 100, 1)} pp)</div><div class="zwrap"><canvas></canvas></div><div class="fleg">${legendaHTML()}</div>`;
+    el.innerHTML = `<h3>${esc(g.n)}</h3><div class="st">${st}</div><div class="zwrap"><canvas></canvas></div><div class="fleg">${legendaHTML()}</div>`;
     grid.appendChild(el);
-    const cv = el.querySelector('canvas'), p = {cv, ids, geom: null, view: null, redraw() { p.geom = desenhar(cv, ids, {dono: p, pequeno: true}); }};
+    const cv = el.querySelector('canvas'), p = {cv, ids, geom: null, view: null, redraw() { p.geom = desenhar(cv, ids, {dono: p, pequeno: true, ex}); }};
     ligar(el.querySelector('.zwrap'), cv, p); paineis.push(p);
   });
+  if (!paineis.length) grid.innerHTML = '<div class="card vazio-msg">Nenhum município com dados nesta seleção.</div>';
 }
 function vRegioes() { paineis.forEach(p => p.redraw()); }
-function zerarZoom() { V1.view = null; paineis.forEach(p => p.view = null); }
+function zerarZoom() { V1.view = null; paineis.forEach(p => { p.view = null; }); }
 
 /* ------------------------------------------------ mapa (Leaflet carregado sob demanda) */
-const NOTA_POLI = 'Cada município é pintado pelo desempenho de Lula (malha municipal do IBGE, simplificada). Cores: classes por percentis nacionais (P15, P35, P50, P65, P85). As linhas mais escuras são as divisas dos estados. Escolha uma UF para dar zoom e destacar o estado, ou troque para círculos proporcionais aos votos de 2022. Clique em um município para marcar o nome, ou procure um pela barra de busca, e use Limpar marcações para remover.';
-const NOTA_CIRC = 'Cada círculo é um município, com tamanho proporcional aos votos de Lula em 2022. Cores: classes por percentis nacionais (P15, P35, P50, P65, P85). Escolha uma UF para dar zoom e destacar o estado, ou troque para os polígonos dos municípios. Clique em um município para marcar o nome, e use Limpar marcações para remover.';
-let rendCirc = null, rendPoli = null, map = null, marcadores = null, grupoCirc = null, camadaPoli = null, camadaUF = null, polis = null, mapaPronto = null, malhaPromessa = null;
+const NOTA_POLI = 'Cada município é pintado conforme a medida escolhida em "Colorir por". As classes usam percentis dos municípios com dados (P15, P35, P50, P65, P85), e municípios sem dados ficam em cinza. As linhas mais escuras são as divisas dos estados. Clique em um município para marcar o nome, ou procure um pela barra de busca, e use Limpar marcações para remover. Troque para círculos, proporcionais ao número de eleitores, se preferir.';
+const NOTA_CIRC = 'Cada círculo é um município, com tamanho proporcional ao número de eleitores aptos e cor conforme a medida escolhida em "Colorir por". Clique em um município para marcar o nome, e use Limpar marcações para remover. Troque para polígonos para ver os limites dos municípios.';
+let rendCirc = null, rendPoli = null, rendUF = null, map = null, marcadores = null, grupoCirc = null, camadaPoli = null, camadaUF = null, polis = null, mapaPronto = null;
+const malhas = {};
 function carregar(src, css) {
-  const a = new Promise((ok, erro) => { const l = document.createElement('link'); l.rel = 'stylesheet'; l.href = css; l.onload = ok; l.onerror = erro; document.head.appendChild(l); });
-  const b = new Promise((ok, erro) => { const t = document.createElement('script'); t.src = src; t.onload = ok; t.onerror = erro; document.head.appendChild(t); });
+  const a = new Promise((res, rej) => { const l = document.createElement('link'); l.rel = 'stylesheet'; l.href = css; l.onload = res; l.onerror = rej; document.head.appendChild(l); });
+  const b = new Promise((res, rej) => { const t = document.createElement('script'); t.src = src; t.onload = res; t.onerror = rej; document.head.appendChild(t); });
   return Promise.all([a, b]);
 }
 function ajustarMapa() { const w = $('mapwrap'); w.style.height = Math.max(460, Math.min(900, Math.round(window.innerHeight * 0.78))) + 'px'; if (map) map.invalidateSize(); }
-const estiloPoli = i => { const on = noUF(DATA[i]), pin = S.pins.has(i); return {fillColor: PAL[CL.cls[i]], fillOpacity: on || pin ? 0.93 : 0.08, color: pin ? '#000' : '#ffffff', weight: pin ? 2.6 : on ? 0.3 : 0, opacity: pin ? 1 : 0.9}; };
+const estiloPoli = i => { const on = noUF(i), pin = S.pins.has(i), sem = CL.cls[i] < 0; return {fillColor: cor(i), fillOpacity: sem ? (on ? 0.7 : 0.08) : on || pin ? 0.93 : 0.08, color: pin ? '#000' : '#ffffff', weight: pin ? 2.6 : on ? 0.3 : 0, opacity: pin ? 1 : 0.9}; };
 function clicarMapa(i) { S.pins.has(i) ? S.pins.delete(i) : S.pins.add(i); contador(); $('info').innerHTML = detalhe(i); pintarMapa(); }
-function carregarMalha() {
-  if (malhaPromessa) return malhaPromessa;
-  const baixar = u => fetch(u).then(r => { if (!r.ok) throw new Error(u); return r.json(); });
-  malhaPromessa = Promise.all([baixar('dados/municipios.geojson'), baixar('dados/ufs.geojson')]).then(([gm, gu]) => {
-    const idx = new Map(DATA.map((d, i) => [d.c, i])); polis = new Array(DATA.length);
-    camadaPoli = L.geoJSON(gm, {renderer: (rendPoli = L.canvas({padding: 0.5})), style: f => estiloPoli(idx.get(f.properties.c)), onEachFeature: (f, layer) => {
+const baixarJSON = u => malhas[u] || (malhas[u] = fetch(u).then(r => { if (!r.ok) throw new Error(u); return r.json(); }).catch(e => { delete malhas[u]; throw e; }));
+function construirPoli() {
+  const arquivos = S.escopo === 'rn' ? ['dados/municipios_rn.geojson', 'dados/uf_rn.geojson'] : ['dados/municipios.geojson', 'dados/ufs.geojson'], escopo = S.escopo;
+  return Promise.all(arquivos.map(baixarJSON)).then(([gm, gu]) => {
+    if (escopo !== S.escopo) return;
+    const idx = new Map(M.map((m, i) => [m.c, i])); polis = new Array(N);
+    camadaPoli = L.geoJSON(gm, {renderer: rendPoli, style: f => estiloPoli(idx.get(f.properties.c)), filter: f => idx.has(f.properties.c), onEachFeature: (f, layer) => {
       const i = idx.get(f.properties.c); polis[i] = layer;
       layer.on('mouseover', () => { $('info').innerHTML = detalhe(i); layer.setStyle({color: '#111', weight: 1.6}); });
       layer.on('mouseout', () => layer.setStyle(estiloPoli(i)));
       layer.on('click', () => clicarMapa(i)); }});
-    map.createPane('ufPane'); map.getPane('ufPane').style.pointerEvents = 'none'; map.getPane('ufPane').style.zIndex = 450;
-    camadaUF = L.geoJSON(gu, {pane: 'ufPane', renderer: L.canvas({pane: 'ufPane'}), interactive: false, style: {color: '#2d3748', weight: 1, fill: false, opacity: 0.85}});
-  }).catch(e => { malhaPromessa = null; throw e; });
-  return malhaPromessa;
+    camadaUF = L.geoJSON(gu, {pane: 'ufPane', renderer: rendUF, interactive: false, style: {color: '#2d3748', weight: S.escopo === 'rn' ? 1.6 : 1, fill: false, opacity: 0.85}});
+  });
+}
+function construirCirculos() {
+  const k = S.escopo === 'rn' ? 0.02 : 0.0052;
+  marcadores = M.map((m, i) => { if (m.lat === null) return null;
+    const c = L.circleMarker([m.lat, m.lon], {renderer: rendCirc, radius: 1.6 + k * Math.sqrt(m.ap), color: '#222', weight: 0.5, fillColor: cor(i), fillOpacity: 0.85});
+    c.on('mouseover', () => { $('info').innerHTML = detalhe(i); }); c.on('click', () => clicarMapa(i)); return c; });
+  grupoCirc = L.layerGroup(M.map((m, i) => i).sort((a, b) => M[b].ap - M[a].ap).map(i => marcadores[i]).filter(Boolean));
+}
+function limparCamadas() {
+  [camadaPoli, camadaUF, grupoCirc].forEach(l => { if (l && map.hasLayer(l)) map.removeLayer(l); });
+  [rendCirc, rendPoli, rendUF].forEach(r => { if (r && map.hasLayer(r)) map.removeLayer(r); });
+  camadaPoli = camadaUF = grupoCirc = marcadores = polis = null; rotulos = [];
 }
 function aplicarModo() {
   if (!map) return Promise.resolve();
   const poli = S.modo === 'poli'; $('mapnote').innerHTML = poli ? NOTA_POLI : NOTA_CIRC;
+  if (!grupoCirc) construirCirculos();
   if (!poli) { [camadaPoli, camadaUF].forEach(l => l && map.hasLayer(l) && map.removeLayer(l)); if (rendPoli && map.hasLayer(rendPoli)) map.removeLayer(rendPoli); map.addLayer(grupoCirc); pintarMapa(); return Promise.resolve(); }
-  return carregarMalha().then(() => { map.removeLayer(grupoCirc); if (rendCirc && map.hasLayer(rendCirc)) map.removeLayer(rendCirc); map.addLayer(camadaPoli); map.addLayer(camadaUF); pintarMapa(); })
+  return (camadaPoli ? Promise.resolve() : construirPoli()).then(() => { if (S.modo !== 'poli' || !camadaPoli) return; map.removeLayer(grupoCirc); if (rendCirc && map.hasLayer(rendCirc)) map.removeLayer(rendCirc); map.addLayer(camadaPoli); map.addLayer(camadaUF); pintarMapa(); })
     .catch(() => { S.modo = 'circ'; $('modo').value = 'circ'; $('info').innerHTML = '<span class="cz">Não foi possível carregar os polígonos. Mostrando círculos.</span>'; return aplicarModo(); });
 }
 function iniciarMapa() {
@@ -499,11 +773,8 @@ function iniciarMapa() {
   mapaPronto = carregar('https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js', 'https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css').then(() => {
     map = L.map('map', {preferCanvas: true}).setView([-14.5, -52], 4);
     L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Light_Gray_Base/MapServer/tile/{z}/{y}/{x}', {maxZoom: 16, attribution: 'Tiles &copy; Esri'}).addTo(map);
-    const canvas = rendCirc = L.canvas({padding: 0.5});
-    marcadores = DATA.map((d, i) => { if (d.lat === null) return null;
-      const m = L.circleMarker([d.lat, d.lon], {renderer: canvas, radius: 1.6 + 0.0078 * Math.sqrt(d.x), color: '#222', weight: 0.5, fillColor: PAL[CL.cls[i]], fillOpacity: 0.85});
-      m.on('mouseover', () => $('info').innerHTML = detalhe(i)); m.on('click', () => clicarMapa(i)); return m; });
-    grupoCirc = L.layerGroup(DATA.map((d, i) => i).sort((a, b) => DATA[b].x - DATA[a].x).map(i => marcadores[i]).filter(Boolean));
+    rendCirc = L.canvas({padding: 0.5}); rendPoli = L.canvas({padding: 0.5});
+    map.createPane('ufPane'); map.getPane('ufPane').style.pointerEvents = 'none'; map.getPane('ufPane').style.zIndex = 450; rendUF = L.canvas({pane: 'ufPane'});
     return aplicarModo();
   }).catch(() => { $('mapmsg').style.display = 'flex'; });
   return mapaPronto;
@@ -513,72 +784,187 @@ function sincronizarPins() {
   rotulos.forEach(l => l.unbindTooltip()); rotulos = [];
   const poli = camadaPoli && map.hasLayer(camadaPoli);
   S.pins.forEach(i => {
-    const l = poli ? polis[i] : marcadores && marcadores[i]; if (!l) return; const d = DATA[i];
-    l.bindTooltip(`${d.n}-${d.u} (${f1(d.s, 0)} | ${f1(d.pp, 1)} pp)`, {permanent: true, direction: 'top', className: 'pin-tip', opacity: 1}); rotulos.push(l);
+    const l = poli ? polis[i] : marcadores && marcadores[i]; if (!l) return;
+    l.bindTooltip(pinTxt(i), {permanent: true, direction: 'top', className: 'pin-tip', opacity: 1}); rotulos.push(l);
     if (poli) l.bringToFront();
   });
 }
 function pintarMapa() {
   if (!map) return;
-  if (grupoCirc && map.hasLayer(grupoCirc)) DATA.forEach((d, i) => { const m = marcadores[i]; if (!m) return; const on = noUF(d), pin = S.pins.has(i);
-    m.setStyle({fillColor: PAL[CL.cls[i]], fillOpacity: on || pin ? 0.88 : 0.07, opacity: on || pin ? 1 : 0.15, color: pin ? '#000' : '#222', weight: pin ? 2.6 : 0.5}); });
+  if (grupoCirc && map.hasLayer(grupoCirc)) M.forEach((m, i) => { const c = marcadores[i]; if (!c) return; const on = noUF(i), pin = S.pins.has(i);
+    c.setStyle({fillColor: cor(i), fillOpacity: on || pin ? 0.88 : 0.07, opacity: on || pin ? 1 : 0.15, color: pin ? '#000' : '#222', weight: pin ? 2.6 : 0.5}); });
   if (camadaPoli && map.hasLayer(camadaPoli)) polis.forEach((l, i) => l && l.setStyle(estiloPoli(i)));
   sincronizarPins();
 }
+function indicesAlvo() {
+  const A = cA(), idx = [];
+  if (S.escopo === 'rn' && A.v.length && A.v.length <= 3) A.v.forEach(([i]) => idx.push(i));
+  else for (let i = 0; i < N; i++) if (noUF(i)) idx.push(i);
+  return idx;
+}
 function zoomUF() {
   if (!map) return;
-  const pts = DATA.filter(d => d.lat !== null && noUF(d)).map(d => [d.lat, d.lon]);
-  map.fitBounds(S.uf ? L.latLngBounds(pts).pad(0.05) : [[-34, -74], [5.5, -34]]);
+  const idx = indicesAlvo().filter(i => M[i].lat !== null);
+  if (!idx.length) return;
+  if (S.escopo === 'br' && !S.uf) { map.fitBounds([[-34, -74], [5.5, -34]]); return; }
+  map.fitBounds(L.latLngBounds(idx.map(i => [M[i].lat, M[i].lon])).pad(S.escopo === 'rn' ? 0.08 : 0.05), {maxZoom: idx.length <= 3 ? 10 : 12});
+}
+function mostrarAlvoNoInfo() {
+  const A = cA();
+  if (S.escopo === 'rn' && A.v.length && A.v.length <= 3) $('info').innerHTML = detalhe(A.v[0][0]);
+  else $('info').innerHTML = '<span class="cz">Passe o mouse (ou toque) em um município para ver os números. Clique para marcar o nome.</span>';
 }
 
-/* ------------------------------------------------ busca de município no mapa */
-const buscaEl = $('buscamapa'), sugEl = $('sugestoes'); let sugIds = [], sugSel = -1;
-function renderSug() {
-  if (!sugIds.length) { sugEl.innerHTML = '<li class="vazio">Nenhum município encontrado</li>'; sugEl.style.display = 'block'; return; }
-  sugEl.innerHTML = sugIds.map((i, k) => `<li role="option" data-i="${i}" class="${k === sugSel ? 'on' : ''}"><span>${DATA[i].n}</span><small>${DATA[i].u}</small></li>`).join(''); sugEl.style.display = 'block';
+/* ------------------------------------------------ campos de busca com sugestões */
+function combo(input, ul, itens, escolher) {
+  let ids = [], sel = -1;
+  const render = () => {
+    if (!ids.length) { ul.innerHTML = '<li class="vazio">Nada encontrado</li>'; ul.style.display = 'block'; return; }
+    ul.innerHTML = ids.map((it, k) => `<li role="option" data-i="${k}" class="${k === sel ? 'on' : ''}"><span>${it.t}</span>${it.s ? `<small>${it.s}</small>` : ''}</li>`).join(''); ul.style.display = 'block';
+  };
+  const buscar = () => { ids = itens(norm(input.value.trim())); sel = ids.length ? 0 : -1; render(); };
+  const pick = k => { const it = ids[k]; if (!it) return; ul.style.display = 'none'; input.blur(); escolher(it); };
+  input.addEventListener('input', buscar);
+  input.addEventListener('focus', () => { if (input.dataset.fixo !== '1') buscar(); else { input.select(); buscar(); } });
+  input.addEventListener('keydown', ev => {
+    if (ev.key === 'Escape') { ul.style.display = 'none'; return; }
+    if (!ids.length) return;
+    if (ev.key === 'ArrowDown') { sel = (sel + 1) % ids.length; render(); ev.preventDefault(); }
+    else if (ev.key === 'ArrowUp') { sel = (sel - 1 + ids.length) % ids.length; render(); ev.preventDefault(); }
+    else if (ev.key === 'Enter') { pick(Math.max(sel, 0)); ev.preventDefault(); }
+  });
+  ul.addEventListener('mousedown', ev => { const li = ev.target.closest('li[data-i]'); if (li) { ev.preventDefault(); pick(+li.dataset.i); } });
+  document.addEventListener('click', ev => { if (!ev.target.closest('.sb')) ul.style.display = 'none'; });
 }
-function sugerir() {
-  const q = norm(buscaEl.value.trim());
-  if (!q) { sugEl.style.display = 'none'; sugIds = []; return; }
-  const pref = [], cont = [], porPop = (a, b) => DATA[b].x - DATA[a].x;
-  DATA.forEach((d, i) => { if (d.k.startsWith(q)) pref.push(i); else if (d.k.includes(q)) cont.push(i); });
-  sugIds = pref.sort(porPop).concat(cont.sort(porPop)).slice(0, 8); sugSel = sugIds.length ? 0 : -1; renderSug();
-}
+/* município no mapa */
+const buscaEl = $('buscamapa');
+combo(buscaEl, $('sugestoes'), q => {
+  if (!q) return [];
+  const pref = [], cont = [], porPop = (a, b) => M[b].ap - M[a].ap;
+  M.forEach((m, i) => { if (m.k.startsWith(q)) pref.push(i); else if (m.k.includes(q)) cont.push(i); });
+  return pref.sort(porPop).concat(cont.sort(porPop)).slice(0, 8).map(i => ({i, t: esc(M[i].n), s: M[i].u}));
+}, it => { buscaEl.value = `${M[it.i].n} - ${M[it.i].u}`; irParaMunicipio(it.i); });
 function irParaMunicipio(i) {
   iniciarMapa().then(() => {
     if (!map) return;
-    if (S.uf && DATA[i].u !== S.uf) { S.uf = ''; $('uf').value = ''; }
+    if (S.uf && M[i].u !== S.uf) { S.uf = ''; $('uf').value = ''; calcClasses(); }
     S.pins.add(i); contador(); $('info').innerHTML = detalhe(i); pintarMapa();
     const l = camadaPoli && map.hasLayer(camadaPoli) ? polis[i] : null;
-    if (l) map.fitBounds(l.getBounds(), {maxZoom: 10, padding: [60, 60]}); else map.setView([DATA[i].lat, DATA[i].lon], 9);
+    if (l) map.fitBounds(l.getBounds(), {maxZoom: 10, padding: [60, 60]}); else map.setView([M[i].lat, M[i].lon], 9);
   });
 }
-function escolher(i) { sugEl.style.display = 'none'; buscaEl.value = `${DATA[i].n} - ${DATA[i].u}`; buscaEl.blur(); irParaMunicipio(i); }
-buscaEl.addEventListener('input', sugerir);
-buscaEl.addEventListener('focus', () => { if (buscaEl.value.trim() && !/ - [A-Z]{2}$/.test(buscaEl.value)) sugerir(); });
-buscaEl.addEventListener('keydown', ev => {
-  if (ev.key === 'Escape') { sugEl.style.display = 'none'; return; }
-  if (!sugIds.length) return;
-  if (ev.key === 'ArrowDown') { sugSel = (sugSel + 1) % sugIds.length; renderSug(); ev.preventDefault(); }
-  else if (ev.key === 'ArrowUp') { sugSel = (sugSel - 1 + sugIds.length) % sugIds.length; renderSug(); ev.preventDefault(); }
-  else if (ev.key === 'Enter') { escolher(sugIds[Math.max(sugSel, 0)]); ev.preventDefault(); }
+/* candidato (recorte do RN) */
+const pessoaEl = $('pessoa');
+combo(pessoaEl, $('sug-pessoa'), q => {
+  if (q === norm(E.pess[S.pessoa].n)) q = '';
+  const lista = q ? E.pess.map((p, i) => i).filter(i => E.pess[i].k.includes(q)).sort((a, b) => (E.pess[b].k.startsWith(q) ? 1 : 0) - (E.pess[a].k.startsWith(q) ? 1 : 0) || E.pess[b].tot - E.pess[a].tot) : E.ordemP;
+  return lista.slice(0, 10).map(i => ({i, t: esc(E.pess[i].n) + (E.pess[i].nc !== E.pess[i].n && !E.pess[i].agg ? ` <small>${esc(E.pess[i].nc)}</small>` : ''), s: esc(E.pess[i].resumo)}));
+}, it => { definirPessoa(it.i); });
+pessoaEl.dataset.fixo = '1';
+
+/* ------------------------------------------------ seleção de pessoa e candidaturas */
+function rotOpc(c) { return c.d.nome + (c.ue ? ' (' + c.ue + ')' : '') + (c.par && c.par !== 'PT' ? ' [' + c.par + ']' : ''); }
+function popularAB() {
+  const grupos = [[E.pess[S.pessoa].n, E.pess[S.pessoa].c]];
+  if (S.pessoa !== 0 && E.pess[0].agg) grupos.push([E.pess[0].n, E.pess[0].c]);
+  const li = E.pess.findIndex(p => p.n === 'Lula'); if (S.escopo === 'rn' && li > 0 && li !== S.pessoa) grupos.push(['Lula (votos no RN)', E.pess[li].c]);
+  const mk = (sel, nenhuma) => { sel.innerHTML = (nenhuma ? '<option value="">Nenhuma (só A)</option>' : '') + grupos.map(([g, cs]) => `<optgroup label="${esc(g)}">` + cs.map(k => `<option value="${k}">${esc(rotOpc(E.cand[k]))}</option>`).join('') + '</optgroup>').join(''); };
+  mk($('selA'), false); mk($('selB'), true);
+  $('selA').value = S.A; $('selB').value = S.B === null ? '' : S.B;
+  pessoaEl.value = E.pess[S.pessoa].n;
+}
+function popularMetricas() {
+  METS = listaMetricas();
+  if (!METS.some(g => g.m.some(m => m.k === S.metrica))) S.metrica = S.B !== null ? 'pp' : 'Apv';
+  $('metrica').innerHTML = METS.map(g => `<optgroup label="${esc(g.g)}">` + g.m.map(m => `<option value="${m.k}">${esc(m.r)}</option>`).join('') + '</optgroup>').join('');
+  $('metrica').value = S.metrica;
+}
+function padraoPessoa(p) {
+  const cs = E.pess[p].c;
+  if (S.escopo === 'rn' && p === 0) { const a = cs.find(k => E.cand[k].d.id === 'ver20'), b = cs.find(k => E.cand[k].d.id === 'de22'); if (a !== undefined && b !== undefined) return [a, b]; }
+  return cs.length > 1 ? [cs[cs.length - 2], cs[cs.length - 1]] : [cs[0], null];
+}
+function definirPessoa(p) { S.pessoa = p; [S.A, S.B] = padraoPessoa(p); S.metrica = S.B !== null ? 'pp' : 'Apv'; aplicarSelecao(true); }
+function aplicarSelecao(zoom) {
+  popularAB(); popularMetricas(); zerarZoom(); S.pins.clear(); contador();
+  calcClasses(); legenda(); atualizarTopo();
+  if (S.view === 'mapa') { pintarMapa(); if (zoom) { zoomUF(); mostrarAlvoNoInfo(); } }
+  else if (S.view === 'dispersao') atualizarDispersao();
+  else if (S.view === 'candidatos') renderCandidatos();
+}
+function mudouMedida() { calcClasses(); legenda(); atualizarTopo(); redesenhar(); }
+
+/* ------------------------------------------------ candidatos (tabela) */
+const ordCand = {c: 'tot', dir: -1};
+function renderCandidatos() {
+  if (!E || S.escopo !== 'rn') return;
+  const fd = $('fdisp').value, fs = $('fsit').value, q = norm($('fnome').value.trim()), soma = $('fsoma').checked;
+  let rows = E.cand.filter(c => (!fd || c.d.id === fd) && (!fs || c.sit === fs) && (soma || !c.agg) && (!q || norm(c.n + ' ' + E.pess[c.p].nc).includes(q)));
+  const chave = {n: c => norm(c.n), d: c => c.dx, ue: c => c.ue || '', par: c => c.par, sit: c => c.sit, tot: c => c.tot, pct: c => ok(c.pct) ? c.pct : -1, nm: c => c.nm, rk: c => c.agg || !c.rk ? 1e9 : c.rk}[ordCand.c];
+  rows = rows.slice().sort((a, b) => { const x = chave(a), y = chave(b); return (x < y ? -1 : x > y ? 1 : 0) * ordCand.dir || a.id - b.id; });
+  $('tabcand').querySelector('tbody').innerHTML = rows.map(c => `<tr data-k="${c.id}" class="${c.agg ? 'soma' : ''}"><td class="nome" title="${esc(E.pess[c.p].nc)}">${esc(c.n)}</td><td>${esc(c.d.nome)}</td><td>${esc(c.ue || (c.agg && c.d.cargo !== 'Presidente' ? (c.d.ano === 2020 ? 'Onde o PT lançou candidatos' : 'Estado todo') : 'Estado todo'))}</td><td>${esc(c.par)}</td><td>${esc(c.sit || '-')}</td>` +
+    `<td class="n">${fmt(c.tot)}</td><td class="n">${ok(c.pct) ? fp(c.pct) : '-'}</td><td class="n">${fmt(c.nm)}</td><td class="n">${c.agg || !c.rk ? '-' : c.rk + 'º de ' + fmt(c.nc)}</td></tr>`).join('');
+  $('fcont').textContent = `${fmt(rows.length)} candidatura${rows.length === 1 ? '' : 's'}`;
+  document.querySelectorAll('#tabcand th').forEach(th => { th.classList.toggle('ord', th.dataset.c === ordCand.c); th.classList.toggle('asc', th.dataset.c === ordCand.c && ordCand.dir === 1); });
+}
+document.querySelectorAll('#tabcand th').forEach(th => { th.onclick = () => { ordCand.dir = ordCand.c === th.dataset.c ? -ordCand.dir : (th.dataset.c === 'n' || th.dataset.c === 'ue' ? 1 : -1); ordCand.c = th.dataset.c; renderCandidatos(); }; });
+['fdisp', 'fsit', 'fsoma'].forEach(id => { $(id).onchange = renderCandidatos; }); $('fnome').oninput = renderCandidatos;
+$('tabcand').querySelector('tbody').addEventListener('click', ev => {
+  const tr = ev.target.closest('tr[data-k]'); if (!tr) return;
+  const c = E.cand[+tr.dataset.k]; S.pessoa = c.p; S.A = c.id; S.B = null; S.metrica = 'Apv';
+  mostrar('mapa'); aplicarSelecao(true);
 });
-sugEl.addEventListener('mousedown', ev => { const li = ev.target.closest('li[data-i]'); if (li) { ev.preventDefault(); escolher(+li.dataset.i); } });
-document.addEventListener('click', ev => { if (!ev.target.closest('.sb')) sugEl.style.display = 'none'; });
 
 /* ------------------------------------------------ orquestração */
-function atualizarDispersao() { if (S.sep === 'n') vDispersao(); else { montarRegioes(); vRegioes(); } }
+function atualizarDispersao() {
+  $('dispnote').innerHTML = notaDisp();
+  if (S.sep === 'n') vDispersao(); else { montarRegioes(); vRegioes(); }
+}
+function notaDisp() {
+  const A = cA(), B = cB(), eixo = B ? `Eixo X: ${esc(rotC(A))}. Eixo Y: ${esc(rotC(B))}. Abaixo da diagonal (paridade, Y = X), o município teve menos votos em B do que em A.` : `Eixo X: eleitores aptos do município. Eixo Y: votos de ${esc(rotC(A))}. Escolha uma candidatura B para comparar duas eleições.`;
+  return `${eixo} Passe o mouse para ver os números e clique em um ponto para manter o nome marcado. Na escala logarítmica, municípios com zero voto não aparecem. Com uma busca${S.escopo === 'br' ? ' ou uma UF' : ''}, o gráfico se ajusta a essa seleção${S.escopo === 'br' ? ' e os demais municípios ficam em cinza (dá para desligar em "Outros estados em cinza")' : ''}. Arraste para mover o gráfico. Para dar zoom, role o mouse sobre o gráfico (desmarque "Zoom com a rolagem" para voltar a rolar a página), use os botões + e − ou a pinça no celular, ou troque o botão ✥ por ▭ para arrastar e selecionar uma área (Shift inverte o modo, e Ctrl + rolagem sempre dá zoom). O duplo clique, ou o botão ↻, volta ao enquadramento padrão. Para separar por ${S.escopo === 'br' ? 'região, UF ou ' : ''}porte do município, use "Separar por".`;
+}
 function redesenhar() { if (S.view === 'dispersao') { if (S.sep === 'n') vDispersao(); else vRegioes(); } else if (S.view === 'mapa') pintarMapa(); }
 function mostrar(v) {
   S.view = v; document.body.dataset.view = v;
   document.querySelectorAll('.tab').forEach(b => b.setAttribute('aria-selected', b.dataset.v === v));
-  if (history.replaceState) history.replaceState(null, '', '#' + v);
-  if (v === 'mapa') { ajustarMapa(); iniciarMapa().then(() => { ajustarMapa(); setTimeout(zoomUF, 60); }); }
+  if (history.replaceState) history.replaceState(null, '', '#' + (S.escopo === 'rn' ? 'rn/' : '') + v);
+  if (!E) return;
+  if (v === 'mapa') { ajustarMapa(); iniciarMapa().then(() => { ajustarMapa(); if (map) { pintarMapa(); setTimeout(() => { zoomUF(); mostrarAlvoNoInfo(); }, 60); } }); }
   else if (v === 'dispersao') atualizarDispersao();
+  else if (v === 'candidatos') renderCandidatos();
 }
-document.querySelectorAll('.tab').forEach(b => b.onclick = () => mostrar(b.dataset.v));
-$('metrica').onchange = e => { S.metrica = e.target.value; CL = classes(S.metrica); legenda(); redesenhar(); };
-$('uf').onchange = e => { S.uf = e.target.value; zerarZoom(); if (S.view === 'dispersao') atualizarDispersao(); else if (S.view === 'mapa') { pintarMapa(); zoomUF(); } };
+
+function definirEscopo(js, id) {
+  E = js; M = js.mun; N = M.length;
+  Object.assign(S, {escopo: id, uf: '', termo: '', sep: 'n', faixa: '', pessoa: 0}); S.pins.clear();
+  [S.A, S.B] = padraoPessoa(0); S.metrica = 'pp';
+  document.body.dataset.escopo = id; document.body.dataset.sep = 'n';
+  document.querySelectorAll('.scopes button').forEach(b => b.setAttribute('aria-pressed', b.dataset.e === id));
+  $('h1').textContent = TITULOS[id].h1; $('sub').textContent = TITULOS[id].sub;
+  $('uf').innerHTML = '<option value="">Brasil</option>' + [...new Set(M.map(m => m.u))].sort().map(u => `<option value="${u}">${u}</option>`).join(''); $('busca').value = '';
+  $('sep').innerHTML = '<option value="n">Nenhum</option>' + (id === 'br' ? '<option value="g">Região</option><option value="u">UF</option>' : '') + '<option value="f">Porte do município</option>'; $('faixa').innerHTML = TAM.map(t => `<option value="${t.k}">${t.n}</option>`).join(''); $('faixa').disabled = false;
+  $('fdisp').innerHTML = '<option value="">Todas as disputas</option>' + js.disp.map(d => `<option value="${d.id}">${esc(d.nome)}</option>`).join('');
+  if (!zoomManual) { S.zoomRoda = true; $('zroda').checked = true; }
+  if (map) { limparCamadas(); }
+  document.body.classList.remove('carregando');
+  popularAB(); popularMetricas(); calcClasses(); legenda(); atualizarTopo(); contador();
+  $('modo').value = S.modo;
+  if (S.view === 'candidatos' && id === 'br') S.view = 'mapa';
+  zerarZoom();
+}
+function mudarEscopo(id, view) {
+  document.body.classList.add('carregando');
+  return carregarEscopo(id).then(js => { definirEscopo(js, id); mostrar(view || S.view); if (S.view === 'mapa' && map) aplicarModo().then(() => { zoomUF(); mostrarAlvoNoInfo(); }); })
+    .catch(() => { document.body.classList.remove('carregando'); $('carregando').style.display = 'block'; $('carregando').textContent = 'Não foi possível carregar os dados.'; });
+}
+document.querySelectorAll('.tab').forEach(b => { b.onclick = () => mostrar(b.dataset.v); });
+document.querySelectorAll('.scopes button').forEach(b => { b.onclick = () => { if (b.dataset.e !== S.escopo) mudarEscopo(b.dataset.e, S.view === 'candidatos' && b.dataset.e === 'br' ? 'mapa' : S.view); }; });
+$('selA').onchange = e => { S.A = +e.target.value; if (S.B === S.A) S.B = null; aplicarSelecao(false); if (S.view === 'mapa') { zoomUF(); mostrarAlvoNoInfo(); } };
+$('selB').onchange = e => { S.B = e.target.value === '' ? null : +e.target.value; if (S.B === S.A) S.B = null; S.metrica = S.B !== null ? 'pp' : 'Apv'; aplicarSelecao(false); };
+$('troca').onclick = () => { if (S.B === null) return; [S.A, S.B] = [S.B, S.A]; aplicarSelecao(false); };
+$('metrica').onchange = e => { S.metrica = e.target.value; mudouMedida(); };
+$('uf').onchange = e => { S.uf = e.target.value; zerarZoom(); atualizarTopo(); if (S.view === 'dispersao') atualizarDispersao(); else if (S.view === 'mapa') { pintarMapa(); zoomUF(); } };
 $('modo').onchange = e => { S.modo = e.target.value; aplicarModo(); };
 $('zroda').onchange = e => { S.zoomRoda = e.target.checked; zoomManual = true; };
 $('cinza').onchange = e => { S.cinza = e.target.checked; redesenhar(); };
@@ -588,14 +974,16 @@ $('sep').onchange = e => { S.sep = e.target.value; if (!zoomManual) { S.zoomRoda
 $('faixa').onchange = e => { S.faixa = e.target.value; zerarZoom(); atualizarDispersao(); };
 $('limpar').onclick = () => { buscaEl.value = ''; S.pins.clear(); contador(); redesenhar(); };
 window.addEventListener('resize', () => { if (S.view === 'mapa') ajustarMapa(); else redesenhar(); });
-function rota(v) { if (v === 'regioes') { S.sep = 'g'; document.body.dataset.sep = 'g'; $('sep').value = 'g'; return 'dispersao'; } return ['mapa', 'dispersao', 'dados'].includes(v) ? v : null; }
-window.addEventListener('hashchange', () => { const h = location.hash.slice(1), v = rota(h); if (v && (v !== S.view || h === 'regioes')) mostrar(v); });
+function lerHash() {
+  const p = location.hash.slice(1).split('/'), esc2 = (p[0] === 'rn' || p[0] === 'br') ? p[0] : 'br'; let v = (p[0] === 'rn' || p[0] === 'br') ? p[1] : p[0];
+  if (v === 'regioes') v = 'dispersao';
+  return {esc: esc2, v: ['mapa', 'dispersao', 'candidatos', 'dados'].includes(v) ? v : 'mapa', regioes: (p[0] === 'regioes' || p[1] === 'regioes')};
+}
+window.addEventListener('hashchange', () => { const h = lerHash(); if (h.esc !== S.escopo) mudarEscopo(h.esc, h.v); else if (h.v !== S.view) mostrar(h.v); });
 
-[...new Set(DATA.map(d => d.u))].sort().forEach(u => { const o = document.createElement('option'); o.value = u; o.text = u; $('uf').appendChild(o); });
-TAM.forEach(t => { const o = document.createElement('option'); o.value = t.k; o.text = t.n; $('faixa').appendChild(o); });
-legenda(); contador();
-const inicial = location.hash.slice(1);
-mostrar(rota(inicial) || 'mapa');
+const inicial = lerHash();
+S.view = inicial.v === 'candidatos' && inicial.esc === 'br' ? 'mapa' : inicial.v; document.body.dataset.view = S.view; S.escopo = inicial.esc;
+mudarEscopo(inicial.esc, S.view).then(() => { if (inicial.regioes) { S.sep = 'g'; document.body.dataset.sep = 'g'; $('sep').value = 'g'; atualizarDispersao(); } });
 </script>
 </body>
 </html>

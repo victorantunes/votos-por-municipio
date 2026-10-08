@@ -1,14 +1,16 @@
-"""Compara os votos nominais de Lula no 2º turno de 2022 e no 1º turno de 2026, por município.
+"""Gera o site: dados dos dois recortes (Lula no Brasil e candidatos do PT no RN) e a página.
 
 Entradas
-  dados/2022/presidente_2t_por_municipio.csv  (TSE, votacao_candidato_munzona_2022, 2º turno, Presidente)
-  dados/agg_2026/agg_<UF>.csv                 (TSE, boletim de urna 2026 1T, Presidente, agregado por município)
-  dados/centroides_ibge.csv                   (ponto representativo de cada município, malha IBGE 2022)
-  dados/correspondencia_tse_ibge.csv          (código TSE -> código IBGE)
+  dados/br/contexto.csv, dados/br/lula.csv                       (scripts/preparar.py)
+  dados/rn/{disputas,contexto,pessoas,candidaturas,votos}.csv    (scripts/preparar.py)
+  dados/centroides_ibge.csv, dados/correspondencia_tse_ibge.csv
 Saídas
-  docs/index.html, docs/dados/resultado_municipios.csv, docs/dados/resumo_uf.csv
+  docs/dados/escopo_br.json, docs/dados/escopo_rn.json           dados lidos pela página
+  docs/dados/*.csv                                               tabelas para baixar
+  docs/index.html                                                página única (modelo em scripts/templates/app.html)
 """
 import json
+import re
 import sys
 from pathlib import Path
 
@@ -26,58 +28,21 @@ REGIAO = {**dict.fromkeys(['AC', 'AM', 'AP', 'PA', 'RO', 'RR', 'TO'], 'Norte'),
           **dict.fromkeys(['DF', 'GO', 'MS', 'MT'], 'Centro-Oeste'),
           **dict.fromkeys(['ES', 'MG', 'RJ', 'SP'], 'Sudeste'),
           **dict.fromkeys(['PR', 'RS', 'SC'], 'Sul')}
-
-# ---------------------------------------------------------------- 2022, 2º turno
-p22 = pd.read_csv(D / '2022' / 'presidente_2t_por_municipio.csv')
-lula22 = p22[p22.NR_CANDIDATO == 13][['CD_MUNICIPIO', 'NM_MUNICIPIO', 'SG_UF', 'QT_VOTOS_NOMINAIS', 'total']].rename(
-    columns={'CD_MUNICIPIO': 'cd_tse', 'NM_MUNICIPIO': 'nome22', 'SG_UF': 'uf', 'QT_VOTOS_NOMINAIS': 'votos22', 'total': 'total22'})
-assert lula22.cd_tse.is_unique
-
-# ---------------------------------------------------------------- 2026, 1º turno
-agg = pd.concat([pd.read_csv(f, dtype={'CD_MUNICIPIO': int}) for f in sorted((D / 'agg_2026').glob('agg_??.csv'))], ignore_index=True)
-agg = agg[agg.SG_UF != 'ZZ']
-
-# Boa Esperança do Norte (MT) foi desmembrada de Sorriso e só aparece em 2026. Para manter o mesmo território de 2022,
-# os votos dela são somados aos de Sorriso (código TSE 2022 de Sorriso encontrado abaixo).
-NOVO_MUN = 73709
-cd_sorriso = int(lula22.loc[(lula22.nome22 == 'SORRISO') & (lula22.uf == 'MT'), 'cd_tse'].iloc[0])
-ctx_orig = agg.groupby('CD_MUNICIPIO')[['QT_APTOS', 'QT_COMPARECIMENTO', 'QT_SECOES']].first()
-agg['CD_MUNICIPIO'] = agg['CD_MUNICIPIO'].replace({NOVO_MUN: cd_sorriso})
-ctx_orig.index = ctx_orig.index.to_series().replace({NOVO_MUN: cd_sorriso})
-ctx = ctx_orig.groupby(level=0).sum().rename(
-    columns={'QT_APTOS': 'aptos26', 'QT_COMPARECIMENTO': 'comparec26', 'QT_SECOES': 'secoes26'})
-
-nom = agg[agg.DS_TIPO_VOTAVEL == 'Nominal']
-tot26 = nom.groupby('CD_MUNICIPIO').QT_VOTOS.sum().rename('total26')
-lula26 = nom[nom.NR_VOTAVEL == 13].groupby('CD_MUNICIPIO').QT_VOTOS.sum().rename('votos26')
-flav26 = nom[nom.NR_VOTAVEL == 22].groupby('CD_MUNICIPIO').QT_VOTOS.sum().rename('flavio26')
-v26 = pd.concat([lula26, flav26, tot26, ctx], axis=1).reset_index().rename(columns={'CD_MUNICIPIO': 'cd_tse'})
-nm26 = agg.drop_duplicates('CD_MUNICIPIO').set_index('CD_MUNICIPIO')['NM_MUNICIPIO']
-print('Boa Esperança do Norte somada a Sorriso (cd_tse %d)' % cd_sorriso)
-
-# ---------------------------------------------------------------- comparecimento 2022 (2T), para contexto
-det = D / '2022' / 'detalhe_votacao_munzona_2022_BR.csv'
-if det.exists():
-    dt = pd.read_csv(det, sep=';', encoding='latin-1', dtype=str)
-    dt = dt[(dt.DS_CARGO == 'Presidente') & (dt.NR_TURNO == '2')]
-    dt['cd_tse'] = dt.CD_MUNICIPIO.astype(int)
-    c22 = dt.groupby('cd_tse')[['QT_APTOS', 'QT_COMPARECIMENTO']].agg(lambda s: s.astype(int).sum()).rename(
-        columns={'QT_APTOS': 'aptos22', 'QT_COMPARECIMENTO': 'comparec22'}).reset_index()
-else:
-    c22 = pd.DataFrame(columns=['cd_tse', 'aptos22', 'comparec22'])
-
-# ---------------------------------------------------------------- junção
-df = lula22.merge(v26, on='cd_tse', how='outer', indicator=True)
-print('junção 2022 x 2026:', df['_merge'].value_counts().to_dict())
-assert (df['_merge'] == 'both').all(), 'municípios sem correspondência entre 2022 e 2026'
-df = df.drop(columns='_merge').merge(c22, on='cd_tse', how='left')
-
-corr = pd.read_csv(D / 'correspondencia_tse_ibge.csv', dtype=str)
-corr['cd_tse'] = corr.CD_MUNICIPIO.astype(int)
-df = df.merge(corr[['cd_tse', 'CD_IBGE', 'NM_IBGE']], on='cd_tse', how='left')
-cen = pd.read_csv(D / 'centroides_ibge.csv', dtype={'CD_MUN': str})
-df = df.merge(cen[['CD_MUN', 'lat', 'lon']], left_on='CD_IBGE', right_on='CD_MUN', how='left').drop(columns='CD_MUN')
 PARTICULAS = {'De', 'Da', 'Do', 'Das', 'Dos', 'E'}
+REPO = 'votos-por-municipio'  # nome do repositório no GitHub, usado nos links da página
+CTX = ['aptos', 'comparec', 'abst', 'brancos', 'nulos', 'validos']
+
+# nome completo, nome curto (listas e eixos) e tipo (maj = majoritária, prop = proporcional)
+DISPUTAS = {
+    'ver20': ('Vereador 2020', 'Vereador 2020', 'Vereador', 2020, 'prop'),
+    'pref20': ('Prefeito 2020', 'Prefeito 2020', 'Prefeito', 2020, 'maj'),
+    'de22': ('Deputado Estadual 2022', 'Dep. Estadual 2022', 'Deputado Estadual', 2022, 'prop'),
+    'df22': ('Deputado Federal 2022', 'Dep. Federal 2022', 'Deputado Federal', 2022, 'prop'),
+    'sen22': ('Senador 2022', 'Senador 2022', 'Senador', 2022, 'maj'),
+    'gov22': ('Governador 2022', 'Governador 2022', 'Governador', 2022, 'maj'),
+    'pres22t1': ('Presidente 2022 (1º turno)', 'Presidente 2022 1ºT', 'Presidente', 2022, 'maj'),
+    'pres22t2': ('Presidente 2022 (2º turno)', 'Presidente 2022 2ºT', 'Presidente', 2022, 'maj'),
+    'pres26t1': ('Presidente 2026 (1º turno)', 'Presidente 2026 1ºT', 'Presidente', 2026, 'maj')}
 
 
 def bonito(nome):
@@ -85,61 +50,14 @@ def bonito(nome):
     return ' '.join(p.lower() if (i > 0 and p in PARTICULAS) else p for i, p in enumerate(palavras))
 
 
-df['nome'] = df.nome22.map(bonito)
-df.loc[df.cd_tse == cd_sorriso, 'nome'] = 'Sorriso (com Boa Esperança do Norte)'
-df['regiao'] = df.uf.map(REGIAO)
-
-# ---------------------------------------------------------------- métricas
-df['pct22'] = df.votos22 / df.total22 * 100
-df['pct26'] = df.votos26 / df.total26 * 100
-df['saldo'] = df.votos26 - df.votos22
-df['var_pp'] = df.pct26 - df.pct22
-df['ret_pct'] = (df.votos26 / df.votos22 - 1) * 100
-df['pct_flavio26'] = df.flavio26 / df.total26 * 100
-
-cols = ['CD_IBGE', 'cd_tse', 'nome', 'uf', 'regiao', 'votos22', 'total22', 'pct22', 'votos26', 'total26', 'pct26', 'saldo', 'var_pp',
-        'ret_pct', 'flavio26', 'pct_flavio26', 'aptos22', 'comparec22', 'aptos26', 'comparec26', 'secoes26', 'lat', 'lon']
-df = df[cols].sort_values(['uf', 'nome']).reset_index(drop=True)
-df.to_csv(OUT / 'dados' / 'resultado_municipios.csv', index=False, encoding='utf-8')
-
-# ---------------------------------------------------------------- resumos
-def resumo(g):
-    return pd.Series({
-        'municipios': len(g), 'lula_2022_2T': g.votos22.sum(), 'lula_2026_1T': g.votos26.sum(),
-        'saldo': g.votos26.sum() - g.votos22.sum(),
-        'pct_2022_2T': g.votos22.sum() / g.total22.sum() * 100, 'pct_2026_1T': g.votos26.sum() / g.total26.sum() * 100,
-        'var_pp': g.votos26.sum() / g.total26.sum() * 100 - g.votos22.sum() / g.total22.sum() * 100,
-        'mediana_var_pp_municipios': g.var_pp.median()})
-
-
-por_uf = df.groupby('uf').apply(resumo).round(2)
-por_uf.to_csv(OUT / 'dados' / 'resumo_uf.csv', encoding='utf-8')
-nacional = resumo(df)
-print('NACIONAL (soma dos municípios):'); print(nacional.round(2).to_string())
-print('\nPor região:'); print(df.groupby('regiao').apply(resumo).round(2).to_string())
-print('\nPor UF (saldo e pp):'); print(por_uf[['municipios', 'lula_2022_2T', 'lula_2026_1T', 'saldo', 'var_pp']].to_string())
-print('\nQuantis de var_pp:', np.percentile(df.var_pp, [15, 35, 50, 65, 85]).round(2).tolist())
-print('sem coordenada:', int(df.lat.isna().sum()))
-
-# ---------------------------------------------------------------- HTMLs
 def pyval(v):
-    if isinstance(v, (np.integer,)):
+    if isinstance(v, np.integer):
         return int(v)
     if isinstance(v, (np.floating, float)):
         return None if pd.isna(v) else round(float(v), 4)
     return v
 
 
-recs = []
-for i, r in df.iterrows():
-    recs.append({'i': i, 'c': str(r.CD_IBGE), 'n': r.nome, 'u': r.uf, 'g': r.regiao, 'x': int(r.votos22), 'px': pyval(r.pct22), 'y': int(r.votos26),
-                 'py': pyval(r.pct26), 's': int(r.saldo), 'pp': pyval(r.var_pp), 'rt': pyval(r.ret_pct),
-                 'ap26': None if pd.isna(r.aptos26) else int(r.aptos26), 'cp26': None if pd.isna(r.comparec26) else int(r.comparec26),
-                 'ap22': None if pd.isna(r.aptos22) else int(r.aptos22), 'cp22': None if pd.isna(r.comparec22) else int(r.comparec22),
-                 'sc': int(r.secoes26), 'lat': pyval(r.lat), 'lon': pyval(r.lon)})
-payload = json.dumps(recs, ensure_ascii=False, separators=(',', ':'))
-meta = {'nacional': {k: pyval(v) for k, v in nacional.items()}}
-# ---------------------------------------------------------------- página inicial
 def inteiro(n):
     return f'{int(round(n)):,}'.replace(',', '.')
 
@@ -149,25 +67,243 @@ def decimal(n, casas=1, sinal=False):
     return t.replace('.', ',').replace('-', '−')
 
 
-def linhas(tabela, rotulo):
+def pct(a, b):
+    return a / b * 100 if b else float('nan')
+
+
+# ---------------------------------------------------------------- municípios
+corr = pd.read_csv(D / 'correspondencia_tse_ibge.csv', dtype=str)
+corr['cd_tse'] = corr.CD_MUNICIPIO.astype(int)
+cen = pd.read_csv(D / 'centroides_ibge.csv', dtype={'CD_MUN': str})
+base = corr.merge(cen[['CD_MUN', 'lat', 'lon']], left_on='CD_IBGE', right_on='CD_MUN', how='left').drop(columns='CD_MUN')
+base['nome'] = base.NM_MUNICIPIO.map(bonito)
+base['uf'] = base.SG_UF
+base['regiao'] = base.uf.map(REGIAO)
+# Boa Esperança do Norte (MT) foi desmembrada de Sorriso e só existe em 2026; os votos dos dois foram somados em Sorriso
+base.loc[(base.nome == 'Sorriso') & (base.uf == 'MT'), 'nome'] = 'Sorriso (com Boa Esperança do Norte)'
+base = base[['cd_tse', 'CD_IBGE', 'nome', 'uf', 'regiao', 'lat', 'lon']]
+
+
+def montar_mun(cds):
+    m = base[base.cd_tse.isin(cds)].sort_values(['uf', 'nome']).reset_index(drop=True)
+    return m
+
+
+def registro_mun(m):
+    return [{'c': r.CD_IBGE, 'n': r.nome, 'u': r.uf, 'g': r.regiao, 'lat': pyval(r.lat), 'lon': pyval(r.lon)} for r in m.itertuples()]
+
+
+def serie(df, cds, col):
+    """Valores de uma coluna alinhados à lista de municípios (cds), com None onde não há linha."""
+    s = df.set_index('cd_tse')[col].reindex(cds)
+    return [None if pd.isna(v) else int(v) for v in s]
+
+
+def bloco_disputa(ctx, did, cds):
+    nome, curto, cargo, ano, tipo = DISPUTAS[did]
+    g = ctx[ctx.disp == did]
+    return {'id': did, 'nome': nome, 'curto': curto, 'cargo': cargo, 'ano': ano, 'tipo': tipo,
+            'ap': serie(g, cds, 'aptos'), 'cp': serie(g, cds, 'comparec'), 'br': serie(g, cds, 'brancos'),
+            'nu': serie(g, cds, 'nulos'), 'va': serie(g, cds, 'validos')}
+
+
+def pares(votos, cds):
+    pos = {c: i for i, c in enumerate(cds)}
+    return [[pos[int(c)], int(v)] for c, v in zip(votos.cd_tse, votos.votos) if int(c) in pos]
+
+
+def jdump(obj, nome):
+    (OUT / 'dados' / nome).write_text(json.dumps(obj, ensure_ascii=False, separators=(',', ':')), encoding='utf-8')
+
+
+def resumo_part(g):
+    """Participação agregada de um conjunto de linhas de contexto."""
+    return {'aptos': g.aptos.sum(), 'abst': pct(g.abst.sum(), g.aptos.sum()), 'brancos': pct(g.brancos.sum(), g.comparec.sum()),
+            'nulos': pct(g.nulos.sum(), g.comparec.sum()), 'validos': g.validos.sum(), 'comparec': g.comparec.sum()}
+
+
+# ================================================================ Brasil: Lula
+ctx_br = pd.read_csv(D / 'br' / 'contexto.csv')
+lula = pd.read_csv(D / 'br' / 'lula.csv')
+mun_br = montar_mun(set(ctx_br.cd_tse))
+assert len(mun_br) == 5570
+cds_br = [int(c) for c in mun_br.cd_tse]
+ORD_BR = ['pres22t1', 'pres22t2', 'pres26t1']
+esc_br = {'id': 'br', 'mun': registro_mun(mun_br), 'disp': [bloco_disputa(ctx_br, d, cds_br) for d in ORD_BR],
+          'pess': [{'n': 'Lula', 'nc': 'Luiz Inácio Lula da Silva', 'ext': False, 'c': [0, 1, 2]}], 'cand': []}
+for k, d in enumerate(ORD_BR):
+    v = lula[lula.disp == d]
+    tot = int(v.votos.sum())
+    esc_br['cand'].append({'p': 0, 'd': k, 'n': 'Lula', 'num': '13', 'par': 'PT', 'sit': {'pres22t1': 'Foi ao 2º turno', 'pres22t2': 'Eleito', 'pres26t1': ''}[d],
+                           'tot': tot, 'nm': int((v.votos > 0).sum()), 'v': pares(v, cds_br)})
+jdump(esc_br, 'escopo_br.json')
+
+# ---- tabela de resultados para baixar (Brasil)
+wide = mun_br.copy()
+SUF = {'pres22t1': '2022_1t', 'pres22t2': '2022_2t', 'pres26t1': '2026_1t'}
+for d in ORD_BR:
+    c = ctx_br[ctx_br.disp == d].set_index('cd_tse')
+    w = pd.DataFrame({f'votos_{SUF[d]}': lula[lula.disp == d].set_index('cd_tse').votos, f'validos_{SUF[d]}': c.validos,
+                      f'pct_{SUF[d]}': lula[lula.disp == d].set_index('cd_tse').votos / c.validos * 100,
+                      f'aptos_{SUF[d]}': c.aptos, f'comparecimento_{SUF[d]}': c.comparec, f'abstencoes_{SUF[d]}': c.abst,
+                      f'brancos_{SUF[d]}': c.brancos, f'nulos_{SUF[d]}': c.nulos,
+                      f'pct_abstencao_{SUF[d]}': c.abst / c.aptos * 100, f'pct_brancos_{SUF[d]}': c.brancos / c.comparec * 100,
+                      f'pct_nulos_{SUF[d]}': c.nulos / c.comparec * 100})
+    wide = wide.merge(w, left_on='cd_tse', right_index=True, how='left')
+wide['saldo'] = wide.votos_2026_1t - wide.votos_2022_2t
+wide['var_pp'] = wide.pct_2026_1t - wide.pct_2022_2t
+wide['ret_pct'] = (wide.votos_2026_1t / wide.votos_2022_2t - 1) * 100
+cols = ['CD_IBGE', 'cd_tse', 'nome', 'uf', 'regiao'] + [c for c in wide.columns if c.endswith(('_2022_1t', '_2022_2t', '_2026_1t'))] + ['saldo', 'var_pp', 'ret_pct', 'lat', 'lon']
+wide[cols].round(4).to_csv(OUT / 'dados' / 'resultado_municipios.csv', index=False, encoding='utf-8')
+
+
+def resumo_lula(g):
+    return pd.Series({
+        'municipios': len(g), 'lula_2022_2T': g.votos_2022_2t.sum(), 'lula_2026_1T': g.votos_2026_1t.sum(),
+        'saldo': g.votos_2026_1t.sum() - g.votos_2022_2t.sum(),
+        'pct_2022_2T': g.votos_2022_2t.sum() / g.validos_2022_2t.sum() * 100, 'pct_2026_1T': g.votos_2026_1t.sum() / g.validos_2026_1t.sum() * 100,
+        'var_pp': g.votos_2026_1t.sum() / g.validos_2026_1t.sum() * 100 - g.votos_2022_2t.sum() / g.validos_2022_2t.sum() * 100,
+        'mediana_var_pp_municipios': g.var_pp.median(),
+        'abstencao_2022_2T': g.abstencoes_2022_2t.sum() / g.aptos_2022_2t.sum() * 100, 'abstencao_2026_1T': g.abstencoes_2026_1t.sum() / g.aptos_2026_1t.sum() * 100})
+
+
+por_uf = wide.groupby('uf').apply(resumo_lula).round(2)
+por_uf.to_csv(OUT / 'dados' / 'resumo_uf.csv', encoding='utf-8')
+nacional = resumo_lula(wide)
+print('NACIONAL (soma dos municípios):'); print(nacional.round(2).to_string())
+qs = np.percentile(wide.var_pp, [15, 35, 50, 65, 85])
+print('Quantis de var_pp:', qs.round(2).tolist(), '| sem coordenada:', int(wide.lat.isna().sum()))
+
+# ================================================================ RN: candidatos do PT
+ctx_rn = pd.read_csv(D / 'rn' / 'contexto.csv')
+disp_rn = pd.read_csv(D / 'rn' / 'disputas.csv')
+pess_rn = pd.read_csv(D / 'rn' / 'pessoas.csv')
+cand_rn = pd.read_csv(D / 'rn' / 'candidaturas.csv', dtype={'numero': str}).fillna({'situacao': ''})
+votos_rn = pd.read_csv(D / 'rn' / 'votos.csv')
+mun_rn = montar_mun(set(ctx_rn.cd_tse))
+cds_rn = [int(c) for c in mun_rn.cd_tse]
+ORD_RN = list(disp_rn.id)
+idx_d = {d: k for k, d in enumerate(ORD_RN)}
+cand_rn['d'] = cand_rn.disp.map(idx_d)
+
+# pessoas: o agregado do PT vem primeiro, depois as demais por votos
+pess_rn['maior'] = pess_rn.pessoa.map(cand_rn.groupby('pessoa').tot.max())
+pess_rn = pess_rn.sort_values('maior', ascending=False).reset_index(drop=True)
+idx_p = {p: k + 1 for k, p in enumerate(pess_rn.pessoa)}  # 0 = PT (soma)
+cands = []
+por_pessoa = {0: []}
+for r in cand_rn.sort_values(['pessoa', 'd']).itertuples():
+    v = votos_rn[votos_rn.cid == r.cid]
+    c = {'p': idx_p[r.pessoa], 'd': int(r.d), 'n': r.nome_urna, 'num': str(r.numero), 'par': r.partido, 'sit': r.situacao, 'tot': int(r.tot),
+         'nm': int(r.nmun), 'rk': int(r.rk), 'nc': int(r.nc), 'ue': r.ue if r.disp in ('ver20', 'pref20') else '',
+         'v': pares(v, cds_rn)}
+    if r.anulados:
+        c['an'] = int(r.anulados)
+    cands.append(c)
+# candidaturas do PT somadas, uma por disputa
+pt = cand_rn[cand_rn.partido == 'PT']
+soma = []
+for d in ORD_RN:
+    cs = pt[pt.disp == d]
+    if cs.empty:
+        continue
+    v = votos_rn[votos_rn.cid.isin(cs.cid)].groupby('cd_tse', as_index=False).votos.sum()
+    soma.append({'p': 0, 'd': idx_d[d], 'n': 'PT (soma)', 'num': '13', 'par': 'PT', 'sit': f"{len(cs)} candidato{'s' if len(cs) > 1 else ''}",
+                 'tot': int(cs.tot.sum()), 'nm': int((v.votos > 0).sum()), 'npt': int(len(cs)), 'neleitos': int((cs.situacao == 'Eleito').sum()),
+                 'agg': True, 'v': pares(v, cds_rn)})
+cands = soma + cands
+for k, c in enumerate(cands):
+    por_pessoa.setdefault(c['p'], []).append(k)
+pess = [{'n': 'PT (soma dos candidatos)', 'nc': 'Todos os candidatos do PT em cada disputa', 'ext': False, 'agg': True, 'c': por_pessoa[0]}]
+for r in pess_rn.itertuples():
+    pess.append({'n': r.nome_urna, 'nc': r.nome, 'ext': bool(r.externo), 'c': por_pessoa[idx_p[r.pessoa]]})
+esc_rn = {'id': 'rn', 'mun': registro_mun(mun_rn), 'disp': [bloco_disputa(ctx_rn, d, cds_rn) for d in ORD_RN], 'pess': pess, 'cand': cands}
+jdump(esc_rn, 'escopo_rn.json')
+
+# ---- tabelas para baixar (RN)
+nomes_mun = mun_rn.set_index('cd_tse').nome
+nomes_disp = {d: DISPUTAS[d][0] for d in ORD_RN}
+ctx_out = ctx_rn.assign(municipio=ctx_rn.cd_tse.map(nomes_mun), disputa=ctx_rn.disp.map(nomes_disp))
+ctx_out['pct_abstencao'] = ctx_out.abst / ctx_out.aptos * 100
+ctx_out['pct_brancos'] = ctx_out.brancos / ctx_out.comparec * 100
+ctx_out['pct_nulos'] = ctx_out.nulos / ctx_out.comparec * 100
+ctx_out = ctx_out.merge(mun_rn[['cd_tse', 'CD_IBGE']], on='cd_tse')
+ctx_out[['disputa', 'CD_IBGE', 'cd_tse', 'municipio', 'aptos', 'comparec', 'abst', 'brancos', 'nulos', 'validos', 'pct_abstencao', 'pct_brancos', 'pct_nulos']].rename(
+    columns={'comparec': 'comparecimento', 'abst': 'abstencoes', 'validos': 'votos_validos'}).round(4).to_csv(OUT / 'dados' / 'rn_participacao.csv', index=False, encoding='utf-8')
+cand_pub = cand_rn.assign(disputa=cand_rn.disp.map(nomes_disp))[['cid', 'nome_urna', 'nome', 'numero', 'partido', 'disputa', 'ue', 'situacao', 'tot', 'nmun', 'rk', 'nc', 'anulados']].rename(
+    columns={'cid': 'candidatura', 'nome_urna': 'nome_de_urna', 'nome': 'nome_completo', 'ue': 'circunscricao', 'situacao': 'situacao', 'tot': 'votos_validos', 'nmun': 'municipios_com_votos',
+             'rk': 'posicao', 'nc': 'candidatos_na_disputa', 'anulados': 'votos_anulados'})
+cand_pub.to_csv(OUT / 'dados' / 'rn_candidaturas.csv', index=False, encoding='utf-8')
+vp = votos_rn.merge(cand_rn[['cid', 'nome_urna', 'disp']], on='cid').merge(mun_rn[['cd_tse', 'CD_IBGE', 'nome']], on='cd_tse')
+vp['disputa'] = vp.disp.map(nomes_disp)
+vp[['cid', 'nome_urna', 'disputa', 'CD_IBGE', 'cd_tse', 'nome', 'votos']].rename(
+    columns={'cid': 'candidatura', 'nome_urna': 'nome_de_urna', 'nome': 'municipio'}).to_csv(OUT / 'dados' / 'rn_votos_por_municipio.csv', index=False, encoding='utf-8')
+
+# ================================================================ tabelas estáticas da página
+def linhas_lula(tabela):
     out = []
     for nome, r in tabela.iterrows():
         out.append(f"<tr><td>{nome}</td><td class='n'>{inteiro(r.municipios)}</td><td class='n'>{inteiro(r.lula_2022_2T)}</td>"
                    f"<td class='n'>{inteiro(r.lula_2026_1T)}</td><td class='n'>{inteiro(r.saldo)}</td>"
                    f"<td class='n'>{decimal(r.pct_2022_2T)}%</td><td class='n'>{decimal(r.pct_2026_1T)}%</td>"
                    f"<td class='n'>{decimal(r.var_pp, 1, True)}</td></tr>")
+    return '\n'.join(out)
+
+
+def linhas_part_br():
+    out = []
+    for d in ORD_BR:
+        g = ctx_br[ctx_br.disp == d]
+        r = resumo_part(g)
+        v = lula[lula.disp == d].votos.sum()
+        out.append(f"<tr><td>{DISPUTAS[d][0]}</td><td class='n'>{inteiro(r['aptos'])}</td><td class='n'>{decimal(r['abst'], 2)}%</td><td class='n'>{decimal(r['brancos'], 2)}%</td>"
+                   f"<td class='n'>{decimal(r['nulos'], 2)}%</td><td class='n'>{inteiro(r['validos'])}</td><td class='n'>{inteiro(v)}</td><td class='n'>{decimal(pct(v, r['validos']), 2)}%</td></tr>")
+    return '\n'.join(out)
+
+
+def linhas_part_regiao():
+    out = []
+    m = ctx_br.merge(base[['cd_tse', 'regiao']], on='cd_tse')
+    for reg in ['Norte', 'Nordeste', 'Centro-Oeste', 'Sudeste', 'Sul']:
+        cel = []
+        for d in ('pres22t2', 'pres26t1'):
+            r = resumo_part(m[(m.disp == d) & (m.regiao == reg)])
+            cel += [decimal(r['abst'], 1) + '%', decimal(r['brancos'], 1) + '%', decimal(r['nulos'], 1) + '%']
+        out.append(f"<tr><td>{reg}</td>" + ''.join(f"<td class='n'>{c}</td>" for c in cel) + '</tr>')
+    return '\n'.join(out)
+
+
+def linhas_part_rn():
+    """Uma linha por disputa, só com os municípios em que o PT teve candidatos (todos, nas disputas de 2022)."""
+    out = []
+    for d in ORD_RN:
+        cs = pt[pt.disp == d]
+        munis = set(votos_rn[votos_rn.cid.isin(cs.cid)].cd_tse)
+        g = ctx_rn[(ctx_rn.disp == d) & ctx_rn.cd_tse.isin(munis)]
+        r = resumo_part(g)
+        votos = int(cs.tot.sum())
+        eleitos = int((cs.situacao == 'Eleito').sum()) if d != 'pres26t1' else None
+        out.append(f"<tr><td>{DISPUTAS[d][0]}</td><td class='n'>{len(g)}</td><td class='n'>{inteiro(r['aptos'])}</td><td class='n'>{decimal(r['abst'], 1)}%</td><td class='n'>{decimal(r['brancos'], 1)}%</td>"
+                   f"<td class='n'>{decimal(r['nulos'], 1)}%</td><td class='n'>{inteiro(r['validos'])}</td><td class='n'>{len(cs)}</td><td class='n'>{inteiro(votos)}</td>"
+                   f"<td class='n'>{decimal(pct(votos, r['validos']), 1)}%</td><td class='n'>{'-' if eleitos is None else eleitos}</td></tr>")
     return chr(10).join(out)
 
 
-por_regiao = df.groupby('regiao').apply(resumo).loc[['Norte', 'Nordeste', 'Centro-Oeste', 'Sudeste', 'Sul']]
-flavio_pct = df.flavio26.sum() / df.total26.sum() * 100
+por_regiao = wide.groupby('regiao').apply(resumo_lula).loc[['Norte', 'Nordeste', 'Centro-Oeste', 'Sudeste', 'Sul']]
+flavio = pd.concat([pd.read_csv(f, dtype={'CD_MUNICIPIO': int}) for f in sorted((D / 'agg_2026').glob('agg_??.csv'))])
+flavio = flavio[(flavio.SG_UF != 'ZZ') & (flavio.DS_TIPO_VOTAVEL == 'Nominal')]
+flavio_pct = flavio[flavio.NR_VOTAVEL == 22].QT_VOTOS.sum() / flavio.QT_VOTOS.sum() * 100
+n_pt_cand = int((pt.disp.isin(['ver20', 'pref20', 'de22', 'df22', 'gov22', 'sen22'])).sum())
+trocas = {
+    '__Q_PP__': ', '.join(decimal(v, 2) for v in qs[:-1]) + ' e ' + decimal(qs[-1], 2), '__Q85__': decimal(qs[-1], 2),
+    '__N_MUN__': inteiro(len(wide)), '__L22__': inteiro(nacional.lula_2022_2T), '__L26__': inteiro(nacional.lula_2026_1T),
+    '__SALDO__': decimal(nacional.saldo / 1e6, 2, True) + ' mi', '__P22__': decimal(nacional.pct_2022_2T), '__P26__': decimal(nacional.pct_2026_1T),
+    '__VARPP__': decimal(nacional.var_pp, 1, True), '__FLAVIO__': decimal(flavio_pct),
+    '__TAB_REGIAO__': linhas_lula(por_regiao), '__TAB_UF__': linhas_lula(por_uf), '__TAB_PART_BR__': linhas_part_br(), '__TAB_PART_REG__': linhas_part_regiao(),
+    '__TAB_PART_RN__': linhas_part_rn(), '__RN_NPESS__': inteiro(len(pess_rn) - 1), '__RN_NCAND__': inteiro(n_pt_cand), '__RN_NMUN__': inteiro(len(mun_rn)), '__REPO__': REPO}
 idx = (ROOT / 'scripts' / 'templates' / 'app.html').read_text(encoding='utf-8')
-qs = np.percentile(df.var_pp, [15, 35, 50, 65, 85])
-trocas = {'__Q_PP__': ', '.join(decimal(v, 2) for v in qs[:-1]) + ' e ' + decimal(qs[-1], 2), '__Q85__': decimal(qs[-1], 2), '__DATA__': payload, '__N_MUN__': inteiro(len(df)), '__L22__': inteiro(nacional.lula_2022_2T), '__L26__': inteiro(nacional.lula_2026_1T),
-          '__SALDO__': decimal(nacional.saldo / 1e6, 2, True) + ' mi', '__P22__': decimal(nacional.pct_2022_2T), '__P26__': decimal(nacional.pct_2026_1T),
-          '__VARPP__': decimal(nacional.var_pp, 1, True), '__FLAVIO__': decimal(flavio_pct),
-          '__TAB_REGIAO__': linhas(por_regiao, 'Região'), '__TAB_UF__': linhas(por_uf, 'UF')}
 for k, v in trocas.items():
     idx = idx.replace(k, v)
+assert not re.search(r'__[A-Z0-9_]+__', idx), 'token sem substituição: ' + str(set(re.findall(r'__[A-Z0-9_]+__', idx)))
 (OUT / 'index.html').write_text(idx, encoding='utf-8')
-print('gerado', OUT / 'index.html')
+print('gerado', OUT / 'index.html', '| JSON:', {f: round((OUT / 'dados' / f).stat().st_size / 1e3) for f in ('escopo_br.json', 'escopo_rn.json')}, 'kB')

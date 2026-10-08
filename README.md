@@ -1,79 +1,97 @@
-# Lula em 2022 e 2026, município a município
+# Votos por município: Lula no Brasil e PT no Rio Grande do Norte
 
-Comparação dos votos nominais de Lula para presidente em cada um dos 5.570 municípios brasileiros, entre o **2º turno de 2022** e o **1º turno de 2026**, com dados abertos do TSE.
+Mapa, gráficos de dispersão e tabelas com os votos, a abstenção, os brancos e os nulos de cada município, com dados abertos do TSE. O site tem dois recortes:
 
-**Site:** https://victorantunes.github.io/lula-2022-2026/
+- **Lula no Brasil:** os votos de Lula para presidente em cada um dos 5.570 municípios, no 1º e no 2º turno de 2022 e no 1º turno de 2026.
+- **PT no Rio Grande do Norte:** os votos de todos os candidatos do PT no RN que concorreram em 2020 (prefeito e vereador) e em 2022 (governador, deputado federal e deputado estadual), mais Lula com os votos que recebeu no estado.
 
-O site tem um mapa por município (em polígonos da malha do IBGE ou em círculos), um gráfico de dispersão (2022 no eixo X, 2026 no eixo Y, com a linha de paridade), a mesma dispersão separada por região, UF ou faixa de tamanho, e uma aba com tabelas, método e downloads.
+**Site:** https://victorantunes.github.io/votos-por-municipio/
 
-## Resultado em uma linha
-Somando os municípios (sem o exterior), Lula passou de 60.193.094 votos nominais em 2022 (2º turno) para 53.722.151 em 2026 (1º turno), o que equivale a ir de 50,9% para 45,2% dos votos nominais.
+O site tem um mapa por município (em polígonos da malha do IBGE ou em círculos), um gráfico de dispersão (a candidatura A no eixo X, a B no eixo Y, com a linha de paridade), a mesma dispersão separada por região, UF ou porte do município, uma lista de candidatos (no recorte do RN) e uma aba com tabelas, método e downloads.
 
-## Como foi calculado
-- Votos nominais de Lula (número 13) para presidente por município. O percentual é calculado sobre os votos nominais, que excluem brancos e nulos.
-- 2022: resultados de votação por município do TSE (2º turno).
-- 2026: boletins de urna do 1º turno divulgados pelo TSE em 05/10/2026, somados por município.
-- As cores usam os percentis P15, P35, P50, P65 e P85 da métrica escolhida (variação em pontos percentuais, saldo em votos ou retenção) entre todos os municípios.
-- O exterior não entra. Boa Esperança do Norte (MT) foi desmembrada de Sorriso e só existe em 2026, então os votos dos dois foram somados para manter o território de 2022.
+## Como os dados estão organizados
+Uma pessoa pode concorrer a cargos diferentes ao longo dos anos, então os dados separam três coisas:
 
-## Métricas
-Todas comparam o mesmo município nas duas eleições. Valor negativo significa que Lula teve menos votos no 1º turno de 2026 do que no 2º turno de 2022. As seis cores do mapa e dos gráficos usam os percentis P15, P35, P50, P65 e P85 da métrica escolhida, calculados entre os 5.570 municípios.
+| Conceito | O que é | Exemplo |
+|---|---|---|
+| **Disputa** | a eleição de um cargo em um ano e turno | Governador 2022, Vereador 2020 |
+| **Candidatura** | um candidato em uma disputa | Fátima Bezerra, Governador 2022 |
+| **Pessoa** | todas as candidaturas de um mesmo candidato, ligadas pelo CPF do cadastro do TSE (o CPF não é publicado) | quem foi candidato a prefeito em 2020 e a deputado em 2022 |
+
+Em cada município e em cada disputa, os dados trazem também o **contexto**: eleitores aptos, comparecimento, abstenções, brancos, nulos e votos válidos. Na página, a candidatura **A** é a base e a **B** é a comparação (opcional): pode ser outro cargo da mesma pessoa, a soma dos candidatos do PT em uma disputa, ou Lula na mesma eleição.
+
+Quem concorreu a prefeito ou vereador em 2020 só recebeu votos no seu município, então o mapa de um candidato municipal destaca um único município. A "soma do PT" reúne os votos nominais de todos os candidatos do partido em cada disputa e mostra a força do PT nos municípios em que ele lançou candidatos.
+
+## Participação: abstenção, brancos e nulos
+| Medida | Cálculo |
+|---|---|
+| **Abstenção** | `(aptos − comparecimento) ÷ aptos`. Eleitores de seções que não puderam ser instaladas contam como abstenção. |
+| **Brancos** | `votos em branco ÷ comparecimento` |
+| **Nulos** | `(comparecimento − válidos − brancos) ÷ comparecimento`. Inclui os nulos digitados pelo eleitor, os anulados depois da eleição e os anulados sub judice. Nos boletins de urna de 2026 só há válidos, brancos e nulos. |
+| **Votos válidos** | votos nominais, mais os votos de legenda nas eleições proporcionais (deputado e vereador) |
+| **% dos votos válidos** | `votos do candidato ÷ votos válidos do município` |
+
+Em cada município, aptos = abstenções + comparecimento, e comparecimento = válidos + brancos + nulos. O mapa e os gráficos podem ser coloridos por essas medidas e pela variação delas entre A e B.
+
+## Métricas de comparação
+Valem quando há uma candidatura B para comparar com a A. O valor é sempre B menos A: um número negativo quer dizer que B teve menos votos do que A naquele município.
 
 | Métrica | Cálculo | Como ler |
 |---|---|---|
-| **Variação em pontos percentuais** (padrão) | `% 2026 − % 2022`, em que `% = votos de Lula ÷ votos nominais de todos os candidatos` | Compara a participação de Lula. Não depende do tamanho do município nem do comparecimento, então é a mais comparável entre cidades grandes e pequenas. |
-| **Saldo em votos** | `votos 2026 − votos 2022` | Quantos votos o município ganhou ou perdeu. Depende do tamanho do município (as maiores perdas ficam nas cidades grandes) e do comparecimento. Serve para ver o peso de cada município no total nacional. |
-| **Retenção** | `(votos 2026 ÷ votos 2022 − 1) × 100` | Variação percentual dos votos do próprio Lula. Uma retenção de −17% quer dizer que ele manteve 83% dos votos de 2022. Reflete também mudanças no comparecimento e nos votos brancos e nulos. |
+| **Variação em pontos percentuais** (padrão) | `% de B − % de A`, em que `% = votos ÷ votos válidos` | Compara a participação. Não depende do tamanho do município nem do comparecimento, então é a mais comparável entre cidades grandes e pequenas. |
+| **Saldo em votos** | `votos de B − votos de A` | Quantos votos o município ganhou ou perdeu. Depende do tamanho do município. Serve para ver o peso de cada município no total. |
+| **Retenção** | `(votos de B ÷ votos de A − 1) × 100` | Variação percentual dos votos. Uma retenção de −17% quer dizer que B ficou com 83% dos votos de A. Reflete também mudanças no comparecimento e nos votos brancos e nulos. |
 
-Exemplo, São Paulo: em 2022 (2º turno) Lula teve 3.677.921 votos entre 6.869.405 nominais (53,54%), e em 2026 (1º turno) teve 3.052.349 entre 6.553.181 (46,58%). O saldo é de −625.572 votos, a variação é de −6,96 pontos percentuais e a retenção é de −17,0%. A retenção cai mais do que os pontos percentuais porque o total de votos nominais da cidade também diminuiu.
-
-Nos dados, o saldo quase não se relaciona com as outras duas métricas (correlação próxima de zero), enquanto a variação em pontos percentuais e a retenção andam juntas (correlação de 0,57).
+Exemplo, São Paulo, Lula de 2022 (2º turno) para 2026 (1º turno): em 2022 Lula teve 3.677.921 votos entre 6.869.405 válidos (53,54%), e em 2026 teve 3.052.349 entre 6.553.181 (46,58%). O saldo é de −625.572 votos, a variação é de −6,96 pontos percentuais e a retenção é de −17,0%.
 
 ### Percentis e as seis cores
-O percentil mostra a posição de um município em relação aos demais. Para a métrica escolhida, os 5.570 municípios são colocados em ordem, do pior valor ao melhor. O percentil 15 (P15) é o valor abaixo do qual ficam 15% dos municípios, o P50 é a mediana (metade fica abaixo e metade acima) e o P85 é o valor acima do qual ficam os 15% melhores. Os cinco cortes P15, P35, P50, P65 e P85 dividem os municípios em seis classes:
+O percentil mostra a posição de um município em relação aos demais. Os municípios com dados são colocados em ordem, do menor valor ao maior. O percentil 15 (P15) é o valor abaixo do qual ficam 15% dos municípios, o P50 é a mediana e o P85 é o valor acima do qual ficam os 15% maiores. Os cinco cortes P15, P35, P50, P65 e P85 dividem os municípios em seis classes, com 15%, 20%, 15%, 15%, 20% e 15% deles.
 
-| Classe | Faixa | Parcela dos municípios |
-|---|---|---|
-| Queda Severa | do P0 ao P15 (os piores) | 15% |
-| Queda Forte | do P15 ao P35 | 20% |
-| Abaixo da Mediana | do P35 ao P50 | 15% |
-| Acima da Mediana | do P50 ao P65 | 15% |
-| Retenção Forte | do P65 ao P85 | 20% |
-| Destaque Positivo | do P85 ao P100 (os melhores) | 15% |
+Nas comparações da mesma pessoa ou do mesmo partido ao longo do tempo, as classes vão de Queda Severa a Destaque Positivo (vermelho a verde). Nas demais medidas vão de Menores 15% a Maiores 15% (azul, mais escuro quanto maior o valor). Municípios sem dados ficam em cinza, e quando há poucos municípios com dados (por exemplo, um candidato a vereador) não há percentis. As classes são relativas: dizem se o município está acima ou abaixo dos outros, e não se o valor é positivo ou negativo.
 
-Os limites de cada classe aparecem na legenda e mudam conforme a métrica. Na variação em pontos percentuais, com os dados atuais, os cortes P15, P35, P50, P65 e P85 são −10,51, −8,23, −7,14, −6,19 e −4,64 pontos percentuais. Os percentis são calculados entre todos os municípios do país, então as cores têm o mesmo significado no mapa, na dispersão e em cada painel por região ou UF.
-
-As classes são relativas, e não absolutas. Elas dizem se o município foi melhor ou pior do que os outros, e não se ele ganhou ou perdeu votos. Com os dados atuais, até o limite inferior do Destaque Positivo é negativo (−4,64 pontos percentuais), o que significa que muitos municípios dessa classe também tiveram queda, só que menor do que a da maioria.
+## O que entrou e o que ficou de fora (recorte do RN)
+- Entraram as pessoas que foram candidatas pelo PT no RN em 2020 ou 2022, com todas as candidaturas delas que tiveram votos próprios, inclusive as de outro partido no outro ano, e Lula (1º e 2º turnos de 2022 e 1º turno de 2026, só com os votos do estado).
+- Ficaram de fora vice-prefeitos, vice-governadores e suplentes de senador (os votos vão para o titular), os votos de legenda, candidatos de aliados do PT, e as eleições de 2024 e de 2026, exceto Lula em 2026. Nos arquivos do TSE não há candidato do PT ao Senado com votos no RN em 2022.
+- Em 2022 o PT formou federação com o PCdoB e o PV. A soma do PT considera só os candidatos registrados pelo próprio partido.
 
 ## Cuidados na leitura
-- O 2º turno de 2022 teve dois candidatos e o 1º turno de 2026 teve vários, então parte da queda em pontos percentuais vem da mudança no número de candidatos.
+- O 2º turno de 2022 teve dois candidatos e o 1º turno de 2026 teve vários, então parte da queda em pontos percentuais de Lula vem da mudança no número de candidatos.
+- Comparar cargos diferentes mistura efeitos distintos. Uma eleição para deputado tem dezenas de candidatos disputando os mesmos votos, então a % dos votos válidos de um deputado é sempre pequena.
 - O saldo em votos depende também do comparecimento.
-- Os dados são dos boletins de urna de 05/10/2026 e o TSE pode atualizar os arquivos. Para uso oficial, confira no site do TSE.
+- O exterior não entra. Boa Esperança do Norte (MT) foi desmembrada de Sorriso e só existe em 2026, então os votos dos dois foram somados para manter o território de 2022.
+- Os dados de 2026 são dos boletins de urna de 05/10/2026 e o TSE pode atualizar os arquivos. Para uso oficial, confira no site do TSE.
 
 ## Estrutura
 ```
 docs/                     site publicado (GitHub Pages)
   index.html              página única, gerada por scripts/analisar.py
-  dados/                  resultado_municipios.csv, resumo_uf.csv e a malha simplificada (municipios.geojson, ufs.geojson)
+  dados/                  dados lidos pela página (escopo_br.json, escopo_rn.json), malhas (municipios.geojson, municipios_rn.geojson, ufs.geojson, uf_rn.geojson)
+                          e tabelas para baixar (resultado_municipios.csv, resumo_uf.csv, rn_candidaturas.csv, rn_votos_por_municipio.csv, rn_participacao.csv)
 dados/
-  2022/                   resultado de 2022 por município (TSE)
-  agg_2026/               votos de presidente em 2026, agregados por município e UF (TSE)
+  br/                     Lula no Brasil: contexto.csv (participação por município e eleição) e lula.csv (votos)
+  rn/                     PT no RN: disputas.csv, contexto.csv, pessoas.csv, candidaturas.csv, votos.csv
+  agg_2026/               votos de presidente em 2026, agregados por município e UF (boletins de urna do TSE)
   centroides_ibge.csv     ponto representativo de cada município (malha IBGE 2022)
   correspondencia_tse_ibge.csv
+  tse/                    arquivos brutos do TSE (não versionados, porque o cadastro de candidatos traz CPF e e-mail)
 scripts/
-  coletar_bu_2026.py      baixa os boletins de urna e agrega os votos de presidente
+  coletar_tse.py          baixa do TSE os resultados de 2020 e 2022 e extrai o RN e o Presidente de 2022
+  coletar_bu_2026.py      baixa os boletins de urna de 2026 e agrega os votos de presidente
+  preparar.py             organiza tudo em tabelas simples (dados/br e dados/rn)
   centroides.py           extrai as coordenadas da malha do IBGE
   malha.py                simplifica a malha municipal (polígonos do mapa), preservando as fronteiras entre vizinhos
-  analisar.py             calcula as métricas e gera o site
+  analisar.py             gera os dados da página, as tabelas para baixar e o site
   templates/app.html      modelo da página
 ```
 
 ## Como refazer
 ```bash
 pip install pandas geopandas
+python scripts/coletar_tse.py       # baixa cerca de 700 MB do TSE (2020 e 2022) para dados/tse/
 python scripts/coletar_bu_2026.py   # baixa cerca de 5 GB do TSE e grava dados/agg_2026/ (opcional, os agregados já estão no repositório)
-python scripts/analisar.py          # gera docs/index.html e docs/dados/*.csv
+python scripts/preparar.py          # gera dados/br e dados/rn
 python scripts/malha.py             # gera os polígonos do mapa (precisa da malha do IBGE em dados/malha_ibge/)
+python scripts/analisar.py          # gera docs/index.html, docs/dados/*.json e docs/dados/*.csv
 ```
 
 ## Fonte
