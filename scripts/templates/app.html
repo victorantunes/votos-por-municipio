@@ -224,7 +224,7 @@
   <div id="carregando">Carregando os dados...</div>
   <div class="bar">
     <div class="item so-rn"><label for="pessoa">Candidato(a)</label><div class="sb" id="wpessoa"><input type="search" id="pessoa" placeholder="Buscar candidato(a) ou PT (soma)..." autocomplete="off"><ul class="sug" id="sug-pessoa" role="listbox"></ul></div></div>
-    <label>Candidatura A <select id="selA"></select></label>
+    <label><span id="txtA">Candidatura A</span> <select id="selA"></select></label>
     <label id="lblB">Comparar com (B) <select id="selB"></select></label>
     <button class="btn" id="troca" type="button" title="Trocar A e B">&#8644;</button>
     <label>Colorir por <select id="metrica"></select></label>
@@ -317,7 +317,7 @@ __TAB_PART_REG__
         <p>No topo da página, o <b>tipo de mapa</b> define o que cada candidato mostra:</p>
         <ul>
           <li><b>Comparar com 2026:</b> para quem concorreu em 2020, 2022 ou 2024 e também em 2026. A candidatura A é a anterior (por padrão, do mesmo cargo, como deputado estadual 2022, ou a mais recente se não houver) e a B é a de 2026. Dá para trocar a A por qualquer outra candidatura anterior da mesma pessoa. O mapa mostra, município a município, quanto a votação mudou. A soma do PT e Lula também entram nesse tipo.</li>
-          <li><b>Analisar isoladamente:</b> mostra uma única candidatura, de qualquer candidato e ano (por exemplo, Isolda Dantas só em 2026), sem comparar com outros anos nem com outros candidatos. O mapa, a dispersão e os números do topo usam só essa candidatura. Escolha o candidato e, em Candidatura A, o cargo e o ano. Funciona também para quem estreou em 2026, que não tem votação anterior.</li>
+          <li><b>Analisar isoladamente:</b> mostra uma única candidatura, de qualquer candidato e ano (por exemplo, Isolda Dantas só em 2026), sem comparar com outros anos nem com outros candidatos. O mapa, a dispersão e os números do topo usam só essa candidatura. Escolha o candidato e, em Candidatura, o cargo e o ano. Funciona também para quem estreou em 2026, que não tem votação anterior.</li>
           <li><b>Qualquer cargo e ano:</b> escolha livremente a candidatura A e, se quiser, a B, de qualquer pessoa, da soma do PT ou de Lula.</li>
         </ul>
         <p>Escolha o candidato no campo de busca e depois as candidaturas A e B. As cores, o gráfico de dispersão e as estatísticas do topo passam a mostrar B em relação a A.</p>
@@ -528,7 +528,7 @@ function listaMetricas() {
       {k: 'dn', r: 'Variação dos nulos (pp)', t: 'neu', u: 'pp', f: i => B.d.pn[i] - A.d.pn[i]});
     out.push(g);
   }
-  out.push({g: 'A: ' + rotC(A), m: cand(A, 'A').concat(part(A, 'A'))});
+  out.push({g: (S.tipo === 'iso' ? 'Candidatura: ' : 'A: ') + rotC(A), m: cand(A, 'A').concat(part(A, 'A'))});
   if (B) out.push({g: 'B: ' + rotC(B), m: cand(B, 'B').concat(mesmaDisp ? [] : part(B, 'B'))});
   return out;
 }
@@ -572,14 +572,14 @@ function partHTML(d, i, titulo) {
   return `<span class="cz"><b>${esc(titulo)}</b>: comparecimento ${d.pc[i].toFixed(1)}% &bull; abstenção ${d.pa[i].toFixed(1)}% &bull; brancos ${d.pb[i].toFixed(1)}% &bull; nulos ${d.pn[i].toFixed(1)}%${d.v2 ? ' (dois votos por eleitor)' : ''}</span><br>`;
 }
 function linhaC(c, i, tag) {
-  const v = c.vv[i], nome = `<b>${tag}: ${esc(nomeC(c))}, ${esc(c.d.curto)}</b>`;
+  const v = c.vv[i], nome = `<b>${tag ? tag + ': ' : ''}${esc(nomeC(c))}, ${esc(c.d.curto)}</b>`;
   if (!ok(v)) return `${nome}<br><span class="cz">sem candidatura neste município</span><br>`;
   const pos = (c.ue && c.rk) ? ` &bull; ${c.rk}º de ${c.nc}${c.sit ? ' (' + esc(c.sit) + ')' : ''}` : '';
   return `${nome}<br>${fmt(v)} votos (${fp(c.pv[i])} dos válidos)${pos}${c.an ? ' &bull; ' + fmt(c.an) + ' votos anulados' : ''}<br>`;
 }
 function detalhe(i) {
   const m = M[i], A = cA(), B = cB();
-  let h = `<h3>${esc(m.n)} - ${m.u}</h3><span class="cz">${m.g} &bull; ${fmt(A.d.ap[i])} eleitores aptos</span><hr class="s">` + linhaC(A, i, 'A');
+  let h = `<h3>${esc(m.n)} - ${m.u}</h3><span class="cz">${m.g} &bull; ${fmt(A.d.ap[i])} eleitores aptos</span><hr class="s">` + linhaC(A, i, S.tipo === 'iso' ? '' : 'A');
   if (B) {
     h += linhaC(B, i, 'B');
     if (ok(A.vv[i]) && ok(B.vv[i])) h += `<b>B menos A:</b> <span style="color:#d9730d;font-weight:700">${f1(B.vv[i] - A.vv[i], 0)} votos</span>${A.vv[i] > 0 ? ' (' + f1((B.vv[i] / A.vv[i] - 1) * 100, 1) + '%)' : ''} &bull; ${f1(B.pv[i] - A.pv[i], 2)} pp<br>`;
@@ -1003,6 +1003,7 @@ function popularAB() {
   $('selA').value = S.A; $('selB').value = S.B === null ? '' : S.B;
   $('troca').style.display = t === 'livre' ? '' : 'none';
   $('lblB').style.display = t === 'iso' ? 'none' : '';
+  $('txtA').textContent = t === 'iso' ? 'Candidatura' : 'Candidatura A';  // sem B não há por que chamar de A
   document.querySelectorAll('#tipos button').forEach(b => b.setAttribute('aria-pressed', b.dataset.t === t));
   pessoaEl.value = E.pess[S.pessoa].n;
 }

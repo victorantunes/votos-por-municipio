@@ -224,7 +224,7 @@
   <div id="carregando">Carregando os dados...</div>
   <div class="bar">
     <div class="item so-rn"><label for="pessoa">Candidato(a)</label><div class="sb" id="wpessoa"><input type="search" id="pessoa" placeholder="Buscar candidato(a) ou PT (soma)..." autocomplete="off"><ul class="sug" id="sug-pessoa" role="listbox"></ul></div></div>
-    <label>Candidatura A <select id="selA"></select></label>
+    <label><span id="txtA">Candidatura A</span> <select id="selA"></select></label>
     <label id="lblB">Comparar com (B) <select id="selB"></select></label>
     <button class="btn" id="troca" type="button" title="Trocar A e B">&#8644;</button>
     <label>Colorir por <select id="metrica"></select></label>
@@ -353,7 +353,7 @@
         <p>No topo da página, o <b>tipo de mapa</b> define o que cada candidato mostra:</p>
         <ul>
           <li><b>Comparar com 2026:</b> para quem concorreu em 2020, 2022 ou 2024 e também em 2026. A candidatura A é a anterior (por padrão, do mesmo cargo, como deputado estadual 2022, ou a mais recente se não houver) e a B é a de 2026. Dá para trocar a A por qualquer outra candidatura anterior da mesma pessoa. O mapa mostra, município a município, quanto a votação mudou. A soma do PT e Lula também entram nesse tipo.</li>
-          <li><b>Analisar isoladamente:</b> mostra uma única candidatura, de qualquer candidato e ano (por exemplo, Isolda Dantas só em 2026), sem comparar com outros anos nem com outros candidatos. O mapa, a dispersão e os números do topo usam só essa candidatura. Escolha o candidato e, em Candidatura A, o cargo e o ano. Funciona também para quem estreou em 2026, que não tem votação anterior.</li>
+          <li><b>Analisar isoladamente:</b> mostra uma única candidatura, de qualquer candidato e ano (por exemplo, Isolda Dantas só em 2026), sem comparar com outros anos nem com outros candidatos. O mapa, a dispersão e os números do topo usam só essa candidatura. Escolha o candidato e, em Candidatura, o cargo e o ano. Funciona também para quem estreou em 2026, que não tem votação anterior.</li>
           <li><b>Qualquer cargo e ano:</b> escolha livremente a candidatura A e, se quiser, a B, de qualquer pessoa, da soma do PT ou de Lula.</li>
         </ul>
         <p>Escolha o candidato no campo de busca e depois as candidaturas A e B. As cores, o gráfico de dispersão e as estatísticas do topo passam a mostrar B em relação a A.</p>
@@ -539,7 +539,7 @@ function preparar(js) {
 }
 function carregarEscopo(id) {
   if (cacheEsc[id]) return Promise.resolve(cacheEsc[id]);
-  return fetch('dados/escopo_' + id + '.json?v=20261007232751').then(r => { if (!r.ok) throw new Error('escopo'); return r.json(); }).then(js => (cacheEsc[id] = preparar(js)));
+  return fetch('dados/escopo_' + id + '.json?v=20261007233322').then(r => { if (!r.ok) throw new Error('escopo'); return r.json(); }).then(js => (cacheEsc[id] = preparar(js)));
 }
 function vv(c) {
   if (c.vv) return c;
@@ -578,7 +578,7 @@ function listaMetricas() {
       {k: 'dn', r: 'Variação dos nulos (pp)', t: 'neu', u: 'pp', f: i => B.d.pn[i] - A.d.pn[i]});
     out.push(g);
   }
-  out.push({g: 'A: ' + rotC(A), m: cand(A, 'A').concat(part(A, 'A'))});
+  out.push({g: (S.tipo === 'iso' ? 'Candidatura: ' : 'A: ') + rotC(A), m: cand(A, 'A').concat(part(A, 'A'))});
   if (B) out.push({g: 'B: ' + rotC(B), m: cand(B, 'B').concat(mesmaDisp ? [] : part(B, 'B'))});
   return out;
 }
@@ -622,14 +622,14 @@ function partHTML(d, i, titulo) {
   return `<span class="cz"><b>${esc(titulo)}</b>: comparecimento ${d.pc[i].toFixed(1)}% &bull; abstenção ${d.pa[i].toFixed(1)}% &bull; brancos ${d.pb[i].toFixed(1)}% &bull; nulos ${d.pn[i].toFixed(1)}%${d.v2 ? ' (dois votos por eleitor)' : ''}</span><br>`;
 }
 function linhaC(c, i, tag) {
-  const v = c.vv[i], nome = `<b>${tag}: ${esc(nomeC(c))}, ${esc(c.d.curto)}</b>`;
+  const v = c.vv[i], nome = `<b>${tag ? tag + ': ' : ''}${esc(nomeC(c))}, ${esc(c.d.curto)}</b>`;
   if (!ok(v)) return `${nome}<br><span class="cz">sem candidatura neste município</span><br>`;
   const pos = (c.ue && c.rk) ? ` &bull; ${c.rk}º de ${c.nc}${c.sit ? ' (' + esc(c.sit) + ')' : ''}` : '';
   return `${nome}<br>${fmt(v)} votos (${fp(c.pv[i])} dos válidos)${pos}${c.an ? ' &bull; ' + fmt(c.an) + ' votos anulados' : ''}<br>`;
 }
 function detalhe(i) {
   const m = M[i], A = cA(), B = cB();
-  let h = `<h3>${esc(m.n)} - ${m.u}</h3><span class="cz">${m.g} &bull; ${fmt(A.d.ap[i])} eleitores aptos</span><hr class="s">` + linhaC(A, i, 'A');
+  let h = `<h3>${esc(m.n)} - ${m.u}</h3><span class="cz">${m.g} &bull; ${fmt(A.d.ap[i])} eleitores aptos</span><hr class="s">` + linhaC(A, i, S.tipo === 'iso' ? '' : 'A');
   if (B) {
     h += linhaC(B, i, 'B');
     if (ok(A.vv[i]) && ok(B.vv[i])) h += `<b>B menos A:</b> <span style="color:#d9730d;font-weight:700">${f1(B.vv[i] - A.vv[i], 0)} votos</span>${A.vv[i] > 0 ? ' (' + f1((B.vv[i] / A.vv[i] - 1) * 100, 1) + '%)' : ''} &bull; ${f1(B.pv[i] - A.pv[i], 2)} pp<br>`;
@@ -878,7 +878,7 @@ function carregar(src, css) {
 function ajustarMapa() { const w = $('mapwrap'); w.style.height = Math.max(460, Math.min(900, Math.round(window.innerHeight * 0.78))) + 'px'; if (map) map.invalidateSize(); }
 const estiloPoli = i => { const on = noUF(i), pin = S.pins.has(i), sem = CL.cls[i] < 0; return {fillColor: cor(i), fillOpacity: sem ? (on ? 0.7 : 0.08) : on || pin ? 0.93 : 0.08, color: pin ? '#000' : '#ffffff', weight: pin ? 2.6 : on ? 0.3 : 0, opacity: pin ? 1 : 0.9}; };
 function clicarMapa(i) { S.pins.has(i) ? S.pins.delete(i) : S.pins.add(i); contador(); $('info').innerHTML = detalhe(i); pintarMapa(); }
-const baixarJSON = u => malhas[u] || (malhas[u] = fetch(u + '?v=20261007232751').then(r => { if (!r.ok) throw new Error(u); return r.json(); }).catch(e => { delete malhas[u]; throw e; }));
+const baixarJSON = u => malhas[u] || (malhas[u] = fetch(u + '?v=20261007233322').then(r => { if (!r.ok) throw new Error(u); return r.json(); }).catch(e => { delete malhas[u]; throw e; }));
 const NOTA_GRAN = (modo, poli) => 'Detalhe por bairro e local de votação: os votos de cada seção eleitoral são somados no local onde o eleitor vota, e o local é atribuído ao bairro do IBGE (Censo 2022) que o contém. O bairro é o do local de votação, e não necessariamente o de residência do eleitor. O IBGE só tem bairros para 19 dos 167 municípios, que reúnem cerca de 41% do eleitorado' +
   (modo === 'ano' ? '; nos demais, e fora dos bairros (como a zona rural), cada local de votação aparece como um ponto.' : '; nos demais, e fora dos bairros (como a zona rural), a unidade é o município, ou a parte dele fora dos bairros, porque a comparação entre anos precisa de uma divisão estável (os locais de votação mudam de um ano para outro).') +
   ' As cores mais claras ao fundo mostram o município inteiro, com as mesmas faixas. As classes de cor usam percentis só entre as unidades mostradas. A soma das seções pode diferir um pouco do total do município, por causa de votos anulados depois da eleição. Clique em uma unidade para marcar o nome, ou use a busca, e Limpar marcações para remover.' + (poli ? ' Troque para círculos, proporcionais ao número de eleitores, se preferir.' : ' Troque para polígonos para ver os limites.');
@@ -1053,6 +1053,7 @@ function popularAB() {
   $('selA').value = S.A; $('selB').value = S.B === null ? '' : S.B;
   $('troca').style.display = t === 'livre' ? '' : 'none';
   $('lblB').style.display = t === 'iso' ? 'none' : '';
+  $('txtA').textContent = t === 'iso' ? 'Candidatura' : 'Candidatura A';  // sem B não há por que chamar de A
   document.querySelectorAll('#tipos button').forEach(b => b.setAttribute('aria-pressed', b.dataset.t === t));
   pessoaEl.value = E.pess[S.pessoa].n;
 }
