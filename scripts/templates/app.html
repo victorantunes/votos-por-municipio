@@ -30,7 +30,7 @@
   .sub { color: var(--muted); font-size: 14px; margin-top: 4px; max-width: 660px; }
   .selinfo { font-size: 13px; margin: 10px 2px 0; max-width: 900px; color: #2d3748; }
   body[data-view="dados"] .selinfo, body[data-view="candidatos"] .selinfo { display: none; }
-  .stats { display: grid; grid-template-columns: repeat(3, minmax(0, auto)); gap: 8px 28px; }
+  .stats { display: grid; grid-template-columns: repeat(3, 152px); gap: 8px 22px; }
   .stat span { display: block; font-size: 11.5px; color: var(--muted); }
   .stat b { display: block; font-size: 17px; line-height: 1.25; white-space: nowrap; }
   .stat small { font-size: 11px; color: var(--muted); }
@@ -48,8 +48,12 @@
   .bar label { display: flex; align-items: center; gap: 6px; }
   select, input[type=search], input[type=text] { font: inherit; font-size: 13px; border: 1px solid #cbd5e0; background: #fff; color: #2d3748; border-radius: 8px; padding: 6px 10px; max-width: 100%; }
   select:disabled { opacity: .5; }
-  #selA, #selB { max-width: 330px; }
-  #metrica { max-width: 300px; }
+  /* larguras fixas: a posição de cada controle não depende do texto escolhido nem do modo; o que não vale no modo fica invisível, mas ocupa o lugar */
+  #selA, #selB { width: 235px; text-overflow: ellipsis; }
+  #metrica { width: 285px; text-overflow: ellipsis; }
+  #modo { width: 180px; }
+  #txtA { display: inline-block; min-width: 92px; }
+  .inv { visibility: hidden; }
   input[type=search] { width: 190px; }
   .btn { font: inherit; font-size: 13px; font-weight: 600; background: #fff; border: 1px solid #cbd5e0; color: #4a5568; border-radius: 8px; padding: 6px 12px; cursor: pointer; }
   .btn:hover { background: var(--soft); }
@@ -165,7 +169,9 @@
     h1 { font-size: 21px; }
     .bar label { flex: 1 1 46%; }
     .bar label select { flex: 1; min-width: 0; }
-    #selA, #selB, #metrica { max-width: none; }
+    #selA, #selB, #metrica, #modo { width: auto; max-width: none; }
+    .inv { display: none; }
+    #txtA { min-width: 0; }
     input[type=search] { width: 100%; flex: 1 1 100%; }
     .sb { flex: 1 1 100%; }
     .item { flex: 1 1 100%; }
@@ -225,8 +231,7 @@
   <div class="bar">
     <div class="item so-rn"><label for="pessoa">Candidato(a)</label><div class="sb" id="wpessoa"><input type="search" id="pessoa" placeholder="Buscar candidato(a) ou PT (soma)..." autocomplete="off"><ul class="sug" id="sug-pessoa" role="listbox"></ul></div></div>
     <label><span id="txtA">Candidatura A</span> <select id="selA"></select></label>
-    <label id="lblB">Comparar com (B) <select id="selB"></select></label>
-    <button class="btn" id="troca" type="button" title="Trocar A e B">&#8644;</button>
+    <label id="lblB">Comparar com (B) <select id="selB"></select><button class="btn" id="troca" type="button" title="Trocar A e B">&#8644;</button></label>
     <label>Colorir por <select id="metrica"></select></label>
     <label class="so-br">UF <select id="uf"><option value="">Brasil</option></select></label>
     <label class="only-map">Visualização <select id="modo"><option value="poli">Polígonos (municípios)</option><option value="circ">Círculos</option></select></label>
@@ -818,7 +823,7 @@ function zerarZoom() { V1.view = null; paineis.forEach(p => { p.view = null; });
 /* ------------------------------------------------ mapa (Leaflet carregado sob demanda) */
 const NOTA_POLI = 'Cada município é pintado conforme a medida escolhida em "Colorir por". As classes usam percentis dos municípios com dados (P15, P35, P50, P65, P85), e municípios sem dados ficam em cinza. As linhas mais escuras são as divisas dos estados. Clique em um município para marcar o nome, ou procure um pela barra de busca, e use Limpar marcações para remover. Troque para círculos, proporcionais ao número de eleitores, se preferir.';
 const NOTA_CIRC = 'Cada círculo é um município, com tamanho proporcional ao número de eleitores aptos e cor conforme a medida escolhida em "Colorir por". Clique em um município para marcar o nome, e use Limpar marcações para remover. Troque para polígonos para ver os limites dos municípios.';
-let rendCirc = null, rendPoli = null, rendUF = null, map = null, marcadores = null, grupoCirc = null, camadaPoli = null, camadaUF = null, camadaBase = null, camadaPontos = null, polis = null, pontos = null, mapaPronto = null;
+let rendCirc = null, rendPoli = null, rendPt = null, rendUF = null, map = null, marcadores = null, grupoCirc = null, camadaPoli = null, camadaUF = null, camadaBase = null, camadaPontos = null, polis = null, pontos = null, mapaPronto = null;
 const malhas = {};
 function carregar(src, css) {
   const a = new Promise((res, rej) => { const l = document.createElement('link'); l.rel = 'stylesheet'; l.href = css; l.onload = res; l.onerror = rej; document.head.appendChild(l); });
@@ -855,7 +860,7 @@ function construirPoli() {
     camadaPontos = null; pontos = null;
     if (gran) {  // locais de votação sem bairro no IBGE
       pontos = new Array(N); const grupo = [];
-      M.forEach((m, i) => { if (!m.pt) return; const c = L.circleMarker([m.lat, m.lon], Object.assign({renderer: rendPoli, radius: 3 + 0.05 * Math.sqrt(m.ap)}, estiloPonto(i))); ligarUnidade(c, i); pontos[i] = c; grupo.push(c); });
+      M.forEach((m, i) => { if (!m.pt) return; const c = L.circleMarker([m.lat, m.lon], Object.assign({renderer: rendPt, radius: 3 + 0.05 * Math.sqrt(m.ap)}, estiloPonto(i))); ligarUnidade(c, i); pontos[i] = c; grupo.push(c); });
       camadaPontos = L.layerGroup(grupo);
     }
   });
@@ -873,20 +878,20 @@ const soltarPedido = r => { if (r) r._redrawRequest = null; };
 const refazerCanvas = r => { if (r && map.hasLayer(r) && r._redraw) { r._redrawRequest = null; r._redraw(); } };
 function limparCamadas() {
   [camadaBase, camadaPoli, camadaUF, camadaPontos, grupoCirc].forEach(l => { if (l && map.hasLayer(l)) map.removeLayer(l); });
-  [rendCirc, rendPoli, rendUF].forEach(r => { if (r && map.hasLayer(r)) map.removeLayer(r); });
-  [rendCirc, rendPoli, rendUF].forEach(soltarPedido);
+  [rendCirc, rendPoli, rendPt, rendUF].forEach(r => { if (r && map.hasLayer(r)) map.removeLayer(r); });
+  [rendCirc, rendPoli, rendPt, rendUF].forEach(soltarPedido);
   camadaBase = camadaPoli = camadaUF = camadaPontos = grupoCirc = marcadores = polis = pontos = null; rotulos = [];
 }
 function aplicarModo() {
   if (!map) return Promise.resolve();
   const poli = S.modo === 'poli'; $('mapnote').innerHTML = G.on ? NOTA_GRAN(E.modoUnidades, poli) : poli ? NOTA_POLI : NOTA_CIRC;
   if (!grupoCirc) construirCirculos();
-  if (!poli) { [camadaBase, camadaPoli, camadaUF, camadaPontos].forEach(l => l && map.hasLayer(l) && map.removeLayer(l)); if (rendPoli && map.hasLayer(rendPoli)) map.removeLayer(rendPoli); [rendCirc, rendPoli].forEach(soltarPedido); map.addLayer(grupoCirc); pintarMapa(); refazerCanvas(rendCirc); return Promise.resolve(); }
+  if (!poli) { [camadaBase, camadaPoli, camadaUF, camadaPontos].forEach(l => l && map.hasLayer(l) && map.removeLayer(l)); [rendPoli, rendPt].forEach(r => { if (r && map.hasLayer(r)) map.removeLayer(r); }); [rendCirc, rendPoli, rendPt].forEach(soltarPedido); map.addLayer(grupoCirc); pintarMapa(); refazerCanvas(rendCirc); return Promise.resolve(); }
   return (camadaPoli ? Promise.resolve() : construirPoli()).then(() => {
     if (S.modo !== 'poli' || !camadaPoli) return;
     map.removeLayer(grupoCirc); if (rendCirc && map.hasLayer(rendCirc)) map.removeLayer(rendCirc);
-    [rendCirc, rendPoli, rendUF].forEach(soltarPedido);
-    [camadaBase, camadaPoli, camadaUF, camadaPontos].forEach(l => l && map.addLayer(l)); pintarMapa(); [rendPoli, rendUF].forEach(refazerCanvas); })
+    [rendCirc, rendPoli, rendPt, rendUF].forEach(soltarPedido);
+    [camadaBase, camadaPoli, camadaUF, camadaPontos].forEach(l => l && map.addLayer(l)); pintarMapa(); [rendPoli, rendPt, rendUF].forEach(refazerCanvas); })
     .catch(() => { S.modo = 'circ'; $('modo').value = 'circ'; $('info').innerHTML = '<span class="cz">Não foi possível carregar os polígonos. Mostrando círculos.</span>'; return aplicarModo(); });
 }
 function iniciarMapa() {
@@ -894,7 +899,11 @@ function iniciarMapa() {
   mapaPronto = carregar('https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js', 'https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css').then(() => {
     map = L.map('map', {preferCanvas: true}).setView([-14.5, -52], 4);
     L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Light_Gray_Base/MapServer/tile/{z}/{y}/{x}', {maxZoom: 16, attribution: 'Tiles &copy; Esri'}).addTo(map);
-    rendCirc = L.canvas({padding: 0.5}); rendPoli = L.canvas({padding: 0.5});
+    rendCirc = L.canvas({padding: 0.5}); rendPoli = L.canvas({padding: 0.5}); rendPt = L.canvas({padding: 0.5});
+    /* O raio das bolinhas é fixo em pixels, mas durante a animação de zoom o Leaflet estica o canvas inteiro e elas parecem crescer.
+       Escondemos as bolinhas durante a animação e o Leaflet as redesenha, no tamanho certo, quando ela termina. */
+    const bolinhas = esconde => [rendCirc, rendPt].forEach(r => { if (r && r._container) r._container.style.visibility = esconde ? 'hidden' : ''; });
+    map.on('zoomstart', () => bolinhas(true)); map.on('zoomend', () => bolinhas(false));
     map.createPane('ufPane'); map.getPane('ufPane').style.pointerEvents = 'none'; map.getPane('ufPane').style.zIndex = 450; rendUF = L.canvas({pane: 'ufPane'});
     return aplicarModo();
   }).catch(() => { $('mapmsg').style.display = 'flex'; });
@@ -1001,8 +1010,8 @@ function popularAB() {
   const mk = (sel, gs, nenhuma) => { sel.innerHTML = (nenhuma ? '<option value="">Nenhuma (só A)</option>' : '') + gs.map(([g, cs]) => `<optgroup label="${esc(g)}">` + cs.map(k => `<option value="${k}">${esc(rotOpc(E.cand[k]))}</option>`).join('') + '</optgroup>').join(''); };
   mk($('selA'), gA, false); mk($('selB'), gB, t !== 'comp');
   $('selA').value = S.A; $('selB').value = S.B === null ? '' : S.B;
-  $('troca').style.display = t === 'livre' ? '' : 'none';
-  $('lblB').style.display = t === 'iso' ? 'none' : '';
+  $('troca').classList.toggle('inv', t !== 'livre'); $('troca').inert = t !== 'livre';
+  $('lblB').classList.toggle('inv', t === 'iso'); $('lblB').inert = t === 'iso';
   $('txtA').textContent = t === 'iso' ? 'Candidatura' : 'Candidatura A';  // sem B não há por que chamar de A
   document.querySelectorAll('#tipos button').forEach(b => b.setAttribute('aria-pressed', b.dataset.t === t));
   pessoaEl.value = E.pess[S.pessoa].n;
