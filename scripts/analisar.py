@@ -75,8 +75,9 @@ por_uf = wide.groupby('uf').apply(resumo_lula).round(2)
 por_uf.to_csv(OUT / 'dados' / 'resumo_uf.csv', encoding='utf-8')
 nacional = resumo_lula(wide)
 print('NACIONAL (soma dos municípios):'); print(nacional.round(2).to_string())
-qs = np.percentile(wide.var_pp, [15, 35, 50, 65, 85])
-print('Quantis de var_pp:', qs.round(2).tolist(), '| sem coordenada:', int(wide.lat.isna().sum()))
+neg, pos = wide.var_pp[wide.var_pp < 0], wide.var_pp[wide.var_pp > 0]
+corte_neg, corte_pos = np.percentile(neg, [100 / 3, 200 / 3]), np.percentile(pos, [100 / 3, 200 / 3])  # cortes da legenda: o zero separa quem caiu de quem subiu
+print('Cortes de var_pp (queda | alta):', corte_neg.round(2).tolist(), corte_pos.round(2).tolist(), '| sem coordenada:', int(wide.lat.isna().sum()))
 
 
 # ================================================================ candidatos do PT em cada estado
@@ -121,7 +122,7 @@ flavio = pd.concat([pd.read_csv(f, dtype={'CD_MUNICIPIO': int}) for f in sorted(
 flavio = flavio[(flavio.SG_UF != 'ZZ') & (flavio.DS_TIPO_VOTAVEL == 'Nominal')]
 flavio_pct = flavio[flavio.NR_VOTAVEL == 22].QT_VOTOS.sum() / flavio.QT_VOTOS.sum() * 100
 trocas = {
-    '__Q_PP__': ', '.join(decimal(v, 2) for v in qs[:-1]) + ' e ' + decimal(qs[-1], 2), '__Q85__': decimal(qs[-1], 2),
+    '__N_NEG__': inteiro(len(neg)), '__N_POS__': inteiro(len(pos)), '__CORTE_NEG__': ' e '.join(decimal(v, 2) for v in corte_neg), '__CORTE_POS__': ' e '.join(decimal(v, 2) for v in corte_pos),
     '__N_MUN__': inteiro(len(wide)), '__L22__': inteiro(nacional.lula_2022_2T), '__L26__': inteiro(nacional.lula_2026_1T),
     '__SALDO__': decimal(nacional.saldo / 1e6, 2, True) + ' mi', '__P22__': decimal(nacional.pct_2022_2T), '__P26__': decimal(nacional.pct_2026_1T),
     '__VARPP__': decimal(nacional.var_pp, 1, True), '__FLAVIO__': decimal(flavio_pct),

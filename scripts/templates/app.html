@@ -385,7 +385,7 @@ __TAB_PART_REG__
       <p>Em cada município, aptos = abstenções + comparecimento, e comparecimento = válidos + brancos + nulos. Os votos de um candidato dependem, portanto, de quatro coisas: quantos eleitores há, quantos comparecem, quantos votos são válidos e que parcela dos válidos o candidato recebe. Por isso o mapa e os gráficos também podem ser coloridos pela abstenção, pelos brancos e pelos nulos, e os detalhes de cada município mostram esses números.</p>
 
       <h2>O que cada métrica mede</h2>
-      <p>Quando há uma candidatura B para comparar com a A, o mapa e os gráficos podem ser coloridos por três medidas de comparação. Todas olham o mesmo município nas duas candidaturas, e o valor é sempre B menos A: um número negativo quer dizer que B teve menos votos do que A naquele município. Em qualquer medida, as seis cores usam percentis (P15, P35, P50, P65 e P85) calculados entre os municípios que têm dados.</p>
+      <p>Quando há uma candidatura B para comparar com a A, o mapa e os gráficos podem ser coloridos por três medidas de comparação. Todas olham o mesmo município nas duas candidaturas, e o valor é sempre B menos A: um número negativo quer dizer que B teve menos votos do que A naquele município. Em qualquer medida, as seis cores dividem os municípios que têm dados em classes: nas medidas de comparação o zero é um corte fixo, e nas demais as classes usam percentis (P15, P35, P50, P65 e P85).</p>
       <h3>Variação em pontos percentuais (padrão)</h3>
       <p>É a diferença entre a % dos votos válidos de B e a de A, ou seja, <b>% de B &minus; % de A</b>. Como é uma proporção, não depende do tamanho do município nem de quantos eleitores compareceram, e por isso é a medida mais comparável entre cidades grandes e pequenas.</p>
       <h3>Saldo em votos</h3>
@@ -395,14 +395,15 @@ __TAB_PART_REG__
       <h3>Participação (abstenção, brancos e nulos)</h3>
       <p>Também é possível colorir pela abstenção, pelos brancos e pelos nulos de cada disputa, e pela variação deles entre A e B (em pontos percentuais). Essas medidas dizem respeito ao eleitorado do município e não ao candidato, então aparecem em todos os municípios da disputa, mesmo onde o candidato não concorreu.</p>
       <h3>Percentis e as seis cores</h3>
-      <p>O percentil mostra a posição de um município em relação aos demais. Os municípios com dados são colocados em ordem, do menor valor ao maior. O percentil 15 (P15) é o valor abaixo do qual ficam 15% dos municípios, o P50 é a mediana e o P85 é o valor acima do qual ficam os 15% maiores. Os cinco cortes dividem os municípios em seis classes, com 15%, 20%, 15%, 15%, 20% e 15% dos municípios, do menor ao maior valor. Os limites aparecem na legenda e mudam conforme a medida escolhida.</p>
-      <p>Nas comparações da mesma pessoa ou do mesmo partido ao longo do tempo, as classes vão de "Queda Severa" a "Destaque Positivo" e usam vermelho e verde. Nas demais medidas as classes vão de "Menores 15%" a "Maiores 15%". Os votos e a % dos votos do candidato usam a mesma escala de vermelho a verde das comparações, em que verde quer dizer mais votos. A abstenção, os brancos e os nulos usam azul, mais escuro quanto maior o valor, e as diferenças que não são de desempenho (por exemplo, a variação da abstenção) usam marrom a verde-azulado. Municípios sem dados ficam em cinza. Quando há poucos municípios com dados, como no caso de um candidato a vereador, não há percentis e os municípios com dados aparecem em vermelho.</p>
-      <p>As classes são relativas: elas dizem se o município está acima ou abaixo dos outros, e não se o valor é positivo ou negativo.</p>
+      <p>O percentil mostra a posição de um município em relação aos demais. Os municípios com dados são colocados em ordem, do menor valor ao maior. O percentil 15 (P15) é o valor abaixo do qual ficam 15% dos municípios, o P50 é a mediana e o P85 é o valor acima do qual ficam os 15% maiores. Os cinco cortes dividem os municípios em seis classes, com 15%, 20%, 15%, 15%, 20% e 15% dos municípios, do menor ao maior valor. O P0 é o menor valor e o P100 é o maior, então a primeira classe vai do P0 ao P15 e a última, do P85 ao P100. Os limites, incluindo esses extremos, aparecem na legenda e mudam conforme a medida escolhida.</p>
+      <p>Nas medidas de comparação (variação em pontos percentuais, saldo, retenção e variação da participação) o zero é um corte fixo, porque ele separa quem perdeu de quem ganhou. Os municípios em que a medida caiu são divididos em três classes de tamanho igual (Queda Severa, Queda Forte e Queda Leve), e os em que ela subiu também (Alta Leve, Alta Forte e Alta Intensa), cada lado com os próprios cortes. Por isso as três classes verdes só têm municípios em que a medida aumentou. Se todos os municípios tiverem o mesmo sinal, não há zero para separar, e a legenda volta a usar os percentis.</p>
+      <p>Nas demais medidas as seis classes vão de "Menores 15%" a "Maiores 15%" e usam percentis. Os votos e a % dos votos do candidato usam a mesma escala de vermelho a verde das comparações, em que verde quer dizer mais votos. A abstenção, os brancos e os nulos usam azul, mais escuro quanto maior o valor, e as diferenças que não são de desempenho (por exemplo, a variação da abstenção) usam marrom a verde-azulado. Municípios sem dados ficam em cinza. Quando há poucos municípios com dados, como no caso de um candidato a vereador, não há classes e os municípios com dados aparecem em vermelho.</p>
+      <p>As classes por percentil são relativas: elas dizem se o município está acima ou abaixo dos outros, e não se o valor é positivo ou negativo.</p>
 
       <div class="so-br">
         <h3>Exemplo: São Paulo, Lula de 2022 (2º turno) para 2026 (1º turno)</h3>
         <p>Em 2022, Lula teve 3.677.921 votos entre 6.869.405 votos válidos, ou 53,54%. Em 2026, teve 3.052.349 entre 6.553.181, ou 46,58%. O <b>saldo</b> é de &minus;625.572 votos. A <b>variação</b> é de 46,58 &minus; 53,54 = &minus;6,96 pontos percentuais. A <b>retenção</b> é de 3.052.349 &divide; 3.677.921 &minus; 1 = &minus;17,0%. A retenção cai mais do que os pontos percentuais porque o total de votos válidos na cidade também diminuiu, de 6,87 para 6,55 milhões.</p>
-        <p>Na variação em pontos percentuais, com os dados atuais, os cortes P15, P35, P50, P65 e P85 são __Q_PP__ pontos percentuais. Até o limite inferior da melhor classe é negativo (__Q85__ pontos percentuais), o que significa que muitos municípios dessa classe também tiveram queda, só que menor do que a da maioria. Nos dados, o saldo quase não se relaciona com as outras duas medidas (correlação próxima de zero), enquanto a variação em pontos percentuais e a retenção andam juntas (correlação de 0,57).</p>
+        <p>Na variação em pontos percentuais, com os dados atuais, o zero separa os __N_NEG__ municípios em que a participação de Lula caiu dos __N_POS__ em que subiu. Entre os que caíram, os cortes entre as três classes são __CORTE_NEG__ pontos percentuais, e entre os que subiram, __CORTE_POS__. Assim, as três classes verdes reúnem só os municípios em que a participação aumentou. Nos dados, o saldo quase não se relaciona com as outras duas medidas (correlação próxima de zero), enquanto a variação em pontos percentuais e a retenção andam juntas (correlação de 0,57).</p>
         <h2>Como foi feito</h2>
         <ul>
           <li>Para cada município, somaram-se os votos de Lula (número 13) para presidente no 1º e no 2º turnos de 2022 e no 1º turno de 2026. O percentual é calculado sobre os votos válidos, o que exclui brancos e nulos.</li>
@@ -466,6 +467,9 @@ const NOMES = {
   part: ['Menores 15%', 'P15 a P35', 'P35 a P50', 'P50 a P65', 'P65 a P85', 'Maiores 15%'],
   neu:  ['Menores 15%', 'P15 a P35', 'P35 a P50', 'P50 a P65', 'P65 a P85', 'Maiores 15%']
 };
+/* Nas medidas de comparação (B menos A) o zero é um corte fixo: quem caiu fica nas três primeiras classes e quem subiu, nas três últimas,
+   cada lado dividido em terços com os próprios cortes. Se todos os valores têm o mesmo sinal, vale a divisão por percentis. */
+const NOMES_ZERO = ['Queda Severa', 'Queda Forte', 'Queda Leve', 'Alta Leve', 'Alta Forte', 'Alta Intensa'];
 const FAIXAS_P = ['Pior 15%', 'P15 a P35', 'P35 a P50', 'P50 a P65', 'P65 a P85', 'Melhor 15%'];
 const SEMDADO = '#d9dde3', ACENTO = '#b3201f';
 const ORDEM_REG = ['Norte', 'Nordeste', 'Centro-Oeste', 'Sudeste', 'Sul'];
@@ -585,12 +589,13 @@ function calcClasses0() {
   for (let i = 0; i < N; i++) { const v = m.f(i); arr[i] = v; if (ok(v)) vals.push(v); }
   vals.sort((a, b) => a - b);
   if (vals.length < 8) { for (let i = 0; i < N; i++) if (ok(arr[i])) cls[i] = 0; CL = {m, arr, cuts: [], cls, few: true, n: vals.length}; return; }
-  const cuts = [15, 35, 50, 65, 85].map(q => quantil(vals, q));
+  const neg = vals.filter(v => v < 0), pos = vals.filter(v => v > 0), zero = (m.t === 'perf' || m.t === 'neu') && neg.length > 0 && pos.length > 0;
+  const cuts = zero ? [quantil(neg, 100 / 3), quantil(neg, 200 / 3), 0, quantil(pos, 100 / 3), quantil(pos, 200 / 3)] : [15, 35, 50, 65, 85].map(q => quantil(vals, q));
   for (let i = 0; i < N; i++) { const v = arr[i]; if (!ok(v)) continue; let k = 0; while (k < 5 && v > cuts[k]) k++; cls[i] = k; }
-  CL = {m, arr, cuts, cls, few: false, n: vals.length};
+  CL = {m, arr, cuts, cls, few: false, n: vals.length, zero, nomes: zero ? NOMES_ZERO : NOMES[m.t], min: vals[0], max: vals[vals.length - 1]};  // min e max são o P0 e o P100
 }
 const cor = i => CL.cls[i] < 0 ? SEMDADO : CL.few ? ACENTO : PALS[CL.m.t][CL.cls[i]];
-function nomeClasse(i) { return CL.cls[i] < 0 ? 'sem dados' : CL.few ? '' : NOMES[CL.m.t][CL.cls[i]] + ' (' + FAIXAS_P[CL.cls[i]] + ')'; }
+function nomeClasse(i) { return CL.cls[i] < 0 ? 'sem dados' : CL.few ? '' : CL.zero ? CL.nomes[CL.cls[i]] : CL.nomes[CL.cls[i]] + ' (' + FAIXAS_P[CL.cls[i]] + ')'; }
 
 /* ------------------------------------------------ detalhes de um município */
 function partHTML(d, i, titulo) {
@@ -626,8 +631,8 @@ function legendaHTML() {
   const vazio = '<span class="li vazio" aria-hidden="true"></span>';
   const sem = Array.prototype.some.call(CL.cls, k => k < 0) ? item(SEMDADO, 'Sem dados', '') : vazio;
   if (CL.few) return item(ACENTO, 'Com dados', `${CL.n} ${G.on ? 'unidade' : 'município'}${CL.n === 1 ? '' : 's'}`) + sem + vazio.repeat(5);
-  const m = CL.m, fm = v => MFMT[m.u](m, v), c = CL.cuts, nm = NOMES[m.t], pal = PALS[m.t];
-  const tx = [`≤ ${fm(c[0])}`, `${fm(c[0])} a ${fm(c[1])}`, `${fm(c[1])} a ${fm(c[2])}`, `${fm(c[2])} a ${fm(c[3])}`, `${fm(c[3])} a ${fm(c[4])}`, `> ${fm(c[4])}`];
+  const m = CL.m, fm = v => MFMT[m.u](m, v), c = CL.cuts, nm = CL.nomes, pal = PALS[m.t], lo = fm(CL.min), hi = fm(CL.max);  // a 1ª classe começa no P0 (menor valor) e a última termina no P100 (maior)
+  const tx = [`${lo} a ${fm(c[0])}`, `${fm(c[0])} a ${fm(c[1])}`, `${fm(c[1])} a ${fm(c[2])}`, `${fm(c[2])} a ${fm(c[3])}`, `${fm(c[3])} a ${fm(c[4])}`, `${fm(c[4])} a ${hi}`];
   return nm.map((n, k) => item(pal[k], n, tx[k])).join('') + sem;
 }
 function legenda() { const h = legendaHTML(); $('legend').innerHTML = h; document.querySelectorAll('.fleg').forEach(e => { e.innerHTML = h; }); }
@@ -850,7 +855,7 @@ function vRegioes() { paineis.forEach(p => p.redraw()); }
 function zerarZoom() { V1.view = null; paineis.forEach(p => { p.view = null; }); }
 
 /* ------------------------------------------------ mapa (Leaflet carregado sob demanda) */
-const NOTA_POLI = 'Cada município é pintado conforme a medida escolhida em "Colorir por". As classes usam percentis dos municípios com dados (P15, P35, P50, P65, P85), e municípios sem dados ficam em cinza. As linhas mais escuras são as divisas dos estados. Clique em um município para marcar o nome, ou procure um pela barra de busca, e use Limpar marcações para remover. Troque para círculos, proporcionais ao número de eleitores, se preferir.';
+const NOTA_POLI = 'Cada município é pintado conforme a medida escolhida em "Colorir por". As classes dividem os municípios com dados: nas medidas de comparação o zero separa quem caiu de quem subiu, e nas demais as classes usam percentis (P15, P35, P50, P65, P85). Municípios sem dados ficam em cinza. As linhas mais escuras são as divisas dos estados. Clique em um município para marcar o nome, ou procure um pela barra de busca, e use Limpar marcações para remover. Troque para círculos, proporcionais ao número de eleitores, se preferir.';
 const NOTA_CIRC = 'Cada círculo é um município, com tamanho proporcional ao número de eleitores aptos e cor conforme a medida escolhida em "Colorir por". Clique em um município para marcar o nome, e use Limpar marcações para remover. Troque para polígonos para ver os limites dos municípios.';
 let rendCirc = null, rendPoli = null, rendPt = null, rendUF = null, map = null, marcadores = null, grupoCirc = null, camadaPoli = null, camadaUF = null, camadaBase = null, camadaPontos = null, polis = null, pontos = null, mapaPronto = null;
 const malhas = {};
