@@ -92,8 +92,9 @@
   .zwrap { position: relative; }
   .sb { position: relative; flex: 0 1 270px; }
   .sb input { width: 100%; }
-  .item { display: flex; align-items: center; gap: 6px; flex: 0 1 auto; }
-  #wpessoa { flex: 0 0 250px; }
+  .item { display: flex; align-items: center; gap: 6px; flex: 0 0 auto; }
+  #wpessoa { flex: 0 0 250px; width: 250px; min-width: 0; }
+  #wpessoa input { min-width: 0; }
   .sug { position: absolute; top: calc(100% + 4px); left: 0; right: 0; min-width: 280px; background: #fff; border: 1px solid #cbd5e0; border-radius: 10px; box-shadow: 0 8px 24px rgba(0,0,0,.16); z-index: 1200; max-height: 340px; overflow: auto; display: none; list-style: none; padding: 4px; }
   .sug li { padding: 7px 10px; border-radius: 6px; cursor: pointer; font-size: 13px; display: flex; flex-direction: column; gap: 1px; color: #2d3748; }
   .sug li.on, .sug li[data-i]:hover { background: var(--soft); }
@@ -154,7 +155,7 @@
     input[type=search] { width: 100%; flex: 1 1 100%; }
     .sb { flex: 1 1 100%; }
     .item { flex: 1 1 100%; }
-    #wpessoa { flex: 1 1 auto; }
+    #wpessoa { flex: 1 1 auto; width: auto; }
     #info { top: auto; bottom: 8px; left: 8px; width: auto; right: 8px; max-width: none; max-height: 45%; }
     .doc { padding: 18px 16px 4px; }
     .facet canvas { aspect-ratio: 4 / 3; }
@@ -333,7 +334,7 @@
         <p>No topo da página, o <b>tipo de mapa</b> define o que cada candidato mostra:</p>
         <ul>
           <li><b>Comparar com 2026:</b> para quem concorreu em 2020, 2022 ou 2024 e também em 2026. A candidatura A é a anterior (por padrão, do mesmo cargo, como deputado estadual 2022, ou a mais recente se não houver) e a B é a de 2026. Dá para trocar a A por qualquer outra candidatura anterior da mesma pessoa. O mapa mostra, município a município, quanto a votação mudou. A soma do PT e Lula também entram nesse tipo.</li>
-          <li><b>Só candidatos de 2026:</b> para quem não tinha concorrido em 2020, 2022 nem 2024. Não há votação anterior para comparar, então o mapa mostra onde o candidato foi votado em 2026. Se quiser uma referência, escolha em "Comparar com (B)" a soma do PT em uma disputa anterior, ou a de 2026.</li>
+          <li><b>Só candidatos de 2026:</b> para quem não tinha concorrido em 2020, 2022 nem 2024. Como não há votação anterior, o mapa mostra onde o candidato foi votado em 2026 e este tipo não compara com outros anos. Para ter uma referência dentro de 2026, escolha em "Comparar com (B)" a soma do PT em alguma disputa de 2026 ou Lula.</li>
           <li><b>Qualquer cargo e ano:</b> escolha livremente a candidatura A e, se quiser, a B, de qualquer pessoa, da soma do PT ou de Lula.</li>
         </ul>
         <p>Escolha o candidato no campo de busca e depois as candidaturas A e B. As cores, o gráfico de dispersão e as estatísticas do topo passam a mostrar B em relação a A.</p>
@@ -506,7 +507,7 @@ function preparar(js) {
 }
 function carregarEscopo(id) {
   if (cacheEsc[id]) return Promise.resolve(cacheEsc[id]);
-  return fetch('dados/escopo_' + id + '.json?v=20261007214104').then(r => { if (!r.ok) throw new Error('escopo'); return r.json(); }).then(js => (cacheEsc[id] = preparar(js)));
+  return fetch('dados/escopo_' + id + '.json?v=20261007214300').then(r => { if (!r.ok) throw new Error('escopo'); return r.json(); }).then(js => (cacheEsc[id] = preparar(js)));
 }
 function vv(c) {
   if (c.vv) return c;
@@ -813,7 +814,7 @@ function carregar(src, css) {
 function ajustarMapa() { const w = $('mapwrap'); w.style.height = Math.max(460, Math.min(900, Math.round(window.innerHeight * 0.78))) + 'px'; if (map) map.invalidateSize(); }
 const estiloPoli = i => { const on = noUF(i), pin = S.pins.has(i), sem = CL.cls[i] < 0; return {fillColor: cor(i), fillOpacity: sem ? (on ? 0.7 : 0.08) : on || pin ? 0.93 : 0.08, color: pin ? '#000' : '#ffffff', weight: pin ? 2.6 : on ? 0.3 : 0, opacity: pin ? 1 : 0.9}; };
 function clicarMapa(i) { S.pins.has(i) ? S.pins.delete(i) : S.pins.add(i); contador(); $('info').innerHTML = detalhe(i); pintarMapa(); }
-const baixarJSON = u => malhas[u] || (malhas[u] = fetch(u + '?v=20261007214104').then(r => { if (!r.ok) throw new Error(u); return r.json(); }).catch(e => { delete malhas[u]; throw e; }));
+const baixarJSON = u => malhas[u] || (malhas[u] = fetch(u + '?v=20261007214300').then(r => { if (!r.ok) throw new Error(u); return r.json(); }).catch(e => { delete malhas[u]; throw e; }));
 function construirPoli() {
   const arquivos = S.escopo === 'rn' ? ['dados/municipios_rn.geojson', 'dados/uf_rn.geojson'] : ['dados/municipios.geojson', 'dados/ufs.geojson'], escopo = S.escopo;
   return Promise.all(arquivos.map(baixarJSON)).then(([gm, gu]) => {
@@ -950,7 +951,7 @@ function popularAB() {
   const todos = [[foco.n, foco.c]].concat(extras), filtra = (gs, f) => gs.map(([g, cs]) => [g, cs.filter(f)]).filter(([g, cs]) => cs.length);
   let gA = todos, gB = todos;
   if (t === 'comp') { gA = filtra(todos, k => ano(k) < 2026); gB = filtra(todos, k => ano(k) === 2026); }
-  else if (t === 'novo') { gA = filtra([[foco.n, foco.c]], k => ano(k) === 2026); gB = extras; }
+  else if (t === 'novo') { gA = filtra([[foco.n, foco.c]], k => ano(k) === 2026); gB = filtra(extras, k => ano(k) === 2026); }
   const mk = (sel, gs, nenhuma) => { sel.innerHTML = (nenhuma ? '<option value="">Nenhuma (só A)</option>' : '') + gs.map(([g, cs]) => `<optgroup label="${esc(g)}">` + cs.map(k => `<option value="${k}">${esc(rotOpc(E.cand[k]))}</option>`).join('') + '</optgroup>').join(''); };
   mk($('selA'), gA, false); mk($('selB'), gB, t !== 'comp');
   $('selA').value = S.A; $('selB').value = S.B === null ? '' : S.B;
