@@ -551,7 +551,7 @@ function preparar(js) {
 function carregarEscopo(id) {
   if (cacheEsc[id]) return Promise.resolve(cacheEsc[id]);
   const url = id === 'br' ? 'dados/escopo_br.json' : 'dados/uf/' + id + '.json';
-  return fetch(url + '?v=20261008140811').then(r => { if (!r.ok) throw new Error('escopo'); return r.json(); }).then(js => {
+  return fetch(url + '?v=20261008141539').then(r => { if (!r.ok) throw new Error('escopo'); return r.json(); }).then(js => {
     cacheEsc[id] = preparar(js); ordemCache.push(id);
     while (ordemCache.length > 3) delete cacheEsc[ordemCache.shift()];  // guarda só os últimos recortes, para não acumular memória
     return cacheEsc[id];
@@ -924,7 +924,7 @@ const estiloPoli = i => {
   return {fillColor: cor(i), fillOpacity: fo, color: pin ? '#000' : branca ? '#ffffff' : cor(i), weight: pin ? 2.6 : on ? (branca ? w : 0.7) : 0, opacity: pin ? 1 : branca ? 0.9 : fo};
 };
 function clicarMapa(i) { S.pins.has(i) ? S.pins.delete(i) : S.pins.add(i); contador(); $('info').innerHTML = detalhe(i); pintarMapa(); }
-const baixarJSON = u => malhas[u] || (malhas[u] = fetch(u + '?v=20261008140811').then(r => { if (!r.ok) throw new Error(u); return r.json(); }).catch(e => { delete malhas[u]; throw e; }));
+const baixarJSON = u => malhas[u] || (malhas[u] = fetch(u + '?v=20261008141539').then(r => { if (!r.ok) throw new Error(u); return r.json(); }).catch(e => { delete malhas[u]; throw e; }));
 const NOTA_GRAN = (modo, poli) => {
   const ib = E.infoB, tem = ib && ib.n > 0, fora = tem ? 'nos demais, e fora dos bairros (como a zona rural), ' : '';
   const bairros = tem ? `O IBGE só tem bairros para ${ib.n} dos ${fmt(ib.total)} municípios, que reúnem cerca de ${ib.pct}% do eleitorado` : 'O IBGE não tem a divisão em bairros para os municípios deste estado';
@@ -1087,8 +1087,20 @@ const sugerirMun = q => {
   return pref.sort(porPop).concat(cont.sort(porPop)).slice(0, 8).map(i => ({i, t: esc(M[i].n), s: M[i].u}));
 };
 combo(buscaEl, $('sugestoes'), sugerirMun, it => { buscaEl.value = `${M[it.i].n} - ${M[it.i].u}`; irParaMunicipio(it.i); });
-/* município no gráfico: digitar destaca no gráfico os que combinam com o texto, e escolher uma sugestão marca o município com o nome */
-combo($('busca'), $('sugestoes2'), sugerirMun, it => { S.pins.add(it.i); contador(); $('busca').value = ''; S.termo = ''; zerarZoom(); redesenhar(); });
+/* município no gráfico: digitar destaca os que combinam com o texto, e escolher uma sugestão mantém o município destacado e marcado com o nome (apague o texto para ver todos) */
+combo($('busca'), $('sugestoes2'), sugerirMun, it => { S.pins.add(it.i); contador(); $('busca').value = M[it.i].n; S.termo = norm(M[it.i].n); zerarZoom(); redesenhar(); avisarSeNaoAparece(it.i); });  // o município fica marcado com o nome e destacado, e os demais em cinza
+/* se o município escolhido não pode ser desenhado (sem candidatura, zero voto na escala logarítmica ou fora do porte filtrado), a busca diz por quê */
+let tAviso = null;
+function avisarSeNaoAparece(i) {
+  const ex = eixos(), log = S.escala === 'log', x = ex.x[i], y = ex.y[i];
+  let motivo = '';
+  if (S.faixa && M[i].f !== S.faixa) motivo = 'está fora do porte escolhido';
+  else if (!ok(x) || !ok(y)) motivo = 'não tem dados nesta candidatura';
+  else if (log && (x <= 0 || y <= 0)) motivo = 'tem zero voto e não aparece na escala logarítmica (use a linear)';
+  if (!motivo) return;
+  $('pinned-count').innerText = `${M[i].n} ${motivo}`;  // o texto ao lado de "Limpar marcações" volta ao normal depois de alguns segundos
+  clearTimeout(tAviso); tAviso = setTimeout(contador, 8000);
+}
 function irParaMunicipio(i) {
   iniciarMapa().then(() => {
     if (!map) return;
@@ -1423,7 +1435,7 @@ window.addEventListener('hashchange', () => { const h = lerHash(); if (h.esc !==
 
 const inicial = lerHash();
 S.view = inicial.v === 'candidatos' && inicial.esc === 'br' ? 'mapa' : inicial.v; document.body.dataset.view = S.view; S.escopo = inicial.esc;
-const carregarUFs = fetch('dados/ufs.json?v=20261008140811').then(r => r.json()).then(j => {
+const carregarUFs = fetch('dados/ufs.json?v=20261008141539').then(r => r.json()).then(j => {
   UFS = j.ufs; UFS.forEach(u => { INFO[u.id] = u; });
   $('escUF').innerHTML = '<option value="">PT em um estado...</option>' + UFS.map(u => `<option value="${u.id}">${esc(u.nome)}</option>`).join('');
 }).catch(() => {});
