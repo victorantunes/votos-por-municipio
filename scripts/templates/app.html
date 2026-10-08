@@ -57,7 +57,8 @@
   body:not([data-view="dispersao"]) .only-scale { display: none !important; }
   .grow { flex: 1; }
   /* legenda acima do mapa: sempre 7 posições (6 faixas e "Sem dados") de duas linhas, então a altura não depende do texto */
-  .legend { display: grid; grid-template-columns: repeat(auto-fit, minmax(205px, 1fr)); gap: 6px 14px; font-size: 12px; color: #3b4656; padding: 0 0 12px; }
+  .legend { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 6px 12px; font-size: 12px; color: #3b4656; padding: 0 0 10px; }
+  @media (min-width: 1000px) { .legend { grid-template-columns: repeat(7, minmax(0, 1fr)); gap: 6px 10px; font-size: 11.5px; } }
   .legend:empty { display: none; }
   #v-mapa { position: relative; }
   .gstatus { position: absolute; top: 10px; left: 50%; transform: translateX(-50%); z-index: 700; background: #fff; border: 1px solid #d5dbe3; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,.18); padding: 5px 12px; font-size: 12.5px; color: var(--ink); pointer-events: none; }
@@ -1126,11 +1127,12 @@ const ordCand = {c: 'tot', dir: -1};
 function renderCandidatos() {
   if (!EM || S.escopo !== 'rn') return;
   const fd = $('fdisp').value, fh = $('fhist').value, fs = $('fsit').value, q = norm($('fnome').value.trim()), soma = $('fsoma').checked;
-  let rows = EM.cand.filter(c => (!fd || c.d.id === fd) && (!fh || (fh === 'novo' ? !EM.pess[c.p].antes : EM.pess[c.p].antes)) && (!fs || c.sit === fs) && (soma || !c.agg) && (!q || norm(c.n + ' ' + EM.pess[c.p].nc).includes(q)));
+  let rows = EM.cand.filter(c => (!fd || c.d.id === fd) && (!fh || (!c.agg && (fh === 'novo' ? !EM.pess[c.p].antes : EM.pess[c.p].antes))) && (!fs || c.sit === fs) && (soma || !c.agg) && (!q || norm(c.n + ' ' + EM.pess[c.p].nc).includes(q)));
   const chave = {n: c => norm(c.n), d: c => c.dx, ue: c => c.ue || '', par: c => c.par, sit: c => c.sit, tot: c => c.tot, pct: c => ok(c.pct) ? c.pct : -1, nm: c => c.nm, rk: c => c.agg || !c.rk ? 1e9 : c.rk}[ordCand.c];
   rows = rows.slice().sort((a, b) => { const x = chave(a), y = chave(b); return (x < y ? -1 : x > y ? 1 : 0) * ordCand.dir || a.id - b.id; });
   $('tabcand').querySelector('tbody').innerHTML = rows.map(c => `<tr data-k="${c.id}" class="${c.agg ? 'soma' : ''}"><td class="nome" title="${esc(EM.pess[c.p].nc)}">${esc(c.n)}</td><td>${esc(c.d.nome)}</td><td>${esc(c.ue || (c.agg && c.d.cargo !== 'Presidente' ? (c.d.ano === 2020 ? 'Onde o PT lançou candidatos' : 'Estado todo') : 'Estado todo'))}</td><td>${esc(c.par)}</td><td>${esc(c.sit || '-')}</td>` +
     `<td class="n">${fmt(c.tot)}</td><td class="n">${ok(c.pct) ? fp(c.pct) : '-'}</td><td class="n">${fmt(c.nm)}</td><td class="n">${c.agg || !c.rk ? '-' : c.rk + 'º de ' + fmt(c.nc)}</td></tr>`).join('');
+  if (!rows.length) $('tabcand').querySelector('tbody').innerHTML = '<tr><td colspan="9" class="vazio-msg">Nenhuma candidatura com esses filtros.' + (fh ? ' A soma do PT não entra nos filtros de histórico, porque não é uma pessoa.' : '') + '</td></tr>';
   $('fcont').textContent = `${fmt(rows.length)} candidatura${rows.length === 1 ? '' : 's'}`;
   document.querySelectorAll('#tabcand th').forEach(th => { th.classList.toggle('ord', th.dataset.c === ordCand.c); th.classList.toggle('asc', th.dataset.c === ordCand.c && ordCand.dir === 1); });
 }
