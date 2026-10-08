@@ -6,3 +6,6 @@ dados/*.log
 dados/http.log
 saida/
 __pycache__/
+
+# dados do TSE com CPF e e-mail de candidatos: nunca versionar
+dados/tse/
