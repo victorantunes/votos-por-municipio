@@ -520,7 +520,7 @@ function preparar(js) {
 }
 function carregarEscopo(id) {
   if (cacheEsc[id]) return Promise.resolve(cacheEsc[id]);
-  return fetch('dados/escopo_' + id + '.json?v=20261007222146').then(r => { if (!r.ok) throw new Error('escopo'); return r.json(); }).then(js => (cacheEsc[id] = preparar(js)));
+  return fetch('dados/escopo_' + id + '.json?v=20261007223103').then(r => { if (!r.ok) throw new Error('escopo'); return r.json(); }).then(js => (cacheEsc[id] = preparar(js)));
 }
 function vv(c) {
   if (c.vv) return c;
@@ -839,7 +839,7 @@ function carregar(src, css) {
 function ajustarMapa() { const w = $('mapwrap'); w.style.height = Math.max(460, Math.min(900, Math.round(window.innerHeight * 0.78))) + 'px'; if (map) map.invalidateSize(); }
 const estiloPoli = i => { const on = noUF(i), pin = S.pins.has(i), sem = CL.cls[i] < 0; return {fillColor: cor(i), fillOpacity: sem ? (on ? 0.7 : 0.08) : on || pin ? 0.93 : 0.08, color: pin ? '#000' : '#ffffff', weight: pin ? 2.6 : on ? 0.3 : 0, opacity: pin ? 1 : 0.9}; };
 function clicarMapa(i) { S.pins.has(i) ? S.pins.delete(i) : S.pins.add(i); contador(); $('info').innerHTML = detalhe(i); pintarMapa(); }
-const baixarJSON = u => malhas[u] || (malhas[u] = fetch(u + '?v=20261007222146').then(r => { if (!r.ok) throw new Error(u); return r.json(); }).catch(e => { delete malhas[u]; throw e; }));
+const baixarJSON = u => malhas[u] || (malhas[u] = fetch(u + '?v=20261007223103').then(r => { if (!r.ok) throw new Error(u); return r.json(); }).catch(e => { delete malhas[u]; throw e; }));
 const NOTA_GRAN = (modo, poli) => 'Detalhe por bairro e local de votação: os votos de cada seção eleitoral são somados no local onde o eleitor vota, e o local é atribuído ao bairro do IBGE (Censo 2022) que o contém. O bairro é o do local de votação, e não necessariamente o de residência do eleitor. O IBGE só tem bairros para 19 dos 167 municípios, que reúnem cerca de 41% do eleitorado' +
   (modo === 'ano' ? '; nos demais, e fora dos bairros (como a zona rural), cada local de votação aparece como um ponto.' : '; nos demais, e fora dos bairros (como a zona rural), a unidade é o município, ou a parte dele fora dos bairros, porque a comparação entre anos precisa de uma divisão estável (os locais de votação mudam de um ano para outro).') +
   ' As classes de cor usam percentis só entre as unidades mostradas. A soma das seções pode diferir um pouco do total do município, por causa de votos anulados depois da eleição. Clique em uma unidade para marcar o nome, ou use a busca, e Limpar marcações para remover.' + (poli ? ' Troque para círculos, proporcionais ao número de eleitores, se preferir.' : ' Troque para polígonos para ver os limites.');
@@ -876,20 +876,26 @@ function construirCirculos() {
     ligarUnidade(c, i); return c; });
   grupoCirc = L.layerGroup(M.map((m, i) => i).sort((a, b) => M[b].ap - M[a].ap).map(i => marcadores[i]).filter(Boolean));
 }
+/* O Leaflet deixa preso o pedido de redesenho de um canvas quando a camada sai do mapa com um redesenho pendente. Ao voltar, nenhum
+   novo pedido é agendado e o mapa fica em branco até um zoom. Soltamos o pedido antes de recolocar as camadas e forçamos um redesenho. */
+const soltarPedido = r => { if (r) r._redrawRequest = null; };
+const refazerCanvas = r => { if (r && map.hasLayer(r) && r._redraw) { r._redrawRequest = null; r._redraw(); } };
 function limparCamadas() {
   [camadaBase, camadaPoli, camadaUF, camadaPontos, grupoCirc].forEach(l => { if (l && map.hasLayer(l)) map.removeLayer(l); });
   [rendCirc, rendPoli, rendUF].forEach(r => { if (r && map.hasLayer(r)) map.removeLayer(r); });
+  [rendCirc, rendPoli, rendUF].forEach(soltarPedido);
   camadaBase = camadaPoli = camadaUF = camadaPontos = grupoCirc = marcadores = polis = pontos = null; rotulos = [];
 }
 function aplicarModo() {
   if (!map) return Promise.resolve();
   const poli = S.modo === 'poli'; $('mapnote').innerHTML = G.on ? NOTA_GRAN(E.modoUnidades, poli) : poli ? NOTA_POLI : NOTA_CIRC;
   if (!grupoCirc) construirCirculos();
-  if (!poli) { [camadaBase, camadaPoli, camadaUF, camadaPontos].forEach(l => l && map.hasLayer(l) && map.removeLayer(l)); if (rendPoli && map.hasLayer(rendPoli)) map.removeLayer(rendPoli); map.addLayer(grupoCirc); pintarMapa(); return Promise.resolve(); }
+  if (!poli) { [camadaBase, camadaPoli, camadaUF, camadaPontos].forEach(l => l && map.hasLayer(l) && map.removeLayer(l)); if (rendPoli && map.hasLayer(rendPoli)) map.removeLayer(rendPoli); [rendCirc, rendPoli].forEach(soltarPedido); map.addLayer(grupoCirc); pintarMapa(); refazerCanvas(rendCirc); return Promise.resolve(); }
   return (camadaPoli ? Promise.resolve() : construirPoli()).then(() => {
     if (S.modo !== 'poli' || !camadaPoli) return;
     map.removeLayer(grupoCirc); if (rendCirc && map.hasLayer(rendCirc)) map.removeLayer(rendCirc);
-    [camadaBase, camadaPoli, camadaUF, camadaPontos].forEach(l => l && map.addLayer(l)); pintarMapa(); })
+    [rendCirc, rendPoli, rendUF].forEach(soltarPedido);
+    [camadaBase, camadaPoli, camadaUF, camadaPontos].forEach(l => l && map.addLayer(l)); pintarMapa(); [rendPoli, rendUF].forEach(refazerCanvas); })
     .catch(() => { S.modo = 'circ'; $('modo').value = 'circ'; $('info').innerHTML = '<span class="cz">Não foi possível carregar os polígonos. Mostrando círculos.</span>'; return aplicarModo(); });
 }
 function iniciarMapa() {

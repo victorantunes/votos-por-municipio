@@ -826,20 +826,26 @@ function construirCirculos() {
     ligarUnidade(c, i); return c; });
   grupoCirc = L.layerGroup(M.map((m, i) => i).sort((a, b) => M[b].ap - M[a].ap).map(i => marcadores[i]).filter(Boolean));
 }
+/* O Leaflet deixa preso o pedido de redesenho de um canvas quando a camada sai do mapa com um redesenho pendente. Ao voltar, nenhum
+   novo pedido é agendado e o mapa fica em branco até um zoom. Soltamos o pedido antes de recolocar as camadas e forçamos um redesenho. */
+const soltarPedido = r => { if (r) r._redrawRequest = null; };
+const refazerCanvas = r => { if (r && map.hasLayer(r) && r._redraw) { r._redrawRequest = null; r._redraw(); } };
 function limparCamadas() {
   [camadaBase, camadaPoli, camadaUF, camadaPontos, grupoCirc].forEach(l => { if (l && map.hasLayer(l)) map.removeLayer(l); });
   [rendCirc, rendPoli, rendUF].forEach(r => { if (r && map.hasLayer(r)) map.removeLayer(r); });
+  [rendCirc, rendPoli, rendUF].forEach(soltarPedido);
   camadaBase = camadaPoli = camadaUF = camadaPontos = grupoCirc = marcadores = polis = pontos = null; rotulos = [];
 }
 function aplicarModo() {
   if (!map) return Promise.resolve();
   const poli = S.modo === 'poli'; $('mapnote').innerHTML = G.on ? NOTA_GRAN(E.modoUnidades, poli) : poli ? NOTA_POLI : NOTA_CIRC;
   if (!grupoCirc) construirCirculos();
-  if (!poli) { [camadaBase, camadaPoli, camadaUF, camadaPontos].forEach(l => l && map.hasLayer(l) && map.removeLayer(l)); if (rendPoli && map.hasLayer(rendPoli)) map.removeLayer(rendPoli); map.addLayer(grupoCirc); pintarMapa(); return Promise.resolve(); }
+  if (!poli) { [camadaBase, camadaPoli, camadaUF, camadaPontos].forEach(l => l && map.hasLayer(l) && map.removeLayer(l)); if (rendPoli && map.hasLayer(rendPoli)) map.removeLayer(rendPoli); [rendCirc, rendPoli].forEach(soltarPedido); map.addLayer(grupoCirc); pintarMapa(); refazerCanvas(rendCirc); return Promise.resolve(); }
   return (camadaPoli ? Promise.resolve() : construirPoli()).then(() => {
     if (S.modo !== 'poli' || !camadaPoli) return;
     map.removeLayer(grupoCirc); if (rendCirc && map.hasLayer(rendCirc)) map.removeLayer(rendCirc);
-    [camadaBase, camadaPoli, camadaUF, camadaPontos].forEach(l => l && map.addLayer(l)); pintarMapa(); })
+    [rendCirc, rendPoli, rendUF].forEach(soltarPedido);
+    [camadaBase, camadaPoli, camadaUF, camadaPontos].forEach(l => l && map.addLayer(l)); pintarMapa(); [rendPoli, rendUF].forEach(refazerCanvas); })
     .catch(() => { S.modo = 'circ'; $('modo').value = 'circ'; $('info').innerHTML = '<span class="cz">Não foi possível carregar os polígonos. Mostrando círculos.</span>'; return aplicarModo(); });
 }
 function iniciarMapa() {
