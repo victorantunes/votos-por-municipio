@@ -323,6 +323,7 @@ __TAB_PART_REG__
         <ul>
           <li>O IBGE só tem a divisão em bairros para 19 dos 167 municípios, entre eles Natal, Mossoró e Parnamirim, que reúnem cerca de 41% do eleitorado. Nos demais municípios, e fora dos bairros (como na zona rural), cada local de votação aparece como um ponto.</li>
           <li>Para comparar anos diferentes (por exemplo, vereador de 2024 com deputado federal de 2026), a unidade é o bairro e, onde não há bairro, o município ou a parte dele fora dos bairros. Isso porque os locais de votação mudam de um ano para outro, então só o bairro é estável.</li>
+          <li>O fundo do mapa mostra o município inteiro, mais claro e com as mesmas faixas de cor, para a parte que não pertence a nenhum bairro do IBGE (como a zona rural) não ficar em branco.</li>
           <li>O bairro é o do local de votação e não o de residência do eleitor. Seções agregadas e urnas de contingência são somadas no local. Cerca de 3% dos locais não tinham coordenada e receberam a posição média dos locais do mesmo bairro. Locais fora de qualquer bairro do IBGE foram ligados ao bairro mais próximo, até 2 km.</li>
           <li>A soma das seções pode diferir do total do município em até cerca de 2%, porque votos anulados depois da eleição aparecem nas seções. Candidaturas com votos anulados não têm esse detalhe.</li>
           <li>O detalhe é carregado só quando você liga a opção, e apenas os arquivos das candidaturas A e B (algumas centenas de KB). As classes de cor usam percentis entre as unidades mostradas.</li>
@@ -518,7 +519,25 @@ const metPadrao = () => S.B === null ? 'Apv' : poucos() ? 'Bpv' : 'pp';
 const COMPARACAO = ['pp', 'sd', 'rt', 'da', 'db', 'dn'];
 const metAtual = () => { for (const g of METS) for (const m of g.m) if (m.k === S.metrica) return m; return METS[0].m[0]; };
 function quantil(s, q) { const pos = (s.length - 1) * q / 100, lo = Math.floor(pos), hi = Math.ceil(pos); return s[lo] + (s[hi] - s[lo]) * (pos - lo); }
-function calcClasses() {
+/* No detalhe, o fundo do mapa mostra o município inteiro (mais claro) com as mesmas faixas de cor das unidades. Assim, a parte do município
+   que não pertence a nenhum bairro do IBGE (como a zona rural) não fica em branco. */
+function calcFundo() {
+  CL.fundo = null;
+  if (!G.on || !EM) return;
+  const salvo = [E, M, N]; E = EM; M = EM.mun; N = M.length;
+  try {
+    let met = null; for (const g of listaMetricas()) for (const x of g.m) if (x.k === S.metrica) met = x;
+    if (met) {
+      const f = new Int8Array(N).fill(-1);
+      for (let i = 0; i < N; i++) { const v = met.f(i); if (!ok(v)) continue; let k = 0; if (!CL.few) while (k < 5 && v > CL.cuts[k]) k++; f[i] = k; }
+      CL.fundo = f;
+    }
+  } finally { [E, M, N] = salvo; }
+}
+const corFundo = mi => (CL.fundo && mi !== undefined && CL.fundo[mi] >= 0) ? (CL.few ? ACENTO : PALS[CL.m.t][CL.fundo[mi]]) : '#e9edf2';
+const estiloFundo = mi => ({fillColor: corFundo(mi), fillOpacity: 0.55, color: '#ffffff', weight: 0.6});
+function calcClasses() { calcClasses0(); calcFundo(); }
+function calcClasses0() {
   const m = metAtual(), arr = new Float64Array(N), vals = [], cls = new Int8Array(N).fill(-1);
   for (let i = 0; i < N; i++) { const v = m.f(i); arr[i] = v; if (ok(v)) vals.push(v); }
   vals.sort((a, b) => a - b);
@@ -792,7 +811,7 @@ function clicarMapa(i) { S.pins.has(i) ? S.pins.delete(i) : S.pins.add(i); conta
 const baixarJSON = u => malhas[u] || (malhas[u] = fetch(u + '?v=__BUILD__').then(r => { if (!r.ok) throw new Error(u); return r.json(); }).catch(e => { delete malhas[u]; throw e; }));
 const NOTA_GRAN = (modo, poli) => 'Detalhe por bairro e local de votação: os votos de cada seção eleitoral são somados no local onde o eleitor vota, e o local é atribuído ao bairro do IBGE (Censo 2022) que o contém. O bairro é o do local de votação, e não necessariamente o de residência do eleitor. O IBGE só tem bairros para 19 dos 167 municípios, que reúnem cerca de 41% do eleitorado' +
   (modo === 'ano' ? '; nos demais, e fora dos bairros (como a zona rural), cada local de votação aparece como um ponto.' : '; nos demais, e fora dos bairros (como a zona rural), a unidade é o município, ou a parte dele fora dos bairros, porque a comparação entre anos precisa de uma divisão estável (os locais de votação mudam de um ano para outro).') +
-  ' As classes de cor usam percentis só entre as unidades mostradas. A soma das seções pode diferir um pouco do total do município, por causa de votos anulados depois da eleição. Clique em uma unidade para marcar o nome, ou use a busca, e Limpar marcações para remover.' + (poli ? ' Troque para círculos, proporcionais ao número de eleitores, se preferir.' : ' Troque para polígonos para ver os limites.');
+  ' As cores mais claras ao fundo mostram o município inteiro, com as mesmas faixas. As classes de cor usam percentis só entre as unidades mostradas. A soma das seções pode diferir um pouco do total do município, por causa de votos anulados depois da eleição. Clique em uma unidade para marcar o nome, ou use a busca, e Limpar marcações para remover.' + (poli ? ' Troque para círculos, proporcionais ao número de eleitores, se preferir.' : ' Troque para polígonos para ver os limites.');
 const estiloPonto = i => { const pin = S.pins.has(i); return {fillColor: cor(i), fillOpacity: 0.92, color: pin ? '#000' : '#fff', weight: pin ? 2.6 : 0.9, opacity: 1}; };
 function ligarUnidade(camada, i) {
   camada.on('mouseover', () => { $('info').innerHTML = detalhe(i); }); camada.on('click', () => clicarMapa(i));
@@ -804,7 +823,9 @@ function construirPoli() {
   return Promise.all(arquivos.map(baixarJSON)).then(([gm, gu, gb]) => {
     if (escopo !== S.escopo || gran !== G.on) return;
     const idx = new Map(); M.forEach((m, i) => { if (m.c) idx.set(m.c, i); }); polis = new Array(N);
-    camadaBase = gran ? L.geoJSON(gm, {renderer: rendPoli, interactive: false, style: {fillColor: '#e9edf2', fillOpacity: 1, color: '#ffffff', weight: 0.6}}) : null;
+    const idxM = new Map(EM.mun.map((m, i) => [m.c, i]));
+    camadaBase = gran ? L.geoJSON(gm, {renderer: rendPoli, interactive: false, style: f => estiloFundo(idxM.get(f.properties.c))}) : null;
+    if (camadaBase) camadaBase.eachLayer(l => { l._mi = idxM.get(l.feature.properties.c); });
     camadaPoli = L.geoJSON({type: 'FeatureCollection', features: gran ? gm.features.concat(gb.features) : gm.features}, {renderer: rendPoli, style: f => estiloPoli(idx.get(f.properties.c)), filter: f => idx.has(f.properties.c), onEachFeature: (f, layer) => {
       const i = idx.get(f.properties.c); polis[i] = layer;
       layer.on('mouseover', () => { $('info').innerHTML = detalhe(i); layer.setStyle({color: '#111', weight: 1.6}); });
@@ -875,6 +896,7 @@ function pintarMapa() {
     c.setStyle({fillColor: cor(i), fillOpacity: on || pin ? 0.88 : 0.07, opacity: on || pin ? 1 : 0.15, color: pin ? '#000' : '#222', weight: pin ? 2.6 : 0.5}); });
   if (camadaPoli && map.hasLayer(camadaPoli)) polis.forEach((l, i) => l && l.setStyle(estiloPoli(i)));
   if (camadaPontos && map.hasLayer(camadaPontos)) pontos.forEach((c, i) => c && c.setStyle(estiloPonto(i)));
+  if (camadaBase && map.hasLayer(camadaBase)) camadaBase.eachLayer(l => l.setStyle(estiloFundo(l._mi)));
   sincronizarPins();
 }
 function indicesAlvo() {
@@ -1155,7 +1177,7 @@ $('selA').onchange = e => { S.A = +e.target.value; if (S.B === S.A) S.B = null; 
 $('selB').onchange = e => { S.B = e.target.value === '' ? null : +e.target.value; if (S.B === S.A) S.B = null; S.metAuto = true; aplicarSelecao(false); };
 $('troca').onclick = () => { if (S.B === null) return; [S.A, S.B] = [S.B, S.A]; aplicarSelecao(false); };
 $('metrica').onchange = e => { S.metrica = e.target.value; S.metAuto = false; mudouMedida(); };
-$('gran').onchange = e => { G.on = e.target.checked; $('gstatus').textContent = ''; aplicarSelecao(true); };
+$('gran').onchange = e => { G.on = e.target.checked; $('gstatus').textContent = ''; aplicarSelecao(false).then(() => { if (S.view === 'mapa') mostrarAlvoNoInfo(); }); };
 $('uf').onchange = e => { S.uf = e.target.value; zerarZoom(); atualizarTopo(); if (S.view === 'dispersao') atualizarDispersao(); else if (S.view === 'mapa') { pintarMapa(); zoomUF(); } };
 $('modo').onchange = e => { S.modo = e.target.value; aplicarModo(); };
 $('zroda').onchange = e => { S.zoomRoda = e.target.checked; zoomManual = true; };

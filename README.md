@@ -54,6 +54,7 @@ Marcando "Detalhar por bairro e local de votação", o mapa e o gráfico passam 
 
 - O IBGE só tem bairros para 19 dos 167 municípios (Natal, Mossoró e Parnamirim entre eles), com cerca de 41% do eleitorado. Nos outros e fora dos bairros (zona rural), cada local de votação é um ponto.
 - Ao comparar anos diferentes a unidade é o bairro e, onde não há, o município (ou a parte dele fora dos bairros), porque os locais de votação mudam de um ano para outro.
+- O fundo do mapa mostra o município inteiro, mais claro e com as mesmas faixas de cor, para a parte que não pertence a nenhum bairro do IBGE (como a zona rural) não ficar em branco.
 - O bairro é o do local de votação, não o de residência. Locais sem coordenada (cerca de 3%) recebem a média dos locais do mesmo bairro, e os fora de qualquer bairro vão para o mais próximo, até 2 km.
 - A soma das seções pode diferir até cerca de 2% do total do município (votos anulados depois da eleição aparecem nas seções).
 - Desempenho: o detalhe vem de arquivos estáticos em `docs/dados/granular/` (1,6 MB no total, no máximo 141 KB por eleição e 132 KB por grade de locais), baixados sob demanda só para as candidaturas A e B. Não há servidor.
