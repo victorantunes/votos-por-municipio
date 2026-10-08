@@ -244,7 +244,7 @@
     <label class="only-map">Visualização <select id="modo"><option value="poli">Polígonos (municípios)</option><option value="circ">Círculos</option></select></label>
     <label id="lblGran" title="Mostra os votos por bairro (onde o IBGE tem a divisão) e por local de votação, somando as seções eleitorais"><input type="checkbox" id="gran"> Detalhar por bairro e local de votação</label>
     <div class="sb only-map"><input type="search" id="buscamapa" placeholder="Buscar município no mapa..." autocomplete="off" aria-label="Buscar município no mapa"><ul class="sug" id="sugestoes" role="listbox"></ul></div>
-    <label class="only-disp"><input type="search" id="busca" placeholder="Buscar município..."></label>
+    <div class="sb only-disp"><input type="search" id="busca" placeholder="Buscar município no gráfico..." autocomplete="off" aria-label="Buscar município no gráfico"><ul class="sug" id="sugestoes2" role="listbox"></ul></div>
     <label class="only-disp so-br"><input type="checkbox" id="cinza" checked> Outros estados em cinza</label>
     <label class="only-scale"><input type="checkbox" id="zroda" checked> Zoom com a rolagem</label>
     <label class="only-scale">Escala <select id="escala"><option value="log">Logarítmica</option><option value="lin">Linear</option></select></label>
@@ -551,7 +551,7 @@ function preparar(js) {
 function carregarEscopo(id) {
   if (cacheEsc[id]) return Promise.resolve(cacheEsc[id]);
   const url = id === 'br' ? 'dados/escopo_br.json' : 'dados/uf/' + id + '.json';
-  return fetch(url + '?v=20261008135954').then(r => { if (!r.ok) throw new Error('escopo'); return r.json(); }).then(js => {
+  return fetch(url + '?v=20261008140811').then(r => { if (!r.ok) throw new Error('escopo'); return r.json(); }).then(js => {
     cacheEsc[id] = preparar(js); ordemCache.push(id);
     while (ordemCache.length > 3) delete cacheEsc[ordemCache.shift()];  // guarda só os últimos recortes, para não acumular memória
     return cacheEsc[id];
@@ -570,7 +570,7 @@ const nomeC = c => c.agg ? 'PT' : c.n;
 const votosDe = c => (c.agg ? 'Votos do ' : 'Votos de ') + rotC(c);
 const rotC = c => nomeC(c) + ', ' + c.d.curto + (c.ue ? ' (' + c.ue + ')' : '');
 const noUF = i => !S.uf || G.on || M[i].u === S.uf;
-const noBusca = i => !S.termo || M[i].n.toLowerCase().includes(S.termo);
+const noBusca = i => !S.termo || M[i].k.includes(S.termo);  // sem acento e sem diferença entre maiúsculas e minúsculas
 
 /* ------------------------------------------------ medidas e classes */
 const nivel = m => m.t === 'lvl' || m.t === 'part';
@@ -893,7 +893,10 @@ function montarRegioes() {
     const el = document.createElement('div'); el.className = 'card facet';
     el.innerHTML = `<h3>${esc(g.n)}</h3><div class="st">${st}</div><div class="zwrap"><canvas></canvas></div><div class="fleg">${legendaHTML()}</div>`;
     grid.appendChild(el);
-    const cv = el.querySelector('canvas'), p = {cv, ids, geom: null, view: null, redraw() { p.geom = desenhar(cv, ids, {dono: p, pequeno: true, ex}); }};
+    const cv = el.querySelector('canvas'), p = {cv, ids, geom: null, view: null, redraw() {
+      const act = S.termo ? ids.filter(noBusca) : ids;  // com uma busca, os demais ficam em cinza e o gráfico se ajusta aos que combinam
+      p.geom = desenhar(cv, ids, {dono: p, pequeno: true, ex, destaque: S.termo ? noBusca : null, fitIds: act.length ? act : ids});
+    }};
     ligar(el.querySelector('.zwrap'), cv, p); paineis.push(p);
   });
   if (!paineis.length) grid.innerHTML = '<div class="card vazio-msg">Nenhum município com dados nesta seleção.</div>';
@@ -921,7 +924,7 @@ const estiloPoli = i => {
   return {fillColor: cor(i), fillOpacity: fo, color: pin ? '#000' : branca ? '#ffffff' : cor(i), weight: pin ? 2.6 : on ? (branca ? w : 0.7) : 0, opacity: pin ? 1 : branca ? 0.9 : fo};
 };
 function clicarMapa(i) { S.pins.has(i) ? S.pins.delete(i) : S.pins.add(i); contador(); $('info').innerHTML = detalhe(i); pintarMapa(); }
-const baixarJSON = u => malhas[u] || (malhas[u] = fetch(u + '?v=20261008135954').then(r => { if (!r.ok) throw new Error(u); return r.json(); }).catch(e => { delete malhas[u]; throw e; }));
+const baixarJSON = u => malhas[u] || (malhas[u] = fetch(u + '?v=20261008140811').then(r => { if (!r.ok) throw new Error(u); return r.json(); }).catch(e => { delete malhas[u]; throw e; }));
 const NOTA_GRAN = (modo, poli) => {
   const ib = E.infoB, tem = ib && ib.n > 0, fora = tem ? 'nos demais, e fora dos bairros (como a zona rural), ' : '';
   const bairros = tem ? `O IBGE só tem bairros para ${ib.n} dos ${fmt(ib.total)} municípios, que reúnem cerca de ${ib.pct}% do eleitorado` : 'O IBGE não tem a divisão em bairros para os municípios deste estado';
@@ -1077,12 +1080,15 @@ function combo(input, ul, itens, escolher) {
 }
 /* município no mapa */
 const buscaEl = $('buscamapa');
-combo(buscaEl, $('sugestoes'), q => {
+const sugerirMun = q => {
   if (!q) return [];
   const pref = [], cont = [], porPop = (a, b) => M[b].ap - M[a].ap;
   M.forEach((m, i) => { if (m.k.startsWith(q)) pref.push(i); else if (m.k.includes(q)) cont.push(i); });
   return pref.sort(porPop).concat(cont.sort(porPop)).slice(0, 8).map(i => ({i, t: esc(M[i].n), s: M[i].u}));
-}, it => { buscaEl.value = `${M[it.i].n} - ${M[it.i].u}`; irParaMunicipio(it.i); });
+};
+combo(buscaEl, $('sugestoes'), sugerirMun, it => { buscaEl.value = `${M[it.i].n} - ${M[it.i].u}`; irParaMunicipio(it.i); });
+/* município no gráfico: digitar destaca no gráfico os que combinam com o texto, e escolher uma sugestão marca o município com o nome */
+combo($('busca'), $('sugestoes2'), sugerirMun, it => { S.pins.add(it.i); contador(); $('busca').value = ''; S.termo = ''; zerarZoom(); redesenhar(); });
 function irParaMunicipio(i) {
   iniciarMapa().then(() => {
     if (!map) return;
@@ -1402,11 +1408,11 @@ $('uf').onchange = e => { S.uf = e.target.value; if (G.on && !atualizarGran()) {
 $('modo').onchange = e => { S.modo = e.target.value; aplicarModo(); };
 $('zroda').onchange = e => { S.zoomRoda = e.target.checked; zoomManual = true; };
 $('cinza').onchange = e => { S.cinza = e.target.checked; redesenhar(); };
-$('busca').oninput = e => { S.termo = e.target.value.trim().toLowerCase(); V1.view = null; redesenhar(); };
+$('busca').oninput = e => { S.termo = norm(e.target.value.trim()); zerarZoom(); redesenhar(); };
 $('escala').onchange = e => { S.escala = e.target.value; zerarZoom(); redesenhar(); };
 $('sep').onchange = e => { S.sep = e.target.value; posicionarResumo(); if (!zoomManual) { S.zoomRoda = S.sep === 'n'; $('zroda').checked = S.zoomRoda; } document.body.dataset.sep = S.sep; $('faixa').disabled = S.sep === 'f'; zerarZoom(); atualizarDispersao(); };
 $('faixa').onchange = e => { S.faixa = e.target.value; zerarZoom(); atualizarDispersao(); };
-$('limpar').onclick = () => { buscaEl.value = ''; S.pins.clear(); contador(); redesenhar(); };
+$('limpar').onclick = () => { buscaEl.value = ''; $('busca').value = ''; if (S.termo) zerarZoom(); S.termo = ''; S.pins.clear(); contador(); redesenhar(); };
 window.addEventListener('resize', () => { if (S.view === 'mapa') ajustarMapa(); else redesenhar(); });
 function lerHash() {
   const p = location.hash.slice(1).split('/'), temEsc = /^[a-z]{2}$/.test(p[0]), esc2 = temEsc ? p[0] : 'br'; let v = temEsc ? p[1] : p[0];
@@ -1417,7 +1423,7 @@ window.addEventListener('hashchange', () => { const h = lerHash(); if (h.esc !==
 
 const inicial = lerHash();
 S.view = inicial.v === 'candidatos' && inicial.esc === 'br' ? 'mapa' : inicial.v; document.body.dataset.view = S.view; S.escopo = inicial.esc;
-const carregarUFs = fetch('dados/ufs.json?v=20261008135954').then(r => r.json()).then(j => {
+const carregarUFs = fetch('dados/ufs.json?v=20261008140811').then(r => r.json()).then(j => {
   UFS = j.ufs; UFS.forEach(u => { INFO[u.id] = u; });
   $('escUF').innerHTML = '<option value="">PT em um estado...</option>' + UFS.map(u => `<option value="${u.id}">${esc(u.nome)}</option>`).join('');
 }).catch(() => {});
